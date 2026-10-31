@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "name": "noesis",
+  "test_command": null,
+  "topics": [
+    "aikit",
+    "aikit-integrated",
+    "source-available",
+    "aegean-license",
+    "commercial-license",
+    "brain-training",
+    "cognitive-training",
+    "neurofeedback",
+    "digital-health"
+  ],
+  "gates": {},
+  "ui_required": false,
+  "mechanics_required": false,
+  "created": "2026-10-31"
+}
