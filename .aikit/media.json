@@ -5,40 +5,40 @@
   "has_ui": true,
   "ui_kind": "mobile",
   "palette": [
-    "#12070d",
-    "#301213",
-    "#f566a4",
-    "#f5d68e"
+    "#0b0713",
+    "#2a1230",
+    "#a35ef3",
+    "#f490b8"
   ],
-  "motif": "pulse",
-  "layout": "left",
+  "motif": "brain",
+  "layout": "editorial",
   "assets": {
     "logo": {
       "path": "assets/logo.svg",
       "status": "approved",
       "commit": "",
-      "generated_at": "2026-11-01T10:46:06",
+      "generated_at": "2026-11-02T00:55:08",
       "review": {
         "status": "approved",
-        "reviewer": "agent:gemini",
+        "reviewer": "agent:kilo",
         "method": "structural",
-        "notes": "Noesis cognitive training app logo",
-        "score": null,
-        "reviewed_at": "2026-11-01T10:46:10"
+        "notes": "Reseed brain identity: symmetric neural mark, NS monogram resolves the NeuroOptic collision, valid SVG.",
+        "score": 89,
+        "reviewed_at": "2026-11-02T00:56:36"
       }
     },
     "social_preview": {
       "path": "assets/social-preview.svg",
       "status": "approved",
       "commit": "",
-      "generated_at": "2026-11-01T10:46:06",
+      "generated_at": "2026-11-02T00:55:08",
       "review": {
         "status": "approved",
-        "reviewer": "agent:gemini",
+        "reviewer": "agent:kilo",
         "method": "structural",
-        "notes": "Noesis cognitive training banner",
-        "score": null,
-        "reviewed_at": "2026-11-01T10:46:10"
+        "notes": "Editorial card: Noesis title, COGNITION kicker, tagline legible, correct URL.",
+        "score": 89,
+        "reviewed_at": "2026-11-02T00:56:36"
       }
     }
   },
