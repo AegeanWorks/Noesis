@@ -62,7 +62,25 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
       { pmid: "41016407", label: "Lifestyle intervention network (2025)" },
     ],
     safety: "Text only. No flashing.",
+  },  speed: {
+    id: "speed",
+    name: "Speed Tap",
+    domain: "processing_speed",
+    tagline: "Processing speed",
+    instructions: "Wait for the circle, then tap as quickly as you can.",
+    claimLevel: "experimental",
+    claim:
+      "Practices simple reaction speed and timing consistency; it is not a substitute for divided-attention speed training.",
+    qualifier:
+      "Reaction-time practice only. ACTIVE supports speed training in older adults, but this task is not the UFOV protocol.",
+    notClaimed: ["General processing speed", "Everyday function", "Dementia prevention"],
+    citations: [
+      { pmid: "24417410", label: "ACTIVE 10-year speed effects (2014)" },
+      { pmid: "17179457", label: "ACTIVE 5-year follow-up (2006)" },
+    ],
+    safety: "Single circle onset. No flashing.",
   },
+
 };
 
 export function claimLabel(level: ClaimLevel): string {

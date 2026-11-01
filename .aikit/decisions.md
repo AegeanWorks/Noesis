@@ -60,3 +60,38 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: ADR-005 rejected variable-ratio rewards, near-miss amplification, loss-framed risk and combo mechanics because of gambling-harm and measurement-validity concerns. The product owner directed that these mechanics be integrated for adult and older-adult engagement. A blanket rejection is no longer the product decision.
 - **Decision**: Implement a bounded Motivation mode, default on and switchable in Settings. It uses 70/20/10 cosmetic bonus tiers, a x1-x3 streak multiplier, a real personal-best near-miss cue, optional bonus-only push-your-luck between blocks, and a non-punitive target time. Cognitive scores, stored results and core progress are never affected. Odds are disclosed and each block is capped at 100 momentum points.
 - **Consequences**: The engagement mechanics are now product features, not rejected ideas. ADR-005 remains as history and its safety rationale still applies; ADR-007 supersedes only its rejection decision. Any future change to odds, caps, risk rules or default state must update this ADR, the evidence audit, and the tests.
+
+### ADR-008: Older-adult accessibility, trend visibility and a daily break cue
+- **Date**: 2026-11-01
+- **Status**: Accepted
+- **Context**: Motivation mode increases engagement, and the primary audience now includes older adults. Small text, low contrast, opaque progress and unbounded daily play are avoidable barriers or risks for that group. The app already stores local session history, so it can show trends without a server.
+- **Decision**: Add user-selected larger text and higher contrast classes, per-mechanic accuracy sparklines with no composite score, and a non-blocking daily break cue after two completed sessions. All three are local-only and switchable or informational. The break cue never locks the user out.
+- **Consequences**: Older adults get more readable controls and a clearer view of change over time. The daily cue is a gentle counterweight to Motivation mode, not a restriction. A future clinical or assisted-living deployment may need default-on large text and a configurable session cap, but this version keeps both under user control.
+
+### ADR-009: Add Speed Tap as a fourth, experimental processing-speed block
+- **Date**: 2026-11-01
+- **Status**: Accepted
+- **Context**: The ACTIVE trial's speed-of-processing arm showed the most durable cognitive maintenance in older adults (0.66 at 10 years for the trained ability), but the app only covered working memory, inhibition and reasoning. A simple reaction-time task is not the UFOV divided-attention protocol used in ACTIVE, so it cannot inherit that claim wholesale.
+- **Decision**: Add Speed Tap as a fourth standard-session block. It uses seeded foreperiods, a single circle onset, a response window, and reports mean, median, fastest, variability and lapses. It is labelled experimental, with an explicit "not a substitute for UFOV training" boundary. Quick sessions remain two blocks.
+- **Consequences**: Standard sessions are longer and now cover processing speed. The mechanic has its own deterministic policy, replay tests, AI simulation coverage and UI stage. It must not be marketed as general processing-speed training or as dementia prevention without a separate trial.
+
+### ADR-010: Per-session adverse-event capture with stop rules
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: DESIGN_IMPLICATIONS R18 requires adverse events to be captured every session with stop rules and a review queue; the review claims AE capture as implemented but no code existed. Consumer training studies routinely under-report harms, and a measurement product that ignores symptoms cannot claim a safety layer.
+- **Decision**: Add a post-session symptom check-in (six symptoms, three severities, optional 280-char note) backed by a versioned local store capped at 50 entries. A pure stop-rule function advises rest on any severe symptom or a repeated moderate one; clean check-ins store nothing. Reports are listed and clearable in Settings and wiped by full data deletion.
+- **Consequences**: The safety layer is now real: screen before, capture after, review in Settings. The log is local-only and never exported with practice history. Any future movement or audio module must extend the symptom list and its own stop rules rather than bypassing this check-in.
+
+### ADR-011: Compulsive-use detection with a caring, non-coercive response
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: The November 2026 gaming-disorder update added six engagement records (PMIDs 33028074, 37256740, 36571943, 40115446, 41317410, 41659171). The disorder base rate is highest exactly where engagement mechanics bite hardest: young heavy users and impulsive users, including users with attention difficulties. BEHAVIORAL_ENGAGEMENT open question 4 asked how the app should detect compulsive use and respond.
+- **Decision**: Detect three heavy-use patterns from local history (4+ sessions in a day, sessions less than 30 minutes apart, 45+ training minutes in a day) and show a caring check-in on the home screen with rest framing, a one-tap Motivation pause that expires the next day, and a per-day dismissal. Nothing locks the user out; pausing only silences cosmetic bonuses. See R36.
+- **Consequences**: Heavy use gets a response instead of silence, while autonomy is preserved: training stays available, the pause is reversible, and thresholds are documented heuristics, not diagnoses.
+
+### ADR-012: Opt-in adaptive difficulty as a logged experiment
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: R12 requires adaptive difficulty to be tested, not asserted: adaptivity has a mechanistic rationale but no consistent behavioural advantage. Fixed difficulty under-doses advanced users and over-doses struggling ones, but changing difficulty changes what accuracy means across sessions.
+- **Decision**: Add an opt-in adaptive mode, default off. Each mechanic holds a level 1-3 starting at the user's chosen difficulty; a block at 80% or better steps up, below 60% steps down, applied to the next session. Every change is appended to a capped local adaptation log. UI copy calls it an experiment and forbids cross-level score comparison.
+- **Consequences**: Accuracy series remain comparable only within a level; the adaptation log is the dose-response record for any future A/B analysis. The engine stays deterministic: levels are session inputs, not in-session mutations.

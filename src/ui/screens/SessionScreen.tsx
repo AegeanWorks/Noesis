@@ -66,7 +66,9 @@ export function SessionScreen({
       }
       if (paused || !view.mechanic) return;
       if (
-        (view.mechanic.mechanic === "nback" || view.mechanic.mechanic === "gonogo") &&
+        (view.mechanic.mechanic === "nback" ||
+          view.mechanic.mechanic === "gonogo" ||
+          view.mechanic.mechanic === "speed") &&
         event.code === "Space"
       ) {
         event.preventDefault();

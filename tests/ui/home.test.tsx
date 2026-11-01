@@ -3,7 +3,7 @@ import type { ComponentProps } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { HomeScreen } from "../../src/ui/screens/HomeScreen";
-import type { SessionRecord, WeekStats } from "../../src/storage/history";
+import type { SessionRecord, TodayStats, WeekStats } from "../../src/storage/history";
 import type { PracticeIntention } from "../../src/storage/intention";
 
 afterEach(cleanup);
@@ -29,19 +29,27 @@ function record(accuracy: number, finishedAt = "2026-10-31T10:00:00.000Z"): Sess
 }
 
 const EMPTY_WEEK: WeekStats = { sessions: 0, days: 0, minutes: 0 };
+const EMPTY_TODAY: TodayStats = { sessions: 0, minutes: 0 };
 
 function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) {
   const props: ComponentProps<typeof HomeScreen> = {
     hasSession: false,
     history: [],
     week: EMPTY_WEEK,
+    today: EMPTY_TODAY,
     intention: null,
     sessionLength: "standard",
+    heavyUse: null,
+    heavyUseDismissed: false,
+    motivationOn: false,
+    motivationPaused: false,
     onStart: vi.fn(),
     onContinue: vi.fn(),
     onSaveIntention: vi.fn(),
     onClearIntention: vi.fn(),
     onEvidence: vi.fn(),
+    onPauseMotivation: vi.fn(),
+    onDismissHeavyUse: vi.fn(),
     ...overrides,
   };
   render(<HomeScreen {...props} />);
@@ -78,11 +86,14 @@ describe("HomeScreen", () => {
     renderHome({
       history: [record(0.5), record(0.9, "2026-10-30T10:00:00.000Z")],
       week: { sessions: 2, days: 2, minutes: 2 },
+      today: { sessions: 2, minutes: 2 },
     });
     expect(screen.getByText("2 completed sessions")).toBeTruthy();
     expect(screen.getByText("Last 50%")).toBeTruthy();
     expect(screen.getByText("Best 90%")).toBeTruthy();
     expect(screen.getByText(/This week:/)).toBeTruthy();
+    expect(screen.getByLabelText("N-back recent accuracy trend")).toBeTruthy();
+    expect(screen.getByText(/A break is fine/)).toBeTruthy();
   });
 
   it("saves an optional when/where plan", () => {
@@ -112,9 +123,9 @@ describe("HomeScreen", () => {
     expect(onClearIntention).toHaveBeenCalledTimes(1);
   });
 
-  it("shows all three mechanics", () => {
+  it("shows all four mechanics", () => {
     renderHome();
-    for (const name of ["N-back", "Go / No-Go", "Reasoning"]) {
+    for (const name of ["N-back", "Go / No-Go", "Reasoning", "Speed Tap"]) {
       expect(screen.getByRole("heading", { name })).toBeTruthy();
     }
   });

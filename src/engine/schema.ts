@@ -1,7 +1,7 @@
 import { z } from "zod";
 import type { SessionAction, SessionConfig } from "./types";
 
-export const MechanicIdSchema = z.enum(["nback", "gonogo", "reasoning"]);
+export const MechanicIdSchema = z.enum(["nback", "gonogo", "reasoning", "speed"]);
 
 export const BlockConfigSchema = z.object({
   mechanic: MechanicIdSchema,

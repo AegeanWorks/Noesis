@@ -8,6 +8,8 @@ export interface Settings {
   difficulty: Difficulty;
   sessionLength: SessionLength;
   motivationMode: boolean;
+  largeText: boolean;
+  highContrast: boolean;
 }
 
 const KEY = "noesis.settings.v1";
@@ -17,6 +19,8 @@ export const DEFAULT_SETTINGS: Settings = {
   difficulty: 2,
   sessionLength: "standard",
   motivationMode: true,
+  largeText: false,
+  highContrast: false,
 };
 
 function isDifficulty(value: unknown): value is Difficulty {
@@ -42,6 +46,12 @@ export function loadSettings(): Settings {
         typeof parsed.motivationMode === "boolean"
           ? parsed.motivationMode
           : DEFAULT_SETTINGS.motivationMode,
+      largeText:
+        typeof parsed.largeText === "boolean" ? parsed.largeText : DEFAULT_SETTINGS.largeText,
+      highContrast:
+        typeof parsed.highContrast === "boolean"
+          ? parsed.highContrast
+          : DEFAULT_SETTINGS.highContrast,
     };
   } catch {
     return DEFAULT_SETTINGS;

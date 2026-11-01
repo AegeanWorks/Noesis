@@ -4,7 +4,7 @@ import { mechanicResult, defaultTrials } from "../../src/engine/mechanics";
 import { policyFor, runMechanic } from "../../src/engine/simulate";
 import type { MechanicId } from "../../src/engine/types";
 
-const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning"];
+const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed"];
 
 describe("mechanic determinism", () => {
   for (const id of MECHANICS) {

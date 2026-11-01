@@ -34,13 +34,14 @@ function applyAll(state: ReturnType<typeof createSession>, actions: SessionActio
 }
 
 describe("session", () => {
-  it("builds a three-block starter session", () => {
+  it("builds a four-block starter session", () => {
     const config = defaultSessionConfig(123);
-    expect(config.blocks).toHaveLength(3);
+    expect(config.blocks).toHaveLength(4);
     expect(config.blocks.map((block) => block.mechanic)).toEqual([
       "nback",
       "gonogo",
       "reasoning",
+      "speed",
     ]);
     const state = createSession(config);
     expect(state.phase).toBe("ready");
@@ -54,9 +55,9 @@ describe("session", () => {
     expect(config.blocks.every((block) => block.difficulty === 3)).toBe(true);
   });
 
-  it("builds a standard three-block session with the chosen difficulty", () => {
+  it("builds a standard four-block session with the chosen difficulty", () => {
     const config = defaultSessionConfig(7, 1, "standard");
-    expect(config.blocks).toHaveLength(3);
+    expect(config.blocks).toHaveLength(4);
     expect(config.blocks.every((block) => block.difficulty === 1)).toBe(true);
   });
 
@@ -64,11 +65,12 @@ describe("session", () => {
     const { config, actions } = buildScenario(123);
     const state = applyAll(createSession(config), actions);
     expect(state.phase).toBe("complete");
-    expect(state.results).toHaveLength(3);
+    expect(state.results).toHaveLength(4);
     expect(state.results.map((result) => result.mechanic)).toEqual([
       "nback",
       "gonogo",
       "reasoning",
+      "speed",
     ]);
     for (const result of state.results) {
       expect(result.metrics.accuracy).toBeGreaterThan(0.7);
@@ -115,9 +117,9 @@ describe("session", () => {
     const state = applySessionAction(createSession(defaultSessionConfig(1)), { type: "begin" });
     const view = sessionView(state);
     expect(view.blockIndex).toBe(0);
-    expect(view.blockCount).toBe(3);
+    expect(view.blockCount).toBe(4);
     expect(view.progressCurrent).toBe(1);
-    expect(view.progressTotal).toBe(3);
+    expect(view.progressTotal).toBe(4);
     expect(view.mechanic?.mechanic).toBe("nback");
   });
 });

@@ -1,7 +1,7 @@
-export const MECHANIC_IDS = ["nback", "gonogo", "reasoning"] as const;
+export const MECHANIC_IDS = ["nback", "gonogo", "reasoning", "speed"] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
-export type Domain = "working_memory" | "inhibition" | "reasoning";
+export type Domain = "working_memory" | "inhibition" | "reasoning" | "processing_speed";
 export type SessionLength = "quick" | "standard";
 export type ClaimLevel = "supported" | "experimental" | "wellness_only";
 export type FeedbackTone = "correct" | "incorrect" | "neutral";
@@ -147,6 +147,39 @@ export interface ReasoningAnswer {
   timedOut: boolean;
 }
 
+export interface SpeedConfig {
+  trials: number;
+  foreperiodMinMs: number;
+  foreperiodMaxMs: number;
+  responseWindowMs: number;
+  feedbackMs: number;
+  interTrialMs: number;
+}
+
+export interface SpeedResponse {
+  trial: number;
+  responded: boolean;
+  correct: boolean;
+  reactionMs: number | null;
+}
+
+export interface SpeedState {
+  mechanic: "speed";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: SpeedConfig;
+  foreperiods: number[];
+  index: number;
+  phase: "wait" | "stimulus" | "feedback" | "iti" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  stimulusStartTick: number;
+  respondedThisTrial: boolean;
+  responses: SpeedResponse[];
+  completed: boolean;
+}
+
 export interface ReasoningState {
   mechanic: "reasoning";
   seed: number;
@@ -164,7 +197,7 @@ export interface ReasoningState {
   completed: boolean;
 }
 
-export type MechanicState = NBackState | GoNoGoState | ReasoningState;
+export type MechanicState = NBackState | GoNoGoState | ReasoningState | SpeedState;
 
 export type MechanicAction =
   | { type: "respond" }

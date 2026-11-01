@@ -65,6 +65,30 @@ function GoNoGoStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) 
   );
 }
 
+function SpeedStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) {
+  return (
+    <div className="stage stage-speed" data-mechanic="speed" data-phase={view.phase}>
+      <div
+        className={`speed-ring ${view.stimulus ? "speed-ring-active" : "speed-ring-idle"}`}
+        role="img"
+        aria-label={view.stimulus ? "Circle: tap now" : "Wait for the circle"}
+        data-testid="stimulus"
+        data-shape={view.stimulus ?? "blank"}
+      />
+      <p className="stage-prompt">{view.prompt}</p>
+      <Feedback view={view} />
+      <Button
+        onClick={onRespond}
+        disabled={!view.canRespond}
+        className="wide"
+        data-testid="respond"
+      >
+        Tap
+      </Button>
+    </div>
+  );
+}
+
 function ReasoningStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   return (
     <div className="stage stage-reasoning" data-mechanic="reasoning" data-phase={view.phase}>
@@ -103,6 +127,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "gonogo") {
     return <GoNoGoStage view={view} onRespond={props.onRespond} />;
+  }
+  if (view.mechanic === "speed") {
+    return <SpeedStage view={view} onRespond={props.onRespond} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

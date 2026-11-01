@@ -8,6 +8,7 @@ import type {
   MechanicState,
   NBackState,
   ReasoningState,
+  SpeedState,
 } from "./types";
 
 export type Policy = (state: MechanicState) => MechanicAction | null;
@@ -35,6 +36,10 @@ export function optimalPolicy(state: MechanicState): MechanicAction | null {
       ? { type: "respond" }
       : null;
   }
+  if (state.mechanic === "speed") {
+    if (state.phase !== "stimulus" || state.respondedThisTrial) return null;
+    return state.phaseElapsed >= 250 ? { type: "respond" } : null;
+  }
   if (state.phase !== "question") return null;
   if (state.phaseElapsed < 500) return null;
   const id = state.order[state.index];
@@ -53,6 +58,11 @@ export function alwaysPolicy(state: MechanicState): MechanicAction | null {
   if (state.mechanic === "gonogo") {
     return (state.phase === "stimulus" || state.phase === "response") &&
       !state.respondedThisTrial
+      ? { type: "respond" }
+      : null;
+  }
+  if (state.mechanic === "speed") {
+    return state.phase === "stimulus" && !state.respondedThisTrial
       ? { type: "respond" }
       : null;
   }
@@ -75,6 +85,12 @@ export function randomPolicy(seed: number): Policy {
       ) {
         return null;
       }
+      const [respond, next] = nextRandom(rng);
+      rng = next;
+      return respond < 0.5 ? { type: "respond" } : null;
+    }
+    if (state.mechanic === "speed") {
+      if (state.phase !== "stimulus" || state.respondedThisTrial) return null;
       const [respond, next] = nextRandom(rng);
       rng = next;
       return respond < 0.5 ? { type: "respond" } : null;
@@ -129,6 +145,14 @@ export function runMechanic(
   policy: Policy,
   options?: SimulationOptions,
 ): SimulationResult<ReasoningState>;
+export function runMechanic(
+  id: "speed",
+  seed: number,
+  difficulty: number,
+  trials: number,
+  policy: Policy,
+  options?: SimulationOptions,
+): SimulationResult<SpeedState>;
 export function runMechanic(
   id: MechanicId,
   seed: number,

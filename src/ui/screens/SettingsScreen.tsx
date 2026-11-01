@@ -1,4 +1,7 @@
 import { useState } from "react";
+import type { AdverseEvent } from "../../storage/adverseEvents";
+import { SYMPTOM_LABELS } from "../../storage/adverseEvents";
+import type { AdaptiveLevels } from "../../storage/adaptive";
 import type { Difficulty, SessionLength } from "../../storage/settings";
 import { Button } from "../components/Button";
 
@@ -7,11 +10,22 @@ interface SettingsScreenProps {
   difficulty: Difficulty;
   sessionLength: SessionLength;
   motivationMode: boolean;
+  largeText: boolean;
+  highContrast: boolean;
   historyCount: number;
+  adverseEvents: AdverseEvent[];
+  onClearAdverseEvents: () => void;
+  motivationPaused: boolean;
+  onResumeMotivation: () => void;
+  adaptiveEnabled: boolean;
+  adaptiveLevels: AdaptiveLevels;
+  onAdaptiveToggle: (enabled: boolean) => void;
   onReducedMotion: (value: boolean) => void;
   onDifficulty: (value: Difficulty) => void;
   onSessionLength: (value: SessionLength) => void;
   onMotivationMode: (value: boolean) => void;
+  onLargeText: (value: boolean) => void;
+  onHighContrast: (value: boolean) => void;
   onResetSafety: () => void;
   onExportHistory: () => void;
   onClearHistory: () => void;
@@ -29,11 +43,22 @@ export function SettingsScreen({
   difficulty,
   sessionLength,
   motivationMode,
+  largeText,
+  highContrast,
   historyCount,
+  adverseEvents,
+  onClearAdverseEvents,
+  motivationPaused,
+  onResumeMotivation,
+  adaptiveEnabled,
+  adaptiveLevels,
+  onAdaptiveToggle,
   onReducedMotion,
   onDifficulty,
   onSessionLength,
   onMotivationMode,
+  onLargeText,
+  onHighContrast,
   onResetSafety,
   onExportHistory,
   onClearHistory,
@@ -58,6 +83,23 @@ export function SettingsScreen({
       <h1>Local control</h1>
 
       <div className="card stack">
+        <h2>Display</h2>
+        <label className="check">
+          <input
+            type="checkbox"
+            checked={largeText}
+            onChange={(event) => onLargeText(event.target.checked)}
+          />
+          Larger text
+        </label>
+        <label className="check">
+          <input
+            type="checkbox"
+            checked={highContrast}
+            onChange={(event) => onHighContrast(event.target.checked)}
+          />
+          Higher contrast
+        </label>
         <label className="check">
           <input
             type="checkbox"
@@ -67,8 +109,8 @@ export function SettingsScreen({
           Reduce motion and animation
         </label>
         <p className="fine">
-          The app already avoids flashing. This setting reduces transitions and non-essential
-          motion.
+          The app already avoids flashing. These settings make text and controls easier to read
+          and reduce non-essential motion.
         </p>
       </div>
 
@@ -88,7 +130,7 @@ export function SettingsScreen({
                 checked={sessionLength === "quick"}
                 onChange={() => onSessionLength("quick")}
               />
-              Quick · 2 blocks
+              Quick · 2 blocks · 5 min
             </label>
             <label className="choice">
               <input
@@ -97,7 +139,7 @@ export function SettingsScreen({
                 checked={sessionLength === "standard"}
                 onChange={() => onSessionLength("standard")}
               />
-              Standard · 3 blocks
+              Standard · 4 blocks · 8 min
             </label>
           </div>
         </fieldset>
@@ -134,6 +176,46 @@ export function SettingsScreen({
           steady, 20% boost and 10% rare. Risk is optional and only affects bonus points; core
           progress is never lost.
         </p>
+        {motivationPaused ? (
+          <p className="fine">
+            Motivation bonuses are paused for today after heavy use. They return tomorrow, or
+            you can resume now.
+          </p>
+        ) : null}
+        {motivationPaused ? (
+          <div className="hero-actions">
+            <Button variant="ghost" onClick={onResumeMotivation}>
+              Resume Motivation now
+            </Button>
+          </div>
+        ) : null}
+      </div>
+
+      <div className="card stack">
+        <h2>Adaptive difficulty</h2>
+        <label className="check">
+          <input
+            type="checkbox"
+            checked={adaptiveEnabled}
+            onChange={(event) => onAdaptiveToggle(event.target.checked)}
+          />
+          Experimental: adjust each task level from recent accuracy
+        </label>
+        <p className="fine">
+          When on, a task steps up after a block at 80% or better and steps down below 60%,
+          between levels 1 and 3. Levels apply to the next session. This is an experiment, not
+          a proven better way to train: compare blocks only within the same level.
+        </p>
+        {adaptiveEnabled ? (
+          <ul className="practice-list">
+            {(Object.keys(adaptiveLevels) as (keyof AdaptiveLevels)[]).map((mechanic) => (
+              <li className="practice-row" key={mechanic}>
+                <span>{mechanic}</span>
+                <span>Level {adaptiveLevels[mechanic]}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
 
       <div className="card stack">
@@ -153,6 +235,35 @@ export function SettingsScreen({
           The harness exposes session state on this device only. It is not a network API and
           sends no data anywhere.
         </p>
+      </div>
+
+      <div className="card stack">
+        <h2>Symptom reports</h2>
+        <p className="fine">
+          {adverseEvents.length === 0
+            ? "No symptoms have been reported. They are logged here after sessions."
+            : `${adverseEvents.length} symptom ${adverseEvents.length === 1 ? "report is" : "reports are"} stored on this device.`}{" "}
+          There is no account and no server.
+        </p>
+        {adverseEvents.length > 0 ? (
+          <ul className="practice-list">
+            {adverseEvents.map((event) => (
+              <li className="practice-row" key={event.id}>
+                <span>
+                  {new Date(event.reportedAt).toLocaleDateString()} ·{" "}
+                  {event.symptoms.map((symptom) => SYMPTOM_LABELS[symptom]).join(", ")} ·{" "}
+                  {event.severity}
+                  {event.stoppedSession ? " · stop advised" : ""}
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
+        <div className="hero-actions">
+          <Button variant="ghost" onClick={onClearAdverseEvents} disabled={adverseEvents.length === 0}>
+            Clear symptom reports
+          </Button>
+        </div>
       </div>
 
       <div className="card stack">

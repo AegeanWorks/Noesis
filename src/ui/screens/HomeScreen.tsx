@@ -1,24 +1,34 @@
 import { useState } from "react";
 import { MECHANIC_META } from "../../engine/evidence";
 import type { MechanicId, MechanicMeta } from "../../engine/types";
-import type { SessionRecord, WeekStats } from "../../storage/history";
-import { bestAccuracyFor, lastResultFor } from "../../storage/history";
+import type { SessionRecord, TodayStats, WeekStats } from "../../storage/history";
+import { accuracySeries, bestAccuracyFor, lastResultFor } from "../../storage/history";
+import type { HeavyUseSignal } from "../../storage/engagement";
 import type { PracticeIntention } from "../../storage/intention";
 import type { SessionLength } from "../../storage/settings";
 import { Button } from "../components/Button";
 import { EvidenceBadge } from "../components/EvidenceBadge";
+import { HeavyUseNotice } from "../components/HeavyUseNotice";
+import { Sparkline } from "../components/Sparkline";
 
 interface HomeScreenProps {
   hasSession: boolean;
   history: readonly SessionRecord[];
   week: WeekStats;
+  today: TodayStats;
   intention: PracticeIntention | null;
   sessionLength: SessionLength;
+  heavyUse: HeavyUseSignal | null;
+  heavyUseDismissed: boolean;
+  motivationOn: boolean;
+  motivationPaused: boolean;
   onStart: () => void;
   onContinue: () => void;
   onSaveIntention: (when: string, where: string) => void;
   onClearIntention: () => void;
   onEvidence: () => void;
+  onPauseMotivation: () => void;
+  onDismissHeavyUse: () => void;
 }
 
 function MechanicCard({ meta }: { meta: MechanicMeta }) {
@@ -140,7 +150,15 @@ function PracticePlan({
   );
 }
 
-function PracticeSummary({ history, week }: { history: readonly SessionRecord[]; week: WeekStats }) {
+function PracticeSummary({
+  history,
+  week,
+  today,
+}: {
+  history: readonly SessionRecord[];
+  week: WeekStats;
+  today: TodayStats;
+}) {
   if (history.length === 0) {
     return (
       <section className="card practice-card" aria-labelledby="practice-heading">
@@ -151,7 +169,7 @@ function PracticeSummary({ history, week }: { history: readonly SessionRecord[];
           </div>
         </div>
         <p className="muted">
-          Your first session takes about six minutes. Results stay on this device.
+          Your first session takes about eight minutes. Results stay on this device.
         </p>
       </section>
     );
@@ -174,6 +192,12 @@ function PracticeSummary({ history, week }: { history: readonly SessionRecord[];
         {week.sessions === 1 ? "session" : "sessions"} · <strong>{week.days}</strong>{" "}
         {week.days === 1 ? "day" : "days"} · <strong>{week.minutes}</strong> min
       </p>
+      {today.sessions >= 2 ? (
+        <p className="break-note" role="status">
+          You have completed {today.sessions} sessions today. A break is fine; rest is part of
+          practice.
+        </p>
+      ) : null}
       <dl className="practice-list">
         {(Object.keys(MECHANIC_META) as MechanicId[]).map((id) => {
           const meta = MECHANIC_META[id];
@@ -183,6 +207,10 @@ function PracticeSummary({ history, week }: { history: readonly SessionRecord[];
             <div className="practice-row" key={id}>
               <dt>{meta.name}</dt>
               <dd>
+                <Sparkline
+                  values={accuracySeries(history, id)}
+                  label={`${meta.name} recent accuracy trend`}
+                />
                 <span className="practice-last">Last {percent(last?.metrics.accuracy ?? null)}</span>
                 <span className="practice-best">Best {percent(best)}</span>
               </dd>
@@ -203,13 +231,20 @@ export function HomeScreen({
   hasSession,
   history,
   week,
+  today,
   intention,
   sessionLength,
+  heavyUse,
+  heavyUseDismissed,
+  motivationOn,
+  motivationPaused,
   onStart,
   onContinue,
   onSaveIntention,
   onClearIntention,
   onEvidence,
+  onPauseMotivation,
+  onDismissHeavyUse,
 }: HomeScreenProps) {
   return (
     <section className="screen home-screen">
@@ -217,8 +252,8 @@ export function HomeScreen({
         <p className="eyebrow">Evidence-led practice</p>
         <h1>Short sessions. Specific skills. Honest claims.</h1>
         <p className="lede">
-          Noesis trains working memory, response inhibition and reasoning, and measures each
-          separately. There is no single brain score.
+          Noesis trains working memory, response inhibition, reasoning and processing speed,
+          and measures each separately. There is no single brain score.
         </p>
         <button
           type="button"
@@ -228,7 +263,7 @@ export function HomeScreen({
         >
           <span className="start-cta-label">{hasSession ? "Resume session" : "Start session"}</span>
           <span className="start-cta-meta">
-            One click · about {sessionLength === "quick" ? "4" : "6"} minutes · no flashing
+            One click · about {sessionLength === "quick" ? "5" : "8"} minutes · no flashing
           </span>
         </button>
         <div className="hero-actions hero-actions-secondary">
@@ -244,7 +279,17 @@ export function HomeScreen({
       </div>
 
       <PracticePlan intention={intention} onSave={onSaveIntention} onClear={onClearIntention} />
-      <PracticeSummary history={history} week={week} />
+      <PracticeSummary history={history} week={week} today={today} />
+
+      {heavyUse && !heavyUseDismissed ? (
+        <HeavyUseNotice
+          signal={heavyUse}
+          motivationOn={motivationOn}
+          motivationPaused={motivationPaused}
+          onPauseMotivation={onPauseMotivation}
+          onDismiss={onDismissHeavyUse}
+        />
+      ) : null}
 
       <div className="grid">
         {Object.values(MECHANIC_META).map((meta) => (

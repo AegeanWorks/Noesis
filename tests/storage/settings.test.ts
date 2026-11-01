@@ -23,12 +23,16 @@ describe("settings", () => {
       difficulty: 3,
       sessionLength: "quick",
       motivationMode: false,
+      largeText: true,
+      highContrast: false,
     });
     expect(loadSettings()).toEqual({
       reducedMotion: true,
       difficulty: 3,
       sessionLength: "quick",
       motivationMode: false,
+      largeText: true,
+      highContrast: false,
     });
   });
 
@@ -39,6 +43,8 @@ describe("settings", () => {
       difficulty: DEFAULT_SETTINGS.difficulty,
       sessionLength: DEFAULT_SETTINGS.sessionLength,
       motivationMode: DEFAULT_SETTINGS.motivationMode,
+      largeText: DEFAULT_SETTINGS.largeText,
+      highContrast: DEFAULT_SETTINGS.highContrast,
     });
   });
 

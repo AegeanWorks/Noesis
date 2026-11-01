@@ -10,6 +10,7 @@ import {
 import { normalizeSeed } from "./rng";
 import type {
   BlockConfig,
+  MechanicId,
   SessionAction,
   SessionConfig,
   SessionEvent,
@@ -20,16 +21,20 @@ import type {
 
 const MAX_EVENTS = 200;
 
+const BLOCK_MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed"];
+
 export function sessionBlocks(
   difficulty: number,
   length: SessionLength,
+  levels?: Partial<Record<MechanicId, number>>,
 ): BlockConfig[] {
   const safeDifficulty = Math.min(3, Math.max(1, Math.round(difficulty)));
-  const blocks: BlockConfig[] = [
-    { mechanic: "nback", difficulty: safeDifficulty, trials: defaultTrials("nback", safeDifficulty) },
-    { mechanic: "gonogo", difficulty: safeDifficulty, trials: defaultTrials("gonogo", safeDifficulty) },
-    { mechanic: "reasoning", difficulty: safeDifficulty, trials: defaultTrials("reasoning", safeDifficulty) },
-  ];
+  const blocks: BlockConfig[] = BLOCK_MECHANICS.map((mechanic) => {
+    const level = levels?.[mechanic];
+    const blockDifficulty =
+      typeof level === "number" ? Math.min(3, Math.max(1, Math.round(level))) : safeDifficulty;
+    return { mechanic, difficulty: blockDifficulty, trials: defaultTrials(mechanic, blockDifficulty) };
+  });
   return length === "quick" ? blocks.slice(0, 2) : blocks;
 }
 
@@ -37,11 +42,12 @@ export function defaultSessionConfig(
   seed: number,
   difficulty = 2,
   length: SessionLength = "standard",
+  levels?: Partial<Record<MechanicId, number>>,
 ): SessionConfig {
   return {
     seed: normalizeSeed(seed),
     label: length === "quick" ? "Quick session" : "Starter session",
-    blocks: sessionBlocks(difficulty, length),
+    blocks: sessionBlocks(difficulty, length, levels),
   };
 }
 

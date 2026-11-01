@@ -17,12 +17,33 @@ import {
   bestAccuracyFor,
   clearHistory,
   loadHistory,
+  todayStats,
   weekStats,
 } from "./storage/history";
 import type { PracticeIntention } from "./storage/intention";
 import { clearIntention, loadIntention, saveIntention } from "./storage/intention";
 import type { SafetyProfile } from "./storage/safety";
 import { clearSafety, loadSafety } from "./storage/safety";
+import type { AdverseEvent } from "./storage/adverseEvents";
+import {
+  clearAdverseEvents,
+  loadAdverseEvents,
+} from "./storage/adverseEvents";
+import {
+  clearEngagement,
+  detectHeavyUse,
+  dismissHeavyUseToday,
+  isHeavyUseDismissedToday,
+  isMotivationPaused,
+  loadEngagement,
+  pauseMotivationToday,
+  resumeMotivation,
+} from "./storage/engagement";
+import {
+  applySessionResults,
+  loadAdaptive,
+  setAdaptiveEnabled,
+} from "./storage/adaptive";
 import type { Difficulty, SessionLength } from "./storage/settings";
 import { clearSettings, loadSettings, saveSettings } from "./storage/settings";
 import {
@@ -61,19 +82,29 @@ export function App() {
     () => boot?.motivation ?? null,
   );
   const savedSession = useRef<string | null>(null);
+  const [lastSessionId, setLastSessionId] = useState<string | null>(null);
+  const [adverseEvents, setAdverseEvents] = useState<AdverseEvent[]>(() => loadAdverseEvents());
+  const [engagement, setEngagement] = useState(() => loadEngagement());
+  const [adaptive, setAdaptive] = useState(() => loadAdaptive());
+  const motivationPaused =
+    engagement.motivationPausedDay !== null && isMotivationPaused();
+  const motivationActive = settings.motivationMode && !motivationPaused;
   const motivatedBlock = useRef<number>(-1);
   const state = useSessionState();
 
   useSessionClock(paused || screen !== "session");
   useSessionPersistence(
     state,
-    settings.motivationMode ? motivation : null,
+    motivationActive ? motivation : null,
     state?.phase === "running" || state?.phase === "block_complete",
   );
 
   useEffect(() => {
-    document.documentElement.classList.toggle("reduced-motion", settings.reducedMotion);
-  }, [settings.reducedMotion]);
+    const root = document.documentElement;
+    root.classList.toggle("reduced-motion", settings.reducedMotion);
+    root.classList.toggle("large-text", settings.largeText);
+    root.classList.toggle("high-contrast", settings.highContrast);
+  }, [settings.reducedMotion, settings.largeText, settings.highContrast]);
 
   useEffect(() => {
     if (state?.phase !== "complete" || state.results.length === 0) return;
@@ -82,6 +113,8 @@ export function App() {
     const id = stableHash({ seed: state.config.seed, results: state.results });
     if (savedSession.current !== id) {
       savedSession.current = id;
+      setLastSessionId(id);
+      setAdaptive(applySessionResults(state.results));
       setHistory(
         appendSession({
           id,
@@ -101,9 +134,16 @@ export function App() {
     clearSessionSnapshot();
     const seed = Date.now() >>> 0;
     motivatedBlock.current = -1;
-    setMotivation(settings.motivationMode ? createMotivation(seed) : null);
+    const adaptiveState = loadAdaptive();
+    setAdaptive(adaptiveState);
+    setMotivation(settings.motivationMode && !isMotivationPaused() ? createMotivation(seed) : null);
     sessionStore.start(
-      defaultSessionConfig(seed, settings.difficulty, settings.sessionLength),
+      defaultSessionConfig(
+        seed,
+        settings.difficulty,
+        settings.sessionLength,
+        adaptiveState.enabled ? adaptiveState.levels : undefined,
+      ),
     );
     sessionStore.dispatch({ type: "begin" });
     setPaused(false);
@@ -151,7 +191,7 @@ export function App() {
   }, []);
 
   useLayoutEffect(() => {
-    if (!settings.motivationMode || state?.phase !== "block_complete") return;
+    if (!motivationActive || state?.phase !== "block_complete") return;
     const result = state.results[state.results.length - 1];
     if (!result || motivatedBlock.current === state.blockIndex) return;
     motivatedBlock.current = state.blockIndex;
@@ -164,7 +204,7 @@ export function App() {
         bestAccuracyFor(history, result.mechanic),
       );
     });
-  }, [state, settings.motivationMode, history]);
+  }, [state, motivationActive, history]);
 
   const handleSafetyComplete = useCallback(() => {
     setSafety(loadSafety());
@@ -186,6 +226,27 @@ export function App() {
     setHistory([]);
   }, []);
 
+  const handleClearAdverseEvents = useCallback(() => {
+    clearAdverseEvents();
+    setAdverseEvents([]);
+  }, []);
+
+  const handlePauseMotivation = useCallback(() => {
+    setEngagement(pauseMotivationToday());
+  }, []);
+
+  const handleResumeMotivation = useCallback(() => {
+    setEngagement(resumeMotivation());
+  }, []);
+
+  const handleAdaptiveToggle = useCallback((enabled: boolean) => {
+    setAdaptive(setAdaptiveEnabled(enabled));
+  }, []);
+
+  const handleDismissHeavyUse = useCallback(() => {
+    setEngagement(dismissHeavyUseToday());
+  }, []);
+
   const handleSaveIntention = useCallback((when: string, where: string) => {
     setIntention(saveIntention({ when, where }));
   }, []);
@@ -200,8 +261,13 @@ export function App() {
     clearSettings();
     clearHistory();
     clearIntention();
+    clearAdverseEvents();
+    clearEngagement();
     clearSessionSnapshot();
     setHistory([]);
+    setAdverseEvents([]);
+    setEngagement(loadEngagement());
+    setLastSessionId(null);
     setIntention(null);
     setMotivation(null);
     window.location.reload();
@@ -244,8 +310,27 @@ export function App() {
     [settings],
   );
 
+  const setLargeText = useCallback(
+    (value: boolean) => {
+      const next = { ...settings, largeText: value };
+      setSettings(next);
+      saveSettings(next);
+    },
+    [settings],
+  );
+
+  const setHighContrast = useCallback(
+    (value: boolean) => {
+      const next = { ...settings, highContrast: value };
+      setSettings(next);
+      saveSettings(next);
+    },
+    [settings],
+  );
+
   const view = state ? sessionView(state) : null;
   const week = weekStats(history);
+  const today = todayStats(history);
   const hasSession =
     state !== null && state.phase !== "complete" && state.phase !== "aborted";
 
@@ -303,13 +388,20 @@ export function App() {
             hasSession={hasSession}
             history={history}
             week={week}
+            today={today}
             intention={intention}
             sessionLength={settings.sessionLength}
+            heavyUse={detectHeavyUse(history)}
+            heavyUseDismissed={isHeavyUseDismissedToday()}
+            motivationOn={settings.motivationMode}
+            motivationPaused={motivationPaused}
             onStart={startSession}
             onContinue={continueSession}
             onSaveIntention={handleSaveIntention}
             onClearIntention={handleClearIntention}
             onEvidence={() => setScreen("evidence")}
+            onPauseMotivation={handlePauseMotivation}
+            onDismissHeavyUse={handleDismissHeavyUse}
           />
         ) : null}
 
@@ -326,7 +418,7 @@ export function App() {
               onRiskAndNext={riskAndNext}
               onRespond={respond}
               onAnswer={answer}
-              motivation={settings.motivationMode ? motivation : null}
+              motivation={motivationActive ? motivation : null}
               targetMs={settings.sessionLength === "quick" ? 5 * 60_000 : 8 * 60_000}
               elapsedMs={state?.tick ?? 0}
             />
@@ -345,6 +437,8 @@ export function App() {
           <ResultsScreen
             results={state?.results ?? []}
             motivation={motivation}
+            sessionId={lastSessionId}
+            onAdverseLogged={setAdverseEvents}
             onRestart={startSession}
             onEvidence={() => setScreen("evidence")}
             onHome={() => setScreen("home")}
@@ -361,11 +455,22 @@ export function App() {
             difficulty={settings.difficulty}
             sessionLength={settings.sessionLength}
             motivationMode={settings.motivationMode}
+            largeText={settings.largeText}
+            highContrast={settings.highContrast}
             historyCount={history.length}
+            adverseEvents={adverseEvents}
+            onClearAdverseEvents={handleClearAdverseEvents}
+            motivationPaused={motivationPaused}
+            onResumeMotivation={handleResumeMotivation}
+            adaptiveEnabled={adaptive.enabled}
+            adaptiveLevels={adaptive.levels}
+            onAdaptiveToggle={handleAdaptiveToggle}
             onReducedMotion={setReducedMotion}
             onDifficulty={setDifficulty}
             onSessionLength={setSessionLength}
             onMotivationMode={setMotivationMode}
+            onLargeText={setLargeText}
+            onHighContrast={setHighContrast}
             onResetSafety={resetSafety}
             onExportHistory={exportHistory}
             onClearHistory={clearPracticeHistory}

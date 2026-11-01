@@ -60,8 +60,49 @@ function startOfWeek(now: Date): Date {
 }
 
 function localDayKey(iso: string): string {
-  const date = new Date(iso);
+  return localDayKeyFromDate(new Date(iso));
+}
+
+function localDayKeyFromDate(date: Date): string {
   return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+}
+
+export interface TodayStats {
+  sessions: number;
+  minutes: number;
+}
+
+export function todayStats(
+  history: readonly SessionRecord[],
+  now: Date = new Date(),
+): TodayStats {
+  const todayKey = localDayKeyFromDate(now);
+  const sessions = history.filter(
+    (session) =>
+      Number.isFinite(Date.parse(session.finishedAt)) &&
+      localDayKey(session.finishedAt) === todayKey,
+  );
+  const totalMs = sessions.reduce(
+    (sum, session) =>
+      sum + session.results.reduce((resultSum, result) => resultSum + result.durationMs, 0),
+    0,
+  );
+  return { sessions: sessions.length, minutes: Math.round(totalMs / 60_000) };
+}
+
+export function accuracySeries(
+  history: readonly SessionRecord[],
+  mechanic: MechanicResult["mechanic"],
+  limit = 10,
+): number[] {
+  const series: number[] = [];
+  for (const session of [...history].reverse()) {
+    const result = session.results.find((entry) => entry.mechanic === mechanic);
+    if (!result) continue;
+    const accuracy = result.metrics.accuracy;
+    if (typeof accuracy === "number") series.push(accuracy);
+  }
+  return series.slice(-Math.max(1, limit));
 }
 
 export function weekStats(

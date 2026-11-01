@@ -11,7 +11,7 @@
 
 An evidence-led cognitive training app. Every mechanic is a deterministic, headlessly drivable state machine, so the web app, the Android WebView build, the test suite and AI simulators run the same logic.
 
-**Current phase: first working vertical slice.** One-click sessions, three mechanics, local practice history, safety onboarding, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
+**Current phase: first working vertical slice.** One-click sessions, four mechanics, local practice history, safety onboarding, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
 
 ## 30-Second Cold-Start Quick Reference
 
@@ -45,6 +45,8 @@ The home screen has one primary action: **Start session**. It creates and begins
 Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. The optional practice plan asks when and where the next session will happen; it is stored locally and never blocks starting.
 
 An active session is snapshotted locally while it runs. After a browser reload or an Android WebView restart, the home screen offers **Resume session** instead of losing progress.
+
+The home screen also shows a per-mechanic accuracy sparkline for recent sessions and a gentle daily break cue after two completed sessions. Settings offers larger text, higher contrast and reduced motion for older adults and low-vision users.
 
 Completed sessions are stored locally and summarized per mechanic. There is no account and no server. Settings can export the practice history as JSON or clear it without touching the safety profile.
 
@@ -112,11 +114,23 @@ The app reports each block separately, avoids a composite "brain score", and sta
 noesis/
 ├── .aikit/                       <- project memory: record, ledger, decisions, codebase map
 ├── .gitignore                    <- transient and generated artifacts excluded
-├── assets/
+├── assets/                       <- project logo and social preview
 ├── android/                      <- Capacitor 7 Android project
+├── docs/                         <- research and design documentation
 ├── docs/research/                <- protocol, search log, PRISMA flow, synthesis, design implications
 │   ├── analysis/                 <- machine-readable evidence table and screening data
-│   └── records/                  <- raw PubMed, OpenAlex, trial-registry and behavioral-literature records
+│   ├── records/                  <- raw PubMed, OpenAlex, trial-registry and behavioral-literature records
+│   ├── BEHAVIORAL_ENGAGEMENT.md  <- Motivation mode audit, citations and safeguards
+│   ├── DESIGN_IMPLICATIONS.md    <- product requirements traceable to evidence
+│   ├── PRISMA_FLOW.md            <- PRISMA flow and checklist
+│   ├── PROTOCOL.md               <- pre-registered review protocol
+│   ├── README.md                 <- research index
+│   ├── REFERENCES.bib            <- BibTeX references
+│   ├── REFERENCES.md             <- included evidence references
+│   ├── SAFETY_AND_REGULATION.md  <- safety and regulatory constraints
+│   ├── SEARCH_LOG.md             <- search execution counts
+│   ├── SEARCH_STRATEGY.md        <- exact search strings
+│   └── SYNTHESIS.md              <- main evidence synthesis
 ├── public/                       <- PWA manifest and icons
 ├── scripts/                      <- AI simulator, determinism verifier, Android build, combined tests
 ├── src/
@@ -125,17 +139,23 @@ noesis/
 │   ├── storage/                  <- safety, settings, practice history and export
 │   ├── ui/                       <- screens and mechanic components
 │   ├── App.tsx
+│   ├── global.d.ts               <- window.__NOESIS__ typing
 │   ├── main.tsx
 │   └── styles.css
 ├── tests/
 │   ├── engine/                   <- mechanic, session, determinism, schema, AI tests
-│   └── ui/                       <- React component tests (jsdom)
+│   ├── storage/                  <- history, settings, intention and snapshot tests
+│   ├── ui/                       <- React component tests (jsdom)
+│   ├── __init__.py
+│   ├── test_evidence.py          <- evidence-table validator tests
+│   └── test_review_snapshot.py   <- review snapshot tests
 ├── noesis/                       <- Python evidence-review tooling
 ├── COMMERCIAL.md                 <- commercial licensing terms
 ├── LICENSE                       <- Aegean License 1.1 (AL-1.1)
 ├── LICENSES/                     <- REUSE license texts
 ├── REUSE.toml                    <- machine-readable SPDX metadata
 ├── capacitor.config.ts           <- Android wrapper configuration
+├── index.html                    <- Vite entry document
 ├── package-lock.json             <- locked npm dependency graph
 ├── package.json                  <- app dependencies and scripts
 ├── pyproject.toml                <- Python metadata
@@ -151,8 +171,9 @@ noesis/
 | N-back | Working-memory updating | Supported (near transfer) | Match a letter that equals the one N positions back. |
 | Go / No-Go | Response inhibition | Experimental | Respond to circles, withhold responses to squares. |
 | Reasoning | Inductive reasoning | Supported (older-adult evidence) | Multiple-choice sequences, analogies and logic items. |
+| Speed Tap | Processing speed | Experimental | Wait for a circle, then tap as fast as possible; reports reaction time, variability and lapses. |
 
-All three are available in the starter session: 2-back, go/no-go and reasoning.
+All four are available in the standard starter session: 2-back, go/no-go, reasoning and Speed Tap.
 
 ## Safety
 
@@ -161,6 +182,7 @@ All three are available in the starter session: 2-back, go/no-go and reasoning.
 - No audio, EEG or biometric modules are shipped in this slice.
 - Safety profile, display preferences, practice plan and practice history stay on the device. There is no account or server.
 - Motivation mode uses cosmetic bonuses, streaks and optional bonus-only risk. It never changes cognitive scores or puts core progress at risk.
+- A non-blocking daily break cue appears after two completed sessions; it never locks the user out.
 - Practice history can be exported or cleared from Settings.
 - The app shows explicit non-claims and links each mechanic to its evidence record.
 
@@ -187,7 +209,7 @@ This runs:
 1. the Python review suite (`python -m unittest discover -s tests -t .`), which validates the evidence table's schema, identifiers, confidence intervals, flags and synthesis matrix;
 2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, and the React safety/mechanic screens.
 
-`npm run ai:verify` runs 300 seeded mechanic simulations (3 mechanics × 50 seeds × 2 strategies), checks every metric is finite, completes every run, and verifies the replay hash matches.
+`npm run ai:verify` runs 400 seeded mechanic simulations (4 mechanics × 50 seeds × 2 strategies), checks every metric is finite, completes every run, and verifies the replay hash matches.
 
 ## Evidence Review
 

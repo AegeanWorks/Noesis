@@ -47,8 +47,10 @@ export function SafetyScreen({ onComplete }: SafetyScreenProps) {
           if (canSubmit) submit();
         }}
       >
-        <fieldset>
-          <legend>Have you ever had a seizure, or been diagnosed with photosensitive epilepsy?</legend>
+        <div className="field-group" role="group" aria-labelledby="photosensitive-label">
+          <p className="field-label" id="photosensitive-label">
+            Have you ever had a seizure, or been diagnosed with photosensitive epilepsy?
+          </p>
           <div className="choice-row">
             <label className="choice">
               <input
@@ -69,10 +71,12 @@ export function SafetyScreen({ onComplete }: SafetyScreenProps) {
               No
             </label>
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset>
-          <legend>Has a clinician advised you to avoid exercise or cognitive strain?</legend>
+        <div className="field-group" role="group" aria-labelledby="exercise-label">
+          <p className="field-label" id="exercise-label">
+            Has a clinician advised you to avoid exercise or cognitive strain?
+          </p>
           <div className="choice-row">
             <label className="choice">
               <input
@@ -93,7 +97,7 @@ export function SafetyScreen({ onComplete }: SafetyScreenProps) {
               No
             </label>
           </div>
-        </fieldset>
+        </div>
 
         {photosensitive ? (
           <p className="notice notice-warn" role="alert">

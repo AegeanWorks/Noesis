@@ -1,12 +1,16 @@
 import { mechanicMeta } from "../../engine/evidence";
 import type { MotivationState } from "../../engine/motivation";
 import { MOTIVATION_TIERS } from "../../engine/motivation";
+import type { AdverseEvent } from "../../storage/adverseEvents";
 import type { MechanicResult } from "../../engine/types";
 import { Button } from "../components/Button";
+import { SymptomCheckin } from "../components/SymptomCheckin";
 
 interface ResultsScreenProps {
   results: MechanicResult[];
   motivation: MotivationState | null;
+  sessionId: string | null;
+  onAdverseLogged: (events: AdverseEvent[]) => void;
   onRestart: () => void;
   onEvidence: () => void;
   onHome: () => void;
@@ -20,34 +24,64 @@ const METRIC_LABELS: Record<string, string> = {
   false_alarms: "False alarms",
   correct_rejections: "Correct rejections",
   accuracy: "Accuracy",
-  d_prime: "d′",
-  mean_hit_reaction_ms: "Mean hit RT",
+  d_prime: "Sensitivity (d′)",
+  mean_hit_reaction_ms: "Reaction time",
   go_trials: "Go trials",
   no_go_trials: "No-go trials",
   commissions: "Impulse errors",
   go_accuracy: "Go accuracy",
   no_go_accuracy: "No-go accuracy",
-  mean_go_reaction_ms: "Mean go RT",
+  mean_go_reaction_ms: "Reaction time",
+  mean_reaction_ms: "Mean reaction",
+  median_reaction_ms: "Median reaction",
+  fastest_reaction_ms: "Fastest reaction",
+  reaction_sd_ms: "Timing variability",
+  lapses: "Lapses",
   items_seen: "Items seen",
   correct: "Correct",
   incorrect: "Incorrect",
   timed_out: "Timed out",
-  mean_response_ms: "Mean response time",
+  mean_response_ms: "Response time",
   items_total: "Items in block",
   current_streak: "Current streak",
   max_streak: "Best streak",
   near_misses: "Near misses",
 };
 
+const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
+  nback: ["accuracy", "mean_hit_reaction_ms", "max_streak"],
+  gonogo: ["accuracy", "commissions", "mean_go_reaction_ms"],
+  reasoning: ["accuracy", "mean_response_ms", "timed_out"],
+  speed: ["accuracy", "median_reaction_ms", "lapses"],
+};
+
 function formatMetric(key: string, value: number): string {
   if (key.includes("accuracy")) return `${Math.round(value * 100)}%`;
-  if (key.endsWith("_ms")) return `${Math.round(value)} ms`;
+  if (key.endsWith("_ms")) {
+    return value > 0 && value < 40 ? "<40 ms" : `${Math.round(value)} ms`;
+  }
   if (key === "d_prime") return value.toFixed(2);
   return String(value);
 }
 
+function MetricTile({ metricKey, value }: { metricKey: string; value: number }) {
+  return (
+    <div className="metric">
+      <dt>{METRIC_LABELS[metricKey] ?? metricKey.replaceAll("_", " ")}</dt>
+      <dd>{formatMetric(metricKey, value)}</dd>
+    </div>
+  );
+}
+
 function ResultCard({ result }: { result: MechanicResult }) {
   const meta = mechanicMeta(result.mechanic);
+  const primaryKeys = PRIMARY_METRICS[result.mechanic].filter(
+    (key) => typeof result.metrics[key] === "number",
+  );
+  const secondary = Object.entries(result.metrics).filter(
+    ([key]) => !primaryKeys.includes(key),
+  );
+
   return (
     <article className="card result-card">
       <div className="card-top">
@@ -55,17 +89,23 @@ function ResultCard({ result }: { result: MechanicResult }) {
           <p className="eyebrow">{meta.tagline}</p>
           <h2>{meta.name}</h2>
         </div>
-        <span className="seed">seed {result.seed}</span>
       </div>
       <p className="result-summary">{result.summary}</p>
       <dl className="metrics">
-        {Object.entries(result.metrics).map(([key, value]) => (
-          <div key={key} className="metric">
-            <dt>{METRIC_LABELS[key] ?? key.replaceAll("_", " ")}</dt>
-            <dd>{formatMetric(key, value)}</dd>
-          </div>
+        {primaryKeys.map((key) => (
+          <MetricTile key={key} metricKey={key} value={result.metrics[key] ?? 0} />
         ))}
       </dl>
+      {secondary.length > 0 ? (
+        <details className="metric-details">
+          <summary>All metrics</summary>
+          <dl className="metrics metrics-secondary">
+            {secondary.map(([key, value]) => (
+              <MetricTile key={key} metricKey={key} value={value} />
+            ))}
+          </dl>
+        </details>
+      ) : null}
       <p className="fine">{meta.qualifier}</p>
     </article>
   );
@@ -74,6 +114,8 @@ function ResultCard({ result }: { result: MechanicResult }) {
 export function ResultsScreen({
   results,
   motivation,
+  sessionId,
+  onAdverseLogged,
   onRestart,
   onEvidence,
   onHome,
@@ -87,8 +129,8 @@ export function ResultsScreen({
       <p className="eyebrow">Session complete</p>
       <h1>Your blocks, separately</h1>
       <p className="lede">
-        These are practice metrics, not a diagnosis or a single brain score. Compare a block
-        only with your own earlier performance on the same task.
+        These are practice metrics, not a diagnosis, a test score or a single brain score.
+        Compare a block only with your own earlier performance on the same task.
       </p>
 
       {results.length === 0 ? (
@@ -138,6 +180,8 @@ export function ResultsScreen({
           <li>A change in one session is not evidence of durable improvement.</li>
         </ul>
       </aside>
+
+      <SymptomCheckin sessionId={sessionId} onLogged={onAdverseLogged} />
 
       <div className="hero-actions">
         <Button onClick={onRestart}>Run another session</Button>

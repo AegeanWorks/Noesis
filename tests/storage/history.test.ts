@@ -6,7 +6,9 @@ import {
   bestAccuracyFor,
   clearHistory,
   lastResultFor,
+  accuracySeries,
   loadHistory,
+  todayStats,
   weekStats,
   type SessionRecord,
 } from "../../src/storage/history";
@@ -96,6 +98,32 @@ describe("session history", () => {
     expect(stats.sessions).toBe(2);
     expect(stats.days).toBe(1);
     expect(stats.minutes).toBe(3);
+  });
+
+  it("builds an oldest-to-newest accuracy series", () => {
+    appendSession(record("a", 0.5));
+    appendSession(record("b", 0.9));
+    appendSession(record("c", 0.7));
+    expect(accuracySeries(loadHistory(), "nback")).toEqual([0.5, 0.9, 0.7]);
+    expect(accuracySeries(loadHistory(), "reasoning")).toEqual([]);
+  });
+
+  it("limits the accuracy series", () => {
+    for (let index = 0; index < 15; index += 1) {
+      appendSession(record(`s-${index}`, index / 15));
+    }
+    expect(accuracySeries(loadHistory(), "nback", 5)).toHaveLength(5);
+  });
+
+  it("counts today's sessions and minutes", () => {
+    const now = new Date(2026, 10, 1, 12, 0, 0);
+    const today = record("today", 0.8);
+    today.finishedAt = new Date(2026, 10, 1, 9, 0, 0).toISOString();
+    today.results[0]!.durationMs = 120_000;
+    const yesterday = record("yesterday", 0.7);
+    yesterday.finishedAt = new Date(2026, 9, 31, 9, 0, 0).toISOString();
+    yesterday.results[0]!.durationMs = 600_000;
+    expect(todayStats([today, yesterday], now)).toEqual({ sessions: 1, minutes: 2 });
   });
 
   it("ignores malformed stored data", () => {

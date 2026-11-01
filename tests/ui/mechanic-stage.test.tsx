@@ -67,6 +67,20 @@ describe("MechanicStage", () => {
     expect(onAnswer).toHaveBeenCalledWith(1);
   });
 
+  it("renders a speed circle and sends a tap", () => {
+    const onRespond = vi.fn();
+    render(
+      <MechanicStage
+        view={view({ mechanic: "speed", name: "Speed Tap", stimulus: "circle" })}
+        onRespond={onRespond}
+        onAnswer={vi.fn()}
+      />,
+    );
+    expect(screen.getByTestId("stimulus").getAttribute("data-shape")).toBe("circle");
+    fireEvent.click(screen.getByTestId("respond"));
+    expect(onRespond).toHaveBeenCalledTimes(1);
+  });
+
   it("renders a go/no-go shape", () => {
     render(
       <MechanicStage

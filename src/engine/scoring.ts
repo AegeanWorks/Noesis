@@ -78,6 +78,25 @@ export function rate(numerator: number, denominator: number): number {
   return round(numerator / denominator, 3);
 }
 
+export function median(values: readonly number[]): number | null {
+  if (values.length === 0) return null;
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  if (sorted.length % 2 === 1) return sorted[middle] ?? null;
+  const lower = sorted[middle - 1];
+  const upper = sorted[middle];
+  if (lower === undefined || upper === undefined) return null;
+  return (lower + upper) / 2;
+}
+
+export function standardDeviation(values: readonly number[]): number {
+  if (values.length < 2) return 0;
+  const average = values.reduce((sum, value) => sum + value, 0) / values.length;
+  const variance =
+    values.reduce((sum, value) => sum + (value - average) ** 2, 0) / (values.length - 1);
+  return Math.sqrt(variance);
+}
+
 export function longestStreak<T>(items: readonly T[], predicate: (item: T) => boolean): number {
   let best = 0;
   let current = 0;
