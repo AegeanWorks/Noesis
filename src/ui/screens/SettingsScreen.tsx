@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { AdverseEvent } from "../../storage/adverseEvents";
 import { SYMPTOM_LABELS } from "../../storage/adverseEvents";
 import type { AdaptiveLevels } from "../../storage/adaptive";
+import type { StudyArm, StudyState } from "../../storage/study";
 import type { Difficulty, SessionLength } from "../../storage/settings";
 import { Button } from "../components/Button";
 
@@ -20,6 +21,9 @@ interface SettingsScreenProps {
   adaptiveEnabled: boolean;
   adaptiveLevels: AdaptiveLevels;
   onAdaptiveToggle: (enabled: boolean) => void;
+  study: StudyState;
+  onEnrollStudy: (studyId: string, arm: StudyArm) => void;
+  onWithdrawStudy: () => void;
   onReducedMotion: (value: boolean) => void;
   onDifficulty: (value: Difficulty) => void;
   onSessionLength: (value: SessionLength) => void;
@@ -38,6 +42,64 @@ window.__NOESIS__.createSession(window.__NOESIS__.defaultConfig(42))
 window.__NOESIS__.dispatch({ type: "begin" })
 window.__NOESIS__.getView()`;
 
+function StudyEnrollForm({
+  onEnroll,
+}: {
+  onEnroll: (studyId: string, arm: StudyArm) => void;
+}) {
+  const [studyId, setStudyId] = useState("");
+  const [arm, setArm] = useState<StudyArm>("control");
+  const [consented, setConsented] = useState(false);
+  return (
+    <div className="stack">
+      <p className="fine">
+        Joining a trial arm changes what the app shows: the engagement arm adds a daily
+        streak reminder. Arm assignment comes from your trial protocol, not from the app.
+        You can withdraw at any time without losing your data.
+      </p>
+      <label className="fine" htmlFor="study-id">
+        Trial ID (from your investigator)
+      </label>
+      <input
+        id="study-id"
+        type="text"
+        value={studyId}
+        maxLength={60}
+        placeholder="e.g. RCT-2026-01"
+        onChange={(event) => setStudyId(event.target.value)}
+      />
+      <label className="fine" htmlFor="study-arm">
+        Assigned arm
+      </label>
+      <select
+        id="study-arm"
+        value={arm}
+        onChange={(event) => setArm(event.target.value === "engagement" ? "engagement" : "control")}
+      >
+        <option value="control">Control</option>
+        <option value="engagement">Engagement</option>
+      </select>
+      <label className="check">
+        <input
+          type="checkbox"
+          checked={consented}
+          onChange={(event) => setConsented(event.target.checked)}
+        />
+        I understand this is an investigational use, my sessions will be tagged with this
+        arm, and I can withdraw at any time.
+      </label>
+      <div className="hero-actions">
+        <Button
+          onClick={() => onEnroll(studyId.trim(), arm)}
+          disabled={studyId.trim() === "" || !consented}
+        >
+          Enroll in study
+        </Button>
+      </div>
+    </div>
+  );
+}
+
 export function SettingsScreen({
   reducedMotion,
   difficulty,
@@ -53,6 +115,9 @@ export function SettingsScreen({
   adaptiveEnabled,
   adaptiveLevels,
   onAdaptiveToggle,
+  study,
+  onEnrollStudy,
+  onWithdrawStudy,
   onReducedMotion,
   onDifficulty,
   onSessionLength,
@@ -216,6 +281,25 @@ export function SettingsScreen({
             ))}
           </ul>
         ) : null}
+      </div>
+
+      <div className="card stack">
+        <h2>Research study</h2>
+        {study.enrolled && study.studyId && study.arm ? (
+          <>
+            <p className="fine">
+              Enrolled in {study.studyId}, arm: {study.arm}. Every session is tagged with
+              this arm in the export. Safety monitoring stays on in every arm.
+            </p>
+            <div className="hero-actions">
+              <Button variant="ghost" onClick={onWithdrawStudy}>
+                Withdraw from study
+              </Button>
+            </div>
+          </>
+        ) : (
+          <StudyEnrollForm onEnroll={onEnrollStudy} />
+        )}
       </div>
 
       <div className="card stack">

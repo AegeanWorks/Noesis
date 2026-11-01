@@ -23,21 +23,37 @@ const SESSION: SessionRecord = {
 describe("history export", () => {
   it("serializes a versioned payload with metadata", () => {
     const parsed = JSON.parse(
-      buildHistoryExport([SESSION], new Date("2026-11-01T12:00:00.000Z")),
+      buildHistoryExport([SESSION], null, new Date("2026-11-01T12:00:00.000Z")),
     ) as Record<string, unknown>;
     expect(parsed.app).toBe("noesis");
     expect(parsed.version).toBe(1);
     expect(parsed.exportedAt).toBe("2026-11-01T12:00:00.000Z");
     expect(parsed.sessionCount).toBe(1);
     expect(parsed.sessions).toEqual([SESSION]);
+    expect(parsed.study).toBeNull();
   });
 
   it("exports an empty history without failing", () => {
     const parsed = JSON.parse(
-      buildHistoryExport([], new Date("2026-11-01T12:00:00.000Z")),
+      buildHistoryExport([], null, new Date("2026-11-01T12:00:00.000Z")),
     ) as Record<string, unknown>;
     expect(parsed.sessionCount).toBe(0);
     expect(parsed.sessions).toEqual([]);
+  });
+
+  it("carries the study enrollment for trial analysis", () => {
+    const parsed = JSON.parse(
+      buildHistoryExport(
+        [],
+        { studyId: "RCT-1", arm: "engagement", consentedAt: "2026-11-02T10:00:00.000Z" },
+        new Date("2026-11-01T12:00:00.000Z"),
+      ),
+    ) as Record<string, unknown>;
+    expect(parsed.study).toEqual({
+      studyId: "RCT-1",
+      arm: "engagement",
+      consentedAt: "2026-11-02T10:00:00.000Z",
+    });
   });
 
   it("ends with a newline for diff-friendly files", () => {

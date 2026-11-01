@@ -95,3 +95,17 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: R12 requires adaptive difficulty to be tested, not asserted: adaptivity has a mechanistic rationale but no consistent behavioural advantage. Fixed difficulty under-doses advanced users and over-doses struggling ones, but changing difficulty changes what accuracy means across sessions.
 - **Decision**: Add an opt-in adaptive mode, default off. Each mechanic holds a level 1-3 starting at the user's chosen difficulty; a block at 80% or better steps up, below 60% steps down, applied to the next session. Every change is appended to a capped local adaptation log. UI copy calls it an experiment and forbids cross-level score comparison.
 - **Consequences**: Accuracy series remain comparable only within a level; the adaptation log is the dose-response record for any future A/B analysis. The engine stays deterministic: levels are session inputs, not in-session mutations.
+
+### ADR-013: Engagement pull through verified behaviour-change techniques
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: The user asked for game addictiveness pointed at brain function rather than only restraint. The evidence supports the pull side through behaviour-change techniques (gamification g=0.42 while active in PMID 34982715; BCT count moderates effectiveness in PMID 40779747), while the disorder literature forbids gambling-like drivers (PMIDs 37256740, 36571943).
+- **Decision**: Add pull only from the verified set: a 14-day consistency calendar, one-time milestones for session counts, practice-day streaks and adaptive level-ups, and personal-best highlights that require a genuinely beaten prior best. No loss framing, no manufactured near-miss, no random or purchasable rewards; caps, odds disclosure, the break cue and the Motivation pause stay exactly as they are. See R37.
+- **Consequences**: The app gets stickier through goal-setting, self-monitoring and real-achievement feedback. Streaks celebrate showing up and never punish missing a day; milestones fire once and are dismissible; personal bests compare within the same task only.
+
+### ADR-014: Protocol-gated study arms for the investigational RCT
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: The device will be tested in a randomised controlled trial, which needs engagement variants to be testable per participant with full exposure traceability. The default product must stay the safe control experience.
+- **Decision**: Add study enrollment keyed by investigator-provided trial ID plus protocol-assigned arm (control or engagement) plus explicit consent; the engagement arm adds a daily streak reminder; every session record carries its arm and the JSON export carries the enrollment. Randomisation stays with the trial protocol: the app records and discloses, never assigns. Withdrawal keeps all data. Adverse-event capture, heavy-use detection and the Motivation pause run unchanged in every arm as trial safety monitoring. See R38.
+- **Consequences**: The trial can compare arms with per-session exposure data while ethics-relevant facts (consent timestamp, arm, withdrawal) live on-device and export with the record. Any future arm (e.g. a stronger variable-reward schedule) must be added as a new gated variant with its own disclosure, never by changing the default.

@@ -851,6 +851,41 @@ code {
   background: rgba(139, 233, 253, 0.08);
 }
 
+.calendar {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+}
+
+.dot-active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.dot-today {
+  outline: 2px solid rgba(139, 233, 253, 0.35);
+  outline-offset: 2px;
+}
+
+.best-badge {
+  display: inline-block;
+  border: 1px solid rgba(139, 233, 253, 0.4);
+  border-radius: 999px;
+  padding: 3px 10px;
+  color: var(--accent);
+  background: rgba(139, 233, 253, 0.1);
+  font-size: 0.82rem;
+  margin: 0 0 4px;
+}
+
 @media (max-width: 420px) {
   .practice-row {
     align-items: flex-start;

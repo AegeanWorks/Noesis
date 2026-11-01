@@ -2,11 +2,13 @@
 import { afterEach, describe, expect, it } from "vitest";
 import {
   detectHeavyUse,
+  detectMilestones,
   clearEngagement,
   dismissHeavyUseToday,
   isHeavyUseDismissedToday,
   isMotivationPaused,
   loadEngagement,
+  markMilestonesSeen,
   pauseMotivationToday,
   resumeMotivation,
 } from "../../src/storage/engagement";
@@ -107,6 +109,39 @@ describe("motivation pause and dismissal", () => {
     expect(loadEngagement()).toEqual({
       motivationPausedDay: null,
       heavyUseDismissedDay: null,
+      seenMilestones: [],
     });
+  });
+});
+
+describe("milestones", () => {
+  const day = (offset: number) => {
+    const date = new Date("2026-11-02T10:00:00");
+    date.setDate(date.getDate() - offset);
+    return date.toISOString();
+  };
+
+  it("celebrates the first session once", () => {
+    const history = [record("a", day(0))];
+    const fresh = detectMilestones(history, [], [], new Date("2026-11-02T20:00:00"));
+    expect(fresh.map((item) => item.id)).toEqual(["sessions-1"]);
+    markMilestonesSeen(fresh.map((item) => item.id));
+    expect(detectMilestones(history, [], loadEngagement().seenMilestones)).toEqual([]);
+  });
+
+  it("celebrates streaks without shaming gaps", () => {
+    const history = [record("a", day(0)), record("b", day(1)), record("c", day(2))];
+    const fresh = detectMilestones(history, [], [], new Date("2026-11-02T20:00:00"));
+    expect(fresh.map((item) => item.id)).toContain("streak-3");
+    expect(fresh.map((item) => item.id)).not.toContain("streak-7");
+  });
+
+  it("celebrates adaptive level-ups from the adaptation log", () => {
+    const fresh = detectMilestones(
+      [],
+      [{ at: day(0), mechanic: "nback", from: 2, to: 3, accuracy: 0.9 }],
+      [],
+    );
+    expect(fresh.map((item) => item.id)).toEqual(["adaptive-nback-3"]);
   });
 });

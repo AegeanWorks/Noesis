@@ -1,4 +1,7 @@
+import type { AdaptationEvent } from "./adaptive";
+import type { MechanicId } from "../engine/types";
 import type { SessionRecord } from "./history";
+import { currentDayStreak } from "./history";
 import { readLocal, removeLocal, writeLocal } from "./browserStorage";
 
 export type HeavyUseKind = "many_today" | "back_to_back" | "long_day";
@@ -73,30 +76,37 @@ const KEY = "noesis.engagement.v1";
 interface EngagementState {
   motivationPausedDay: string | null;
   heavyUseDismissedDay: string | null;
+  seenMilestones: string[];
 }
 
 function isEngagementState(value: unknown): value is EngagementState {
   if (typeof value !== "object" || value === null) return false;
   const state = value as Partial<EngagementState>;
+  const seen = state.seenMilestones;
   return (
     (state.motivationPausedDay === null ||
       typeof state.motivationPausedDay === "string") &&
     (state.heavyUseDismissedDay === null ||
-      typeof state.heavyUseDismissedDay === "string")
+      typeof state.heavyUseDismissedDay === "string") &&
+    (seen === undefined || (Array.isArray(seen) && seen.every((id) => typeof id === "string")))
   );
 }
+
+const EMPTY: EngagementState = {
+  motivationPausedDay: null,
+  heavyUseDismissedDay: null,
+  seenMilestones: [],
+};
 
 export function loadEngagement(): EngagementState {
   try {
     const raw = readLocal(KEY);
-    if (!raw) return { motivationPausedDay: null, heavyUseDismissedDay: null };
+    if (!raw) return { ...EMPTY, seenMilestones: [] };
     const parsed = JSON.parse(raw) as unknown;
-    if (!isEngagementState(parsed)) {
-      return { motivationPausedDay: null, heavyUseDismissedDay: null };
-    }
-    return parsed;
+    if (!isEngagementState(parsed)) return { ...EMPTY, seenMilestones: [] };
+    return { ...EMPTY, ...parsed, seenMilestones: [...(parsed.seenMilestones ?? [])] };
   } catch {
-    return { motivationPausedDay: null, heavyUseDismissedDay: null };
+    return { ...EMPTY, seenMilestones: [] };
   }
 }
 
@@ -142,4 +152,85 @@ export function isHeavyUseDismissedToday(now: Date = new Date()): boolean {
   return (
     loadEngagement().heavyUseDismissedDay === localDayKeyFromDate(now)
   );
+}
+
+export interface Milestone {
+  id: string;
+  title: string;
+  detail: string;
+}
+
+const SESSION_MILESTONES: { count: number; title: string }[] = [
+  { count: 1, title: "First session complete" },
+  { count: 10, title: "10 sessions practised" },
+  { count: 25, title: "25 sessions practised" },
+  { count: 50, title: "50 sessions practised" },
+  { count: 100, title: "100 sessions practised" },
+];
+
+const STREAK_MILESTONES: { days: number; title: string }[] = [
+  { days: 3, title: "3-day streak" },
+  { days: 7, title: "A full week of practice" },
+  { days: 14, title: "Two-week streak" },
+  { days: 30, title: "A month of practice days" },
+];
+
+export function detectMilestones(
+  history: readonly SessionRecord[],
+  adaptationLog: readonly AdaptationEvent[],
+  seen: readonly string[],
+  now: Date = new Date(),
+): Milestone[] {
+  const seenSet = new Set(seen);
+  const fresh: Milestone[] = [];
+  const total = history.length;
+  for (const { count, title } of SESSION_MILESTONES) {
+    const id = `sessions-${count}`;
+    if (total >= count && !seenSet.has(id)) {
+      fresh.push({
+        id,
+        title,
+        detail:
+          count === 1
+            ? "The first block is done. Short sessions, repeated, are the whole method."
+            : `${total} sessions are stored on this device. Consistency beats intensity.`,
+      });
+    }
+  }
+  const streak = currentDayStreak(history, now);
+  for (const { days, title } of STREAK_MILESTONES) {
+    const id = `streak-${days}`;
+    if (streak >= days && !seenSet.has(id)) {
+      fresh.push({
+        id,
+        title,
+        detail: `${streak} practice days in a row. Rest days are allowed; the streak counts days you showed up.`,
+      });
+    }
+  }
+  const leveled = new Map<MechanicId, AdaptationEvent>();
+  for (const event of adaptationLog) {
+    const current = leveled.get(event.mechanic);
+    if (!current || event.to > current.to) leveled.set(event.mechanic, event);
+  }
+  for (const [mechanic, event] of leveled) {
+    const id = `adaptive-${mechanic}-${event.to}`;
+    if (!seenSet.has(id)) {
+      fresh.push({
+        id,
+        title: `${mechanic} reached level ${event.to}`,
+        detail: "Adaptive difficulty stepped up after strong blocks. Compare new scores within this level.",
+      });
+    }
+  }
+  return fresh;
+}
+
+export function markMilestonesSeen(ids: readonly string[]): EngagementState {
+  const state = loadEngagement();
+  const seen = new Set(state.seenMilestones);
+  for (const id of ids) seen.add(id);
+  const next = { ...state, seenMilestones: [...seen] };
+  saveEngagement(next);
+  return next;
 }

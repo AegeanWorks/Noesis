@@ -10,6 +10,7 @@ interface ResultsScreenProps {
   results: MechanicResult[];
   motivation: MotivationState | null;
   sessionId: string | null;
+  newBests: MechanicResult["mechanic"][];
   onAdverseLogged: (events: AdverseEvent[]) => void;
   onRestart: () => void;
   onEvidence: () => void;
@@ -73,7 +74,13 @@ function MetricTile({ metricKey, value }: { metricKey: string; value: number }) 
   );
 }
 
-function ResultCard({ result }: { result: MechanicResult }) {
+function ResultCard({
+  result,
+  isNewBest,
+}: {
+  result: MechanicResult;
+  isNewBest: boolean;
+}) {
   const meta = mechanicMeta(result.mechanic);
   const primaryKeys = PRIMARY_METRICS[result.mechanic].filter(
     (key) => typeof result.metrics[key] === "number",
@@ -91,6 +98,11 @@ function ResultCard({ result }: { result: MechanicResult }) {
         </div>
       </div>
       <p className="result-summary">{result.summary}</p>
+      {isNewBest ? (
+        <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
+          New personal best
+        </p>
+      ) : null}
       <dl className="metrics">
         {primaryKeys.map((key) => (
           <MetricTile key={key} metricKey={key} value={result.metrics[key] ?? 0} />
@@ -115,6 +127,7 @@ export function ResultsScreen({
   results,
   motivation,
   sessionId,
+  newBests,
   onAdverseLogged,
   onRestart,
   onEvidence,
@@ -138,7 +151,11 @@ export function ResultsScreen({
       ) : (
         <div className="stack">
           {results.map((result, index) => (
-            <ResultCard key={`${result.mechanic}-${index}`} result={result} />
+            <ResultCard
+              key={`${result.mechanic}-${index}`}
+              result={result}
+              isNewBest={newBests.includes(result.mechanic)}
+            />
           ))}
         </div>
       )}

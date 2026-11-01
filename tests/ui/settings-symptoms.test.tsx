@@ -28,6 +28,9 @@ const BASE = {
   adaptiveEnabled: false,
   adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2 } as const,
   onAdaptiveToggle: () => {},
+  study: { enrolled: false, studyId: null, arm: null, consentedAt: null },
+  onEnrollStudy: () => {},
+  onWithdrawStudy: () => {},
 };
 
 const REPORT: AdverseEvent = {
@@ -88,5 +91,45 @@ describe("SettingsScreen adaptive difficulty", () => {
       />,
     );
     expect(screen.getAllByText("Level 2")).toHaveLength(4);
+  });
+});
+
+describe("SettingsScreen study enrollment", () => {
+  it("requires an id and consent before enrolling", () => {
+    const onEnroll = vi.fn();
+    render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        onEnrollStudy={onEnroll}
+        onWithdrawStudy={() => {}}
+      />,
+    );
+    const enroll = screen.getByRole("button", { name: "Enroll in study" });
+    expect((enroll as HTMLButtonElement).disabled).toBe(true);
+    fireEvent.change(screen.getByLabelText(/trial id/i), { target: { value: "RCT-1" } });
+    expect((enroll as HTMLButtonElement).disabled).toBe(true);
+    fireEvent.click(screen.getByLabelText(/investigational use/i));
+    expect((enroll as HTMLButtonElement).disabled).toBe(false);
+    fireEvent.change(screen.getByLabelText(/assigned arm/i), { target: { value: "engagement" } });
+    fireEvent.click(enroll);
+    expect(onEnroll).toHaveBeenCalledWith("RCT-1", "engagement");
+  });
+
+  it("shows enrollment and withdraws on request", () => {
+    const onWithdraw = vi.fn();
+    render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        study={{ enrolled: true, studyId: "RCT-1", arm: "engagement", consentedAt: "2026-11-02T10:00:00.000Z" }}
+        onWithdrawStudy={onWithdraw}
+      />,
+    );
+    expect(screen.getByText(/arm: engagement/i)).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "Withdraw from study" }));
+    expect(onWithdraw).toHaveBeenCalledTimes(1);
   });
 });

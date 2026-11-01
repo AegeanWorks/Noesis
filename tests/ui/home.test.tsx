@@ -43,6 +43,8 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     heavyUseDismissed: false,
     motivationOn: false,
     motivationPaused: false,
+    milestones: [],
+    studyArm: null,
     onStart: vi.fn(),
     onContinue: vi.fn(),
     onSaveIntention: vi.fn(),
@@ -50,6 +52,7 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     onEvidence: vi.fn(),
     onPauseMotivation: vi.fn(),
     onDismissHeavyUse: vi.fn(),
+    onDismissMilestones: vi.fn(),
     ...overrides,
   };
   render(<HomeScreen {...props} />);
@@ -128,5 +131,41 @@ describe("HomeScreen", () => {
     for (const name of ["N-back", "Go / No-Go", "Reasoning", "Speed Tap"]) {
       expect(screen.getByRole("heading", { name })).toBeTruthy();
     }
+  });
+
+  it("renders the two-week consistency calendar", () => {
+    const entry = record(80);
+    entry.finishedAt = new Date().toISOString();
+    renderHome({ history: [entry] });
+    const calendar = screen.getByTestId("practice-calendar");
+    expect(calendar.querySelectorAll(".dot").length).toBe(14);
+    expect(calendar.querySelectorAll(".dot-active").length).toBe(1);
+  });
+
+  it("shows a milestone notice and dismisses it", () => {
+    const props = renderHome({
+      milestones: [{ id: "sessions-1", title: "First session complete", detail: "Well done." }],
+    });
+    expect(screen.getByTestId("milestone-notice").textContent).toMatch(/first session complete/i);
+    fireEvent.click(screen.getByRole("button", { name: "Nice" }));
+    expect(props.onDismissMilestones).toHaveBeenCalledTimes(1);
+  });
+
+  it("hides the milestone notice when there is nothing new", () => {
+    renderHome({ milestones: [] });
+    expect(screen.queryByTestId("milestone-notice")).toBeNull();
+  });
+
+  it("shows the streak reminder only in the engagement arm", () => {
+    const entry = record(80);
+    entry.finishedAt = new Date().toISOString();
+    renderHome({ history: [entry], studyArm: "engagement" });
+    expect(screen.getByTestId("streak-at-risk").textContent).toMatch(/keep it alive/i);
+    cleanup();
+    renderHome({ history: [entry], studyArm: null });
+    expect(screen.queryByTestId("streak-at-risk")).toBeNull();
+    cleanup();
+    renderHome({ history: [entry], studyArm: "control" });
+    expect(screen.queryByTestId("streak-at-risk")).toBeNull();
   });
 });

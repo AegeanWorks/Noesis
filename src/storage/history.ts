@@ -1,4 +1,5 @@
 import type { MechanicResult } from "../engine/types";
+import type { StudyArm } from "./study";
 import { readLocal, removeLocal, writeLocal } from "./browserStorage";
 
 export interface SessionRecord {
@@ -6,6 +7,7 @@ export interface SessionRecord {
   finishedAt: string;
   seed: number;
   results: MechanicResult[];
+  arm?: StudyArm | null;
 }
 
 const KEY = "noesis.history.v1";
@@ -153,4 +155,75 @@ export function bestAccuracyFor(
     }
   }
   return best;
+}
+
+export interface DayActivity {
+  key: string;
+  label: string;
+  active: boolean;
+  isToday: boolean;
+}
+
+export function lastDaysActivity(
+  history: readonly SessionRecord[],
+  count = 14,
+  now: Date = new Date(),
+): DayActivity[] {
+  const activeKeys = new Set<string>();
+  for (const session of history) {
+    const time = Date.parse(session.finishedAt);
+    if (Number.isFinite(time)) activeKeys.add(localDayKeyFromDate(new Date(time)));
+  }
+  const days: DayActivity[] = [];
+  for (let offset = count - 1; offset >= 0; offset--) {
+    const date = new Date(now);
+    date.setHours(0, 0, 0, 0);
+    date.setDate(date.getDate() - offset);
+    const key = localDayKeyFromDate(date);
+    days.push({
+      key,
+      label: date.toLocaleDateString(undefined, { weekday: "narrow" }),
+      active: activeKeys.has(key),
+      isToday: offset === 0,
+    });
+  }
+  return days;
+}
+
+export function currentDayStreak(
+  history: readonly SessionRecord[],
+  now: Date = new Date(),
+): number {
+  const activeKeys = new Set<string>();
+  for (const session of history) {
+    const time = Date.parse(session.finishedAt);
+    if (Number.isFinite(time)) activeKeys.add(localDayKeyFromDate(new Date(time)));
+  }
+  let streak = 0;
+  const cursor = new Date(now);
+  cursor.setHours(0, 0, 0, 0);
+  if (!activeKeys.has(localDayKeyFromDate(cursor))) {
+    cursor.setDate(cursor.getDate() - 1);
+  }
+  while (activeKeys.has(localDayKeyFromDate(cursor))) {
+    streak += 1;
+    cursor.setDate(cursor.getDate() - 1);
+  }
+  return streak;
+}
+
+export function detectNewBests(
+  results: readonly MechanicResult[],
+  history: readonly SessionRecord[],
+  sessionId: string,
+): MechanicResult["mechanic"][] {
+  const prior = history.filter((session) => session.id !== sessionId);
+  const bests: MechanicResult["mechanic"][] = [];
+  for (const result of results) {
+    const accuracy = result.metrics.accuracy;
+    if (typeof accuracy !== "number") continue;
+    const before = bestAccuracyFor(prior, result.mechanic);
+    if (before !== null && accuracy > before) bests.push(result.mechanic);
+  }
+  return bests;
 }

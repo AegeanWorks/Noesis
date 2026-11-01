@@ -22,6 +22,8 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     heavyUseDismissed: false,
     motivationOn: true,
     motivationPaused: false,
+    milestones: [],
+    studyArm: null,
     onStart: vi.fn(),
     onContinue: vi.fn(),
     onSaveIntention: vi.fn(),
@@ -29,6 +31,7 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     onEvidence: vi.fn(),
     onPauseMotivation: vi.fn(),
     onDismissHeavyUse: vi.fn(),
+    onDismissMilestones: vi.fn(),
     ...overrides,
   };
   render(<HomeScreen {...props} />);

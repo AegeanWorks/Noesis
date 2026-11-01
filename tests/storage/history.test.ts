@@ -5,6 +5,9 @@ import {
   appendSession,
   bestAccuracyFor,
   clearHistory,
+  currentDayStreak,
+  detectNewBests,
+  lastDaysActivity,
   lastResultFor,
   accuracySeries,
   loadHistory,
@@ -131,5 +134,48 @@ describe("session history", () => {
     expect(loadHistory()).toEqual([]);
     writeLocal("noesis.history.v1", JSON.stringify([{ id: 1 }, record("ok", 0.6)]));
     expect(loadHistory().map((entry) => entry.id)).toEqual(["ok"]);
+  });
+});
+
+describe("consistency and personal bests", () => {
+  const at = (year: number, month: number, day: number, hour = 10) =>
+    new Date(year, month, day, hour, 0, 0);
+
+  function dated(id: string, finishedAt: Date, accuracy = 0.8): SessionRecord {
+    const entry = record(id, accuracy);
+    entry.finishedAt = finishedAt.toISOString();
+    return entry;
+  }
+
+  it("maps the last fourteen days to active flags", () => {
+    const now = new Date(2026, 10, 2, 20, 0, 0);
+    const history = [dated("a", at(2026, 10, 2)), dated("b", at(2026, 9, 30))];
+    const days = lastDaysActivity(history, 14, now);
+    expect(days).toHaveLength(14);
+    expect(days[13]).toMatchObject({ active: true, isToday: true });
+    expect(days[10]?.active).toBe(true);
+    expect(days[11]?.active).toBe(false);
+    expect(days[0]?.active).toBe(false);
+  });
+
+  it("counts consecutive practice days ending today or yesterday", () => {
+    const now = new Date(2026, 10, 2, 20, 0, 0);
+    expect(
+      currentDayStreak(
+        [dated("a", at(2026, 10, 2)), dated("b", at(2026, 10, 1)), dated("c", at(2026, 9, 31))],
+        now,
+      ),
+    ).toBe(3);
+    expect(currentDayStreak([dated("a", at(2026, 10, 1))], now)).toBe(1);
+    expect(currentDayStreak([dated("a", at(2026, 9, 28))], now)).toBe(0);
+  });
+
+  it("flags only genuinely beaten bests, excluding the current session", () => {
+    const prior = dated("old", at(2026, 10, 1), 0.6);
+    const current = dated("new", at(2026, 10, 2), 0.9);
+    expect(detectNewBests(current.results, [prior, current], "new")).toEqual(["nback"]);
+    expect(detectNewBests(current.results, [current], "new")).toEqual([]);
+    const worse = dated("low", at(2026, 10, 2), 0.4);
+    expect(detectNewBests(worse.results, [prior, worse], "low")).toEqual([]);
   });
 });

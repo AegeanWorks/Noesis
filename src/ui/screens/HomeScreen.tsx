@@ -2,8 +2,9 @@ import { useState } from "react";
 import { MECHANIC_META } from "../../engine/evidence";
 import type { MechanicId, MechanicMeta } from "../../engine/types";
 import type { SessionRecord, TodayStats, WeekStats } from "../../storage/history";
-import { accuracySeries, bestAccuracyFor, lastResultFor } from "../../storage/history";
-import type { HeavyUseSignal } from "../../storage/engagement";
+import { accuracySeries, bestAccuracyFor, currentDayStreak, lastDaysActivity, lastResultFor } from "../../storage/history";
+import type { HeavyUseSignal, Milestone } from "../../storage/engagement";
+import type { StudyArm } from "../../storage/study";
 import type { PracticeIntention } from "../../storage/intention";
 import type { SessionLength } from "../../storage/settings";
 import { Button } from "../components/Button";
@@ -22,6 +23,8 @@ interface HomeScreenProps {
   heavyUseDismissed: boolean;
   motivationOn: boolean;
   motivationPaused: boolean;
+  milestones: Milestone[];
+  studyArm: StudyArm | null;
   onStart: () => void;
   onContinue: () => void;
   onSaveIntention: (when: string, where: string) => void;
@@ -29,6 +32,7 @@ interface HomeScreenProps {
   onEvidence: () => void;
   onPauseMotivation: () => void;
   onDismissHeavyUse: () => void;
+  onDismissMilestones: () => void;
 }
 
 function MechanicCard({ meta }: { meta: MechanicMeta }) {
@@ -154,10 +158,12 @@ function PracticeSummary({
   history,
   week,
   today,
+  studyArm,
 }: {
   history: readonly SessionRecord[];
   week: WeekStats;
   today: TodayStats;
+  studyArm: StudyArm | null;
 }) {
   if (history.length === 0) {
     return (
@@ -176,6 +182,8 @@ function PracticeSummary({
   }
 
   const latest = history[0];
+  const activity = lastDaysActivity(history);
+  const streak = currentDayStreak(history);
   return (
     <section className="card practice-card" aria-labelledby="practice-heading">
       <div className="card-top">
@@ -223,6 +231,32 @@ function PracticeSummary({
         composite score; Motivation momentum is cosmetic and never changes these accuracy
         values.
       </p>
+      {studyArm === "engagement" && streak > 0 ? (
+        <p className="fine" data-testid="streak-at-risk">
+          {streak}-day streak — practice today to keep it alive. Streaks are cosmetic and
+          never change your scores.
+        </p>
+      ) : null}
+      <div
+        className="calendar"
+        role="img"
+        aria-label={`Practice days in the last two weeks: ${activity.filter((day) => day.active).length} active days`}
+        data-testid="practice-calendar"
+      >
+        {activity.map((day) => (
+          <span
+            key={day.key}
+            title={`${day.label}${day.active ? ": practised" : ""}`}
+            className={
+              day.active && day.isToday
+                ? "dot dot-active dot-today"
+                : day.active
+                  ? "dot dot-active"
+                  : "dot"
+            }
+          />
+        ))}
+      </div>
     </section>
   );
 }
@@ -238,6 +272,8 @@ export function HomeScreen({
   heavyUseDismissed,
   motivationOn,
   motivationPaused,
+  milestones,
+  studyArm,
   onStart,
   onContinue,
   onSaveIntention,
@@ -245,6 +281,7 @@ export function HomeScreen({
   onEvidence,
   onPauseMotivation,
   onDismissHeavyUse,
+  onDismissMilestones,
 }: HomeScreenProps) {
   return (
     <section className="screen home-screen">
@@ -279,7 +316,22 @@ export function HomeScreen({
       </div>
 
       <PracticePlan intention={intention} onSave={onSaveIntention} onClear={onClearIntention} />
-      <PracticeSummary history={history} week={week} today={today} />
+      <PracticeSummary history={history} week={week} today={today} studyArm={studyArm} />
+
+      {milestones.length > 0 ? (
+        <section className="notice" data-testid="milestone-notice">
+          <h3>{milestones[0]?.title}</h3>
+          <p>{milestones[0]?.detail}</p>
+          {milestones.length > 1 ? (
+            <p className="fine">Plus {milestones.length - 1} more unlocked.</p>
+          ) : null}
+          <div className="hero-actions">
+            <Button variant="ghost" onClick={onDismissMilestones}>
+              Nice
+            </Button>
+          </div>
+        </section>
+      ) : null}
 
       {heavyUse && !heavyUseDismissed ? (
         <HeavyUseNotice

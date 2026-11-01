@@ -30,12 +30,21 @@ import {
   loadAdverseEvents,
 } from "./storage/adverseEvents";
 import {
+  clearStudy,
+  enrollStudy,
+  loadStudy,
+  withdrawStudy,
+  type StudyArm,
+} from "./storage/study";
+import {
   clearEngagement,
   detectHeavyUse,
+  detectMilestones,
   dismissHeavyUseToday,
   isHeavyUseDismissedToday,
   isMotivationPaused,
   loadEngagement,
+  markMilestonesSeen,
   pauseMotivationToday,
   resumeMotivation,
 } from "./storage/engagement";
@@ -44,6 +53,7 @@ import {
   loadAdaptive,
   setAdaptiveEnabled,
 } from "./storage/adaptive";
+import { detectNewBests } from "./storage/history";
 import type { Difficulty, SessionLength } from "./storage/settings";
 import { clearSettings, loadSettings, saveSettings } from "./storage/settings";
 import {
@@ -86,11 +96,14 @@ export function App() {
   const [adverseEvents, setAdverseEvents] = useState<AdverseEvent[]>(() => loadAdverseEvents());
   const [engagement, setEngagement] = useState(() => loadEngagement());
   const [adaptive, setAdaptive] = useState(() => loadAdaptive());
+  const [study, setStudy] = useState(() => loadStudy());
   const motivationPaused =
     engagement.motivationPausedDay !== null && isMotivationPaused();
   const motivationActive = settings.motivationMode && !motivationPaused;
   const motivatedBlock = useRef<number>(-1);
   const state = useSessionState();
+  const newMilestones = detectMilestones(history, adaptive.log, engagement.seenMilestones);
+  const newBests = detectNewBests(state?.results ?? [], history, lastSessionId ?? "");
 
   useSessionClock(paused || screen !== "session");
   useSessionPersistence(
@@ -115,12 +128,15 @@ export function App() {
       savedSession.current = id;
       setLastSessionId(id);
       setAdaptive(applySessionResults(state.results));
+      const enrolled = loadStudy();
+      setStudy(enrolled);
       setHistory(
         appendSession({
           id,
           finishedAt: new Date().toISOString(),
           seed: state.config.seed,
           results: state.results,
+          arm: enrolled.enrolled ? enrolled.arm : null,
         }),
       );
     }
@@ -218,8 +234,13 @@ export function App() {
   }, []);
 
   const exportHistory = useCallback(() => {
-    downloadHistoryExport(history);
-  }, [history]);
+    downloadHistoryExport(
+      history,
+      study.enrolled && study.studyId && study.arm && study.consentedAt
+        ? { studyId: study.studyId, arm: study.arm, consentedAt: study.consentedAt }
+        : null,
+    );
+  }, [history, study]);
 
   const clearPracticeHistory = useCallback(() => {
     clearHistory();
@@ -247,6 +268,24 @@ export function App() {
     setEngagement(dismissHeavyUseToday());
   }, []);
 
+  const handleEnrollStudy = useCallback((studyId: string, arm: StudyArm) => {
+    setStudy(enrollStudy({ studyId, arm, consented: true }));
+  }, []);
+
+  const handleWithdrawStudy = useCallback(() => {
+    setStudy(withdrawStudy());
+  }, []);
+
+  const handleDismissMilestones = useCallback(() => {
+    setEngagement((current) =>
+      markMilestonesSeen(
+        detectMilestones(history, adaptive.log, current.seenMilestones).map(
+          (milestone) => milestone.id,
+        ),
+      ),
+    );
+  }, [history, adaptive.log]);
+
   const handleSaveIntention = useCallback((when: string, where: string) => {
     setIntention(saveIntention({ when, where }));
   }, []);
@@ -263,10 +302,12 @@ export function App() {
     clearIntention();
     clearAdverseEvents();
     clearEngagement();
+    clearStudy();
     clearSessionSnapshot();
     setHistory([]);
     setAdverseEvents([]);
     setEngagement(loadEngagement());
+    setStudy(loadStudy());
     setLastSessionId(null);
     setIntention(null);
     setMotivation(null);
@@ -395,6 +436,8 @@ export function App() {
             heavyUseDismissed={isHeavyUseDismissedToday()}
             motivationOn={settings.motivationMode}
             motivationPaused={motivationPaused}
+            milestones={newMilestones}
+            studyArm={study.enrolled ? study.arm : null}
             onStart={startSession}
             onContinue={continueSession}
             onSaveIntention={handleSaveIntention}
@@ -402,6 +445,7 @@ export function App() {
             onEvidence={() => setScreen("evidence")}
             onPauseMotivation={handlePauseMotivation}
             onDismissHeavyUse={handleDismissHeavyUse}
+            onDismissMilestones={handleDismissMilestones}
           />
         ) : null}
 
@@ -438,6 +482,7 @@ export function App() {
             results={state?.results ?? []}
             motivation={motivation}
             sessionId={lastSessionId}
+            newBests={newBests}
             onAdverseLogged={setAdverseEvents}
             onRestart={startSession}
             onEvidence={() => setScreen("evidence")}
@@ -460,6 +505,9 @@ export function App() {
             historyCount={history.length}
             adverseEvents={adverseEvents}
             onClearAdverseEvents={handleClearAdverseEvents}
+            study={study}
+            onEnrollStudy={handleEnrollStudy}
+            onWithdrawStudy={handleWithdrawStudy}
             motivationPaused={motivationPaused}
             onResumeMotivation={handleResumeMotivation}
             adaptiveEnabled={adaptive.enabled}

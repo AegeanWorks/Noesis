@@ -197,6 +197,14 @@ Narrative-only (primary experimental studies, outside the umbrella-review table 
 
 **Interpretation:** the disorder base rate is highest exactly where engagement mechanics bite hardest (young heavy users, impulsive users). Noesis has no social features, one reward currency (cosmetic momentum), no purchases, and fixed session lengths — the two strongest structural predictors (mandatory social play, reward-category count) do not apply. The remaining risk concentrates in variable-ratio bonuses, near-best cues and optional risk, which is why compulsive-use detection (open question 4) is now implemented rather than deferred.
 
+### 6.9 Pull without compulsion (November 2026)
+
+The November update adds the other half of the answer: game addictiveness pointed at brain function means verified behaviour-change techniques, not gambling-like features. The gamification meta-analysis (PMID 34982715, g=0.42 while active, g=0.15 at follow-up) and the exergame BCT review (PMID 40779747) support goal-setting, self-monitoring, feedback on behaviour and celebration of real achievement. Implemented as R37: a 14-day consistency calendar (self-monitoring), one-time milestone notices for session counts, practice-day streaks and adaptive level-ups (no loss framing, no streak punishment), and personal-best highlights that fire only when a prior best is genuinely beaten (feedback on behaviour, never a manufactured near-miss). Caps, odds disclosure, the break cue and the Motivation pause are untouched: pull is re-earned each session, restraint stays structural.
+
+### 6.10 Trial arms for the RCT (November 2026)
+
+When the device is used investigationally, stronger engagement variants must be testable without changing the default product. Implemented as R38: enrollment with an investigator-provided trial ID, a protocol-assigned arm (control or engagement), and explicit consent; the engagement arm adds a daily streak reminder; every session record carries its arm and the export carries the enrollment for analysis. Randomisation stays with the trial protocol — the app records and discloses, never assigns. Adverse-event capture, heavy-use detection and the Motivation pause run in every arm as the trial's safety monitoring.
+
 ---
 
 ## 7. Safeguards and design rules
