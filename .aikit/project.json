@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "name": "noesis",
-  "test_command": null,
+  "test_command": "node scripts/test-all.mjs",
   "topics": [
     "aikit",
     "aikit-integrated",
@@ -11,10 +11,27 @@
     "brain-training",
     "cognitive-training",
     "neurofeedback",
-    "digital-health"
+    "digital-health",
+    "react",
+    "vite",
+    "capacitor",
+    "android",
+    "neuroscience",
+    "cognitive-science"
   ],
   "gates": {},
-  "ui_required": false,
+  "ui_required": true,
   "mechanics_required": false,
-  "created": "2026-10-31"
+  "created": "2026-10-31",
+  "has_ui": true,
+  "ui_kind": "mobile",
+  "ui_evidence": [
+    "android",
+    "index.html",
+    "package.json"
+  ],
+  "ui_checked_at": "2026-11-01",
+  "ui_source": "detected",
+  "topics_source": "manual",
+  "topics_reviewed_at": "2026-11-01"
 }
