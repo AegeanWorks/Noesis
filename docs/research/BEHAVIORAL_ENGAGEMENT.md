@@ -118,6 +118,7 @@ The session shows elapsed time and a target time (8 minutes standard, 5 minutes 
 | When/where plan | Implementation intentions | Optional, local-only, editable |
 | Session length/difficulty choice | Autonomy/competence | User-selected; no hidden adaptive claim |
 | Weekly summary | Clear feedback | Informational; no loss-framed streak in the summary |
+| Daily break cue after 2 sessions | Overuse guard | Non-blocking; never locks the user out |
 | In-app motivation safeguards card | Transparency | Explains the bounded motivation design |
 
 Not implemented: narrative campaign, real-money rewards, purchasable currency, infinite loops, notifications.
@@ -181,6 +182,21 @@ These are foundational sources, not product evidence. They describe mechanisms; 
 
 **Interpretation:** dark patterns and hypernudging are recognized autonomy risks. Motivation mode must be explainable and switchable.
 
+### 6.8 Gaming-disorder update (November 2026)
+
+Six engagement records were added to the evidence table as a targeted update; all six are primary rows:
+
+- Global gaming-disorder prevalence 3.05% (95% CI 2.38-3.91), adjusted to 1.96% with stringent sampling; tool choice explains 77% of variance. PMID 33028074. DOI 10.1177/0004867420962851.
+- Young-adult IGD prevalence 6.1% (95% CI 5.03-7.40), 8.1% in gamer-only samples, rising over time. PMID 41317410. DOI 10.1016/j.addbeh.2025.108576.
+- Adolescent gaming-disorder burden 8.6% (95% CI 6.9-10.8) with an increasing year trend. PMID 40115446. DOI 10.1016/j.puhip.2024.100565.
+- Structural-features scoping review (105 articles): two risk classes, immersion/realism features and gambling-like reward-punishment features; intermittent rewards, near-miss, random-chance purchases and in-game currency implicated. PMID 37256740. DOI 10.1556/2006.2023.00019.
+- Risk/protective meta-analysis (253 studies, 210,557 participants): moderately strong heterogeneous risk factors (male gender, depression, impulsivity, anxiety, stress, gaming time, escape motivation); few robust protective factors with smaller effects (self-esteem, life satisfaction, education). PMID 36571943. DOI 10.1016/j.addbeh.2022.107590.
+- Adult ADHD-IGD review: inattention and hyperactivity-impulsivity associated with IGD incidence and severity; cross-sectional, no causal mediation. PMID 41659171. DOI 10.3389/fpsyt.2025.1735922.
+
+Narrative-only (primary experimental studies, outside the umbrella-review table scope): rare loot-box rewards increase arousal and urge to open more (Larche et al., 2021, PMID 31760581); player-centered variable-ratio scheduling beats fixed experimenter schedules for enjoyment and performance in a memory-training game. Both support the bounded design: variable rewards stay cosmetic and disclosed, random-chance content and currencies are excluded entirely.
+
+**Interpretation:** the disorder base rate is highest exactly where engagement mechanics bite hardest (young heavy users, impulsive users). Noesis has no social features, one reward currency (cosmetic momentum), no purchases, and fixed session lengths — the two strongest structural predictors (mandatory social play, reward-category count) do not apply. The remaining risk concentrates in variable-ratio bonuses, near-best cues and optional risk, which is why compulsive-use detection (open question 4) is now implemented rather than deferred.
+
 ---
 
 ## 7. Safeguards and design rules
@@ -203,7 +219,7 @@ These are foundational sources, not product evidence. They describe mechanisms; 
 1. Does Motivation mode improve 4-week adherence in adults and older adults?
 2. Does the optional risk mechanic increase anxiety or dropout in older adults?
 3. Does the near-best cue motivate or discourage users who plateau?
-4. How should the app detect compulsive use and respond?
+4. How should the app detect compulsive use and respond? **Implemented:** the app watches for heavy-use patterns (many sessions in a day, back-to-back sessions, long daily totals) and responds with a caring, non-coercive check-in that suggests rest and offers one-tap Motivation pause — never a lockout. See DESIGN_IMPLICATIONS R36.
 5. Does a target time create helpful pacing or unwanted pressure?
 6. Which safeguards should be default-on versus opt-in in a clinical or assisted-living setting?
 

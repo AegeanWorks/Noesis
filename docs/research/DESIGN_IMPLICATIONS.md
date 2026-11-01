@@ -10,19 +10,22 @@
 
 The first vertical slice implements:
 
-- three mechanics (N-back, Go/No-Go, Reasoning) as deterministic state machines;
+- four mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state machines;
 - a one-click start that begins the first block immediately;
 - a session runner with per-block scoring and no composite score;
 - local practice history with per-mechanic last/best accuracy, JSON export and targeted clearing;
 - resumable sessions: a validated local snapshot survives reloads and Android WebView restarts;
 - an optional when/where practice plan, user-selected session length and difficulty, and a non-punitive weekly summary;
 - a bounded Motivation mode: cosmetic variable bonuses, streak multipliers, a real near-best cue, optional bonus-only risk and a target time;
+- older-adult display controls (larger text, higher contrast, reduced motion), per-mechanic accuracy sparklines and a non-blocking daily break cue;
 - safety onboarding, local-only storage and explicit non-claims;
 - an evidence registry linking each mechanic to PMIDs and claim boundaries;
 - an AI harness (`?ai=1`, `window.__NOESIS__`) and a seeded CLI simulator;
 - a Capacitor 7 Android wrapper with a verified debug APK build.
 
 Not implemented yet: movement sessions, audio relaxation, neurofeedback, visual entrainment, clinician dashboards, accounts, cloud sync, and any clinical claim.
+
+Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in with stop rules, a Settings review list and a prohibited-claim content lint (R5); see ADR-010.
 
 ---
 
@@ -73,7 +76,7 @@ Not implemented yet: movement sessions, audio relaxation, neurofeedback, visual 
 | R9 | Outcome assessment is blinded or fully automated. | Blinding changes the ADHD and psychological-treatment results. | 39661381, 27238063 |
 | R10 | A 3-month follow-up is mandatory for any durability claim. | Most effects fade; ACTIVE is the exception. | 42959097, 24417410 |
 | R11 | Dose (sessions, minutes, weeks) is recorded and dose-response is modelled, not assumed. | Dose is not linear or universal. | 42711482, 41772608, 36853526 |
-| R12 | Adaptive difficulty is A/B tested against fixed difficulty before it is marketed as superior. | Adaptivity has a mechanistic rationale but not a consistent behavioural advantage. | 41772608, 42711482 |
+| R12 | Adaptive difficulty is opt-in, experimental and logged; it is never marketed as superior without an A/B test. | Adaptivity has a mechanistic rationale but not a consistent behavioural advantage. | 41772608, 42711482; ADR-012 |
 | R13 | Trial protocols and analysis plans are pre-registered internally before data collection. | Protects against post-hoc claim construction. | Protocol §18 |
 
 ### 3.3 Safety
@@ -104,6 +107,10 @@ Not implemented yet: movement sessions, audio relaxation, neurofeedback, visual 
 | R30 | The weekly summary is informational and never creates a loss-framed streak. | Loss-framed summaries can encourage overtraining and anxiety. | Kahneman & Tversky 1979; 33028074 |
 | R31 | Motivation mode is disclosed, switchable, capped at 100 points per block, and uses no real money or purchasable currency. | Transparency and removal protect autonomy and reduce compulsive-use risk. | 33028074; 34982715 |
 | R32 | Core progress is banked before any risk; only bonus momentum can be lost. | The engagement layer must never endanger the measurement record. | ADR-007; 33028074 |
+| R33 | Display controls include larger text and higher contrast; interactive targets stay at least 44px. | Older adults and low-vision users need readable, reachable controls. | ADR-008; WCAG target-size guidance |
+| R34 | Trends are per-mechanic and never aggregated into a composite score. | Domain-specific change is the defensible measurement unit. | 40640327; 27697851 |
+| R35 | The daily break cue is informational and never locks the user out. | Engagement must not become coercion; overuse is a documented risk. | 33028074; ADR-008 |
+| R36 | Heavy-use patterns (many sessions in a day, back-to-back sessions, long daily totals) trigger a caring check-in with a one-tap Motivation pause for today; nothing ever locks the user out. | The disorder base rate is highest among heavy users and impulsive users; detection plus a non-coercive response is the proportional safeguard. | 33028074; 36571943; 37256740; 41659171; ADR-011 |
 
 ---
 
@@ -167,7 +174,7 @@ The registry is the single source of truth for what the product may say. Content
 
 - Evidence registry and claim engine.
 - Near-transfer battery for working memory, attention and reasoning/speed.
-- Three CCT modules: adaptive updating, sustained attention, reasoning strategy.
+- Four core modules: adaptive updating, sustained attention, reasoning strategy and simple reaction time.
 - Safety layer: photosensitivity screen, AE capture, data consent.
 - Adherence instrumentation.
 - Internal pilot with an active control.

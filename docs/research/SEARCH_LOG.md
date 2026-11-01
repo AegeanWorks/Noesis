@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 84 |
-| Outcomes | 241 |
-| Primary outcomes | 190 |
-| Systematic reviews/meta-analyses | 45 |
+| Records | 94 |
+| Outcomes | 253 |
+| Primary outcomes | 202 |
+| Systematic reviews/meta-analyses | 50 |
 | Network meta-analyses | 17 |
-| Other systematic reviews | 14 |
+| Other systematic reviews | 19 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 73 |
+| DOI verified | 83 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -142,8 +142,8 @@ By modality:
 | neurofeedback | 17 |
 | ave | 6 |
 | multi_intervention | 5 |
-| safety | 3 |
-| engagement | 2 |
+| safety | 6 |
+| engagement | 9 |
 
 ## 9. Metadata verification
 
@@ -153,12 +153,16 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 73 |
+| DOI verified | 83 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **84** |
+| **Total** | **94** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
+
+Six gaming-disorder engagement records (PMIDs 33028074, 37256740, 36571943, 40115446, 41317410, 41659171) were added 2026-11-02 as a targeted update: PubMed E-utilities `esearch` by title/DOI, PMCID-to-PMID resolution via the ID converter, and MEDLINE record confirmation via `esummary`. All six are MEDLINE-indexed; DOIs confirmed against the esummary article IDs.
+
+Four further records closed dangling DESIGN_IMPLICATIONS citations the same day: three photosensitivity safety records (PMIDs 16146438, 16146439, 41283196; Epilepsy Foundation consensus and reviews grounding R14/R15) and one gamification meta-analysis (PMID 34982715, Hedges g 0.42, grounding R31). Identifiers confirmed via `esummary`; the gamification k/n and effect sizes were read from the PubMed abstract record. Two remaining citations stay narrative-only by design: Clark 2009 near-miss (PMID 19217383, a primary experiment outside the umbrella-review scope) and Kahneman & Tversky 1979 (a book).
 
 ## 10. Tooling and commands
 
