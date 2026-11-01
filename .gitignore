@@ -6,3 +6,20 @@
 __pycache__/
 *.py[cod]
 node_modules/
+
+# Web build and test output
+dist/
+coverage/
+.vite/
+
+# Capacitor generated Android assets and build state
+android/local.properties
+android/.gradle/
+android/app/build/
+android/build/
+android/capacitor-cordova-android-plugins/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/.idea/
+*.iml

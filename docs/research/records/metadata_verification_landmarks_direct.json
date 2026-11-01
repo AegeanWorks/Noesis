@@ -1,0 +1,58 @@
+{
+  "pmids": [
+    {
+      "pmid": "27697851",
+      "doi": "10.1177/1529100616661983",
+      "verified": true,
+      "score": 1.0,
+      "title": "Do \u201cBrain-Training\u201d Programs Work?",
+      "container": "Psychological Science in the Public Interest"
+    },
+    {
+      "pmid": "25102926",
+      "doi": "10.3758/s13423-014-0699-x",
+      "verified": true,
+      "score": 1.0,
+      "title": "Improving fluid intelligence with training on working memory: a meta-analysis",
+      "container": "Psychonomic Bulletin &amp; Review"
+    },
+    {
+      "pmid": "18443283",
+      "doi": "10.1073/pnas.0801268105",
+      "verified": true,
+      "score": 1.0,
+      "title": "Improving fluid intelligence with training on working memory",
+      "container": "Proceedings of the National Academy of Sciences"
+    },
+    {
+      "pmid": "27238063",
+      "doi": "10.1016/j.jaac.2016.03.007",
+      "verified": true,
+      "score": 1.0,
+      "title": "Neurofeedback for Attention-Deficit/Hyperactivity Disorder: Meta-Analysis of Clinical and Neuropsychological Outcomes From Randomized Controlled Trials",
+      "container": "Journal of the American Academy of Child &amp; Adolescent Psychiatry"
+    },
+    {
+      "pmid": "15689731",
+      "doi": "10.1097/01.chi.0000145806.32666.14",
+      "verified": false,
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "pmid": "12424652",
+      "doi": "10.1076/jcen.24.6.781.8395",
+      "verified": true,
+      "score": 1.0,
+      "title": "Training of Working Memory in Children With ADHD",
+      "container": "Journal of Clinical and Experimental Neuropsychology"
+    },
+    {
+      "pmid": "27474138",
+      "doi": "10.1177/1745691616635612",
+      "verified": false,
+      "score": 0.86,
+      "title": "Working Memory Training Does Not Improve Performance on Measures of Intelligence or Other Measures of \u201cFar Transfer\u201d",
+      "container": "Perspectives on Psychological Science"
+    }
+  ]
+}

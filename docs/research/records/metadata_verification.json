@@ -1,0 +1,575 @@
+{
+  "pmids": [
+    {
+      "pmid": "42959097",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fnagi.2026.1952783",
+      "title_crossref": "Cognitive transfer and durability of computerised cognitive training in older adults with mild cognitive impairment: a systematic review and meta-analysis of randomised controlled trials",
+      "container": "Frontiers in Aging Neuroscience",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "42711482",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3758/s13423-026-02994-5",
+      "title_crossref": "The asymmetry of working memory training transfer: A systematic review and meta-analysis",
+      "container": "Psychonomic Bulletin &amp; Review",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40581145",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.neuroscience.2025.06.033",
+      "title_crossref": "Cogmed cognitive training for working memory: a systematic review and meta-analysis",
+      "container": "Neuroscience",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39235660",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1007/s11065-024-09649-z",
+      "title_crossref": "Cognitive Training During Midlife: A Systematic Review and Meta-Analysis",
+      "container": "Neuropsychology Review",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39485657",
+      "verified": true,
+      "score": 0.957,
+      "doi": "10.1007/s11357-025-01551-7",
+      "title_crossref": "Correction to: The efficacy of cognitive stimulation, cognitive training, and cognitive rehabilitation for people living with dementia: a systematic review and meta‑analysis",
+      "container": "GeroScience",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40503808",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.2196/73140",
+      "title_crossref": "The Effectiveness of Computerized Cognitive Training in Patients With Poststroke Cognitive Impairment: Systematic Review and Meta-Analysis",
+      "container": "Journal of Medical Internet Research",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40073511",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.psychres.2025.116426",
+      "title_crossref": "Efficacy of digital therapeutic applications for cognitive training among older adults with mild cognitive impairment or dementia: A systematic review and network meta-analysis of randomized controlled trials",
+      "container": "Psychiatry Research",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40474799",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1089/g4h.2025.0015",
+      "title_crossref": "Effects of Serious Games on Memory Improvement in Older Adults Without Obvious Cognitive Impairment: A Systematic Review and Meta-Analysis",
+      "container": "Games for Health Journal",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "38261550",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1080/21622965.2024.2305874",
+      "title_crossref": "The effect of cognitive training on children with attention deficit and hyperactivity disorder: A meta-analysis",
+      "container": "Applied Neuropsychology: Child",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40436677",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.tjpad.2025.100207",
+      "title_crossref": "Comparative efficacy of cognitive training modalities in cognitive impairment: A systematic review and network meta-analysis",
+      "container": "The Journal of Prevention of Alzheimer's Disease",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "38608550",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.jpsychires.2024.03.051",
+      "title_crossref": "Network meta-analysis of the effects of different cognitive trainings on the cognitive function of patients with mild cognitive impairment",
+      "container": "Journal of Psychiatric Research",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "37956054",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1037/bul0000406",
+      "title_crossref": "The efficacy of combining cognitive training and noninvasive brain stimulation: A transdiagnostic systematic review and meta-analysis.",
+      "container": "Psychological Bulletin",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "41485445",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.ajp.2025.104815",
+      "title_crossref": "Effectiveness of technology-assisted nonpharmacological interventions for cognitive impairment in older adults: A systematic review and network meta-analysis",
+      "container": "Asian Journal of Psychiatry",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "42612199",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.2196/92764",
+      "title_crossref": "Digital Physical Exercise Interventions for Cognitive Functions in Older Adults: Systematic Review and Bayesian Network Meta-Analysis of Randomized Controlled Trials",
+      "container": "Journal of Medical Internet Research",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "41772608",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1186/s12993-026-00323-3",
+      "title_crossref": "Cognitive training in neurological disorders: meta-analytic evidence for behavioral gains and neural correlates",
+      "container": "Behavioral and Brain Functions",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "41016407",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.lanhl.2025.100762",
+      "title_crossref": "Single-domain and multidomain lifestyle interventions for the prevention of cognitive decline in older adults who are cognitively unimpaired: a systematic review and network meta-analysis",
+      "container": "The Lancet Healthy Longevity",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "42480329",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.jamda.2026.106378",
+      "title_crossref": "A Systematic Review and Meta-Analysis of Combined Cognitive and Physical Interventions on Cognition Function in Frail Older Adults",
+      "container": "Journal of the American Medical Directors Association",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "42812254",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fneur.2026.1883995",
+      "title_crossref": "A meta-analysis of the effects of combined interventions centered on cognitive training on cognition, executive function, and negative emotions in patients with Alzheimer’s disease",
+      "container": "Frontiers in Neurology",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "42039077",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fpsyg.2026.1768824",
+      "title_crossref": "Comparative efficacy of executive function interventions for Chinese children with neurodevelopmental disorders: A network meta-analysis",
+      "container": "Frontiers in Psychology",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "41166838",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.ejon.2025.103006",
+      "title_crossref": "Effectiveness of computerised cognitive training on cognitive functioning and quality of life in cancer survivors with cancer-related cognitive impairments: A systematic review and meta-analysis",
+      "container": "European Journal of Oncology Nursing",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40790842",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1002/pon.70251",
+      "title_crossref": "Effect of Cognitive Training on Cancer‐Related Cognitive Impairment in Patients With Breast Cancer: A Systematic Review and Meta‐Analysis",
+      "container": "Psycho-Oncology",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39028199",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1080/13607863.2024.2379427",
+      "title_crossref": "Optimal dose and type of non-pharmacological treatments to improve cognitive function in people with Alzheimer’s disease: a systematic review and network meta-analysis",
+      "container": "Aging &amp; Mental Health",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40505259",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.ijnurstu.2025.105129",
+      "title_crossref": "Efficacy of different digital interventions in patients with mild cognitive impairment or dementia: A systematic review and network meta-analysis",
+      "container": "International Journal of Nursing Studies",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "41281571",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fneur.2025.1691344",
+      "title_crossref": "Effectiveness of VR-based cognitive training and games on cognitive rehabilitation in patients with MCI: a systematic review and meta-analysis",
+      "container": "Frontiers in Neurology",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39793970",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.2196/59195",
+      "title_crossref": "Virtual Reality Interventions for Older Adults With Mild Cognitive Impairment: Systematic Review and Meta-Analysis of Randomized Controlled Trials",
+      "container": "Journal of Medical Internet Research",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "42525971",
+      "verified": true,
+      "score": 0.959,
+      "doi": "10.2196/preprints.85070",
+      "title_crossref": "Effects of Pure Cognitive Training on Gait and Balance in Older Adults: Systematic Review and Meta-Analysis (Preprint)",
+      "container": "",
+      "year": 2025,
+      "type": "posted-content"
+    },
+    {
+      "pmid": "38390834",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1080/09602011.2024.2314880",
+      "title_crossref": "Cognitive and behavioural rehabilitation interventions for survivors of childhood cancer with neurocognitive sequelae: A systematic review",
+      "container": "Neuropsychological Rehabilitation",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "36853526",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.31234/osf.io/42k7w",
+      "title_crossref": "Treatment response following adaptive PASAT training for depression vulnerability: A systematic review and meta-analysis",
+      "container": "",
+      "year": 2022,
+      "type": "posted-content"
+    },
+    {
+      "pmid": "39661381",
+      "verified": false,
+      "reason": "no confident Crossref match",
+      "best_score": 0.832,
+      "best_title": "Modafinil for attention-deficit/hyperactivity disorder (ADHD): an Updated Systematic Review And Meta-Analysis"
+    },
+    {
+      "pmid": "40750997",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1038/s41598-025-94242-4",
+      "title_crossref": "Neurofeedback training for executive function in ADHD children: a systematic review and meta-analysis",
+      "container": "Scientific Reports",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "42897476",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1186/s11689-026-09720-1",
+      "title_crossref": "Effects of EEG neurofeedback in adults with attention-deficit/hyperactivity disorder: a systematic review of randomised and non-randomised studies",
+      "container": "Journal of Neurodevelopmental Disorders",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40505983",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.jad.2025.119585",
+      "title_crossref": "Comparative efficacy of neurofeedback, tDCS, and TMS: The future of therapy for adults with ADHD. A systematic review and meta-analysis",
+      "container": "Journal of Affective Disorders",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40246295",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.2196/68204",
+      "title_crossref": "Consumer-Grade Neurofeedback With Mindfulness Meditation: Meta-Analysis",
+      "container": "Journal of Medical Internet Research",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40072792",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.21203/rs.3.rs-3644363/v1",
+      "title_crossref": "Can electroencephalography-based neurofeedback treat post-traumatic stress disorder? A meta-analysis study",
+      "container": "",
+      "year": 2023,
+      "type": "posted-content"
+    },
+    {
+      "pmid": "38577405",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fpsyt.2024.1323485",
+      "title_crossref": "Systematic review and meta-analysis of neurofeedback and its effect on posttraumatic stress disorder",
+      "container": "Frontiers in Psychiatry",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "38889442",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1093/cercor/bhae252",
+      "title_crossref": "Uncovering the power of neurofeedback: a meta-analysis of its effectiveness in treating major depressive disorders",
+      "container": "Cerebral Cortex",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39568666",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fnins.2024.1450163",
+      "title_crossref": "Neurofeedback to enhance sleep quality and insomnia: a systematic review and meta-analysis of randomized clinical trials",
+      "container": "Frontiers in Neuroscience",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "38723734",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.neubiorev.2024.105696",
+      "title_crossref": "Modulation of human frontal midline theta by neurofeedback: A systematic review and quantitative meta-analysis",
+      "container": "Neuroscience &amp; Biobehavioral Reviews",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40270441",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.22541/au.172515656.69023437/v1",
+      "title_crossref": "The effect of EEG Neurofeedback training on sport performance: A systematic review and meta-analysis",
+      "container": "",
+      "year": 2024,
+      "type": "posted-content"
+    },
+    {
+      "pmid": "39211991",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1177/15500594241279580",
+      "title_crossref": "Neurofeedback Training in Children with ADHD: A Systematic Review of Personalization and Methodological Features Facilitating Training Conditions",
+      "container": "Clinical EEG and Neuroscience",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40092069",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fnins.2025.1515377",
+      "title_crossref": "Music in the loop: a systematic review of current neurofeedback methodologies using music",
+      "container": "Frontiers in Neuroscience",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "41702476",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.neuroimage.2026.121814",
+      "title_crossref": "Modulating complex brain states using MVPA-based neurofeedback: A systematic review",
+      "container": "NeuroImage",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39437568",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.clinph.2024.10.003",
+      "title_crossref": "fMRI neurofeedback for the modulation of the neural networks associated with depression",
+      "container": "Clinical Neurophysiology",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "41656644",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1017/neu.2026.10057",
+      "title_crossref": "Music and binaural beat interventions for young adults: A systematic review of effects on anxiety, sleep, and cognition",
+      "container": "Acta Neuropsychiatrica",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "42349368",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.explore.2026.103471",
+      "title_crossref": "Efficacy of theta binaural beat therapy on pain, cognition and anxiety in adults: A systematic review and meta-analysis of randomized controlled trials",
+      "container": "EXPLORE",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "41176178",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.ctim.2025.103299",
+      "title_crossref": "Binaural beats for perioperative anxiety and pain: A systematic review and meta-analysis",
+      "container": "Complementary Therapies in Medicine",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "38458383",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.ijpsycho.2024.112328",
+      "title_crossref": "The effects of music and auditory stimulation on autonomic arousal, cognition and attention: A systematic review",
+      "container": "International Journal of Psychophysiology",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40153883",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.psychres.2025.116447",
+      "title_crossref": "Enhancing effects of exercise and neurofeedback: A systematic review and meta-analysis of computer game-based interventions for pediatric ADHD",
+      "container": "Psychiatry Research",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "42851694",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fpsyg.2026.1741014",
+      "title_crossref": "Systematic review and meta-analysis of the effects of combined physical and cognitive training on depression symptoms in adults across clinical populations",
+      "container": "Frontiers in Psychology",
+      "year": 2026,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39608474",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.jstrokecerebrovasdis.2024.108161",
+      "title_crossref": "Exergames for rehabilitation in stroke survivors: Umbrella review of meta-analyses",
+      "container": "Journal of Stroke and Cerebrovascular Diseases",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40779747",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.2196/62906",
+      "title_crossref": "Exergame-Based Behavior Change Interventions for Promoting Physical Activity: Systematic Review and Meta-Analysis of Randomized Controlled Studies",
+      "container": "Journal of Medical Internet Research",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39861961",
+      "verified": false,
+      "reason": "no confident Crossref match",
+      "best_score": 0.694,
+      "best_title": "Review for \"The Association Between Caregiver Psychosocial Factors and Depressive Symptoms in People With Dementia: A Systematic Review and Meta-Analysis\""
+    },
+    {
+      "pmid": "40640327",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1038/s41598-025-09582-y",
+      "title_crossref": "Effects of motor-cognitive training on cognitive function and gait performance in older adults with dementia: a systematic review and meta-analysis",
+      "container": "Scientific Reports",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40745584",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1186/s12877-025-06212-0",
+      "title_crossref": "Effects of different exercise modalities on balance performance in healthy older adults: a systematic review and network meta-analysis of randomized controlled trials",
+      "container": "BMC Geriatrics",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39605199",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1089/g4h.2024.0025",
+      "title_crossref": "Gamification and Language Learning to Enhance Cognition in Older Adults: A Systematic Literature Review",
+      "container": "Games for Health Journal",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "40264083",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1186/s12888-025-06825-0",
+      "title_crossref": "Evaluating the evidence: a systematic review of reviews of the effectiveness and safety of digital interventions for ADHD",
+      "container": "BMC Psychiatry",
+      "year": 2025,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "39370392",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1111/jcpp.14056",
+      "title_crossref": "Research Review: Pharmacological and non‐pharmacological treatments for adolescents with attention deficit/hyperactivity disorder – a systematic review of the literature",
+      "container": "Journal of Child Psychology and Psychiatry",
+      "year": 2024,
+      "type": "journal-article"
+    },
+    {
+      "pmid": "38523592",
+      "verified": false,
+      "reason": "no confident Crossref match",
+      "best_score": 0.728,
+      "best_title": "Non-Pharmacological Treatments as a Supplement to Medication for ADHD in Children and Adolescents: A Systematic Review"
+    }
+  ]
+}

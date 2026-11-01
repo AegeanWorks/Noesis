@@ -1,0 +1,1218 @@
+{
+  "query_name": "transfer",
+  "term": "(\"cognitive training\"[tiab] OR \"working memory training\"[tiab] OR \"brain training\"[tiab]) AND (\"far transfer\"[tiab] OR \"near transfer\"[tiab] OR transfer[tiab]) AND (meta-analysis[pt] OR systematic review[pt])",
+  "count": 62,
+  "retrieved": 62,
+  "records": [
+    {
+      "pmid": "22612437",
+      "title": "Is working memory training effective? A meta-analytic review.",
+      "abstract": "It has been suggested that working memory training programs are effective both as treatments for attention-deficit/hyperactivity disorder (ADHD) and other cognitive disorders in children and as a tool to improve cognitive ability and scholastic attainment in typically developing children and adults. However, effects across studies appear to be variable, and a systematic meta-analytic review was undertaken. To be included in the review, studies had to be randomized controlled trials or quasi-experiments without randomization, have a treatment, and have either a treated group or an untreated control group. Twenty-three studies with 30 group comparisons met the criteria for inclusion. The studies included involved clinical samples and samples of typically developing children and adults. Meta-analyses indicated that the programs produced reliable short-term improvements in working memory skills. For verbal working memory, these near-transfer effects were not sustained at follow-up, whereas for visuospatial working memory, limited evidence suggested that such effects might be maintained. More importantly, there was no convincing evidence of the generalization of working memory training to other skills (nonverbal and verbal ability, inhibitory processes in attention, word decoding, and arithmetic). The authors conclude that memory training programs appear to produce short-term, specific training effects that do not generalize. Possible limitations of the review (including age differences in the samples and the variety of different clinical conditions included) are noted. However, current findings cast doubt on both the clinical relevance of working memory training programs and their utility as methods of enhancing cognitive functioning in typically developing children and healthy adults.",
+      "journal": "Developmental psychology",
+      "year": "2013",
+      "authors": [
+        "Melby-Lervåg M",
+        "Hulme C"
+      ],
+      "doi": "10.1037/a0028228",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "27474138",
+      "title": "Working Memory Training Does Not Improve Performance on Measures of Intelligence or Other Measures of \"Far Transfer\": Evidence From a Meta-Analytic Review.",
+      "abstract": "It has been claimed that working memory training programs produce diverse beneficial effects. This article presents a meta-analysis of working memory training studies (with a pretest-posttest design and a control group) that have examined transfer to other measures (nonverbal ability, verbal ability, word decoding, reading comprehension, or arithmetic; 87 publications with 145 experimental comparisons). Immediately following training there were reliable improvements on measures of intermediate transfer (verbal and visuospatial working memory). For measures of far transfer (nonverbal ability, verbal ability, word decoding, reading comprehension, arithmetic) there was no convincing evidence of any reliable improvements when working memory training was compared with a treated control condition. Furthermore, mediation analyses indicated that across studies, the degree of improvement on working memory measures was not related to the magnitude of far-transfer effects found. Finally, analysis of publication bias shows that there is no evidential value from the studies of working memory training using treated controls. The authors conclude that working memory training programs appear to produce short-term, specific training effects that do not generalize to measures of \"real-world\" cognitive skills. These results seriously question the practical and theoretical importance of current computerized working memory programs as methods of training working memory skills.",
+      "journal": "Perspectives on psychological science : a journal of the Association for Psychological Science",
+      "year": "2016",
+      "authors": [
+        "Melby-Lervåg M",
+        "Redick TS",
+        "Hulme C"
+      ],
+      "doi": "10.1037/a0032982",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "25721181",
+      "title": "Cognitive training for attention-deficit/hyperactivity disorder: meta-analysis of clinical and neuropsychological outcomes from randomized controlled trials.",
+      "abstract": "OBJECTIVE: The authors performed meta-analyses of randomized controlled trials to examine the effects of cognitive training on attention-deficit/hyperactivity disorder (ADHD) symptoms, neuropsychological deficits, and academic skills in children/adolescents with ADHD.\nMETHOD: The authors searched Pubmed, Ovid, Web of Science, ERIC, and CINAHAL databases through May 18, 2014. Data were aggregated using random-effects models. Studies were evaluated with the Cochrane risk of bias tool.\nRESULTS: Sixteen of 695 nonduplicate records were analyzed (759 children with ADHD). When all types of training were considered together, there were significant effects on total ADHD (standardized mean difference [SMD] = 0.37, 95% CI = 0.09-0.66) and inattentive symptoms (SMD = 0.47, 95% CI = 0.14-0.80) for reports by raters most proximal to the treatment setting (i.e., typically unblinded). These figures decreased substantially when the outcomes were provided by probably blinded raters (ADHD total: SMD = 0.20, 95% CI = 0.01-0.40; inattention: SMD = 0.32, 95% CI = -0.01 to 0.66). Effects on hyperactivity/impulsivity symptoms were not significant. There were significant effects on laboratory tests of working memory (verbal: SMD = 0.52, 95% CI = 0.24-0.80; visual: SMD = 0.47, 95% CI = 0.23-0.70) and parent ratings of executive function (SMD = 0.35, 95% CI = 0.08-0.61). Effects on academic performance were not statistically significant. There were no effects of working memory training, specifically on ADHD symptoms. Interventions targeting multiple neuropsychological deficits had large effects on ADHD symptoms rated by most proximal assessors (SMD = 0.79, 95% CI = 0.46-1.12).\nCONCLUSION: Despite improving working memory performance, cognitive training had limited effects on ADHD symptoms according to assessments based on blinded measures. Approaches targeting multiple neuropsychological processes may optimize the transfer of effects from cognitive deficits to clinical symptoms.",
+      "journal": "Journal of the American Academy of Child and Adolescent Psychiatry",
+      "year": "2015",
+      "authors": [
+        "Cortese S",
+        "Ferrin M",
+        "Brandeis D",
+        "Buitelaar J",
+        "Daley D",
+        "Dittmann RW",
+        "Holtmann M",
+        "Santosh P",
+        "Stevenson J",
+        "Stringaris A",
+        "Zuddas A",
+        "Sonuga-Barke EJ"
+      ],
+      "doi": "10.1177/1087054712453167",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "31939109",
+      "title": "Working memory training in typically developing children: A multilevel meta-analysis.",
+      "abstract": "Working memory (WM) training in typically developing (TD) children aims to enhance not only performance in memory tasks but also other domain-general cognitive skills, such as fluid intelligence. These benefits are then believed to positively affect academic achievement. Despite the numerous studies carried out, researchers still disagree over the real benefits of WM training. With this meta-analysis (m = 41, k = 393, N = 2,375), we intended to resolve the discrepancies by focusing on the potential sources of within-study and between-study true heterogeneity. Small to medium effects were observed in memory tasks (i.e., near transfer). The size of these effects was proportional to the similarity between the training task and the outcome measure. By contrast, far-transfer measures of cognitive ability (e.g., intelligence) and academic achievement (mathematics and language ability) were essentially unaffected by the training programs, especially when the studies implemented active controls ([Formula: see text] = 0.001, SE = 0.055, p = .982, τ2 = 0.000). Crucially, all the models exhibited a null or low amount of true heterogeneity, which was wholly explained by the type of controls (nonactive vs. active) and by statistical artifacts, in contrast to the claim that this field has produced mixed results. Since the empirical evidence shows the absence of both generalized effects and true heterogeneity, we conclude that there is no reason to keep investing resources in WM training research with TD children.",
+      "journal": "Psychonomic bulletin & review",
+      "year": "2020",
+      "authors": [
+        "Sala G",
+        "Gobet F"
+      ],
+      "doi": "10.3758/s13423-019-01681-y",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "31328637",
+      "title": "Computerized Cognitive Training in Multiple Sclerosis: A Systematic Review and Meta-analysis.",
+      "abstract": "Background. Cognitive impairments are common in people with multiple sclerosis (MS). Systematic reviews reported promising evidence for various cognitive interventions in this population. Computerized cognitive training (CCT) has strong evidence for safety and efficacy in several populations, but its effects in MS have yet to be specified. Objective. We aimed to synthesize the evidence from randomized controlled trials (RCTs) investigating the effects of CCT on cognitive, psychosocial, and functional outcomes in adults with MS. Method. We searched MEDLINE, EMBASE, PsycINFO, CINAHL, and CENTRAL from inception to March 2019. We calculated standardized mean difference (Hedges' g) of change from baseline in untrained measures of cognition, individual domains, psychosocial functioning, and daily function between CCT and control groups using a random-effects model. Results. A total of 20 RCTs encompassing 982 participants (78% with relapsing-remitting MS) were included. The overall cognitive effect size was moderate (g = 0.30; 95% CI = 0.18-0.43), with no evidence of small-study effect or between-study heterogeneity (prediction interval = 0.17-0.44). Small to moderate effect sizes were found for attention/processing speed, executive functions, and verbal and visuospatial memory. Evidence for working memory, fatigue, and psychosocial and daily functioning were inconclusive. Cognitive effects waned without further training. Conclusions. CCT is efficacious for overall and key cognitive domains in adults with MS, but efficacy on other outcomes and in progressive subtypes remains unclear. Long-term and well-powered trials with diverse cohorts are needed to optimize and maintain the efficacy of CCT, investigate transfer to daily living, and determine who can benefit and whether CCT is a cost-effective strategy to attenuate cognitive decline in MS.",
+      "journal": "Neurorehabilitation and neural repair",
+      "year": "2019",
+      "authors": [
+        "Lampit A",
+        "Heine J",
+        "Finke C",
+        "Barnett MH",
+        "Valenzuela M",
+        "Wolf A",
+        "Leung IHK",
+        "Hill NTM"
+      ],
+      "doi": "10.1177/1545968319860490",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Meta-Analysis",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "29175362",
+      "title": "Systematic review and meta-analyses of useful field of view cognitive training.",
+      "abstract": "Systematic review and meta-analyses were conducted of Useful Field of View (UFOV) training, which was evaluated by Institute of Medicine criteria. Forty-four studies of UFOV training from 17 randomized trials conducted among adults were identified in systematic review. Results addressing the Institute of Medicine criteria indicated that: (a) UFOV training enhanced neural outcomes, speed of processing, and attention. (b) UFOV training effects were equivalent when compared to active- or no-contact control conditions. (c) UFOV training showed far transfer to everyday function. (d) Improvements on the trained skills endured across ten years. (e) Half of the clinical trials identified were conducted by researchers without financial interests in UFOV training. Results indicated that UFOV training effects were larger for adaptive- than non-adaptive training techniques, and in community-based as compared to clinical samples. UFOV training did not transfer to other neuropsychological outcomes, but positively enhanced well-being, health, and quality of life longitudinally. Criticisms of cognitive training are addressed. UFOV training should be implemented among older adults to improve real-world functional outcomes and well-being.",
+      "journal": "Neuroscience and biobehavioral reviews",
+      "year": "2018",
+      "authors": [
+        "Edwards JD",
+        "Fausto BA",
+        "Tetlow AM",
+        "Corona RT",
+        "Valdés EG"
+      ],
+      "doi": "10.1016/j.neubiorev.2017.11.004",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "33913064",
+      "title": "A Systematic Review and Meta-Analysis of Cognitive Training in Adults with Major Depressive Disorder.",
+      "abstract": "Major Depressive Disorder (MDD) is common and disabling, and is linked to functional impairment and increased mortality. While current treatments for MDD are moderately effective, ultimately, up to one third of patients do not achieve full remission. Interestingly, while affective symptoms of major depression typically resolve with the depressive episode, cognitive impairment frequently persists, and has been identified as one of the most prominent predictors of illness recurrence. Additionally, MDD is well-recognised as a key risk factor for further cognitive decline and dementia. Yet, available treatments for MDD do not typically address cognitive impairment. Cognitive training, represents a promising and novel therapeutic intervention in this regard. This review systematically identified and evaluated the evidence for cognitive training in adults with MDD. Following PRISMA guidelines, eligible studies were selected according to pre-defined criteria delineating our target population (adults with clinically defined MDD), parameters for cognitive training interventions (computer-or strategy-based, clinician-facilitated), and study design (controlled trials including pre-post cognitive and psychological or functional outcome data). Of 448 studies identified, nine studies met inclusion criteria. These studies were evaluated for methodological quality and risk of bias. Despite heterogeneity, qualitative and meta-analytic synthesis of study findings revealed significant improvements in cognitive and affective outcomes following cognitive training, with moderate pooled effect sizes. Unfortunately, very few studies investigated 'far transfer' to broader domains of everyday functioning. Overall, given the strong evidence for the efficacy and value of cognitive training in this context, cognitive training should be considered as a primary therapeutic intervention in the treatment of MDD.",
+      "journal": "Neuropsychology review",
+      "year": "2022",
+      "authors": [
+        "Woolf C",
+        "Lampit A",
+        "Shahnawaz Z",
+        "Sabates J",
+        "Norrie LM",
+        "Burke D",
+        "Naismith SL",
+        "Mowszowski L"
+      ],
+      "doi": "10.1007/s11065-021-09487-3",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "33821464",
+      "title": "A critical systematic review of the Neurotracker perceptual-cognitive training tool.",
+      "abstract": "In this systematic review, we evaluate the scientific evidence behind \"Neurotracker,\" one of the most popular perceptual-cognitive training tools in sports. The tool, which is also used in rehabilitation and aging research to examine cognitive abilities, uses a 3D multiple object-tracking (MOT) task. In this review, we examine Neurotracker from both a sport science and a basic science perspective. We first summarize the sport science debate regarding the value of general cognitive skill training, based on tools such as Neurotracker, versus sport-specific skill training. We then consider the several hundred MOT publications in cognitive and vision science from the last 30 years that have investigated cognitive functions and object tracking processes. This literature suggests that the abilities underlying object tracking are not those advertised by the Neurotracker manufacturers. With a systematic literature search, we scrutinize the evidence for whether general cognitive skills can be tested and trained with Neurotracker and whether these trained skills transfer to other domains. The literature has major limitations, for example a total absence of preregistered studies, which makes the evidence for improvements for working memory and sustained attention very weak. For other skills as well, the effects are mixed. Only three studies investigated far transfer to ecologically valid tasks, two of which did not find any effect. We provide recommendations for future Neurotracker research to improve the evidence base and for making better use of sport and basic science findings.",
+      "journal": "Psychonomic bulletin & review",
+      "year": "2021",
+      "authors": [
+        "Vater C",
+        "Gray R",
+        "Holcombe AO"
+      ],
+      "doi": "10.1080/13506280903211142",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "28116702",
+      "title": "Working memory training revisited: A multi-level meta-analysis of n-back training studies.",
+      "abstract": "The efficacy of working memory (WM) training has been a controversial and hotly debated issue during the past years. Despite a large number of training studies and several meta-analyses, the matter has not yet been solved. We conducted a multi-level meta-analysis on the cognitive transfer effects in healthy adults who have been administered WM updating training with n-back tasks, the most common experimental WM training paradigm. Thanks to this methodological approach that has not been employed in previous meta-analyses in this field, we were able to include effect sizes from all relevant tasks used in the original studies. Altogether 203 effect sizes were derived from 33 published, randomized, controlled trials. In contrast to earlier meta-analyses, we separated task-specific transfer (here untrained n-back tasks) from other WM transfer tasks. Two additional cognitive domains of transfer that we analyzed consisted of fluid intelligence (Gf) and cognitive control tasks. A medium-sized transfer effect was observed to untrained n-back tasks. For other WM tasks, Gf, and cognitive control, the effect sizes were of similar size and very small. Moderator analyses showed no effects of age, training dose, training type (single vs. dual), or WM and Gf transfer task contents (verbal vs. visuospatial). We conclude that a substantial part of transfer following WM training with the n-back task is task-specific and discuss the implications of the results to WM training research.",
+      "journal": "Psychonomic bulletin & review",
+      "year": "2017",
+      "authors": [
+        "Soveri A",
+        "Antfolk J",
+        "Karlsson L",
+        "Salo B",
+        "Laine M"
+      ],
+      "doi": "10.3758/s13423-016-1217-0",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "36460294",
+      "title": "The benefits of simultaneous tDCS and working memory training on transfer outcomes: A systematic review and meta-analysis.",
+      "abstract": "BACKGROUND: Transcranial direct current stimulation (tDCS) has shown potential as an effective aid to facilitate learning. A popular application of this technology has been in combination with working memory training (WMT) in order to enhance transfer effects to other cognitive measures after training.\nOBJECTIVE: This meta-analytic review aims to synthesize the existing literature on tDCS-enhanced WMT to quantify the extent to which tDCS can improve performance on transfer tasks after training. Furthermore, we were interested to evaluate the moderating effects of assessment time point (immediate post-test vs. follow-up) and transfer distance, i.e., the degree of similarity between transfer and training tasks.\nMETHODS: Using robust variance estimation, we performed a systematic meta-analysis of all studies to date that compared WMT with tDCS to WMT with sham in healthy adults. All procedures conformed to PRISMA guidelines.\nRESULTS: Across 265 transfer measures in 18 studies, we found a small positive net effect of tDCS on improving overall performance on transfer measures after WMT. These effects were sustained at follow-up, which ranged from 1 week to one year after training, with a median of 1 month. Additionally, although there were no significant differences as a function of transfer distance, effects were most pronounced for non-trained working memory tasks.\nCONCLUSIONS: This review provides evidence that tDCS can be effective in promoting learning over and above WMT alone, and can durably improve performance on trained and untrained measures for weeks to months after the initial training and stimulation period. In particular, boosting performance on dissimilar working memory tasks may present the most promising target for tDCS-augmented WMT.",
+      "journal": "Brain stimulation",
+      "year": "2022",
+      "authors": [
+        "Pergher V",
+        "Au J",
+        "Alizadeh Shalchy M",
+        "Santarnecchi E",
+        "Seitz A",
+        "Jaeggi SM",
+        "Battelli L"
+      ],
+      "doi": "10.1016/j.brs.2022.11.008",
+      "publication_types": [
+        "Meta-Analysis",
+        "Systematic Review",
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "39235660",
+      "title": "Cognitive Training During Midlife: A Systematic Review and Meta-Analysis.",
+      "abstract": "Midlife has been suggested to be a crucial time to introduce interventions for improving cognitive functions. The effects of cognitive training (CT) in healthy middle-aged populations and more specifically during the menopausal transition have not been systematically investigated. To investigate the effects of CT on cognition in healthy middle-aged adults and specifically in females during the menopause transition, literature was searched inception to July 2023 and studies were included that examined the effects of CT on a defined cognitive outcome. The improvement on cognitive performance following CT was the main outcome measured as mean difference (from baseline to immediate post) estimates with corresponding 95% confidence intervals (CI) in meta-analysis and was discussed with the support of subgroup analysis based on outcome type (i.e., far or near-transfer) and cluster tabulations. Nineteen articles were included in the qualitative synthesis with a total of 7765 individuals, and eight articles were included in the meta-analyses. CT was categorized into six type clusters: Game-based CT, General CT, Speed of Processing Training, Working Memory Training, Strategy-based CT, and Cognitive Remediation. Cognitive outcome was divided into six clusters: working memory, verbal memory, language, executive function, attention/processing speed, and visual memory. Meta-analysis reported significant improvement in the domain of executive function (0.48, 95% CI 0.08-0.87), verbal memory (0.22, 95% CI 0.11-0.33), and working memory (0.16, 95% CI 0.05-0.26). CT confers benefits on various cognitive domains, suggesting a potential role of CT to promote optimal cognitive functioning in the midlife and specifically in women during the menopause transition.",
+      "journal": "Neuropsychology review",
+      "year": "2025",
+      "authors": [
+        "Zhu C",
+        "Arunogiri S",
+        "Li Q",
+        "Thomas EHX",
+        "Gurvich C"
+      ],
+      "doi": "10.1093/milmed/usaa501",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "32738262",
+      "title": "Working memory updating training promotes plasticity & behavioural gains: A systematic review & meta-analysis.",
+      "abstract": "AIMS: Recent reviews yield contradictory findings regarding the efficacy of working memory training and transfer to untrained tasks. We reviewed working memory updating (WMU) training studies and examined cognitive and neural outcomes on training and transfer tasks.\nMETHODS: Database searches for adult brain imaging studies of WMU training were conducted. Training-induced neural changes were assessed qualitatively, and meta-analyses were performed on behavioural training and transfer effects.\nRESULTS: A large behavioural training effect was found for WMU training groups compared to control groups. There was a moderate near transfer effect on tasks in the same cognitive domain, and a non-significant effect for far transfer to other cognitive domains. Functional neuroimaging changes for WMU training tasks revealed consistent frontoparietal activity decreases while both decreases and increases were found for subcortical regions.\nCONCLUSIONS: WMU training promotes plasticity and has potential applications in optimizing interventions for neurological populations. Future research should focus on the mechanisms and factors underlying plasticity and generalisation of training gains.",
+      "journal": "Neuroscience and biobehavioral reviews",
+      "year": "2020",
+      "authors": [
+        "Pappa K",
+        "Biswas V",
+        "Flegal KE",
+        "Evans JJ",
+        "Baylan S"
+      ],
+      "doi": "10.1016/j.neubiorev.2020.07.027",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "34456780",
+      "title": "Retention and Transfer of Cognitive Bias Mitigation Interventions: A Systematic Literature Study.",
+      "abstract": "Cognitive biases can adversely affect human judgment and decision making and should therefore preferably be mitigated, so that we can achieve our goals as effectively as possible. Hence, numerous bias mitigation interventions have been developed and evaluated. However, to be effective in practical situations beyond laboratory conditions, the bias mitigation effects of these interventions should be retained over time and should transfer across contexts. This systematic review provides an overview of the literature on retention and transfer of bias mitigation interventions. A systematic search yielded 52 studies that were eligible for screening. At the end of the selection process, only 12 peer-reviewed studies remained that adequately studied retention over a period of at least 14 days (all 12 studies) or transfer to different tasks and contexts (one study). Eleven of the relevant studies investigated the effects of bias mitigation training using game- or video-based interventions. These 11 studies showed considerable overlap regarding the biases studied, kinds of interventions, and decision-making domains. Most of them indicated that gaming interventions were effective after the retention interval and that games were more effective than video interventions. The study that investigated transfer of bias mitigation training (next to retention) found indications of transfer across contexts. To be effective in practical circumstances, achieved effects of cognitive training should lead to enduring changes in the decision maker's behavior and should generalize toward other task domains or training contexts. Given the small number of overlapping studies, our main conclusion is that there is currently insufficient evidence that bias mitigation interventions will substantially help people to make better decisions in real life conditions. This is in line with recent theoretical insights about the \"hard-wired\" neural and evolutionary origin of cognitive biases.",
+      "journal": "Frontiers in psychology",
+      "year": "2021",
+      "authors": [
+        "Korteling JEH",
+        "Gerritsma JYJ",
+        "Toet A"
+      ],
+      "doi": "10.1111/j.1478-9302.2011.00238.x",
+      "publication_types": [
+        "Systematic Review",
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "29574197",
+      "title": "Working memory training mostly engages general-purpose large-scale networks for learning.",
+      "abstract": "The present meta-analytic study examined brain activation changes following working memory (WM) training, a form of cognitive training that has attracted considerable interest. Comparisons with perceptual-motor (PM) learning revealed that WM training engages domain-general large-scale networks for learning encompassing the dorsal attention and salience networks, sensory areas, and striatum. Also the dynamics of the training-induced brain activation changes within these networks showed a high overlap between WM and PM training. The distinguishing feature for WM training was the consistent modulation of the dorso- and ventrolateral prefrontal cortex (DLPFC/VLPFC) activity. The strongest candidate for mediating transfer to similar untrained WM tasks was the frontostriatal system, showing higher striatal and VLPFC activations, and lower DLPFC activations after training. Modulation of transfer-related areas occurred mostly with longer training periods. Overall, our findings place WM training effects into a general perception-action cycle, where some modulations may depend on the specific cognitive demands of a training task.",
+      "journal": "Neuroscience and biobehavioral reviews",
+      "year": "2018",
+      "authors": [
+        "Salmi J",
+        "Nyberg L",
+        "Laine M"
+      ],
+      "doi": "10.1016/j.neubiorev.2018.03.019",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "33900569",
+      "title": "Overlapping and dissociable brain activations for fluid intelligence and executive functions.",
+      "abstract": "Cognitive enhancement interventions aimed at boosting human fluid intelligence (gf) have targeted executive functions (EFs), such as updating, inhibition, and switching, in the context of transfer-inducing cognitive training. However, even though the link between EFs and gf has been demonstrated at the psychometric level, their neurofunctional overlap has not been quantitatively investigated. Identifying whether and how EFs and gf might share neural activation patterns could provide important insights into the overall hierarchical organization of human higher-order cognition, as well as suggest specific targets for interventions aimed at maximizing cognitive transfer. We present the results of a quantitative meta-analysis of the available fMRI and PET literature on EFs and gf in humans, showing the similarity between gf and (i) the overall global EF network, as well as (ii) specific maps for updating, switching, and inhibition. Results highlight a higher degree of similarity between gf and updating (80% overlap) compared with gf and inhibition (34%), and gf and switching (17%). Moreover, three brain regions activated for both gf and each of the three EFs also were identified, located in the left middle frontal gyrus, left inferior parietal lobule, and anterior cingulate cortex. Finally, resting-state functional connectivity analysis on two independent fMRI datasets showed the preferential behavioural correlation and anatomical overlap between updating and gf. These findings confirm a close link between gf and EFs, with implications for brain stimulation and cognitive training interventions.",
+      "journal": "Cognitive, affective & behavioral neuroscience",
+      "year": "2021",
+      "authors": [
+        "Santarnecchi E",
+        "Momi D",
+        "Mencarelli L",
+        "Plessow F",
+        "Saxena S",
+        "Rossi S",
+        "Rossi A",
+        "Mathan S",
+        "Pascual-Leone A"
+      ],
+      "doi": "10.1002/hbm.24193",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't",
+        "Research Support, U.S. Gov't, Non-P.H.S."
+      ]
+    },
+    {
+      "pmid": "32728850",
+      "title": "Cognitive and academic benefits of music training with children: A multilevel meta-analysis.",
+      "abstract": "Music training has repeatedly been claimed to positively impact children's cognitive skills and academic achievement (literacy and mathematics). This claim relies on the assumption that engaging in intellectually demanding activities fosters particular domain-general cognitive skills, or even general intelligence. The present meta-analytic review (N = 6,984, k = 254, m = 54) shows that this belief is incorrect. Once the quality of study design is controlled for, the overall effect of music training programs is null ([Formula: see text] ≈ 0) and highly consistent across studies (τ2 ≈ 0). Results of Bayesian analyses employing distributional assumptions (informative priors) derived from previous research in cognitive training corroborate these conclusions. Small statistically significant overall effects are obtained only in those studies implementing no random allocation of participants and employing non-active controls ([Formula: see text] ≈ 0.200, p < .001). Interestingly, music training is ineffective regardless of the type of outcome measure (e.g., verbal, non-verbal, speed-related, etc.), participants' age, and duration of training. Furthermore, we note that, beyond meta-analysis of experimental studies, a considerable amount of cross-sectional evidence indicates that engagement in music has no impact on people's non-music cognitive skills or academic achievement. We conclude that researchers' optimism about the benefits of music training is empirically unjustified and stems from misinterpretation of the empirical data and, possibly, confirmation bias.",
+      "journal": "Memory & cognition",
+      "year": "2020",
+      "authors": [
+        "Sala G",
+        "Gobet F"
+      ],
+      "doi": "10.1007/s11251-008-9052-y",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "42711482",
+      "title": "The asymmetry of working memory training transfer: A systematic review and meta-analysis.",
+      "abstract": "Working memory (WM) training is widely used to enhance cognitive performance; however, its transfer to untrained tasks remains controversial. Traditional theories emphasize task similarity as the primary determinant of training transfer, but they cannot fully explain emerging evidence of asymmetric transfer across tasks. Two directional transfer hypotheses are proposed here to explain this asymmetry: the resource-based transfer advantage hypothesis predicts stronger transfer from more to less cognitively demanding tasks, whereas the ability-based transfer advantage hypothesis predicts stronger transfer from tasks engaging broader task-general abilities to tasks engaging task-specific narrower abilities. The contrast between span and updating paradigms provides an informative framework for distinguishing these accounts, because updating tasks are generally more cognitively demanding, whereas span tasks involve broader abilities. Accordingly, we conducted a three-level meta-analysis of 55 studies (208 effect sizes; N = 3,492). The results showed that updating training transferred reliably to span tasks (g = 0.176, p < .001), whereas span training did not reliably transfer to updating tasks (g = 0.048, p = .453), supporting the resource-based account. This advantage of updating training also extended to non-WM outcomes and was more pronounced at lower training doses, in non-adult samples, and with verbal stimuli. Together, these findings extend WM transfer theory beyond task similarity by highlighting the importance of cognitive demand and offer guidance for WM training design.",
+      "journal": "Psychonomic bulletin & review",
+      "year": "2026",
+      "authors": [
+        "Fu J",
+        "Zhou Y",
+        "Yuan M",
+        "Cai Y"
+      ],
+      "doi": "10.3724/SP.J.1041.2017.01022",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "42959097",
+      "title": "Cognitive transfer and durability of computerised cognitive training in older adults with mild cognitive impairment: a systematic review and meta-analysis of randomised controlled trials.",
+      "abstract": "BACKGROUND: Computerised cognitive training (CCT) may improve cognition in mild cognitive impairment (MCI), but whether gains transfer beyond trained processes and persist after training cessation remains uncertain. We examined immediate and sustained cognitive near transfer, cognitive far transfer, and functional far transfer.\nMETHODS: Seven databases were searched from inception to 1 July 2026. Randomised controlled trials comparing CCT with eligible controls and reporting transfer outcomes were included. Outcomes within 4 weeks after training were classified as immediate and those at least 12 weeks after cessation as sustained. Multiple eligible outcomes from the same trial were aggregated to one trial-level estimate. Random-effects models used restricted maximum likelihood and modified Knapp-Hartung inference. RoB 2 and GRADE assessed risk of bias and certainty.\nRESULTS: Eleven reports from eight independent trials (722 randomised participants) were included; no trial was at overall low risk of bias. Immediate cognitive near transfer was small and imprecise (6 trials, N = 376; Hedges g = 0.14, 95% CI - 0.23 to 0.50; very low certainty). Immediate cognitive far transfer was also uncertain (8 trials, N = 586; g = 0.23, 95% CI - 0.35 to 0.81; very low certainty) and strongly influenced by Wu et al.; excluding this trial yielded g = 0.00 (95% CI - 0.26 to 0.25). Sustained cognitive near transfer (4 trials, N = 287; g = -0.07, 95% CI - 0.31 to 0.18) and sustained cognitive far transfer (5 trials, N = 397; g = 0.02, 95% CI - 0.26 to 0.29) were close to the null but based on few trials. Functional far-transfer evidence was low-certainty and limited.\nCONCLUSION: The evidence base is small and methodologically limited, and transfer classification requires reviewer judgement. Current evidence does not establish convincing durable transfer effects beyond trained processes. Larger, rigorous trials with validated functional outcomes and longer follow-up are needed.\nSYSTEMATIC REVIEW REGISTRATION: https://www.crd.york.ac.uk/prospero/, identifier CRD420261463612.",
+      "journal": "Frontiers in aging neuroscience",
+      "year": "2026",
+      "authors": [
+        "Luo H",
+        "Deng L",
+        "Long L",
+        "Chen W",
+        "Yao J",
+        "Liu Y"
+      ],
+      "doi": "10.1186/s12877-023-03941-y",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "28165253",
+      "title": "Working memory training in typically developing children: A meta-analysis of the available evidence.",
+      "abstract": "The putative effectiveness of working memory (WM) training at enhancing cognitive and academic skills is still ardently debated. Several researchers have claimed that WM training fosters not only skills such as visuospatial WM and short-term memory (STM), but also abilities outside the domain of WM, such as fluid intelligence and mathematics. Other researchers, while acknowledging the positive effect of WM training on WM-related cognitive skills, are much more pessimistic about the ability of WM training to improve other cognitive and academic skills. In other words, the idea that far-transfer-that is, the generalization of a set of skills across two domains only loosely related to each other-may take place in WM training is still controversial. In this meta-analysis, the authors focused on the effects of WM training on cognitive and academic skills (e.g., fluid intelligence, attention/inhibition, mathematics, and literacy) in typically developing (TD) children (aged 3 to 16). Whereas WM training exerted a significant effect on cognitive skills related to WM training (g = 0.46), little evidence was found regarding far-transfer effects (g = 0.12). Moreover, the size of the effects was inversely related to the quality of the design (i.e., random allocation to the groups and presence of an active control group). Results suggest that WM training is ineffective at enhancing TD children's cognitive or academic skills and that, when positive effects are observed, they are modest at best. Thus, in line with other types of training, far-transfer rarely occurs and its effects are minimal. (PsycINFO Database Record",
+      "journal": "Developmental psychology",
+      "year": "2017",
+      "authors": [
+        "Sala G",
+        "Gobet F"
+      ],
+      "doi": "10.1037/dev0000265",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "25102926",
+      "title": "Improving fluid intelligence with training on working memory: a meta-analysis.",
+      "abstract": "Working memory (WM), the ability to store and manipulate information for short periods of time, is an important predictor of scholastic aptitude and a critical bottleneck underlying higher-order cognitive processes, including controlled attention and reasoning. Recent interventions targeting WM have suggested plasticity of the WM system by demonstrating improvements in both trained and untrained WM tasks. However, evidence on transfer of improved WM into more general cognitive domains such as fluid intelligence (Gf) has been more equivocal. Therefore, we conducted a meta-analysis focusing on one specific training program, n-back. We searched PubMed and Google Scholar for all n-back training studies with Gf outcome measures, a control group, and healthy participants between 18 and 50 years of age. In total, we included 20 studies in our analyses that met our criteria and found a small but significant positive effect of n-back training on improving Gf. Several factors that moderate this transfer are identified and discussed. We conclude that short-term cognitive training on the order of weeks can result in beneficial effects in important cognitive functions as measured by laboratory tests.",
+      "journal": "Psychonomic bulletin & review",
+      "year": "2015",
+      "authors": [
+        "Au J",
+        "Sheehan E",
+        "Tsai N",
+        "Duncan GJ",
+        "Buschkuehl M",
+        "Jaeggi SM"
+      ],
+      "doi": "10.3758/s13423-014-0699-x",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "29239631",
+      "title": "Video game training does not enhance cognitive ability: A comprehensive meta-analytic investigation.",
+      "abstract": "As a result of considerable potential scientific and societal implications, the possibility of enhancing cognitive ability by training has been one of the most influential topics of cognitive psychology in the last two decades. However, substantial research into the psychology of expertise and a recent series of meta-analytic reviews have suggested that various types of cognitive training (e.g., working memory training) benefit performance only in the trained tasks. The lack of skill generalization from one domain to different ones-that is, far transfer-has been documented in various fields of research such as working memory training, music, brain training, and chess. Video game training is another activity that has been claimed by many researchers to foster a broad range of cognitive abilities such as visual processing, attention, spatial ability, and cognitive control. We tested these claims with three random-effects meta-analytic models. The first meta-analysis (k = 310) examined the correlation between video game skill and cognitive ability. The second meta-analysis (k = 315) dealt with the differences between video game players and nonplayers in cognitive ability. The third meta-analysis (k = 359) investigated the effects of video game training on participants' cognitive ability. Small or null overall effect sizes were found in all three models. These outcomes show that overall cognitive ability and video game skill are only weakly related. Importantly, we found no evidence of a causal relationship between playing video games and enhanced cognitive ability. Video game training thus represents no exception to the general difficulty of obtaining far transfer. (PsycINFO Database Record",
+      "journal": "Psychological bulletin",
+      "year": "2018",
+      "authors": [
+        "Sala G",
+        "Tatlidil KS",
+        "Gobet F"
+      ],
+      "doi": "10.1037/bul0000139",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "35241715",
+      "title": "A systematic review and meta-analysis of social cognition training success across the healthy lifespan.",
+      "abstract": "Socio-cognitive abilities and challenges change across the healthy lifespan and are essential for successful human interaction. Identifying effective socio-cognitive training approaches for healthy individuals may prevent development of mental or physical disease and reduced quality of life. A systematic search was conducted in MEDLINE Ovid, Web of Science Core Collection, CENTRAL, and PsycInfo databases. Studies that investigated different socio-cognitive trainings for healthy individuals across the human lifespan assessing effects on theory of mind, emotion recognition, perspective taking, and social decision making were included. A random-effects pairwise meta-analysis was conducted. Risk-of-Bias was assessed using the Cochrane Risk-of-Bias-2-Tool. Twenty-three intervention studies with N = 1835 participants were included in the systematic review; twelve randomized controlled trials in the meta-analysis (N = 875). Socio-cognitive trainings differed regarding duration and content in different age groups, with theory of mind being the domain most frequently trained. Results of the meta-analysis showed that trainings were highly effective for improving theory of mind in children aged 3-5 years (SMD = 2.51 (95%CI: 0.48-4.53)), children aged 7-9 years (SMD = 2.71 (95%CI: - 0.28 to 5.71)), and older adults (SMD = 5.90 (95%CI: 2.77-9.02). Theory of mind training was highly effective in all investigated age-groups for improving theory of mind, yet, more research on transfer effects to other socio-cognitive processes and further investigation of training effects in other socio-cognitive domains (e.g., emotion recognition, visual perspective taking, social decision making) is needed. Identified characteristics of successful socio-cognitive trainings in different age groups may help designing future training studies for other populations.Registration: www.crd.york.ac.uk/PROSPERO/ (ID: CRD42020193297).",
+      "journal": "Scientific reports",
+      "year": "2022",
+      "authors": [
+        "Roheger M",
+        "Hranovska K",
+        "Martin AK",
+        "Meinzer M"
+      ],
+      "doi": "10.1136/bmj.l4898",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "25624425",
+      "title": "A systematic review of transcranial electrical stimulation combined with cognitive training.",
+      "abstract": "BACKGROUND: Transcranial Electrical Stimulation (tES) methods have been shown to enhance performance across a range of cognitive tasks. It is thought that tES can be used to enhance the treatment-effects of cognitive training (CT), leading to lasting improvements in neurocognitive function. Recently, a small number of studies have investigated the effects of tES combined with CT in healthy and cognitively impaired subjects.\nOBJECTIVE: To evaluate the effects of tES + CT on both CT task performance and on non-trained cognitive outcomes.\nMETHODS: A systematic review was conducted in accordance with PRISMA guidelines. Databases (PsycINFO, EMBASE, PubMed and Medline) were searched for all randomized, controlled and naturalistic prospective studies up until June 2014, combining tES and CT.\nRESULTS: 13 studies comprising 465 participants met the inclusion criteria. Findings indicated that tES + CT enhanced performance on the majority of CT tasks. The effects on non-trained tasks were mixed, with some evidence for improvements in working memory, cognitive control, approximate number sense and arithmetic processing.\nCONCLUSIONS: tES + CT enhances performance on CT tasks across a range of cognitive functions. Preliminary evidence suggests that tES may also increase transfer effects to non-trained tasks in some domains. Recommendations for future studies are provided.",
+      "journal": "Restorative neurology and neuroscience",
+      "year": "2015",
+      "authors": [
+        "Elmasry J",
+        "Loo C",
+        "Martin D"
+      ],
+      "doi": "10.3233/RNN-140473",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "32507890",
+      "title": "The Long-Term Efficacy of Working Memory Training in Healthy Older Adults: A Systematic Review and Meta-Analysis of 22 Randomized Controlled Trials.",
+      "abstract": "OBJECTIVES: The long-lasting efficacy of working memory (WM) training has been a controversial and still ardently debated issue. In this meta-analysis, the authors explored the long-term effects of WM training in healthy older adults on WM subdomains and abilities outside the WM domain assessed in randomized controlled studies.\nMETHOD: A systematic literature search of PubMed, Web of Science, PsycINFO, Cochrane Library, ProQuest, clinicaltrials.gov, and Google Scholar was conducted. Random-effects models were used to quantitatively synthesize the existing data.\nRESULTS: Twenty-two eligible studies were included in the meta-analysis. The mean participant age ranged from 63.77 to 80.1 years. The meta-synthesized long-term effects on updating were 0.45 (95% confidence interval = 0.253-0.648, <6 months: 0.395, 0.171-0.619, ≥6 months: 0.641, 0.223-1.058), on shifting, 0.447 (0.246-0.648, <6 months: 0.448, 0.146-0.75, ≥6 months: 0.446, 0.176-0.716); on inhibition, 0.387 (0.228-0.547, <6 months: 0.248, 0.013-0.484, ≥6 months: 0.504, 0.288-0.712); on maintenance, 0.486 (0.352-0.62, <6 months: 0.52, 0.279-0.761, ≥6 months: 0.471, 0.31-0.63).\nDISCUSSION: The results showed that WM training exerted robust long-term effects on enhancing the WM system and improving processing speed and reasoning in late adulthood. Future studies are needed to use different tasks of the same WM construct to evaluate the WM training benefits, to adopt more ecological tasks or tasks related to daily life, to improve the external validity of WM training, and to identify the optimal implementation strategy for WM training.",
+      "journal": "The journals of gerontology. Series B, Psychological sciences and social sciences",
+      "year": "2020",
+      "authors": [
+        "Hou J",
+        "Jiang T",
+        "Fu J",
+        "Su B",
+        "Wu H",
+        "Sun R",
+        "Zhang T"
+      ],
+      "doi": "10.1093/geronb/gbaa077",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "34251578",
+      "title": "A Game a Day Keeps Cognitive Decline Away? A Systematic Review and Meta-Analysis of Commercially-Available Brain Training Programs in Healthy and Cognitively Impaired Older Adults.",
+      "abstract": "The rising prevalence rates of age-related cognitive impairment are a worldwide public concern, bringing about a surge in the number of \"brain training\" programs commercially available to the general public. Numerous companies advertise that their products improve memory and protect against cognitive decline, though researchers have voiced concerns regarding the validity of such claims. To address this issue, the current meta-analytic investigation examined evidence from 43 studies (encompassing 2,636 participants) to evaluate the efficacy of commercial training programs within two separate populations: healthy older adults and older adults with mild cognitive-impairment (MCI). Seven programs were identified: BrainGymmer, BrainHQ, CogMed, CogniFit, Dakim, Lumosity, and MyBrainTrainer. Analyses yielded small, significant near-transfer effects for both healthy and MCI samples. Far-transfer was not observed for the MCI sample, whereas a small, significant effect was found for subjective but not objective measures of far-transfer in the healthy sample. Analyses of individual domains (combining near-and far-transfer outcomes) yielded significant transfer to executive-functioning, memory, and processing-speed in healthy older adults. After adjusting for publication bias, only the effect size for processing speed remained significant. Transfer to attention, objective everyday functioning, fluid-intelligence, and visuospatial domains was not significant. Thus, whilst \"brain training\" may be suitable for enjoyment and entertainment purposes, there is currently insufficient empirical evidence to support that such training can improve memory, general cognition, or everyday functioning. This area of research is still in its infancy and warrants further investigation to provide more substantial evidence regarding the efficacy of this rapidly expanding industry.",
+      "journal": "Neuropsychology review",
+      "year": "2022",
+      "authors": [
+        "Nguyen L",
+        "Murphy K",
+        "Andrews G"
+      ],
+      "doi": "10.1007/s11065-021-09515-2",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "37060663",
+      "title": "On the importance of working memory in the driving safety field: A systematic review.",
+      "abstract": "In recent years, many studies have used poor cognitive functions to explain risk safety differences among drivers. Working memory is a cognitive function with information storage and attentional control that plays a crucial role in driver information processing. Furthermore, it is inextricably linked to parameters such as driving performance, driving eye movements and driving neurophysiology, which have a significant impact on drivers' risky behavior and crash risk. In particular, crash risk is a serious risk to social safety and economic development. For this reason, it is necessary to understand how risk-related working memory affects driving so that pre-driving safety pre-training programs and in-vehicle safety assistance systems for driving can be developed accordingly, contributing to the development of semi-autonomous vehicles and even autonomous vehicles. In this paper, a systematic search of the literature over the past 23 years resulted in 78 articles that met the eligibility criteria and quality assessment. The results show that higher working memory capacity, as measured neuropsychologically, is associated with more consistent and safer driving-related parameters for drivers (e.g., lane keeping) and may be related to pupil dilation during risk perception while driving, which is associated with driving outcomes (tickets, pull-overs, penalty points and fines,and driving accidents) is closely related to the perceived usefulness of the human-machine interface, reaction time, standard deviation of steering wheel corners, etc. when the autonomous driving takes over. In addition, higher working memory load interference was associated with more inconsistent and unsafe driving-related parameters (including but not limited to eye movements, electrophysiology, etc.), with higher working memory load being associated with easier driver concentration on the road, faster heart rate, lower heart rate variability, and lower oxyhemoglobin (OxyHb) and deoxyhemoglobin (DeoxyHb). Only a limited number of studies have simultaneously investigated the relationship between working memory capacity, working memory load and driving, showing an interaction between working memory capacity and working memory load on lane change initiation and lane change correctness, with working memory capacity acting as a covariate that mediated the effect of working memory load on braking reaction time. In addition, working memory-related cognitive training had a transfer effect on improving driving ability. Overall, working memory capacity determines the upper limit of the number of working memory attention resources, while working memory load occupies part of the working memory attention resources, thus influencing information perception, decision judgment, operational response, and collision avoidance in driving. Future effective interventions for safe driving can be combined with capacity training and load alerting. These findings contribute to our understanding of the role of working memory in driving and provide new insights into the design of driver safety training programs and automated driving personalized in-vehicle safety systems and roadside devices such as signage.",
+      "journal": "Accident; analysis and prevention",
+      "year": "2023",
+      "authors": [
+        "Zhang H",
+        "Guo Y",
+        "Yuan W",
+        "Li K"
+      ],
+      "doi": "10.1016/j.aap.2023.107071",
+      "publication_types": [
+        "Systematic Review",
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "27613718",
+      "title": "Strategy-Based Cognitive Training for Improving Executive Functions in Older Adults: a Systematic Review.",
+      "abstract": "Given projected increases in dementia prevalence, emphasising earlier stages of cognitive impairment in older adults enables targeted early intervention strategies. Strategy-based cognitive training (SCT) is a remedial approach involving guidance and practice in compensatory techniques to improve cognition, including memory and attention. It may also be effective for improving executive functions (EF) integral to everyday tasks. This review systematically evaluates SCT effects on EF in older adults without dementia. Following PRISMA guidelines, we reviewed eligible trials according to pre-defined criteria, differentiating SCT from other cognitive interventions and stipulating total EF-focused intervention time, study design and target population (healthy older adults or mild cognitive decline). We then evaluated trials according to design, methodological quality and outcomes. Unfortunately, with too few studies in mild cognitive impairment, we refocused our review only on healthy older adults. Thirteen studies with 4120 participants in total were included, primarily targeting inductive reasoning. Despite heterogeneous study designs and SCT programs, 11/13 trials reported significant EF improvements, generally of moderate effect size (Hedges' g > 0.3). Four studies reported sustained benefits from one month to 10 years. There was some evidence of far transfer. We conclude that there is promising evidence for SCT as a targeted intervention for EF in healthy older adults and preliminary evidence for maintaining effects over time. Fewer trials have investigated far transfer (e.g. improved everyday functioning) or capacity to delay/prevent dementia, which are most relevant to clinical utility. Limitations include the inability to calculate effect sizes for four studies and absence of statistical meta-analysis.",
+      "journal": "Neuropsychology review",
+      "year": "2016",
+      "authors": [
+        "Mowszowski L",
+        "Lampit A",
+        "Walton CC",
+        "Naismith SL"
+      ],
+      "doi": "10.1007/s11065-016-9329-x",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "31100297",
+      "title": "Reviewing working memory training gains in healthy older adults: A meta-analytic review of transfer for cognitive outcomes.",
+      "abstract": "The objective of this meta-analytic review was to systematically assess the effects of working memory training on healthy older adults. We identified 552 entries, of which 27 experiments met our inclusion criteria. The final database included 1130 participants. Near- and far-transfer effects were analysed with measures of short-term memory, working memory, and reasoning. Small significant and long-lasting transfer gains were observed in working memory tasks. Effects on reasoning was very small and only marginally significant. The effects of working memory training on both near and far transfer in older adults were moderated by the type of training tasks; the adopted outcome measures; the training duration; and the total number of training hours. In this review, we provide an updated review of the literature in the field by carrying out a robust multi-level meta-analysis focused exclusively on working memory training in healthy older adults. Recommendations for future research are suggested.",
+      "journal": "Neuroscience and biobehavioral reviews",
+      "year": "2019",
+      "authors": [
+        "Teixeira-Santos AC",
+        "Moreira CS",
+        "Magalhães R",
+        "Magalhães C",
+        "Pereira DR",
+        "Leite J",
+        "Carvalho S",
+        "Sampaio A"
+      ],
+      "doi": "10.1016/j.neubiorev.2019.05.009",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "31427316",
+      "title": "Effect of computerised cognitive training on cognitive outcomes in mild cognitive impairment: a systematic review and meta-analysis.",
+      "abstract": "OBJECTIVES: To determine the effect of computerised cognitive training (CCT) on improving cognitive function for older adults with mild cognitive impairment (MCI).\nDESIGN: Systematic review and meta-analysis.\nDATA SOURCES: PubMed, Embase, Web of Science and the Cochrane Library were searched through January 2018.\nELIGIBILITY CRITERIA: Randomised controlled trials comparing CCT with control conditions in those with MCI aged 55+ were included.\nDATA EXTRACTION AND SYNTHESIS: Two independent reviewers extracted data and assessed the risk of bias. Effect sizes (Hedges' g and 95% CIs) were calculated and random-effects meta-analyses were performed where three or more studies investigated a comparable intervention and outcome. Heterogeneity was quantified using the I2 statistic.\nRESULTS: 18 studies met the inclusion criteria and were included in the analyses, involving 690 participants. Meta-analysis revealed small to moderate positive treatment effects compared with control interventions in four domains as follows: global cognitive function (g=0.23, 95% CI 0.03 to 0.44), memory (g=0.30, 95% CI 0.11 to 0.50), working memory (g=0.39, 95% CI 0.12 to 0.66) and executive function (g=0.20, 95% CI -0.03 to 0.43). Statistical significance was reached in all domains apart from executive function.\nCONCLUSIONS: This meta-analysis provides evidence that CCT improves cognitive function in older people with MCI. However, the long-term transfer of these improvements and the potential to reduce dementia prevalence remains unknown. Various methodological issues such as heterogeneity in outcome measures, interventions and MCI symptoms and lack of intention-to-treat analyses limit the quality of the literature and represent areas for future research.",
+      "journal": "BMJ open",
+      "year": "2019",
+      "authors": [
+        "Zhang H",
+        "Huntley J",
+        "Bhome R",
+        "Holmes B",
+        "Cahill J",
+        "Gould RL",
+        "Wang H",
+        "Yu X",
+        "Howard R"
+      ],
+      "doi": "10.1002/gps.1681",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "30998045",
+      "title": "Immediate and long-term efficacy of executive functions cognitive training in older adults: A systematic review and meta-analysis.",
+      "abstract": "There has been growing interest in enhancing cognition in older adulthood via computerized cognitive training (CCT), though, there is controversy surrounding the efficacy of CCT in promoting improvements to functional everyday activities. As core executive-functions (EFs)-cognitive-flexibility, inhibition, working memory-are applicable to most aspects of daily living, CCT targeting these processes would likely promote gains on trained tasks, and potentially on similar untrained tasks (near-transfer), and general cognitive performance (far-transfer). We report two meta-analyses investigating the immediate (pretest to posttest) and long-term efficacy (pretest to follow-up) of core-EF CCT in improving cognition among older adults. Sixty-four studies (encompassing 3,594 participants) included an eligible CCT intervention targeting at least 1 core-EF (e.g., working memory training). Both immediate and long-term efficacy analyses revealed significant, large training effects for trained outcomes, and significant, small training effects for near-transfer and far-transfer outcomes. When comparing the same studies, effect sizes from immediate and long-term efficacy analyses were comparable, suggesting that CCT gains were maintained over time. Further analyses of immediate efficacy revealed significant, small training effects for performance on executive functioning, fluid intelligence, memory, and visuospatial domains, but not for attention or processing speed. After adjusting for publication bias, the training effect for fluid intelligence was nonsignificant, whereas processing speed was significant. It is recommended that future studies employ adaptive multidomain training as these studies were shown to produce significant training effects at each transfer level. Overall, core-EF CCT interventions show promise in promoting immediate and long-term improvements in cognitive performance among older adults. (PsycINFO Database Record (c) 2019 APA, all rights reserved).",
+      "journal": "Psychological bulletin",
+      "year": "2019",
+      "authors": [
+        "Nguyen L",
+        "Murphy K",
+        "Andrews G"
+      ],
+      "doi": "10.1037/bul0000196",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "31002885",
+      "title": "The impact of behavioral interventions on cognitive function in healthy older adults: A systematic review.",
+      "abstract": "Behavioral interventions to improve cognitive function in older adults are widespread and can vary from theater classes to cognitive training programs. However, the effectiveness in maintaining different cognitive domains varies greatly both across and within intervention types. To date, no systematic reviews have synthesized findings across more than a few types of interventions (e.g., cognitive vs. exercise). This systematic review examined 11 types of behavioral interventions and the respective transfer to 19 cognitive domains, as well as transfer to everyday function. Study inclusion criteria were: peer-reviewed articles in English, samples of healthy adults aged 65 and older, and randomized controlled trials of behavioral interventions with reported cognitive outcomes. The 2017 search yielded 75 eligible articles comprising cognitive training, exercise training, combination interventions, cognitively-stimulating activities, and action video games. In general, process- (n = 26) and strategy-based (n = 16) cognitive training improved the trained domains but had weak transfer to non-trained domains. Aerobic training (n = 13) most consistently improved executive function, and strength/resistance (n = 8) and aerobic/resistance combination training (n = 6) most consistently improved cognitive inhibition and visual working memory. Combination interventions (n = 15 nonfactorial, n = 3 factorial) showed promise in improving verbal delayed recall and executive function. Few studies examined cognitively-stimulating activities or action video games, leaving inconclusive results about their effect on cognitive function. Few studies examined everyday function (n = 9), however, process- and strategy-based training demonstrated notable long-term transfer. Recommendations for future research and practice are highlighted.",
+      "journal": "Ageing research reviews",
+      "year": "2019",
+      "authors": [
+        "Sprague BN",
+        "Freed SA",
+        "Webb CE",
+        "Phillips CB",
+        "Hyun J",
+        "Ross LA"
+      ],
+      "doi": "10.1016/j.arr.2016.07.003",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "30092719",
+      "title": "Auditory and Cognitive Training for Cognition in Adults With Hearing Loss: A Systematic Review and Meta-Analysis.",
+      "abstract": "This systematic review and meta-analysis examined the efficacy of auditory training and cognitive training to improve cognitive function in adults with hearing loss. A literature search of academic databases (e.g., MEDLINE, Scopus) and gray literature (e.g., OpenGrey) identified relevant articles published up to January 25, 2018. Randomized controlled trials (RCTs) or repeated measures designs were included. Outcome effects were computed as Hedge's g and pooled using random-effects meta-analysis (PROSPERO: CRD42017076680). Nine studies, five auditory training, and four cognitive training met the inclusion criteria. Following auditory training, the pooled effect was small and statistically significant for both working memory ( g = 0.21; 95% CI [0.05, 0.36]) and overall cognition ( g = 0.19; 95% CI [0.07, 0.31]). Following cognitive training, the pooled effect for working memory was small and statistically significant ( g = 0.34; 95% CI [0.16, 0.53]), and the pooled effect for overall cognition was large and significant ( g = 1.03; 95% CI [0.41, 1.66]). However, this was dependent on the classification of training approach. Sensitivity analyses revealed no statistical difference between the effectiveness of auditory and cognitive training for improving cognition upon removal of a study that used a combined auditory-cognitive approach, which showed a very large effect. Overall certainty in the estimation of effect was \"low\" for auditory training and \"very low\" for cognitive training. High-quality RCTs are needed to determine which training stimuli will provide optimal conditions to improve cognition in adults with hearing loss.",
+      "journal": "Trends in hearing",
+      "year": "2018",
+      "authors": [
+        "Lawrence BJ",
+        "Jayakody DMP",
+        "Henshaw H",
+        "Ferguson MA",
+        "Eikelboom RH",
+        "Loftus AM",
+        "Friedland PL"
+      ],
+      "doi": "10.1177/2331216518792096",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "33132926",
+      "title": "Review of the Neural Processes of Working Memory Training: Controlling the Impulse to Throw the Baby Out With the Bathwater.",
+      "abstract": "BACKGROUND: Smartphone technology has enabled the creation of many working memory training (WMT) Apps, with those peer-reviewed described in a recent review. WMT claims to improve working memory, attention deficits, hyperactivity and fluid intelligence, in line with plasticity brain changes. Critics argue that WMT is unable to achieve \"far-transfer\"-the attainment of benefits to cognition from one taught context to another dissimilar context-associated with improved quality of life. However, brain changes after a course of WMT in frontoparietal and striatal circuits-that often occur prior to behavioral changes-may be a better indicator of far-transfer efficacy, especially to improve impulse control commonly dysregulated in those with addictive disorders, yet not commonly examined in WMT studies.\nMETHOD: In contrast to previous reviews, the aim here is to focus on the findings of brain imaging WMT training studies across various imaging modalities that use various paradigms, published via PubMed, Scopus, Medline, and Google Scholar.\nRESULTS: 35 brain imaging studies utilized fMRI, structural imaging (MRI, DTI), functional connectivity, EEG, transcranial direct current stimulation (tDCS), cerebral perfusion, and neurogenetic analyses with tasks based on visuospatial and auditory working memory, dual and standard n-back.\nDISCUSSION: Evidence suggests that repeated WMT reduces brain activation in frontoparietal and striatal networks reflective of increased neural circuitry efficiency via myelination and functional connectivity changes. Neural effects of WMT may persist months after training has ended, lead to non-trained task transfer, be strengthened by auxiliary methods such as tDCS and be related to COMT polymorphisms. WMT could be utilized as an effective, non-invasive intervention for working memory deficits to treat impulse and affective control problems in people with addictive disorders.",
+      "journal": "Frontiers in psychiatry",
+      "year": "2020",
+      "authors": [
+        "Brooks SJ",
+        "Mackenzie-Phelan R",
+        "Tully J",
+        "Schiöth HB"
+      ],
+      "doi": "10.1016/j.neuroimage.2016.04.072",
+      "publication_types": [
+        "Systematic Review",
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "28509625",
+      "title": "Direct-Current Stimulation Does Little to Improve the Outcome of Working Memory Training in Older Adults.",
+      "abstract": "The promise of transcranial direct-current stimulation (tDCS) as a modulator of cognition has appealed to researchers, media, and the general public. Researchers have suggested that tDCS may increase effects of cognitive training. In this study of 123 older adults, we examined the interactive effects of 20 sessions of anodal tDCS over the left prefrontal cortex (vs. sham tDCS) and simultaneous working memory training (vs. control training) on change in cognitive abilities. Stimulation did not modulate gains from pre- to posttest on latent factors of either trained or untrained tasks in a statistically significant manner. A supporting meta-analysis ( n = 266), including younger as well as older individuals, showed that, when combined with training, tDCS was not much more effective than sham tDCS at changing working memory performance ( g = 0.07, 95% confidence interval, or CI = [-0.21, 0.34]) and global cognition performance ( g = -0.01, 95% CI = [-0.29, 0.26]) assessed in the absence of stimulation. These results question the general usefulness of current tDCS protocols for enhancing the effects of cognitive training on cognitive ability.",
+      "journal": "Psychological science",
+      "year": "2017",
+      "authors": [
+        "Nilsson J",
+        "Lebedev AV",
+        "Rydström A",
+        "Lövdén M"
+      ],
+      "doi": "10.1016/j.brs.2014.02.003",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "29362878",
+      "title": "[Influence of computer-based cognitive training on mobility in healthy older adults : A systematic review].",
+      "abstract": "BACKGROUND: Mobility is important and often affected in older adults. Mobility is related to cognitive function, which is associated with age-related decline. Computer-based cognitive training (CCT) is increasingly used to treat such cognitive deficits. Whether CCT also has an effect on mobility is not yet clear.\nOBJECTIVE: The aim of this systematic review was to identify and evaluate available intervention studies investigating the effect of CCT on mobility-related outcome parameters in healthy older adults.\nMETHODS: Studies with CCT interventions with mobility outcome parameters (gait, balance, transfer) as primary outcomes and published up to June 2017 were categorized based on the criteria of the American Academy for Cerebral Palsy and Developmental Medicine (AACPDM) and then systematically evaluated.\nRESULTS: Out of 305 identified studies, 11 CCT studies met the inclusion criteria. The quality of these studies was generally high but definitions and effects of mobility outcome parameters were heterogeneous. The most promising mobility outcome parameters that may be influenced by CCT are step length under dual tasking conditions and gait initiation.\nCONCLUSION: The use of CCT may have positive effects on mobility parameters. Further studies focusing on this hypothesis as the primary outcome parameter are needed.",
+      "journal": "Zeitschrift fur Gerontologie und Geriatrie",
+      "year": "2018",
+      "authors": [
+        "Geritz J",
+        "Maetzler W",
+        "Schlenstedt C"
+      ],
+      "doi": "10.1007/s00391-018-1369-9",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "33173503",
+      "title": "A Systematic Review on Predictors of Working Memory Training Responsiveness in Healthy Older Adults: Methodological Challenges and Future Directions.",
+      "abstract": "Background: Research on predictors of working memory training responsiveness, which could help tailor cognitive interventions individually, is a timely topic in healthy aging. However, the findings are highly heterogeneous, reporting partly conflicting results following a broad spectrum of methodological approaches to answer the question \"who benefits most\" from working memory training. Objective: The present systematic review aimed to systematically investigate prognostic factors and models for working memory training responsiveness in healthy older adults. Method: Four online databases were searched up to October 2019 (MEDLINE Ovid, Web of Science, CENTRAL, and PsycINFO). The inclusion criteria for full texts were publication in a peer-reviewed journal in English/German, inclusion of healthy older individuals aged ≥55 years without any neurological and/or psychiatric diseases including cognitive impairment, and the investigation of prognostic factors and/or models for training responsiveness after targeted working memory training in terms of direct training effects, near-transfer effects to verbal and visuospatial working memory as well as far-transfer effects to other cognitive domains and behavioral variables. The study design was not limited to randomized controlled trials. Results: A total of 16 studies including n = 675 healthy older individuals with a mean age of 63.0-86.8 years were included in this review. Within these studies, five prognostic model approaches and 18 factor finding approaches were reported. Risk of bias was assessed using the Quality in Prognosis Studies checklist, indicating that important information, especially regarding the domains study attrition, study confounding, and statistical analysis and reporting, was lacking throughout many of the investigated studies. Age, education, intelligence, and baseline performance in working memory or other cognitive domains were frequently investigated predictors across studies. Conclusions: Given the methodological shortcomings of the included studies, no clear conclusions can be drawn, and emerging patterns of prognostic effects will have to survive sound methodological replication in future attempts to promote precision medicine approaches in the context of working memory training. Methodological considerations are discussed, and our findings are embedded to the cognitive aging literature, considering, for example, the cognitive reserve framework and the compensation vs. magnification account. The need for personalized cognitive prevention and intervention methods to counteract cognitive decline in the aging population is high and the potential enormous. Registration: PROSPERO, ID CRD42019142750.",
+      "journal": "Frontiers in aging neuroscience",
+      "year": "2020",
+      "authors": [
+        "Ophey A",
+        "Roheger M",
+        "Folkerts AK",
+        "Skoetz N",
+        "Kalbe E"
+      ],
+      "doi": "10.1037/a0032982",
+      "publication_types": [
+        "Systematic Review",
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "30652908",
+      "title": "A meta-analysis of the experimental evidence on the near- and far-transfer effects among children's executive function skills.",
+      "abstract": "In the present meta-analysis we examined the near- and far-transfer effects of training components of children's executive functions skills: working memory, inhibitory control, and cognitive flexibility. We found a significant near-transfer effect (g+ = 0.44, k = 43, p < .001) showing that the interventions in the primary studies were successful in training the targeted components. However, we found no convincing evidence of far-transfer (g+ = 0.11, k = 17, p = .11). That is, training a component did not have a significant effect on the untrained components. By showing the absence of benefits that generalize beyond the trained components, we question the practical relevance of training specific executive function skills in isolation. Furthermore, the present results might explain the absence of far-transfer effects of working memory training on academic skills (Melby-Lervag & Hulme, 2013; Sala & Gobet, 2017). (PsycINFO Database Record (c) 2019 APA, all rights reserved).",
+      "journal": "Psychological bulletin",
+      "year": "2019",
+      "authors": [
+        "Kassai R",
+        "Futo J",
+        "Demetrovics Z",
+        "Takacs ZK"
+      ],
+      "doi": "10.1037/bul0000180",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "39098578",
+      "title": "Attention Training After Moderate-to-Severe Traumatic Brain Injury in Adults: A Systematic Review.",
+      "abstract": "OBJECTIVE: To determine the extent and efficacy of attentional training as a form of neuropsychological rehabilitation to ameliorate attention deficits in adults with moderate-to-severe traumatic brain injury.\nDATA SOURCES: Articles published in Cumulative Index to Nursing and Allied Health Literature, Cochrane Library, PubMed, PsycINFO, Scopus, and Web of Science were searched between January 17, and February 27, 2021.\nSTUDY SELECTION: Two reviewers blindly assessed studies for eligibility according to the following criteria: any article evaluating the efficacy of any type of behavioral intervention that targeted attention (by means of cognitive rehabilitative, psychoeducational, or neuropsychological strategies, at either an individual or group level) in adults who had sustained a formally documented moderate-to-severe traumatic brain injury.\nDATA EXTRACTION: Methodological quality of each article was blindly assessed by 2 reviewers. Data were extracted from each study, including study type, sample size, sample characteristics, summary of intervention, measures used to assess attention, statistical outcomes and results, effect size, conclusion, and limitations.\nDATA SYNTHESIS: 7314 articles were retrieved from databases, 4325 articles remained after duplicate removal, and finally 21 articles met eligibility criteria and were included in this review. Articles represented varied methodological quality in group or single subject design. Irrespective of the heterogeneity regarding intervention types and attentional outcome measures used across the studies, overall findings suggest that attentional gains can be made in this sample, irrespective of time since injury, age, and injury severity. Further, a growing interest in technology-based interventions is frequently used and holds promise to bettering rehabilitation efforts. However, there is still limited evidence supporting the ecological validity of attentional training interventions (eg, the transfer of treatment effects to daily activities).\nCONCLUSIONS: This article plays a crucial role in informing ongoing rehabilitation practices, guiding clinicians with evidence-based strategies and shaping future research directions for more effective attentional training guidelines.",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "year": "2025",
+      "authors": [
+        "Soule AC",
+        "Fish TJ",
+        "Thomas KGF",
+        "Schrieff-Brown L"
+      ],
+      "doi": "10.1016/j.apmr.2024.07.010",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "31154013",
+      "title": "Cognitive and neural plasticity in old age: A systematic review of evidence from executive functions cognitive training.",
+      "abstract": "Cognitive training is a popular intervention aimed at attenuating age-related cognitive decline, however, the effects of this intervention on brain structure and function have not been thoroughly explored. Core executive functions (working memory, inhibition, cognitive flexibility) are dependent upon prefrontal brain regions-one of the most vulnerable areas of age-related decline. They are also implicated in numerous cognitive processes and higher-order functions. Training executive functions should therefore promote cognitive and neural enhancements in old age. This systematic review examined the effects of executive functions training on brain and cognition amongst healthy older adults across 20 studies. Behavioral performance consistently improved on trained cognitive tasks, though mixed findings were reported for untrained tasks. Training-related structural changes were reported, evidenced through increases in grey matter and cortical volume. Functional changes were not consistent, though a general pattern of increased subcortical and decreased frontal and parietal activation emerged across studies, indicating that training may potentially reduce reliance on compensatory neural mechanisms. Training executive functions appears to promote cognitive and neural plasticity in old age, though further research is required to develop a more comprehensive framework which connects and elucidates the mechanisms underlying cognitive training, cognitive transfer, and cognitive aging.",
+      "journal": "Ageing research reviews",
+      "year": "2019",
+      "authors": [
+        "Nguyen L",
+        "Murphy K",
+        "Andrews G"
+      ],
+      "doi": "10.1016/j.arr.2019.100912",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "34085876",
+      "title": "Efficacy of cogmed working memory training program in improving working memory in school-age children with and without neurological insults or disorders: A meta-analysis.",
+      "abstract": "This meta-analysis assessed the efficacy of the Cogmed Working Memory Training program in improving near-transfer measures (verbal and visuospatial working memory) and far-transfer measures (attention, executive function, and academic achievement) in school-age children with and without neurological insults or disorders. Relevant studies were searched in databases and clinical trial registries using the keyword Cogmed. Ten published studies and unpublished data from one study met the inclusion criteria. Hedges g was calculated for each outcome measure obtained at pre-intervention, post-intervention, and 3-6 month time points. Analysis compared outcome measures in the control versus experimental groups and examined the role of moderators on treatment effects (control group intervention, intervention environment). Data revealed significant medium-size effects of the Cogmed program in improving verbal and visuospatial working memory post-intervention and for verbal working memory only at the 3-6 month time point. However, the training did not generalize to the far-transfer measures. Analyses indicated that only the type of intervention provided for the control group moderated treatment effects on verbal and visual working memory. Meta-analytic findings suggest that the Cogmed program leads to short-term improvements and in some cases, long-term improvements in working memory in school-age children; however, these effects may not generalize to far-transfer measures.",
+      "journal": "Applied neuropsychology. Child",
+      "year": "2022",
+      "authors": [
+        "Bharadwaj SV",
+        "Yeatts P",
+        "Headley J"
+      ],
+      "doi": "10.1080/21622965.2021.1920943",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "34006364",
+      "title": "Does reasoning training improve fluid reasoning and academic achievement for children and adolescents? A systematic review.",
+      "abstract": "BACKGROUND: Studies of children and adolescents suggest that reasoning training may improve both reasoning and academic achievement, but evidence and systematic evaluation of this research is limited. Accordingly, this paper provides a systematic review of the literature on reasoning training in order to describe current methods and evaluate their efficacy.\nMETHOD: A systematic search identified eleven articles-published between 1996 and 2016-that reported findings from thirteen separate studies of reasoning training effects on fluid reasoning (Gf) and academic achievement in children and adolescents. Specific Gf outcomes examined were analogical, deductive, inductive, nonverbal, and/or relational reasoning ability. Specific academic achievement outcomes examined were math and reading achievement. This paper reviewed studies utilizing both computerized and non-computerized methods of Gf training.\nFINDINGS: Findings from the review show that reasoning training improves Gf (near transfer effects). Although less conclusive, when considered on balance, evidence suggests that reasoning training also improves academic achievement (far transfer effects).\nCONCLUSIONS: Research is needed to parameterize the effects of Gf training on academic achievement, and in particular to identify moderators of training efficacy on academic outcomes. Limitations and directions for future research are discussed.",
+      "journal": "Trends in neuroscience and education",
+      "year": "2021",
+      "authors": [
+        "Guerin JM",
+        "Wade SL",
+        "Mano QR"
+      ],
+      "doi": "10.1016/j.tine.2021.100153",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "27779428",
+      "title": "Neuropsychological stimulation of executive functions in children with typical development: A systematic review.",
+      "abstract": "This systematic review aimed to characterize empirical studies on neuropsychological interventions to stimulate executive functions in children with typical development. Searches were conducted according to the PRISMA method. Nineteen (19) studies on the analysis to evaluate the effectiveness of intervention programs in pre-school and school children were obtained. There was a predominance of studies that used computerized cognitive training, most of them involving the stimulation of working memory. Others used pen and paper forms, or hybrid tasks, and some programs used a school curriculum approach aiming to improve self-regulation. Results provide preliminary evidence on the effectiveness of such on the executive performance in children with typical development. Each executive component, as well as each type of intervention has its peculiarities. Computerized trainings and pen and paper tasks tend to improve the targeted executive functions, but transfer effects are still inconsistent. Regarding the effects of programs using school curriculum approach, they seem to be more generalizable, with functionality gains accomplishing mainly socio-emotional regulation. Multimodal approaches may be even more effective. Follow-up studies should be targeted in order to track the maintenance of direct and transfer effects regarding mainly cognitive and social development associated to school achievement.",
+      "journal": "Applied neuropsychology. Child",
+      "year": "2018",
+      "authors": [
+        "Cardoso CO",
+        "Dias N",
+        "Senger J",
+        "Colling APC",
+        "Seabra AG",
+        "Fonseca RP"
+      ],
+      "doi": "10.1080/21622965.2016.1241950",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "42609444",
+      "title": "Transcranial direct current stimulation combined with cognitive training for working memory in healthy adults: a systematic review and robust variance meta-analysis of trained and untrained outcomes.",
+      "abstract": "INTRODUCTION: Transcranial direct current stimulation (tDCS) has been proposed as a potential tool for enhancing the benefits of cognitive training, but its added value for working memory in healthy adults remains unclear. This systematic review and robust variance estimation meta-analysis examined whether active tDCS combined with cognitive training improves post-training working memory performance compared with sham tDCS combined with the same training, and whether the effect varies by outcome type, assessment time point, and training characteristics.\nMETHODS: PubMed, Scopus, and Web of Science were searched from database inception to January 2026. Eligible studies were randomized controlled trials involving healthy adults, comparing active tDCS plus structured cognitive training with sham tDCS plus otherwise identical training, and reporting at least one post-training working memory outcome. Multiple correlated effect sizes within studies were synthesized using robust variance estimation. Outcomes were classified as trained-task outcomes or untrained working-memory outcomes, and both immediate post-test and follow-up assessments were included.\nRESULTS: A total of 23 studies contributing 135 effect sizes were included. Active tDCS combined with cognitive training produced a small but statistically significant improvement in post-training working memory performance, Hedges' g = 0.191, 95% CI [0.062, 0.320], p = 0.006. Effects were significant for trained-task outcomes, whereas effects on untrained working-memory outcomes were smaller and not statistically significant; however, the direct difference between the two outcome categories was not significant. Immediate post-test effects were significant, whereas follow-up effects remained positive and similar in magnitude but lay at the conventional alpha threshold, with no significant difference between time points. Stimulation timing, age group, and training type did not significantly moderate the effect. Sensitivity analyses confirmed the stability of the overall estimate, and no clear evidence of small-study effects was detected.\nDISCUSSION: These findings suggest that tDCS may provide a small adjunctive benefit when combined with cognitive training in healthy adults, with the most consistent benefits observed for trained-task performance and more limited evidence for transfer to untrained working-memory outcomes.",
+      "journal": "Frontiers in human neuroscience",
+      "year": "2026",
+      "authors": [
+        "Wang HQ",
+        "Jiang Y",
+        "Zhu LL",
+        "Fan M",
+        "Zhao YQ",
+        "Wang DM"
+      ],
+      "doi": "10.1016/j.cct.2017.11.017",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "32565174",
+      "title": "Is cognitive training an effective tool for improving cognitive function and real-life behaviour in healthy children and adolescents? A systematic review.",
+      "abstract": "Computerised cognitive training (CCT) has been applied to improve cognitive function in pathological conditions and in healthy populations. Studies suggest that CCT produces near-transfer effects to cognitive functions, with less evidence for far-transfer. Newer applications of CTT in adults seem to produce certain far-transfer effects by influencing eating behaviour and weight loss. However, this is more unexplored in children and adolescents. We conducted a systematic review of 16 studies with randomised controlled design to assess the impact of CCT on cognitive functioning and real-life outcomes, including eating behaviour, in children and adolescents with typical development (PROSPERO registration number: CRD42019123889). Results show near-transfer effects to working memory, with inconsistent results regarding far-transfer effects to other cognitive functions and real-life measures. Long-term effects show the same trend. Far-transfer effects occurred after cue-related inhibitory control and attentional training, although effects seem not to last. CCT may be a potential weight-loss treatment option but more research is needed to determine the specific characteristics to enhance treatment outcomes.",
+      "journal": "Neuroscience and biobehavioral reviews",
+      "year": "2020",
+      "authors": [
+        "Luis-Ruiz S",
+        "Caldú X",
+        "Sánchez-Castañeda C",
+        "Pueyo R",
+        "Garolera M",
+        "Jurado MÁ"
+      ],
+      "doi": "10.1016/j.neubiorev.2020.06.019",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "40526639",
+      "title": "Exploring the potential of artificial intelligence in individualized cognitive training: A systematic review.",
+      "abstract": "To tackle the challenge of responders heterogeneity, Cognitive Training (CT) research currently leverages AI Techniques for providing individualized curriculum rather than one-size-fits-all designs of curriculum. Our systematic review explored these new generations of adaptive methods in computerized CT and analyzed their outcomes in terms of learning mechanics (intra-training performance) and effectiveness (near, far and everyday life transfer effects of CT). A search up to June 2023 with multiple databases selected 19 computerized CT studies using AI techniques for individualized training. After outlining the AI-based individualization approach, this work analyzed CT setting (content, dose, etc.), targeted population, intra-training performance tracking, and pre-post-CT effects. Half of selected studies employed a macro-adaptive approach mostly for multiple-cognitive domain training while the other half used a micro-adaptive approach with various techniques, especially for single-cognitive domain training. Two studies emphasized the favorable influence on CT effectiveness, while five underscored its capacity to enhance the training experience by boosting motivation, engagement, and offering diverse learning pathways. Methodological differences across studies and weaknesses in their design (no control group, small sample, etc.) were observed. Despite promising results in this new research avenue, more research is needed to fully understand and empirically support individualized techniques in cognitive training.",
+      "journal": "PloS one",
+      "year": "2025",
+      "authors": [
+        "Adolphe M",
+        "Pech M",
+        "Sawayama M",
+        "Maurel D",
+        "Delmas A",
+        "Oudeyer PY",
+        "Sauzeon H"
+      ],
+      "doi": "10.1007/s11065-018-9374-8",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "41772608",
+      "title": "Cognitive training in neurological disorders: meta-analytic evidence for behavioral gains and neural correlates.",
+      "abstract": "BACKGROUND: Cognitive decline in neurological disorders substantially impairs daily functioning and quality of life, underscoring the need for effective non-pharmacological interventions. We aimed to quantify the behavioral benefits of cognitive training, characterize convergent patterns of task-related brain activation changes, and examine moderators of the neural responses underlying training effects. METHODS: We conducted a meta-analysis of 21 task-based neuroimaging studies. Behavioral outcomes were synthesized using multivariate meta-analysis, while neural changes were examined with seed-based d mapping (SDM) to identify spatially consistent activation differences between training and control groups. Moderator analyses evaluated training parameters, study designs, and participant characteristics, and brain–behavior associations were assessed to link regional activation changes with cognitive improvements. RESULTS: Cognitive training produced a significant, moderate improvement in cognitive task performance (Hedges’ g = 0.451, 95% CI 0.207–0.696; p < .001). Neuroimaging meta-analysis showed increased task-evoked activation after training in the bilateral precuneus and the left precentral gyrus (L. PreCG) relative to controls. Only precuneus activation increases were associated with behavioral gains. Moderator analyses indicated reduced precuneus activation but increased L. PreCG activation during transfer relative to trained tasks, and reduced L. PreCG activation for adaptive versus fixed-difficulty training. Passive controls also showed stronger L. PreCG activation changes than active controls, whereas participant characteristics and training dose showed no significant effects. CONCLUSIONS: Cognitive training improved cognitive task performance and was accompanied by a convergent activation signature centered on the bilateral precuneus and the L. PreCG in neurological disorders. Precuneus engagement tracked cognitive gains, highlighting it as a candidate neural marker of training-related plasticity in this population.",
+      "journal": "Behavioral and brain functions : BBF",
+      "year": "2026",
+      "authors": [
+        "Li G",
+        "Liu Y",
+        "Liu C",
+        "Zhang Y"
+      ],
+      "doi": "10.1177/1352458510377333",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "32010026",
+      "title": "Effectiveness of Cognitive Training for School-Aged Children and Adolescents With Attention Deficit/Hyperactivity Disorder: A Systematic Review.",
+      "abstract": "Problems with executive functions (EF) are hallmark characteristics of Attention Deficit/Hyperactivity Disorder (ADHD). Therefore, this review analyzed the efficacy of cognitive training for EF in reducing ADHD symptomatology and improving educational, interpersonal, and occupational outcomes in children and adolescents with this disorder. A systematic search, using a PICO (population/participant, intervention/indicator, comparator/control, outcome) framework was carried out. From 2008 to 2018, resorting to EBSCOhost, the following databases were searched: Academic Search Complete, ERIC, MEDLINE with Full Text, PsycARTICLES, PsycINFO, and Psychology and Behavioral Sciences Collection. Twenty-two studies were included in this review. Of the 18 studies that reported performance-based measures of EF, 13 found improvements and five did not. Overall, 17 studies showed positive transfer effects on ADHD symptomatology, EF, academic improvement, reduced off-task behavior, and/or enhanced social skills. Of the nine studies that performed follow-up sessions, seven concluded that the treatment effects were maintained over time. In sum, results showed that cognitive training can be an effective intervention for children and adolescents with ADHD and might be a complementary treatment option for this disorder.",
+      "journal": "Frontiers in psychology",
+      "year": "2019",
+      "authors": [
+        "Veloso A",
+        "Vicente SG",
+        "Filipe MG"
+      ],
+      "doi": "10.1007/s10578-010-0212-3",
+      "publication_types": [
+        "Systematic Review",
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "32011155",
+      "title": "Differential effects of cognitive training modules in healthy aging and mild cognitive impairment: A comprehensive meta-analysis of randomized controlled trials.",
+      "abstract": "This meta-analysis was designed to compare the effectiveness of 2 cognitive training modules, single-component training, which targets 1 specific cognitive ability, versus multicomponent training, which trains multiple cognitive abilities, on both trained abilities (near transfer) and untrained abilities (far transfer) in older adults. The meta-analysis also assessed whether individual differences in mental status interacted with the extent of transfer. Eligible randomized controlled trials (215 training studies) examined the immediate effects of cognitive training in either healthy aging (HA) or mild cognitive impairment (MCI). Results yielded an overall net-gain effect size (g) for the cognitive training of 0.28 (p < .001). These effects were similar across mental status and training modules, and were significant for both near (g = 0.37) and far (g = 0.22) transfer. Although all training modules yielded significant near transfer, only a few yielded significant far transfer. Single-component training of executive functions was most effective on near and far transfer, with processing speed training improving everyday functioning. All modules of multicomponent training (specific and nonspecific) yielded significant near and far transfer, including everyday functioning. Training effects on cognition were moderated by educational attainment and number of cognitive outcomes, but only in HA. These findings suggest that, in older adults, all modules of multicomponent training are more effective in engendering near and far transfer, including everyday functioning, when compared with single-component training modules. (PsycINFO Database Record (c) 2020 APA, all rights reserved).",
+      "journal": "Psychology and aging",
+      "year": "2020",
+      "authors": [
+        "Basak C",
+        "Qin S",
+        "O'Connell MA"
+      ],
+      "doi": "10.1037/a0032982",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "29679658",
+      "title": "Effective multicomponent interventions in comparison to active control and no interventions on physical capacity, cognitive function and instrumental activities of daily living in elderly people with and without mild impaired cognition - A systematic review and network meta-analysis.",
+      "abstract": "Multicomponent interventions (MCT) combine physical exercises and cognitive training and seem to be most effective in improving cognition in elderly people. However, literature is inconclusive if MCTs are superior to active comparison interventions, if delivery modes matter, and if people can transfer achieved effects to instrumental activities of daily living (IADL). This network meta-analysis aimed to a) identify MCTs that were effective on physical capacity and/or cognitive function and able to transfer these effects into IADL in elderly people with normal cognition (NC) and mild cognitive impairment (MCI); b) provide a rating on the best interventions per outcome; c) evaluate MCTs' mode of delivery. Eligible studies were randomized controlled trials comparing MCTs to active comparison or no treatments. Six studies in participants with MCI (n = 1088) and eleven studies in participants with NC (n = 670) were included. Five effective MCTs that were superior to physical exercises or cognitive training alone in improving physical capacity and/or cognitive function were detected, however none of these MCTs improved IADL. In people with NC MCTs performed separately or simultaneously were effective. However, in people with MCI MCTs performed separately were more effective. A framework needs to be developed to better understand the mediating effects of physical capacity and cognitive function on IADL and to design MCTs that effectively improve IADL.",
+      "journal": "Ageing research reviews",
+      "year": "2018",
+      "authors": [
+        "Bruderer-Hofstetter M",
+        "Rausch-Osthoff AK",
+        "Meichtry A",
+        "Münzer T",
+        "Niedermann K"
+      ],
+      "doi": "10.1016/j.arr.2018.04.002",
+      "publication_types": [
+        "Comparative Study",
+        "Journal Article",
+        "Network Meta-Analysis",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "25298292",
+      "title": "Making working memory work: a meta-analysis of executive-control and working memory training in older adults.",
+      "abstract": "This meta-analysis examined the effects of process-based executive-function and working memory training (49 articles, 61 independent samples) in older adults (> 60 years). The interventions resulted in significant effects on performance on the trained task and near-transfer tasks; significant results were obtained for the net pretest-to-posttest gain relative to active and passive control groups and for the net effect at posttest relative to active and passive control groups. Far-transfer effects were smaller than near-transfer effects but were significant for the net pretest-to-posttest gain relative to passive control groups and for the net gain at posttest relative to both active and passive control groups. We detected marginally significant differences in training-induced improvements between working memory and executive-function training, but no differences between the training-induced improvements observed in older adults and younger adults, between the benefits associated with adaptive and nonadaptive training, or between the effects in active and passive control conditions. Gains did not vary with total training time.",
+      "journal": "Psychological science",
+      "year": "2014",
+      "authors": [
+        "Karbach J",
+        "Verhaeghen P"
+      ],
+      "doi": "10.1177/0956797614548725",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, N.I.H., Extramural"
+      ]
+    },
+    {
+      "pmid": "29282641",
+      "title": "The Efficacy of Cognitive Intervention in Mild Cognitive Impairment (MCI): a Meta-Analysis of Outcomes on Neuropsychological Measures.",
+      "abstract": "Cognitive training in MCI may stimulate pre-existing neural reserves or recruit neural circuitry as \"compensatory scaffolding\" prompting neuroplastic reorganization to meet task demands (Reuter-Lorenz & Park, 2014). However, existing systematic reviews and meta-analytic studies exploring the benefits of cognitive interventions in MCI have been mixed. An updated examination regarding the efficacy of cognitive intervention in MCI is needed given improvements in adherence to MCI diagnostic criteria in subject selection, better defined interventions and strategies applied, increased use of neuropsychological measures pre- and post-intervention, as well as identification of moderator variables which may influence treatment. As such, this meta-analytic review was conducted to examine the efficacy of cognitive intervention in individuals diagnosed with mild cognitive impairment (MCI) versus MCI controls based on performance of neuropsychological outcome measures in randomized controlled trials (RCT). RCT studies published from January 1995 to June 2017 were obtained through source databases of MEDLINE-R, PubMed, Healthstar, Global Health, PSYCH-INFO, and Health and Psychological Instruments using search parameters for MCI diagnostic category (mild cognitive impairment, MCI, pre-Alzheimer's disease, early cognitive decline, early onset Alzheimer's disease, and preclinical Alzheimer's disease) and the intervention or training conducted (intervention, training, stimulation, rehabilitation, or treatment). Other inclusion and exclusion criteria included subject selection based on established MCI criteria, RCT design in an outpatient setting, MCI controls (active or passive), and outcomes based on objective neuropsychological measures. From the 1199 abstracts identified, 26 articles met inclusion criteria for the meta-analyses completed across eleven (11) countries; 92.31% of which have been published within the past 7 years. A series of meta-analyses were performed to examine the effects of cognitive intervention by cognitive domain, type of training, and intervention content (cognitive domain targeted). We found significant, moderate effects for multicomponent training (Hedges' g observed = 0.398; CI [0.164, 0.631]; Z = 3.337; p = 0.001; Q = 55.511; df = 15; p = 0.000; I 2  = 72.978%; τ 2  = 0.146) as well as multidomain-focused strategies (Hedges' g = 0.230; 95% CI [0.108, 0.352]; Z = 3.692; p  < 0.001; Q = 12.713; df = 12; p = 0.390; I 2  = 5.612; τ 2  = 0.003). The effects for other interventions explored by cognitive domain, training type, or intervention content were indeterminate due to concerns for heterogeneity, bias, and small cell sizes. In addition, subgroup and meta-regression analyses were conducted with the moderators of MCI category, mode of intervention, training type, intervention content, program duration (total hours), type of control group (active or passive), post-intervention follow-up assessment period, and control for repeat administration. We found significant overall effects for intervention content with memory focused interventions appearing to be more effective than multidomain approaches. There was no evidence of an influence on outcomes for the other covariates examined. Overall, these findings suggest individuals with MCI who received multicomponent training or interventions targeting multiple domains (including lifestyle changes) were apt to display an improvement on outcome measures of cognition post-intervention. As such, multicomponent and multidomain forms of intervention may prompt recruitment of alternate neural processes as well as support primary networks to meet task demands simultaneously. In addition, interventions with memory and multidomain forms of content appear to be particularly helpful, with memory-based approaches possibly being more effective than multidomain methods. Other factors, such as program duration, appear to have less of an influence on intervention outcomes. Given this, although the creation of new primary network paths appears strained in MCI, interventions with memory-based or multidomain forms of content may facilitate partial activation of compensatory scaffolding and neuroplastic reorganization. The positive benefit of memory-based strategies may also reflect transfer effects indicative of compensatory network activation and the multiple-pathways involved in memory processes. Limitations of this review are similar to other meta-analysis in MCI, including a modest number studies, small sample sizes, multiple forms of interventions and types of training applied (some overlapping), and, while greatly improved in our view, a large diversity of instruments used to measure outcome. This is apt to have contributed to the presence of heterogeneity and publication bias precluding a more definitive determination of the outcomes observed.",
+      "journal": "Neuropsychology review",
+      "year": "2017",
+      "authors": [
+        "Sherman DS",
+        "Mauser J",
+        "Nuno M",
+        "Sherzai D"
+      ],
+      "doi": "10.1038/srep07309",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "35399365",
+      "title": "The Effects of Combined Cognitive-Physical Interventions on Cognitive Functioning in Healthy Older Adults: A Systematic Review and Multilevel Meta-Analysis.",
+      "abstract": "Research has shown that both physical exercise and cognitive training help to maintain cognition in older adults. The question is whether combined training might produce additive effects when the group comparisons are equated in terms of exercise intensity and modality. We conducted a systematic electronic search in MEDLINE, PsycInfo, and Cochrane Central Register of Controlled Trials (CENTRAL) databases to identify relevant studies published up to February 2021. Seven hundred and eighty-three effect sizes were obtained from 50 published intervention studies, involving 6,164 healthy older adults, and submitted to a three-level meta-analysis. Results showed that combined training produced a small advantage in comparison to single cognitive training on executive functions, whereas both types of training achieved similar effects on attention, memory, language, processing speed, and global cognition. Combined training achieved higher training gains in balance than single physical training, indicating a transfer from cognitive training to balance. Performing cognitive and physical exercise simultaneously, and interactive training (e.g., exergames, square stepping) produced the largest gains in executive functions, speed, and global cognition, as well as the largest improvements in physical functions. Aerobic training was associated with higher effects in attention and fitness, whereas non-aerobic training produced larger effects in global cognition and balance. For all cognitive and physical outcomes, training resulted more advantageous when performed in a social context, even though individual training obtained similar results in balance as group training. Systematic Review Registration: www.crd.york.ac.uk/prospero/, identifier: CRD42020175632.",
+      "journal": "Frontiers in human neuroscience",
+      "year": "2022",
+      "authors": [
+        "Rieker JA",
+        "Reales JM",
+        "Muiños M",
+        "Ballesteros S"
+      ],
+      "doi": "10.3389/fnagi.2018.00422",
+      "publication_types": [
+        "Systematic Review",
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "24607830",
+      "title": "The impact of cognitive training and mental stimulation on cognitive and everyday functioning of healthy older adults: a systematic review and meta-analysis.",
+      "abstract": "This systematic review and meta-analysis investigates the impact of cognitive training and general mental stimulation on the cognitive and everyday functioning of older adults without known cognitive impairment. We examine transfer and maintenance of intervention effects, and the impact of training in group versus individual settings. Thirty-one randomised controlled trials were included, with 1806 participants in cognitive training groups and 386 in general mental stimulation groups. Meta-analysis results revealed that compared to active controls, cognitive training improved performance on measures of executive function (working memory, p=0.04; processing speed, p<0.0001) and composite measures of cognitive function (p=0.001). Compared to no intervention, cognitive training improved performance on measures of memory (face-name recall, p=0.02; immediate recall, p=0.02; paired associates, p=0.001) and subjective cognitive function (p=0.01). The impact of cognitive training on everyday functioning is largely under investigated. More research is required to determine if general mental stimulation can benefit cognitive and everyday functioning. Transfer and maintenance of intervention effects are most commonly reported when training is adaptive, with at least ten intervention sessions and a long-term follow-up. Memory and subjective cognitive performance might be improved by training in group versus individual settings.",
+      "journal": "Ageing research reviews",
+      "year": "2014",
+      "authors": [
+        "Kelly ME",
+        "Loughrey D",
+        "Lawlor BA",
+        "Robertson IH",
+        "Walsh C",
+        "Brennan S"
+      ],
+      "doi": "10.1016/j.arr.2014.02.004",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "35726054",
+      "title": "Near transfer to an unrelated N-back task mediates the effect of N-back working memory training on matrix reasoning.",
+      "abstract": "The extent to which working memory training improves performance on untrained tasks is highly controversial. Here we address this controversy by testing the hypothesis that far transfer may depend on near transfer using mediation models in three separate randomized controlled trials (RCTs). In all three RCTs, totalling 460 individuals, performance on untrained N-back tasks (near transfer) mediated transfer to Matrix Reasoning (representing far transfer) despite the lack of an intervention effect in RCTs 2 and 3. Untrained N-back performance also mediated transfer to a working memory composite, which showed a significant intervention effect (RCT 3). These findings support a model of N-back training in which transfer to untrained N-back tasks gates further transfer (at least in the case of working memory at the construct level) and Matrix Reasoning. This model can help adjudicate between the many studies and meta-analyses of working memory training that have provided mixed results but have not examined the relationship between near and far transfer on an individual-differences level.",
+      "journal": "Nature human behaviour",
+      "year": "2022",
+      "authors": [
+        "Pahor A",
+        "Seitz AR",
+        "Jaeggi SM"
+      ],
+      "doi": "10.3758/s13428-021-01765-5",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, N.I.H., Extramural"
+      ]
+    },
+    {
+      "pmid": "30057444",
+      "title": "Aging brain: the effect of combined cognitive and physical training on cognition as compared to cognitive and physical training alone - a systematic review.",
+      "abstract": "This review presents a critical examination of current knowledge of the impact of combined cognitive and physical training on cognition in healthy elderly subjects. The objectives are to evaluate the contribution of cognitive and physical training to the enhancement of cognition, and to determine the interest of combining these two training types in one intervention in terms of the benefits for cognition (direct and transfer), long-term maintenance, and transfer to daily living. To do so, a systematic electronic search was conducted in PubMed and Google Scholar. Exclusion criteria were animal and pathological aging studies. We focused on the shared and different behavioral impacts of these two types of training on cognition, as well as their functional and structural impact on the brain. The review indicates that both cognitive and physical training have an impact on cognition and on the brain. However, each type of training seems to preferentially enhance different cognitive functions and specifically impact both brain structure and function. Even though some results argue in favor of a complementarity between cognitive and physical training and the superiority of combined cognitive and physical training, the current state of knowledge does not permit any definitive conclusion. Thus, the present review indicates the need for additional investigations.",
+      "journal": "Clinical interventions in aging",
+      "year": "2018",
+      "authors": [
+        "Joubert C",
+        "Chainay H"
+      ],
+      "doi": "10.2147/CIA.S165399",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "28726168",
+      "title": "Cognitive Interventions for Cognitively Healthy, Mildly Impaired, and Mixed Samples of Older Adults: A Systematic Review and Meta-Analysis of Randomized-Controlled Trials.",
+      "abstract": "Cognitive interventions may improve cognition, delay age-related cognitive declines, and improve quality of life for older adults. The current meta-analysis was conducted to update and expand previous work on the efficacy of cognitive interventions for older adults and to examine the impact of key demographic and methodological variables. EBSCOhost and Embase online databases and reference lists were searched to identify relevant randomized-controlled trials (RCTs) of cognitive interventions for cognitively healthy or mildly impaired (MCI) older adults (60+ years). Interventions trained a single cognitive domain (e.g., memory) or were multi-domain training, and outcomes were assessed immediately post-intervention using standard neuropsychological tests. In total, 279 effects from 97 studies were pooled based on a random-effects model and expressed as Hedges' g (unbiased). Overall, results indicated that cognitive interventions produce a small, but significant, improvement in the cognitive functioning of older adults, relative to active and passive control groups (g = 0.298, p < .001, 95% CI = 0.248-0.347). These results were confirmed using multi-level analyses adjusting for nesting of effect sizes within studies (g = 0.362, p < .001, 95% CI = 0.275, 0.449). Age, education, and cognitive status (healthy vs. MCI) were not significant moderators. Working memory interventions proved most effective (g = 0.479), though memory, processing speed, and multi-domain interventions also significantly improved cognition. Effects were larger for directly trained outcomes but were also significant for non-trained outcomes (i.e., \"transfer effects\"). Implications for future research and clinical practice are discussed. This project was pre-registered with PROSPERO (#42016038386).",
+      "journal": "Neuropsychology review",
+      "year": "2017",
+      "authors": [
+        "Mewborn CM",
+        "Lindbergh CA",
+        "Stephen Miller L"
+      ],
+      "doi": "10.1007/s11065-017-9350-8",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "38390834",
+      "title": "Cognitive and behavioural rehabilitation interventions for survivors of childhood cancer with neurocognitive sequelae: A systematic review.",
+      "abstract": "There is considerable interest in cognitive and behavioural interventions to manage and improve neurocognitive (dys)functions in childhood cancer survivors and the literature is rapidly growing. This systematic review aimed to examine the literature of such interventions and their impact on executive functions (EFs) and attention. A search of relevant manuscripts was performed in PubMed, PsycINFO, and Web of Science in March 2023 in accordance with the PRISMA statement. After screening 3737 records, 17 unique studies published between 2002 and 2022 were charted and summarized. Participants (N = 718) were mostly children (M = 12.2 years), who were long-term survivors (M = 5.0 years post treatment) of brain or CNS tumours (48%). Identified interventions included computerized cognitive training, physical activity, and cognitive interventions with compensatory strategy training. The highest quality RCT studies included computerized training (i.e., Cogmed), neurofeedback, and exergaming. Evidence suggests that Cogmed may improve the performance of certain working memory tasks (near transfer) and possibly improve visual attention tasks for individuals with working memory impairments. However, the evidence did not support far transfer of effects to real life. No significant effects (near or far-transfer) were found following neurofeedback and exergaming interventions. Finally, a knowledge gap was identified for interventions directed at long-term survivors in adulthood.",
+      "journal": "Neuropsychological rehabilitation",
+      "year": "2025",
+      "authors": [
+        "Egset KS",
+        "Røkke ME",
+        "Reinfjell T",
+        "Stubberud JE",
+        "Weider S"
+      ],
+      "doi": "10.1080/09602011.2024.2314880",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "42846035",
+      "title": "Perceptual-cognitive training in basketball: effects on cognitive-motor performance, decision-making, and sport-specific transfer across youth players.",
+      "abstract": "OBJECTIVES: To systematically identify, critically appraise, and synthesize basketball-specific perceptual-cognitive training interventions in pediatrics and youth players and examine their effects on decision-making, attentional control, cognitive-motor performance, and transfer to sport-specific or on-court performance. The review specifically focused on youth-dominant basketball samples to characterize the effects of these interventions during a developmental period relevant to adolescent sport participation.\nMETHODS: Following PRISMA 2020, PubMed, Scopus, and Web of Science Core Collection were searched. Randomized and non-randomized intervention studies involving pediatrics and youth basketball players were eligible. Two authors independently screened records, extracted data, and assessed risk of bias. Findings were synthesized narratively.\nRESULTS: Fourteen eligible reports representing 11 unique participant cohorts were included from 973 records. Interventions primarily targeted attentional/gaze control, cue utilization/anticipation, decision-making/response selection, or executive-control/cognitive-motor integration. The most consistent favorable effects were observed for cognitive-motor interventions, with moderate-to-large interaction effects reported for several dribbling, sprint, change-of-direction, and selected response-control outcomes. Attentional/gaze-control evidence was limited to one small non-randomized cohort, findings for cue-utilization and anticipation training were mixed, and decision-making/response-selection evidence remained limited to two heterogeneous independent cohorts. Evidence was concentrated on trained-task and near-transfer outcomes; retention, representative game-based transfer, and competitive-match transfer remained uncommon and did not show consistent intervention-specific benefits.\nCONCLUSIONS: Basketball perceptual-cognitive training may improve proximal cognitive-motor and sport-performance outcomes in youth and pediatric players, particularly when executive-control demands are integrated with basketball-relevant motor tasks. However, the current evidence does not establish generalized improvements in basketball decision-making, sustained learning, or transfer to competitive performance. It also does not support conclusions regarding age- or maturation-specific responsiveness. Larger prospectively registered trials with independent samples, longer retention periods, and representative game- and match-based outcomes are needed.\nSYSTEMATIC REVIEW REGISTRATION: https://osf.io, Open Science Framework, unique identifier: 4zwvt.",
+      "journal": "Frontiers in pediatrics",
+      "year": "2026",
+      "authors": [
+        "Li M",
+        "Luo Y",
+        "Li J",
+        "Zeng Y"
+      ],
+      "doi": "10.1080/1612197X.2005.9671767",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "41260369",
+      "title": "The effects of computerized executive function training on the youth with ADHD: A systematic review and meta-analysis.",
+      "abstract": "Attention-deficit/hyperactivity disorder (ADHD) is one of the most prevalent neurodevelopmental disorders among the youth, imposing significant stress and economic burdens on so many countries and families. With the widespread adoption of computers, computerized executive function training (CEFT) has emerged as a potentially safer, more convenient, and accessible treatment of ADHD. However, the efficacy of CEFT on the youth with ADHD is debated. To evaluate the efficacy of CEFT for youth with ADHD, we examined its immediate, transfer (including near transfer to other cognitive functions and far transfer to ADHD symptoms, academic performance, and quality of life), and sustained effects. We systematically searched four databases: PubMed, Web of Science, CNKI (China National Knowledge Infrastructure), and Wanfang Data, with search terms encompassing ADHD, CEFT, and youth. After screening, thirty-six articles with 1798 participants have been identified. In the included studies, participant sample sizes varied from 17 to 104 individuals, with mean age spanning from 5 to 15.6 years. Study quality and risk of bias were assessed using the EPHPP tool, with 22 % of studies (n = 8) at low risk, 56 % (n = 21) at moderate risk, and 22 % (n = 8) at high risk. The meta-analysis results revealed significant immediate effects, near transfer effects, far transfer effects, and sustained effects. The meta-regression was conducted but no significant moderator was found. Our study indicates considerable efficacy of CEFT to youth with ADHD, and further exploration of potential moderators may be beneficial to refine its application.",
+      "journal": "Journal of affective disorders",
+      "year": "2026",
+      "authors": [
+        "Yan S",
+        "He X",
+        "Zhang Y",
+        "Yang J",
+        "Xu X",
+        "Liang X",
+        "Xu T",
+        "Dou W",
+        "Li B",
+        "Li Z"
+      ],
+      "doi": "10.1016/j.jad.2025.120730",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "40922283",
+      "title": "Research hotspots and emerging trends of artificial intelligence in the clinical management of mild cognitive impairment: A bibliometric and evidence-based analysis.",
+      "abstract": "OBJECTIVE: This study combines a bibliometric analysis with an umbrella review to delineate the research landscape, hotspots, and emerging trends in the application of artificial intelligence to the clinical diagnosis and treatment of mild cognitive impairment.\nMETHODS: We searched the Web of Science Core Collection for literature published between 2004 and 2024. Bibliometric analysis of the retrieved publications was performed using CiteSpace and VOSviewer to map publication trends, international collaboration networks, key contributors, and keyword co-occurrence. From this dataset, we systematically identified and selected eligible systematic reviews and meta-analyses to conduct an umbrella review, thereby synthesizing the highest-level evidence on this topic.\nRESULTS: A total of 3101 publications were included in the analysis, revealing a consistent upward trend in both publication volume and citation frequency. The United States emerged as the most productive country, while the Chinese Academy of Sciences was identified as the leading contributing institution. Ding-gang Shen ranked as the most frequently cited author, and Frontiers in Aging Neuroscience was the most prolific journal in this field. Twelve eligible systematic reviews and meta-analyses primarily focused on topics such as machine learning-based predictive models, neuroimaging and biomarker applications, and cognitive training or intervention strategies.\nCONCLUSION: The application of artificial intelligence in mild cognitive impairment is a rapidly growing field of research. Core research areas include the use of neural networks, electroencephalography, and language processing for diagnostics and monitoring. Emerging research frontiers, such as transfer learning and the investigation of tau pathology pathways, indicate promising directions for future studies.",
+      "journal": "Medicine",
+      "year": "2025",
+      "authors": [
+        "Zhang Z",
+        "Yan J",
+        "Zhang D",
+        "Jisun K",
+        "Yan D"
+      ],
+      "doi": "10.1097/MD.0000000000043713",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "42521897",
+      "title": "Effects of Integrated Sports Vision Training Batteries on Time- and Accuracy-Dependent Outcomes in Sport-Specific Tasks: A Systematic Review and Meta-Analysis.",
+      "abstract": "OBJECTIVES: This systematic review and meta-analysis sought to quantify the effects of integrated sports vision training (SVT) batteries on time- and accuracy-dependent outcomes assessed during sport-specific tasks and to examine methodological quality and sources of heterogeneity across studies.\nMETHODS: Following PRISMA 2020 guidelines, PubMed, Embase, Scopus and Web of Science were searched from inception to October 21, 2025. Eligible studies investigated multicomponent visual-cognitive or perceptual-motor training batteries in healthy athletes and reported sport-relevant performance outcomes. Random-effects meta-analyses were conducted separately for time-dependent and accuracy-dependent measures using standardised mean differences (SMDs). Methodological quality was assessed using a modified Downs and Black checklist.\nRESULTS: Seventeen studies were included in the systematic review, with 14 contributing to the meta-analysis. Integrated SVT batteries produced large and statistically significant improvements in response time (SMD = -2.67, 95% CI [-3.82, -1.52]) and response accuracy (SMD = -1.18, 95% CI [-1.85, -0.51]) compared with control conditions. Substantial heterogeneity was observed, particularly for time-dependent outcomes (I² = 92%). However, sensitivity analyses confirmed the robustness of the pooled effects, with consistent direction and statistical significance across models.\nCONCLUSIONS: Integrated SVT batteries improve time- and accuracy-dependent outcomes during sport-specific tasks, suggesting potential transfer to sport performance. These findings extend prior work on isolated visual or perceptual-cognitive training by demonstrating that multicomponent, ecologically valid interventions are more likely to promote far transfer to sport performance. Future research should focus on optimising training design, examining long-term retention and identifying moderators of training responsiveness to inform evidence-based practice further.",
+      "journal": "Ophthalmic & physiological optics : the journal of the British College of Ophthalmic Opticians (Optometrists)",
+      "year": "2026",
+      "authors": [
+        "Vera J",
+        "Redondo B",
+        "García-Ramos A",
+        "Cantó-Cerdán M"
+      ],
+      "doi": "10.1016/j.tics.2011.08.002",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "42740001",
+      "title": "Virtual Reality Sensing Technologies in Student Soccer Training: A Systematic Review of Tracking Systems and Perceptual-Cognitive, Physical, Tactical, and Educational Outcomes.",
+      "abstract": "Soccer requires rapid tactical decision-making, perceptual-cognitive processing, and coordinated physical execution, making it a relevant application domain for virtual reality (VR). VR systems integrate head-mounted displays, inertial measurement units, eye-tracking sensors, and electroencephalographic interfaces to support training, assessment, rehabilitation, and engagement. However, evidence remains fragmented across populations, study designs, sensing configurations, and research purposes, limiting conclusions about effectiveness and real-world application. Following PRISMA 2020, this systematic review synthesized 20 empirical studies published between January 2020 and 16 August 2026 involving school, academy, collegiate, and selected indirect adult soccer populations. Studies were classified by sensor modality, tracking configuration, evidence purpose, and outcome domain. Controlled intervention studies reported possible short-term improvements in selected sensorimotor, tactical, perceptual-cognitive, technical, and motivational outcomes. In contrast, cross-sectional and profiling studies showed that some VR tasks distinguished players by expertise, age, or competitive level; these findings support assessment or discriminative validity but do not demonstrate that VR training improves performance. Rehabilitation and injury-related evidence was limited and partly derived from adult or clinical populations, whereas engagement studies suggested potential benefits for motivation, attention, and participation. Six-degrees-of-freedom HMDs, 360° projection systems, eye tracking, and EEG generated different types of evidence, but no study directly compared hardware configurations within the same sample. The main contribution of this review is an integrated evidence-purpose and sensor-based synthesis that distinguishes training effectiveness from assessment validity across student-soccer applications. Overall, evidence remains promising but preliminary because of small and mixed populations, methodological heterogeneity, incomplete technical reporting, possible publication and language bias, short follow-up, and limited transfer to full-match performance. Standardized sensor reporting, controlled interventions, and longitudinal transfer assessments are required. Protocol registration: OSF.",
+      "journal": "Sensors (Basel, Switzerland)",
+      "year": "2026",
+      "authors": [
+        "Park J",
+        "Ghazanfar Z",
+        "Ali SG",
+        "Jeon SW",
+        "Jung Y"
+      ],
+      "doi": "10.1007/s10055-021-00563-w",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "cct": {
+    "count": 2951,
+    "retrieved": 300,
+    "file": "pubmed_cct.json"
+  },
+  "neurofeedback": {
+    "count": 639,
+    "retrieved": 300,
+    "file": "pubmed_neurofeedback.json"
+  },
+  "ave": {
+    "count": 102,
+    "retrieved": 102,
+    "file": "pubmed_ave.json"
+  },
+  "multimodal": {
+    "count": 256,
+    "retrieved": 255,
+    "file": "pubmed_multimodal.json"
+  },
+  "adhd": {
+    "count": 217,
+    "retrieved": 217,
+    "file": "pubmed_adhd.json"
+  },
+  "older": {
+    "count": 1092,
+    "retrieved": 300,
+    "file": "pubmed_older.json"
+  },
+  "safety": {
+    "count": 817,
+    "retrieved": 298,
+    "file": "pubmed_safety.json"
+  },
+  "engagement": {
+    "count": 258,
+    "retrieved": 258,
+    "file": "pubmed_engagement.json"
+  },
+  "transfer": {
+    "count": 62,
+    "retrieved": 62,
+    "file": "pubmed_transfer.json"
+  },
+  "clinical": {
+    "count": 1196,
+    "retrieved": 300,
+    "file": "pubmed_clinical.json"
+  }
+}

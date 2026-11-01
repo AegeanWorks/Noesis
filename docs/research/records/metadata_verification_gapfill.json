@@ -1,0 +1,67 @@
+{
+  "pmids": [
+    {
+      "pmid": "18056233",
+      "verified": false,
+      "score": 0.803,
+      "doi": null,
+      "title": "A meta-analysis of cognitive remediation in schizophrenia."
+    },
+    {
+      "pmid": "40275307",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1186/s12984-025-01634-8",
+      "title": "Comparative effectiveness of electroencephalogram-neurofeedback training of 3-45 frequency band on memory in healthy population: a network meta-analysis with systematic literature search."
+    },
+    {
+      "pmid": "42358407",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fpsyt.2026.1747368",
+      "title": "Effectiveness of different digital interventions on symptoms for children and adolescents with attention-deficit/hyperactivity disorder: a network meta-analysis."
+    },
+    {
+      "pmid": "41380526",
+      "verified": false,
+      "score": 0.756,
+      "doi": null,
+      "title": "Effects of non-pharmacological interventions in patients with cancer-related cognitive impairment: A meta-analysis."
+    },
+    {
+      "pmid": "37270875",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.ajp.2023.103635",
+      "title": "A systematic review and network meta-analysis comparing various non-pharmacological treatments for older people with mild cognitive impairment."
+    },
+    {
+      "pmid": "42040754",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/frdem.2026.1768487",
+      "title": "Evaluating the cognitive impact of exergames on community-dwelling older adults beyond laboratory settings: a systematic review and meta-analysis."
+    },
+    {
+      "pmid": "37769394",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/j.ijnurstu.2023.104592",
+      "title": "Combined exercise and cognitive interventions for adults with mild cognitive impairment and dementia: A systematic review and network meta-analysis."
+    },
+    {
+      "pmid": "39533503",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1002/pbc.31429",
+      "title": "Impact of Non-Pharmacological Cognitive Interventions on Real-World Daily Function in Children With Cancer: A Systematic Review."
+    },
+    {
+      "pmid": "35238931",
+      "verified": true,
+      "score": 0.93,
+      "doi": "10.1001/jamanetworkopen.2022.0970",
+      "title": "Evaluation of Computerized Cognitive Training and Cognitive and Daily Function in Patients Living With HIV: A Meta-analysis."
+    }
+  ]
+}

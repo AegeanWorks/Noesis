@@ -55,6 +55,7 @@ CyberPulse's behavioral-psychology review is integrated as a bounded **Motivatio
 - **Variable bonuses:** 70% steady, 20% boost, 10% rare cosmetic momentum. Odds are disclosed and capped at 100 points per block.
 - **Streaks:** x1-x3 momentum multiplier based on consecutive correct trials.
 - **Near-best cue:** a real +10 bonus when a block comes within 5% of your personal best.
+- **Corrective near-miss:** an N-back false alarm that matches the N-1 or N+1 position gets an explanatory cue, not a reward.
 - **Optional push-your-luck:** bank bonus momentum or risk it on the next block (70% accuracy threshold). Core progress is always banked first.
 - **Target time:** 8 minutes standard, 5 minutes quick; no penalty for exceeding it.
 - **Adopted supports:** optional when/where practice plan, user-selected session length and difficulty, per-mechanic last/best accuracy, non-punitive weekly summary.
@@ -111,6 +112,7 @@ The app reports each block separately, avoids a composite "brain score", and sta
 noesis/
 ├── .aikit/                       <- project memory: record, ledger, decisions, codebase map
 ├── .gitignore                    <- transient and generated artifacts excluded
+├── assets/
 ├── android/                      <- Capacitor 7 Android project
 ├── docs/research/                <- protocol, search log, PRISMA flow, synthesis, design implications
 │   ├── analysis/                 <- machine-readable evidence table and screening data

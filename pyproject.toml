@@ -1,0 +1,9 @@
+[project]
+name = "noesis"
+version = "0.1.0"
+description = "Evidence-led multimodal brain-training platform."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.noesis]
+review-table = "docs/research/analysis/evidence_table.json"

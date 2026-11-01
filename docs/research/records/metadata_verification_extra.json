@@ -1,0 +1,50 @@
+{
+  "resolved": [
+    {
+      "pmid": "39661381",
+      "verified": false,
+      "score": 0.869,
+      "best_title": "Prevalence of attention-deficit hyperactivity disorder (ADHD): systematic review and meta-analysis"
+    },
+    {
+      "pmid": "39861961",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1111/jocn.17625",
+      "title_crossref": "The Effects of Exergaming on the Depressive Symptoms of People With Dementia: A Systematic Review and Meta‐Analysis",
+      "container": "Journal of Clinical Nursing",
+      "year": 2025
+    },
+    {
+      "pmid": "38523592",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1542/peds.2024-065787",
+      "title_crossref": "Treatments for ADHD in Children and Adolescents: A Systematic Review",
+      "container": "Pediatrics",
+      "year": 2024
+    }
+  ],
+  "preprint_flags": [
+    {
+      "pmid": "42525971",
+      "doi": "10.2196/preprints.85070",
+      "note": "Crossref best match is a preprint version, not a confirmed journal DOI"
+    },
+    {
+      "pmid": "36853526",
+      "doi": "10.31234/osf.io/42k7w",
+      "note": "Crossref best match is a preprint version, not a confirmed journal DOI"
+    },
+    {
+      "pmid": "40072792",
+      "doi": "10.21203/rs.3.rs-3644363/v1",
+      "note": "Crossref best match is a preprint version, not a confirmed journal DOI"
+    },
+    {
+      "pmid": "40270441",
+      "doi": "10.22541/au.172515656.69023437/v1",
+      "note": "Crossref best match is a preprint version, not a confirmed journal DOI"
+    }
+  ]
+}

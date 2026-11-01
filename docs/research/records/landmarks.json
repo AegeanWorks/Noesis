@@ -1,0 +1,323 @@
+{
+  "records": [
+    {
+      "pmid": "22612437",
+      "title": "Is working memory training effective? A meta-analytic review.",
+      "abstract": "It has been suggested that working memory training programs are effective both as treatments for attention-deficit/hyperactivity disorder (ADHD) and other cognitive disorders in children and as a tool to improve cognitive ability and scholastic attainment in typically developing children and adults. However, effects across studies appear to be variable, and a systematic meta-analytic review was undertaken. To be included in the review, studies had to be randomized controlled trials or quasi-experiments without randomization, have a treatment, and have either a treated group or an untreated control group. Twenty-three studies with 30 group comparisons met the criteria for inclusion. The studies included involved clinical samples and samples of typically developing children and adults. Meta-analyses indicated that the programs produced reliable short-term improvements in working memory skills. For verbal working memory, these near-transfer effects were not sustained at follow-up, whereas for visuospatial working memory, limited evidence suggested that such effects might be maintained. More importantly, there was no convincing evidence of the generalization of working memory training to other skills (nonverbal and verbal ability, inhibitory processes in attention, word decoding, and arithmetic). The authors conclude that memory training programs appear to produce short-term, specific training effects that do not generalize. Possible limitations of the review (including age differences in the samples and the variety of different clinical conditions included) are noted. However, current findings cast doubt on both the clinical relevance of working memory training programs and their utility as methods of enhancing cognitive functioning in typically developing children and healthy adults.",
+      "journal": "Developmental psychology",
+      "year": "2013",
+      "authors": [
+        "Melby-Lervåg M",
+        "Hulme C"
+      ],
+      "doi": "10.1037/a0028228",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Review"
+      ],
+      "requested": "Is working memory training effective",
+      "title_score": 0.758
+    },
+    {
+      "pmid": "27474138",
+      "title": "Working Memory Training Does Not Improve Performance on Measures of Intelligence or Other Measures of \"Far Transfer\": Evidence From a Meta-Analytic Review.",
+      "abstract": "It has been claimed that working memory training programs produce diverse beneficial effects. This article presents a meta-analysis of working memory training studies (with a pretest-posttest design and a control group) that have examined transfer to other measures (nonverbal ability, verbal ability, word decoding, reading comprehension, or arithmetic; 87 publications with 145 experimental comparisons). Immediately following training there were reliable improvements on measures of intermediate transfer (verbal and visuospatial working memory). For measures of far transfer (nonverbal ability, verbal ability, word decoding, reading comprehension, arithmetic) there was no convincing evidence of any reliable improvements when working memory training was compared with a treated control condition. Furthermore, mediation analyses indicated that across studies, the degree of improvement on working memory measures was not related to the magnitude of far-transfer effects found. Finally, analysis of publication bias shows that there is no evidential value from the studies of working memory training using treated controls. The authors conclude that working memory training programs appear to produce short-term, specific training effects that do not generalize to measures of \"real-world\" cognitive skills. These results seriously question the practical and theoretical importance of current computerized working memory programs as methods of training working memory skills.",
+      "journal": "Perspectives on psychological science : a journal of the Association for Psychological Science",
+      "year": "2016",
+      "authors": [
+        "Melby-Lervåg M",
+        "Redick TS",
+        "Hulme C"
+      ],
+      "doi": "10.1037/a0032982",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Review"
+      ],
+      "requested": "Working Memory Training Does Not Improve Performance on Measures of Intelligence",
+      "title_score": 0.693
+    },
+    {
+      "pmid": "27697851",
+      "title": "Do \"Brain-Training\" Programs Work?",
+      "abstract": "In 2014, two groups of scientists published open letters on the efficacy of brain-training interventions, or \"brain games,\" for improving cognition. The first letter, a consensus statement from an international group of more than 70 scientists, claimed that brain games do not provide a scientifically grounded way to improve cognitive functioning or to stave off cognitive decline. Several months later, an international group of 133 scientists and practitioners countered that the literature is replete with demonstrations of the benefits of brain training for a wide variety of cognitive and everyday activities. How could two teams of scientists examine the same literature and come to conflicting \"consensus\" views about the effectiveness of brain training?In part, the disagreement might result from different standards used when evaluating the evidence. To date, the field has lacked a comprehensive review of the brain-training literature, one that examines both the quantity and the quality of the evidence according to a well-defined set of best practices. This article provides such a review, focusing exclusively on the use of cognitive tasks or games as a means to enhance performance on other tasks. We specify and justify a set of best practices for such brain-training interventions and then use those standards to evaluate all of the published peer-reviewed intervention studies cited on the websites of leading brain-training companies listed on Cognitive Training Data (www.cognitivetrainingdata.org), the site hosting the open letter from brain-training proponents. These citations presumably represent the evidence that best supports the claims of effectiveness.Based on this examination, we find extensive evidence that brain-training interventions improve performance on the trained tasks, less evidence that such interventions improve performance on closely related tasks, and little evidence that training enhances performance on distantly related tasks or that training improves everyday cognitive performance. We also find that many of the published intervention studies had major shortcomings in design or analysis that preclude definitive conclusions about the efficacy of training, and that none of the cited studies conformed to all of the best practices we identify as essential to drawing clear conclusions about the benefits of brain training for everyday activities. We conclude with detailed recommendations for scientists, funding agencies, and policymakers that, if adopted, would lead to better evidence regarding the efficacy of brain-training interventions.",
+      "journal": "Psychological science in the public interest : a journal of the American Psychological Society",
+      "year": "2016",
+      "authors": [
+        "Simons DJ",
+        "Boot WR",
+        "Charness N",
+        "Gathercole SE",
+        "Chabris CF",
+        "Hambrick DZ",
+        "Stine-Morrow EA"
+      ],
+      "doi": "10.1177/1529100616661983",
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "requested": "Do Brain-Training Programs Work",
+      "title_score": 1.0
+    },
+    {
+      "pmid": "39661381",
+      "title": "Neurofeedback for Attention-Deficit/Hyperactivity Disorder: A Systematic Review and Meta-Analysis.",
+      "abstract": "IMPORTANCE: Neurofeedback has been proposed for the treatment of attention-deficit/hyperactivity disorder (ADHD) but the efficacy of this intervention remains unclear.\nOBJECTIVE: To conduct a meta-analysis of randomized clinical trials (RCTs) using probably blinded (ie, rated by individuals probably or certainly unaware of treatment allocation) or neuropsychological outcomes to test the efficacy of neurofeedback as a treatment for ADHD in terms of core symptom reduction and improved neuropsychological outcomes.\nDATA SOURCES: PubMed (MEDLINE), Ovid (PsycInfo, MEDLINE, Embase + Embase Classic), and Web of Science, as well as the reference lists of eligible records and relevant systematic reviews, were searched until July 25, 2023, with no language limits.\nSTUDY SELECTION: Parallel-arm RCTs investigating neurofeedback in participants of any age with a clinical ADHD or hyperkinetic syndrome diagnosis were included.\nDATA EXTRACTION AND SYNTHESIS: Standardized mean differences (SMDs) with Hedges g correction were pooled in random effects meta-analyses for all eligible outcomes.\nMAIN OUTCOMES AND MEASURES: The primary outcome was ADHD total symptom severity assessed at the first postintervention time point, focusing on reports by individuals judged probably or certainly unaware of treatment allocation (probably blinded). Secondary outcomes were inattention and/or hyperactivity-impulsivity symptoms and neuropsychological outcomes postintervention and at a longer-term follow-up (ie, after the last follow-up time point). RCTs were assessed with the Cochrane risk of bias tool version 2.0.\nRESULTS: A total of 38 RCTs (2472 participants aged 5 to 40 years) were included. Probably blinded reports of ADHD total symptoms showed no significant improvement with neurofeedback (k = 20; n = 1214; SMD, 0.04; 95% CI, -0.10 to 0.18). A small significant improvement was seen when analyses were restricted to RCTs using established standard protocols (k = 9; n = 681; SMD, 0.21; 95% CI, 0.02 to 0.40). Results remained similar with adults excluded or when analyses were restricted to RCTs where cortical learning or self-regulation was established. Of the 5 neuropsychological outcomes analyzed, a significant but small improvement was observed only for processing speed (k = 15; n = 909; SMD, 0.35; 95% CI, 0.01 to 0.69). Heterogeneity was generally low to moderate.\nCONCLUSIONS AND RELEVANCE: Overall, neurofeedback did not appear to meaningfully benefit individuals with ADHD, clinically or neuropsychologically, at the group level. Future studies seeking to identify individuals with ADHD who may benefit from neurofeedback could focus on using standard neurofeedback protocols, measuring processing speed, and leveraging advances in precision medicine, including neuroimaging technology.",
+      "journal": "JAMA psychiatry",
+      "year": "2025",
+      "authors": [
+        "Westwood SJ",
+        "Aggensteiner PM",
+        "Kaiser A",
+        "Nagy P",
+        "Donno F",
+        "Merkl D",
+        "Balia C",
+        "Goujon A",
+        "Bousquet E",
+        "Capodiferro AM",
+        "Derks L",
+        "Purper-Ouakil D",
+        "Carucci S",
+        "Holtmann M",
+        "Brandeis D",
+        "Cortese S",
+        "Sonuga-Barke EJS"
+      ],
+      "doi": "10.1038/s44220-024-00208-2",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "requested": "Neurofeedback for Attention-Deficit/Hyperactivity Disorder",
+      "title_score": 0.753
+    },
+    {
+      "pmid": "12424652",
+      "title": "Training of working memory in children with ADHD.",
+      "abstract": "Working memory (WM) capacity is the ability to retain and manipulate information during a short period of time. This ability underlies complex reasoning and has generally been regarded as a fixed trait of the individual. Children with attention deficit hyperactivity disorder (ADHD) represent one group of subjects with a WM deficit, attributed to an impairment of the frontal lobe. In the present study, we used a new training paradigm with intensive and adaptive training of WM tasks and evaluated the effect of training with a double blind, placebo controlled design. Training significantly enhanced performance on the trained WM tasks. More importantly, the training significantly improved performance on a nontrained visuo-spatial WM task and on Raven's Progressive Matrices, which is a nonverbal complex reasoning task. In addition, motor activity--as measured by the number of head movements during a computerized test--was significantly reduced in the treatment group. A second experiment showed that similar training-induced improvements on cognitive tasks are also possible in young adults without ADHD. These results demonstrate that performance on WM tasks can be significantly improved by training, and that the training effect also generalizes to nontrained tasks requiring WM. Training improved performance on tasks related to prefrontal functioning and had also a significant effect on motor activity in children with ADHD. The results thus suggest that WM training potentially could be of clinical use for ameliorating the symptoms in ADHD.",
+      "journal": "Journal of clinical and experimental neuropsychology",
+      "year": "2002",
+      "authors": [
+        "Klingberg T",
+        "Forssberg H",
+        "Westerberg H"
+      ],
+      "doi": "10.1076/jcen.24.6.781.8395",
+      "publication_types": [
+        "Clinical Trial",
+        "Comparative Study",
+        "Journal Article",
+        "Randomized Controlled Trial",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "requested": "Computerized training of working memory in children with ADHD",
+      "title_score": 0.881
+    },
+    {
+      "pmid": "25102926",
+      "title": "Improving fluid intelligence with training on working memory: a meta-analysis.",
+      "abstract": "Working memory (WM), the ability to store and manipulate information for short periods of time, is an important predictor of scholastic aptitude and a critical bottleneck underlying higher-order cognitive processes, including controlled attention and reasoning. Recent interventions targeting WM have suggested plasticity of the WM system by demonstrating improvements in both trained and untrained WM tasks. However, evidence on transfer of improved WM into more general cognitive domains such as fluid intelligence (Gf) has been more equivocal. Therefore, we conducted a meta-analysis focusing on one specific training program, n-back. We searched PubMed and Google Scholar for all n-back training studies with Gf outcome measures, a control group, and healthy participants between 18 and 50 years of age. In total, we included 20 studies in our analyses that met our criteria and found a small but significant positive effect of n-back training on improving Gf. Several factors that moderate this transfer are identified and discussed. We conclude that short-term cognitive training on the order of weeks can result in beneficial effects in important cognitive functions as measured by laboratory tests.",
+      "journal": "Psychonomic bulletin & review",
+      "year": "2015",
+      "authors": [
+        "Au J",
+        "Sheehan E",
+        "Tsai N",
+        "Duncan GJ",
+        "Buschkuehl M",
+        "Jaeggi SM"
+      ],
+      "doi": "10.3758/s13423-014-0699-x",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ],
+      "requested": "Improving fluid intelligence with training on working memory",
+      "title_score": 0.882
+    },
+    {
+      "pmid": "17179457",
+      "title": "Long-term effects of cognitive training on everyday functional outcomes in older adults.",
+      "abstract": "CONTEXT: Cognitive training has been shown to improve cognitive abilities in older adults but the effects of cognitive training on everyday function have not been demonstrated.\nOBJECTIVE: To determine the effects of cognitive training on daily function and durability of training on cognitive abilities.\nDESIGN, SETTING, AND PARTICIPANTS: Five-year follow-up of a randomized controlled single-blind trial with 4 treatment groups. A volunteer sample of 2832 persons (mean age, 73.6 years; 26% black), living independently in 6 US cities, was recruited from senior housing, community centers, and hospitals and clinics. The study was conducted between April 1998 and December 2004. Five-year follow-up was completed in 67% of the sample.\nINTERVENTIONS: Ten-session training for memory (verbal episodic memory), reasoning (inductive reasoning), or speed of processing (visual search and identification); 4-session booster training at 11 and 35 months after training in a random sample of those who completed training.\nMAIN OUTCOME MEASURES: Self-reported and performance-based measures of daily function and cognitive abilities.\nRESULTS: The reasoning group reported significantly less difficulty in the instrumental activities of daily living (IADL) than the control group (effect size, 0.29; 99% confidence interval [CI], 0.03-0.55). Neither speed of processing training (effect size, 0.26; 99% CI, -0.002 to 0.51) nor memory training (effect size, 0.20; 99% CI, -0.06 to 0.46) had a significant effect on IADL. The booster training for the speed of processing group, but not for the other 2 groups, showed a significant effect on the performance-based functional measure of everyday speed of processing (effect size, 0.30; 99% CI, 0.08-0.52). No booster effects were seen for any of the groups for everyday problem-solving or self-reported difficulty in IADL. Each intervention maintained effects on its specific targeted cognitive ability through 5 years (memory: effect size, 0.23 [99% CI, 0.11-0.35]; reasoning: effect size, 0.26 [99% CI, 0.17-0.35]; speed of processing: effect size, 0.76 [99% CI, 0.62-0.90]). Booster training produced additional improvement with the reasoning intervention for reasoning performance (effect size, 0.28; 99% CI, 0.12-0.43) and the speed of processing intervention for speed of processing performance (effect size, 0.85; 99% CI, 0.61-1.09).\nCONCLUSIONS: Reasoning training resulted in less functional decline in self-reported IADL. Compared with the control group, cognitive training resulted in improved cognitive abilities specific to the abilities trained that continued 5 years after the initiation of the intervention.\nTRIAL REGISTRATION: clinicaltrials.gov Identifier: NCT00298558.",
+      "journal": "JAMA",
+      "year": "2006",
+      "authors": [
+        "Willis SL",
+        "Tennstedt SL",
+        "Marsiske M",
+        "Ball K",
+        "Elias J",
+        "Koepke KM",
+        "Morris JN",
+        "Rebok GW",
+        "Unverzagt FW",
+        "Stoddard AM",
+        "Wright E"
+      ],
+      "doi": "10.1001/jama.296.23.2805",
+      "publication_types": [
+        "Journal Article",
+        "Multicenter Study",
+        "Randomized Controlled Trial",
+        "Research Support, N.I.H., Extramural"
+      ],
+      "requested": "Long-term effects of cognitive training on everyday functional outcomes",
+      "title_score": 0.899
+    },
+    {
+      "pmid": "26029120",
+      "title": "Auditory beat stimulation and its effects on cognition and mood States.",
+      "abstract": "Auditory beat stimulation may be a promising new tool for the manipulation of cognitive processes and the modulation of mood states. Here, we aim to review the literature examining the most current applications of auditory beat stimulation and its targets. We give a brief overview of research on auditory steady-state responses and its relationship to auditory beat stimulation (ABS). We have summarized relevant studies investigating the neurophysiological changes related to ABS and how they impact upon the design of appropriate stimulation protocols. Focusing on binaural-beat stimulation, we then discuss the role of monaural- and binaural-beat frequencies in cognition and mood states, in addition to their efficacy in targeting disease symptoms. We aim to highlight important points concerning stimulation parameters and try to address why there are often contradictory findings with regard to the outcomes of ABS.",
+      "journal": "Frontiers in psychiatry",
+      "year": "2015",
+      "authors": [
+        "Chaieb L",
+        "Wilpert EC",
+        "Reber TP",
+        "Fell J"
+      ],
+      "doi": "10.3109/03005367809078862",
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "requested": "Auditory beat stimulation and its effects on cognition and mood",
+      "title_score": 0.947
+    },
+    {
+      "pmid": "27238063",
+      "title": "Neurofeedback for Attention-Deficit/Hyperactivity Disorder: Meta-Analysis of Clinical and Neuropsychological Outcomes From Randomized Controlled Trials.",
+      "abstract": "OBJECTIVE: We performed meta-analyses of randomized controlled trials to examine the effects of neurofeedback on attention-deficit/hyperactivity disorder (ADHD) symptoms and neuropsychological deficits in children and adolescents with ADHD.\nMETHOD: We searched PubMed, Ovid, Web of Science, ERIC, and CINAHAL through August 30, 2015. Random-effects models were employed. Studies were evaluated with the Cochrane Risk of Bias tool.\nRESULTS: We included 13 trials (520 participants with ADHD). Significant effects were found on ADHD symptoms rated by assessors most proximal to the treatment setting, that is, the least blinded outcome measure (standardized mean difference [SMD]: ADHD total symptoms = 0.35, 95% CI = 0.11-0.59; inattention = 0.36, 95% CI = 0.09-0.63; hyperactivity/impulsivity = 0.26, 95% CI = 0.08-0.43). Effects were not significant when probably blinded ratings were the outcome or in trials with active/sham controls. Results were similar when only frequency band training trials, the most common neurofeedback approach, were analyzed separately. Effects on laboratory measures of inhibition (SMD = 0.30, 95% CI = -0.10 to 0.70) and attention (SMD = 0.13, 95% CI = -0.09 to 0.36) were not significant. Only 4 studies directly assessed whether learning occurred after neurofeedback training. The risk of bias was unclear for many Cochrane Risk of Bias domains in most studies.\nCONCLUSION: Evidence from well-controlled trials with probably blinded outcomes currently fails to support neurofeedback as an effective treatment for ADHD. Future efforts should focus on implementing standard neurofeedback protocols, ensuring learning, and optimizing clinically relevant transfer.",
+      "journal": "Journal of the American Academy of Child and Adolescent Psychiatry",
+      "year": "2016",
+      "doi": "10.1016/j.jaac.2016.03.007",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "23360949",
+      "title": "Nonpharmacological interventions for ADHD: systematic review and meta-analyses of randomized controlled trials of dietary and psychological treatments.",
+      "abstract": "OBJECTIVE: Nonpharmacological treatments are available for attention deficit hyperactivity disorder (ADHD), although their efficacy remains uncertain. The authors undertook meta-analyses of the efficacy of dietary (restricted elimination diets, artificial food color exclusions, and free fatty acid supplementation) and psychological (cognitive training, neurofeedback, and behavioral interventions) ADHD treatments.\nMETHOD: Using a common systematic search and a rigorous coding and data extraction strategy across domains, the authors searched electronic databases to identify published randomized controlled trials that involved individuals who were diagnosed with ADHD (or who met a validated cutoff on a recognized rating scale) and that included an ADHD outcome.\nRESULTS: Fifty-four of the 2,904 nonduplicate screened records were included in the analyses. Two different analyses were performed. When the outcome measure was based on ADHD assessments by raters closest to the therapeutic setting, all dietary (standardized mean differences=0.21-0.48) and psychological (standardized mean differences=0.40-0.64) treatments produced statistically significant effects. However, when the best probably blinded assessment was employed, effects remained significant for free fatty acid supplementation (standardized mean difference=0.16) and artificial food color exclusion (standardized mean difference=0.42) but were substantially attenuated to nonsignificant levels for other treatments.\nCONCLUSIONS: Free fatty acid supplementation produced small but significant reductions in ADHD symptoms even with probably blinded assessments, although the clinical significance of these effects remains to be determined. Artificial food color exclusion produced larger effects but often in individuals selected for food sensitivities. Better evidence for efficacy from blinded assessments is required for behavioral interventions, neurofeedback, cognitive training, and restricted elimination diets before they can be supported as treatments for core ADHD symptoms.",
+      "journal": "The American journal of psychiatry",
+      "year": "2013",
+      "doi": "10.1176/appi.ajp.2012.12070991",
+      "publication_types": [
+        "Comparative Study",
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "24417410",
+      "title": "Ten-year effects of the advanced cognitive training for independent and vital elderly cognitive training trial on cognition and everyday functioning in older adults.",
+      "abstract": "OBJECTIVES: To determine the effects of cognitive training on cognitive abilities and everyday function over 10 years.\nDESIGN: Ten-year follow-up of a randomized, controlled single-blind trial (Advanced Cognitive Training for Independent and Vital Elderly (ACTIVE)) with three intervention groups and a no-contact control group.\nSETTING: Six U.S. cities.\nPARTICIPANTS: A volunteer sample of 2,832 persons (mean baseline age 73.6; 26% African American) living independently.\nINTERVENTION: Ten training sessions for memory, reasoning, or speed of processing; four sessions of booster training 11 and 35 months after initial training.\nMEASUREMENTS: Objectively measured cognitive abilities and self-reported and performance-based measures of everyday function.\nRESULTS: Participants in each intervention group reported less difficulty with instrumental activities of daily living (IADLs) (memory: effect size = 0.48, 99% confidence interval (CI) = 0.12-0.84; reasoning: effect size = 0.38, 99% CI = 0.02-0.74; speed of processing: effect size = 0.36, 99% CI = 0.01-0.72). At a mean age of 82, approximately 60% of trained participants, versus 50% of controls (P < .05), were at or above their baseline level of self-reported IADL function at 10 years. The reasoning and speed-of-processing interventions maintained their effects on their targeted cognitive abilities at 10 years (reasoning: effect size = 0.23, 99% CI = 0.09-0.38; speed of processing: effect size = 0.66, 99% CI = 0.43-0.88). Memory training effects were no longer maintained for memory performance. Booster training produced additional and durable improvement for the reasoning intervention for reasoning performance (effect size = 0.21, 99% CI = 0.01-0.41) and the speed-of-processing intervention for speed-of-processing performance (effect size = 0.62, 99% CI = 0.31-0.93).\nCONCLUSION: Each Advanced Cognitive Training for Independent and Vital Elderly cognitive intervention resulted in less decline in self-reported IADL compared with the control group. Reasoning and speed, but not memory, training resulted in improved targeted cognitive abilities for 10 years.",
+      "journal": "Journal of the American Geriatrics Society",
+      "year": "2014",
+      "doi": "10.1111/jgs.12607",
+      "publication_types": [
+        "Journal Article",
+        "Randomized Controlled Trial",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "30073406",
+      "title": "Efficacy of binaural auditory beats in cognition, anxiety, and pain perception: a meta-analysis.",
+      "abstract": "Binaural auditory beats are a perceptual phenomenon that occurs when presenting separately to each ear two tones that slightly differ in their frequency. It has been suggested that binaural beats can influence cognition and mental states among others. The objective of this meta-analysis was to study the effect of binaural beats on memory, attention, anxiety, and analgesia. Twenty-two studies met our inclusion criteria for this meta-analysis. The results, based on 35 effect sizes, showed an overall medium, significant, consistent effect size (g = 0.45). Meta-regression results indicated that it does not seem to be necessary to mask binaural beats with white noise or pink noise in terms of effectiveness, obtaining similar effects with unmasked binaural beats. Moreover, the findings suggest that binaural-beat exposure before, and before and during the task produces superior results than exposure during the task. Time under exposure contributed significantly to the model indicating that longer periods are advisable to ensure maximum effectiveness. Our meta-analysis adds to the growing evidence that binaural-beat exposure is an effective way to affect cognition over and above reducing anxiety levels and the perception of pain without prior training, and that the direction and the magnitude of the effect depends upon the frequency used, time under exposure, and the moment in which the exposure takes place.",
+      "journal": "Psychological research",
+      "year": "2019",
+      "doi": "10.1007/s00426-018-1066-8",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis"
+      ]
+    },
+    {
+      "pmid": "18443283",
+      "title": "Improving fluid intelligence with training on working memory.",
+      "abstract": "Fluid intelligence (Gf) refers to the ability to reason and to solve new problems independently of previously acquired knowledge. Gf is critical for a wide variety of cognitive tasks, and it is considered one of the most important factors in learning. Moreover, Gf is closely related to professional and educational success, especially in complex and demanding environments. Although performance on tests of Gf can be improved through direct practice on the tests themselves, there is no evidence that training on any other regimen yields increased Gf in adults. Furthermore, there is a long history of research into cognitive training showing that, although performance on trained tasks can increase dramatically, transfer of this learning to other tasks remains poor. Here, we present evidence for transfer from training on a demanding working memory task to measures of Gf. This transfer results even though the trained task is entirely different from the intelligence test itself. Furthermore, we demonstrate that the extent of gain in intelligence critically depends on the amount of training: the more training, the more improvement in Gf. That is, the training effect is dosage-dependent. Thus, in contrast to many previous studies, we conclude that it is possible to improve Gf without practicing the testing tasks themselves, opening a wide range of applications.",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "year": "2008",
+      "doi": "10.1073/pnas.0801268105",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't",
+        "Research Support, U.S. Gov't, Non-P.H.S."
+      ]
+    },
+    {
+      "pmid": "15689731",
+      "title": "Computerized training of working memory in children with ADHD--a randomized, controlled trial.",
+      "abstract": "OBJECTIVE: Deficits in executive functioning, including working memory (WM) deficits, have been suggested to be important in attention-deficit/hyperactivity disorder (ADHD). During 2002 to 2003, the authors conducted a multicenter, randomized, controlled, double-blind trial to investigate the effect of improving WM by computerized, systematic practice of WM tasks.\nMETHOD: Included in the trial were 53 children with ADHD (9 girls; 15 of 53 inattentive subtype), aged 7 to 12 years, without stimulant medication. The compliance criterion (>20 days of training) was met by 44 subjects, 42 of whom were also evaluated at follow-up 3 months later. Participants were randomly assigned to use either the treatment computer program for training WM or a comparison program. The main outcome measure was the span-board task, a visuospatial WM task that was not part of the training program.\nRESULTS: For the span-board task, there was a significant treatment effect both post-intervention and at follow-up. In addition, there were significant effects for secondary outcome tasks measuring verbal WM, response inhibition, and complex reasoning. Parent ratings showed significant reduction in symptoms of inattention and hyperactivity/impulsivity, both post-intervention and at follow-up.\nCONCLUSIONS: This study shows that WM can be improved by training in children with ADHD. This training also improved response inhibition and reasoning and resulted in a reduction of the parent-rated inattentive symptoms of ADHD.",
+      "journal": "Journal of the American Academy of Child and Adolescent Psychiatry",
+      "year": "2005",
+      "doi": "10.1097/00004583-200502000-00010",
+      "publication_types": [
+        "Clinical Trial",
+        "Journal Article",
+        "Multicenter Study",
+        "Randomized Controlled Trial",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "25771249",
+      "title": "A 2 year multidomain intervention of diet, exercise, cognitive training, and vascular risk monitoring versus control to prevent cognitive decline in at-risk elderly people (FINGER): a randomised controlled trial.",
+      "abstract": "BACKGROUND: Modifiable vascular and lifestyle-related risk factors have been associated with dementia risk in observational studies. In the Finnish Geriatric Intervention Study to Prevent Cognitive Impairment and Disability (FINGER), a proof-of-concept randomised controlled trial, we aimed to assess a multidomain approach to prevent cognitive decline in at-risk elderly people from the general population.\nMETHODS: In a double-blind randomised controlled trial we enrolled individuals aged 60-77 years recruited from previous national surveys. Inclusion criteria were CAIDE (Cardiovascular Risk Factors, Aging and Dementia) Dementia Risk Score of at least 6 points and cognition at mean level or slightly lower than expected for age. We randomly assigned participants in a 1:1 ratio to a 2 year multidomain intervention (diet, exercise, cognitive training, vascular risk monitoring), or a control group (general health advice). Computer-generated allocation was done in blocks of four (two individuals randomly allocated to each group) at each site. Group allocation was not actively disclosed to participants and outcome assessors were masked to group allocation. The primary outcome was change in cognition as measured through comprehensive neuropsychological test battery (NTB) Z score. Analysis was by modified intention to treat (all participants with at least one post-baseline observation). This trial is registered at ClinicalTrials.gov, number NCT01041989.\nFINDINGS: Between Sept 7, 2009, and Nov 24, 2011, we screened 2654 individuals and randomly assigned 1260 to the intervention group (n=631) or control group (n=629). 591 (94%) participants in the intervention group and 599 (95%) in the control group had at least one post-baseline assessment and were included in the modified intention-to-treat analysis. Estimated mean change in NTB total Z score at 2 years was 0·20 (SE 0·02, SD 0·51) in the intervention group and 0·16 (0·01, 0·51) in the control group. Between-group difference in the change of NTB total score per year was 0·022 (95% CI 0·002-0·042, p=0·030). 153 (12%) individuals dropped out overall. Adverse events occurred in 46 (7%) participants in the intervention group compared with six (1%) participants in the control group; the most common adverse event was musculoskeletal pain (32 [5%] individuals for intervention vs no individuals for control).\nINTERPRETATION: Findings from this large, long-term, randomised controlled trial suggest that a multidomain intervention could improve or maintain cognitive functioning in at-risk elderly people from the general population.\nFUNDING: Academy of Finland, La Carita Foundation, Alzheimer Association, Alzheimer's Research and Prevention Foundation, Juho Vainio Foundation, Novo Nordisk Foundation, Finnish Social Insurance Institution, Ministry of Education and Culture, Salama bint Hamdan Al Nahyan Foundation, Axa Research Fund, EVO funding for University Hospitals of Kuopio, Oulu, and Turku and for Seinäjoki Central Hospital and Oulu City Hospital, Swedish Research Council, Swedish Research Council for Health, Working Life and Welfare, and af Jochnick Foundation.",
+      "journal": "Lancet (London, England)",
+      "year": "2015",
+      "doi": "10.1016/S0140-6736(15)60461-5",
+      "publication_types": [
+        "Journal Article",
+        "Multicenter Study",
+        "Randomized Controlled Trial",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    }
+  ],
+  "misses": [
+    {
+      "query": "Au Busch Jaeggi improving fluid intelligence training working memory meta-analysis",
+      "expected": "Improving fluid intelligence with training on working memory",
+      "reason": "no hits"
+    },
+    {
+      "query": "Sonuga-Barke nonpharmacological interventions ADHD dietary psychological treatments",
+      "expected": "Nonpharmacological interventions for ADHD",
+      "reason": "best title score 0.43: Nonpharmacological interventions for ADHD: systematic review and meta-analyses of randomized controlled trials of dietary and psychological treatments."
+    },
+    {
+      "query": "Rebok ten-year effects ACTIVE cognitive training trial cognition everyday functioning",
+      "expected": "Ten-Year Effects of the Advanced Cognitive Training",
+      "reason": "best title score 0.47: Ten-year effects of the advanced cognitive training for independent and vital elderly cognitive training trial on cognition and everyday functioning in older adults."
+    },
+    {
+      "query": "Ngandu multidomain intervention diet exercise cognitive training vascular risk FINGER",
+      "expected": "multidomain intervention of diet, exercise, cognitive training",
+      "reason": "best title score 0.46: Impact of frailty status on the effect of a multidomain lifestyle intervention on cognition."
+    },
+    {
+      "query": "Garcia-Argibay binaural beats cognition systematic review meta-analysis",
+      "expected": "Effects of binaural beats on cognition",
+      "reason": "no hits"
+    },
+    {
+      "query": "Sonuga-Barke neurofeedback ADHD nonpharmacological meta-analysis",
+      "expected": "Neurofeedback for ADHD",
+      "reason": "best title score 0.26: Neurofeedback for Attention-Deficit/Hyperactivity Disorder: Meta-Analysis of Clinical and Neuropsychological Outcomes From Randomized Controlled Trials."
+    }
+  ]
+}

@@ -1,0 +1,1248 @@
+{
+  "method": "OpenAlex filter=pmid:<PMID>, then filter=cites:<work id>",
+  "seeds": [
+    {
+      "pmid": "39661381",
+      "label": "Neurofeedback for ADHD (JAMA Psychiatry 2025)",
+      "seed": {
+        "id": "https://openalex.org/W2798976952",
+        "doi": "https://doi.org/10.1001/jamapsychiatry.2024.3702",
+        "title": "Neurofeedback for Attention-Deficit/Hyperactivity Disorder",
+        "year": 2024,
+        "type": "review",
+        "venue": "JAMA Psychiatry",
+        "cited_by": 44,
+        "retracted": false
+      },
+      "citing_count_returned": 44,
+      "citing": [
+        {
+          "id": "https://openalex.org/W2582344151",
+          "doi": "https://doi.org/10.1186/s13063-016-1769-3",
+          "title": "NIRS-based neurofeedback training in a virtual reality classroom for children with attention-deficit/hyperactivity disorder: study protocol for a randomized controlled trial",
+          "year": 2017,
+          "type": "article",
+          "venue": "Trials",
+          "cited_by": 90,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4414166784",
+          "doi": "https://doi.org/10.1002/wps.21374",
+          "title": "Attention‐deficit/hyperactivity disorder ( ADHD ) in adults: evidence base, uncertainties and controversies",
+          "year": 2025,
+          "type": "article",
+          "venue": "World Psychiatry",
+          "cited_by": 73,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W2523316632",
+          "doi": "https://doi.org/10.1007/s00787-016-0902-x",
+          "title": "An RCT into the effects of neurofeedback on neurocognitive functioning compared to stimulant medication and physical activity in children with ADHD",
+          "year": 2016,
+          "type": "article",
+          "venue": "European Child & Adolescent Psychiatry",
+          "cited_by": 71,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4416772026",
+          "doi": "https://doi.org/10.1136/bmj-2025-085875",
+          "title": "Benefits and harms of ADHD interventions: umbrella review and platform for shared decision making",
+          "year": 2025,
+          "type": "article",
+          "venue": "BMJ",
+          "cited_by": 33,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W2466937874",
+          "doi": "https://doi.org/10.1016/j.ejca.2016.04.020",
+          "title": "Neurofeedback ineffective in paediatric brain tumour survivors: Results of a double-blind randomised placebo-controlled trial",
+          "year": 2016,
+          "type": "article",
+          "venue": "European Journal of Cancer",
+          "cited_by": 26,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4411599656",
+          "doi": "https://doi.org/10.1109/access.2025.3582805",
+          "title": "Artificial Intelligence (AI) in Neurofeedback Therapy Using Electroencephalography (EEG), Heart Rate Variability (HRV), and Galvanic Skin Response (GSR): A Review",
+          "year": 2025,
+          "type": "article",
+          "venue": "IEEE Access",
+          "cited_by": 14,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4408168711",
+          "doi": "https://doi.org/10.1016/j.bspc.2025.107755",
+          "title": "Altered visual network modularity and communication in ADHD subtypes: Classification via source-localized EEG modules",
+          "year": 2025,
+          "type": "article",
+          "venue": "Biomedical Signal Processing and Control",
+          "cited_by": 10,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4408477425",
+          "doi": "https://doi.org/10.1016/j.psychres.2025.116447",
+          "title": "Enhancing effects of exercise and neurofeedback: A systematic review and meta-analysis of computer game-based interventions for pediatric ADHD",
+          "year": 2025,
+          "type": "review",
+          "venue": "Psychiatry Research",
+          "cited_by": 9,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4407261810",
+          "doi": "https://doi.org/10.3389/fnhum.2025.1478501",
+          "title": "Effects of a novel non-pharmacological intervention based on respiratory biofeedback, neurofeedback and median nerve stimulation to treat children with ADHD",
+          "year": 2025,
+          "type": "article",
+          "venue": "Frontiers in Human Neuroscience",
+          "cited_by": 6,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4408896501",
+          "doi": "https://doi.org/10.3389/fpsyt.2025.1551672",
+          "title": "Comparative analysis of Attention Deficit Hyperactivity Disorder in China and worldwide based on the Global Burden of Disease study",
+          "year": 2025,
+          "type": "article",
+          "venue": "Frontiers in Psychiatry",
+          "cited_by": 4,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W3193821727",
+          "doi": "https://doi.org/10.21608/msnj.2018.187777",
+          "title": "Relation between Attention Deficit Hyperactivity Disorder Among School Age Children and Parent's Stress and Sense of Competence",
+          "year": 2018,
+          "type": "article",
+          "venue": "Minia Scientific Nursing Journal",
+          "cited_by": 4,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7143293385",
+          "doi": "https://doi.org/10.3390/brainsci16040368",
+          "title": "Mapping the Digital Mind: A Meta-Analysis of EEG Biomarkers in Cognition, Emotion, and Mental Health",
+          "year": 2026,
+          "type": "review",
+          "venue": "Brain Sciences",
+          "cited_by": 3,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7163908583",
+          "doi": "https://doi.org/10.1136/bmj-2024-082507",
+          "title": "Advances in the management of ADHD in children and adolescents",
+          "year": 2026,
+          "type": "review",
+          "venue": "BMJ",
+          "cited_by": 2,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7155176237",
+          "doi": "https://doi.org/10.3389/fnhum.2026.1777024",
+          "title": "Brain-computer interface: an update for the clinicians",
+          "year": 2026,
+          "type": "review",
+          "venue": "Frontiers in Human Neuroscience",
+          "cited_by": 2,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7126241919",
+          "doi": "https://doi.org/10.1016/j.pharmthera.2026.108997",
+          "title": "Connecting the dots and finding the way forward: Pharmacological, neuromodulatory, and psychotherapeutic interventions for the complex treatment of adult ADHD",
+          "year": 2026,
+          "type": "review",
+          "venue": "Pharmacology & Therapeutics",
+          "cited_by": 2,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4417150228",
+          "doi": "https://doi.org/10.3389/fpsyt.2025.1743127",
+          "title": "Editorial: Executive functions in psychiatric science, clinical practice and beyond: A Transdiagnostic Window on Functional Heterogeneity",
+          "year": 2025,
+          "type": "editorial",
+          "venue": "Frontiers in Psychiatry",
+          "cited_by": 2,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7172287010",
+          "doi": "https://doi.org/10.3389/fnins.2026.1834391",
+          "title": "Quantitative electroencephalography as a next-generation tool in neurodiagnostics: significance, clinical applications, and practical interpretative frameworks",
+          "year": 2026,
+          "type": "review",
+          "venue": "Frontiers in Neuroscience",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7159837561",
+          "doi": "https://doi.org/10.3390/cells15090790",
+          "title": "Alterations in Cortical Oscillatory Dynamics Following SARS-CoV-2 Infection: QEEG Biomarkers of Vulnerability to Attention and Seizure-Related Symptoms",
+          "year": 2026,
+          "type": "review",
+          "venue": "Cells",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4413344566",
+          "doi": "https://doi.org/10.1101/2025.08.14.25333687",
+          "title": "Effectiveness of neurofeedback interventions in cerebral palsy: A systematic review",
+          "year": 2025,
+          "type": "preprint",
+          "venue": "medRxiv",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4413041208",
+          "doi": "https://doi.org/10.4103/jimr.jimr_37_25",
+          "title": "Advancing pediatric psychiatry: The convergence of precision therapy, neurofeedback, neurostimulation, and immersive technologies",
+          "year": 2025,
+          "type": "editorial",
+          "venue": "Journal of Integrative Medicine and Research",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7224342848",
+          "doi": "https://doi.org/10.3917/ennu.035.0082",
+          "title": "Promesses et réalités du neurofeedback : enjeux juridiques",
+          "year": 2026,
+          "type": "article",
+          "venue": "Enjeux numériques.",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7205002197",
+          "doi": "https://doi.org/10.1080/10447318.2026.2722469",
+          "title": "Acceptability of a Robot-Like Learning Companion for Neurofeedback Training: Perspectives from Health Professionals, Self-Reported Clinical Groups, and the General Public",
+          "year": 2026,
+          "type": "article",
+          "venue": "International Journal of Human-Computer Interaction",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7203982631",
+          "doi": "https://doi.org/10.1016/j.psc.2026.07.010",
+          "title": "Effects of Biofeedback in Children and Adolescents",
+          "year": 2026,
+          "type": "article",
+          "venue": "Psychiatric Clinics of North America",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7171566538",
+          "doi": "https://doi.org/10.1111/jcpp.70205",
+          "title": "Emotional problems and dysregulation in children/youth with ADHD : predictive and moderating effects in a randomized controlled trial of methylphenidate and neurofeedback",
+          "year": 2026,
+          "type": "article",
+          "venue": "Journal of Child Psychology and Psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7171032797",
+          "doi": "https://doi.org/10.21203/rs.3.rs-10411233/v1",
+          "title": "Treatment Gaps in Paediatric ADHD Pharmacotherapy: A 10-Year Nationwide Cohort Study from Hungary",
+          "year": 2026,
+          "type": "preprint",
+          "venue": "Research Square",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7170970838",
+          "doi": "https://doi.org/10.1007/s10578-026-02067-7",
+          "title": "A Framework for Predicting Neurofeedback Treatment Response in ADHD Using EEG Functional Connectivity and Genetic Algorithm-Driven Channel Selection",
+          "year": 2026,
+          "type": "article",
+          "venue": "Child Psychiatry & Human Development",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7165537768",
+          "doi": "https://doi.org/10.1111/jcpp.70188",
+          "title": "A double‐blind randomized controlled trial of personalized upper‐alpha neurofeedback in children with ADHD",
+          "year": 2026,
+          "type": "article",
+          "venue": "Journal of Child Psychology and Psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7165375809",
+          "doi": "https://doi.org/10.1038/s41398-026-04187-z",
+          "title": "Rethinking EEG biomarkers of brain disorders: a transdiagnostic dimensional view",
+          "year": 2026,
+          "type": "review",
+          "venue": "Translational Psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7164166545",
+          "doi": "https://doi.org/10.3389/fpsyt.2026.1747368",
+          "title": "Effectiveness of different digital interventions on symptoms for children and adolescents with attention-deficit/hyperactivity disorder: a network meta-analysis",
+          "year": 2026,
+          "type": "review",
+          "venue": "Frontiers in Psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7160120056",
+          "doi": "https://doi.org/10.64898/2026.04.26.26351764",
+          "title": "Neural and behavioural measures from attention testing show no support for efficacy of neurofeedback treatment for adult ADHD",
+          "year": 2026,
+          "type": "preprint",
+          "venue": "medRxiv",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7151801070",
+          "doi": "https://doi.org/10.1016/j.encep.2026.01.007",
+          "title": "Adolescence and ADHD: Practical proposals regarding the transition of care",
+          "year": 2026,
+          "type": "review",
+          "venue": "L Encéphale",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7166830548",
+          "doi": "https://doi.org/10.1016/j.ijchp.2026.100707",
+          "title": "A randomised controlled trial comparing the effects of transcranial pulse stimulation and EEG neurofeedback on sustained attention and depressive symptoms in young adults",
+          "year": 2026,
+          "type": "article",
+          "venue": "International Journal of Clinical and Health Psychology",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7139929900",
+          "doi": "https://doi.org/10.1159/000551307",
+          "title": "Efficacy of a Stepped-Care Approach for Adolescents and Adults with Attention-Deficit/Hyperactivity Disorder: An Adaptive Intervention Study Including Randomized Controlled Trials (ESCAlate)",
+          "year": 2026,
+          "type": "article",
+          "venue": "Psychotherapy and Psychosomatics",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7138295648",
+          "doi": "https://doi.org/10.1016/s0246-1072(25)47837-7",
+          "title": "Trouble du déficit de l’attention avec hyperactivité (TDAH) : de l’adolescence à l’âge adulte – Particularités cliniques et thérapeutiques",
+          "year": 2026,
+          "type": "article",
+          "venue": "Encyclopédie médico-chirurgicale. Psychiatrie",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7133507484",
+          "doi": "https://doi.org/10.1007/s10484-026-09776-8",
+          "title": "Task-Based EEG Neurofeedback Enhances Training Effects in Dynamic Visual Search",
+          "year": 2026,
+          "type": "article",
+          "venue": "Applied Psychophysiology and Biofeedback",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7118740179",
+          "doi": "https://doi.org/10.1024/2235-0977/a000506",
+          "title": "Neurofeedback bei ADHS: wissenschaftliche Debatte und praktische Bedeutung",
+          "year": 2026,
+          "type": "article",
+          "venue": "Lernen und Lernstörungen",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7128541171",
+          "doi": "https://doi.org/10.1016/b978-3-437-21294-9.00009-0",
+          "title": "Aufmerksamkeitsdefizit-Hyperaktivitäts-Störung",
+          "year": 2026,
+          "type": "book-chapter",
+          "venue": "Elsevier eBooks",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7204872477",
+          "doi": "https://doi.org/10.1007/978-3-662-72845-1_5",
+          "title": "Therapie und Prävention psychischer Störungen",
+          "year": 2026,
+          "type": "book-chapter",
+          "venue": "Angewandte Psychologie Kompakt",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7223900693",
+          "doi": "https://doi.org/10.1007/978-3-642-45028-0_151-1",
+          "title": "Systematik von psychischen, Verhaltens- und Neuromentalen Entwicklungsstörungen mit Beginn im Kindes- und Jugendalter – eine Kurzeinführung in die Kinder- und Jugendpsychiatrie, -psychosomatik und -psychotherapie",
+          "year": 2026,
+          "type": "book-chapter",
+          "venue": "Springer Reference Medizin",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4416112782",
+          "doi": "https://doi.org/10.1097/01.jaa.0000000000000286",
+          "title": "Beyond childhood",
+          "year": 2025,
+          "type": "review",
+          "venue": "JAAPA",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4415361929",
+          "doi": "https://doi.org/10.71358/pw.2521",
+          "title": "Zastosowanie metody EEGBiofeedback a poprawa hamowania i koncentracji uwagi u dzieci w wieku 7‒13 lat z objawami ADHD",
+          "year": 2025,
+          "type": "article",
+          "venue": "Psychologia Wychowawcza",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4414344932",
+          "doi": "https://doi.org/10.12677/acm.2025.1592600",
+          "title": "Research Progress on the Diagnosis and Treatment of ADHD in Children in Traditional Chinese and Western Medicine",
+          "year": 2025,
+          "type": "article",
+          "venue": "Advances in Clinical Medicine",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W2924841790",
+          "doi": "https://doi.org/10.1387/tantak.20180",
+          "title": "Haurren arretaren eta ongizatearen sustatzea biofeedback bidezko esku-hartze programa bat erabiliz",
+          "year": 2019,
+          "type": "article",
+          "venue": "Tantak",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W2621361771",
+          "doi": "https://doi.org/10.1007/s15202-017-1705-8",
+          "title": "ADHS im Kindes- und Jugendalter erkennen und therapieren",
+          "year": 2017,
+          "type": "article",
+          "venue": "DNP - Der Neurologe und Psychiater",
+          "cited_by": 0,
+          "retracted": false
+        }
+      ]
+    },
+    {
+      "pmid": "40246295",
+      "label": "Consumer-grade neurofeedback with mindfulness (JMIR 2025)",
+      "seed": {
+        "id": "https://openalex.org/W4406615053",
+        "doi": "https://doi.org/10.2196/68204",
+        "title": "Consumer-Grade Neurofeedback With Mindfulness Meditation: Meta-Analysis",
+        "year": 2025,
+        "type": "review",
+        "venue": "Journal of Medical Internet Research",
+        "cited_by": 12,
+        "retracted": false
+      },
+      "citing_count_returned": 12,
+      "citing": [
+        {
+          "id": "https://openalex.org/W4416896235",
+          "doi": "https://doi.org/10.3389/fpubh.2025.1712564",
+          "title": "Efficacy of neurofeedback-assisted mindfulness for anxiety and nomophobia in Spanish young adults: a randomized controlled trial",
+          "year": 2025,
+          "type": "article",
+          "venue": "Frontiers in Public Health",
+          "cited_by": 3,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7118642593",
+          "doi": "https://doi.org/10.1007/s10484-025-09764-4",
+          "title": "Effects of Transcutaneous Vagus Nerve Stimulation, Neurofeedback, and their Combination on Cortisol, Anxiety, and Depression Subtypes in Non-Clinical Adults",
+          "year": 2026,
+          "type": "article",
+          "venue": "Applied Psychophysiology and Biofeedback",
+          "cited_by": 2,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7163406297",
+          "doi": "https://doi.org/10.1162/imag.a.1284",
+          "title": "Meditation and neurofeedback: A systematic scoping review, synthesis, and future directions",
+          "year": 2026,
+          "type": "article",
+          "venue": "Imaging Neuroscience",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7223694011",
+          "doi": "https://doi.org/10.3389/fdgth.2026.1962535",
+          "title": "Effect of neurofeedback-assisted mindfulness training on migraine severity, associated disability, sleep quality, and emotional distress: protocol for a randomized controlled trial",
+          "year": 2026,
+          "type": "article",
+          "venue": "Frontiers in Digital Health",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7220671620",
+          "doi": "https://doi.org/10.1016/j.chbr.2026.101376",
+          "title": "No added benefit of VR and neurofeedback-enhanced VR for trait mindfulness in long-term mindfulness training",
+          "year": 2026,
+          "type": "article",
+          "venue": "Computers in Human Behavior Reports",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7214978020",
+          "doi": "https://doi.org/10.1145/3831659",
+          "title": "Human-Computer Co-Regulation: A Review of Biofeedback for Meditative Practice",
+          "year": 2026,
+          "type": "article",
+          "venue": "Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7201884935",
+          "doi": "https://doi.org/10.1016/j.jretconser.2026.105016",
+          "title": "Too smart for comfort? How neural inference depth shapes consumer adoption of brain–computer interfaces",
+          "year": 2026,
+          "type": "article",
+          "venue": "Journal of Retailing and Consumer Services",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4414494209",
+          "doi": "https://doi.org/10.2196/84707",
+          "title": "Wireless Electroencephalography in Research on Children With Developmental Disabilities: Scoping Review",
+          "year": 2026,
+          "type": "review",
+          "venue": "Journal of Medical Internet Research",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7160529238",
+          "doi": "https://doi.org/10.1080/07448481.2026.2667451",
+          "title": "Comparative efficacy of neurofeedback and traditional mindfulness meditation on undergraduates’ stress and mindfulness: A randomized controlled trial",
+          "year": 2026,
+          "type": "article",
+          "venue": "Journal of American College Health",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7155075724",
+          "doi": "https://doi.org/10.1007/s10484-026-09783-9",
+          "title": "Investigating the Effect of the 6-Week Mindful Self-Compassion Program for Emerging Adults (EYL) on Stress Response, Brain Activity, and Self-Compassion Among Chinese University Students: An Electroencephalogram (EEG) Quasi-experimental Study Using Portable EEG Headband",
+          "year": 2026,
+          "type": "article",
+          "venue": "Applied Psychophysiology and Biofeedback",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7131384427",
+          "doi": "https://doi.org/10.1109/icecer65523.2025.11400844",
+          "title": "Evaluating the Psychological and Physiological Effects of Meditation",
+          "year": 2025,
+          "type": "conference-paper",
+          "venue": "International Conference on Electrical and Computer Engineering Researches (ICECER)",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4411718317",
+          "doi": "https://doi.org/10.2196/preprints.79702",
+          "title": "Exploring How Immersive Environments Shape Mindfulness Meditation Experiences: A Qualitative Study using Stimulus–Organism–Response theory (Preprint)",
+          "year": 2025,
+          "type": "preprint",
+          "venue": null,
+          "cited_by": 0,
+          "retracted": false
+        }
+      ]
+    },
+    {
+      "pmid": "41016407",
+      "label": "Single/multidomain lifestyle interventions (Lancet Healthy Longevity 2025)",
+      "seed": {
+        "id": "https://openalex.org/W4414571900",
+        "doi": "https://doi.org/10.1016/j.lanhl.2025.100762",
+        "title": "Single-domain and multidomain lifestyle interventions for the prevention of cognitive decline in older adults who are cognitively unimpaired: a systematic review and network meta-analysis",
+        "year": 2025,
+        "type": "review",
+        "venue": "The Lancet Healthy Longevity",
+        "cited_by": 17,
+        "retracted": false
+      },
+      "citing_count_returned": 17,
+      "citing": [
+        {
+          "id": "https://openalex.org/W7124298456",
+          "doi": "https://doi.org/10.3390/jdad3010004",
+          "title": "A Narrative Review of Dietary, Lifestyle, and Other Complementary and Alternative Approaches in Alzheimer’s Disease and Related Dementias",
+          "year": 2026,
+          "type": "review",
+          "venue": "Journal of dementia and Alzheimer's disease",
+          "cited_by": 2,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7168127642",
+          "doi": "https://doi.org/10.3389/fnagi.2026.1841958",
+          "title": "Inflammaging and neurovascular unit dysfunction in cognitive ageing: mechanisms, biomarkers, and therapeutic opportunities",
+          "year": 2026,
+          "type": "review",
+          "venue": "Frontiers in Aging Neuroscience",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7168216999",
+          "doi": "https://doi.org/10.1001/jamanetworkopen.2026.20353",
+          "title": "Age, Multidomain Lifestyle Intervention, and White Matter Integrity",
+          "year": 2026,
+          "type": "article",
+          "venue": "JAMA Network Open",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7213865497",
+          "doi": "https://doi.org/10.1136/bjsports-2026-111684",
+          "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis",
+          "year": 2026,
+          "type": "review",
+          "venue": "British Journal of Sports Medicine",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7213456258",
+          "doi": "https://doi.org/10.1016/j.neubiorev.2026.106988",
+          "title": "From domains to mechanisms of healthy psychological aging",
+          "year": 2026,
+          "type": "review",
+          "venue": "Neuroscience & Biobehavioral Reviews",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7212235457",
+          "doi": "https://doi.org/10.1161/circheartfailure.126.014265",
+          "title": "Heart Failure and Neurocognitive Disorders: A Narrative Review",
+          "year": 2026,
+          "type": "review",
+          "venue": "Circulation Heart Failure",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7204073144",
+          "doi": "https://doi.org/10.1093/9780198995296.003.0008",
+          "title": "Towards a future without dementia",
+          "year": 2026,
+          "type": "book-chapter",
+          "venue": null,
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7202287016",
+          "doi": "https://doi.org/10.1007/s11357-026-02454-x",
+          "title": "Lifestyle correlates of verbal memory in community-dwelling older adults",
+          "year": 2026,
+          "type": "article",
+          "venue": "GeroScience",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7172486020",
+          "doi": "https://doi.org/10.1123/jpah.2026-0133",
+          "title": "How Life-Course Trajectories of Physical Activity Track With Cognitive Decline",
+          "year": 2026,
+          "type": "article",
+          "venue": "Journal of Physical Activity and Health",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7170193974",
+          "doi": "https://doi.org/10.1186/s12877-026-08033-1",
+          "title": "Independent, joint, and temporal associations of social, intellectual, and physical leisure activities with cognitive decline in older Chinese adults: a longitudinal analysis from CHARLS",
+          "year": 2026,
+          "type": "article",
+          "venue": "BMC Geriatrics",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7170072751",
+          "doi": "https://doi.org/10.3389/fnagi.2026.1855269",
+          "title": "Advancements in non-pharmaceutical interventions for Alzheimer’s disease management: an update review",
+          "year": 2026,
+          "type": "review",
+          "venue": "Frontiers in Aging Neuroscience",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7167255166",
+          "doi": "https://doi.org/10.2196/88479",
+          "title": "Effects of a Combined Zumba and Video Game–Based Cognitive Intervention on Cognitive Function Among Older Adults in Klang Valley, Malaysia: Semirandomized Trial",
+          "year": 2026,
+          "type": "article",
+          "venue": "JMIR Aging",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7166047839",
+          "doi": "https://doi.org/10.1016/j.bbr.2026.116351",
+          "title": "Working memory training in older adults: Load- and phase-dependent changes in brain activation",
+          "year": 2026,
+          "type": "article",
+          "venue": "Behavioural Brain Research",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7165916844",
+          "doi": "https://doi.org/10.3390/nu18132080",
+          "title": "Life’s Essential 8, Polygenic Risk for Type 2 Diabetes, and Dementia: Evidence from the UK Biobank",
+          "year": 2026,
+          "type": "article",
+          "venue": "Nutrients",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7119524903",
+          "doi": "https://doi.org/10.1111/dom.70431",
+          "title": "Long‐term effects of a multidomain intervention on cognitive function and metabolic control in older adults with type 2 diabetes and mild cognitive impairment: A 42‐month follow‐up of the J‐ MIND ‐Diabetes study",
+          "year": 2026,
+          "type": "article",
+          "venue": "Diabetes Obesity and Metabolism",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7172504203",
+          "doi": "https://doi.org/10.1039/d6fo00666c",
+          "title": "Nut consumption, cognitive function and brain health markers in individuals with and without stroke: cross-sectional and longitudinal findings from the Framingham heart study",
+          "year": 2026,
+          "type": "article",
+          "venue": "Food & Function",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4416276198",
+          "doi": "https://doi.org/10.1016/s1474-4422(25)00405-3",
+          "title": "Brain amyloid on the way to dementia prevention",
+          "year": 2025,
+          "type": "article",
+          "venue": "The Lancet Neurology",
+          "cited_by": 0,
+          "retracted": false
+        }
+      ]
+    },
+    {
+      "pmid": "42959097",
+      "label": "CCT transfer and durability in MCI (2026)",
+      "seed": {
+        "id": "https://openalex.org/W7222188800",
+        "doi": "https://doi.org/10.3389/fnagi.2026.1952783",
+        "title": "Cognitive transfer and durability of computerised cognitive training in older adults with mild cognitive impairment: a systematic review and meta-analysis of randomised controlled trials",
+        "year": 2026,
+        "type": "review",
+        "venue": "Frontiers in Aging Neuroscience",
+        "cited_by": 0,
+        "retracted": false
+      },
+      "citing_count_returned": 0,
+      "citing": []
+    },
+    {
+      "pmid": "42349368",
+      "label": "Theta binaural beats (Explore 2026)",
+      "seed": {
+        "id": "https://openalex.org/W7165119083",
+        "doi": "https://doi.org/10.1016/j.explore.2026.103471",
+        "title": "Efficacy of theta binaural beat therapy on pain, cognition and anxiety in adults: A systematic review and meta-analysis of randomized controlled trials",
+        "year": 2026,
+        "type": "review",
+        "venue": "EXPLORE",
+        "cited_by": 1,
+        "retracted": false
+      },
+      "citing_count_returned": 1,
+      "citing": [
+        {
+          "id": "https://openalex.org/W7213889151",
+          "doi": "https://doi.org/10.21203/rs.3.rs-10781456/v1",
+          "title": "Effects of Alpha-Band Binaural Beat Entrainment on Anxiety and Aggression in Men With Opioid Use Disorder: A Randomized Sham-Controlled Trial Running Title: Binaural Beat Entrainment in Opioid Use Disorder",
+          "year": 2026,
+          "type": "preprint",
+          "venue": "Research Square",
+          "cited_by": 0,
+          "retracted": false
+        }
+      ]
+    },
+    {
+      "pmid": "40581145",
+      "label": "Cogmed working memory training (Neuroscience 2025)",
+      "seed": {
+        "id": "https://openalex.org/W4411701817",
+        "doi": "https://doi.org/10.1016/j.neuroscience.2025.06.033",
+        "title": "Cogmed cognitive training for working memory: a systematic review and meta-analysis",
+        "year": 2025,
+        "type": "review",
+        "venue": "Neuroscience",
+        "cited_by": 7,
+        "retracted": false
+      },
+      "citing_count_returned": 7,
+      "citing": [
+        {
+          "id": "https://openalex.org/W4414261989",
+          "doi": "https://doi.org/10.3389/fspor.2025.1554023",
+          "title": "IQ variability and cognitive life skills: insights from Spanish students in vocational physical activity and sports training",
+          "year": 2025,
+          "type": "article",
+          "venue": "Frontiers in Sports and Active Living",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7205010391",
+          "doi": "https://doi.org/10.1080/02673843.2026.2726669",
+          "title": "Neurocognitive functioning and aggression levels in conduct disorder: evidence from CANTAB tasks",
+          "year": 2026,
+          "type": "article",
+          "venue": "International Journal of Adolescence and Youth",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7169852664",
+          "doi": "https://doi.org/10.1080/17483107.2026.2705168",
+          "title": "Eye-tracking working memory intervention in young people with severe dyskinetic cerebral palsy: a pilot study",
+          "year": 2026,
+          "type": "article",
+          "venue": "Disability and Rehabilitation Assistive Technology",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7165174045",
+          "doi": "https://doi.org/10.3389/fpsyg.2026.1801385",
+          "title": "Adaptive visuospatial n-back training improves audiovisual integration and executive control in older adults",
+          "year": 2026,
+          "type": "article",
+          "venue": "Frontiers in Psychology",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7160095967",
+          "doi": "https://doi.org/10.3389/frym.2026.1610271",
+          "title": "Working Memory Problems After a Traumatic Brain Injury",
+          "year": 2026,
+          "type": "article",
+          "venue": "Frontiers for Young Minds",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7125492279",
+          "doi": "https://doi.org/10.7759/cureus.102011",
+          "title": "Effective Approaches to Managing Behavioral Problems in Children With Attention-Deficit/Hyperactivity Disorder (ADHD): A Narrative Review",
+          "year": 2026,
+          "type": "review",
+          "venue": "Cureus",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4414701493",
+          "doi": "https://doi.org/10.3390/sym17101627",
+          "title": "Far Transfer Effects of Multi-Task Gamified Cognitive Training on Simulated Flight: Short-Term Theta and Alpha Signal Changes and Asymmetry Changes",
+          "year": 2025,
+          "type": "article",
+          "venue": "Symmetry",
+          "cited_by": 0,
+          "retracted": false
+        }
+      ]
+    },
+    {
+      "pmid": "42711482",
+      "label": "Asymmetry of working memory training transfer (2026)",
+      "error": "no OpenAlex match"
+    },
+    {
+      "pmid": "37956054",
+      "label": "Cognitive training plus NIBS (Psychological Bulletin 2024)",
+      "seed": {
+        "id": "https://openalex.org/W4388639509",
+        "doi": "https://doi.org/10.1037/bul0000406",
+        "title": "The efficacy of combining cognitive training and noninvasive brain stimulation: A transdiagnostic systematic review and meta-analysis.",
+        "year": 2023,
+        "type": "review",
+        "venue": "Psychological Bulletin",
+        "cited_by": 31,
+        "retracted": false
+      },
+      "citing_count_returned": 31,
+      "citing": [
+        {
+          "id": "https://openalex.org/W4388639509",
+          "doi": "https://doi.org/10.1037/bul0000406",
+          "title": "The efficacy of combining cognitive training and noninvasive brain stimulation: A transdiagnostic systematic review and meta-analysis.",
+          "year": 2023,
+          "type": "review",
+          "venue": "Psychological Bulletin",
+          "cited_by": 31,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4408528397",
+          "doi": "https://doi.org/10.1016/j.tjpad.2025.100098",
+          "title": "Brain health services for the secondary prevention of cognitive impairment and dementia: Opportunities, challenges, and the business case for existing and future facilities",
+          "year": 2025,
+          "type": "review",
+          "venue": "The Journal of Prevention of Alzheimer s Disease",
+          "cited_by": 25,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4401360557",
+          "doi": "https://doi.org/10.3390/brainsci14080791",
+          "title": "Treatment of Cognitive Impairment Associated with Schizophrenia Spectrum Disorders: New Evidence, Challenges, and Future Perspectives",
+          "year": 2024,
+          "type": "review",
+          "venue": "Brain Sciences",
+          "cited_by": 21,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4401522000",
+          "doi": "https://doi.org/10.1097/wco.0000000000001310",
+          "title": "Towards multimodal cognition-based treatment for cognitive impairment in Parkinson's disease: drugs, exercise, non-invasive brain stimulation and technologies",
+          "year": 2024,
+          "type": "review",
+          "venue": "Current Opinion in Neurology",
+          "cited_by": 15,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4403842346",
+          "doi": "https://doi.org/10.3390/brainsci14111067",
+          "title": "Is It Possible to Combine Non-Invasive Brain Stimulation and Evidence-Based Psychosocial Interventions in Schizophrenia? A Critical Review",
+          "year": 2024,
+          "type": "review",
+          "venue": "Brain Sciences",
+          "cited_by": 10,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4406071049",
+          "doi": "https://doi.org/10.1016/j.arr.2024.102650",
+          "title": "Effective engagement in computerized cognitive training for older adults",
+          "year": 2025,
+          "type": "review",
+          "venue": "Ageing Research Reviews",
+          "cited_by": 8,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4404876832",
+          "doi": "https://doi.org/10.1007/s11357-024-01455-y",
+          "title": "Effect of transcranial direct current stimulation with cognitive training on executive functions in healthy older adults: a secondary analysis from the ACT trial",
+          "year": 2024,
+          "type": "article",
+          "venue": "GeroScience",
+          "cited_by": 7,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4411330158",
+          "doi": "https://doi.org/10.1016/j.scog.2025.100358",
+          "title": "Feasibility and acceptability of combining cognitive remediation and tDCS in long-term psychiatric clinical care",
+          "year": 2025,
+          "type": "article",
+          "venue": "Schizophrenia Research Cognition",
+          "cited_by": 4,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4407044647",
+          "doi": "https://doi.org/10.1007/s11357-025-01545-5",
+          "title": "Combining non-invasive brain stimulation techniques and EEG markers analysis: an innovative approach to cognitive health in aging",
+          "year": 2025,
+          "type": "review",
+          "venue": "GeroScience",
+          "cited_by": 4,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4414399953",
+          "doi": "https://doi.org/10.1016/j.neubiorev.2025.106380",
+          "title": "Efficacy of non-invasive brain stimulation on theory of mind and emotion processing in neuropsychiatric disorders: A systematic review and meta-analysis",
+          "year": 2025,
+          "type": "review",
+          "venue": "Neuroscience & Biobehavioral Reviews",
+          "cited_by": 3,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4413642763",
+          "doi": "https://doi.org/10.1503/jpn.250041",
+          "title": "Transcranial direct current stimulation and online cognitive training to enhance cognitive function and emotional stability in borderline personality disorder: an open-labelled pilot study",
+          "year": 2025,
+          "type": "article",
+          "venue": "Journal of Psychiatry and Neuroscience",
+          "cited_by": 3,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4406298779",
+          "doi": "https://doi.org/10.4103/indianjpsychiatry.indianjpsychiatry_1191_24",
+          "title": "Clinical practice guidelines – An overview of cognitive remediation for various neuropsychiatric disorders",
+          "year": 2025,
+          "type": "article",
+          "venue": "Indian Journal of Psychiatry",
+          "cited_by": 2,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7168345818",
+          "doi": "https://doi.org/10.2196/81437",
+          "title": "Feasibility of Interleaving Computerized Cognitive Training With Repetitive Transcranial Magnetic Stimulation: Pilot Studies in Mild Cognitive Impairment Due to Alzheimer’s Disease and Stroke",
+          "year": 2026,
+          "type": "article",
+          "venue": "JMIR Neurotechnology",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7160183109",
+          "doi": "https://doi.org/10.1007/s11065-026-09699-5",
+          "title": "Efficacy of Cognitive Training for Treating Cancer-related Cognitive Impairment: Systematic Review and Meta-analysis by Cognitive Domain",
+          "year": 2026,
+          "type": "review",
+          "venue": "Neuropsychology Review",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7150771200",
+          "doi": "https://doi.org/10.1080/09540261.2026.2647921",
+          "title": "A scoping review of frontal cortex tDCS on neuropsychological functioning in older adults with mild cognitive impairment and Alzheimer’s Clinical Syndrome",
+          "year": 2026,
+          "type": "review",
+          "venue": "International Review of Psychiatry",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4416025772",
+          "doi": "https://doi.org/10.1007/s10608-025-10668-0",
+          "title": "Effectiveness and Mechanisms of Attentional Bias Modification, tDCS, and Their Combination: The Role of Baseline Attentional Bias Patterns in Influencing Intervention Outcomes",
+          "year": 2025,
+          "type": "article",
+          "venue": "Cognitive Therapy and Research",
+          "cited_by": 1,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7223095826",
+          "doi": "https://doi.org/10.2196/preprints.114879",
+          "title": "Cognitive-Motor Dual Tasks Using Immersive Extended Reality for Cognitive Rehabilitation: Scoping Review (Preprint)",
+          "year": 2026,
+          "type": "preprint",
+          "venue": null,
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7167039779",
+          "doi": "https://doi.org/10.1016/j.neuroimage.2026.122104",
+          "title": "Cognitive Strategy-based neuromodulation optimizes neural communication to improve working memory",
+          "year": 2026,
+          "type": "article",
+          "venue": "NeuroImage",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7168340176",
+          "doi": "https://doi.org/10.1176/appi.focus.20250048",
+          "title": "Synergistic and Scalable: A Review of Integrated Digital and Biological Interventions",
+          "year": 2026,
+          "type": "review",
+          "venue": "FOCUS The Journal of Lifelong Learning in Psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7168365867",
+          "doi": "https://doi.org/10.1176/appi.focus.26024116",
+          "title": "Redefining Combined Treatment in Psychiatry",
+          "year": 2026,
+          "type": "review",
+          "venue": "FOCUS The Journal of Lifelong Learning in Psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7165653030",
+          "doi": "https://doi.org/10.1016/j.ejon.2026.103253",
+          "title": "Non-invasive brain stimulation and cognitive training for depressive symptoms and cancer-related cognitive impairment in breast cancer survivors (ONCODEP)",
+          "year": 2026,
+          "type": "article",
+          "venue": "European Journal of Oncology Nursing",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7160491070",
+          "doi": "https://doi.org/10.3389/fpsyt.2026.1801985",
+          "title": "Virtual reality-based inhibition training influences food-related responses: no additional effects of repetitive transcranial magnetic stimulation",
+          "year": 2026,
+          "type": "article",
+          "venue": "Frontiers in Psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7155383823",
+          "doi": "https://doi.org/10.1007/s00406-026-02245-7",
+          "title": "Improving functioning in severe mental illness with cognitive remediation: study protocol for a pragmatic randomised multi-centre trial with adjunct sham-controlled tDCS (HEADDSET+)",
+          "year": 2026,
+          "type": "article",
+          "venue": "European Archives of Psychiatry and Clinical Neuroscience",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7154075201",
+          "doi": "https://doi.org/10.64898/2026.04.10.717626",
+          "title": "Transcranial random noise stimulation over the right prefrontal cortex does not improve performance on trained or untrained complex cognitive tasks",
+          "year": 2026,
+          "type": "preprint",
+          "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7119167254",
+          "doi": "https://doi.org/10.1186/s12888-025-07749-5",
+          "title": "Transcranial direct current stimulation and cognitive training in the treatment of cognitive deficit in schizophrenia: a randomized controlled trial",
+          "year": 2026,
+          "type": "article",
+          "venue": "BMC Psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4415641736",
+          "doi": "https://doi.org/10.1016/j.ajp.2025.104758",
+          "title": "The adjunctive efficacy of repetitive transcranial magnetic stimulation with non-pharmacological interventions in cognitive disorders: A meta-analysis of randomized sham-controlled trials",
+          "year": 2025,
+          "type": "review",
+          "venue": "Asian Journal of Psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4413038082",
+          "doi": "https://doi.org/10.3390/brainsci15080839",
+          "title": "Efficacy of Transcranial Magnetic Stimulation and Transcranial Direct-Current Stimulation in Primary Progressive Aphasia Treatment: A Review",
+          "year": 2025,
+          "type": "review",
+          "venue": "Brain Sciences",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4412900497",
+          "doi": "https://doi.org/10.1007/s40473-025-00312-2",
+          "title": "Integration of Cognitive Training and tDCS in Neuropsychiatric Disorders - A Scoping Review",
+          "year": 2025,
+          "type": "article",
+          "venue": "Current Behavioral Neuroscience Reports",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4411737832",
+          "doi": "https://doi.org/10.1080/17582024.2025.2520716",
+          "title": "A systematic review and meta-analysis of the impact of transcranial electrical stimulation (TES) on cognitive dysfunction in patients with multiple sclerosis",
+          "year": 2025,
+          "type": "review",
+          "venue": "Neurodegenerative Disease Management",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W7118008753",
+          "doi": "https://doi.org/10.1007/978-3-032-06209-3_18",
+          "title": "Cognitive Impairment and Negative Symptoms in Schizophrenia: A Summary and Future Research Perspectives",
+          "year": 2025,
+          "type": "book-chapter",
+          "venue": "Comprehensive approach to psychiatry",
+          "cited_by": 0,
+          "retracted": false
+        },
+        {
+          "id": "https://openalex.org/W4405536744",
+          "doi": "https://doi.org/10.1016/b978-0-443-15754-7.00061-4",
+          "title": "Memory modulation through brain stimulation",
+          "year": 2024,
+          "type": "book-chapter",
+          "venue": "Elsevier eBooks",
+          "cited_by": 0,
+          "retracted": false
+        }
+      ]
+    }
+  ]
+}

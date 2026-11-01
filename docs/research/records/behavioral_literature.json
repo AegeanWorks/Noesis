@@ -1,0 +1,240 @@
+{
+  "records": [
+    {
+      "pmid": "19217383",
+      "title": "Gambling near-misses enhance motivation to gamble and recruit win-related brain circuitry.",
+      "abstract": "\"Near-miss\" events, where unsuccessful outcomes are proximal to the jackpot, increase gambling propensity and may be associated with the addictiveness of gambling, but little is known about the neurocognitive mechanisms that underlie their potency. Using a simplified slot machine task, we measured behavioral and neural responses to gambling outcomes. Compared to \"full-misses,\" near-misses were experienced as less pleasant, but increased desire to play. This effect was restricted to trials where the subject had personal control over arranging their gamble. Near-miss outcomes recruited striatal and insula circuitry that also responded to monetary wins; in addition, near-miss-related activity in the rostral anterior cingulate cortex varied as a function of personal control. Insula activity to near-misses correlated with self-report ratings as well as a questionnaire measure of gambling propensity. These data indicate that near-misses invigorate gambling through the anomalous recruitment of reward circuitry, despite the objective lack of monetary reinforcement on these trials.",
+      "journal": "Neuron",
+      "year": "2009",
+      "doi": "10.1016/j.neuron.2008.12.031",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "27503450",
+      "title": "Imaging the Gambling Brain.",
+      "abstract": "Neuroimaging studies examining the neurobiological basis of gambling disorder (GD) have increased over the past decade. Functional magnetic resonance imaging studies during appetitive cue and reward processing tasks demonstrate altered functioning in frontostriatal brain areas, including the ventral striatum and the ventromedial prefrontal cortex. Findings suggest differences in how the anticipation and outcome of rewards are processed in individuals with GD. Future research requires larger sample sizes and should include appropriate clinical reference groups. Overall, studies to date highlight a common pathophysiology between substance-based addictions and GD, the latter offering a unique condition in which to examine nonchemical factors in addiction.",
+      "journal": "International review of neurobiology",
+      "year": "2016",
+      "doi": "10.1016/bs.irn.2016.05.001",
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "27418069",
+      "title": "Translational Models of Gambling-Related Decision-Making.",
+      "abstract": "Gambling is a harmless, recreational pastime that is ubiquitous across cultures. However, for some, gambling becomes a maladaptive and compulsive, and this syndrome is conceptualized as a behavioural addiction. Laboratory models that capture the key cognitive processes involved in gambling behaviour, and that can be translated across species, have the potential to make an important contribution to both decision neuroscience and the study of addictive disorders. The Iowa gambling task has been widely used to assess human decision-making under uncertainty, and this paradigm can be successfully modelled in rodents. Similar neurobiological processes underpin choice behaviour in humans and rats, and thus, a preference for the disadvantageous \"high-risk, high-reward\" options may reflect meaningful vulnerability for mental health problems. However, the choice behaviour operationalized by these tasks does not necessarily approximate the vulnerability to gambling disorder (GD) per se. We consider a number of psychological challenges that apply to modelling gambling in a translational way, and evaluate the success of the existing models. Heterogeneity in the structure of gambling games, as well as in the motivations of individuals with GD, is highlighted. The potential issues with extrapolating too directly from established animal models of drug dependency are discussed, as are the inherent difficulties in validating animal models of GD in the absence of any approved treatments for GD. Further advances in modelling the cognitive biases endemic in human decision-making, which appear to be exacerbated in GD, may be a promising line of research.",
+      "journal": "Current topics in behavioral neurosciences",
+      "year": "2016",
+      "doi": "10.1007/7854_2015_5014",
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "31862419",
+      "title": "Common neurobiological and psychological underpinnings of gambling and substance-use disorders.",
+      "abstract": "Both psychological and neurobiological studies in gambling disorder have increased in the past 10-15 years. This review examines the current state of the literature, with a focus on recent magnetic resonance imaging (MRI) studies in gambling disorder. The review compares and contrasts findings across gambling and substance-use disorders. Additionally, features with arguably particular relevance to gambling disorder (e.g., \"near-miss\" processing) are described, as well as their relationship to choice behaviors. More broadly, the review informs on how these studies advance our understanding of brain-behavior relationships relating to decision-making and key features of addictive disorders.",
+      "journal": "Progress in neuro-psychopharmacology & biological psychiatry",
+      "year": "2020",
+      "doi": "10.1016/j.pnpbp.2019.109847",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "9658025",
+      "title": "Predictive reward signal of dopamine neurons.",
+      "abstract": "The effects of lesions, receptor blocking, electrical self-stimulation, and drugs of abuse suggest that midbrain dopamine systems are involved in processing reward information and learning approach behavior. Most dopamine neurons show phasic activations after primary liquid and food rewards and conditioned, reward-predicting visual and auditory stimuli. They show biphasic, activation-depression responses after stimuli that resemble reward-predicting stimuli or are novel or particularly salient. However, only few phasic activations follow aversive stimuli. Thus dopamine neurons label environmental stimuli with appetitive value, predict and detect rewards and signal alerting and motivating events. By failing to discriminate between different rewards, dopamine neurons appear to emit an alerting message about the surprising presence or absence of rewards. All responses to rewards and reward-predicting stimuli depend on event predictability. Dopamine neurons are activated by rewarding events that are better than predicted, remain uninfluenced by events that are as good as predicted, and are depressed by events that are worse than predicted. By signaling rewards according to a prediction error, dopamine responses have the formal characteristics of a teaching signal postulated by reinforcement learning theories. Dopamine responses transfer during learning from primary rewards to reward-predicting stimuli. This may contribute to neuronal mechanisms underlying the retrograde action of rewards, one of the main puzzles in reinforcement learning. The impulse response releases a short pulse of dopamine onto many dendrites, thus broadcasting a rather global reinforcement signal to postsynaptic neurons. This signal may improve approach behavior by providing advance reward information before the behavior occurs, and may contribute to learning by modifying synaptic transmission. The dopamine reward signal is supplemented by activity in neurons in striatum, frontal cortex, and amygdala, which process specific reward information but do not emit a global reward prediction error signal. A cooperation between the different reward signals may assure the use of specific rewards for selectively reinforcing behaviors. Among the other projection systems, noradrenaline neurons predominantly serve attentional mechanisms and nucleus basalis neurons code rewards heterogeneously. Cerebellar climbing fibers signal errors in motor performance or errors in the prediction of aversive events to cerebellar Purkinje cells. Most deficits following dopamine-depleting lesions are not easily explained by a defective reward signal but may reflect the absence of a general enabling function of tonic levels of extracellular dopamine. Thus dopamine systems may have two functions, the phasic transmission of reward information and the tonic enabling of postsynaptic neurons.",
+      "journal": "Journal of neurophysiology",
+      "year": "1998",
+      "doi": "10.1152/jn.1998.80.1.1",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "27069377",
+      "title": "Dopamine reward prediction error coding.",
+      "abstract": "Reward prediction errors consist of the differences between received and predicted rewards. They are crucial for basic forms of learning about rewards and make us strive for more rewards-an evolutionary beneficial trait. Most dopamine neurons in the midbrain of humans, monkeys, and rodents signal a reward prediction error; they are activated by more reward than predicted (positive prediction error), remain at baseline activity for fully predicted rewards, and show depressed activity with less reward than predicted (negative prediction error). The dopamine signal increases nonlinearly with reward value and codes formal economic utility. Drugs of addiction generate, hijack, and amplify the dopamine reward signal and induce exaggerated, uncontrolled dopamine effects on neuronal plasticity. The striatum, amygdala, and frontal cortex also show reward prediction error coding, but only in subpopulations of neurons. Thus, the important concept of reward prediction errors is implemented in neuronal hardware.",
+      "journal": "Dialogues in clinical neuroscience",
+      "year": "2016",
+      "doi": "10.31887/DCNS.2016.18.1/wschultz",
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "19210061",
+      "title": "Strategic automation of emotion regulation.",
+      "abstract": "As implementation intentions are a powerful self-regulation tool for thought and action (meta-analysis by P. M. Gollwitzer & P. Sheeran, 2006), the present studies were conducted to address their effectiveness in regulating emotional reactivity. Disgust- (Study 1) and fear- (Study 2) eliciting stimuli were viewed under 3 different self-regulation instructions: the goal intention to not get disgusted or frightened, respectively, this goal intention furnished with an implementation intention (i.e., an if-then plan), and a no-self-regulation control group. Only implementation-intention participants succeeded in reducing their disgust and fear reactions as compared to goal-intention and control participants. In Study 3, electrocortical correlates (using dense-array electroencephalography) revealed differential early visual activity in response to spider slides in ignore implementation-intention participants, as reflected in a smaller P1. Theoretical and applied implications of the present findings for emotion regulation via implementation intentions are discussed.",
+      "journal": "Journal of personality and social psychology",
+      "year": "2009",
+      "doi": "10.1037/a0013460",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, N.I.H., Extramural",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "38496777",
+      "title": "Video games and disability-a risk and benefit analysis.",
+      "abstract": "PURPOSE: Over the past decades, video games have become a substantial part of the entertainment industry. While ubiquitous, video game participation remains low among people with disabilities amid potential negative effects. This article analyzes the risks and benefits that video games may present to individuals with disabilities.\nMETHODOLOGY: In this conceptual article, we explored the literature pertaining to video games and disability. To better understand the impact of video games on individuals with disabilities, we focused on the unique features of video games through the lens of the Self-Determination Theory.\nFINDINGS: Our findings show that individuals with disabilities are most at risk from excessive video game use, leading to increased aggression, sedentary behavior, and negative impact on academic performance. Identified benefits include promoting physical rehabilitation and psychological well-being, improving cognitive abilities and emotional regulation, and utility in promoting exercises, and managing chronic pain.\nORIGINALITY: This article presents a number of strategies and resources to help guide individuals with disabilities, educators, practitioners, and researchers in maximizing the benefits of video games while controlling the risks.",
+      "journal": "Frontiers in rehabilitation sciences",
+      "year": "2024",
+      "doi": "10.1037/a0034335",
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "21688924",
+      "title": "Consider it done! Plan making can eliminate the cognitive effects of unfulfilled goals.",
+      "abstract": "Unfulfilled goals persist in the mind, as asserted by ample theory and evidence (e.g., the Zeigarnik effect). The standard assumption has been that such cognitive activation persists until the goal is fulfilled. However, we predicted that contributing to goal pursuit through plan making could satisfy the various cognitive processes that usually promote goal pursuit. In several studies, we activated unfulfilled goals and demonstrated persistent goal activation over time. Unfinished goals caused intrusive thoughts during an unrelated reading task (Studies 1 and 5B), high mental accessibility of goal-related words (Studies 2 and 3), and poor performance on an unrelated anagram task (Study 4). Allowing participants to formulate specific plans for their unfulfilled goals eliminated the various activation and interference effects. Reduction of the effects was mediated by the earnestness of participants' plans: Those who ultimately executed their plans were those who also exhibited no more intrusions (Study 4). Moreover, changes in goal-related emotions did not appear to be a necessary component of the observed cognitive effects (Studies 5A and 5B). Committing to a specific plan for a goal may therefore not only facilitate attainment of the goal but may also free cognitive resources for other pursuits. Once a plan is made, the drive to attain a goal is suspended--allowing goal-related cognitive activity to cease--and is resumed at the specified later time.",
+      "journal": "Journal of personality and social psychology",
+      "year": "2011",
+      "doi": "10.1037/a0024192",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "32291585",
+      "title": "Zeigarnik and von Restorff: The memory effects and the stories behind them.",
+      "abstract": "Two of the best known eponymous phenomena in memory research were carried out as dissertations in the same era at the same university, each supervised by an influential researcher working within the Gestalt framework. Both examined the influence of unexpected events on memory. Bluma Zeigarnik (Psychologische Forschung, 9, 1-85, 1927) first reported that memory is better for interrupted tasks than for completed tasks, a phenomenon long known as the Zeigarnik effect. Hedwig von Restorff (Psychologische Forschung, 18, 299-342, 1933) first reported that memory is better for isolated than for non-isolated pieces of information, a phenomenon long known as the von Restorff effect. In this article, I present: (1) a biographical sketch of the researcher behind each phenomenon, (2) a description of their dissertation research, and (3) an evaluation of the current status of each phenomenon.",
+      "journal": "Memory & cognition",
+      "year": "2020",
+      "doi": "10.3758/s13421-020-01033-5",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "26063627",
+      "title": "Jackpot Structural Features: Rollover Effect and Goal-Gradient Effect in EGM Gambling.",
+      "abstract": "Relatively little research has been undertaken on the influence of jackpot structural features on electronic gaming machine (EGM) gambling behavior. This study considered two common features of EGM jackpots: progressive (i.e., the jackpot incrementally growing in value as players make additional bets), and deterministic (i.e., a guaranteed jackpot after a fixed number of bets, which is determined in advance and at random). Their joint influences on player betting behavior and the moderating role of jackpot size were investigated in a crossed-design experiment. Using real money, players gambled on a computer simulated EGM with real jackpot prizes of either $500 (i.e., small jackpot) or $25,000 (i.e., large jackpot). The results revealed three important findings. Firstly, players placed the largest bets (20.3 % higher than the average) on large jackpot EGMs that were represented to be deterministic and non-progressive. This finding was supportive of a hypothesized 'goal-gradient effect', whereby players might have felt subjectively close to an inevitable payoff for a high-value prize. Secondly, large jackpots that were non-deterministic and progressive also promoted high bet sizes (17.8 % higher than the average), resembling the 'rollover effect' demonstrated in lottery betting, whereby players might imagine that their large bets could be later recouped through a big win. Lastly, neither the hypothesized goal-gradient effect nor the rollover effect was evident among players betting on small jackpot machines. These findings suggest that certain high-value jackpot configurations may have intensifying effects on player behavior.",
+      "journal": "Journal of gambling studies",
+      "year": "2016",
+      "doi": "10.1007/s10899-015-9557-7",
+      "publication_types": [
+        "Journal Article"
+      ]
+    },
+    {
+      "pmid": "33278681",
+      "title": "Inhibition of the supplementary motor area affects distribution of effort over time.",
+      "abstract": "In tasks that extend over time, people tend to exert much effort at the beginning and the end, but not in the middle, exhibiting the stuck-in-the-middle pattern (STIM). To date, little is known about the neural mechanisms underlying this effect. As the supplementary motor area (SMA) was previously implicated in coding prospective task-demands, we tested its role in producing the STIM pattern. Participants first underwent an SMA-localization session in which they tapped their fingers repeatedly while fMRI-scanned. In the next two sessions, before playing a 10-min computer game that measured effort-engagement, participants underwent inhibitory 1-Hz repetitive transcranial magnetic stimulation over the SMA, or over a control precuneus location. Three control experiments and a pretest confirmed that this task yields a STIM, which can be eliminated when the task lacks a salient end-point, or is too short. The results of the main experiment showed a more pronounced STIM following inhibitory SMA stimulation compared to control. A control analysis showed that overall level of effort was similar in both conditions, rendering alternative accounts in terms of motor inhibition unlikely. These findings are consistent with the possibility that the SMA may play a role in moment-to-moment coding of effort value, or in related sub-processes, which can cause effort to be distributed more equally over the course of a task.",
+      "journal": "Cortex; a journal devoted to the study of the nervous system and behavior",
+      "year": "2021",
+      "doi": "10.1016/j.cortex.2020.10.018",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ]
+    },
+    {
+      "pmid": "33128662",
+      "title": "Gamification of health professions education: a systematic review.",
+      "abstract": "Gamification refers to using game attributes in a non-gaming context. Health professions educators increasingly turn to gamification to optimize students' learning outcomes. However, little is known about the concept of gamification and its possible working mechanisms. This review focused on empirical evidence for the effectiveness of gamification approaches and theoretical rationales for applying the chosen game attributes. We systematically searched multiple databases, and included all empirical studies evaluating the use of game attributes in health professions education. Of 5044 articles initially identified, 44 met the inclusion criteria. Negative outcomes for using gamification were not reported. Almost all studies included assessment attributes (n = 40), mostly in combination with conflict/challenge attributes (n = 27). Eight studies revealed that this specific combination had increased the use of the learning material, sometimes leading to improved learning outcomes. A relatively small number of studies was performed to explain mechanisms underlying the use of game attributes (n = 7). Our findings suggest that it is possible to improve learning outcomes in health professions education by using gamification, especially when employing game attributes that improve learning behaviours and attitudes towards learning. However, most studies lacked well-defined control groups and did not apply and/or report theory to understand underlying processes. Future research should clarify mechanisms underlying gamified educational interventions and explore theories that could explain the effects of these interventions on learning outcomes, using well-defined control groups, in a longitudinal way. In doing so, we can build on existing theories and gain a practical and comprehensive understanding of how to select the right game elements for the right educational context and the right type of student.",
+      "journal": "Advances in health sciences education : theory and practice",
+      "year": "2021",
+      "doi": "10.1007/s10459-020-10000-3",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "28536062",
+      "title": "A systematic review of gamification in e-Health.",
+      "abstract": "Gamification is a relatively new trend that focuses on applying game mechanics to non-game contexts in order to engage audiences and to inject a little fun into mundane activities besides generating motivational and cognitive benefits. While many fields such as Business, Marketing and e-Learning have taken advantage of the potential of gamification, the digital healthcare domain has also started to exploit this emerging trend. This paper aims to summarize the current knowledge regarding gamified e-Health applications. A systematic literature review was therefore conducted to explore the various gamification strategies employed in e-Health and to address the benefits and the pitfalls of this emerging discipline. A total of 46 studies from multiple sources were then considered and thoroughly investigated. The results show that the majority of the papers selected reported gamification and serious gaming in health and wellness contexts related specifically to chronic disease rehabilitation, physical activity and mental health. Although gamification in e-Health has attracted a great deal of attention during the last few years, there is still a dearth of valid empirical evidence in this field. Moreover, most of the e-Health applications and serious games investigated have been proven to yield solely short-term engagement through extrinsic rewards. For gamification to reach its full potential, it is therefore necessary to build e-Health solutions on well-founded theories that exploit the core experience and psychological effects of game mechanics.",
+      "journal": "Journal of biomedical informatics",
+      "year": "2017",
+      "doi": "10.1016/j.jbi.2017.05.011",
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "34982715",
+      "title": "Evaluating the Effectiveness of Gamification on Physical Activity: Systematic Review and Meta-analysis of Randomized Controlled Trials.",
+      "abstract": "BACKGROUND: Gamification refers to the use of game elements in nongame contexts. The use of gamification to change behaviors and promote physical activity (PA) is a promising avenue for tackling the global physical inactivity pandemic and the current prevalence of chronic diseases. However, there is no evidence of the effectiveness of gamified interventions with the existence of mixed results in the literature.\nOBJECTIVE: The aim of this systematic review and meta-analysis is to evaluate the effectiveness of gamified interventions and their health care potential by testing the generalizability and sustainability of their influence on PA and sedentary behavior.\nMETHODS: A total of 5 electronic databases (PubMed, Embase, Scopus, Web of Science, and the Cochrane Central Register of Controlled Trials) were searched for randomized controlled trials published in English from 2010 to 2020. Eligibility criteria were based on the components of the participants, interventions, comparators, and outcomes framework. Studies were included when they used gamified interventions in daily life with an active or inactive control group and when they assessed a PA or sedentary behavior outcome. We conducted meta-analyses using a random-effects model approach. Sensitivity analyses, influence analyses, and publication bias analyses were performed to examine the robustness of our results.\nRESULTS: The main meta-analysis performed on 16 studies and 2407 participants revealed a small to medium summary effect of gamified interventions on PA behavior (Hedges g=0.42, 95% CI 0.14-0.69). No statistical difference among different subgroups (adults vs adolescents and healthy participants vs adults with chronic diseases) and no interaction effects with moderators such as age, gender, or BMI were found, suggesting good generalizability of gamified interventions to different user populations. The effect was statistically significant when gamified interventions were compared with inactive control groups, such as waiting lists (Hedges g=0.58, 95% CI 0.08-1.07), and active control groups that included a nongamified PA intervention (Hedges g=0.23, 95% CI 0.05-0.41). This suggests that gamified interventions are not only efficient in changing behavior but also more effective compared with other behavioral interventions. The long-term effect (measured with follow-up averaging 14 weeks after the end of the intervention) was weaker, with a very small to small effect (Hedges g=0.15, 95% CI 0.07-0.23).\nCONCLUSIONS: This meta-analysis confirms that gamified interventions are promising for promoting PA in various populations. Additional analyses revealed that this effect persists after the follow-up period, suggesting that it is not just a novelty effect caused by the playful nature of gamification, and that gamified products appear effective compared with equivalent nongamified PA interventions. Future rigorous trials are required to confirm these findings.",
+      "journal": "Journal of medical Internet research",
+      "year": "2022",
+      "doi": "10.2196/15083",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "33028074",
+      "title": "Global prevalence of gaming disorder: A systematic review and meta-analysis.",
+      "abstract": "BACKGROUND: Gaming disorder was included in the latest revision of the International Classification of Diseases (11th ed.). Worldwide, prevalence estimates of gaming disorder are considerably heterogeneous and often appear to be exceedingly high. However, few studies have examined the methodological, cultural and/or demographic factors that might explain this phenomenon. This review employed meta-analytic techniques to compute the worldwide-pooled prevalence of gaming disorder and evaluate the potential contributing factors for varied prevalence estimates.\nMETHOD: Prevalence estimates were extracted from 53 studies conducted between 2009 and 2019, which included 226,247 participants across 17 different countries. Study findings were meta-analyzed using a random-effects model. Subgroup and moderator analyses examined potential sources of heterogeneity, including assessment tool and cut-off, participant age and gender, sample size and type, study region, and year of data collection.\nRESULTS: The worldwide prevalence of gaming disorder was 3.05% (confidence interval: [2.38, 3.91]); this figure was adjusted to 1.96% [0.19, 17.12] when considering only studies that met more stringent sampling criteria (e.g. stratified random sampling). However, these estimates were associated with significant variability. The choice of screening tool accounted for 77% of the variance, with the Lemmens Internet gaming disorder-9, Gaming Addiction Identification Test and Problematic Videogame Playing scales associated with the highest estimates. Adolescent samples, lower cut-off scores and smaller sample size were significant predictors of higher prevalence. Gaming disorder rates were approximately 2.5:1 in favor of males compared to females.\nCONCLUSION: The worldwide prevalence of gaming disorder appears to be comparable to obsessive-compulsive disorder and some substance-related addictions, but lower than compulsive buying and higher than problem gambling. Gaming disorder prevalence rates appear to be inflated by methodological characteristics, particularly measurement and sampling issues.",
+      "journal": "The Australian and New Zealand journal of psychiatry",
+      "year": "2021",
+      "doi": "10.1177/0004867420962851",
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ]
+    },
+    {
+      "pmid": "27590829",
+      "title": "Integrating psychological and neurobiological considerations regarding the development and maintenance of specific Internet-use disorders: An Interaction of Person-Affect-Cognition-Execution (I-PACE) model.",
+      "abstract": "Within the last two decades, many studies have addressed the clinical phenomenon of Internet-use disorders, with a particular focus on Internet-gaming disorder. Based on previous theoretical considerations and empirical findings, we suggest an Interaction of Person-Affect-Cognition-Execution (I-PACE) model of specific Internet-use disorders. The I-PACE model is a theoretical framework for the processes underlying the development and maintenance of an addictive use of certain Internet applications or sites promoting gaming, gambling, pornography viewing, shopping, or communication. The model is composed as a process model. Specific Internet-use disorders are considered to be the consequence of interactions between predisposing factors, such as neurobiological and psychological constitutions, moderators, such as coping styles and Internet-related cognitive biases, and mediators, such as affective and cognitive responses to situational triggers in combination with reduced executive functioning. Conditioning processes may strengthen these associations within an addiction process. Although the hypotheses regarding the mechanisms underlying the development and maintenance of specific Internet-use disorders, summarized in the I-PACE model, must be further tested empirically, implications for treatment interventions are suggested.",
+      "journal": "Neuroscience and biobehavioral reviews",
+      "year": "2016",
+      "doi": "10.1016/j.neubiorev.2016.08.033",
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "37469930",
+      "title": "Persuasive Technology and computational manipulation: hypernudging out of mental self-determination.",
+      "abstract": "Artificial Intelligence, unperceived, can acquire the user's data, find connections not visible by a human being, profile the users, and aim at persuading them, resulting in Persuasive Technology (PT). During the persuasive process, PT can use manipulation, finding and using routes to affect System 1, the primordial brain of individuals, in the absence of their awareness, undermining their decision-making processes. Multiple international and European bodies recognized that AI systems could use manipulation at an unprecedented degree via second-generation dark patterns such as the hypernudge and that computational manipulation constitutes a risk for autonomy and different, overlapping, fundamental rights such as privacy, informational self-determination and freedom of thought. However, there is a lack of shared ideas regarding which fundamental rights are violated by computational manipulation and which fundamental rights can protect individuals against it. The right to be let alone and the right to hold and express a thought differ from the right to create a thought, being in control of the decision-making process and free from cognitive interferences operated by computational manipulation. Therefore, this paper argues in favor of recognizing a newly emerged fundamental right, the right to mental self-determination, tailored to the unprecedented abilities of AI-driven manipulative technologies.",
+      "journal": "Frontiers in artificial intelligence",
+      "year": "2023",
+      "doi": "10.1038/551159a",
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ]
+    },
+    {
+      "pmid": "33327487",
+      "title": "Self-Quantification Systems to Support Physical Activity: From Theory to Implementation Principles.",
+      "abstract": "Since the emergence of the quantified self movement, users aim at health behavior change, but only those who are sufficiently motivated and competent with the tools will succeed. Our literature review shows that theoretical models for quantified self exist but they are too abstract to guide the design of effective user support systems. Here, we propose principles linking theory and implementation to arrive at a hierarchical model for an adaptable and personalized self-quantification system for physical activity support. We show that such a modeling approach should include a multi-factors user model (activity, context, personality, motivation), a hierarchy of multiple time scales (week, day, hour), and a multi-criteria decision analysis (user activity preference, user measured activity, external parameters). This theoretical groundwork, which should facilitate the design of more effective solutions, has now to be validated by further empirical research.",
+      "journal": "International journal of environmental research and public health",
+      "year": "2020",
+      "doi": "10.4278/0890-1171-12.1.38",
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Review"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "pmids": [
+    {
+      "pmid": "22612437",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1037/a0028228",
+      "container": "Developmental Psychology",
+      "year": 2013
+    },
+    {
+      "pmid": "27474138",
+      "verified": false,
+      "score": 0.86,
+      "doi": "10.1177/1745691616635612",
+      "container": "Perspectives on Psychological Science",
+      "year": 2016
+    },
+    {
+      "pmid": "27697851",
+      "verified": false,
+      "score": 0.862,
+      "doi": "10.1126/article.62596",
+      "container": "AAAS Articles DO Group",
+      "year": 2021
+    },
+    {
+      "pmid": "25102926",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1037/e524912015-029",
+      "container": "PsycEXTRA Dataset",
+      "year": 2014
+    },
+    {
+      "pmid": "18443283",
+      "verified": false,
+      "score": 0.774,
+      "doi": "10.3410/f.1109007.566174",
+      "container": "Faculty Opinions \u2013 Post-Publication Peer Review of the Biomedical Literature",
+      "year": 2008
+    },
+    {
+      "pmid": "17179457",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1001/jama.296.23.2805",
+      "container": "JAMA",
+      "year": 2006
+    },
+    {
+      "pmid": "24417410",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1111/jgs.12607",
+      "container": "Journal of the American Geriatrics Society",
+      "year": 2014
+    },
+    {
+      "pmid": "25771249",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/s0140-6736(15)60461-5",
+      "container": "The Lancet",
+      "year": 2015
+    },
+    {
+      "pmid": "30073406",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1007/s00426-018-1066-8",
+      "container": "Psychological Research",
+      "year": 2018
+    },
+    {
+      "pmid": "26029120",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.3389/fpsyt.2015.00070",
+      "container": "Frontiers in Psychiatry",
+      "year": 2015
+    },
+    {
+      "pmid": "27238063",
+      "verified": false,
+      "score": 0.66,
+      "doi": "10.37766/inplasy2022.12.0073",
+      "container": "",
+      "year": 2022
+    },
+    {
+      "pmid": "23360949",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1176/appi.ajp.2012.12070991",
+      "container": "American Journal of Psychiatry",
+      "year": 2013
+    },
+    {
+      "pmid": "15689731",
+      "verified": true,
+      "score": 1.0,
+      "doi": "10.1016/s0084-3970(08)70044-6",
+      "container": "Yearbook of Psychiatry and Applied Mental Health",
+      "year": 2006
+    },
+    {
+      "pmid": "12424652",
+      "verified": false,
+      "score": 0.558,
+      "doi": "10.1186/isrctn00767728",
+      "container": "http://isrctn.org/&gt;",
+      "year": 2013
+    }
+  ]
+}
