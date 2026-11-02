@@ -1,49 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-exposure-logging-v1",
+    "task_id": "noesis-trial-dossier-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793634225.861362,
+    "updated_at": 1793634349.8604553,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793634226.77238
+    "completed_at": 1793634350.1902719
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-complete-export-v1",
-      "phase": "superseded",
-      "phase_num": 2,
-      "description": "Superseded by 'noesis-calm-timing-v1' without --complete or --reset",
-      "status": "superseded",
-      "timestamp": 1793630988.6321933,
-      "timestamp_str": "2026-11-02 17:49:48",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-calm-timing-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] R50, ADR-026, BEHAVIORAL 6.22, test-anxiety review row, hide-clock setting with session wiring, 5 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793631466.192783,
-      "timestamp_str": "2026-11-02 17:57:46",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-calm-timing-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] R50, ADR-026, BEHAVIORAL 6.22, test-anxiety review row, hide-clock setting with session wiring, 5 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793631746.9715405,
-      "timestamp_str": "2026-11-02 18:02:26",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-calm-timing-v1",
       "phase": "completed",
@@ -239,6 +207,41 @@
       "status": "completed",
       "timestamp": 1793634226.7723818,
       "timestamp_str": "2026-11-02 18:43:46",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-trial-dossier-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: investigator-facing trial dossier consolidating arms, data schema and safety monitoring",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793634280.0237255,
+      "timestamp_str": "2026-11-02 18:44:40",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "The RCT needs one document stating what each arm does, what each record carries and how safety is monitored; the facts exist but are scattered across ADRs and requirements"
+      }
+    },
+    {
+      "task_id": "noesis-trial-dossier-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] TRIAL_READINESS.md investigator dossier, research index fixed (CyberPulse rename, new row); 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793634349.8604553,
+      "timestamp_str": "2026-11-02 18:45:49",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-trial-dossier-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-trial-dossier-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793634350.1902733,
+      "timestamp_str": "2026-11-02 18:45:50",
       "agent": "kilo:main"
     }
   ]

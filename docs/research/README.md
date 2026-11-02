@@ -38,7 +38,8 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [PRISMA_FLOW.md](PRISMA_FLOW.md) | PRISMA 2020 flow and item-by-item checklist |
 | [SYNTHESIS.md](SYNTHESIS.md) | Main evidence synthesis, population findings, claim ladder |
 | [DESIGN_IMPLICATIONS.md](DESIGN_IMPLICATIONS.md) | Product requirements traceable to evidence |
-| [BEHAVIORAL_ENGAGEMENT.md](BEHAVIORAL_ENGAGEMENT.md) | Bounded Motivation mode integration of CyberPulse behavioral mechanics, with evidence caveats and safeguards |
+| [BEHAVIORAL_ENGAGEMENT.md](BEHAVIORAL_ENGAGEMENT.md) | Bounded Motivation mode integration of Noesis behavioral mechanics, with evidence caveats and safeguards |
+| [TRIAL_READINESS.md](TRIAL_READINESS.md) | Investigator-facing trial dossier: arms, data schema, safety monitoring |
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |
 | [REFERENCES.bib](REFERENCES.bib) | BibTeX for the included records |
