@@ -30,7 +30,7 @@ interface HomeScreenProps {
   onFocusMechanic: (mechanic: MechanicId) => void;
   onStart: () => void;
   onContinue: () => void;
-  onSaveIntention: (when: string, where: string) => void;
+  onSaveIntention: (when: string, where: string, pairing: string) => void;
   onClearIntention: () => void;
   onEvidence: () => void;
   onPauseMotivation: () => void;
@@ -84,12 +84,13 @@ function PracticePlan({
   onClear,
 }: {
   intention: PracticeIntention | null;
-  onSave: (when: string, where: string) => void;
+  onSave: (when: string, where: string, pairing: string) => void;
   onClear: () => void;
 }) {
   const [editing, setEditing] = useState(false);
   const [when, setWhen] = useState(intention?.when ?? "");
   const [where, setWhere] = useState(intention?.where ?? "");
+  const [pairing, setPairing] = useState(intention?.pairing ?? "");
   const showForm = editing || intention === null;
 
   if (!showForm) {
@@ -104,6 +105,7 @@ function PracticePlan({
         <p>
           {intention.when ? <strong>{intention.when}</strong> : "Anytime"}
           {intention.where ? ` · ${intention.where}` : ""}
+          {intention.pairing ? ` · paired with ${intention.pairing}` : ""}
         </p>
         <div className="hero-actions">
           <Button variant="ghost" onClick={() => setEditing(true)}>
@@ -150,14 +152,23 @@ function PracticePlan({
             maxLength={120}
           />
         </label>
+        <label>
+          Pair it with? <span className="muted">(optional)</span>
+          <input
+            value={pairing}
+            onChange={(event) => setPairing(event.target.value)}
+            placeholder="e.g. morning coffee, a podcast"
+            maxLength={120}
+          />
+        </label>
       </div>
       <div className="hero-actions">
         <Button
           onClick={() => {
-            onSave(when, where);
+            onSave(when, where, pairing);
             setEditing(false);
           }}
-          disabled={!when.trim() && !where.trim()}
+          disabled={!when.trim() && !where.trim() && !pairing.trim()}
         >
           Save plan
         </Button>

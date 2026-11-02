@@ -112,8 +112,15 @@ describe("HomeScreen", () => {
     fireEvent.change(form.querySelectorAll("input")[1]!, {
       target: { value: "at the kitchen table" },
     });
+    fireEvent.change(form.querySelectorAll("input")[2]!, {
+      target: { value: "morning coffee" },
+    });
     fireEvent.click(screen.getByRole("button", { name: "Save plan" }));
-    expect(onSaveIntention).toHaveBeenCalledWith("tomorrow at 9am", "at the kitchen table");
+    expect(onSaveIntention).toHaveBeenCalledWith(
+      "tomorrow at 9am",
+      "at the kitchen table",
+      "morning coffee",
+    );
   });
 
   it("shows a saved plan and can clear it", () => {
@@ -121,10 +128,12 @@ describe("HomeScreen", () => {
     const intention: PracticeIntention = {
       when: "tomorrow at 9am",
       where: "at the kitchen table",
+      pairing: "morning coffee",
       updatedAt: "2026-11-01T10:00:00.000Z",
     };
     renderHome({ intention, onClearIntention });
     expect(screen.getByText(/tomorrow at 9am/)).toBeTruthy();
+    expect(screen.getByText(/paired with morning coffee/)).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "Clear" }));
     expect(onClearIntention).toHaveBeenCalledTimes(1);
   });

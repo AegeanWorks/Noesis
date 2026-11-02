@@ -20,6 +20,17 @@ describe("practice intention", () => {
     const saved = saveIntention({ when: "tomorrow at 9am", where: "kitchen table" });
     expect(saved?.when).toBe("tomorrow at 9am");
     expect(loadIntention()?.where).toBe("kitchen table");
+    expect(loadIntention()?.pairing).toBe("");
+  });
+
+  it("saves an optional temptation-bundling pairing", () => {
+    saveIntention({ when: "tomorrow at 9am", where: "kitchen table", pairing: "morning coffee" });
+    expect(loadIntention()?.pairing).toBe("morning coffee");
+  });
+
+  it("reads plans saved before the pairing field existed", () => {
+    writeLocal("noesis.intention.v1", JSON.stringify({ when: "tomorrow", where: "desk" }));
+    expect(loadIntention()).toMatchObject({ when: "tomorrow", where: "desk", pairing: "" });
   });
 
   it("trims whitespace and caps length", () => {

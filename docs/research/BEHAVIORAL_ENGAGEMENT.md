@@ -226,6 +226,10 @@ Two habit records joined the table: habit strength improves with intervention (S
 ### 6.15 Focused retrieval of the weakest link (November 2026)
 The testing and spacing rows (PMIDs 25150680, 16719566) already support the core loop; two education reviews sharpen the prescription without joining the table (no MEDLINE record): Adesope et al. 2017, where practice testing beat restudy with stronger benefits when the lag exceeded a day, and Latimier et al. 2020, where spaced retrieval plus mixed recall-recognition formats beat massed restudy on retention and transfer. Implemented as R43: every mechanic card offers an explicit focus session (three blocks, one task), and home suggests the weakest recent link — spaced retrieval works best on what you almost know. Focus is choice, never lock-in; the full mixed session stays the default.
 
+### 6.16 Temptation bundling in the plan (November 2026)
+
+Milkman et al. 2014 showed gym-only audiobooks lifted visits 51% enforced and 29% self-set (PMID 25843979); a 6,792-person follow-up found audiobooks plus bundling encouragement raised weekly workouts 10-14% with effects persisting 17 weeks (doi 10.1016/j.obhdp.2020.09.003, no MEDLINE record). The app can only offer the self-set version, so R44 adds an optional pairing line to the when-where plan: train with an existing indulgence, stated explicitly at planning time.
+
 ---
 
 ## 7. Safeguards and design rules

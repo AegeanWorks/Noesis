@@ -3,6 +3,7 @@ import { readLocal, removeLocal, writeLocal } from "./browserStorage";
 export interface PracticeIntention {
   when: string;
   where: string;
+  pairing: string;
   updatedAt: string;
 }
 
@@ -20,10 +21,12 @@ export function loadIntention(): PracticeIntention | null {
     const parsed = JSON.parse(raw) as Partial<PracticeIntention>;
     const when = typeof parsed.when === "string" ? clean(parsed.when) : "";
     const where = typeof parsed.where === "string" ? clean(parsed.where) : "";
-    if (!when && !where) return null;
+    const pairing = typeof parsed.pairing === "string" ? clean(parsed.pairing) : "";
+    if (!when && !where && !pairing) return null;
     return {
       when,
       where,
+      pairing,
       updatedAt: typeof parsed.updatedAt === "string" ? parsed.updatedAt : "",
     };
   } catch {
@@ -31,18 +34,22 @@ export function loadIntention(): PracticeIntention | null {
   }
 }
 
-export function saveIntention(
-  input: Omit<PracticeIntention, "updatedAt">,
-): PracticeIntention | null {
+export function saveIntention(input: {
+  when: string;
+  where: string;
+  pairing?: string;
+}): PracticeIntention | null {
   const when = clean(input.when);
   const where = clean(input.where);
-  if (!when && !where) {
+  const pairing = clean(input.pairing ?? "");
+  if (!when && !where && !pairing) {
     clearIntention();
     return null;
   }
   const intention: PracticeIntention = {
     when,
     where,
+    pairing,
     updatedAt: new Date().toISOString(),
   };
   writeLocal(KEY, JSON.stringify(intention));

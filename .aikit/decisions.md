@@ -144,3 +144,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: Spacing and testing rows show retrieval with feedback beats restudy and massing (PMIDs 25150680, 16719566); Adesope 2017 and Latimier et al. 2020 add that delayed retest and mixed formats strengthen the effect. The app could only train all four mechanics at once, so weak material waited for the next full session.
 - **Decision**: Add explicit per-mechanic focus sessions (three blocks, one task, same difficulty/adaptive/motivation machinery) plus a home suggestion naming the weakest recent link. Focus is a choice on every card and in the suggestion; the full mixed session stays the default and the only entry from Start. See R43.
 - **Consequences**: Users re-test exactly what wobbles, spaced by days; history, export, motivation and adaptive logs treat focus sessions identically, so measurement stays clean.
+
+### ADR-020: Optional temptation-bundling pairing in the plan
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: Bundling training with an existing indulgence lifted gym visits 51% enforced and ~10-14% self-set (PMID 25843979 and a 6,792-person follow-up). The intention form captured when and where but never what to pair training with.
+- **Decision**: Add an optional pairing line to the when-where plan, displayed alongside when self-set encouragement is all an app can honestly offer. Backward compatible: old plans load with an empty pairing. See R44.
+- **Consequences**: Planning gains a self-set commitment device without enforcement machinery the app cannot and should not build.
