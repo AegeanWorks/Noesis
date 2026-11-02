@@ -250,11 +250,11 @@ The copyable summary covers the week, but trials and portability need everything
 
 ### 6.22 Calm timing for anxious trainers (November 2026)
 
-A 238-study meta-analysis finds test anxiety negatively related to performance, with self-esteem protective and perceived difficulty and stakes raising anxiety (PMID 29156362); untimed conditions beat timed ones, most for high-anxious test-takers. Implemented as R50: an opt-in hide-the-clock setting, default off. The timer still paces sessions underneath; only its display is suppressed. Low stakes stay structural: practice framing, no diagnosis, no composite score.
+A 238-study meta-analysis finds test anxiety negatively related to performance, with self-esteem protective and perceived difficulty and stakes raising anxiety (PMID 29156362); untimed conditions beat timed ones, most for high-anxious test-takers. Implemented as R50: an opt-in hide-the-clock setting, default off. The timer still paces sessions underneath; only the display is suppressed. Low stakes stay structural: practice framing, no diagnosis, no composite score.
 
-### 6.22 Calm timing for anxious trainers (November 2026)
+### 6.23 Exposure logging makes arms auditable (November 2026)
 
-A 238-study meta-analysis finds test anxiety negatively related to performance, with self-esteem protective and perceived difficulty and stakes raising anxiety (PMID 29156362); untimed conditions beat timed ones, most for high-anxious test-takers. Implemented as R50: an opt-in hide-the-clock setting, default off. The timer still paces sessions underneath; only its display is suppressed. Low stakes stay structural: practice framing, no diagnosis, no composite score.
+A trial arm difference that cannot be audited in the data does not exist for analysis. Implemented as R51: every completed session records its engagement exposure (bonus schedule, banked total, finisher, per-block tiers) and the export carries the adaptation log alongside sessions, far checks and symptom reports.
 
 ---
 

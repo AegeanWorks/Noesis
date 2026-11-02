@@ -193,3 +193,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: Test anxiety is negatively related to performance and perceived time pressure raises it (238-study meta-analysis, PMID 29156362); untimed conditions beat timed ones, most for high-anxious trainers. The session always displayed elapsed/target time with no way to suppress it.
 - **Decision**: Add an opt-in "Hide the session clock" display setting, default off. Timing still paces the session underneath; only the display is suppressed. See R50.
 - **Consequences**: Anxious trainers can remove the ticking clock without changing what the session measures; the default experience is unchanged.
+
+### ADR-027: Per-session engagement exposure and adaptation-log export
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: The trial manipulates bonus schedules and finisher bonuses, but completed sessions recorded neither the schedule used nor the bonuses earned, and the adaptation log never left the device — the manipulation was unverifiable.
+- **Decision**: Record per-session engagement exposure (schedule, banked total, finisher, per-block tiers) on every completed session and include the adaptation log in the export. Additive and backward compatible. See R51.
+- **Consequences**: Arm differences are auditable per participant; dose-response analysis has the adaptation trajectory without extra collection.

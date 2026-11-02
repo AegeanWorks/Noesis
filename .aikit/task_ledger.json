@@ -1,65 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-arm-schedule-proof-v1",
+    "task_id": "noesis-exposure-logging-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793633733.0883906,
+    "updated_at": 1793634225.861362,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793633733.633613
+    "completed_at": 1793634226.77238
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-complete-export-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] R49, ADR-025, BEHAVIORAL 6.21, export carries sessions plus far checks plus symptom reports; 236 Vitest + 29 Python green, 6/6 gates, settings screenshot clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793630880.0475807,
-      "timestamp_str": "2026-11-02 17:48:00",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-complete-export-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-complete-export-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793630880.3607507,
-      "timestamp_str": "2026-11-02 17:48:00",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-complete-export-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "Correction: suite total is 235 Vitest (not 236 as recorded above); all green",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793630901.5362723,
-      "timestamp_str": "2026-11-02 17:48:21",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-calm-timing-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: optional clock hiding grounded in test-anxiety meta-analysis",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793630988.6321933,
-      "timestamp_str": "2026-11-02 17:49:48",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Anxiety impairs performance and perceived time pressure raises anxiety (238-study meta-analysis); untimed beats timed, most for the anxious",
-        "benefits": "anxious and older users can train without a ticking clock; default unchanged",
-        "mitigation": "display-only toggle, default off; no timing logic changes; lint-checked copy"
-      }
-    },
     {
       "task_id": "noesis-complete-export-v1",
       "phase": "superseded",
@@ -239,6 +191,54 @@
       "status": "completed",
       "timestamp": 1793633733.6336145,
       "timestamp_str": "2026-11-02 18:35:33",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-exposure-logging-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: log per-session engagement exposure and export the adaptation log",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793633987.4321973,
+      "timestamp_str": "2026-11-02 18:39:47",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "The RCT manipulates bonus schedule and finisher, but sessions record neither the schedule used nor the bonuses earned, and the adaptation log never leaves the device: the manipulation is unverifiable",
+        "benefits": "every session carries its schedule, banked total and finisher; export adds the adaptation trajectory",
+        "mitigation": "additive optional fields; defaults null/empty; no behavior change"
+      }
+    },
+    {
+      "task_id": "noesis-exposure-logging-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] R51, ADR-027, per-session motivation exposure, adaptation log export, journey assertions; 8 new tests",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793634139.876003,
+      "timestamp_str": "2026-11-02 18:42:19",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-exposure-logging-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] R51, ADR-027, exposure recorded per session, adaptation log exported; 241 Vitest + 29 Python green, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793634225.861362,
+      "timestamp_str": "2026-11-02 18:43:45",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-exposure-logging-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-exposure-logging-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793634226.7723818,
+      "timestamp_str": "2026-11-02 18:43:46",
       "agent": "kilo:main"
     }
   ]

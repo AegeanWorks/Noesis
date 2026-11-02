@@ -1,6 +1,14 @@
 import type { MechanicResult } from "../engine/types";
+import type { BonusSchedule, BonusTier } from "../engine/motivation";
 import type { StudyArm } from "./study";
 import { readLocal, removeLocal, writeLocal } from "./browserStorage";
+
+export interface MotivationExposure {
+  banked: number;
+  schedule: BonusSchedule;
+  completionBonus: number;
+  tiers: BonusTier[];
+}
 
 export interface SessionRecord {
   id: string;
@@ -8,6 +16,7 @@ export interface SessionRecord {
   seed: number;
   results: MechanicResult[];
   arm?: StudyArm | null;
+  motivation?: MotivationExposure | null;
 }
 
 const KEY = "noesis.history.v1";

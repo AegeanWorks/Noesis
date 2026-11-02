@@ -136,7 +136,6 @@ export function App() {
   useEffect(() => {
     if (state?.phase !== "complete" || state.results.length === 0) return;
     clearSessionSnapshot();
-    setMotivation((current) => (current ? bankMotivation(current) : current));
     const id = stableHash({ seed: state.config.seed, results: state.results });
     if (savedSession.current !== id) {
       savedSession.current = id;
@@ -146,9 +145,8 @@ export function App() {
       setStudy(enrolled);
       const finisher =
         enrolled.enrolled && enrolled.arm === "engagement" ? FINISHER_BONUS : 0;
-      setMotivation((current) =>
-        current ? finishSessionMotivation(current, finisher) : current,
-      );
+      const finished = motivation ? finishSessionMotivation(motivation, finisher) : null;
+      setMotivation(finished);
       setHistory(
         appendSession({
           id,
@@ -156,6 +154,14 @@ export function App() {
           seed: state.config.seed,
           results: state.results,
           arm: enrolled.enrolled ? enrolled.arm : null,
+          motivation: finished
+            ? {
+                banked: finished.banked,
+                schedule: finished.schedule,
+                completionBonus: finished.completionBonus,
+                tiers: finished.outcomes.map((outcome) => outcome.tier),
+              }
+            : null,
         }),
       );
     }
@@ -277,7 +283,11 @@ export function App() {
       study.enrolled && study.studyId && study.arm && study.consentedAt
         ? { studyId: study.studyId, arm: study.arm, consentedAt: study.consentedAt }
         : null,
-      { farChecks: loadFarChecks(), adverseEvents: loadAdverseEvents() },
+      {
+        farChecks: loadFarChecks(),
+        adverseEvents: loadAdverseEvents(),
+        adaptationLog: loadAdaptive().log,
+      },
     );
   }, [history, study]);
 

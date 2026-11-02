@@ -1,6 +1,7 @@
 import type { SessionRecord } from "./history";
 import { startOfWeek, weekStats } from "./history";
 import type { StudyArm } from "./study";
+import type { AdaptationEvent } from "./adaptive";
 import type { FarCheck } from "./farChecks";
 import type { AdverseEvent } from "./adverseEvents";
 
@@ -19,11 +20,13 @@ export interface HistoryExport {
   study: StudyExport | null;
   farChecks: FarCheck[];
   adverseEvents: AdverseEvent[];
+  adaptationLog: AdaptationEvent[];
 }
 
 export interface ExportExtras {
   farChecks?: readonly FarCheck[];
   adverseEvents?: readonly AdverseEvent[];
+  adaptationLog?: readonly AdaptationEvent[];
 }
 
 export function buildHistoryExport(
@@ -41,6 +44,7 @@ export function buildHistoryExport(
     study: study,
     farChecks: [...(extras.farChecks ?? [])],
     adverseEvents: [...(extras.adverseEvents ?? [])],
+    adaptationLog: [...(extras.adaptationLog ?? [])],
   };
   return `${JSON.stringify(payload, null, 2)}\n`;
 }

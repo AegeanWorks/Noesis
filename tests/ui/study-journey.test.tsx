@@ -63,6 +63,11 @@ describe("trial data path", () => {
     const history = loadHistory();
     expect(history).toHaveLength(1);
     expect(history[0]?.arm).toBe("engagement");
+    const exposure = history[0]?.motivation;
+    expect(exposure?.completionBonus).toBe(15);
+    expect(exposure?.schedule).toEqual({ steadyUpTo: 0.6, boostUpTo: 0.85 });
+    expect(exposure?.banked).toBeGreaterThan(0);
+    expect(exposure?.tiers.length).toBeGreaterThan(0);
     const momentum = screen.getByTestId("momentum-summary");
     expect(momentum.textContent).toMatch(/finisher bonus/i);
     expect(momentum.textContent).toContain("+15");
@@ -89,6 +94,10 @@ describe("trial data path", () => {
     fireEvent.click(screen.getByTestId("start-session"));
     completeSession();
     expect(screen.getByTestId("momentum-summary").textContent).toMatch(/block 1 · rare/i);
+    expect(loadHistory()[0]?.motivation).toMatchObject({
+      schedule: { steadyUpTo: 0.6, boostUpTo: 0.85 },
+      completionBonus: 15,
+    });
     cleanup();
     sessionStore.reset();
     clearHistory();
@@ -98,5 +107,9 @@ describe("trial data path", () => {
     fireEvent.click(screen.getByTestId("start-session"));
     completeSession();
     expect(screen.getByTestId("momentum-summary").textContent).toMatch(/block 1 · boost/i);
+    expect(loadHistory()[0]?.motivation).toMatchObject({
+      schedule: { steadyUpTo: 0.7, boostUpTo: 0.9 },
+      completionBonus: 0,
+    });
   });
 });

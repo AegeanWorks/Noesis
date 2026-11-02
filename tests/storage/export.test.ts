@@ -89,10 +89,24 @@ describe("history export", () => {
     expect((parsed.adverseEvents as unknown[]).length).toBe(1);
   });
 
-  it("defaults to empty far and safety sections", () => {
+  it("defaults far checks, symptom reports and the adaptation log to empty", () => {
     const parsed = JSON.parse(buildHistoryExport([])) as Record<string, unknown>;
     expect(parsed.farChecks).toEqual([]);
     expect(parsed.adverseEvents).toEqual([]);
+    expect(parsed.adaptationLog).toEqual([]);
+  });
+
+  it("carries the adaptation log for dose-response analysis", () => {
+    const parsed = JSON.parse(
+      buildHistoryExport([], null, new Date("2026-11-01T12:00:00.000Z"), {
+        adaptationLog: [
+          { at: "2026-11-01T10:00:00.000Z", mechanic: "nback", from: 2, to: 3, accuracy: 0.9 },
+        ],
+      }),
+    ) as Record<string, unknown>;
+    expect(parsed.adaptationLog).toEqual([
+      { at: "2026-11-01T10:00:00.000Z", mechanic: "nback", from: 2, to: 3, accuracy: 0.9 },
+    ]);
   });
 
   it("summarises the calendar week for sharing", () => {
