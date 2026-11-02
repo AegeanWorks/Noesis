@@ -164,6 +164,9 @@ describe("HomeScreen", () => {
     entry.finishedAt = new Date().toISOString();
     renderHome({ history: [entry], week: { sessions: 3, days: 2, minutes: 24 }, weeklyGoal: 3 });
     expect(screen.getByTestId("weekly-goal").textContent).toMatch(/2 of 3 days.*one more day/i);
+    const bar = screen.getByTestId("weekly-goal-bar");
+    expect(bar.querySelectorAll(".dot").length).toBe(3);
+    expect(bar.querySelectorAll(".dot-active").length).toBe(2);
     cleanup();
     renderHome({ history: [entry], week: { sessions: 4, days: 3, minutes: 32 }, weeklyGoal: 3 });
     expect(screen.getByTestId("weekly-goal").textContent).toMatch(/goal met/i);

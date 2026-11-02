@@ -261,6 +261,19 @@ function PracticeSummary({
             ? `Weekly goal: ${week.days} of ${weeklyGoal} days — one more day hits it.`
             : `Weekly goal: ${Math.min(week.days, weeklyGoal)} of ${weeklyGoal} practice days.`}
       </p>
+      <div
+        className="goalbar"
+        role="img"
+        aria-label={`Weekly goal progress: ${Math.min(week.days, weeklyGoal)} of ${weeklyGoal} days`}
+        data-testid="weekly-goal-bar"
+      >
+        {Array.from({ length: weeklyGoal }, (_, index) => (
+          <span
+            key={index}
+            className={index < Math.min(week.days, weeklyGoal) ? "dot dot-active" : "dot"}
+          />
+        ))}
+      </div>
       {!todayActive && !yesterdayActive && priorActive ? (
         <p className="fine" data-testid="slip-recovery">
           Yesterday slipped — that doesn&apos;t reset anything. One session today keeps

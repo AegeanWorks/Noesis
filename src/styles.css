@@ -857,6 +857,12 @@ code {
   margin-top: 12px;
 }
 
+.goalbar {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
 .dot {
   width: 12px;
   height: 12px;
