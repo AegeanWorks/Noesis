@@ -366,6 +366,8 @@ export function HomeScreen({
   onDismissHeavyUse,
   onDismissMilestones,
 }: HomeScreenProps) {
+  const lapsed =
+    history.length > 0 && !lastDaysActivity(history).some((day) => day.active);
   return (
     <section className="screen home-screen">
       <div className="hero">
@@ -400,6 +402,16 @@ export function HomeScreen({
 
       <PracticePlan intention={intention} weeklyGoal={weeklyGoal} onSave={onSaveIntention} onClear={onClearIntention} />
       <PracticeSummary history={history} week={week} today={today} studyArm={studyArm} weeklyGoal={weeklyGoal} />
+
+      {lapsed ? (
+        <section className="notice" data-testid="welcome-back">
+          <h3>Welcome back</h3>
+          <p>
+            It has been a while — that is a lapse, not a relapse. One short session today
+            restarts the habit; nothing was lost.
+          </p>
+        </section>
+      ) : null}
 
       {heavyUse && !heavyUseDismissed ? (
         <HeavyUseNotice

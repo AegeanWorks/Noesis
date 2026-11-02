@@ -248,4 +248,19 @@ describe("HomeScreen", () => {
     renderHome({ farCheckDue: false, onStartFarCheck });
     expect(screen.queryByTestId("far-check-card")).toBeNull();
   });
+
+  it("welcomes back lapsers without shaming fresh or active users", () => {
+    const old = record(70);
+    old.finishedAt = new Date(Date.now() - 20 * 24 * 60 * 60 * 1000).toISOString();
+    renderHome({ history: [old] });
+    expect(screen.getByTestId("welcome-back").textContent).toMatch(/lapse, not a relapse/i);
+    cleanup();
+    const fresh = record(80);
+    fresh.finishedAt = new Date().toISOString();
+    renderHome({ history: [fresh] });
+    expect(screen.queryByTestId("welcome-back")).toBeNull();
+    cleanup();
+    renderHome({ history: [] });
+    expect(screen.queryByTestId("welcome-back")).toBeNull();
+  });
 });
