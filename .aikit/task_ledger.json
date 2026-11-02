@@ -1,73 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-prompts-row-v1",
+    "task_id": "noesis-interleaving-row-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793634734.8116465,
+    "updated_at": 1793635104.0902615,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793634735.0988028
+    "completed_at": 1793635104.3710012
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-welcome-back-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-welcome-back-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793632915.946085,
-      "timestamp_str": "2026-11-02 18:21:55",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-last-check-line-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: surface the most recent far check on Home",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793633163.421444,
-      "timestamp_str": "2026-11-02 18:26:03",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Completed far checks vanished from the UI; only the export carried them. The last result deserves one honest line where practice lives."
-      }
-    },
-    {
-      "task_id": "noesis-last-check-line-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] Last far-check line on Home; 238 Vitest + 29 Python green, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793633207.515935,
-      "timestamp_str": "2026-11-02 18:26:47",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-last-check-line-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-last-check-line-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793633207.8376837,
-      "timestamp_str": "2026-11-02 18:26:47",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-open-questions-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: close Q5 as implemented-by-choice; cover adaptive x focus interaction",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793633275.1171136,
-      "timestamp_str": "2026-11-02 18:27:55",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-open-questions-v1",
       "phase": "phase 2",
@@ -240,6 +184,66 @@
       "status": "completed",
       "timestamp": 1793634735.0988042,
       "timestamp_str": "2026-11-02 18:52:15",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-interleaving-row-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: interleaving review row grounding the default mixed lineup",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793634836.2215722,
+      "timestamp_str": "2026-11-02 18:53:56",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Default sessions interleave four mechanics while focus sessions deliberately block one; the g=0.42 interleaving advantage (and g=-0.39 reversal for words) was untraced"
+      }
+    },
+    {
+      "task_id": "noesis-interleaving-row-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] Row added, R52 recorded, counts synced; 228 Vitest + 29 Python green",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793634836.6278012,
+      "timestamp_str": "2026-11-02 18:53:56",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-interleaving-row-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: interleaving review row grounding the default mixed lineup",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793634881.8070424,
+      "timestamp_str": "2026-11-02 18:54:41",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Default sessions interleave four mechanics while focus sessions deliberately block one; the g=0.42 interleaving advantage (and g=-0.39 reversal for words) was untraced"
+      }
+    },
+    {
+      "task_id": "noesis-interleaving-row-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] R52, ADR-028, BEHAVIORAL 6.25, 111-record table; 241 Vitest + 29 Python green, 6/6 gates; grounding test caught stale 110 count twice; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793635104.0902615,
+      "timestamp_str": "2026-11-02 18:58:24",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-interleaving-row-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-interleaving-row-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793635104.3710027,
+      "timestamp_str": "2026-11-02 18:58:24",
       "agent": "kilo:main"
     }
   ]

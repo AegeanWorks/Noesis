@@ -6804,6 +6804,48 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "In-app notices already implement the supported mechanism (milestones, far-check due, goal nudges); push delivery stays out — borderline evidence plus autonomy risk."
+  },
+  {
+   "pmid": "31556629",
+   "doi": "10.1037/bul0000209",
+   "doi_status": "verified",
+   "year": 2019,
+   "journal": "Psychological Bulletin",
+   "title": "Similarity matters: A meta-analysis of interleaved learning and its moderators.",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 59,
+   "n": null,
+   "comparators": [
+    "active"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.42,
+     "ci_low": 0.34,
+     "ci_high": 0.5,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "59 studies, 238 effects; strongest for complex visual material and high between-category similarity; blocking wins for word lists (g=-0.39)"
+    }
+   ],
+   "findings": [
+    "Interleaved beats blocked schedules for inductive learning (g=0.42)",
+    "Word-list materials reverse the effect: blocked study wins"
+   ],
+   "limitations": [
+    "Mostly laboratory concept-learning studies",
+    "Material-dependent"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Default sessions interleave four mechanics; focus sessions are the deliberate blocked exception. Blocked word study in the far check matches the word-list finding."
   }
  ]
 }

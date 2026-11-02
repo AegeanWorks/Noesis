@@ -120,10 +120,10 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 110 |
-| Outcomes | 271 |
-| Primary outcomes | 220 |
-| Systematic reviews/meta-analyses | 64 |
+| Records | 111 |
+| Outcomes | 272 |
+| Primary outcomes | 221 |
+| Systematic reviews/meta-analyses | 65 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 20 |
 | RCTs | 6 |
@@ -178,7 +178,9 @@ Two mental-contrasting records joined the table the same day (PMIDs 34054628, 30
 
 One test-anxiety record joined the table the same day (PMID 29156362, 238 studies): anxiety is negatively related to performance and perceived pressure raises it; untimed beats timed, most for anxious test-takers. It grounds R50 (hide the clock) and the low-stakes framing throughout.
 
-One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism.
+One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
+
+One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
 
 ## 10. Tooling and commands
 

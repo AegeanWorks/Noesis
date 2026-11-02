@@ -200,3 +200,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: The trial manipulates bonus schedules and finisher bonuses, but completed sessions recorded neither the schedule used nor the bonuses earned, and the adaptation log never left the device — the manipulation was unverifiable.
 - **Decision**: Record per-session engagement exposure (schedule, banked total, finisher, per-block tiers) on every completed session and include the adaptation log in the export. Additive and backward compatible. See R51.
 - **Consequences**: Arm differences are auditable per participant; dose-response analysis has the adaptation trajectory without extra collection.
+
+### ADR-028: Interleaved default lineup, blocked focus sessions
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: A 59-study meta-analysis finds interleaved schedules beat blocked ones for inductive learning (g=0.42), strongest for complex similar material — but word lists reverse the effect (PMID 31556629). The app already matches both halves without ever stating the rule.
+- **Decision**: Record the lineup rule explicitly (R52): default sessions interleave the four mechanics; focus sessions deliberately block one; the far check studies its words blocked. No product change — the code already does this.
+- **Consequences**: Any future refactor of session construction must preserve the interleaved default deliberately, not accidentally.

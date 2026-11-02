@@ -383,4 +383,4 @@ Noesis should be built to prove itself, not to assume the claim.
 
 ## 18. References
 
-All 110 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).
+All 111 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).
