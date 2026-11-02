@@ -277,6 +277,7 @@ export function App() {
       study.enrolled && study.studyId && study.arm && study.consentedAt
         ? { studyId: study.studyId, arm: study.arm, consentedAt: study.consentedAt }
         : null,
+      { farChecks: loadFarChecks(), adverseEvents: loadAdverseEvents() },
     );
   }, [history, study]);
 

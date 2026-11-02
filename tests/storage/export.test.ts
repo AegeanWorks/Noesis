@@ -56,6 +56,45 @@ describe("history export", () => {
     });
   });
 
+  it("carries far checks and symptom reports in the same file", () => {
+    const parsed = JSON.parse(
+      buildHistoryExport([], null, new Date("2026-11-01T12:00:00.000Z"), {
+        farChecks: [
+          {
+            id: "far-1",
+            finishedAt: "2026-11-01T10:00:00.000Z",
+            seed: 3,
+            studied: 8,
+            tested: 16,
+            hits: 5,
+            falseAlarms: 3,
+            accuracy: 0.625,
+            arm: "control",
+          },
+        ],
+        adverseEvents: [
+          {
+            id: "ae-1",
+            reportedAt: "2026-11-01T11:00:00.000Z",
+            sessionId: null,
+            symptoms: ["headache"],
+            severity: "mild",
+            note: "",
+            stoppedSession: false,
+          },
+        ],
+      }),
+    ) as Record<string, unknown>;
+    expect((parsed.farChecks as unknown[]).length).toBe(1);
+    expect((parsed.adverseEvents as unknown[]).length).toBe(1);
+  });
+
+  it("defaults to empty far and safety sections", () => {
+    const parsed = JSON.parse(buildHistoryExport([])) as Record<string, unknown>;
+    expect(parsed.farChecks).toEqual([]);
+    expect(parsed.adverseEvents).toEqual([]);
+  });
+
   it("summarises the calendar week for sharing", () => {
     const sessions = [
       {

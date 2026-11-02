@@ -179,3 +179,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: R7 requires far transfer measured separately; the landmark reviews find it absent or fragile (PMIDs 27697851, 27474138). The app measured near transfer only, so it could neither detect nor honestly deny far transfer, and the RCT lacked a far outcome.
 - **Decision**: Add an 8-word study plus 16-trial recognition check on its own screen, store (capped at 12) and 30-day schedule, triggered from a Home card only when due. Results never enter practice history, motivation, adaptive or weekly-goal math; sessions carry the trial arm. The copy states the base rate up front. See R48.
 - **Consequences**: The app can now report "practice does not reach word memory (so far)" as a measured fact rather than a cited one; the check doubles as the trial's far outcome with zero changes.
+
+### ADR-025: The export carries the whole record
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: The portable export carried practice sessions only; far checks and symptom reports were stranded on-device despite R38/R46 promising a complete trial record.
+- **Decision**: Add optional farChecks and adverseEvents arrays to the JSON export (additive, default empty; old exports parse unchanged) and fill them at export time. See R49.
+- **Consequences**: One file is the complete portable record; trial analysis needs no device access beyond the user's own export.

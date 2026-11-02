@@ -244,6 +244,10 @@ Two MCII reviews joined the table: mental contrasting with implementation intent
 
 The landmark reviews say far transfer is absent or fragile (PMIDs 27697851, 27474138) — so the app stops implying it and starts measuring it. Implemented as R48: a monthly 8-word study plus 16-trial old/new recognition check on its own screen, store and 30-day schedule, never mixed into practice metrics. It states the base rate up front (reviews usually find no transfer) so a low score reads as data, not failure. Sessions carry the trial arm, making it a ready far outcome for the RCT.
 
+### 6.21 The export is the whole record (November 2026)
+
+The copyable summary covers the week, but trials and portability need everything: R49 puts practice sessions, far checks and symptom reports — each arm-tagged where applicable — into the single JSON export. Nothing stays stranded on-device.
+
 ---
 
 ## 7. Safeguards and design rules

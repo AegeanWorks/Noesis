@@ -1,6 +1,8 @@
 import type { SessionRecord } from "./history";
 import { startOfWeek, weekStats } from "./history";
 import type { StudyArm } from "./study";
+import type { FarCheck } from "./farChecks";
+import type { AdverseEvent } from "./adverseEvents";
 
 export interface StudyExport {
   studyId: string;
@@ -15,12 +17,20 @@ export interface HistoryExport {
   sessionCount: number;
   sessions: SessionRecord[];
   study: StudyExport | null;
+  farChecks: FarCheck[];
+  adverseEvents: AdverseEvent[];
+}
+
+export interface ExportExtras {
+  farChecks?: readonly FarCheck[];
+  adverseEvents?: readonly AdverseEvent[];
 }
 
 export function buildHistoryExport(
   sessions: readonly SessionRecord[],
   study: StudyExport | null = null,
   exportedAt: Date = new Date(),
+  extras: ExportExtras = {},
 ): string {
   const payload: HistoryExport = {
     app: "noesis",
@@ -29,6 +39,8 @@ export function buildHistoryExport(
     sessionCount: sessions.length,
     sessions: [...sessions],
     study: study,
+    farChecks: [...(extras.farChecks ?? [])],
+    adverseEvents: [...(extras.adverseEvents ?? [])],
   };
   return `${JSON.stringify(payload, null, 2)}\n`;
 }
@@ -56,8 +68,11 @@ export function buildWeekSummaryText(
 export function downloadHistoryExport(
   sessions: readonly SessionRecord[],
   study: StudyExport | null = null,
+  extras: ExportExtras = {},
 ): void {
-  const blob = new Blob([buildHistoryExport(sessions, study)], { type: "application/json" });
+  const blob = new Blob([buildHistoryExport(sessions, study, new Date(), extras)], {
+    type: "application/json",
+  });
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
