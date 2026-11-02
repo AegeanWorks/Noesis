@@ -214,3 +214,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: Technology-based prompts beat no strategy (RR 1.27), best for new content sent early (PMID 26747176) — but the effect is borderline and heterogeneous, and unsolicited push would trade against the autonomy the whole design protects.
 - **Decision**: No push channel, inbox or badge is built or planned. Milestones, far-check due cards and weekly-goal nudges already implement the supported mechanism with consent-by-opening. See R53.
 - **Consequences**: Engagement prompts stay inside sessions the user opened; any future prompt proposal must clear both a stronger evidence bar and the autonomy test.
+
+### ADR-030: Older-adult touch-target hardening with no claim change
+- **Date**: 2026-11-03
+- **Status**: Accepted
+- **Context**: R33 requires interactive targets of at least 44px for older adults. Audit found `.btn` and mechanic buttons already pass (46-56px) but `.nav`, `.brand`, `.choice`, `.check` labels and unstyled Settings inputs did not guarantee 44px.
+- **Decision**: CSS-only pass in `src/styles.css`: 44px minimum on nav/brand/choice/check labels and Settings text/select controls. No engine, storage, Motivation or copy change; display modes (large text, high contrast, reduced motion) and hide-clock behavior unchanged.
+- **Consequences**: All touched screens meet the 44px floor without layout or claim drift. Future interactive controls must keep the same floor; verification is manual audit plus `ui:shots` screenshots, not jsdom computed styles.
