@@ -1,54 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-trial-dossier-v1",
+    "task_id": "noesis-prompts-row-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793634349.8604553,
+    "updated_at": 1793634734.8116465,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793634350.1902719
+    "completed_at": 1793634735.0988028
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-calm-timing-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-calm-timing-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793631747.9347587,
-      "timestamp_str": "2026-11-02 18:02:27",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-welcome-back-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: welcome-back notice after 14+ day absence (lapse vs relapse framing)",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793632633.8375258,
-      "timestamp_str": "2026-11-02 18:17:13",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Slip recovery covers a missed yesterday; a missed fortnight currently meets silence, which reads as failure and invites full relapse (Marlatt lapse-relapse distinction)",
-        "benefits": "lapsed users get warmth and a light re-entry instead of a blank slate",
-        "mitigation": "display-only derivation from existing history; no state; no streak reset anywhere"
-      }
-    },
-    {
-      "task_id": "noesis-welcome-back-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] Lapse-not-relapse notice for 14+ day absences, 238 Vitest + 29 Python green, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793632915.2296734,
-      "timestamp_str": "2026-11-02 18:21:55",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-welcome-back-v1",
       "phase": "completed",
@@ -242,6 +205,41 @@
       "status": "completed",
       "timestamp": 1793634350.1902733,
       "timestamp_str": "2026-11-02 18:45:50",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-prompts-row-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: add engagement-prompts review row and document the no-push decision",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793634436.0373886,
+      "timestamp_str": "2026-11-02 18:47:16",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Technology prompts raise engagement (RR 1.27) but evidence is borderline-heterogeneous and push delivery risks autonomy; in-app new-content notices already implement the supported mechanism"
+      }
+    },
+    {
+      "task_id": "noesis-prompts-row-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] Prompts row (PMID 26747176), narrative scope decision, in-app count synced to 110; 228 Vitest + 29 Python green, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793634734.8116465,
+      "timestamp_str": "2026-11-02 18:52:14",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-prompts-row-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-prompts-row-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793634735.0988042,
+      "timestamp_str": "2026-11-02 18:52:15",
       "agent": "kilo:main"
     }
   ]

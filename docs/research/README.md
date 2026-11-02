@@ -2,7 +2,7 @@
 
 **Status:** v1.0 complete, AI-assisted, internally pre-registered  
 **Search date:** 2026-10-31  
-**Records:** 109 included (87 primary, 22 context), 270 outcomes  
+**Records:** 110 included (88 primary, 22 context), 271 outcomes  
 **Review type:** PRISMA 2020 systematic umbrella review with landmark-RCT update
 
 ---
@@ -43,7 +43,7 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |
 | [REFERENCES.bib](REFERENCES.bib) | BibTeX for the included records |
-| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (109 records, 270 outcomes) |
+| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (110 records, 271 outcomes) |
 | [analysis/screening_reviews.csv](analysis/screening_reviews.csv) | Rule-based screen of the 1,495-review PubMed corpus |
 | [analysis/screening_summary.json](analysis/screening_summary.json) | Screening counts |
 | [records/](records/) | Raw PubMed, OpenAlex, trial-registry and metadata-verification records |

@@ -256,6 +256,10 @@ A 238-study meta-analysis finds test anxiety negatively related to performance, 
 
 A trial arm difference that cannot be audited in the data does not exist for analysis. Implemented as R51: every completed session records its engagement exposure (bonus schedule, banked total, finisher, per-block tiers) and the export carries the adaptation log alongside sessions, far checks and symptom reports.
 
+### 6.24 Prompts work, push stays out (November 2026)
+
+Technology-based prompts raise engagement (RR 1.27, 14 trials, PMID 26747176), especially new-content prompts sent early — but the effect is borderline and heterogeneous, and unsolicited push interrupts the autonomy the whole design protects. Implemented as restraint, not a feature: the in-app notices (milestone unlocks, far-check due, weekly-goal nudges) already are new-content prompts delivered with consent-by-opening; no push channel is built. See R22.
+
 ---
 
 ## 7. Safeguards and design rules

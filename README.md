@@ -132,7 +132,8 @@ noesis/
 │   ├── SAFETY_AND_REGULATION.md  <- safety and regulatory constraints
 │   ├── SEARCH_LOG.md             <- search execution counts
 │   ├── SEARCH_STRATEGY.md        <- exact search strings
-│   └── SYNTHESIS.md              <- main evidence synthesis
+│   ├── SYNTHESIS.md              <- main evidence synthesis
+│   └── TRIAL_READINESS.md        <- investigator-facing trial dossier
 ├── public/                       <- PWA manifest and icons
 ├── scripts/                      <- AI simulator, determinism verifier, Android build, combined tests
 ├── src/

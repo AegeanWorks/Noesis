@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 109 |
-| Outcomes | 270 |
-| Primary outcomes | 219 |
-| Systematic reviews/meta-analyses | 63 |
+| Records | 110 |
+| Outcomes | 271 |
+| Primary outcomes | 220 |
+| Systematic reviews/meta-analyses | 64 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 20 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 98 |
+| DOI verified | 99 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -143,7 +143,7 @@ By modality:
 | ave | 6 |
 | multi_intervention | 5 |
 | safety | 6 |
-| engagement | 22 |
+| engagement | 23 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 97 |
+| DOI verified | 99 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **109** |
+| **Total** | **110** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -166,7 +166,7 @@ Four further records closed dangling DESIGN_IMPLICATIONS citations the same day:
 
 Three incentive-design records joined the table the same day (PMIDs 36367428, 24618584, 25933128): identifiers confirmed via `esummary`, DOIs matched. Two further mechanism sources stayed narrative-only by the same rule: the reward-memory review (PMID 26657967, structured narrative review) and the deposit-contract app RCT (PMID 36201384, a primary trial whose loss-frame-backfire and low-uptake warnings shaped R39).
 
-Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 30427874): specific goals (g=1.11), multi-component goal setting (d=0.55, daily-plus-weekly best) and implementation intentions with reinforcement (SMD 0.25). The goal-gradient mechanism (Kivetz et al., primary studies) stays narrative-only by the same rule and shapes the one-session-short nudge in R40. One planning-interventions record joined the table the same day (PMID 35742582, 41 RCTs, SMD 0.35): identifier confirmed via esummary, DOI matched.
+Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 30427874): specific goals (g=1.11), multi-component goal setting (d=0.55, daily-plus-weekly best) and implementation intentions with reinforcement (SMD 0.25). The goal-gradient mechanism (Kivetz et al., primary studies) stays narrative-only by the same rule and shapes the one-session-short nudge in R40.
 
 Two retrieval-practice records joined the table the same day (PMIDs 25150680, 16719566): testing beats restudy (g=0.50) and spaced beats massed at every retention interval. Two education-journal reviews stayed narrative-only (Adesope 2017; Latimier et al. 2020: no MEDLINE record) but converge on the same prescription with moderators that shaped R41: stronger effects when test lags study by more than a day, and mixed recall-recognition formats best.
 
@@ -177,6 +177,8 @@ One planning-interventions record joined the table the same day (PMID 35742582, 
 Two mental-contrasting records joined the table the same day (PMIDs 34054628, 30879403): MCII improves goal attainment (g=0.34) and mental contrasting alone improves health behaviour (g=0.28); interactive formation (g=0.47) beats document delivery (g=0.28), which calibrates the app-facing claims in R47.
 
 One test-anxiety record joined the table the same day (PMID 29156362, 238 studies): anxiety is negatively related to performance and perceived pressure raises it; untimed beats timed, most for anxious test-takers. It grounds R50 (hide the clock) and the low-stakes framing throughout.
+
+One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism.
 
 ## 10. Tooling and commands
 

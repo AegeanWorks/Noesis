@@ -6762,6 +6762,48 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "Untimed beats timed, most for the anxious: offer a hide-the-clock option; keep all practice framing low-stakes."
+  },
+  {
+   "pmid": "26747176",
+   "doi": "10.2196/jmir.4790",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Journal of Medical Internet Research",
+   "title": "The Effectiveness of Prompts to Promote Engagement With Digital Interventions: A Systematic Review.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 14,
+   "n": 8774,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "pooled_RR",
+     "value": 1.27,
+     "ci_low": 1.01,
+     "ci_high": 1.6,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "technology prompts vs no strategy, dichotomous engagement; I2=71%; prompts about new content and sent early work best"
+    }
+   ],
+   "findings": [
+    "Borderline-positive effect of prompts on engagement (RR 1.27)",
+    "New-content prompts sent shortly after start are the most promising"
+   ],
+   "limitations": [
+    "High heterogeneity",
+    "Small samples; no adverse or cost data"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "In-app notices already implement the supported mechanism (milestones, far-check due, goal nudges); push delivery stays out — borderline evidence plus autonomy risk."
   }
  ]
 }
