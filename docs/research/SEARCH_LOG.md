@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 105 |
-| Outcomes | 266 |
-| Primary outcomes | 215 |
-| Systematic reviews/meta-analyses | 59 |
+| Records | 106 |
+| Outcomes | 267 |
+| Primary outcomes | 216 |
+| Systematic reviews/meta-analyses | 60 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 20 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 91 |
+| DOI verified | 95 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -143,7 +143,7 @@ By modality:
 | ave | 6 |
 | multi_intervention | 5 |
 | safety | 6 |
-| engagement | 18 |
+| engagement | 19 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 94 |
+| DOI verified | 95 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **105** |
+| **Total** | **106** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -170,7 +170,9 @@ Three goal-setting records joined the table the same day (PMIDs 38560998, 264452
 
 Two retrieval-practice records joined the table the same day (PMIDs 25150680, 16719566): testing beats restudy (g=0.50) and spaced beats massed at every retention interval. Two education-journal reviews stayed narrative-only (Adesope 2017; Latimier et al. 2020: no MEDLINE record) but converge on the same prescription with moderators that shaped R41: stronger effects when test lags study by more than a day, and mixed recall-recognition formats best.
 
-Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 30427874): specific goals (g=1.11), multi-component goal setting (d=0.55, daily-plus-weekly best) and implementation intentions with reinforcement (SMD 0.25). The goal-gradient mechanism (Kivetz et al., primary studies) stays narrative-only by the same rule and shapes the one-session-short nudge in R40.
+Two habit records joined the table the same day (PMIDs 39685110, 21626256): habit strength improves with intervention (SMD 0.69, ~2 months to start) and correlates with frequency at r=0.46. Lally et al. 2009 (single misses do not reset formation) and the habit-tracking guidelines stay narrative-only by the same rule and shape R42.
+
+One planning-interventions record joined the table the same day (PMID 35742582, 41 RCTs, SMD 0.35, stronger with reinforcement). The HAPA meta-analysis and the Cochrane-style action/coping planning review stay narrative by rule (models and effect-modifier syntheses rather than new trial evidence); the coping-planning effect sizes (d≈0.6 self-report) they report shape R45 directly.
 
 ## 10. Tooling and commands
 

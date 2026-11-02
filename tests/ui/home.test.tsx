@@ -115,11 +115,15 @@ describe("HomeScreen", () => {
     fireEvent.change(form.querySelectorAll("input")[2]!, {
       target: { value: "morning coffee" },
     });
+    fireEvent.change(form.querySelectorAll("input")[3]!, {
+      target: { value: "do one block" },
+    });
     fireEvent.click(screen.getByRole("button", { name: "Save plan" }));
     expect(onSaveIntention).toHaveBeenCalledWith(
       "tomorrow at 9am",
       "at the kitchen table",
       "morning coffee",
+      "do one block",
     );
   });
 
@@ -129,11 +133,13 @@ describe("HomeScreen", () => {
       when: "tomorrow at 9am",
       where: "at the kitchen table",
       pairing: "morning coffee",
+      obstacle: "do one block",
       updatedAt: "2026-11-01T10:00:00.000Z",
     };
     renderHome({ intention, onClearIntention });
     expect(screen.getByText(/tomorrow at 9am/)).toBeTruthy();
     expect(screen.getByText(/paired with morning coffee/)).toBeTruthy();
+    expect(screen.getByText(/if stuck, do one block/i)).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "Clear" }));
     expect(onClearIntention).toHaveBeenCalledTimes(1);
   });

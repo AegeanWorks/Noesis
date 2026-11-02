@@ -28,9 +28,14 @@ describe("practice intention", () => {
     expect(loadIntention()?.pairing).toBe("morning coffee");
   });
 
-  it("reads plans saved before the pairing field existed", () => {
+  it("saves an optional coping response for obstacles", () => {
+    saveIntention({ when: "", where: "", obstacle: "do one block" });
+    expect(loadIntention()).toMatchObject({ obstacle: "do one block", when: "", where: "" });
+  });
+
+  it("reads plans saved before the new fields existed", () => {
     writeLocal("noesis.intention.v1", JSON.stringify({ when: "tomorrow", where: "desk" }));
-    expect(loadIntention()).toMatchObject({ when: "tomorrow", where: "desk", pairing: "" });
+    expect(loadIntention()).toMatchObject({ when: "tomorrow", where: "desk", pairing: "", obstacle: "" });
   });
 
   it("trims whitespace and caps length", () => {

@@ -151,3 +151,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: Bundling training with an existing indulgence lifted gym visits 51% enforced and ~10-14% self-set (PMID 25843979 and a 6,792-person follow-up). The intention form captured when and where but never what to pair training with.
 - **Decision**: Add an optional pairing line to the when-where plan, displayed alongside when self-set encouragement is all an app can honestly offer. Backward compatible: old plans load with an empty pairing. See R44.
 - **Consequences**: Planning gains a self-set commitment device without enforcement machinery the app cannot and should not build.
+
+### ADR-021: Coping-planning obstacle line completes the HAPA bundle
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: Planning interventions work at SMD 0.35 and work better with reinforcement (PMID 35742582); action and coping planning show small-to-medium objective effects with self-set terms best. The plan held action cues and a temptation pairing but no barrier response.
+- **Decision**: Add an optional "If I get stuck, I will…" line to the plan, displayed with the plan and stored verbatim. Backward compatible: old plans load with an empty obstacle. The weekly goal plus the summary reinforce all three planning elements. See R45.
+- **Consequences**: The plan form now holds cue, indulgence and barrier response in one stored intention; four optional inputs is the ceiling — further planning constructs go to guidance copy, not more fields.

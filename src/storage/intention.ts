@@ -4,6 +4,7 @@ export interface PracticeIntention {
   when: string;
   where: string;
   pairing: string;
+  obstacle: string;
   updatedAt: string;
 }
 
@@ -22,11 +23,13 @@ export function loadIntention(): PracticeIntention | null {
     const when = typeof parsed.when === "string" ? clean(parsed.when) : "";
     const where = typeof parsed.where === "string" ? clean(parsed.where) : "";
     const pairing = typeof parsed.pairing === "string" ? clean(parsed.pairing) : "";
-    if (!when && !where && !pairing) return null;
+    const obstacle = typeof parsed.obstacle === "string" ? clean(parsed.obstacle) : "";
+    if (!when && !where && !pairing && !obstacle) return null;
     return {
       when,
       where,
       pairing,
+      obstacle,
       updatedAt: typeof parsed.updatedAt === "string" ? parsed.updatedAt : "",
     };
   } catch {
@@ -38,11 +41,13 @@ export function saveIntention(input: {
   when: string;
   where: string;
   pairing?: string;
+  obstacle?: string;
 }): PracticeIntention | null {
   const when = clean(input.when);
   const where = clean(input.where);
   const pairing = clean(input.pairing ?? "");
-  if (!when && !where && !pairing) {
+  const obstacle = clean(input.obstacle ?? "");
+  if (!when && !where && !pairing && !obstacle) {
     clearIntention();
     return null;
   }
@@ -50,6 +55,7 @@ export function saveIntention(input: {
     when,
     where,
     pairing,
+    obstacle,
     updatedAt: new Date().toISOString(),
   };
   writeLocal(KEY, JSON.stringify(intention));

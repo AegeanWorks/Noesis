@@ -230,6 +230,10 @@ The testing and spacing rows (PMIDs 25150680, 16719566) already support the core
 
 Milkman et al. 2014 showed gym-only audiobooks lifted visits 51% enforced and 29% self-set (PMID 25843979); a 6,792-person follow-up found audiobooks plus bundling encouragement raised weekly workouts 10-14% with effects persisting 17 weeks (doi 10.1016/j.obhdp.2020.09.003, no MEDLINE record). The app can only offer the self-set version, so R44 adds an optional pairing line to the when-where plan: train with an existing indulgence, stated explicitly at planning time.
 
+### 6.17 Coping planning completes the bundle (November 2026)
+
+A planning-interventions meta-analysis of 41 RCTs joined the table (SMD 0.35, stronger with reinforcement during follow-up; PMID 35742582), alongside the Cochrane-style finding that action and coping planning show small-to-medium objective effects and that self-set terms work best. Implemented as R45: the plan form now holds the full HAPA bundle — when and where (action cue), paired with what indulgence (temptation), and what to do if stuck (coping response). Reinforcement for all three is the weekly goal plus the summary; self-set wording stays verbatim in the stored plan.
+
 ---
 
 ## 7. Safeguards and design rules

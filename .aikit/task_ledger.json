@@ -1,49 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-temptation-bundle-v1",
+    "task_id": "noesis-coping-plan-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793627168.330139,
+    "updated_at": 1793628381.6480315,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793627168.810425
+    "completed_at": 1793628384.4509819
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-spacing-goal-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/3] Testing-effect and spacing rows, goal counts practice days, retrieval stated as the loop, 3 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793625111.124084,
-      "timestamp_str": "2026-11-02 16:11:51",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-spacing-goal-v1",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[3/3] R40 days, R41 retrieval core, ADR-017, BEHAVIORAL 6.13, 102-record table, 211 Vitest + 29 Python green, 400 sims, 6/6 gates, home screenshot clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793625196.5160565,
-      "timestamp_str": "2026-11-02 16:13:16",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-spacing-goal-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-spacing-goal-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793625196.7996938,
-      "timestamp_str": "2026-11-02 16:13:16",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-habit-recovery-v1",
       "phase": "phase 1",
@@ -251,6 +219,43 @@
       "status": "completed",
       "timestamp": 1793627168.8104267,
       "timestamp_str": "2026-11-02 16:46:08",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-coping-plan-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: coping-planning obstacle line plus planning-interventions review row",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793627254.1946383,
+      "timestamp_str": "2026-11-02 16:47:34",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Coping planning shows d=0.59-0.67 (self-report) and planning interventions work at SMD 0.35 with reinforcement (35742582); the plan has action and temptation but no obstacle response",
+        "benefits": "completes the HAPA planning bundle: cue, indulgence-pairing and barrier response in one stored plan",
+        "mitigation": "optional fourth field, same cap; tolerant loader; no export change; lint-checked copy"
+      }
+    },
+    {
+      "task_id": "noesis-coping-plan-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] R45, ADR-021, BEHAVIORAL 6.17, planning row, obstacle field with migration tests; 219 Vitest + 29 Python green, 6/6 gates, home screenshot clean; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793628381.6480315,
+      "timestamp_str": "2026-11-02 17:06:21",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-coping-plan-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-coping-plan-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793628384.450984,
+      "timestamp_str": "2026-11-02 17:06:24",
       "agent": "kilo:main"
     }
   ]

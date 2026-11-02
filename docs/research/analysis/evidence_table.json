@@ -6593,6 +6593,48 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "Temper the gamification case: rewards drive session initiation, not proven behaviour change; never pay for outcomes."
+  },
+  {
+   "pmid": "35742582",
+   "doi": "10.3390/ijerph19127337",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "International Journal of Environmental Research and Public Health",
+   "title": "The Effectiveness of Planning Interventions for Improving Physical Activity in the General Population: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 41,
+   "n": 5439,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "physical_activity",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 0.35,
+     "ci_low": 0.25,
+     "ci_high": 0.44,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "41 trials; reinforcements during follow-up improve effects; face-to-face and patient samples stronger"
+    }
+   ],
+   "findings": [
+    "Planning interventions improve activity (SMD 0.35) across 41 trials",
+    "Reinforcement during follow-up strengthens the effect"
+   ],
+   "limitations": [
+    "Heterogeneity I2 61%",
+    "Mechanisms underexplored"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Planning works and works better with reinforcement: the when-where plan plus weekly goal plus summary is the reinforced bundle."
   }
  ]
 }

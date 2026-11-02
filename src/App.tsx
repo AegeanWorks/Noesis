@@ -315,8 +315,8 @@ export function App() {
     );
   }, [history, adaptive.log]);
 
-  const handleSaveIntention = useCallback((when: string, where: string, pairing: string) => {
-    setIntention(saveIntention({ when, where, pairing }));
+  const handleSaveIntention = useCallback((when: string, where: string, pairing: string, obstacle: string) => {
+    setIntention(saveIntention({ when, where, pairing, obstacle }));
   }, []);
 
   const handleClearIntention = useCallback(() => {

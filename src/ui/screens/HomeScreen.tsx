@@ -30,7 +30,7 @@ interface HomeScreenProps {
   onFocusMechanic: (mechanic: MechanicId) => void;
   onStart: () => void;
   onContinue: () => void;
-  onSaveIntention: (when: string, where: string, pairing: string) => void;
+  onSaveIntention: (when: string, where: string, pairing: string, obstacle: string) => void;
   onClearIntention: () => void;
   onEvidence: () => void;
   onPauseMotivation: () => void;
@@ -84,13 +84,14 @@ function PracticePlan({
   onClear,
 }: {
   intention: PracticeIntention | null;
-  onSave: (when: string, where: string, pairing: string) => void;
+  onSave: (when: string, where: string, pairing: string, obstacle: string) => void;
   onClear: () => void;
 }) {
   const [editing, setEditing] = useState(false);
   const [when, setWhen] = useState(intention?.when ?? "");
   const [where, setWhere] = useState(intention?.where ?? "");
   const [pairing, setPairing] = useState(intention?.pairing ?? "");
+  const [obstacle, setObstacle] = useState(intention?.obstacle ?? "");
   const showForm = editing || intention === null;
 
   if (!showForm) {
@@ -106,6 +107,7 @@ function PracticePlan({
           {intention.when ? <strong>{intention.when}</strong> : "Anytime"}
           {intention.where ? ` · ${intention.where}` : ""}
           {intention.pairing ? ` · paired with ${intention.pairing}` : ""}
+          {intention.obstacle ? ` · if stuck, ${intention.obstacle}` : ""}
         </p>
         <div className="hero-actions">
           <Button variant="ghost" onClick={() => setEditing(true)}>
@@ -161,14 +163,23 @@ function PracticePlan({
             maxLength={120}
           />
         </label>
+        <label>
+          If I get stuck, I will… <span className="muted">(optional)</span>
+          <input
+            value={obstacle}
+            onChange={(event) => setObstacle(event.target.value)}
+            placeholder="e.g. do just one block instead of quitting"
+            maxLength={120}
+          />
+        </label>
       </div>
       <div className="hero-actions">
         <Button
           onClick={() => {
-            onSave(when, where, pairing);
+            onSave(when, where, pairing, obstacle);
             setEditing(false);
           }}
-          disabled={!when.trim() && !where.trim() && !pairing.trim()}
+          disabled={!when.trim() && !where.trim() && !pairing.trim() && !obstacle.trim()}
         >
           Save plan
         </Button>
