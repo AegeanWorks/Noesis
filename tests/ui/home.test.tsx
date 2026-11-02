@@ -108,6 +108,7 @@ describe("HomeScreen", () => {
     const onSaveIntention = vi.fn();
     renderHome({ onSaveIntention });
     const form = screen.getByTestId("practice-plan");
+    expect(form.textContent).toMatch(/morning sessions form stronger habits/i);
     fireEvent.change(form.querySelectorAll("input")[0]!, {
       target: { value: "tomorrow at 9am" },
     });
