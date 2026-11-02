@@ -89,6 +89,7 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 10px;
   border: 0;
   background: transparent;
@@ -114,8 +115,16 @@ a {
 .nav {
   display: flex;
   gap: 4px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-end;
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
 }
 
 .nav button {
@@ -863,14 +872,20 @@ code {
 
 .calendar {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
+  row-gap: 10px;
   margin-top: 12px;
+  max-width: 100%;
 }
 
 .goalbar {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
+  row-gap: 10px;
   margin-top: 8px;
+  max-width: 100%;
 }
 
 .dot {
