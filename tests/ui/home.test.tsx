@@ -46,7 +46,7 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     motivationPaused: false,
     milestones: [],
     studyArm: null,
-    farCheckDue: false,
+    farChecks: [],
     onStartFarCheck: vi.fn(),
     weakest: null,
     onFocusMechanic: vi.fn(),
@@ -240,13 +240,29 @@ describe("HomeScreen", () => {
 
   it("shows the far-check card only when a check is due", () => {
     const onStartFarCheck = vi.fn();
-    renderHome({ farCheckDue: true, onStartFarCheck });
+    renderHome({ farChecks: [], onStartFarCheck });
     expect(screen.getByTestId("far-check-card").textContent).toMatch(/monthly far check/i);
     fireEvent.click(screen.getByRole("button", { name: "Start far check" }));
     expect(onStartFarCheck).toHaveBeenCalledTimes(1);
     cleanup();
-    renderHome({ farCheckDue: false, onStartFarCheck });
+    renderHome({
+      farChecks: [
+        {
+          id: "far-1",
+          finishedAt: new Date().toISOString(),
+          seed: 1,
+          studied: 8,
+          tested: 16,
+          hits: 6,
+          falseAlarms: 2,
+          accuracy: 0.75,
+          arm: null,
+        },
+      ],
+      onStartFarCheck,
+    });
     expect(screen.queryByTestId("far-check-card")).toBeNull();
+    expect(screen.getByTestId("far-check-last").textContent).toMatch(/6 of 8 remembered/);
   });
 
   it("welcomes back lapsers without shaming fresh or active users", () => {

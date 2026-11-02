@@ -3,6 +3,8 @@ import { MECHANIC_META } from "../../engine/evidence";
 import type { MechanicId, MechanicMeta } from "../../engine/types";
 import type { SessionRecord, TodayStats, WeekStats, WeakestMechanic } from "../../storage/history";
 import { accuracySeries, bestAccuracyFor, currentDayStreak, lastDaysActivity, lastResultFor } from "../../storage/history";
+import type { FarCheck } from "../../storage/farChecks";
+import { isFarCheckDue } from "../../storage/farChecks";
 import type { HeavyUseSignal, Milestone } from "../../storage/engagement";
 import type { StudyArm } from "../../storage/study";
 import type { PracticeIntention } from "../../storage/intention";
@@ -26,7 +28,7 @@ interface HomeScreenProps {
   motivationPaused: boolean;
   milestones: Milestone[];
   studyArm: StudyArm | null;
-  farCheckDue: boolean;
+  farChecks: readonly FarCheck[];
   onStartFarCheck: () => void;
   weakest: WeakestMechanic | null;
   onFocusMechanic: (mechanic: MechanicId) => void;
@@ -353,7 +355,7 @@ export function HomeScreen({
   motivationPaused,
   milestones,
   studyArm,
-  farCheckDue,
+  farChecks,
   onStartFarCheck,
   weakest,
   onFocusMechanic,
@@ -368,6 +370,8 @@ export function HomeScreen({
 }: HomeScreenProps) {
   const lapsed =
     history.length > 0 && !lastDaysActivity(history).some((day) => day.active);
+  const farCheckDue = isFarCheckDue(farChecks);
+  const lastFarCheck = farChecks.length > 0 ? farChecks[0] : undefined;
   return (
     <section className="screen home-screen">
       <div className="hero">
@@ -451,6 +455,11 @@ export function HomeScreen({
             </Button>
           </div>
         </section>
+      ) : lastFarCheck ? (
+        <p className="fine" data-testid="far-check-last">
+          Last far check {formatDate(lastFarCheck.finishedAt)}: {lastFarCheck.hits} of{" "}
+          {lastFarCheck.studied} remembered.
+        </p>
       ) : null}
 
       <div className="grid">

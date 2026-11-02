@@ -55,7 +55,6 @@ import {
 } from "./storage/engagement";
 import {
   clearFarChecks,
-  isFarCheckDue,
   loadFarChecks,
   logFarCheck,
 } from "./storage/farChecks";
@@ -111,6 +110,7 @@ export function App() {
   const [adaptive, setAdaptive] = useState(() => loadAdaptive());
   const [study, setStudy] = useState(() => loadStudy());
   const [farSeed, setFarSeed] = useState<number | null>(null);
+  const [farChecks, setFarChecks] = useState(() => loadFarChecks());
   const motivationPaused =
     engagement.motivationPausedDay !== null && isMotivationPaused();
   const motivationActive = settings.motivationMode && !motivationPaused;
@@ -334,11 +334,13 @@ export function App() {
     (outcome: FarCheckOutcome) => {
       const enrolled = loadStudy();
       setStudy(enrolled);
-      logFarCheck({
-        ...outcome,
-        seed: farSeed ?? 1,
-        arm: enrolled.enrolled ? enrolled.arm : null,
-      });
+      setFarChecks(
+        logFarCheck({
+          ...outcome,
+          seed: farSeed ?? 1,
+          arm: enrolled.enrolled ? enrolled.arm : null,
+        }),
+      );
       setFarSeed(null);
       setScreen("home");
     },
@@ -371,6 +373,7 @@ export function App() {
     clearSessionSnapshot();
     setHistory([]);
     setAdverseEvents([]);
+    setFarChecks([]);
     setEngagement(loadEngagement());
     setStudy(loadStudy());
     setLastSessionId(null);
@@ -522,7 +525,7 @@ export function App() {
             motivationPaused={motivationPaused}
             milestones={newMilestones}
             studyArm={study.enrolled ? study.arm : null}
-            farCheckDue={isFarCheckDue(loadFarChecks())}
+            farChecks={farChecks}
             onStartFarCheck={startFarCheck}
             weakest={weakestRecentMechanic(history)}
             onFocusMechanic={handleFocusMechanic}

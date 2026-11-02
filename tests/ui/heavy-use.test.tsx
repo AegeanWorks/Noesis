@@ -25,7 +25,7 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     motivationPaused: false,
     milestones: [],
     studyArm: null,
-    farCheckDue: false,
+    farChecks: [],
     onStartFarCheck: vi.fn(),
     weakest: null,
     onFocusMechanic: vi.fn(),
