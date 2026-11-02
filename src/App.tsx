@@ -359,6 +359,15 @@ export function App() {
     [settings],
   );
 
+  const setWeeklyGoal = useCallback(
+    (value: number) => {
+      const next = { ...settings, weeklyGoal: value };
+      setSettings(next);
+      saveSettings(next);
+    },
+    [settings],
+  );
+
   const setMotivationMode = useCallback(
     (value: boolean) => {
       const next = { ...settings, motivationMode: value };
@@ -450,6 +459,7 @@ export function App() {
             today={today}
             intention={intention}
             sessionLength={settings.sessionLength}
+            weeklyGoal={settings.weeklyGoal}
             heavyUse={detectHeavyUse(history)}
             heavyUseDismissed={isHeavyUseDismissedToday()}
             motivationOn={settings.motivationMode}
@@ -517,6 +527,7 @@ export function App() {
             reducedMotion={settings.reducedMotion}
             difficulty={settings.difficulty}
             sessionLength={settings.sessionLength}
+            weeklyGoal={settings.weeklyGoal}
             motivationMode={settings.motivationMode}
             largeText={settings.largeText}
             highContrast={settings.highContrast}
@@ -534,6 +545,7 @@ export function App() {
             onReducedMotion={setReducedMotion}
             onDifficulty={setDifficulty}
             onSessionLength={setSessionLength}
+            onWeeklyGoal={setWeeklyGoal}
             onMotivationMode={setMotivationMode}
             onLargeText={setLargeText}
             onHighContrast={setHighContrast}

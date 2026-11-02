@@ -19,6 +19,7 @@ interface HomeScreenProps {
   today: TodayStats;
   intention: PracticeIntention | null;
   sessionLength: SessionLength;
+  weeklyGoal: number;
   heavyUse: HeavyUseSignal | null;
   heavyUseDismissed: boolean;
   motivationOn: boolean;
@@ -159,11 +160,13 @@ function PracticeSummary({
   week,
   today,
   studyArm,
+  weeklyGoal,
 }: {
   history: readonly SessionRecord[];
   week: WeekStats;
   today: TodayStats;
   studyArm: StudyArm | null;
+  weeklyGoal: number;
 }) {
   if (history.length === 0) {
     return (
@@ -231,6 +234,13 @@ function PracticeSummary({
         composite score; Motivation momentum is cosmetic and never changes these accuracy
         values.
       </p>
+      <p className="fine" data-testid="weekly-goal">
+        {week.sessions >= weeklyGoal
+          ? `Weekly goal met — ${weeklyGoal} of ${weeklyGoal}. Rest is earned.`
+          : week.sessions === weeklyGoal - 1
+            ? `Weekly goal: ${week.sessions} of ${weeklyGoal} — one more session hits it.`
+            : `Weekly goal: ${Math.min(week.sessions, weeklyGoal)} of ${weeklyGoal} sessions.`}
+      </p>
       {studyArm === "engagement" && streak > 0 ? (
         <p className="fine" data-testid="streak-at-risk">
           {streak}-day streak — practice today to keep it alive. Streaks are cosmetic and
@@ -268,6 +278,7 @@ export function HomeScreen({
   today,
   intention,
   sessionLength,
+  weeklyGoal,
   heavyUse,
   heavyUseDismissed,
   motivationOn,
@@ -316,7 +327,7 @@ export function HomeScreen({
       </div>
 
       <PracticePlan intention={intention} onSave={onSaveIntention} onClear={onClearIntention} />
-      <PracticeSummary history={history} week={week} today={today} studyArm={studyArm} />
+      <PracticeSummary history={history} week={week} today={today} studyArm={studyArm} weeklyGoal={weeklyGoal} />
 
       {milestones.length > 0 ? (
         <section className="notice" data-testid="milestone-notice">

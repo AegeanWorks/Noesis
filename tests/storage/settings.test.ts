@@ -25,6 +25,7 @@ describe("settings", () => {
       motivationMode: false,
       largeText: true,
       highContrast: false,
+      weeklyGoal: 5,
     });
     expect(loadSettings()).toEqual({
       reducedMotion: true,
@@ -33,6 +34,7 @@ describe("settings", () => {
       motivationMode: false,
       largeText: true,
       highContrast: false,
+      weeklyGoal: 5,
     });
   });
 
@@ -45,7 +47,19 @@ describe("settings", () => {
       motivationMode: DEFAULT_SETTINGS.motivationMode,
       largeText: DEFAULT_SETTINGS.largeText,
       highContrast: DEFAULT_SETTINGS.highContrast,
+      weeklyGoal: DEFAULT_SETTINGS.weeklyGoal,
     });
+  });
+
+  it("clamps the weekly goal to whole sessions from 1 to 7", () => {
+    writeLocal("noesis.settings.v1", JSON.stringify({ weeklyGoal: 5 }));
+    expect(loadSettings().weeklyGoal).toBe(5);
+    writeLocal("noesis.settings.v1", JSON.stringify({ weeklyGoal: 0 }));
+    expect(loadSettings().weeklyGoal).toBe(DEFAULT_SETTINGS.weeklyGoal);
+    writeLocal("noesis.settings.v1", JSON.stringify({ weeklyGoal: 9 }));
+    expect(loadSettings().weeklyGoal).toBe(DEFAULT_SETTINGS.weeklyGoal);
+    writeLocal("noesis.settings.v1", JSON.stringify({ weeklyGoal: 2.5 }));
+    expect(loadSettings().weeklyGoal).toBe(DEFAULT_SETTINGS.weeklyGoal);
   });
 
   it("rejects invalid values", () => {

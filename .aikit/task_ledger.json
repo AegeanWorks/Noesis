@@ -1,66 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-incentive-arm-v1",
+    "task_id": "noesis-weekly-goal-v1",
     "last_phase": "phase 3",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793624046.069868,
+    "updated_at": 1793624785.1428928,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793624046.7597353
+    "completed_at": 1793624785.5107348
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-compulsive-use-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-compulsive-use-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793572119.7581336,
-      "timestamp_str": "2026-11-02 01:28:39",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-adaptive-difficulty-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/4] Plan: opt-in adaptive difficulty hypothesis (R12) with per-mechanic logging",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793572137.8166502,
-      "timestamp_str": "2026-11-02 01:28:57",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "R12 requires adaptivity to be tested, not asserted; adherence recovery data shows dose is the lever and fixed difficulty under-doses advanced users",
-        "benefits": "advanced users train at their frontier; every adaptation logged for the dose-response record",
-        "risks": "contract: difficulty derivation must stay display-only for scores; dependency: none new; concurrency: single-writer settings; state: adaptive flag and per-mechanic level coexist with manual choice",
-        "mitigation": "default fixed difficulty; adaptive is opt-in per mechanic; accuracy series already stored for validation; A/B framing in UI copy"
-      }
-    },
-    {
-      "task_id": "noesis-adaptive-difficulty-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/4] Adaptive store, session wiring, Settings experiment card, 10 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793572411.5835648,
-      "timestamp_str": "2026-11-02 01:33:31",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-adaptive-difficulty-v1",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[3/3] R12, ADR-012, 182 Vitest + 29 Python green, 400 sims, 6/6 gates, settings screenshot clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793572412.0563722,
-      "timestamp_str": "2026-11-02 01:33:32",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-adaptive-difficulty-v1",
       "phase": "completed",
@@ -254,6 +205,55 @@
       "status": "completed",
       "timestamp": 1793624046.759737,
       "timestamp_str": "2026-11-02 15:54:06",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-weekly-goal-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/3] Plan: weekly session goal with goal-gradient framing from 3 new goal-setting records",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793624129.9693248,
+      "timestamp_str": "2026-11-02 15:55:29",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Specific goals move behaviour g=1.11 (38560998); daily+weekly beats weekly-only (26445201); implementation intentions need reinforcement (30427874); goal proximity accelerates effort",
+        "benefits": "explicit weekly target + proximity nudge + met-goal recognition close the intention-behaviour gap the review identifies",
+        "risks": "contract: one additive settings field; dependency: none new; concurrency: single-writer; state: weekly goal coexists with difficulty/length",
+        "mitigation": "validated 1-7 range with default 3; display-only progress derived from history; copy stays gain-framed and lint-checked"
+      }
+    },
+    {
+      "task_id": "noesis-weekly-goal-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/3] 3 goal-setting records, adjustable weekly goal, gradient nudge, met-goal acknowledgment, 6 new tests",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793624502.350866,
+      "timestamp_str": "2026-11-02 16:01:42",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-weekly-goal-v1",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[3/3] R40, ADR-016, BEHAVIORAL 6.12, 100-record table, 211 Vitest + 29 Python green, 400 sims, 6/6 gates sequential, home screenshot clean; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793624785.1428928,
+      "timestamp_str": "2026-11-02 16:06:25",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-weekly-goal-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-weekly-goal-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793624785.5107377,
+      "timestamp_str": "2026-11-02 16:06:25",
       "agent": "kilo:main"
     }
   ]

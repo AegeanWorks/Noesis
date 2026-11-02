@@ -39,6 +39,7 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     today: EMPTY_TODAY,
     intention: null,
     sessionLength: "standard",
+    weeklyGoal: 3,
     heavyUse: null,
     heavyUseDismissed: false,
     motivationOn: false,
@@ -154,6 +155,20 @@ describe("HomeScreen", () => {
   it("hides the milestone notice when there is nothing new", () => {
     renderHome({ milestones: [] });
     expect(screen.queryByTestId("milestone-notice")).toBeNull();
+  });
+
+  it("tracks the weekly goal with a gradient nudge one session short", () => {
+    const entry = record(80);
+    entry.finishedAt = new Date().toISOString();
+    const week = { sessions: 2, days: 2, minutes: 16 };
+    renderHome({ history: [entry], week, weeklyGoal: 3 });
+    expect(screen.getByTestId("weekly-goal").textContent).toMatch(/2 of 3.*one more/i);
+    cleanup();
+    renderHome({ history: [entry], week, weeklyGoal: 2 });
+    expect(screen.getByTestId("weekly-goal").textContent).toMatch(/goal met/i);
+    cleanup();
+    renderHome({ history: [entry], week: { sessions: 1, days: 1, minutes: 8 }, weeklyGoal: 5 });
+    expect(screen.getByTestId("weekly-goal").textContent).toMatch(/1 of 5 sessions/);
   });
 
   it("shows the streak reminder only in the engagement arm", () => {

@@ -25,6 +25,8 @@ const BASE = {
   onHome: () => {},
   motivationPaused: false,
   onResumeMotivation: () => {},
+  weeklyGoal: 3,
+  onWeeklyGoal: () => {},
   adaptiveEnabled: false,
   adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2 } as const,
   onAdaptiveToggle: () => {},
@@ -130,6 +132,20 @@ describe("SettingsScreen study enrollment", () => {  it("requires an id and cons
     expect(screen.getByText(/arm: engagement/i)).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "Withdraw from study" }));
     expect(onWithdraw).toHaveBeenCalledTimes(1);
+  });
+
+  it("changes the weekly goal from Settings", () => {
+    const onWeeklyGoal = vi.fn();
+    render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        onWeeklyGoal={onWeeklyGoal}
+      />,
+    );
+    fireEvent.change(screen.getByLabelText(/weekly session goal/i), { target: { value: "5" } });
+    expect(onWeeklyGoal).toHaveBeenCalledWith(5);
   });
 
   it("discloses the steady schedule by default and the volatile one in the engagement arm", () => {

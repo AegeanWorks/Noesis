@@ -18,6 +18,7 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     today: EMPTY_TODAY,
     intention: null,
     sessionLength: "standard",
+    weeklyGoal: 3,
     heavyUse: null,
     heavyUseDismissed: false,
     motivationOn: true,

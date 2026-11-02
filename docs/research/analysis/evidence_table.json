@@ -6244,6 +6244,144 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "All-or-nothing, attendance-contingent refunds aid retention: stake on finishing, not on scoring; self-set terms work best."
+  },
+  {
+   "pmid": "38560998",
+   "doi": "10.1123/jpah.2023-0340",
+   "doi_status": "verified",
+   "year": 2024,
+   "journal": "Journal of Physical Activity & Health",
+   "title": "What Effect Do Goal Setting Interventions Have on Physical Activity and Psychological Outcomes in Insufficiently Active Adults? A Systematic Review and Meta-Analysis.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 13,
+   "n": 1208,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "physical_activity",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 1.11,
+     "ci_low": 0.74,
+     "ci_high": 1.47,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "specific goals in insufficiently active adults; unrewarded goals beat rewarded ones (g 1.30 vs 0.60)"
+    },
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 0.25,
+     "ci_low": 0.1,
+     "ci_high": 0.4,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "combined psychological outcomes (self-efficacy, motivation, affect)"
+    }
+   ],
+   "findings": [
+    "Specific goals have a large effect on activity in insufficiently active adults",
+    "Goals without rewards outperform goals with rewards"
+   ],
+   "limitations": [
+    "Only specific goals studied; no comparison of goal types",
+    "Range of goal types not investigated"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Weekly goal is specific, few, and unrewarded: set an explicit session count, never pay for it, and let the goal itself do the work."
+  },
+  {
+   "pmid": "26445201",
+   "doi": "10.1080/17437199.2015.1104258",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Health Psychology Review",
+   "title": "The effectiveness of multi-component goal setting interventions for changing physical activity behaviour: a systematic review and meta-analysis.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 45,
+   "n": 5912,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "physical_activity",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 0.55,
+     "ci_low": 0.43,
+     "ci_high": 0.67,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "multi-component goal setting vs no-goal controls; daily and combined daily-weekly goals beat weekly-only"
+    }
+   ],
+   "findings": [
+    "Medium positive effect of goal-setting interventions across diverse populations",
+    "Daily and combined daily-plus-weekly goals work; weekly-only goals lose the effect"
+   ],
+   "limitations": [
+    "Heterogeneous goal components pooled",
+    "Optimal goal content still open"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Pair the per-session intention (daily) with the weekly goal: the combination is the supported configuration, not weekly goals alone."
+  },
+  {
+   "pmid": "30427874",
+   "doi": "10.1371/journal.pone.0206294",
+   "doi_status": "verified",
+   "year": 2018,
+   "journal": "PLOS ONE",
+   "title": "Impact of implementation intentions on physical activity practice in adults: A systematic review and meta-analysis of randomized clinical trials.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "clinical"
+   ],
+   "k": 13,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "physical_activity",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 0.25,
+     "ci_low": 0.05,
+     "ci_high": 0.45,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "if-then planning with reinforcement in adults including cardiac, diabetic and sedentary samples"
+    }
+   ],
+   "findings": [
+    "Implementation intentions with reinforcement increase activity practice",
+    "Action planning plus coping planning is the effective bundle"
+   ],
+   "limitations": [
+    "Reinforcement needed for the effect",
+    "Effect is small"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "The when-where plan needs reinforcement to work: the weekly goal and summary are the reinforcement loop around the intention."
   }
  ]
 }

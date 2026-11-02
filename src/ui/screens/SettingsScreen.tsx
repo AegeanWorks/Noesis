@@ -16,6 +16,7 @@ interface SettingsScreenProps {
   reducedMotion: boolean;
   difficulty: Difficulty;
   sessionLength: SessionLength;
+  weeklyGoal: number;
   motivationMode: boolean;
   largeText: boolean;
   highContrast: boolean;
@@ -33,6 +34,7 @@ interface SettingsScreenProps {
   onReducedMotion: (value: boolean) => void;
   onDifficulty: (value: Difficulty) => void;
   onSessionLength: (value: SessionLength) => void;
+  onWeeklyGoal: (value: number) => void;
   onMotivationMode: (value: boolean) => void;
   onLargeText: (value: boolean) => void;
   onHighContrast: (value: boolean) => void;
@@ -110,6 +112,7 @@ export function SettingsScreen({
   reducedMotion,
   difficulty,
   sessionLength,
+  weeklyGoal,
   motivationMode,
   largeText,
   highContrast,
@@ -127,6 +130,7 @@ export function SettingsScreen({
   onReducedMotion,
   onDifficulty,
   onSessionLength,
+  onWeeklyGoal,
   onMotivationMode,
   onLargeText,
   onHighContrast,
@@ -234,6 +238,20 @@ export function SettingsScreen({
             ))}
           </div>
         </fieldset>
+        <label className="fine" htmlFor="weekly-goal">
+          Weekly session goal
+        </label>
+        <select
+          id="weekly-goal"
+          value={weeklyGoal}
+          onChange={(event) => onWeeklyGoal(Number(event.target.value))}
+        >
+          {[1, 2, 3, 4, 5, 6, 7].map((count) => (
+            <option key={count} value={count}>
+              {count} {count === 1 ? "session" : "sessions"} a week
+            </option>
+          ))}
+        </select>
         <label className="check">
           <input
             type="checkbox"

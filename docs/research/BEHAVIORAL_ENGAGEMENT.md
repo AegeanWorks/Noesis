@@ -211,6 +211,10 @@ Three incentive records joined the table: deposit contracts beat lotteries and s
 
 Implemented as R39: the engagement arm uses a higher-variance bonus schedule (60/25/15 volatile vs 70/20/10 steady) for stronger reward-prediction errors, plus an attendance-contingent finisher bonus on completing every block. Both are disclosed per arm in Settings; the default product is untouched.
 
+### 6.12 Weekly goals with goal-gradient framing (November 2026)
+
+Three goal-setting records joined the table: specific goals have a large effect on behaviour in insufficiently active adults (g=1.11), and goals without rewards beat goals with rewards (PMID 38560998); multi-component goal setting works (d=0.55) with daily and combined daily-plus-weekly goals beating weekly-only ones (PMID 26445201); implementation intentions with reinforcement increase practice (PMID 30427874). The goal-gradient literature (Kivetz et al., primary studies, narrative-only) adds the mechanism: effort accelerates as the distance to the goal shrinks, which is why the app nudges hardest exactly one session short of the goal. Implemented as R40: one explicit weekly session goal (default 3, adjustable 1-7) with progress display, a one-more-hits-it nudge, and a met-goal acknowledgment that names rest as earned. The per-session when-where intention is the daily companion; the weekly goal is the reinforcement loop around it.
+
 ---
 
 ## 7. Safeguards and design rules

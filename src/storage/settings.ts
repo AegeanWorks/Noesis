@@ -10,6 +10,7 @@ export interface Settings {
   motivationMode: boolean;
   largeText: boolean;
   highContrast: boolean;
+  weeklyGoal: number;
 }
 
 const KEY = "noesis.settings.v1";
@@ -21,10 +22,23 @@ export const DEFAULT_SETTINGS: Settings = {
   motivationMode: true,
   largeText: false,
   highContrast: false,
+  weeklyGoal: 3,
 };
+
+export const MIN_WEEKLY_GOAL = 1;
+export const MAX_WEEKLY_GOAL = 7;
 
 function isDifficulty(value: unknown): value is Difficulty {
   return value === 1 || value === 2 || value === 3;
+}
+
+function isWeeklyGoal(value: unknown): value is number {
+  return (
+    typeof value === "number" &&
+    Number.isInteger(value) &&
+    value >= MIN_WEEKLY_GOAL &&
+    value <= MAX_WEEKLY_GOAL
+  );
 }
 
 function isLength(value: unknown): value is SessionLength {
@@ -52,6 +66,9 @@ export function loadSettings(): Settings {
         typeof parsed.highContrast === "boolean"
           ? parsed.highContrast
           : DEFAULT_SETTINGS.highContrast,
+      weeklyGoal: isWeeklyGoal(parsed.weeklyGoal)
+        ? parsed.weeklyGoal
+        : DEFAULT_SETTINGS.weeklyGoal,
     };
   } catch {
     return DEFAULT_SETTINGS;
