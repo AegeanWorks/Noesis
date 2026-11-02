@@ -264,6 +264,10 @@ Technology-based prompts raise engagement (RR 1.27, 14 trials, PMID 26747176), e
 
 A 59-study meta-analysis finds interleaved schedules beat blocked ones for inductive learning (g=0.42), strongest for complex similar material — but word lists reverse the effect (blocked wins, g=-0.39; PMID 31556629). The app already matches both halves: default sessions interleave four different mechanics, focus sessions deliberately block one, and the far check studies its words blocked. Implemented as R52: the lineup rule is now explicit so no future refactor can silently switch the default to blocked.
 
+### 6.26 Prompts stay in-app (November 2026)
+
+Technology-based prompts raise engagement versus nothing (RR 1.27), best when they announce new content early (PMID 26747176) — but the evidence is borderline and heterogeneous, and unsolicited push would trade against the autonomy the whole design protects. So the in-app notices are the whole prompt layer: milestones, far-check due cards, weekly-goal nudges. No push channel, no inbox, no badge. See R53.
+
 ---
 
 ## 7. Safeguards and design rules

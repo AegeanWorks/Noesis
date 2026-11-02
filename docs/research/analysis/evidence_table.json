@@ -6846,6 +6846,49 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "Default sessions interleave four mechanics; focus sessions are the deliberate blocked exception. Blocked word study in the far check matches the word-list finding."
+  },
+  {
+   "pmid": "35612886",
+   "doi": "10.2196/35371",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Journal of Medical Internet Research",
+   "title": "Factors Influencing Adherence to mHealth Apps for Prevention or Management of Noncommunicable Diseases: Systematic Review.",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults"
+   ],
+   "k": 99,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "99 studies; personalization, reminders, usable stable design and human support aid adherence; technical difficulties are the top barrier; mean adherence 56%"
+    }
+   ],
+   "findings": [
+    "Personalization, reminders, usability/stability and human support drive adherence",
+    "Technical difficulties and poor usability are the most consistent barriers"
+   ],
+   "limitations": [
+    "Mostly pilot studies with short durations",
+    "Heterogeneous adherence definitions"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Technical stability is an adherence intervention: no crashes, no lost data, no dead ends. Personalization and reminders are already in the product; usability is the standing gate."
   }
  ]
 }

@@ -207,3 +207,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: A 59-study meta-analysis finds interleaved schedules beat blocked ones for inductive learning (g=0.42), strongest for complex similar material — but word lists reverse the effect (PMID 31556629). The app already matches both halves without ever stating the rule.
 - **Decision**: Record the lineup rule explicitly (R52): default sessions interleave the four mechanics; focus sessions deliberately block one; the far check studies its words blocked. No product change — the code already does this.
 - **Consequences**: Any future refactor of session construction must preserve the interleaved default deliberately, not accidentally.
+
+### ADR-029: In-app notices are the whole prompt layer
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: Technology-based prompts beat no strategy (RR 1.27), best for new content sent early (PMID 26747176) — but the effect is borderline and heterogeneous, and unsolicited push would trade against the autonomy the whole design protects.
+- **Decision**: No push channel, inbox or badge is built or planned. Milestones, far-check due cards and weekly-goal nudges already implement the supported mechanism with consent-by-opening. See R53.
+- **Consequences**: Engagement prompts stay inside sessions the user opened; any future prompt proposal must clear both a stronger evidence bar and the autonomy test.

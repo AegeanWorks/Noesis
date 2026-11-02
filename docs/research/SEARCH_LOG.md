@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 111 |
-| Outcomes | 272 |
-| Primary outcomes | 221 |
+| Records | 112 |
+| Outcomes | 273 |
+| Primary outcomes | 222 |
 | Systematic reviews/meta-analyses | 65 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 20 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 99 |
+| DOI verified | 101 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -143,7 +143,7 @@ By modality:
 | ave | 6 |
 | multi_intervention | 5 |
 | safety | 6 |
-| engagement | 23 |
+| engagement | 24 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 99 |
+| DOI verified | 101 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **110** |
+| **Total** | **112** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 

@@ -1,63 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-interleaving-row-v1",
+    "task_id": "noesis-adherence-barrier-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793635104.0902615,
+    "updated_at": 1793635649.7354255,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793635104.3710012
+    "completed_at": 1793635675.945219
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-open-questions-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] Q5 closed as implemented-by-choice; adaptive x focus covered; 239 Vitest + 29 Python green, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793633327.9948404,
-      "timestamp_str": "2026-11-02 18:28:47",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-open-questions-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-open-questions-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793633328.3216019,
-      "timestamp_str": "2026-11-02 18:28:48",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-arm-schedule-proof-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: prove engagement vs control bonus schedules end-to-end with a fixed seed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793633663.904179,
-      "timestamp_str": "2026-11-02 18:34:23",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Arm-dependent schedules had engine unit tests but no integration proof that App wires the right schedule per arm"
-      }
-    },
-    {
-      "task_id": "noesis-arm-schedule-proof-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] Fixed-seed journeys prove volatile vs steady tiers per arm; 240 Vitest + 29 Python green, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793633733.0883906,
-      "timestamp_str": "2026-11-02 18:35:33",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-arm-schedule-proof-v1",
       "phase": "completed",
@@ -244,6 +198,52 @@
       "status": "completed",
       "timestamp": 1793635104.3710027,
       "timestamp_str": "2026-11-02 18:58:24",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-adherence-barrier-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: usability-as-adherence row plus far-check visual QA pass",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793635236.2044015,
+      "timestamp_str": "2026-11-02 19:00:36",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "mHealth adherence SR (PMID 35612886): personalization, reminders, usable stable design and human support aid adherence; technical difficulties top the barrier list"
+      }
+    },
+    {
+      "task_id": "noesis-adherence-barrier-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] R53 no-push rule, ADR-029, BEHAVIORAL 6.26, 112-record table; 228 Vitest + 29 Python green",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793635342.018529,
+      "timestamp_str": "2026-11-02 19:02:22",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-adherence-barrier-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] R53 no-push rule, ADR-029, BEHAVIORAL 6.26, 112-record table; visual QA found zero console errors; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793635649.7354255,
+      "timestamp_str": "2026-11-02 19:07:29",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-adherence-barrier-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-adherence-barrier-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793635675.9452207,
+      "timestamp_str": "2026-11-02 19:07:55",
       "agent": "kilo:main"
     }
   ]
