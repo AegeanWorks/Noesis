@@ -42,17 +42,17 @@ An evidence-led cognitive training app. Every mechanic is a deterministic, headl
 
 The home screen has one primary action: **Start session**. It creates and begins the first block in the same click. If a session is already active, the same button resumes it. First-time users answer the safety screen once; its final button also starts the session immediately.
 
-Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. The optional practice plan asks when and where the next session will happen; it is stored locally and never blocks starting.
+Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.
 
 An active session is snapshotted locally while it runs. After a browser reload or an Android WebView restart, the home screen offers **Resume session** instead of losing progress.
 
-The home screen also shows a per-mechanic accuracy sparkline for recent sessions and a gentle daily break cue after two completed sessions. Settings offers larger text, higher contrast and reduced motion for older adults and low-vision users.
+The home screen also shows a per-mechanic accuracy sparkline for recent sessions, a 14-day practice calendar, and caring check-ins: heavy-use patterns trigger a rest suggestion with a one-tap Motivation pause, a missed yesterday gets a no-shame nudge, and a long absence gets a welcome-back. Settings offers larger text, high contrast, reduced motion and a hideable session clock.
 
-Completed sessions are stored locally and summarized per mechanic. There is no account and no server. Settings can export the practice history as JSON or clear it without touching the safety profile.
+Completed sessions are stored locally and summarized per mechanic. Monthly word-recognition far checks, symptom reports and study enrollment (for trials) are stored separately from practice. There is no account and no server. Settings can export everything as JSON or clear it with one tap.
 
 ## Behavioral Engagement
 
-CyberPulse's behavioral-psychology review is integrated as a bounded **Motivation mode** for adult and older-adult engagement:
+Noesis's behavioral-psychology review is integrated as a bounded **Motivation mode** for adult and older-adult engagement:
 
 - **Variable bonuses:** 70% steady, 20% boost, 10% rare cosmetic momentum. Odds are disclosed and capped at 100 points per block.
 - **Streaks:** x1-x3 momentum multiplier based on consecutive correct trials.
@@ -60,7 +60,9 @@ CyberPulse's behavioral-psychology review is integrated as a bounded **Motivatio
 - **Corrective near-miss:** an N-back false alarm that matches the N-1 or N+1 position gets an explanatory cue, not a reward.
 - **Optional push-your-luck:** bank bonus momentum or risk it on the next block (70% accuracy threshold). Core progress is always banked first.
 - **Target time:** 8 minutes standard, 5 minutes quick; no penalty for exceeding it.
-- **Adopted supports:** optional when/where practice plan, user-selected session length and difficulty, per-mechanic last/best accuracy, non-punitive weekly summary.
+- **Adopted supports:** when-where-plus-pairing-and-obstacle practice plan (all four inputs optional), adjustable weekly practice-day goal with a visual progress bar, user-selected session length and difficulty, per-mechanic practice, focus sessions and a weakest-link suggestion, per-mechanic last/best accuracy, non-punitive weekly summary, consistency calendar, milestone celebrations and personal-best highlights.
+
+Beyond Motivation mode the product stays deliberately quieter: an **opt-in adaptive difficulty** experiment (adjusts per-task level from recent accuracy, never marketed as superior), a **monthly word-recognition far check** on its own schedule and store (the app states up front that reviews usually find no transfer), and an **opt-in research-study enrollment** that tags sessions with the assigned trial arm. A copyable weekly summary and a JSON export cover accountability and portability without accounts.
 
 Motivation never changes cognitive scores. The mode can be switched off in Settings. There is no real money, purchasable currency, infinite loop or narrative campaign. The full audit and citations are in [docs/research/BEHAVIORAL_ENGAGEMENT.md](docs/research/BEHAVIORAL_ENGAGEMENT.md).
 
@@ -136,19 +138,13 @@ noesis/
 ├── src/
 │   ├── content/                  <- reasoning item bank
 │   ├── engine/                   <- seeded RNG, mechanics, session, schema, AI harness
-│   ├── storage/                  <- safety, settings, practice history and export
+│   ├── storage/                  <- safety, settings, history, intention, engagement, study, adaptive, far checks and export
 │   ├── ui/                       <- screens and mechanic components
 │   ├── App.tsx
 │   ├── global.d.ts               <- window.__NOESIS__ typing
 │   ├── main.tsx
 │   └── styles.css
-├── tests/
-│   ├── engine/                   <- mechanic, session, determinism, schema, AI tests
-│   ├── storage/                  <- history, settings, intention and snapshot tests
-│   ├── ui/                       <- React component tests (jsdom)
-│   ├── __init__.py
-│   ├── test_evidence.py          <- evidence-table validator tests
-│   └── test_review_snapshot.py   <- review snapshot tests
+├── tests/                      <- engine, storage and UI tests (Vitest) plus review validation (pytest)
 ├── noesis/                       <- Python evidence-review tooling
 ├── COMMERCIAL.md                 <- commercial licensing terms
 ├── LICENSE                       <- Aegean License 1.1 (AL-1.1)
