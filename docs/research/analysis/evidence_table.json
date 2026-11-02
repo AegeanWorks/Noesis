@@ -6551,6 +6551,48 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "Same context, repeated: the stable when-where plan plus daily repetition is the automaticity engine; a single miss does not reset formation."
+  },
+  {
+   "pmid": "28536062",
+   "doi": "10.1016/j.jbi.2017.05.011",
+   "doi_status": "verified",
+   "year": 2017,
+   "journal": "Journal of Biomedical Informatics",
+   "title": "A systematic review of gamification in e-Health.",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "not_reported",
+     "note": "mostly short-term engagement through extrinsic rewards; weak empirical evidence for behaviour change"
+    }
+   ],
+   "findings": [
+    "Gamification in e-Health drives short-term engagement via extrinsic rewards",
+    "Empirical evidence for sustained behaviour change is weak"
+   ],
+   "limitations": [
+    "Heterogeneous interventions and outcomes",
+    "Mostly short-term follow-up"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Temper the gamification case: rewards drive session initiation, not proven behaviour change; never pay for outcomes."
   }
  ]
 }

@@ -161,7 +161,7 @@ Not implemented: narrative campaign, real-money rewards, purchasable currency, i
 
 ### 6.5 Gamification and game harms
 
-- Gamification of physical activity: Hedges g=0.42 (95% CI 0.14-0.69), 16 studies, 2,407 participants. PMID 34982715. DOI 10.2196/15083.
+- Gamification of physical activity: Hedges g=0.42 (95% CI 0.14-0.69), 16 studies, 2,407 participants. PMID 34982715. DOI 10.2196/26779. Tempered by an e-Health gamification review finding mostly short-term engagement through extrinsic rewards with weak evidence for behaviour change (PMID 28536062): rewards earn the session, they do not change the behaviour.
 - Systematic review of gamification in e-Health: mostly short-term engagement through extrinsic rewards; weak empirical evidence. PMID 28536062. DOI 10.1016/j.jbi.2017.05.011.
 - Global prevalence of gaming disorder: 3.05% (95% CI 2.38-3.91), 53 studies, 226,247 participants. PMID 33028074. DOI 10.1177/0004867420962851.
 - I-PACE model of specific Internet-use disorders. PMID 27590829. DOI 10.1016/j.neubiorev.2016.08.033.

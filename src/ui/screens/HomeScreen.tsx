@@ -128,6 +128,9 @@ function PracticePlan({
       <p className="muted">
         A specific when-and-where plan makes follow-through easier. This stays on this device.
       </p>
+      <p className="fine">
+        Same time and place each day works best — morning sessions form stronger habits.
+      </p>
       <div className="plan-fields">
         <label>
           When?
