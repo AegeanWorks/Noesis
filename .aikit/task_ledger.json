@@ -1,54 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-open-questions-v1",
+    "task_id": "noesis-arm-schedule-proof-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793633327.9948404,
+    "updated_at": 1793633733.0883906,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793633328.3216002
+    "completed_at": 1793633733.633613
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-far-check-v1",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[3/3] R48, ADR-024, BEHAVIORAL 6.20, 233 Vitest + 29 Python green, 400 sims, 6/6 gates, home far-check card screenshot clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793630596.5351558,
-      "timestamp_str": "2026-11-02 17:43:16",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-far-check-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-far-check-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793630596.8380783,
-      "timestamp_str": "2026-11-02 17:43:16",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-complete-export-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: include far checks and symptom reports in the portable export, arm-tagged",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793630643.7883475,
-      "timestamp_str": "2026-11-02 17:44:03",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "R38/R46 promise a complete trial record, but the JSON export only carries practice sessions; far outcomes and safety events would be stranded on-device",
-        "benefits": "one JSON file is the complete portable record: sessions, far checks, symptom reports, enrollment",
-        "mitigation": "additive optional fields with defaults; existing exports parse unchanged; no new keys"
-      }
-    },
     {
       "task_id": "noesis-complete-export-v1",
       "phase": "phase 2",
@@ -241,6 +204,41 @@
       "status": "completed",
       "timestamp": 1793633328.3216019,
       "timestamp_str": "2026-11-02 18:28:48",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-arm-schedule-proof-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: prove engagement vs control bonus schedules end-to-end with a fixed seed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793633663.904179,
+      "timestamp_str": "2026-11-02 18:34:23",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Arm-dependent schedules had engine unit tests but no integration proof that App wires the right schedule per arm"
+      }
+    },
+    {
+      "task_id": "noesis-arm-schedule-proof-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] Fixed-seed journeys prove volatile vs steady tiers per arm; 240 Vitest + 29 Python green, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793633733.0883906,
+      "timestamp_str": "2026-11-02 18:35:33",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-arm-schedule-proof-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-arm-schedule-proof-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793633733.6336145,
+      "timestamp_str": "2026-11-02 18:35:33",
       "agent": "kilo:main"
     }
   ]
