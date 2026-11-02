@@ -1,66 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-habit-recovery-v1",
+    "task_id": "noesis-focus-practice-v1",
     "last_phase": "phase 3",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793625521.3668723,
+    "updated_at": 1793626118.3441157,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793625521.6585019
+    "completed_at": 1793626118.6548777
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-study-arms-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/3] Plan: protocol-gated study arms for RCT with per-session arm logging and consent",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793573816.2806468,
-      "timestamp_str": "2026-11-02 01:56:56",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Investigational-device RCT needs arm assignment, exposure logging and consent in-app; randomisation stays with the protocol, the app records and discloses",
-        "benefits": "trial can test engagement variants with full traceability while the default product stays unchanged and safety monitoring covers all arms",
-        "risks": "contract: additive optional arm field and study key; dependency: none new; concurrency: single-writer localStorage; state: study enrollment coexists with history/export",
-        "mitigation": "arm-gated UI only, never default; consent required to enroll; withdraw keeps data; AE/heavy-use monitoring active in every arm"
-      }
-    },
-    {
-      "task_id": "noesis-study-arms-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/3] Study store, per-session arm tags, export study block, arm-gated streak UI, consent-gated enrollment, 12 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793574649.1541674,
-      "timestamp_str": "2026-11-02 02:10:49",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-study-arms-v1",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[3/3] R38, ADR-014, BEHAVIORAL 6.10, 204 Vitest + 29 Python green, 400 sims, 6/6 gates, settings study card screenshot clean; one transient load flake, green on rerun; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793574651.7778587,
-      "timestamp_str": "2026-11-02 02:10:51",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-study-arms-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-study-arms-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793574654.29188,
-      "timestamp_str": "2026-11-02 02:10:54",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-incentive-arm-v1",
       "phase": "phase 1",
@@ -255,6 +206,55 @@
       "status": "completed",
       "timestamp": 1793625521.6585035,
       "timestamp_str": "2026-11-02 16:18:41",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-focus-practice-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/3] Plan: per-mechanic focus sessions plus weakest-link suggestion",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793625611.3742774,
+      "timestamp_str": "2026-11-02 16:20:11",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Spacing and testing rows (16719566, 25150680) plus Adesope/Latimier moderators support spaced retrieval of the weakest material with delayed retest; the app can only train all four mechanics at once",
+        "benefits": "users re-test exactly what wobbles, spaced by days; autonomy preserved via explicit choice",
+        "risks": "contract: additive config path and card; dependency: none new; concurrency: n/a; state: focus is a transient start option, not stored",
+        "mitigation": "default session unchanged; focus reuses blocks/results/history/export untouched; copy gain-framed and lint-checked"
+      }
+    },
+    {
+      "task_id": "noesis-focus-practice-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/3] Focus sessions, weakest-link suggestion, per-card focus buttons, 8 new tests",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793625813.9576037,
+      "timestamp_str": "2026-11-02 16:23:33",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-focus-practice-v1",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[3/3] R43, ADR-019, BEHAVIORAL 6.15, 216 Vitest + 29 Python green, 400 sims, 6/6 gates, home screenshot with focus buttons clean; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793626118.3441157,
+      "timestamp_str": "2026-11-02 16:28:38",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-focus-practice-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-focus-practice-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793626118.654879,
+      "timestamp_str": "2026-11-02 16:28:38",
       "agent": "kilo:main"
     }
   ]

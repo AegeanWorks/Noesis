@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MECHANIC_META } from "../../engine/evidence";
 import type { MechanicId, MechanicMeta } from "../../engine/types";
-import type { SessionRecord, TodayStats, WeekStats } from "../../storage/history";
+import type { SessionRecord, TodayStats, WeekStats, WeakestMechanic } from "../../storage/history";
 import { accuracySeries, bestAccuracyFor, currentDayStreak, lastDaysActivity, lastResultFor } from "../../storage/history";
 import type { HeavyUseSignal, Milestone } from "../../storage/engagement";
 import type { StudyArm } from "../../storage/study";
@@ -26,6 +26,8 @@ interface HomeScreenProps {
   motivationPaused: boolean;
   milestones: Milestone[];
   studyArm: StudyArm | null;
+  weakest: WeakestMechanic | null;
+  onFocusMechanic: (mechanic: MechanicId) => void;
   onStart: () => void;
   onContinue: () => void;
   onSaveIntention: (when: string, where: string) => void;
@@ -36,7 +38,13 @@ interface HomeScreenProps {
   onDismissMilestones: () => void;
 }
 
-function MechanicCard({ meta }: { meta: MechanicMeta }) {
+function MechanicCard({
+  meta,
+  onFocus,
+}: {
+  meta: MechanicMeta;
+  onFocus: (mechanic: MechanicId) => void;
+}) {
   return (
     <article className="card mechanic-card">
       <div className="card-top">
@@ -46,6 +54,11 @@ function MechanicCard({ meta }: { meta: MechanicMeta }) {
       <p className="muted">{meta.tagline}</p>
       <p>{meta.claim}</p>
       <p className="fine">{meta.qualifier}</p>
+      <div className="hero-actions">
+        <Button variant="ghost" onClick={() => onFocus(meta.id)}>
+          Focus {meta.name}
+        </Button>
+      </div>
     </article>
   );
 }
@@ -295,6 +308,8 @@ export function HomeScreen({
   motivationPaused,
   milestones,
   studyArm,
+  weakest,
+  onFocusMechanic,
   onStart,
   onContinue,
   onSaveIntention,
@@ -366,9 +381,30 @@ export function HomeScreen({
 
       <div className="grid">
         {Object.values(MECHANIC_META).map((meta) => (
-          <MechanicCard key={meta.id} meta={meta} />
+          <MechanicCard key={meta.id} meta={meta} onFocus={onFocusMechanic} />
         ))}
       </div>
+
+      {weakest ? (
+        <section className="notice" data-testid="weakest-link">
+          <h3>
+            Wobbliest lately: {MECHANIC_META[weakest.mechanic]?.name} (
+            {Math.round(weakest.accuracy * 100)}%)
+          </h3>
+          <p>
+            Spaced retrieval works best on what you almost know. One focused session
+            re-tests just this task.
+          </p>
+          <div className="hero-actions">
+            <Button
+              variant="ghost"
+              onClick={() => onFocusMechanic(weakest.mechanic)}
+            >
+              Focus {MECHANIC_META[weakest.mechanic]?.name}
+            </Button>
+          </div>
+        </section>
+      ) : null}
 
       <aside className="notice">
         <h3>What this is not</h3>

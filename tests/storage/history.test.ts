@@ -12,6 +12,7 @@ import {
   accuracySeries,
   loadHistory,
   todayStats,
+  weakestRecentMechanic,
   weekStats,
   type SessionRecord,
 } from "../../src/storage/history";
@@ -177,5 +178,13 @@ describe("consistency and personal bests", () => {
     expect(detectNewBests(current.results, [current], "new")).toEqual([]);
     const worse = dated("low", at(2026, 10, 2), 0.4);
     expect(detectNewBests(worse.results, [prior, worse], "low")).toEqual([]);
+  });
+
+  it("finds the weakest recent mechanic and ignores perfect runs", () => {
+    const weak = dated("a", at(2026, 10, 2), 0.5);
+    expect(weakestRecentMechanic([weak])).toMatchObject({ mechanic: "nback", sessions: 1 });
+    expect(weakestRecentMechanic([])).toBeNull();
+    const perfect = dated("b", at(2026, 10, 2), 1);
+    expect(weakestRecentMechanic([perfect])).toBeNull();
   });
 });

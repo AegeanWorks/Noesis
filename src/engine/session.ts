@@ -27,9 +27,10 @@ export function sessionBlocks(
   difficulty: number,
   length: SessionLength,
   levels?: Partial<Record<MechanicId, number>>,
+  mechanics: readonly MechanicId[] = BLOCK_MECHANICS,
 ): BlockConfig[] {
   const safeDifficulty = Math.min(3, Math.max(1, Math.round(difficulty)));
-  const blocks: BlockConfig[] = BLOCK_MECHANICS.map((mechanic) => {
+  const blocks: BlockConfig[] = mechanics.map((mechanic) => {
     const level = levels?.[mechanic];
     const blockDifficulty =
       typeof level === "number" ? Math.min(3, Math.max(1, Math.round(level))) : safeDifficulty;
@@ -38,12 +39,35 @@ export function sessionBlocks(
   return length === "quick" ? blocks.slice(0, 2) : blocks;
 }
 
+export function focusSessionBlocks(
+  difficulty: number,
+  mechanic: MechanicId,
+  level?: number,
+): BlockConfig[] {
+  const safeDifficulty = Math.min(3, Math.max(1, Math.round(difficulty)));
+  const blockDifficulty =
+    typeof level === "number" ? Math.min(3, Math.max(1, Math.round(level))) : safeDifficulty;
+  return [
+    { mechanic, difficulty: blockDifficulty, trials: defaultTrials(mechanic, blockDifficulty) },
+    { mechanic, difficulty: blockDifficulty, trials: defaultTrials(mechanic, blockDifficulty) },
+    { mechanic, difficulty: blockDifficulty, trials: defaultTrials(mechanic, blockDifficulty) },
+  ];
+}
+
 export function defaultSessionConfig(
   seed: number,
   difficulty = 2,
   length: SessionLength = "standard",
   levels?: Partial<Record<MechanicId, number>>,
+  focus?: MechanicId,
 ): SessionConfig {
+  if (focus) {
+    return {
+      seed: normalizeSeed(seed),
+      label: "Focus session",
+      blocks: focusSessionBlocks(difficulty, focus, levels?.[focus]),
+    };
+  }
   return {
     seed: normalizeSeed(seed),
     label: length === "quick" ? "Quick session" : "Starter session",

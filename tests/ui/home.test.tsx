@@ -46,6 +46,8 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     motivationPaused: false,
     milestones: [],
     studyArm: null,
+    weakest: null,
+    onFocusMechanic: vi.fn(),
     onStart: vi.fn(),
     onContinue: vi.fn(),
     onSaveIntention: vi.fn(),
@@ -185,6 +187,21 @@ describe("HomeScreen", () => {
     today.finishedAt = new Date().toISOString();
     renderHome({ history: [today], week: { sessions: 1, days: 1, minutes: 8 } });
     expect(screen.queryByTestId("slip-recovery")).toBeNull();
+  });
+
+  it("offers focus practice per mechanic and for the weakest link", () => {
+    const props = renderHome({
+      weakest: { mechanic: "reasoning", accuracy: 0.6, sessions: 2 },
+    });
+    const focusButtons = screen.getAllByRole("button", { name: "Focus Reasoning" });
+    fireEvent.click(focusButtons[0]!);
+    expect(props.onFocusMechanic).toHaveBeenCalledWith("reasoning");
+    expect(screen.getByTestId("weakest-link").textContent).toMatch(/wobbliest lately/i);
+    fireEvent.click(focusButtons[1]!);
+    expect(props.onFocusMechanic).toHaveBeenCalledTimes(2);
+    cleanup();
+    renderHome({ weakest: null });
+    expect(screen.queryByTestId("weakest-link")).toBeNull();
   });
 
   it("shows the streak reminder only in the engagement arm", () => {

@@ -4,6 +4,8 @@ import {
   applySessionAction,
   createSession,
   defaultSessionConfig,
+  focusSessionBlocks,
+  sessionBlocks,
   sessionView,
 } from "../../src/engine/session";
 import { optimalPolicy, runMechanic } from "../../src/engine/simulate";
@@ -121,5 +123,20 @@ describe("session", () => {
     expect(view.progressCurrent).toBe(1);
     expect(view.progressTotal).toBe(4);
     expect(view.mechanic?.mechanic).toBe("nback");
+  });
+
+  it("builds a three-block focus session for a single mechanic", () => {
+    const blocks = focusSessionBlocks(2, "reasoning");
+    expect(blocks).toHaveLength(3);
+    expect(blocks.every((block) => block.mechanic === "reasoning")).toBe(true);
+    const config = defaultSessionConfig(9, 2, "standard", undefined, "speed");
+    expect(config.label).toBe("Focus session");
+    expect(config.blocks.map((block) => block.mechanic)).toEqual(["speed", "speed", "speed"]);
+  });
+
+  it("filters the standard lineup by mechanic without changing defaults", () => {
+    const blocks = sessionBlocks(2, "standard", undefined, ["gonogo"]);
+    expect(blocks.map((block) => block.mechanic)).toEqual(["gonogo"]);
+    expect(defaultSessionConfig(9).blocks).toHaveLength(4);
   });
 });

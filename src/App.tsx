@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { stableHash } from "./engine/hash";
+import type { MechanicId } from "./engine/types";
 import {
   addBlockMotivation,
   bankMotivation,
@@ -57,7 +58,7 @@ import {
   loadAdaptive,
   setAdaptiveEnabled,
 } from "./storage/adaptive";
-import { detectNewBests } from "./storage/history";
+import { detectNewBests, weakestRecentMechanic } from "./storage/history";
 import type { Difficulty, SessionLength } from "./storage/settings";
 import { clearSettings, loadSettings, saveSettings } from "./storage/settings";
 import {
@@ -155,34 +156,44 @@ export function App() {
     }
   }, [state, screen]);
 
-  const startSession = useCallback(() => {
-    clearSessionSnapshot();
-    const seed = Date.now() >>> 0;
-    motivatedBlock.current = -1;
-    const adaptiveState = loadAdaptive();
-    setAdaptive(adaptiveState);
-    const arm = loadStudy();
-    setStudy(arm);
-    setMotivation(
-      settings.motivationMode && !isMotivationPaused()
-        ? createMotivation(
-            seed,
-            arm.enrolled && arm.arm === "engagement" ? VOLATILE_SCHEDULE : STEADY_SCHEDULE,
-          )
-        : null,
-    );
-    sessionStore.start(
-      defaultSessionConfig(
-        seed,
-        settings.difficulty,
-        settings.sessionLength,
-        adaptiveState.enabled ? adaptiveState.levels : undefined,
-      ),
-    );
-    sessionStore.dispatch({ type: "begin" });
-    setPaused(false);
-    setScreen("session");
-  }, [settings.difficulty, settings.sessionLength]);
+  const startSession = useCallback(
+    (focus?: MechanicId) => {
+      clearSessionSnapshot();      const seed = Date.now() >>> 0;
+      motivatedBlock.current = -1;
+      const adaptiveState = loadAdaptive();
+      setAdaptive(adaptiveState);
+      const arm = loadStudy();
+      setStudy(arm);
+      setMotivation(
+        settings.motivationMode && !isMotivationPaused()
+          ? createMotivation(
+              seed,
+              arm.enrolled && arm.arm === "engagement" ? VOLATILE_SCHEDULE : STEADY_SCHEDULE,
+            )
+          : null,
+      );
+      sessionStore.start(
+        defaultSessionConfig(
+          seed,
+          settings.difficulty,
+          settings.sessionLength,
+          adaptiveState.enabled ? adaptiveState.levels : undefined,
+          focus,
+        ),
+      );
+      sessionStore.dispatch({ type: "begin" });
+      setScreen("session");
+      setPaused(false);
+    },
+    [settings.difficulty, settings.sessionLength],
+  );
+
+  const handleFocusMechanic = useCallback(
+    (mechanic: MechanicId) => {
+      startSession(mechanic);
+    },
+    [startSession],
+  );
 
   const continueSession = useCallback(() => {
     if (sessionStore.getSnapshot()) {
@@ -466,7 +477,9 @@ export function App() {
             motivationPaused={motivationPaused}
             milestones={newMilestones}
             studyArm={study.enrolled ? study.arm : null}
-            onStart={startSession}
+            weakest={weakestRecentMechanic(history)}
+            onFocusMechanic={handleFocusMechanic}
+            onStart={() => startSession()}
             onContinue={continueSession}
             onSaveIntention={handleSaveIntention}
             onClearIntention={handleClearIntention}
@@ -498,7 +511,7 @@ export function App() {
             <section className="screen">
               <h1>No active session</h1>
               <p className="lede">Start a session to begin.</p>
-              <button type="button" className="btn btn-primary" onClick={startSession}>
+              <button type="button" className="btn btn-primary" onClick={() => startSession()}>
                 Start session
               </button>
             </section>
@@ -512,7 +525,7 @@ export function App() {
             sessionId={lastSessionId}
             newBests={newBests}
             onAdverseLogged={setAdverseEvents}
-            onRestart={startSession}
+            onRestart={() => startSession()}
             onEvidence={() => setScreen("evidence")}
             onHome={() => setScreen("home")}
           />

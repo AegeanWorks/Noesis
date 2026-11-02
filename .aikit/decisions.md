@@ -137,3 +137,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: The review now holds that habit strength improves with intervention (SMD 0.69) but takes about two months to start (PMID 39685110), that habit correlates with frequency at r=0.46 via context-dependent repetition (PMID 21626256), and that a single miss does not materially affect formation (Lally et al. 2009). The app punished nothing but also said nothing after a slip.
 - **Decision**: Show a recovery line when yesterday was missed but the week shows prior practice: yesterday slipped, that does not reset anything, one session today keeps it forming. Mention the ~2-month horizon in the same breath as the calendar so expectations stay honest. See R42.
 - **Consequences**: Missed days get warmth instead of silence or shame; the calendar remains an accumulator that never subtracts.
+
+### ADR-019: Per-mechanic focus sessions with a weakest-link suggestion
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: Spacing and testing rows show retrieval with feedback beats restudy and massing (PMIDs 25150680, 16719566); Adesope 2017 and Latimier et al. 2020 add that delayed retest and mixed formats strengthen the effect. The app could only train all four mechanics at once, so weak material waited for the next full session.
+- **Decision**: Add explicit per-mechanic focus sessions (three blocks, one task, same difficulty/adaptive/motivation machinery) plus a home suggestion naming the weakest recent link. Focus is a choice on every card and in the suggestion; the full mixed session stays the default and the only entry from Start. See R43.
+- **Consequences**: Users re-test exactly what wobbles, spaced by days; history, export, motivation and adaptive logs treat focus sessions identically, so measurement stays clean.

@@ -227,3 +227,38 @@ export function detectNewBests(
   }
   return bests;
 }
+
+export interface WeakestMechanic {
+  mechanic: MechanicResult["mechanic"];
+  accuracy: number;
+  sessions: number;
+}
+
+export function weakestRecentMechanic(
+  history: readonly SessionRecord[],
+  lookback = 5,
+): WeakestMechanic | null {
+  const recent = history.slice(0, lookback);
+  if (recent.length === 0) return null;
+  const totals = new Map<MechanicResult["mechanic"], { sum: number; count: number }>();
+  for (const session of recent) {
+    for (const result of session.results) {
+      const accuracy = result.metrics.accuracy;
+      if (typeof accuracy !== "number") continue;
+      const entry = totals.get(result.mechanic) ?? { sum: 0, count: 0 };
+      entry.sum += accuracy;
+      entry.count += 1;
+      totals.set(result.mechanic, entry);
+    }
+  }
+  let weakest: WeakestMechanic | null = null;
+  for (const [mechanic, entry] of totals) {
+    if (entry.count === 0) continue;
+    const accuracy = entry.sum / entry.count;
+    if (accuracy >= 1) continue;
+    if (!weakest || accuracy < weakest.accuracy) {
+      weakest = { mechanic, accuracy, sessions: entry.count };
+    }
+  }
+  return weakest;
+}
