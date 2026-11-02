@@ -187,6 +187,9 @@ function PracticeSummary({
   const latest = history[0];
   const activity = lastDaysActivity(history);
   const streak = currentDayStreak(history);
+  const todayActive = activity[activity.length - 1]?.active === true;
+  const yesterdayActive = activity[activity.length - 2]?.active === true;
+  const priorActive = activity.slice(-8, -2).some((day) => day.active);
   return (
     <section className="card practice-card" aria-labelledby="practice-heading">
       <div className="card-top">
@@ -242,6 +245,12 @@ function PracticeSummary({
             ? `Weekly goal: ${week.days} of ${weeklyGoal} days — one more day hits it.`
             : `Weekly goal: ${Math.min(week.days, weeklyGoal)} of ${weeklyGoal} practice days.`}
       </p>
+      {!todayActive && !yesterdayActive && priorActive ? (
+        <p className="fine" data-testid="slip-recovery">
+          Yesterday slipped — that doesn&apos;t reset anything. One session today keeps
+          it forming.
+        </p>
+      ) : null}
       {studyArm === "engagement" && streak > 0 ? (
         <p className="fine" data-testid="streak-at-risk">
           {streak}-day streak — practice today to keep it alive. Streaks are cosmetic and

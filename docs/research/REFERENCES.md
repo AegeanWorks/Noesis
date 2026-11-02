@@ -115,6 +115,8 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 - The effectiveness of multi-component goal setting interventions for changing physical activity behaviour: a systematic review and meta-analysis. *Health Psychology Review*. 2016. PMID: [26445201](https://pubmed.ncbi.nlm.nih.gov/26445201/). DOI: [10.1080/17437199.2015.1104258](https://doi.org/10.1080/17437199.2015.1104258).
 - Impact of implementation intentions on physical activity practice in adults: A systematic review and meta-analysis of randomized clinical trials. *PLOS ONE*. 2018. PMID: [30427874](https://pubmed.ncbi.nlm.nih.gov/30427874/). DOI: [10.1371/journal.pone.0206294](https://doi.org/10.1371/journal.pone.0206294).
 - What Effect Do Goal Setting Interventions Have on Physical Activity and Psychological Outcomes in Insufficiently Active Adults? A Systematic Review and Meta-Analysis. *Journal of Physical Activity and Health*. 2024. PMID: [38560998](https://pubmed.ncbi.nlm.nih.gov/38560998/). DOI: [10.1123/jpah.2023-0340](https://doi.org/10.1123/jpah.2023-0340).
+- Time to Form a Habit: A Systematic Review and Meta-Analysis of Health Behaviour Habit Formation and Its Determinants. *Healthcare*. 2024. PMID: [39685110](https://pubmed.ncbi.nlm.nih.gov/39685110/). DOI: [10.3390/healthcare12232488](https://doi.org/10.3390/healthcare12232488).
+- A systematic review and meta-analysis of applications of the Self-Report Habit Index to nutrition and physical activity behaviours. *Annals of Behavioral Medicine*. 2011. PMID: [21626256](https://pubmed.ncbi.nlm.nih.gov/21626256/). DOI: [10.1007/s12160-011-9282-0](https://doi.org/10.1007/s12160-011-9282-0).
 
 ## Safety and service context
 

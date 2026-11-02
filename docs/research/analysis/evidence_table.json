@@ -6467,6 +6467,90 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "Count practice days, not sessions: distributing learning across days markedly improves retention; cramming within a day does not."
+  },
+  {
+   "pmid": "39685110",
+   "doi": "10.3390/healthcare12232488",
+   "doi_status": "verified",
+   "year": 2024,
+   "journal": "Healthcare",
+   "title": "Time to Form a Habit: A Systematic Review and Meta-Analysis of Health Behaviour Habit Formation and Its Determinants.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 20,
+   "n": 2601,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 0.69,
+     "ci_low": 0.49,
+     "ci_high": 0.88,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "habit-score improvement pre-post; medians 59-66 days to formation; morning and self-selected habits stronger"
+    }
+   ],
+   "findings": [
+    "Habit strength improves with intervention across behaviours",
+    "Formation takes about two months to start, with wide individual variation"
+   ],
+   "limitations": [
+    "Mostly high risk of bias",
+    "Small evidence base per behaviour"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Habits take about two months to start forming: the calendar shows the accumulation. Morning and self-selected practice strengthen formation."
+  },
+  {
+   "pmid": "21626256",
+   "doi": "10.1007/s12160-011-9282-0",
+   "doi_status": "verified",
+   "year": 2011,
+   "journal": "Annals of Behavioral Medicine",
+   "title": "A systematic review and meta-analysis of applications of the Self-Report Habit Index to nutrition and physical activity behaviours.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 21,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "pooled_r",
+     "value": 0.46,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "habit strength correlates with behavioural frequency; habit moderates the intention-behaviour relation"
+    }
+   ],
+   "findings": [
+    "Medium-to-strong habit-behaviour correlation across health behaviours",
+    "Context-dependent repetition is the formation mechanism"
+   ],
+   "limitations": [
+    "SRHI self-report measure",
+    "Mostly cross-sectional underlying studies"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Same context, repeated: the stable when-where plan plus daily repetition is the automaticity engine; a single miss does not reset formation."
   }
  ]
 }

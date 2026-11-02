@@ -130,3 +130,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: Two Psychological Bulletin meta-analyses describe exactly what the app does: testing beats restudy (g=0.50, PMID 25150680) and spaced beats massed at every retention interval (PMID 16719566). The product never stated its loop, and the weekly goal counted sessions, letting users cram.
 - **Decision**: State the loop in the practice summary (every block tests and scores immediately; that retrieval is the training) and count the weekly goal in practice days. Spacing stays structural across the goal, the back-to-back check-in and the calendar. See R41.
 - **Consequences**: The central product claim is now a cited, tested mechanism rather than a slogan; the goal unit matches the calendar and streak units, so the whole engagement layer speaks in days.
+
+### ADR-018: Slip-tolerant habit framing with an honest horizon
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: The review now holds that habit strength improves with intervention (SMD 0.69) but takes about two months to start (PMID 39685110), that habit correlates with frequency at r=0.46 via context-dependent repetition (PMID 21626256), and that a single miss does not materially affect formation (Lally et al. 2009). The app punished nothing but also said nothing after a slip.
+- **Decision**: Show a recovery line when yesterday was missed but the week shows prior practice: yesterday slipped, that does not reset anything, one session today keeps it forming. Mention the ~2-month horizon in the same breath as the calendar so expectations stay honest. See R42.
+- **Consequences**: Missed days get warmth instead of silence or shame; the calendar remains an accumulator that never subtracts.

@@ -219,6 +219,10 @@ Three goal-setting records joined the table: specific goals have a large effect 
 
 Two Psychological Bulletin meta-analyses close the loop on what the app fundamentally is. Testing beats restudy for retention (g=0.50, 81% of effects positive, strongest with effortful recall plus feedback; PMID 25150680), and spaced study beats massed study at every retention interval with the optimal gap rising with the retention interval (PMID 16719566). Practice-testing and spaced-retrieval reviews from the education literature (Adesope 2017; Latimier et al. 2020, both narrative-only: no MEDLINE record) converge on the same prescription with two moderators that shaped the design: benefits are stronger when the test lags study by more than a day, and formats that mix recall with recognition outperform restudy on retention and transfer. Implemented as R41: the app states its loop plainly (every block tests and scores immediately), and spacing is structural — the weekly goal counts days, the back-to-back check-in fires within the hour, and the calendar shows the distribution, not just the total.
 
+### 6.14 Habit formation with slip tolerance (November 2026)
+
+Two habit records joined the table: habit strength improves with intervention (SMD 0.69) but takes about two months to start forming, with morning and self-selected practice strongest (PMID 39685110); and habit correlates with behavioural frequency at r=0.46 through context-dependent repetition (PMID 21626256). Two mechanism sources stayed narrative-only: Lally et al. 2009, whose 84-day study showed a single missed day does not materially affect formation, and the 2021 habit-tracking guidelines. Implemented as R42: when yesterday slipped but the week shows prior practice, home says so plainly — one session today keeps it forming, nothing resets. The ~2-month horizon sets honest expectations; the calendar accumulates and never subtracts.
+
 ---
 
 ## 7. Safeguards and design rules

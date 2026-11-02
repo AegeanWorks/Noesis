@@ -170,6 +170,23 @@ describe("HomeScreen", () => {
     expect(screen.getByTestId("weekly-goal").textContent).toMatch(/1 of 5 practice days/);
   });
 
+  it("reassures after a slipped day without resetting anything", () => {
+    const threeDaysAgo = new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString();
+    const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+    const slipped = record(80, threeDaysAgo);
+    renderHome({ history: [slipped], week: { sessions: 1, days: 1, minutes: 8 } });
+    expect(screen.getByTestId("slip-recovery").textContent).toMatch(/doesn't reset anything/i);
+    cleanup();
+    const recent = record(81, yesterday);
+    renderHome({ history: [recent], week: { sessions: 1, days: 1, minutes: 8 } });
+    expect(screen.queryByTestId("slip-recovery")).toBeNull();
+    cleanup();
+    const today = record(82);
+    today.finishedAt = new Date().toISOString();
+    renderHome({ history: [today], week: { sessions: 1, days: 1, minutes: 8 } });
+    expect(screen.queryByTestId("slip-recovery")).toBeNull();
+  });
+
   it("shows the streak reminder only in the engagement arm", () => {
     const entry = record(80);
     entry.finishedAt = new Date().toISOString();
