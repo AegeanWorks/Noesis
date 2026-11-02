@@ -76,4 +76,14 @@ describe("HeavyUseNotice", () => {
       screen.queryByRole("button", { name: "Pause Motivation for today" }),
     ).toBeNull();
   });
+
+  it("shows safety before celebration when both trigger", () => {
+    renderHome({
+      heavyUse: { kind: "many_today", sessionsToday: 4, minutesToday: 32 },
+      milestones: [{ id: "sessions-1", title: "First session complete", detail: "Well done." }],
+    });
+    const notice = screen.getByTestId("heavy-use-notice");
+    const milestone = screen.getByTestId("milestone-notice");
+    expect(notice.compareDocumentPosition(milestone) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
 });

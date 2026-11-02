@@ -252,6 +252,7 @@ Social accountability improves adherence, but accounts and servers are out of sc
 8. **No infinite loops.** Sessions have a fixed block count and a target time.
 9. **No composite cognitive score.** Each domain is reported separately.
 10. **Every mechanic must be explainable in one sentence.** If it cannot be, it is a dark pattern.
+11. **Marketing copy is an active ingredient.** Expectation alone moves training scores (Foroughi et al. 2016, PMID 27325761, primary study, narrative-only), so honest claims are not just ethics — they keep the measured effect attributable to practice.
 
 ---
 

@@ -392,6 +392,16 @@ export function HomeScreen({
       <PracticePlan intention={intention} onSave={onSaveIntention} onClear={onClearIntention} />
       <PracticeSummary history={history} week={week} today={today} studyArm={studyArm} weeklyGoal={weeklyGoal} />
 
+      {heavyUse && !heavyUseDismissed ? (
+        <HeavyUseNotice
+          signal={heavyUse}
+          motivationOn={motivationOn}
+          motivationPaused={motivationPaused}
+          onPauseMotivation={onPauseMotivation}
+          onDismiss={onDismissHeavyUse}
+        />
+      ) : null}
+
       {milestones.length > 0 ? (
         <section className="notice" data-testid="milestone-notice">
           <h3>{milestones[0]?.title}</h3>
@@ -405,16 +415,6 @@ export function HomeScreen({
             </Button>
           </div>
         </section>
-      ) : null}
-
-      {heavyUse && !heavyUseDismissed ? (
-        <HeavyUseNotice
-          signal={heavyUse}
-          motivationOn={motivationOn}
-          motivationPaused={motivationPaused}
-          onPauseMotivation={onPauseMotivation}
-          onDismiss={onDismissHeavyUse}
-        />
       ) : null}
 
       <div className="grid">
