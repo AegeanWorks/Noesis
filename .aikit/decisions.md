@@ -121,5 +121,12 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Date**: 2026-11-02
 - **Status**: Accepted
 - **Context**: The review now holds that specific goals move behaviour strongly (g=1.11, PMID 38560998), daily-plus-weekly beats weekly-only (PMID 26445201), and implementation intentions need reinforcement (PMID 30427874). The goal-gradient mechanism says effort accelerates near the goal. The app had a per-session intention but no explicit weekly target and no proximity nudge.
-- **Decision**: Add one adjustable weekly session goal (1-7, default 3) shown as progress in the practice summary, with a one-more-hits-it nudge exactly one session short and a met-goal acknowledgment that names rest as earned. No endowment tricks, no loss framing, no rewards attached — unrewarded specific goals are the supported configuration. See R40.
+- **Decision**: Add one adjustable weekly session goal (1-7, default 3) shown as progress in the practice summary, with a one-more-hits-it nudge exactly one session short and a met-goal acknowledgment that names rest as earned. No endowment tricks, no loss framing, no rewards attached — unrewarded specific goals are the supported configuration. Amended: the goal counts practice days, not sessions, because spaced days beat crammed sessions. See R40.
 - **Consequences**: The when-where intention gains its reinforcement loop; the goal-gradient nudge concentrates motivation where the evidence says effort naturally accelerates. The goal is display-only progress derived from stored history.
+
+### ADR-017: Retrieval practice and spacing as the stated core loop
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: Two Psychological Bulletin meta-analyses describe exactly what the app does: testing beats restudy (g=0.50, PMID 25150680) and spaced beats massed at every retention interval (PMID 16719566). The product never stated its loop, and the weekly goal counted sessions, letting users cram.
+- **Decision**: State the loop in the practice summary (every block tests and scores immediately; that retrieval is the training) and count the weekly goal in practice days. Spacing stays structural across the goal, the back-to-back check-in and the calendar. See R41.
+- **Consequences**: The central product claim is now a cited, tested mechanism rather than a slogan; the goal unit matches the calendar and streak units, so the whole engagement layer speaks in days.

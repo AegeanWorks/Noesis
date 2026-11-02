@@ -232,14 +232,15 @@ function PracticeSummary({
       <p className="fine">
         Compare a block only with your own earlier runs of the same task. There is no
         composite score; Motivation momentum is cosmetic and never changes these accuracy
-        values.
+        values. Every block tests you and scores you immediately; that retrieval is the
+        training.
       </p>
       <p className="fine" data-testid="weekly-goal">
-        {week.sessions >= weeklyGoal
-          ? `Weekly goal met — ${weeklyGoal} of ${weeklyGoal}. Rest is earned.`
-          : week.sessions === weeklyGoal - 1
-            ? `Weekly goal: ${week.sessions} of ${weeklyGoal} — one more session hits it.`
-            : `Weekly goal: ${Math.min(week.sessions, weeklyGoal)} of ${weeklyGoal} sessions.`}
+        {week.days >= weeklyGoal
+          ? `Weekly goal met — ${weeklyGoal} of ${weeklyGoal} days. Rest is earned.`
+          : week.days === weeklyGoal - 1
+            ? `Weekly goal: ${week.days} of ${weeklyGoal} days — one more day hits it.`
+            : `Weekly goal: ${Math.min(week.days, weeklyGoal)} of ${weeklyGoal} practice days.`}
       </p>
       {studyArm === "engagement" && streak > 0 ? (
         <p className="fine" data-testid="streak-at-risk">

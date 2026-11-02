@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 100 |
-| Outcomes | 261 |
-| Primary outcomes | 210 |
-| Systematic reviews/meta-analyses | 55 |
+| Records | 102 |
+| Outcomes | 263 |
+| Primary outcomes | 212 |
+| Systematic reviews/meta-analyses | 57 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 19 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 89 |
+| DOI verified | 91 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 34 |
+| cct | 36 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -165,6 +165,10 @@ Six gaming-disorder engagement records (PMIDs 33028074, 37256740, 36571943, 4011
 Four further records closed dangling DESIGN_IMPLICATIONS citations the same day: three photosensitivity safety records (PMIDs 16146438, 16146439, 41283196; Epilepsy Foundation consensus and reviews grounding R14/R15) and one gamification meta-analysis (PMID 34982715, Hedges g 0.42, grounding R31). Identifiers confirmed via `esummary`; the gamification k/n and effect sizes were read from the PubMed abstract record. Two mechanism reviews stayed narrative-only by design: Clark 2009 near-miss (PMID 19217383, a primary experiment outside the umbrella-review scope) and Kahneman & Tversky 1979 (a book).
 
 Three incentive-design records joined the table the same day (PMIDs 36367428, 24618584, 25933128): identifiers confirmed via `esummary`, DOIs matched. Two further mechanism sources stayed narrative-only by the same rule: the reward-memory review (PMID 26657967, structured narrative review) and the deposit-contract app RCT (PMID 36201384, a primary trial whose loss-frame-backfire and low-uptake warnings shaped R39).
+
+Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 30427874): specific goals (g=1.11), multi-component goal setting (d=0.55, daily-plus-weekly best) and implementation intentions with reinforcement (SMD 0.25). The goal-gradient mechanism (Kivetz et al., primary studies) stays narrative-only by the same rule and shapes the one-session-short nudge in R40.
+
+Two retrieval-practice records joined the table the same day (PMIDs 25150680, 16719566): testing beats restudy (g=0.50) and spaced beats massed at every retention interval. Two education-journal reviews stayed narrative-only (Adesope 2017; Latimier et al. 2020: no MEDLINE record) but converge on the same prescription with moderators that shaped R41: stronger effects when test lags study by more than a day, and mixed recall-recognition formats best.
 
 Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 30427874): specific goals (g=1.11), multi-component goal setting (d=0.55, daily-plus-weekly best) and implementation intentions with reinforcement (SMD 0.25). The goal-gradient mechanism (Kivetz et al., primary studies) stays narrative-only by the same rule and shapes the one-session-short nudge in R40.
 

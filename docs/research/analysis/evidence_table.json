@@ -6382,6 +6382,91 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "The when-where plan needs reinforcement to work: the weekly goal and summary are the reinforcement loop around the intention."
+  },
+  {
+   "pmid": "25150680",
+   "doi": "10.1037/a0037559",
+   "doi_status": "verified",
+   "year": 2014,
+   "journal": "Psychological Bulletin",
+   "title": "The effect of testing versus restudy on retention: a meta-analytic review of the testing effect.",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "active"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.5,
+     "ci_low": 0.42,
+     "ci_high": 0.58,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "testing vs restudy; 81% of effects positive; initial recall tests yield the largest benefits"
+    }
+   ],
+   "findings": [
+    "Testing reliably beats restudy for retention (g=0.50)",
+    "Effortful initial recall drives the benefit; feedback helps"
+   ],
+   "limitations": [
+    "Classroom studies excluded",
+    "High heterogeneity"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Every block is a test with feedback, not a re-read: the app core loop is retrieval practice, and testing beats restudy especially with effortful recall plus feedback."
+  },
+  {
+   "pmid": "16719566",
+   "doi": "10.1037/0033-2909.132.3.354",
+   "doi_status": "verified",
+   "year": 2006,
+   "journal": "Psychological Bulletin",
+   "title": "Distributed practice in verbal recall tasks: A review and quantitative synthesis.",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "children"
+   ],
+   "k": 184,
+   "n": null,
+   "comparators": [
+    "active"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "839 assessments in 317 experiments; spaced beats massed at every retention interval; optimal gap rises with retention interval; ~15% benefit distributing across days"
+    }
+   ],
+   "findings": [
+    "Spaced beats massed at every retention interval from minutes to months",
+    "Distributing learning across days markedly improves retention; cramming within a day impairs it"
+   ],
+   "limitations": [
+    "Supraoptimal-interval drop-off magnitude uncertain",
+    "Expanding vs fixed spacing unresolved"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Count practice days, not sessions: distributing learning across days markedly improves retention; cramming within a day does not."
   }
  ]
 }

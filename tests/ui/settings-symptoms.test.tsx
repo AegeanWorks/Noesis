@@ -144,7 +144,7 @@ describe("SettingsScreen study enrollment", () => {  it("requires an id and cons
         onWeeklyGoal={onWeeklyGoal}
       />,
     );
-    fireEvent.change(screen.getByLabelText(/weekly session goal/i), { target: { value: "5" } });
+    fireEvent.change(screen.getByLabelText(/weekly practice-day goal/i), { target: { value: "5" } });
     expect(onWeeklyGoal).toHaveBeenCalledWith(5);
   });
 

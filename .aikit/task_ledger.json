@@ -1,65 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-weekly-goal-v1",
+    "task_id": "noesis-spacing-goal-v1",
     "last_phase": "phase 3",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793624785.1428928,
+    "updated_at": 1793625196.5160565,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793624785.5107348
+    "completed_at": 1793625196.7996924
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-adaptive-difficulty-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-adaptive-difficulty-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793572412.448558,
-      "timestamp_str": "2026-11-02 01:33:32",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-citation-grounding-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: verify every in-app citation resolves to a corpus record with a matching year",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793572744.0865355,
-      "timestamp_str": "2026-11-02 01:39:04",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "MECHANIC_META citations were format-checked but never verified; a typo would ship a dead citation",
-        "benefits": "R4/R6 traceability becomes a build error instead of a manual audit",
-        "risks": "contract: test-only, no app change; dependency: none; concurrency: n/a; state: reads table JSON",
-        "mitigation": "test only; corpus is the existing validated table"
-      }
-    },
-    {
-      "task_id": "noesis-citation-grounding-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] Citation grounding test: 10 citations resolve, years match; 184 Vitest + 29 Python green; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793572744.7395446,
-      "timestamp_str": "2026-11-02 01:39:04",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-citation-grounding-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-citation-grounding-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793572745.737227,
-      "timestamp_str": "2026-11-02 01:39:05",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-engagement-pull-v1",
       "phase": "phase 1",
@@ -254,6 +206,55 @@
       "status": "completed",
       "timestamp": 1793624785.5107377,
       "timestamp_str": "2026-11-02 16:06:25",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-spacing-goal-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/3] Plan: ground practice in testing-effect and spacing evidence; count goal in days",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793624922.0005026,
+      "timestamp_str": "2026-11-02 16:08:41",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Rowland 2014 (g=0.50 testing>restudy) and Cepeda 2006 (spaced beats massed at every interval) show the current session-counted goal lets users cram; days are the spacing-aligned unit",
+        "benefits": "goal, calendar and streak align on one unit; retrieval-practice core loop becomes an explicit cited claim",
+        "risks": "contract: display semantics change sessions to days; dependency: none new; concurrency: n/a; state: same numeric setting, new meaning",
+        "mitigation": "week.days already instrumented; same adjustable 1-7 range; tests pin the new copy; claim lint gates new strings"
+      }
+    },
+    {
+      "task_id": "noesis-spacing-goal-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/3] Testing-effect and spacing rows, goal counts practice days, retrieval stated as the loop, 3 new tests",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793625111.124084,
+      "timestamp_str": "2026-11-02 16:11:51",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-spacing-goal-v1",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[3/3] R40 days, R41 retrieval core, ADR-017, BEHAVIORAL 6.13, 102-record table, 211 Vitest + 29 Python green, 400 sims, 6/6 gates, home screenshot clean; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793625196.5160565,
+      "timestamp_str": "2026-11-02 16:13:16",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-spacing-goal-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-spacing-goal-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793625196.7996938,
+      "timestamp_str": "2026-11-02 16:13:16",
       "agent": "kilo:main"
     }
   ]

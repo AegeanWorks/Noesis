@@ -239,7 +239,7 @@ export function SettingsScreen({
           </div>
         </fieldset>
         <label className="fine" htmlFor="weekly-goal">
-          Weekly session goal
+          Weekly practice-day goal
         </label>
         <select
           id="weekly-goal"
@@ -248,10 +248,14 @@ export function SettingsScreen({
         >
           {[1, 2, 3, 4, 5, 6, 7].map((count) => (
             <option key={count} value={count}>
-              {count} {count === 1 ? "session" : "sessions"} a week
+              {count} {count === 1 ? "day" : "days"} a week
             </option>
           ))}
         </select>
+        <p className="fine">
+          Spaced days beat crammed sessions: the goal counts days with at least one
+          session, so spreading practice across the week is what counts.
+        </p>
         <label className="check">
           <input
             type="checkbox"

@@ -38,6 +38,8 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 - Long-term effects of cognitive training on everyday functional outcomes in older adults. *JAMA*. 2006. PMID: [17179457](https://pubmed.ncbi.nlm.nih.gov/17179457/). DOI: [10.1001/jama.296.23.2805](https://doi.org/10.1001/jama.296.23.2805).
 - Computerized training of working memory in children with ADHD--a randomized, controlled trial. *Journal of the American Academy of Child & Adolescent Psychiatry*. 2005. PMID: [15689731](https://pubmed.ncbi.nlm.nih.gov/15689731/). DOI unverified; cited by PMID.
 - Training of working memory in children with ADHD. *Journal of Clinical and Experimental Neuropsychology*. 2002. PMID: [12424652](https://pubmed.ncbi.nlm.nih.gov/12424652/). DOI: [10.1076/jcen.24.6.781.8395](https://doi.org/10.1076/jcen.24.6.781.8395).
+- The effect of testing versus restudy on retention: a meta-analytic review of the testing effect. *Psychological Bulletin*. 2014. PMID: [25150680](https://pubmed.ncbi.nlm.nih.gov/25150680/). DOI: [10.1037/a0037559](https://doi.org/10.1037/a0037559).
+- Distributed practice in verbal recall tasks: A review and quantitative synthesis. *Psychological Bulletin*. 2006. PMID: [16719566](https://pubmed.ncbi.nlm.nih.gov/16719566/). DOI: [10.1037/0033-2909.132.3.354](https://doi.org/10.1037/0033-2909.132.3.354).
 
 ## Neurofeedback
 

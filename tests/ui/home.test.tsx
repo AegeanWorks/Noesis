@@ -157,18 +157,17 @@ describe("HomeScreen", () => {
     expect(screen.queryByTestId("milestone-notice")).toBeNull();
   });
 
-  it("tracks the weekly goal with a gradient nudge one session short", () => {
+  it("tracks the weekly goal in days with a gradient nudge one day short", () => {
     const entry = record(80);
     entry.finishedAt = new Date().toISOString();
-    const week = { sessions: 2, days: 2, minutes: 16 };
-    renderHome({ history: [entry], week, weeklyGoal: 3 });
-    expect(screen.getByTestId("weekly-goal").textContent).toMatch(/2 of 3.*one more/i);
+    renderHome({ history: [entry], week: { sessions: 3, days: 2, minutes: 24 }, weeklyGoal: 3 });
+    expect(screen.getByTestId("weekly-goal").textContent).toMatch(/2 of 3 days.*one more day/i);
     cleanup();
-    renderHome({ history: [entry], week, weeklyGoal: 2 });
+    renderHome({ history: [entry], week: { sessions: 4, days: 3, minutes: 32 }, weeklyGoal: 3 });
     expect(screen.getByTestId("weekly-goal").textContent).toMatch(/goal met/i);
     cleanup();
-    renderHome({ history: [entry], week: { sessions: 1, days: 1, minutes: 8 }, weeklyGoal: 5 });
-    expect(screen.getByTestId("weekly-goal").textContent).toMatch(/1 of 5 sessions/);
+    renderHome({ history: [entry], week: { sessions: 5, days: 1, minutes: 40 }, weeklyGoal: 5 });
+    expect(screen.getByTestId("weekly-goal").textContent).toMatch(/1 of 5 practice days/);
   });
 
   it("shows the streak reminder only in the engagement arm", () => {
