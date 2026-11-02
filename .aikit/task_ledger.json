@@ -1,55 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-trial-path-test-v1",
+    "task_id": "noesis-evidence-count-guard-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793628723.2099822,
+    "updated_at": 1793628880.1830719,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793628723.6799128
+    "completed_at": 1793628991.4821668
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-habit-recovery-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-habit-recovery-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793625521.6585035,
-      "timestamp_str": "2026-11-02 16:18:41",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-focus-practice-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/3] Plan: per-mechanic focus sessions plus weakest-link suggestion",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793625611.3742774,
-      "timestamp_str": "2026-11-02 16:20:11",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Spacing and testing rows (16719566, 25150680) plus Adesope/Latimier moderators support spaced retrieval of the weakest material with delayed retest; the app can only train all four mechanics at once",
-        "benefits": "users re-test exactly what wobbles, spaced by days; autonomy preserved via explicit choice",
-        "risks": "contract: additive config path and card; dependency: none new; concurrency: n/a; state: focus is a transient start option, not stored",
-        "mitigation": "default session unchanged; focus reuses blocks/results/history/export untouched; copy gain-framed and lint-checked"
-      }
-    },
-    {
-      "task_id": "noesis-focus-practice-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/3] Focus sessions, weakest-link suggestion, per-card focus buttons, 8 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793625813.9576037,
-      "timestamp_str": "2026-11-02 16:23:33",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-focus-practice-v1",
       "phase": "phase 3",
@@ -253,6 +215,42 @@
       "status": "completed",
       "timestamp": 1793628723.6799142,
       "timestamp_str": "2026-11-02 17:12:03",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-evidence-count-guard-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: pin in-app review count and EvidenceScreen PMIDs to the corpus",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793628879.7941322,
+      "timestamp_str": "2026-11-02 17:14:39",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "EvidenceScreen told users 84 reviews while the table holds 106; hardcoded PMIDs had no coverage",
+        "mitigation": "test-only plus one copy fix; corpus remains source of truth"
+      }
+    },
+    {
+      "task_id": "noesis-evidence-count-guard-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] Count and PMID coverage tests green",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793628880.1830719,
+      "timestamp_str": "2026-11-02 17:14:40",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-evidence-count-guard-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-evidence-count-guard-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793628991.482168,
+      "timestamp_str": "2026-11-02 17:16:31",
       "agent": "kilo:main"
     }
   ]

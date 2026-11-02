@@ -14,6 +14,18 @@ function tablePmids(): Set<string> {
   return new Set(table.entries.map((entry) => entry.pmid));
 }
 
+const EVIDENCE_SCREEN = new URL("../../src/ui/screens/EvidenceScreen.tsx", import.meta.url);
+
+// Narrative-only by design (see SEARCH_LOG): a landmark primary experiment,
+// cited with its publication details wherever it appears.
+const NARRATIVE_ALLOWLIST = new Set(["19217383"]);
+
+function screenPmids(): string[] {
+  const source = readFileSync(EVIDENCE_SCREEN, "utf-8");
+  const found = source.match(/\b([1-4]\d{7})\b/g) ?? [];
+  return [...new Set(found)];
+}
+
 function tableYears(): Map<string, number> {
   const table = JSON.parse(readFileSync(TABLE, "utf-8")) as {
     entries: { pmid: string; year: number }[];
@@ -49,5 +61,20 @@ describe("mechanic citation grounding (R4/R6)", () => {
       }
     }
     expect(stale).toEqual([]);
+  });
+
+  it("resolves every hardcoded EvidenceScreen PMID to the corpus or the allowlist", () => {
+    const known = tablePmids();
+    const dangling = screenPmids().filter(
+      (pmid) => !known.has(pmid) && !NARRATIVE_ALLOWLIST.has(pmid),
+    );
+    expect(dangling).toEqual([]);
+  });
+
+  it("states the current corpus size, not a stale count", () => {
+    const source = readFileSync(EVIDENCE_SCREEN, "utf-8");
+    const known = tablePmids();
+    const match = /umbrella review of (\d+) reviews and trials/.exec(source);
+    expect(match?.[1]).toBe(String(known.size));
   });
 });
