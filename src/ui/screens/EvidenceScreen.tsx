@@ -12,7 +12,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 106 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 108 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>

@@ -235,8 +235,11 @@ Milkman et al. 2014 showed gym-only audiobooks lifted visits 51% enforced and 29
 A planning-interventions meta-analysis of 41 RCTs joined the table (SMD 0.35, stronger with reinforcement during follow-up; PMID 35742582), alongside the Cochrane-style finding that action and coping planning show small-to-medium objective effects and that self-set terms work best. Implemented as R45: the plan form now holds the full HAPA bundle — when and where (action cue), paired with what indulgence (temptation), and what to do if stuck (coping response). Reinforcement for all three is the weekly goal plus the summary; self-set wording stays verbatim in the stored plan.
 
 ### 6.18 Shareable accountability without accounts (November 2026)
-
 Social accountability improves adherence, but accounts and servers are out of scope. The compromise is a copyable weekly summary: totals, goal progress and minutes in one pasteable line for a coach, clinician or investigator. No new data leaves the device except by the user's own paste. See R46.
+
+### 6.19 Mental contrasting calibrated to delivery mode (November 2026)
+
+Two MCII reviews joined the table: mental contrasting with implementation intentions improves goal attainment (g=0.34, 21 studies; PMID 34054628), and mental contrasting alone improves health behaviour (g=0.28, matching MCII in that pool; PMID 30879403). The moderator that matters for an app: interactive formation reaches g=0.47 while document-delivered formats run g=0.28. Implemented as R47: copy and expectations use the document number, formation stays interactive (user-typed, self-set wording), and the saved plan keeps goal and obstacle visible together so the contrast is re-read, not just written once.
 
 ---
 

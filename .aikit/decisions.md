@@ -165,3 +165,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: Social accountability supports adherence and the trial needs low-tech adherence reports, but accounts and servers are out of scope.
 - **Decision**: Add a "Copy week summary" button in Settings that copies one human-readable line (week of date, days of goal, sessions, minutes). Clipboard-only; nothing is transmitted. See R46.
 - **Consequences**: Users can paste their week to a coach, clinician or investigator; no new data leaves the device except by explicit user action.
+
+### ADR-023: Document-delivered effect calibration for planning claims
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: MCII meta-analyses show g=0.34 overall but document-delivered formats run ~0.28 versus 0.47 interactive (PMIDs 34054628, 30879403); mental contrasting alone matches MCII for health behaviour (g=0.28). An app is document delivery.
+- **Decision**: Calibrate all planning claims to the document-delivered number; formation stays interactive in the only way an app can (user-typed, self-set wording); the saved plan keeps goal and obstacle visible together so the contrast is re-read, and the new goal-link line makes that explicit. See R47.
+- **Consequences**: Planning copy can never drift into interactive-delivery effect sizes; any future planning feature inherits the same ceiling.

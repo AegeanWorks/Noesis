@@ -140,6 +140,7 @@ describe("HomeScreen", () => {
     expect(screen.getByText(/tomorrow at 9am/)).toBeTruthy();
     expect(screen.getByText(/paired with morning coffee/)).toBeTruthy();
     expect(screen.getByText(/if stuck, do one block/i)).toBeTruthy();
+    expect(screen.getByTestId("plan-goal-link").textContent).toMatch(/toward your 3-day week/i);
     fireEvent.click(screen.getByRole("button", { name: "Clear" }));
     expect(onClearIntention).toHaveBeenCalledTimes(1);
   });

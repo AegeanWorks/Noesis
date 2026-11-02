@@ -6635,6 +6635,90 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "Planning works and works better with reinforcement: the when-where plan plus weekly goal plus summary is the reinforced bundle."
+  },
+  {
+   "pmid": "34054628",
+   "doi": "10.3389/fpsyg.2021.565202",
+   "doi_status": "verified",
+   "year": 2021,
+   "journal": "Frontiers in Psychology",
+   "title": "A Meta-Analysis of the Effects of Mental Contrasting With Implementation Intentions on Goal Attainment.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 21,
+   "n": 15907,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 0.34,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "21 studies, 24 effects; interactive delivery g=0.465 vs document delivery g=0.277"
+    }
+   ],
+   "findings": [
+    "MCII improves goal attainment with a small-to-medium effect",
+    "Interactive formation beats document-based formation substantially"
+   ],
+   "limitations": [
+    "Publication bias suspected",
+    "Few studies per moderator"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "An app is document-delivered: expect ~0.28, not 0.47; interactive (user-typed, self-set) formation is the closest available analogue."
+  },
+  {
+   "pmid": "30879403",
+   "doi": "10.1080/17437199.2019.1594332",
+   "doi_status": "verified",
+   "year": 2019,
+   "journal": "Health Psychology Review",
+   "title": "Mental contrasting for health behaviour change: a systematic review and meta-analysis of effects and moderator variables.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": null,
+   "n": 1528,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 0.28,
+     "ci_low": 0.13,
+     "ci_high": 0.43,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "mental contrasting alone matches MCII for health behaviours at short follow-up"
+    }
+   ],
+   "findings": [
+    "Mental contrasting improves health behaviour (g=0.28), stronger at 3 months",
+    "Adding implementation intentions did not further strengthen effects in this pool"
+   ],
+   "limitations": [
+    "Small subset for MCII comparison",
+    "Short follow-up mostly"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Contrasting the desired future with the obstacle is itself effective; the plan display should keep goal and obstacle visible together."
   }
  ]
 }

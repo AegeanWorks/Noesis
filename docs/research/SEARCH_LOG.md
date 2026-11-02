@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 106 |
-| Outcomes | 267 |
-| Primary outcomes | 216 |
-| Systematic reviews/meta-analyses | 60 |
+| Records | 108 |
+| Outcomes | 269 |
+| Primary outcomes | 218 |
+| Systematic reviews/meta-analyses | 62 |
 | Network meta-analyses | 18 |
-| Other systematic reviews | 20 |
+| Other systematic reviews | 19 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 95 |
+| DOI verified | 97 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -143,7 +143,7 @@ By modality:
 | ave | 6 |
 | multi_intervention | 5 |
 | safety | 6 |
-| engagement | 19 |
+| engagement | 21 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 95 |
+| DOI verified | 97 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **106** |
+| **Total** | **108** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -173,6 +173,8 @@ Two retrieval-practice records joined the table the same day (PMIDs 25150680, 16
 Two habit records joined the table the same day (PMIDs 39685110, 21626256): habit strength improves with intervention (SMD 0.69, ~2 months to start) and correlates with frequency at r=0.46. Lally et al. 2009 (single misses do not reset formation) and the habit-tracking guidelines stay narrative-only by the same rule and shape R42.
 
 One planning-interventions record joined the table the same day (PMID 35742582, 41 RCTs, SMD 0.35, stronger with reinforcement). The HAPA meta-analysis and the Cochrane-style action/coping planning review stay narrative by rule (models and effect-modifier syntheses rather than new trial evidence); the coping-planning effect sizes (d≈0.6 self-report) they report shape R45 directly.
+
+Two mental-contrasting records joined the table the same day (PMIDs 34054628, 30879403): MCII improves goal attainment (g=0.34) and mental contrasting alone improves health behaviour (g=0.28); interactive formation (g=0.47) beats document delivery (g=0.28), which calibrates the app-facing claims in R47.
 
 ## 10. Tooling and commands
 

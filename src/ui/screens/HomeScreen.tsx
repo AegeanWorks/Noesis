@@ -80,10 +80,12 @@ function percent(value: number | null): string {
 
 function PracticePlan({
   intention,
+  weeklyGoal,
   onSave,
   onClear,
 }: {
   intention: PracticeIntention | null;
+  weeklyGoal: number;
   onSave: (when: string, where: string, pairing: string, obstacle: string) => void;
   onClear: () => void;
 }) {
@@ -108,6 +110,9 @@ function PracticePlan({
           {intention.where ? ` · ${intention.where}` : ""}
           {intention.pairing ? ` · paired with ${intention.pairing}` : ""}
           {intention.obstacle ? ` · if stuck, ${intention.obstacle}` : ""}
+        </p>
+        <p className="fine" data-testid="plan-goal-link">
+          Toward your {weeklyGoal}-day week.
         </p>
         <div className="hero-actions">
           <Button variant="ghost" onClick={() => setEditing(true)}>
@@ -389,7 +394,7 @@ export function HomeScreen({
         </div>
       </div>
 
-      <PracticePlan intention={intention} onSave={onSaveIntention} onClear={onClearIntention} />
+      <PracticePlan intention={intention} weeklyGoal={weeklyGoal} onSave={onSaveIntention} onClear={onClearIntention} />
       <PracticeSummary history={history} week={week} today={today} studyArm={studyArm} weeklyGoal={weeklyGoal} />
 
       {heavyUse && !heavyUseDismissed ? (
