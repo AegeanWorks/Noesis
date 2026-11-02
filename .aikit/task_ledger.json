@@ -1,66 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-study-arms-v1",
+    "task_id": "noesis-incentive-arm-v1",
     "last_phase": "phase 3",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793574651.7778587,
+    "updated_at": 1793624046.069868,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793574654.2918785
+    "completed_at": 1793624046.7597353
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-adverse-events-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-adverse-events-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793571370.018844,
-      "timestamp_str": "2026-11-02 01:16:10",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-compulsive-use-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/3] Plan: compulsive-use detection (R36) from Nov 2026 gaming-disorder update",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793571746.998992,
-      "timestamp_str": "2026-11-02 01:22:26",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "BEHAVIORAL_ENGAGEMENT open Q4 and new records 33028074/36571943/37256740 require a detector plus caring non-coercive response",
-        "benefits": "heaviest users get rest framing and one-tap Motivation pause instead of silent overuse",
-        "risks": "contract: additive history-derived signals, date-keyed dismissal; dependency: none new; concurrency: single-writer localStorage; state: dated pause and dismissal keys coexist with settings",
-        "mitigation": "pure detector under unit test; pause auto-expires next day; dismissal is per-day; nothing locks the user out"
-      }
-    },
-    {
-      "task_id": "noesis-compulsive-use-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/3] Heavy-use detector, Motivation day-pause, caring notice, paused state, 14 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793571957.221062,
-      "timestamp_str": "2026-11-02 01:25:57",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-compulsive-use-v1",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[3/3] R36, ADR-011, 172 Vitest + 29 Python green, 400 sims, 6/6 gates, home screenshot clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793572119.3468769,
-      "timestamp_str": "2026-11-02 01:28:39",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-compulsive-use-v1",
       "phase": "completed",
@@ -254,6 +205,55 @@
       "status": "completed",
       "timestamp": 1793574654.29188,
       "timestamp_str": "2026-11-02 02:10:54",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-incentive-arm-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/3] Plan: incentive-design update (deposit contracts, RPE surprise) with arm-dependent schedules and finisher bonus",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793622472.4439409,
+      "timestamp_str": "2026-11-02 15:27:52",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Deposit contracts beat lotteries and persist after removal (36367428); unexpected rewards drive consolidation via RPE; the engagement arm should differ by schedule, not just reminders",
+        "benefits": "trial tests a real incentive gradient (schedule volatility + attendance-contingent gain) with full logging",
+        "risks": "contract: additive schedule field and bonus; dependency: none new; concurrency: single-writer; state: schedule lives in motivation state, bonus recorded",
+        "mitigation": "optional params keep existing call sites green; default schedule unchanged; copy stays gain-framed per deposit-RCT warning; claim lint gates new strings"
+      }
+    },
+    {
+      "task_id": "noesis-incentive-arm-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/3] 3 incentive records, volatile schedule, finisher bonus, arm-aware disclosure, 8 new tests",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793623846.627822,
+      "timestamp_str": "2026-11-02 15:50:46",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-incentive-arm-v1",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[3/3] R39, ADR-015, BEHAVIORAL 6.11, 97-record table, 208 Vitest + 29 Python green, 400 sims, 6/6 gates, settings screenshot clean; one load-flake timeout, green on rerun; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793624046.069868,
+      "timestamp_str": "2026-11-02 15:54:06",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-incentive-arm-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-incentive-arm-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793624046.759737,
+      "timestamp_str": "2026-11-02 15:54:06",
       "agent": "kilo:main"
     }
   ]

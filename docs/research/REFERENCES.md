@@ -107,6 +107,9 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 - Prevalence of Internet gaming disorder in young adults: a systematic review and meta-analysis. *Addictive Behaviors*. 2026. PMID: [41317410](https://pubmed.ncbi.nlm.nih.gov/41317410/). DOI: [10.1016/j.addbeh.2025.108576](https://doi.org/10.1016/j.addbeh.2025.108576).
 - Internet gaming disorder, attention deficit hyperactivity disorder and learning in adults: a systematic review. *Frontiers in Psychiatry*. 2026. PMID: [41659171](https://pubmed.ncbi.nlm.nih.gov/41659171/). DOI: [10.3389/fpsyt.2025.1735922](https://doi.org/10.3389/fpsyt.2025.1735922).
 - Evaluating the Effectiveness of Gamification on Physical Activity: Systematic Review and Meta-analysis of Randomized Controlled Trials. *Journal of Medical Internet Research*. 2022. PMID: [34982715](https://pubmed.ncbi.nlm.nih.gov/34982715/). DOI: [10.2196/26779](https://doi.org/10.2196/26779).
+- The effectiveness of financial incentives for health behaviour change: systematic review and meta-analysis. *PLOS ONE*. 2014. PMID: [24618584](https://pubmed.ncbi.nlm.nih.gov/24618584/). DOI: [10.1371/journal.pone.0090347](https://doi.org/10.1371/journal.pone.0090347).
+- The utility of monetary contingency contracts for weight loss: a systematic review and meta-analysis. *Health Psychology Review*. 2015. PMID: [25933128](https://pubmed.ncbi.nlm.nih.gov/25933128/). DOI: [10.1080/17437199.2015.1030685](https://doi.org/10.1080/17437199.2015.1030685).
+- Evaluation of the Effectiveness of Behavioral Economic Incentive Programs for Goal Achievement on Healthy Diet, Weight Control and Physical Activity: A Systematic Review and Network Meta-analysis. *Annals of Behavioral Medicine*. 2023. PMID: [36367428](https://pubmed.ncbi.nlm.nih.gov/36367428/). DOI: [10.1093/abm/kaac066](https://doi.org/10.1093/abm/kaac066).
 
 ## Safety and service context
 

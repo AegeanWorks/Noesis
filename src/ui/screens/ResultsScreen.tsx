@@ -180,6 +180,12 @@ export function ResultsScreen({
                 </span>
               </li>
             ))}
+            {motivation.completionBonus > 0 ? (
+              <li key="finisher">
+                <span>Finisher bonus</span>
+                <span>+{motivation.completionBonus} for completing every block</span>
+              </li>
+            ) : null}
           </ul>
           <p className="fine">
             Momentum is cosmetic. It does not change your cognitive scores, and a risky choice

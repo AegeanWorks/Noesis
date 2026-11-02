@@ -1,4 +1,10 @@
 import { useState } from "react";
+import {
+  FINISHER_BONUS,
+  scheduleLabel,
+  STEADY_SCHEDULE,
+  VOLATILE_SCHEDULE,
+} from "../../engine/motivation";
 import type { AdverseEvent } from "../../storage/adverseEvents";
 import { SYMPTOM_LABELS } from "../../storage/adverseEvents";
 import type { AdaptiveLevels } from "../../storage/adaptive";
@@ -237,9 +243,18 @@ export function SettingsScreen({
           Motivation mode: streaks, bonus rolls and optional risk
         </label>
         <p className="fine">
-          Momentum is cosmetic and never changes your cognitive scores. Bonus odds are 70%
-          steady, 20% boost and 10% rare. Risk is optional and only affects bonus points; core
-          progress is never lost.
+          Momentum is cosmetic and never changes your cognitive scores. Bonus odds are{" "}
+          {scheduleLabel(
+            study.enrolled && study.arm === "engagement" ? VOLATILE_SCHEDULE : STEADY_SCHEDULE,
+          )}
+          . Risk is optional and only affects bonus points; core progress is never lost.
+          {study.enrolled && study.arm === "engagement" ? (
+            <>
+              {" "}
+              Your engagement arm uses the volatile schedule and earns a finisher bonus of{" "}
+              {FINISHER_BONUS} momentum for completing a session.
+            </>
+          ) : null}
         </p>
         {motivationPaused ? (
           <p className="fine">

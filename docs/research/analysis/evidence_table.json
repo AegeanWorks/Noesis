@@ -6104,6 +6104,146 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "Gamification moves behaviour while active but fades after: use game elements for session initiation and adherence, never as the outcome; re-earn attention each session."
+  },
+  {
+   "pmid": "36367428",
+   "doi": "10.1093/abm/kaac066",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Annals of Behavioral Medicine",
+   "title": "Evaluation of the Effectiveness of Behavioral Economic Incentive Programs for Goal Achievement on Healthy Diet, Weight Control and Physical Activity: A Systematic Review and Network Meta-analysis.",
+   "modality": "engagement",
+   "design": "nma",
+   "populations": [
+    "adults"
+   ],
+   "k": 35,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "physical_activity",
+     "transfer": "far",
+     "measure": "pooled_RR",
+     "value": 1.63,
+     "ci_low": 1.24,
+     "ci_high": 2.14,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "deposit contracts vs no incentive for activity goal achievement; 35 RCTs"
+    },
+    {
+     "domain": "physical_activity",
+     "transfer": "far",
+     "measure": "pooled_RR",
+     "value": 1.39,
+     "ci_low": 1.11,
+     "ci_high": 1.73,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "only deposit persisted at follow-up; lottery faded"
+    }
+   ],
+   "findings": [
+    "Deposit contracts ranked best at program end and were the only design with effects persisting after the program",
+    "Lottery and standard incentives worked during the program but faded"
+   ],
+   "limitations": [
+    "Imprecise intervention effects",
+    "Heterogeneous incentive designs pooled together"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Deposit-style stakes beat lotteries and persist: the engagement arm stakes symbolic momentum attendance-contingently, all-or-nothing, framed as gain."
+  },
+  {
+   "pmid": "24618584",
+   "doi": "10.1371/journal.pone.0090347",
+   "doi_status": "verified",
+   "year": 2014,
+   "journal": "PLOS ONE",
+   "title": "The effectiveness of financial incentives for health behaviour change: systematic review and meta-analysis.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 16,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "pooled_RR",
+     "value": 1.62,
+     "ci_low": 1.38,
+     "ci_high": 1.91,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "all behaviours combined vs usual care; smoking cessation RR 2.48 short-term"
+    }
+   ],
+   "findings": [
+    "Incentives beat usual care across behaviours while active",
+    "Effects fade beyond three months after incentive removal"
+   ],
+   "limitations": [
+    "Effects dissipate post-removal",
+    "No sustained physical-activity effect found"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Incentives work while active and fade after: re-earn attention each session; never promise lasting change from rewards alone."
+  },
+  {
+   "pmid": "25933128",
+   "doi": "10.1080/17437199.2015.1030685",
+   "doi_status": "verified",
+   "year": 2015,
+   "journal": "Health Psychology Review",
+   "title": "The utility of monetary contingency contracts for weight loss: a systematic review and meta-analysis.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "small-to-medium effect of contingency contracts during treatment and on retention; no post-treatment effect"
+    }
+   ],
+   "findings": [
+    "Contingency contracts promote goal completion and retention while active",
+    "Self-set deposits, non-lump-sum payment and all-or-nothing refunds work best"
+   ],
+   "limitations": [
+    "No post-treatment effect",
+    "Effect depends on contract features"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "All-or-nothing, attendance-contingent refunds aid retention: stake on finishing, not on scoring; self-set terms work best."
   }
  ]
 }

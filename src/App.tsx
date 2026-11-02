@@ -4,7 +4,11 @@ import {
   addBlockMotivation,
   bankMotivation,
   createMotivation,
+  FINISHER_BONUS,
+  finishSessionMotivation,
   riskMotivation,
+  STEADY_SCHEDULE,
+  VOLATILE_SCHEDULE,
   type MotivationState,
 } from "./engine/motivation";
 import { defaultSessionConfig } from "./engine/session";
@@ -130,6 +134,11 @@ export function App() {
       setAdaptive(applySessionResults(state.results));
       const enrolled = loadStudy();
       setStudy(enrolled);
+      const finisher =
+        enrolled.enrolled && enrolled.arm === "engagement" ? FINISHER_BONUS : 0;
+      setMotivation((current) =>
+        current ? finishSessionMotivation(current, finisher) : current,
+      );
       setHistory(
         appendSession({
           id,
@@ -152,7 +161,16 @@ export function App() {
     motivatedBlock.current = -1;
     const adaptiveState = loadAdaptive();
     setAdaptive(adaptiveState);
-    setMotivation(settings.motivationMode && !isMotivationPaused() ? createMotivation(seed) : null);
+    const arm = loadStudy();
+    setStudy(arm);
+    setMotivation(
+      settings.motivationMode && !isMotivationPaused()
+        ? createMotivation(
+            seed,
+            arm.enrolled && arm.arm === "engagement" ? VOLATILE_SCHEDULE : STEADY_SCHEDULE,
+          )
+        : null,
+    );
     sessionStore.start(
       defaultSessionConfig(
         seed,

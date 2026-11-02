@@ -24,6 +24,24 @@ export interface MotivationState {
   risk: boolean;
   riskAmount: number;
   outcomes: BlockMotivation[];
+  schedule: BonusSchedule;
+  completionBonus: number;
+}
+
+export interface BonusSchedule {
+  steadyUpTo: number;
+  boostUpTo: number;
+}
+
+export const STEADY_SCHEDULE: BonusSchedule = { steadyUpTo: 0.7, boostUpTo: 0.9 };
+
+export const VOLATILE_SCHEDULE: BonusSchedule = { steadyUpTo: 0.6, boostUpTo: 0.85 };
+
+export function scheduleLabel(schedule: BonusSchedule): string {
+  const steady = Math.round(schedule.steadyUpTo * 100);
+  const boost = Math.round((schedule.boostUpTo - schedule.steadyUpTo) * 100);
+  const rare = 100 - steady - boost;
+  return `${steady}% steady, ${boost}% boost and ${rare}% rare`;
 }
 
 export const MOTIVATION_TIERS: Record<BonusTier, { label: string; bonus: number }> = {
@@ -36,7 +54,7 @@ const RISK_THRESHOLD = 0.7;
 const NEAR_BEST_WINDOW = 0.05;
 const MAX_BLOCK_POINTS = 100;
 
-export function createMotivation(seed: number): MotivationState {
+export function createMotivation(seed: number, schedule: BonusSchedule = STEADY_SCHEDULE): MotivationState {
   const normalized = normalizeSeed(seed);
   return {
     seed: normalized,
@@ -46,12 +64,14 @@ export function createMotivation(seed: number): MotivationState {
     risk: false,
     riskAmount: 0,
     outcomes: [],
+    schedule,
+    completionBonus: 0,
   };
 }
 
-function rollTier(roll: number): BonusTier {
-  if (roll < 0.7) return "steady";
-  if (roll < 0.9) return "boost";
+function rollTier(roll: number, schedule: BonusSchedule): BonusTier {
+  if (roll < schedule.steadyUpTo) return "steady";
+  if (roll < schedule.boostUpTo) return "boost";
   return "rare";
 }
 
@@ -76,7 +96,7 @@ export function addBlockMotivation(
 ): MotivationState {
   const afterRisk = resolveRisk(state, result);
   const [roll, rng] = nextRandom(afterRisk.rng);
-  const tier = rollTier(roll);
+  const tier = rollTier(roll, afterRisk.schedule);
   const bonus = MOTIVATION_TIERS[tier].bonus;
   const accuracy = result.metrics.accuracy ?? 0;
   const streak = Math.max(0, Math.round(result.metrics.max_streak ?? 0));
@@ -133,6 +153,16 @@ export function riskMotivation(state: MotivationState): MotivationState {
 
 export function totalMomentum(state: MotivationState): number {
   return state.banked + state.unbanked + (state.risk ? state.riskAmount : 0);
+}
+
+export const FINISHER_BONUS = 15;
+
+export function finishSessionMotivation(state: MotivationState, bonus: number): MotivationState {
+  const withBonus =
+    bonus > 0
+      ? { ...state, unbanked: state.unbanked + bonus, completionBonus: bonus }
+      : state;
+  return bankMotivation(withBonus);
 }
 
 export function riskThreshold(): number {

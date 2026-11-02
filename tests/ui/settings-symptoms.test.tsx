@@ -94,8 +94,7 @@ describe("SettingsScreen adaptive difficulty", () => {
   });
 });
 
-describe("SettingsScreen study enrollment", () => {
-  it("requires an id and consent before enrolling", () => {
+describe("SettingsScreen study enrollment", () => {  it("requires an id and consent before enrolling", () => {
     const onEnroll = vi.fn();
     render(
       <SettingsScreen
@@ -131,5 +130,27 @@ describe("SettingsScreen study enrollment", () => {
     expect(screen.getByText(/arm: engagement/i)).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "Withdraw from study" }));
     expect(onWithdraw).toHaveBeenCalledTimes(1);
+  });
+
+  it("discloses the steady schedule by default and the volatile one in the engagement arm", () => {
+    const { rerender } = render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        study={{ enrolled: false, studyId: null, arm: null, consentedAt: null }}
+      />,
+    );
+    expect(screen.getByText(/70% steady, 20% boost and 10% rare/i)).toBeTruthy();
+    rerender(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        study={{ enrolled: true, studyId: "RCT-1", arm: "engagement", consentedAt: "2026-11-02T10:00:00.000Z" }}
+      />,
+    );
+    expect(screen.getByText(/60% steady, 25% boost and 15% rare/i)).toBeTruthy();
+    expect(screen.getByText(/finisher bonus/i)).toBeTruthy();
   });
 });

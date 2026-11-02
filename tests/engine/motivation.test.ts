@@ -3,8 +3,13 @@ import {
   addBlockMotivation,
   bankMotivation,
   createMotivation,
+  FINISHER_BONUS,
+  finishSessionMotivation,
   riskMotivation,
+  scheduleLabel,
+  STEADY_SCHEDULE,
   totalMomentum,
+  VOLATILE_SCHEDULE,
 } from "../../src/engine/motivation";
 import type { MechanicResult } from "../../src/engine/types";
 
@@ -94,5 +99,36 @@ describe("motivation", () => {
     expect(banked.banked).toBe(first.unbanked);
     expect(banked.risk).toBe(false);
     expect(banked.riskAmount).toBe(0);
+  });
+
+  it("defaults to the steady schedule and labels it honestly", () => {
+    expect(createMotivation(3).schedule).toEqual(STEADY_SCHEDULE);
+    expect(scheduleLabel(STEADY_SCHEDULE)).toBe("70% steady, 20% boost and 10% rare");
+    expect(scheduleLabel(VOLATILE_SCHEDULE)).toBe("60% steady, 25% boost and 15% rare");
+  });
+
+  it("keeps the schedule in state and stays deterministic per schedule", () => {
+    const steady = addBlockMotivation(createMotivation(5), 0, result(0.8, 6), null);
+    const steadyAgain = addBlockMotivation(createMotivation(5), 0, result(0.8, 6), null);
+    expect(steady.outcomes).toEqual(steadyAgain.outcomes);
+    const volatile = addBlockMotivation(
+      createMotivation(5, VOLATILE_SCHEDULE),
+      0,
+      result(0.8, 6),
+      null,
+    );
+    expect(volatile.schedule).toEqual(VOLATILE_SCHEDULE);
+    expect(volatile.rng).toBe(steady.rng);
+  });
+
+  it("banks a finisher bonus only when one is awarded", () => {
+    const played = addBlockMotivation(createMotivation(3), 0, result(0.9, 5), null);
+    const finished = finishSessionMotivation(played, FINISHER_BONUS);
+    expect(finished.completionBonus).toBe(FINISHER_BONUS);
+    expect(finished.banked).toBe(played.unbanked + FINISHER_BONUS);
+    expect(finished.unbanked).toBe(0);
+    const plain = finishSessionMotivation(played, 0);
+    expect(plain.completionBonus).toBe(0);
+    expect(plain.banked).toBe(played.unbanked);
   });
 });

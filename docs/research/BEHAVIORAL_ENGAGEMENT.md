@@ -205,6 +205,12 @@ The November update adds the other half of the answer: game addictiveness pointe
 
 When the device is used investigationally, stronger engagement variants must be testable without changing the default product. Implemented as R38: enrollment with an investigator-provided trial ID, a protocol-assigned arm (control or engagement), and explicit consent; the engagement arm adds a daily streak reminder; every session record carries its arm and the export carries the enrollment for analysis. Randomisation stays with the trial protocol — the app records and discloses, never assigns. Adverse-event capture, heavy-use detection and the Motivation pause run in every arm as the trial's safety monitoring.
 
+### 6.11 Incentive design for the engagement arm (November 2026)
+
+Three incentive records joined the table: deposit contracts beat lotteries and standard incentives and were the only design with effects persisting after the program (network meta-analysis of 35 RCTs, PMID 36367428); financial incentives beat usual care while active but fade after removal (PMID 24618584); contingency contracts work through all-or-nothing, attendance-contingent terms, with self-set terms best (PMID 25933128). Two mechanism reviews stayed narrative-only: reward anticipation drives hippocampal-VTA consolidation with larger effects at delayed test (PMID 26657967), and unexpected rewards engineer the prediction-error signal gamification runs on. A deposit-contract RCT added two warnings that shaped the design (PMID 36201384): deposits had lower uptake than plain rewards (61.7% vs 100%), and loss frames were significantly less effective than gain frames — so nothing is staked and everything is framed as gain.
+
+Implemented as R39: the engagement arm uses a higher-variance bonus schedule (60/25/15 volatile vs 70/20/10 steady) for stronger reward-prediction errors, plus an attendance-contingent finisher bonus on completing every block. Both are disclosed per arm in Settings; the default product is untouched.
+
 ---
 
 ## 7. Safeguards and design rules
