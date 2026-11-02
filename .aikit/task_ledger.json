@@ -1,56 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-coping-plan-v1",
+    "task_id": "noesis-trial-path-test-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793628381.6480315,
+    "updated_at": 1793628723.2099822,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793628384.4509819
+    "completed_at": 1793628723.6799128
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-habit-recovery-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/3] Plan: habit evidence plus slip-tolerant recovery nudge",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793625304.5366285,
-      "timestamp_str": "2026-11-02 16:15:04",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Habit strength improves with intervention (SMD 0.69, 39685110) but takes ~2 months; single misses do not reset formation (Lally 2009); habit correlates with frequency at r=0.46 (21626256). The app punishes nothing but also says nothing after a slip",
-        "benefits": "a missed day gets a warm, evidence-true response instead of silence; habit horizon (~2 months) sets honest expectations",
-        "risks": "contract: display-only derivation from history; dependency: none new; concurrency: n/a; state: no new keys",
-        "mitigation": "pure date logic over stored sessions; copy gain-framed and lint-checked; no streak penalty anywhere"
-      }
-    },
-    {
-      "task_id": "noesis-habit-recovery-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/3] 2 habit records, slip-recovery nudge, 3 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793625392.7064958,
-      "timestamp_str": "2026-11-02 16:16:32",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-habit-recovery-v1",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[3/3] R42, ADR-018, BEHAVIORAL 6.14, 104-record table, 212 Vitest + 29 Python green, 400 sims, 6/6 gates, home screenshot clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793625521.3668723,
-      "timestamp_str": "2026-11-02 16:18:41",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-habit-recovery-v1",
       "phase": "completed",
@@ -256,6 +217,42 @@
       "status": "completed",
       "timestamp": 1793628384.450984,
       "timestamp_str": "2026-11-02 17:06:24",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-trial-path-test-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: App-level journey test for the trial data path",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793628722.6159608,
+      "timestamp_str": "2026-11-02 17:12:02",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Arm tagging and finisher bonus had no integration coverage; a wiring regression here corrupts RCT data silently",
+        "mitigation": "test-only; drives the real store through a full optimal-play session"
+      }
+    },
+    {
+      "task_id": "noesis-trial-path-test-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] Journey test green: enrolled engagement session completes arm-tagged with finisher bonus; unenrolled path untagged",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793628723.2099822,
+      "timestamp_str": "2026-11-02 17:12:03",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-trial-path-test-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-trial-path-test-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793628723.6799142,
+      "timestamp_str": "2026-11-02 17:12:03",
       "agent": "kilo:main"
     }
   ]
