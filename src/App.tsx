@@ -443,6 +443,15 @@ export function App() {
     [settings],
   );
 
+  const setHideClock = useCallback(
+    (value: boolean) => {
+      const next = { ...settings, hideClock: value };
+      setSettings(next);
+      saveSettings(next);
+    },
+    [settings],
+  );
+
   const view = state ? sessionView(state) : null;
   const week = weekStats(history);
   const today = todayStats(history);
@@ -544,6 +553,7 @@ export function App() {
               motivation={motivationActive ? motivation : null}
               targetMs={settings.sessionLength === "quick" ? 5 * 60_000 : 8 * 60_000}
               elapsedMs={state?.tick ?? 0}
+              showClock={!settings.hideClock}
             />
           ) : (
             <section className="screen">
@@ -590,6 +600,7 @@ export function App() {
             motivationMode={settings.motivationMode}
             largeText={settings.largeText}
             highContrast={settings.highContrast}
+            hideClock={settings.hideClock}
             historyCount={history.length}
             history={history}
             adverseEvents={adverseEvents}
@@ -609,6 +620,7 @@ export function App() {
             onMotivationMode={setMotivationMode}
             onLargeText={setLargeText}
             onHighContrast={setHighContrast}
+            onHideClock={setHideClock}
             onResetSafety={resetSafety}
             onExportHistory={exportHistory}
             onClearHistory={clearPracticeHistory}

@@ -186,3 +186,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: The portable export carried practice sessions only; far checks and symptom reports were stranded on-device despite R38/R46 promising a complete trial record.
 - **Decision**: Add optional farChecks and adverseEvents arrays to the JSON export (additive, default empty; old exports parse unchanged) and fill them at export time. See R49.
 - **Consequences**: One file is the complete portable record; trial analysis needs no device access beyond the user's own export.
+
+### ADR-026: Optional clock hiding for anxious trainers
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: Test anxiety is negatively related to performance and perceived time pressure raises it (238-study meta-analysis, PMID 29156362); untimed conditions beat timed ones, most for high-anxious trainers. The session always displayed elapsed/target time with no way to suppress it.
+- **Decision**: Add an opt-in "Hide the session clock" display setting, default off. Timing still paces the session underneath; only the display is suppressed. See R50.
+- **Consequences**: Anxious trainers can remove the ticking clock without changing what the session measures; the default experience is unchanged.

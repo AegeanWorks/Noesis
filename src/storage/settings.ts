@@ -10,6 +10,7 @@ export interface Settings {
   motivationMode: boolean;
   largeText: boolean;
   highContrast: boolean;
+  hideClock: boolean;
   weeklyGoal: number;
 }
 
@@ -22,6 +23,7 @@ export const DEFAULT_SETTINGS: Settings = {
   motivationMode: true,
   largeText: false,
   highContrast: false,
+  hideClock: false,
   weeklyGoal: 3,
 };
 
@@ -69,6 +71,8 @@ export function loadSettings(): Settings {
       weeklyGoal: isWeeklyGoal(parsed.weeklyGoal)
         ? parsed.weeklyGoal
         : DEFAULT_SETTINGS.weeklyGoal,
+      hideClock:
+        typeof parsed.hideClock === "boolean" ? parsed.hideClock : DEFAULT_SETTINGS.hideClock,
     };
   } catch {
     return DEFAULT_SETTINGS;

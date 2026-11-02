@@ -13,6 +13,7 @@ interface SessionScreenProps {
   motivation: MotivationState | null;
   targetMs: number;
   elapsedMs: number;
+  showClock: boolean;
   onPause: () => void;
   onResume: () => void;
   onEnd: () => void;
@@ -41,6 +42,7 @@ export function SessionScreen({
   motivation,
   targetMs,
   elapsedMs,
+  showClock,
   onPause,
   onResume,
   onEnd,
@@ -97,10 +99,12 @@ export function SessionScreen({
           <p className="eyebrow">
             Block {view.blockIndex + 1} of {view.blockCount}
           </p>
-          <h1>{view.blockLabel}</h1>
+        <h1>{view.blockLabel}</h1>
+        {showClock ? (
           <p className={`session-clock ${elapsedMs > targetMs ? "session-clock-over" : ""}`}>
             Elapsed {formatMs(elapsedMs)} · Target {formatMs(targetMs)}
           </p>
+        ) : null}
         </div>
         <Button
           variant="ghost"

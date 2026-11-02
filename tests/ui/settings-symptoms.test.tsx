@@ -11,6 +11,7 @@ const BASE = {
   motivationMode: false,
   largeText: false,
   highContrast: false,
+  hideClock: false,
   historyCount: 0,
   history: [],
   onReducedMotion: () => {},
@@ -19,6 +20,7 @@ const BASE = {
   onMotivationMode: () => {},
   onLargeText: () => {},
   onHighContrast: () => {},
+  onHideClock: () => {},
   onResetSafety: () => {},
   onExportHistory: () => {},
   onClearHistory: () => {},
@@ -147,6 +149,20 @@ describe("SettingsScreen study enrollment", () => {  it("requires an id and cons
     );
     fireEvent.change(screen.getByLabelText(/weekly practice-day goal/i), { target: { value: "5" } });
     expect(onWeeklyGoal).toHaveBeenCalledWith(5);
+  });
+
+  it("toggles hiding the session clock", () => {
+    const onHideClock = vi.fn();
+    render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        onHideClock={onHideClock}
+      />,
+    );
+    fireEvent.click(screen.getByLabelText(/hide the session clock/i));
+    expect(onHideClock).toHaveBeenCalledWith(true);
   });
 
   it("discloses the steady schedule by default and the volatile one in the engagement arm", () => {

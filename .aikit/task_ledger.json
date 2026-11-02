@@ -1,73 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-complete-export-v1",
+    "task_id": "noesis-calm-timing-v1",
     "last_phase": "phase 2",
-    "active_phase": 2,
-    "status": "in_progress",
-    "updated_at": 1793630901.5362723,
+    "active_phase": 5,
+    "status": "completed",
+    "updated_at": 1793631746.9715405,
     "owner": "kilo:main",
     "started_by": "kilo:main",
-    "continuations": []
+    "continuations": [],
+    "completed_at": 1793631747.9347572
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-calendar-week-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-calendar-week-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793629155.5470142,
-      "timestamp_str": "2026-11-02 17:19:15",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-share-summary-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: copyable weekly summary for accountability reporting",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793629155.8601522,
-      "timestamp_str": "2026-11-02 17:19:15",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Weeks are already Monday-anchored (fresh-start aligned by construction); the missing piece is shareability: accountability needs an exportable record, and the trial needs low-tech adherence reports",
-        "benefits": "one-tap human-readable week report for coaches/investigators; no accounts, no server",
-        "mitigation": "display-only derivation from history; clipboard with fallback message; lint-checked copy"
-      }
-    },
-    {
-      "task_id": "noesis-shareable-week-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] R46, ADR-022, copyable week summary with clipboard tests; 219 Vitest + 29 Python green, 6/6 gates, home screenshot clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793629668.6115196,
-      "timestamp_str": "2026-11-02 17:27:48",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-share-summary-v1",
-      "phase": "superseded",
-      "phase_num": 1,
-      "description": "Superseded by 'noesis-shareable-week-v1' without --complete or --reset",
-      "status": "superseded",
-      "timestamp": 1793629668.6115196,
-      "timestamp_str": "2026-11-02 17:27:48",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-shareable-week-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-shareable-week-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793629668.9551132,
-      "timestamp_str": "2026-11-02 17:27:48",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-notice-order-v1",
       "phase": "phase 1",
@@ -246,6 +190,64 @@
       "status": "in_progress",
       "timestamp": 1793630901.5362723,
       "timestamp_str": "2026-11-02 17:48:21",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-calm-timing-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: optional clock hiding grounded in test-anxiety meta-analysis",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793630988.6321933,
+      "timestamp_str": "2026-11-02 17:49:48",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Anxiety impairs performance and perceived time pressure raises anxiety (238-study meta-analysis); untimed beats timed, most for the anxious",
+        "benefits": "anxious and older users can train without a ticking clock; default unchanged",
+        "mitigation": "display-only toggle, default off; no timing logic changes; lint-checked copy"
+      }
+    },
+    {
+      "task_id": "noesis-complete-export-v1",
+      "phase": "superseded",
+      "phase_num": 2,
+      "description": "Superseded by 'noesis-calm-timing-v1' without --complete or --reset",
+      "status": "superseded",
+      "timestamp": 1793630988.6321933,
+      "timestamp_str": "2026-11-02 17:49:48",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-calm-timing-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] R50, ADR-026, BEHAVIORAL 6.22, test-anxiety review row, hide-clock setting with session wiring, 5 new tests",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793631466.192783,
+      "timestamp_str": "2026-11-02 17:57:46",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-calm-timing-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] R50, ADR-026, BEHAVIORAL 6.22, test-anxiety review row, hide-clock setting with session wiring, 5 new tests",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793631746.9715405,
+      "timestamp_str": "2026-11-02 18:02:26",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-calm-timing-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-calm-timing-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793631747.9347587,
+      "timestamp_str": "2026-11-02 18:02:27",
       "agent": "kilo:main"
     }
   ]

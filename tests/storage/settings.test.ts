@@ -26,6 +26,7 @@ describe("settings", () => {
       largeText: true,
       highContrast: false,
       weeklyGoal: 5,
+      hideClock: false,
     });
     expect(loadSettings()).toEqual({
       reducedMotion: true,
@@ -35,6 +36,7 @@ describe("settings", () => {
       largeText: true,
       highContrast: false,
       weeklyGoal: 5,
+      hideClock: false,
     });
   });
 
@@ -48,6 +50,7 @@ describe("settings", () => {
       largeText: DEFAULT_SETTINGS.largeText,
       highContrast: DEFAULT_SETTINGS.highContrast,
       weeklyGoal: DEFAULT_SETTINGS.weeklyGoal,
+      hideClock: DEFAULT_SETTINGS.hideClock,
     });
   });
 

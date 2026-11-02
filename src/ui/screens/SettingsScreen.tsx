@@ -22,6 +22,7 @@ interface SettingsScreenProps {
   motivationMode: boolean;
   largeText: boolean;
   highContrast: boolean;
+  hideClock: boolean;
   historyCount: number;
   history: readonly SessionRecord[];
   adverseEvents: AdverseEvent[];
@@ -41,6 +42,7 @@ interface SettingsScreenProps {
   onMotivationMode: (value: boolean) => void;
   onLargeText: (value: boolean) => void;
   onHighContrast: (value: boolean) => void;
+  onHideClock: (value: boolean) => void;
   onResetSafety: () => void;
   onExportHistory: () => void;
   onClearHistory: () => void;
@@ -119,6 +121,7 @@ export function SettingsScreen({
   motivationMode,
   largeText,
   highContrast,
+  hideClock,
   historyCount,
   history,
   adverseEvents,
@@ -138,6 +141,7 @@ export function SettingsScreen({
   onMotivationMode,
   onLargeText,
   onHighContrast,
+  onHideClock,
   onResetSafety,
   onExportHistory,
   onClearHistory,
@@ -188,9 +192,18 @@ export function SettingsScreen({
           />
           Reduce motion and animation
         </label>
+        <label className="check">
+          <input
+            type="checkbox"
+            checked={hideClock}
+            onChange={(event) => onHideClock(event.target.checked)}
+          />
+          Hide the session clock
+        </label>
         <p className="fine">
           The app already avoids flashing. These settings make text and controls easier to read
-          and reduce non-essential motion.
+          and reduce non-essential motion. Hiding the clock removes time pressure; untimed
+          practice favours anxious trainers most.
         </p>
       </div>
 

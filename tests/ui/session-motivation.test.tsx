@@ -59,6 +59,7 @@ function renderSession(overrides: Partial<ComponentProps<typeof SessionScreen>> 
     motivation: addBlockMotivation(createMotivation(42), 0, RESULT, 0.85),
     targetMs: 8 * 60_000,
     elapsedMs: 60_000,
+    showClock: true,
     onPause: vi.fn(),
     onResume: vi.fn(),
     onEnd: vi.fn(),
@@ -106,5 +107,13 @@ describe("SessionScreen Motivation mode", () => {
     expect(screen.queryByTestId("momentum")).toBeNull();
     fireEvent.click(screen.getByTestId("next-block"));
     expect(props.onNext).toHaveBeenCalledTimes(1);
+  });
+
+  it("shows the clock by default and hides it on request", () => {
+    renderSession({ showClock: true });
+    expect(screen.getByText(/elapsed 1:00/i)).toBeTruthy();
+    cleanup();
+    renderSession({ showClock: false });
+    expect(screen.queryByText(/elapsed/i)).toBeNull();
   });
 });

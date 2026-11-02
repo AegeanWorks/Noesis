@@ -6719,6 +6719,49 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "Contrasting the desired future with the obstacle is itself effective; the plan display should keep goal and obstacle visible together."
+  },
+  {
+   "pmid": "29156362",
+   "doi": "10.1016/j.jad.2017.11.048",
+   "doi_status": "verified",
+   "year": 2018,
+   "journal": "Journal of Affective Disorders",
+   "title": "Test anxiety effects, predictors, and correlates: A 30-year meta-analytic review.",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "adolescents"
+   ],
+   "k": 238,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "not_reported",
+     "note": "238 studies; anxiety-performance link small-to-moderate; self-esteem a strong predictor; perceived difficulty and high stakes raise anxiety"
+    }
+   ],
+   "findings": [
+    "Test anxiety relates negatively to performance across outcomes",
+    "Untimed conditions beat timed ones, most for high-anxious test-takers"
+   ],
+   "limitations": [
+    "Mostly educational settings",
+    "Correlational base"
+   ],
+   "flags": [],
+   "synthesis_role": "primary",
+   "product_use": "Untimed beats timed, most for the anxious: offer a hide-the-clock option; keep all practice framing low-stakes."
   }
  ]
 }
