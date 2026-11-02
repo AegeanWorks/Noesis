@@ -1,54 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-adherence-barrier-v1",
+    "task_id": "noesis-adherence-row-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793635649.7354255,
+    "updated_at": 1793635936.4681575,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793635675.945219
+    "completed_at": 1793635947.4508116
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-arm-schedule-proof-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-arm-schedule-proof-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793633733.6336145,
-      "timestamp_str": "2026-11-02 18:35:33",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-exposure-logging-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: log per-session engagement exposure and export the adaptation log",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793633987.4321973,
-      "timestamp_str": "2026-11-02 18:39:47",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "The RCT manipulates bonus schedule and finisher, but sessions record neither the schedule used nor the bonuses earned, and the adaptation log never leaves the device: the manipulation is unverifiable",
-        "benefits": "every session carries its schedule, banked total and finisher; export adds the adaptation trajectory",
-        "mitigation": "additive optional fields; defaults null/empty; no behavior change"
-      }
-    },
-    {
-      "task_id": "noesis-exposure-logging-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] R51, ADR-027, per-session motivation exposure, adaptation log export, journey assertions; 8 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793634139.876003,
-      "timestamp_str": "2026-11-02 18:42:19",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-exposure-logging-v1",
       "phase": "phase 2",
@@ -244,6 +207,41 @@
       "status": "completed",
       "timestamp": 1793635675.9452207,
       "timestamp_str": "2026-11-02 19:07:55",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-adherence-row-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: adherence-factors review row plus morning-hint test",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793635738.8274133,
+      "timestamp_str": "2026-11-02 19:08:58",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Jakob et al. 2022 SR (99 studies) names personalization, reminders, usable stable design and human support as adherence drivers with technical difficulties the top barrier; the review lacked this row and the morning hint lacked a test"
+      }
+    },
+    {
+      "task_id": "noesis-adherence-row-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] Dedupe guard verified, 6.26 merge, R53 extended, morning-hint test; 228 Vitest + 29 Python green, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793635936.4681575,
+      "timestamp_str": "2026-11-02 19:12:16",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-adherence-row-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-adherence-row-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793635947.4508128,
+      "timestamp_str": "2026-11-02 19:12:27",
       "agent": "kilo:main"
     }
   ]

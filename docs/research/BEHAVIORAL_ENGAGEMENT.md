@@ -258,15 +258,11 @@ A trial arm difference that cannot be audited in the data does not exist for ana
 
 ### 6.24 Prompts work, push stays out (November 2026)
 
-Technology-based prompts raise engagement (RR 1.27, 14 trials, PMID 26747176), especially new-content prompts sent early — but the effect is borderline and heterogeneous, and unsolicited push interrupts the autonomy the whole design protects. Implemented as restraint, not a feature: the in-app notices (milestone unlocks, far-check due, weekly-goal nudges) already are new-content prompts delivered with consent-by-opening; no push channel is built. See R22.
+Technology-based prompts raise engagement versus nothing (RR 1.27, 14 trials, PMID 26747176), best when they announce new content early — but the effect is borderline and heterogeneous, and unsolicited push would trade against the autonomy the whole design protects. So the in-app notices are the whole prompt layer: milestones, far-check due cards, weekly-goal nudges. No push channel, no inbox, no badge. A companion review of mHealth adherence drivers (99 studies, PMID 35612886) adds personalization, reminders and usable stable design on the plus side — and names technical difficulties the top barrier, which makes stability itself an adherence intervention. See R22, R53.
 
 ### 6.25 Interleaving by default, blocking by choice (November 2026)
 
 A 59-study meta-analysis finds interleaved schedules beat blocked ones for inductive learning (g=0.42), strongest for complex similar material — but word lists reverse the effect (blocked wins, g=-0.39; PMID 31556629). The app already matches both halves: default sessions interleave four different mechanics, focus sessions deliberately block one, and the far check studies its words blocked. Implemented as R52: the lineup rule is now explicit so no future refactor can silently switch the default to blocked.
-
-### 6.26 Prompts stay in-app (November 2026)
-
-Technology-based prompts raise engagement versus nothing (RR 1.27), best when they announce new content early (PMID 26747176) — but the evidence is borderline and heterogeneous, and unsolicited push would trade against the autonomy the whole design protects. So the in-app notices are the whole prompt layer: milestones, far-check due cards, weekly-goal nudges. No push channel, no inbox, no badge. See R53.
 
 ---
 
