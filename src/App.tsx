@@ -545,6 +545,7 @@ export function App() {
             largeText={settings.largeText}
             highContrast={settings.highContrast}
             historyCount={history.length}
+            history={history}
             adverseEvents={adverseEvents}
             onClearAdverseEvents={handleClearAdverseEvents}
             study={study}

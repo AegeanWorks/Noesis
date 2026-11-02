@@ -158,3 +158,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: Planning interventions work at SMD 0.35 and work better with reinforcement (PMID 35742582); action and coping planning show small-to-medium objective effects with self-set terms best. The plan held action cues and a temptation pairing but no barrier response.
 - **Decision**: Add an optional "If I get stuck, I will…" line to the plan, displayed with the plan and stored verbatim. Backward compatible: old plans load with an empty obstacle. The weekly goal plus the summary reinforce all three planning elements. See R45.
 - **Consequences**: The plan form now holds cue, indulgence and barrier response in one stored intention; four optional inputs is the ceiling — further planning constructs go to guidance copy, not more fields.
+
+### ADR-022: Copyable week summary for accountability without accounts
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: Social accountability supports adherence and the trial needs low-tech adherence reports, but accounts and servers are out of scope.
+- **Decision**: Add a "Copy week summary" button in Settings that copies one human-readable line (week of date, days of goal, sessions, minutes). Clipboard-only; nothing is transmitted. See R46.
+- **Consequences**: Users can paste their week to a coach, clinician or investigator; no new data leaves the device except by explicit user action.

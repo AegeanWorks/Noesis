@@ -12,6 +12,7 @@ const BASE = {
   largeText: false,
   highContrast: false,
   historyCount: 0,
+  history: [],
   onReducedMotion: () => {},
   onDifficulty: () => {},
   onSessionLength: () => {},
@@ -168,5 +169,38 @@ describe("SettingsScreen study enrollment", () => {  it("requires an id and cons
     );
     expect(screen.getByText(/60% steady, 25% boost and 15% rare/i)).toBeTruthy();
     expect(screen.getByText(/finisher bonus/i)).toBeTruthy();
+  });
+
+  it("copies a human-readable week summary for accountability", async () => {
+    const written: string[] = [];
+    Object.defineProperty(navigator, "clipboard", {
+      value: {
+        writeText: (text: string) => {
+          written.push(text);
+          return Promise.resolve();
+        },
+      },
+      configurable: true,
+    });
+    render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        historyCount={1}
+        history={[
+          {
+            id: "s1",
+            finishedAt: "2026-11-02T10:00:00.000Z",
+            seed: 1,
+            results: [],
+          },
+        ]}
+      />,
+    );
+    fireEvent.click(screen.getByRole("button", { name: "Copy week summary" }));
+    await screen.findByRole("button", { name: "Copied week summary" });
+    expect(written).toHaveLength(1);
+    expect(written[0]).toMatch(/noesis practice week of/i);
   });
 });

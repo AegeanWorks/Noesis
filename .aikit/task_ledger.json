@@ -1,91 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-evidence-count-guard-v1",
+    "task_id": "noesis-shareable-week-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793628880.1830719,
+    "updated_at": 1793629668.6115196,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793629008.7117543
+    "completed_at": 1793629668.955112
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-focus-practice-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-focus-practice-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793626118.654879,
-      "timestamp_str": "2026-11-02 16:28:38",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-review-upkeep-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: add gamification-caution row and morning-habit hint",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793626197.642949,
-      "timestamp_str": "2026-11-02 16:29:57",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "BEHAVIORAL cites Sardi 2017 (MEDLINE-indexed SR) without a table row; habit formation is stronger in the morning (39685110) and the intention form says nothing about timing",
-        "benefits": "review stays complete; timing cue is actionable and cited",
-        "mitigation": "additive row and one-line copy; lint and snapshot tests pin both"
-      }
-    },
-    {
-      "task_id": "noesis-review-upkeep-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] Gamification-caution row, fixed wrong gamification DOI, morning-habit hint, 105-record table; 216 Vitest + 29 Python green, 6/6 gates, home screenshot clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793626340.4567072,
-      "timestamp_str": "2026-11-02 16:32:20",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-review-upkeep-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-review-upkeep-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793626340.7663214,
-      "timestamp_str": "2026-11-02 16:32:20",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-goal-bar-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: visual weekly-goal progress bar",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793626397.968189,
-      "timestamp_str": "2026-11-02 16:33:17",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Goal-gradient studies used visual stamp cards; our gradient nudge is text-only and weaker than the evidenced format",
-        "benefits": "proximity is visible at a glance, strengthening the one-more-hits-it nudge",
-        "mitigation": "display-only derivation from existing week stats; no new state; lint-checked copy unchanged"
-      }
-    },
-    {
-      "task_id": "noesis-goal-bar-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] Visual weekly-goal progress bar in the evidenced stamp-card format; 216 Vitest + 29 Python green, 6/6 gates, home screenshot clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793626828.6711454,
-      "timestamp_str": "2026-11-02 16:40:28",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-goal-bar-v1",
       "phase": "completed",
@@ -250,6 +176,79 @@
       "status": "completed",
       "timestamp": 1793629008.7117558,
       "timestamp_str": "2026-11-02 17:16:48",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-calendar-week-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: Monday-anchored goal weeks for fresh-start alignment",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793629115.0604143,
+      "timestamp_str": "2026-11-02 17:18:35",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Temporal landmarks spur goal initiation (Dai et al. 2014/2015); rolling windows have no fresh start and mismatch the mental model of a week",
+        "benefits": "every Monday is a clean slate for the goal; week stats match what users mean by this week",
+        "mitigation": "weekStats-only change, all consumers derive from it; fixed-date tests updated deliberately; copy unchanged"
+      }
+    },
+    {
+      "task_id": "noesis-calendar-week-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-calendar-week-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793629155.5470142,
+      "timestamp_str": "2026-11-02 17:19:15",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-share-summary-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: copyable weekly summary for accountability reporting",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793629155.8601522,
+      "timestamp_str": "2026-11-02 17:19:15",
+      "agent": "kilo:main",
+      "impact_assessment": {
+        "why": "Weeks are already Monday-anchored (fresh-start aligned by construction); the missing piece is shareability: accountability needs an exportable record, and the trial needs low-tech adherence reports",
+        "benefits": "one-tap human-readable week report for coaches/investigators; no accounts, no server",
+        "mitigation": "display-only derivation from history; clipboard with fallback message; lint-checked copy"
+      }
+    },
+    {
+      "task_id": "noesis-shareable-week-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] R46, ADR-022, copyable week summary with clipboard tests; 219 Vitest + 29 Python green, 6/6 gates, home screenshot clean; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793629668.6115196,
+      "timestamp_str": "2026-11-02 17:27:48",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-share-summary-v1",
+      "phase": "superseded",
+      "phase_num": 1,
+      "description": "Superseded by 'noesis-shareable-week-v1' without --complete or --reset",
+      "status": "superseded",
+      "timestamp": 1793629668.6115196,
+      "timestamp_str": "2026-11-02 17:27:48",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-shareable-week-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-shareable-week-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793629668.9551132,
+      "timestamp_str": "2026-11-02 17:27:48",
       "agent": "kilo:main"
     }
   ]

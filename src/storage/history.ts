@@ -53,7 +53,7 @@ export interface WeekStats {
   minutes: number;
 }
 
-function startOfWeek(now: Date): Date {
+export function startOfWeek(now: Date): Date {
   const start = new Date(now);
   const mondayOffset = (start.getDay() + 6) % 7;
   start.setHours(0, 0, 0, 0);

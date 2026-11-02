@@ -1,4 +1,5 @@
 import type { SessionRecord } from "./history";
+import { startOfWeek, weekStats } from "./history";
 import type { StudyArm } from "./study";
 
 export interface StudyExport {
@@ -30,6 +31,26 @@ export function buildHistoryExport(
     study: study,
   };
   return `${JSON.stringify(payload, null, 2)}\n`;
+}
+
+const MONTHS = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+] as const;
+
+export function buildWeekSummaryText(
+  history: readonly SessionRecord[],
+  weeklyGoal: number,
+  now: Date = new Date(),
+): string {
+  const week = weekStats(history, now);
+  const done = Math.min(week.days, weeklyGoal);
+  const start = startOfWeek(now);
+  const label = `${MONTHS[start.getMonth()]} ${start.getDate()}`;
+  return (
+    `Noesis practice week of ${label}: ${done} of ${weeklyGoal} practice days, ` +
+    `${week.sessions} ${week.sessions === 1 ? "session" : "sessions"}, ${week.minutes} minutes.`
+  );
 }
 
 export function downloadHistoryExport(

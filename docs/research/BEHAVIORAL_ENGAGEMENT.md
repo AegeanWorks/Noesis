@@ -234,6 +234,10 @@ Milkman et al. 2014 showed gym-only audiobooks lifted visits 51% enforced and 29
 
 A planning-interventions meta-analysis of 41 RCTs joined the table (SMD 0.35, stronger with reinforcement during follow-up; PMID 35742582), alongside the Cochrane-style finding that action and coping planning show small-to-medium objective effects and that self-set terms work best. Implemented as R45: the plan form now holds the full HAPA bundle — when and where (action cue), paired with what indulgence (temptation), and what to do if stuck (coping response). Reinforcement for all three is the weekly goal plus the summary; self-set wording stays verbatim in the stored plan.
 
+### 6.18 Shareable accountability without accounts (November 2026)
+
+Social accountability improves adherence, but accounts and servers are out of scope. The compromise is a copyable weekly summary: totals, goal progress and minutes in one pasteable line for a coach, clinician or investigator. No new data leaves the device except by the user's own paste. See R46.
+
 ---
 
 ## 7. Safeguards and design rules

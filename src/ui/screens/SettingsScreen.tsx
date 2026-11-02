@@ -7,6 +7,8 @@ import {
 } from "../../engine/motivation";
 import type { AdverseEvent } from "../../storage/adverseEvents";
 import { SYMPTOM_LABELS } from "../../storage/adverseEvents";
+import { buildWeekSummaryText } from "../../storage/export";
+import type { SessionRecord } from "../../storage/history";
 import type { AdaptiveLevels } from "../../storage/adaptive";
 import type { StudyArm, StudyState } from "../../storage/study";
 import type { Difficulty, SessionLength } from "../../storage/settings";
@@ -21,6 +23,7 @@ interface SettingsScreenProps {
   largeText: boolean;
   highContrast: boolean;
   historyCount: number;
+  history: readonly SessionRecord[];
   adverseEvents: AdverseEvent[];
   onClearAdverseEvents: () => void;
   motivationPaused: boolean;
@@ -117,6 +120,7 @@ export function SettingsScreen({
   largeText,
   highContrast,
   historyCount,
+  history,
   adverseEvents,
   onClearAdverseEvents,
   motivationPaused,
@@ -141,6 +145,7 @@ export function SettingsScreen({
   onHome,
 }: SettingsScreenProps) {
   const [copied, setCopied] = useState(false);
+  const [copiedSummary, setCopiedSummary] = useState(false);
 
   const copySnippet = async () => {
     try {
@@ -398,6 +403,24 @@ export function SettingsScreen({
         <div className="hero-actions">
           <Button variant="ghost" onClick={onExportHistory} disabled={historyCount === 0}>
             Export practice data
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={() => {
+              const text = buildWeekSummaryText(history, weeklyGoal);
+              if (typeof navigator !== "undefined" && navigator.clipboard) {
+                navigator.clipboard.writeText(text).then(
+                  () => {
+                    setCopiedSummary(true);
+                    window.setTimeout(() => setCopiedSummary(false), 1500);
+                  },
+                  () => setCopiedSummary(false),
+                );
+              }
+            }}
+            disabled={historyCount === 0}
+          >
+            {copiedSummary ? "Copied week summary" : "Copy week summary"}
           </Button>
           <Button variant="ghost" onClick={onClearHistory} disabled={historyCount === 0}>
             Clear practice history
