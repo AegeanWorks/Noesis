@@ -12,6 +12,7 @@ import { clearSafety, saveSafety } from "../../src/storage/safety";
 import { clearSessionSnapshot } from "../../src/storage/sessionSnapshot";
 import { clearSettings } from "../../src/storage/settings";
 import { clearEngagement } from "../../src/storage/engagement";
+import { clearFarChecks, loadFarChecks } from "../../src/storage/farChecks";
 
 vi.stubGlobal("requestAnimationFrame", vi.fn(() => 1));
 vi.stubGlobal("cancelAnimationFrame", vi.fn());
@@ -23,6 +24,7 @@ beforeEach(() => {
   clearSafety();
   clearStudy();
   clearSettings();
+  clearFarChecks();
   clearEngagement();
   saveSafety({ acknowledged: true, photosensitive: false, exerciseConcern: false, consent: true });
 });
@@ -94,6 +96,7 @@ describe("trial data path", () => {
     fireEvent.click(screen.getByTestId("start-session"));
     completeSession();
     expect(screen.getByTestId("momentum-summary").textContent).toMatch(/block 1 · rare/i);
+    expect(loadHistory()[0]?.arm).toBe("engagement");
     expect(loadHistory()[0]?.motivation).toMatchObject({
       schedule: { steadyUpTo: 0.6, boostUpTo: 0.85 },
       completionBonus: 15,
@@ -107,9 +110,29 @@ describe("trial data path", () => {
     fireEvent.click(screen.getByTestId("start-session"));
     completeSession();
     expect(screen.getByTestId("momentum-summary").textContent).toMatch(/block 1 · boost/i);
+    expect(loadHistory()[0]?.arm).toBe("control");
     expect(loadHistory()[0]?.motivation).toMatchObject({
       schedule: { steadyUpTo: 0.7, boostUpTo: 0.9 },
       completionBonus: 0,
     });
+  });
+
+  it("completes a far check through the app and tags it with the arm", () => {
+    enrollStudy({ studyId: "RCT-1", arm: "engagement", consented: true });
+    render(<App />);
+    fireEvent.click(screen.getByTestId("far-check-card"));
+    fireEvent.click(screen.getByRole("button", { name: "Start far check" }));
+    for (let i = 0; i < 8; i += 1) {
+      fireEvent.click(screen.getByRole("button", { name: /next word|start test/i }));
+    }
+    expect(screen.getByTestId("far-check-test")).toBeTruthy();
+    for (let i = 0; i < 16; i += 1) {
+      fireEvent.click(screen.getByRole("button", { name: "Seen before" }));
+    }
+    expect(screen.getByTestId("far-check-done")).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "Save result" }));
+    const checks = loadFarChecks();
+    expect(checks).toHaveLength(1);
+    expect(checks[0]).toMatchObject({ arm: "engagement", studied: 8, tested: 16 });
   });
 });
