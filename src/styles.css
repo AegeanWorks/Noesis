@@ -980,6 +980,18 @@ code {
   color: rgba(169, 179, 212, 0.6);
 }
 
+/* Safety check note: 44px minimum target (R33) — outside settings/plan scopes */
+#symptom-note {
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+  width: 100%;
+}
+
 .week-line {
   color: var(--muted);
   font-size: 0.9rem;
@@ -1239,6 +1251,9 @@ html.high-contrast .speed-ring-active {
   cursor: pointer;
   font-size: 0.86rem;
   font-weight: 650;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .metrics-secondary {

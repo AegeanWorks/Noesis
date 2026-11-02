@@ -62,6 +62,7 @@ import type { FarCheckOutcome } from "./ui/screens/FarCheckScreen";
 import { FarCheckScreen } from "./ui/screens/FarCheckScreen";
 import {
   applySessionResults,
+  clearAdaptive,
   loadAdaptive,
   setAdaptiveEnabled,
 } from "./storage/adaptive";
@@ -379,6 +380,7 @@ export function App() {
     clearAdverseEvents();
     clearEngagement();
     clearStudy();
+    clearAdaptive();
     clearFarChecks();
     clearSessionSnapshot();
     setHistory([]);

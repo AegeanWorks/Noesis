@@ -182,6 +182,8 @@ One engagement-prompts record joined the table the same day (PMID 26747176, 14 t
 
 One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
 
+One adherence record joined the table the same day (PMID 35612886, 99 studies, engagement/primary/verified): personalization, reminders and stability support adherence while technical difficulties are the top barrier. It joins R53 alongside PMID 26747176; the in-app notices (milestones, far-check due, goal nudges) already implement the supported prompt mechanism with no push channel built. See BEHAVIORAL 6.24.
+
 ## 10. Tooling and commands
 
 - PubMed: NCBI E-utilities (`esearch.fcgi`, `efetch.fcgi`), XML parsing with `xml.etree.ElementTree`.
