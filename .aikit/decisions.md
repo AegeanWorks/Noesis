@@ -172,3 +172,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: MCII meta-analyses show g=0.34 overall but document-delivered formats run ~0.28 versus 0.47 interactive (PMIDs 34054628, 30879403); mental contrasting alone matches MCII for health behaviour (g=0.28). An app is document delivery.
 - **Decision**: Calibrate all planning claims to the document-delivered number; formation stays interactive in the only way an app can (user-typed, self-set wording); the saved plan keeps goal and obstacle visible together so the contrast is re-read, and the new goal-link line makes that explicit. See R47.
 - **Consequences**: Planning copy can never drift into interactive-delivery effect sizes; any future planning feature inherits the same ceiling.
+
+### ADR-024: Monthly word-recognition far check on a separate schedule
+- **Date**: 2026-11-02
+- **Status**: Accepted
+- **Context**: R7 requires far transfer measured separately; the landmark reviews find it absent or fragile (PMIDs 27697851, 27474138). The app measured near transfer only, so it could neither detect nor honestly deny far transfer, and the RCT lacked a far outcome.
+- **Decision**: Add an 8-word study plus 16-trial recognition check on its own screen, store (capped at 12) and 30-day schedule, triggered from a Home card only when due. Results never enter practice history, motivation, adaptive or weekly-goal math; sessions carry the trial arm. The copy states the base rate up front. See R48.
+- **Consequences**: The app can now report "practice does not reach word memory (so far)" as a measured fact rather than a cited one; the check doubles as the trial's far outcome with zero changes.

@@ -26,6 +26,8 @@ interface HomeScreenProps {
   motivationPaused: boolean;
   milestones: Milestone[];
   studyArm: StudyArm | null;
+  farCheckDue: boolean;
+  onStartFarCheck: () => void;
   weakest: WeakestMechanic | null;
   onFocusMechanic: (mechanic: MechanicId) => void;
   onStart: () => void;
@@ -351,6 +353,8 @@ export function HomeScreen({
   motivationPaused,
   milestones,
   studyArm,
+  farCheckDue,
+  onStartFarCheck,
   weakest,
   onFocusMechanic,
   onStart,
@@ -417,6 +421,21 @@ export function HomeScreen({
           <div className="hero-actions">
             <Button variant="ghost" onClick={onDismissMilestones}>
               Nice
+            </Button>
+          </div>
+        </section>
+      ) : null}
+
+      {farCheckDue ? (
+        <section className="notice" data-testid="far-check-card">
+          <h3>Monthly far check is due</h3>
+          <p>
+            Two minutes of word recognition, kept separate from practice. It checks whether
+            training reaches untrained memory — which reviews usually find it does not.
+          </p>
+          <div className="hero-actions">
+            <Button variant="ghost" onClick={onStartFarCheck}>
+              Start far check
             </Button>
           </div>
         </section>

@@ -238,8 +238,11 @@ A planning-interventions meta-analysis of 41 RCTs joined the table (SMD 0.35, st
 Social accountability improves adherence, but accounts and servers are out of scope. The compromise is a copyable weekly summary: totals, goal progress and minutes in one pasteable line for a coach, clinician or investigator. No new data leaves the device except by the user's own paste. See R46.
 
 ### 6.19 Mental contrasting calibrated to delivery mode (November 2026)
-
 Two MCII reviews joined the table: mental contrasting with implementation intentions improves goal attainment (g=0.34, 21 studies; PMID 34054628), and mental contrasting alone improves health behaviour (g=0.28, matching MCII in that pool; PMID 30879403). The moderator that matters for an app: interactive formation reaches g=0.47 while document-delivered formats run g=0.28. Implemented as R47: copy and expectations use the document number, formation stays interactive (user-typed, self-set wording), and the saved plan keeps goal and obstacle visible together so the contrast is re-read, not just written once.
+
+### 6.20 A far check that expects the null (November 2026)
+
+The landmark reviews say far transfer is absent or fragile (PMIDs 27697851, 27474138) — so the app stops implying it and starts measuring it. Implemented as R48: a monthly 8-word study plus 16-trial old/new recognition check on its own screen, store and 30-day schedule, never mixed into practice metrics. It states the base rate up front (reviews usually find no transfer) so a low score reads as data, not failure. Sessions carry the trial arm, making it a ready far outcome for the RCT.
 
 ---
 

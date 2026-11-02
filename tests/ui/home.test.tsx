@@ -46,6 +46,8 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     motivationPaused: false,
     milestones: [],
     studyArm: null,
+    farCheckDue: false,
+    onStartFarCheck: vi.fn(),
     weakest: null,
     onFocusMechanic: vi.fn(),
     onStart: vi.fn(),
@@ -234,5 +236,16 @@ describe("HomeScreen", () => {
     cleanup();
     renderHome({ history: [entry], studyArm: "control" });
     expect(screen.queryByTestId("streak-at-risk")).toBeNull();
+  });
+
+  it("shows the far-check card only when a check is due", () => {
+    const onStartFarCheck = vi.fn();
+    renderHome({ farCheckDue: true, onStartFarCheck });
+    expect(screen.getByTestId("far-check-card").textContent).toMatch(/monthly far check/i);
+    fireEvent.click(screen.getByRole("button", { name: "Start far check" }));
+    expect(onStartFarCheck).toHaveBeenCalledTimes(1);
+    cleanup();
+    renderHome({ farCheckDue: false, onStartFarCheck });
+    expect(screen.queryByTestId("far-check-card")).toBeNull();
   });
 });

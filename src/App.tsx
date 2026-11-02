@@ -54,6 +54,14 @@ import {
   resumeMotivation,
 } from "./storage/engagement";
 import {
+  clearFarChecks,
+  isFarCheckDue,
+  loadFarChecks,
+  logFarCheck,
+} from "./storage/farChecks";
+import type { FarCheckOutcome } from "./ui/screens/FarCheckScreen";
+import { FarCheckScreen } from "./ui/screens/FarCheckScreen";
+import {
   applySessionResults,
   loadAdaptive,
   setAdaptiveEnabled,
@@ -75,7 +83,7 @@ import { SafetyScreen } from "./ui/screens/SafetyScreen";
 import { SessionScreen } from "./ui/screens/SessionScreen";
 import { SettingsScreen } from "./ui/screens/SettingsScreen";
 
-type Screen = "home" | "safety" | "session" | "results" | "evidence" | "settings";
+  type Screen = "home" | "safety" | "session" | "results" | "evidence" | "settings" | "farcheck";
 
 function initialScreen(): Screen {
   return loadSafety()?.acknowledged ? "home" : "safety";
@@ -102,6 +110,7 @@ export function App() {
   const [engagement, setEngagement] = useState(() => loadEngagement());
   const [adaptive, setAdaptive] = useState(() => loadAdaptive());
   const [study, setStudy] = useState(() => loadStudy());
+  const [farSeed, setFarSeed] = useState<number | null>(null);
   const motivationPaused =
     engagement.motivationPausedDay !== null && isMotivationPaused();
   const motivationActive = settings.motivationMode && !motivationPaused;
@@ -315,6 +324,31 @@ export function App() {
     );
   }, [history, adaptive.log]);
 
+  const startFarCheck = useCallback(() => {
+    setFarSeed(Date.now() >>> 0);
+    setScreen("farcheck");
+  }, []);
+
+  const handleCompleteFarCheck = useCallback(
+    (outcome: FarCheckOutcome) => {
+      const enrolled = loadStudy();
+      setStudy(enrolled);
+      logFarCheck({
+        ...outcome,
+        seed: farSeed ?? 1,
+        arm: enrolled.enrolled ? enrolled.arm : null,
+      });
+      setFarSeed(null);
+      setScreen("home");
+    },
+    [farSeed],
+  );
+
+  const handleCancelFarCheck = useCallback(() => {
+    setFarSeed(null);
+    setScreen("home");
+  }, []);
+
   const handleSaveIntention = useCallback((when: string, where: string, pairing: string, obstacle: string) => {
     setIntention(saveIntention({ when, where, pairing, obstacle }));
   }, []);
@@ -332,6 +366,7 @@ export function App() {
     clearAdverseEvents();
     clearEngagement();
     clearStudy();
+    clearFarChecks();
     clearSessionSnapshot();
     setHistory([]);
     setAdverseEvents([]);
@@ -477,6 +512,8 @@ export function App() {
             motivationPaused={motivationPaused}
             milestones={newMilestones}
             studyArm={study.enrolled ? study.arm : null}
+            farCheckDue={isFarCheckDue(loadFarChecks())}
+            onStartFarCheck={startFarCheck}
             weakest={weakestRecentMechanic(history)}
             onFocusMechanic={handleFocusMechanic}
             onStart={() => startSession()}
@@ -516,6 +553,14 @@ export function App() {
               </button>
             </section>
           )
+        ) : null}
+
+        {screen === "farcheck" && farSeed !== null ? (
+          <FarCheckScreen
+            seed={farSeed}
+            onComplete={handleCompleteFarCheck}
+            onCancel={handleCancelFarCheck}
+          />
         ) : null}
 
         {screen === "results" ? (
