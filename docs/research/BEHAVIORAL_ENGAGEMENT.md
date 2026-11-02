@@ -280,7 +280,7 @@ A 238-study meta-analysis finds test anxiety negatively related to performance, 
 2. Does the optional risk mechanic increase anxiety or dropout in older adults?
 3. Does the near-best cue motivate or discourage users who plateau?
 4. How should the app detect compulsive use and respond? **Implemented:** the app watches for heavy-use patterns (many sessions in a day, back-to-back sessions, long daily totals) and responds with a caring, non-coercive check-in that suggests rest and offers one-tap Motivation pause — never a lockout. See DESIGN_IMPLICATIONS R36.
-5. Does a target time create helpful pacing or unwanted pressure?
+5. Does a target time create helpful pacing or unwanted pressure? **Implemented as choice:** pacing stays default-on (the clock still paces the session) and users who feel pressured can hide it in Settings (R50). The question of which is better for whom stays open for the trial.
 6. Which safeguards should be default-on versus opt-in in a clinical or assisted-living setting?
 
 These are product research questions, not established evidence. They should be tested, not asserted. In particular, Motivation mode is an engagement feature, not a treatment for cognitive decline.

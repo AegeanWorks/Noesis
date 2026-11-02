@@ -1,54 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-last-check-line-v1",
+    "task_id": "noesis-open-questions-v1",
     "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1793633207.515935,
+    "updated_at": 1793633327.9948404,
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793633207.8376822
+    "completed_at": 1793633328.3216002
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-woop-calibration-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-woop-calibration-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793630163.5868595,
-      "timestamp_str": "2026-11-02 17:36:03",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-far-check-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/3] Plan: monthly word-recognition far check on its own schedule and store",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793630280.4450748,
-      "timestamp_str": "2026-11-02 17:38:00",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "R7 requires far transfer measured separately; near-only measurement cannot detect (or honestly deny) far transfer, and the trial needs a far outcome",
-        "benefits": "untrained word memory probed monthly without contaminating practice metrics; honest by design since reviews say far transfer is usually absent",
-        "mitigation": "separate store/screen/schedule; seeded deterministic order; no effect on history, motivation or adaptive"
-      }
-    },
-    {
-      "task_id": "noesis-far-check-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/3] Storage, screen, App wiring, home entry, 8 new tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793630496.5311217,
-      "timestamp_str": "2026-11-02 17:41:36",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-far-check-v1",
       "phase": "phase 3",
@@ -246,6 +209,38 @@
       "status": "completed",
       "timestamp": 1793633207.8376837,
       "timestamp_str": "2026-11-02 18:26:47",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-open-questions-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: close Q5 as implemented-by-choice; cover adaptive x focus interaction",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793633275.1171136,
+      "timestamp_str": "2026-11-02 18:27:55",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-open-questions-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] Q5 closed as implemented-by-choice; adaptive x focus covered; 239 Vitest + 29 Python green, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793633327.9948404,
+      "timestamp_str": "2026-11-02 18:28:47",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-open-questions-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-open-questions-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793633328.3216019,
+      "timestamp_str": "2026-11-02 18:28:48",
       "agent": "kilo:main"
     }
   ]

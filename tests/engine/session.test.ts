@@ -139,4 +139,11 @@ describe("session", () => {
     expect(blocks.map((block) => block.mechanic)).toEqual(["gonogo"]);
     expect(defaultSessionConfig(9).blocks).toHaveLength(4);
   });
+
+  it("applies adaptive levels inside focus sessions", () => {
+    const config = defaultSessionConfig(9, 2, "standard", { speed: 3 }, "speed");
+    expect(config.blocks).toHaveLength(3);
+    expect(config.blocks.every((block) => block.mechanic === "speed")).toBe(true);
+    expect(config.blocks.every((block) => block.difficulty === 3)).toBe(true);
+  });
 });
