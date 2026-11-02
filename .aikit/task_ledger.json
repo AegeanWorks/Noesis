@@ -9,20 +9,9 @@
     "owner": "kilo:main",
     "started_by": "kilo:main",
     "continuations": [],
-    "completed_at": 1793628991.4821668
+    "completed_at": 1793629008.7117543
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-focus-practice-v1",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[3/3] R43, ADR-019, BEHAVIORAL 6.15, 216 Vitest + 29 Python green, 400 sims, 6/6 gates, home screenshot with focus buttons clean; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793626118.3441157,
-      "timestamp_str": "2026-11-02 16:28:38",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-focus-practice-v1",
       "phase": "completed",
@@ -251,6 +240,16 @@
       "status": "completed",
       "timestamp": 1793628991.482168,
       "timestamp_str": "2026-11-02 17:16:31",
+      "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-evidence-count-guard-v1",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-evidence-count-guard-v1' completed successfully.",
+      "status": "completed",
+      "timestamp": 1793629008.7117558,
+      "timestamp_str": "2026-11-02 17:16:48",
       "agent": "kilo:main"
     }
   ]
