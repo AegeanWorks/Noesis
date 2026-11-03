@@ -11,7 +11,7 @@ export interface SessionSnapshot {
 }
 
 const KEY = "noesis.session.v1";
-const MECHANICS = new Set(["nback", "gonogo", "reasoning"]);
+const MECHANICS = new Set(["nback", "gonogo", "reasoning", "speed"]);
 const RESUMABLE_PHASES = new Set(["running", "block_complete"]);
 
 function isObject(value: unknown): value is Record<string, unknown> {

@@ -52,11 +52,11 @@ function generateTrials(
       continue;
     }
     let letterIndex: number;
-    [letterIndex, rng] = randomInt(rng, LETTERS.length);
+    [letterIndex, rng] = randomInt(rng, LETTERS.length - 1);
     if (previous) {
       const forbidden = LETTERS.indexOf(previous.letter as (typeof LETTERS)[number]);
       if (letterIndex >= forbidden) {
-        letterIndex = (letterIndex + 1) % LETTERS.length;
+        letterIndex += 1;
       }
     }
     trials.push({

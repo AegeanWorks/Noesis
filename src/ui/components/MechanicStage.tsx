@@ -45,7 +45,7 @@ function GoNoGoStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) 
   return (
     <div className="stage stage-gonogo" data-mechanic="gonogo" data-phase={view.phase}>
       <div
-        className={`shape ${shape ?? "shape-blank"}`}
+        className={`shape shape-${shape ?? "blank"}`}
         role="img"
         aria-label={shape === "circle" ? "Circle: respond" : shape === "square" ? "Square: do not respond" : "Waiting"}
         data-testid="stimulus"

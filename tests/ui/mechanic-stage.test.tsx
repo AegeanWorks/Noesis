@@ -91,4 +91,24 @@ describe("MechanicStage", () => {
     );
     expect(screen.getByTestId("stimulus").getAttribute("data-shape")).toBe("circle");
   });
+
+  it("uses hyphenated shape classes matching styles.css", () => {
+    const { unmount } = render(
+      <MechanicStage
+        view={view({ mechanic: "gonogo", name: "Go / No-Go", stimulus: "circle" })}
+        onRespond={vi.fn()}
+        onAnswer={vi.fn()}
+      />,
+    );
+    expect(screen.getByTestId("stimulus").className).toMatch(/shape-circle/);
+    unmount();
+    render(
+      <MechanicStage
+        view={view({ mechanic: "gonogo", name: "Go / No-Go", stimulus: "square" })}
+        onRespond={vi.fn()}
+        onAnswer={vi.fn()}
+      />,
+    );
+    expect(screen.getByTestId("stimulus").className).toMatch(/shape-square/);
+  });
 });

@@ -80,7 +80,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 14px max(18px, env(safe-area-inset-left)) 14px max(18px, env(safe-area-inset-right));
+  padding: 14px max(18px, env(safe-area-inset-right)) 14px max(18px, env(safe-area-inset-left));
   border-bottom: 1px solid var(--border);
   background: rgba(8, 12, 24, 0.82);
   backdrop-filter: blur(16px);
@@ -161,7 +161,7 @@ a {
 .app-main {
   width: min(920px, 100%);
   margin: 0 auto;
-  padding: 28px max(18px, env(safe-area-inset-left)) 64px max(18px, env(safe-area-inset-right));
+  padding: 28px max(18px, env(safe-area-inset-right)) 64px max(18px, env(safe-area-inset-left));
   flex: 1;
 }
 
@@ -705,7 +705,7 @@ code {
 }
 
 .footer {
-  padding: 16px max(18px, env(safe-area-inset-left)) 26px max(18px, env(safe-area-inset-right));
+  padding: 16px max(18px, env(safe-area-inset-right)) 26px max(18px, env(safe-area-inset-left));
   border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: 0.8rem;

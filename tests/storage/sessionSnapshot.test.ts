@@ -94,4 +94,15 @@ describe("session snapshot", () => {
     clearSessionSnapshot();
     expect(loadSessionSnapshot()).toBeNull();
   });
+
+  it("round-trips a running speed block (regression: MECHANICS must include speed)", async () => {
+    const { createSpeed, speedConfig } = await import("../../src/engine/mechanics/speed");
+    const base = runningSession();
+    const state = {
+      ...base,
+      current: createSpeed(9, speedConfig(1, 20)),
+    } as SessionState;
+    saveSessionSnapshot(state);
+    expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("speed");
+  });
 });

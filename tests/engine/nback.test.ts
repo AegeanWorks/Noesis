@@ -30,6 +30,18 @@ describe("n-back", () => {
     expect(stableHash(state)).toBe(stableHash(second));
   });
 
+  it("never emits a matching letter on non-targets across seeds (lure rejection)", () => {
+    for (let seed = 1; seed <= 200; seed += 1) {
+      const state = createNBack(seed, nbackConfig(2, 20));
+      for (let index = state.config.n; index < state.trials.length; index += 1) {
+        const current = state.trials[index];
+        const previous = state.trials[index - state.config.n];
+        if (!current || !previous) continue;
+        if (!current.target) expect(current.letter).not.toBe(previous.letter);
+      }
+    }
+  });
+
   it("scores a perfect run", () => {
     const run = drive(11, "optimal");
     expect(run.completed).toBe(true);
