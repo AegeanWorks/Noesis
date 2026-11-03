@@ -1,52 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-journey-gaps-v1",
-    "last_phase": "phase 2",
+    "task_id": "noesis-wave-audit-v1",
+    "last_phase": "phase 5",
     "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1793636551.2858324,
-    "owner": "kilo:main",
-    "started_by": "kilo:main",
-    "continuations": [],
-    "completed_at": 1793636551.5809755
+    "status": "in_progress",
+    "updated_at": 1793723107.5060923,
+    "owner": "kilo:audit",
+    "started_by": "kilo:audit",
+    "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-trial-dossier-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] TRIAL_READINESS.md investigator dossier, research index fixed (CyberPulse rename, new row); 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793634349.8604553,
-      "timestamp_str": "2026-11-02 18:45:49",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-trial-dossier-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-trial-dossier-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793634350.1902733,
-      "timestamp_str": "2026-11-02 18:45:50",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-prompts-row-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: add engagement-prompts review row and document the no-push decision",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793634436.0373886,
-      "timestamp_str": "2026-11-02 18:47:16",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Technology prompts raise engagement (RR 1.27) but evidence is borderline-heterogeneous and push delivery risks autonomy; in-app new-content notices already implement the supported mechanism"
-      }
-    },
     {
       "task_id": "noesis-prompts-row-v1",
       "phase": "phase 2",
@@ -243,6 +207,45 @@
       "timestamp": 1793636551.580977,
       "timestamp_str": "2026-11-02 19:22:31",
       "agent": "kilo:main"
+    },
+    {
+      "task_id": "noesis-wave-audit-v1",
+      "phase": "phase 1",
+      "phase_num": 1,
+      "description": "[1/2] Plan: audit first 30 of 43 commits in waves 0,10,20,30 (SURVEY/VERIFY/ANALYZE, failing-first fixes only if found)",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793723057.1608105,
+      "timestamp_str": "2026-11-03 19:24:17",
+      "agent": "kilo:audit",
+      "impact_assessment": {
+        "why": "First-30-commit history (engine, engagement, far-check, trial wiring) needs quoted/measured verification before sign-off",
+        "benefits": "Wave-ordered evidence that scoped claims hold at HEAD; ledger stays live",
+        "risks": "contract: none (read-only survey); dependency: none; concurrency: none; state: ledger-only append",
+        "mitigation": "No product-code edits without a failing-first test; full gates before any commit; no push (local-only repo)"
+      }
+    },
+    {
+      "task_id": "noesis-wave-audit-v1",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[2/2] Waves 0/10/20/30 verified: 242 Vitest + 29 Python green, ai:verify 400/400, review check 112 records (90 primary/22 context, 273 outcomes); safety-before-milestone order, arm schedules, far-check 8+8/30d/cap-12, export whole record, goal-in-days + goalbar all hold; no failing test so no code change; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793723067.3671,
+      "timestamp_str": "2026-11-03 19:24:27",
+      "agent": "kilo:audit"
+    },
+    {
+      "task_id": "noesis-wave-audit-v1",
+      "phase": "phase 5",
+      "phase_num": 5,
+      "description": "Task 'noesis-wave-audit-v1' completed successfully.",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1793723107.5060923,
+      "timestamp_str": "2026-11-03 19:25:07",
+      "agent": "kilo:audit"
     }
   ]
 }
