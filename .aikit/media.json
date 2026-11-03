@@ -42,5 +42,120 @@
       }
     }
   },
-  "screenshots": []
+  "screenshots": [
+    {
+      "path": "assets/screenshots/2026-11-03-home-desktop.png",
+      "alt": "Noesis home at 2026-11-03",
+      "caption": "Desktop home from npm run ui:shots (seeded): hero, plan, practice, mechanics with claim labels.",
+      "commit": "aa99b888482102549f5e706907a31b18f6dd2377",
+      "taken_at": "2026-11-03",
+      "viewport": "1280x900@2x",
+      "width": 2560,
+      "height": 1800,
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "reviewer": "agent:kilo",
+        "method": "vision",
+        "notes": "Real scripted capture: headline, start card, plan form, four mechanics with SUPPORTED/EXPERIMENTAL labels and the not-medical-care footer all legible.",
+        "score": 93,
+        "reviewed_at": "2026-11-03"
+      }
+    },
+    {
+      "path": "assets/screenshots/2026-11-03-home-mobile.png",
+      "alt": "Noesis home on a phone at 2026-11-03",
+      "caption": "Same home at 390x844: stacked cards, far-check notice, mechanic list.",
+      "commit": "aa99b888482102549f5e706907a31b18f6dd2377",
+      "taken_at": "2026-11-03",
+      "viewport": "390x844@2x",
+      "width": 780,
+      "height": 6300,
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "reviewer": "agent:kilo",
+        "method": "vision",
+        "notes": "Real scripted capture: full-page mobile stack, all sections legible, honest empty state.",
+        "score": 92,
+        "reviewed_at": "2026-11-03"
+      }
+    },
+    {
+      "path": "assets/screenshots/2026-11-03-session-mobile.png",
+      "alt": "Noesis N-back block at 2026-11-03",
+      "caption": "Driven N-back trial (block 1 of 4): stimulus letter, Match control, streak counters.",
+      "commit": "aa99b888482102549f5e706907a31b18f6dd2377",
+      "taken_at": "2026-11-03",
+      "viewport": "390x844@2x",
+      "width": 780,
+      "height": 1688,
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "reviewer": "agent:kilo",
+        "method": "vision",
+        "notes": "Real driven-session capture: block header, progress, instructions and response control; deterministic seed, no staging.",
+        "score": 93,
+        "reviewed_at": "2026-11-03"
+      }
+    },
+    {
+      "path": "assets/screenshots/2026-11-03-results-mobile.png",
+      "alt": "Noesis results at 2026-11-03",
+      "caption": "Played session results: per-block metrics with honest boundaries, symptom check, next steps.",
+      "commit": "aa99b888482102549f5e706907a31b18f6dd2377",
+      "taken_at": "2026-11-03",
+      "viewport": "390x844@2x",
+      "width": 780,
+      "height": 7982,
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "reviewer": "agent:kilo",
+        "method": "vision",
+        "notes": "Real played-session capture: four mechanics measured separately, what-this-does-not-mean list, safety footer. Exemplary honesty.",
+        "score": 94,
+        "reviewed_at": "2026-11-03"
+      }
+    },
+    {
+      "path": "assets/screenshots/2026-11-03-settings-mobile.png",
+      "alt": "Noesis settings at 2026-11-03",
+      "caption": "Local control: display, session defaults, adaptive difficulty, study, AI test mode, symptom reports, data controls.",
+      "commit": "aa99b888482102549f5e706907a31b18f6dd2377",
+      "taken_at": "2026-11-03",
+      "viewport": "390x844@2x",
+      "width": 780,
+      "height": 7476,
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "reviewer": "agent:kilo",
+        "method": "vision",
+        "notes": "Real scripted capture: every control group legible; proves the local-first story.",
+        "score": 90,
+        "reviewed_at": "2026-11-03"
+      }
+    },
+    {
+      "path": "assets/screenshots/2026-11-03-evidence-mobile.png",
+      "alt": "Noesis evidence at 2026-11-03",
+      "caption": "Claim boundaries per mechanic with sources, plus transfer and motivation bounds.",
+      "commit": "aa99b888482102549f5e706907a31b18f6dd2377",
+      "taken_at": "2026-11-03",
+      "viewport": "390x844@2x",
+      "width": 780,
+      "height": 6854,
+      "status": "approved",
+      "review": {
+        "status": "approved",
+        "reviewer": "agent:kilo",
+        "method": "vision",
+        "notes": "Real scripted capture: SUPPORTED/EXPERIMENTAL labels, not-claimed lists, PMIDs all legible.",
+        "score": 92,
+        "reviewed_at": "2026-11-03"
+      }
+    }
+  ]
 }

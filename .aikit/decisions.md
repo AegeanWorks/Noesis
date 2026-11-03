@@ -221,3 +221,10 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: R33 requires interactive targets of at least 44px for older adults. Audit found `.btn` and mechanic buttons already pass (46-56px) but `.nav`, `.brand`, `.choice`, `.check` labels and unstyled Settings inputs did not guarantee 44px.
 - **Decision**: CSS-only pass in `src/styles.css`: 44px minimum on nav/brand/choice/check labels and Settings text/select controls. No engine, storage, Motivation or copy change; display modes (large text, high contrast, reduced motion) and hide-clock behavior unchanged.
 - **Consequences**: All touched screens meet the 44px floor without layout or claim drift. Future interactive controls must keep the same floor; verification is manual audit plus `ui:shots` screenshots, not jsdom computed styles.
+
+### ADR-031: First screenshot keepers are the seeded ui:shots set
+- **Date**: 2026-11-03
+- **Status**: Accepted
+- **Context**: No screenshots existed; the app is mobile-first with an Android export path, but no emulator is available here.
+- **Decision**: Run the project's own `npm run ui:shots` (seeded safety/settings, driven full session) at commit `aa99b88` and register six keepers (desktop home plus mobile home/session/results/settings/evidence) in `.aikit/media.json` and the README `aegean:screenshots` block. The native Android shell stays uncaptured.
+- **Consequences**: README proves home, driven play, measured results with claim boundaries, settings and evidence. Reproduce with: `npm run dev`, then `npm run ui:shots`.

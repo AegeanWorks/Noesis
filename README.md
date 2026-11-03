@@ -242,3 +242,21 @@ python -m noesis review summary
 ## License
 
 Free for personal use under the Aegean License 1.1 (AL-1.1); see [LICENSE](LICENSE). Any commercial use needs the Aegean Commercial License 1.0 (ACL-1.0); see [COMMERCIAL.md](COMMERCIAL.md).
+
+<!-- aegean:screenshots:start -->
+## Screenshots
+
+<a href="https://github.com/AegeanWorks/Noesis/commit/aa99b88"><img src="assets/screenshots/2026-11-03-home-desktop.png" alt="Noesis home at 2026-11-03"></a>
+
+<a href="https://github.com/AegeanWorks/Noesis/commit/aa99b88"><img src="assets/screenshots/2026-11-03-home-mobile.png" alt="Noesis home on a phone at 2026-11-03"></a>
+
+<a href="https://github.com/AegeanWorks/Noesis/commit/aa99b88"><img src="assets/screenshots/2026-11-03-session-mobile.png" alt="Noesis N-back block at 2026-11-03"></a>
+
+<a href="https://github.com/AegeanWorks/Noesis/commit/aa99b88"><img src="assets/screenshots/2026-11-03-results-mobile.png" alt="Noesis results at 2026-11-03"></a>
+
+<a href="https://github.com/AegeanWorks/Noesis/commit/aa99b88"><img src="assets/screenshots/2026-11-03-settings-mobile.png" alt="Noesis settings at 2026-11-03"></a>
+
+<a href="https://github.com/AegeanWorks/Noesis/commit/aa99b88"><img src="assets/screenshots/2026-11-03-evidence-mobile.png" alt="Noesis evidence at 2026-11-03"></a>
+
+*commit `aa99b88` · 2026-11-03 · seeded `npm run ui:shots` (desktop 1280x900@2x, mobile 390x844@2x); Android shell deferred — no emulator here*
+<!-- aegean:screenshots:end -->
