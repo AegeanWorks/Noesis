@@ -42,6 +42,18 @@ describe("n-back", () => {
     }
   });
 
+  it("uses the full alphabet in opening trials (no first-n exclusion)", () => {
+    const seen = new Set<string>();
+    for (let seed = 1; seed <= 200; seed += 1) {
+      const state = createNBack(seed, nbackConfig(2, 20));
+      for (let index = 0; index < state.config.n; index += 1) {
+        const trial = state.trials[index];
+        if (trial) seen.add(trial.letter);
+      }
+    }
+    expect([...seen].sort()).toEqual(["A", "B", "C", "D", "E", "F", "G", "H"]);
+  });
+
   it("scores a perfect run", () => {
     const run = drive(11, "optimal");
     expect(run.completed).toBe(true);

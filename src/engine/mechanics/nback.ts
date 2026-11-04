@@ -52,12 +52,14 @@ function generateTrials(
       continue;
     }
     let letterIndex: number;
-    [letterIndex, rng] = randomInt(rng, LETTERS.length - 1);
     if (previous) {
+      [letterIndex, rng] = randomInt(rng, LETTERS.length - 1);
       const forbidden = LETTERS.indexOf(previous.letter as (typeof LETTERS)[number]);
-      if (letterIndex >= forbidden) {
+      if (forbidden >= 0 && letterIndex >= forbidden) {
         letterIndex += 1;
       }
+    } else {
+      [letterIndex, rng] = randomInt(rng, LETTERS.length);
     }
     trials.push({
       letter: LETTERS[letterIndex] ?? "A",
