@@ -142,7 +142,11 @@ function startBlock(state: SessionState): SessionState {
 
 function completeBlock(state: SessionState): SessionState {
   if (!state.current) return state;
-  const result = mechanicResult(state.current);
+  const block = state.config.blocks[state.blockIndex];
+  const result = {
+    ...mechanicResult(state.current),
+    ...(block ? { difficulty: block.difficulty } : {}),
+  };
   return {
     ...state,
     phase: "block_complete",
@@ -234,6 +238,7 @@ export function sessionView(state: SessionState): SessionView {
     blockIndex: state.blockIndex,
     blockCount: state.config.blocks.length,
     blockLabel: meta?.name ?? "Session",
+    blockDifficulty: block?.difficulty ?? null,
     mechanic: state.current ? mechanicView(state.current) : null,
     progressCurrent: Math.min(state.blockIndex + 1, state.config.blocks.length),
     progressTotal: state.config.blocks.length,

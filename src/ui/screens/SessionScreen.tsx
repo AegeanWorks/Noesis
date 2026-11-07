@@ -98,6 +98,7 @@ export function SessionScreen({
         <div>
           <p className="eyebrow">
             Block {view.blockIndex + 1} of {view.blockCount}
+            {view.blockDifficulty !== null ? ` · Level ${view.blockDifficulty}` : ""}
           </p>
         <h1>{view.blockLabel}</h1>
         {showClock ? (

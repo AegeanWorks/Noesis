@@ -96,6 +96,11 @@ function ResultCard({
           <p className="eyebrow">{meta.tagline}</p>
           <h2>{meta.name}</h2>
         </div>
+        {typeof result.difficulty === "number" ? (
+          <span className="level-badge" data-testid={`level-${result.mechanic}`}>
+            Level {result.difficulty}
+          </span>
+        ) : null}
       </div>
       <p className="result-summary">{result.summary}</p>
       {isNewBest ? (

@@ -43,6 +43,7 @@ function view(blockIndex = 0, blockCount = 3): SessionView {
     blockIndex,
     blockCount,
     blockLabel: "N-back",
+    blockDifficulty: 2,
     mechanic: MECHANIC,
     progressCurrent: 1,
     progressTotal: blockCount,

@@ -12,6 +12,7 @@ Covered so far:
 3. Graphics and effects — 2026-11-07 — cycle 3
 4. Mechanic feel — 2026-11-07 — cycle 4
 5. Session structure — 2026-11-07 — cycle 5
+6. Levels — 2026-11-07 — cycle 6
 
 Open candidates (not yet cycles): claim badges at 11.52px; `1 impulse errors` summary pluralization.
 
@@ -241,6 +242,54 @@ Open candidates (not yet cycles): claim badges at 11.52px; `1 impulse errors` su
   6/6 gates pass.
 - **STATUS**: committed with the cycle; next area is levels (difficulty/adaptation visibility).
 
+## Cycle 6 — Levels: block level was invisible in sessions and results
+
+- **Area**: levels (rotation 6/7).
+- **FIND**: The Settings copy says "compare blocks only within the same level", and adaptive
+  difficulty changes each task's level, but neither the session header nor the result cards
+  showed it and `MechanicResult` did not record it. A fixed-clock adaptive run (N-back level 1,
+  Go/No-Go level 3) recorded `blockDifficulty: null`, `results[].difficulty: null`, no level
+  badges, headers `Block 1 of 2` / `Block 2 of 2`.
+- **ANALYZE**: `completeBlock` had the block config in hand but built the result without it;
+  `SessionView` omitted the block difficulty. The history and export are result passthroughs,
+  so one additive field makes the level available everywhere without a storage migration.
+- **KILLED**: Re-deriving level from trial counts or task parameters was rejected (Go/No-Go and
+  Speed do not encode difficulty in state, and inference would drift); showing level only in
+  Settings was rejected because the comparison instruction lives with the result.
+- **IMPLEMENT**: Failing-first engine assertions require completed results to carry each
+  block's difficulty and `sessionView` to expose it; both failed with `undefined`. `MechanicResult`
+  gains an optional `difficulty` set by `completeBlock`; `SessionView` gains
+  `blockDifficulty`; the session eyebrow appends `· Level L`; each result card shows a
+  `Level L` badge (old records without the field show no badge). README documents the visibility.
+  Added `scripts/level-visibility-proof.mjs`, which seeds adaptive levels 1/3, starts a quick
+  session, captures both headers, plays to results and reads the badges and result fields.
+- **PROOF (screenshots)**: same viewport 390x844@2x, same fixed clock/adaptive state/seed, same
+  quick session; only the build differs.
+  - before header: `%TEMP%\opencode\noesis-cycles\cycle6-before\before-01-first-block-header.png`
+    SHA-256 `AB031F8F307318B5A304ECABEAA89A0AE9CB5B19FDF4A389B2BA110E26433132`
+    (`Block 1 of 2`, no level)
+  - after header: `%TEMP%\opencode\noesis-cycles\cycle6-after\after-01-first-block-header.png`
+    SHA-256 `0615262DC21CF304E3B304CEFEE4AD45BC9358A685C8072538652B299897B615`
+    (`Block 1 of 2 · Level 1`)
+  - before results: `%TEMP%\opencode\noesis-cycles\cycle6-before\before-03-results-levels.png`
+    SHA-256 `D4CB11AFDB3879A52F2A5212D0FA4EA08994BD6DD5F617EAB9442ADDD891140E`
+  - after results: `%TEMP%\opencode\noesis-cycles\cycle6-after\after-03-results-levels.png`
+    SHA-256 `8C95D57C96BCB76CEEF13CEDCE42C111339BF92D26CE353C1C392987F520114F`
+    (Level 1 N-back card, Level 3 Go/No-Go card)
+- **PROOF (played run)**: `node scripts/level-visibility-proof.mjs before|after <dir>` started a
+  quick session with adaptive N-back level 1 and Go/No-Go level 3, then played it to results.
+  Before: `first.eyebrow "Block 1 of 2"`, `second.eyebrow "Block 2 of 2"`,
+  `levelsVisibleInHeaders false`, `levelsVisibleOnCards false`, both result difficulties null.
+  After: `Block 1 of 2 · Level 1` (N-back), `Block 2 of 2 · Level 3` (Go/No-Go);
+  badges `Level 1` and `Level 3`; result difficulties `[1, 3]`; both blocks scored 100%.
+  `consoleErrors []`, no page errors. What improved: adaptive level changes are visible and
+  recorded. What stayed the same: scoring, block length, the adaptive rule itself and standard
+  session content.
+- **GATES**: `npm run test:all` — 29 Python + 253 Vitest, all pass; `npm run ai:verify` — 400
+  deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
+  6/6 gates pass.
+- **STATUS**: committed with the cycle; next area is audio cues (rotation 7/7).
+
 ## Commands run
 
 ```text
@@ -285,5 +334,14 @@ node scripts/quick-lineup-proof.mjs before|after <dir>
   before: 4/4 quick lineups nback,gonogo; allFourCovered false
   after:  four distinct pairs; allFourCovered true; gonogo+reasoning session completed 100%
 npm run test:all                 29 Python + 251 Vitest passed
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/engine/session.test.ts
+  before fix: 2 failed (difficulty and blockDifficulty undefined)
+  after fix:  14 passed
+node scripts/level-visibility-proof.mjs before|after <dir>
+  before: headers without level, no badges, result difficulty null
+  after:  Level 1/3 headers; Level 1/3 badges; result difficulty [1,3]; consoleErrors []
+npm run test:all                 29 Python + 253 Vitest passed
 python aikit.py check noesis     6/6 gates passed
 ```

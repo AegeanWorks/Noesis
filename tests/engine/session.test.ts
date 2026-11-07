@@ -88,6 +88,9 @@ describe("session", () => {
       "reasoning",
       "speed",
     ]);
+    expect(state.results.map((result) => result.difficulty)).toEqual(
+      config.blocks.map((block) => block.difficulty),
+    );
     for (const result of state.results) {
       expect(result.metrics.accuracy).toBeGreaterThan(0.7);
       expect(result.stateHash).toMatch(/^[0-9a-f]{16}$/);
@@ -134,6 +137,7 @@ describe("session", () => {
     const view = sessionView(state);
     expect(view.blockIndex).toBe(0);
     expect(view.blockCount).toBe(4);
+    expect(view.blockDifficulty).toBe(2);
     expect(view.progressCurrent).toBe(1);
     expect(view.progressTotal).toBe(4);
     expect(view.mechanic?.mechanic).toBe("nback");

@@ -264,6 +264,14 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: `sessionBlocks` accepts a rotation offset and rotates the mechanic list before taking the quick two-block window; `defaultSessionConfig` passes the normalized session seed for quick sessions only. Standard sessions keep the fixed four-block interleaved order and focus sessions are unchanged. README's one-click section states the rotation.
 - **Consequences**: Four consecutive seeds now produce `nback,gonogo`, `gonogo,reasoning`, `reasoning,speed` and `speed,nback`, so repeated quick sessions cover all four tasks while staying two blocks. The lineup is still deterministic from the seed, and per-mechanic history stays comparable because scoring is per block.
 
+### ADR-037: Results and sessions carry the block level
+- **Date**: 2026-11-07
+- **Status**: Accepted
+- **Context**: Settings tells users to compare blocks only within the same level, and adaptive difficulty changes each task's level between sessions, but neither the session header nor the result cards showed the level. A fixed-clock adaptive run recorded `blockDifficulty: null`, `results[].difficulty: null` and no level badges even though the blocks were level 1 and level 3.
+- **Decision**: `completeBlock` copies the block's difficulty into the `MechanicResult` (optional, so old records remain valid), `SessionView` exposes `blockDifficulty`, the session eyebrow reads `Block N of M · Level L`, and each result card carries a `Level L` badge. The export/history pick the field up automatically; no scoring, timing or storage-version change.
+- **Consequences**: Adaptive level changes are visible during the session and preserved with the result, so later comparisons can be grouped by level. Pre-v0.2 records simply show no badge, and results remain valid without the field.
+
+
 
 
 

@@ -1,66 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-cycle5-quick-lineup",
+    "task_id": "noesis-cycle6-level-visibility",
     "last_phase": "phase 4",
     "active_phase": 4,
     "status": "in_progress",
-    "updated_at": 1794078590.9845712,
-    "owner": "opencode:cycle5",
-    "started_by": "opencode:cycle5",
+    "updated_at": 1794079294.691183,
+    "owner": "opencode:cycle6",
+    "started_by": "opencode:cycle6",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-cycle1-resume-momentum",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: resumed block-boundary snapshot must credit Momentum once",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794075574.3307345,
-      "timestamp_str": "2026-11-07 21:19:34",
-      "agent": "opencode:cycle1",
-      "impact_assessment": {
-        "why": "Reloading at block_complete re-added the same block's outcome, doubling displayed momentum and the amount banked (browser: 100 saved -> 200 shown; test: 36 vs 18)",
-        "benefits": "Resume preserves the exact pre-reload reward; banked total stays honest across reloads",
-        "risks": "contract: snapshot format and UI unchanged; dependency: none; concurrency: none beyond existing useEffect save interval; state: only the in-memory credited-block guard changes",
-        "mitigation": "failing-first App regression plus fixed-clock browser playthrough; full test/typecheck/build/ai:verify gates before commit"
-      },
-      "plan_digest": "bdf1eb9e321b3ef91ca4a33217acee9dfda3cca277c0ea643cf543e5d01e0677"
-    },
-    {
-      "task_id": "noesis-cycle1-resume-momentum",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Fix: seed credited-block ref from the restored snapshot when its motivation already has this block's outcome; failing-first App test and scripts/resume-proof.mjs added; before 200 vs after 100 on the same seed/state",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794075579.1218195,
-      "timestamp_str": "2026-11-07 21:19:39",
-      "agent": "opencode:cycle1"
-    },
-    {
-      "task_id": "noesis-cycle1-resume-momentum",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: before/after screenshots same 390x844@2x viewport and seed 2721744568; before Unbanked 200 / after 100, banked 100; 29 Python + 248 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794075583.8145986,
-      "timestamp_str": "2026-11-07 21:19:43",
-      "agent": "opencode:cycle1"
-    },
-    {
-      "task_id": "noesis-cycle1-resume-momentum",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-cycle1-resume-momentum' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794075610.4844823,
-      "timestamp_str": "2026-11-07 21:20:10",
-      "agent": "opencode:cycle1"
-    },
     {
       "task_id": "noesis-cycle2-evidence-citations",
       "phase": "phase 2",
@@ -261,6 +211,57 @@
       "timestamp": 1794078590.9845712,
       "timestamp_str": "2026-11-07 22:09:50",
       "agent": "opencode:cycle5"
+    },
+    {
+      "task_id": "noesis-cycle5-quick-lineup",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-cycle5-quick-lineup' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794079238.9162748,
+      "timestamp_str": "2026-11-07 22:20:38",
+      "agent": "opencode:cycle6",
+      "continued_from": "opencode:cycle5"
+    },
+    {
+      "task_id": "noesis-cycle6-level-visibility",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: session header and result cards must show the block level, and completed results must record it",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794079250.0933092,
+      "timestamp_str": "2026-11-07 22:20:50",
+      "agent": "opencode:cycle6",
+      "impact_assessment": {
+        "why": "Settings tells users to compare within level, adaptive changes levels, but headers/cards show no level and results do not store difficulty",
+        "benefits": "Adaptive changes become visible and auditable; blocks can be grouped by level in history/export",
+        "risks": "contract: MechanicResult gains optional difficulty and SessionView gains blockDifficulty; dependency: none; concurrency: none; state: additive field, old records valid",
+        "mitigation": "failing-first engine assertions, UI level tests, fixed-clock adaptive playthrough with before/after frames, README update, full gates"
+      },
+      "plan_digest": "40f2138795f9883d90d2658e1c3214229776b076cffc5e6139440475be9962d2"
+    },
+    {
+      "task_id": "noesis-cycle6-level-visibility",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Fix: completeBlock records block difficulty; SessionView blockDifficulty; header shows Level L; result cards show Level badge; level test + scripts/level-visibility-proof.mjs added; README updated",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794079289.5201926,
+      "timestamp_str": "2026-11-07 22:21:29",
+      "agent": "opencode:cycle6"
+    },
+    {
+      "task_id": "noesis-cycle6-level-visibility",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: same adaptive seed/state; before headers no level/result null, after Level 1 N-back and Level 3 Go/No-Go in headers and cards; 29 Python + 253 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794079294.691183,
+      "timestamp_str": "2026-11-07 22:21:34",
+      "agent": "opencode:cycle6"
     }
   ]
 }

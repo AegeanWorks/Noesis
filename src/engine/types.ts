@@ -47,6 +47,8 @@ export interface MechanicResult {
   summary: string;
   seed: number;
   stateHash: string;
+  /** Block level (1-3) recorded at session completion; absent in pre-v0.2 records. */
+  difficulty?: number;
 }
 
 export interface NBackConfig {
@@ -253,6 +255,7 @@ export interface SessionView {
   blockIndex: number;
   blockCount: number;
   blockLabel: string;
+  blockDifficulty: number | null;
   mechanic: MechanicView | null;
   progressCurrent: number;
   progressTotal: number;
