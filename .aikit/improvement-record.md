@@ -17,6 +17,7 @@ Covered so far:
 8. UI readability (second pass) — 2026-11-07 — cycle 8
 9. Results copy — 2026-11-07 — cycle 9
 10. Level-aware bests — 2026-11-07 — cycle 10
+11. Final audit — 2026-11-07 — zero verified findings (stop)
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -457,6 +458,34 @@ Open candidates (not yet cycles): none from the current audits.
   deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
   6/6 gates pass.
 - **STATUS**: committed with the cycle; current audits have no open candidates.
+
+## Cycle 11 — Final audit: zero verified improvements
+
+- **Area**: whole app audit across all seven rotation areas.
+- **FIND**: no reproducible, worth-fixing defect survived the audit. The final `ui-audit` run
+  (390x844@2x, fixed clock, quick session driven to results) reported `consoleErrors []`,
+  `horizontalScroll false` on every screen, `tinyText 0` on home/session/results/settings/
+  evidence/large-text, citation rows `allAtLeast44High true` with `minHeight 59`, and the only
+  `smallTargets` entries were checkbox inputs inside full-size `.check` labels.
+- **ANALYZE / KILLED**:
+  - The home sparkline and "wobbliest lately" suggestion still aggregate levels, but they are a
+    recent-trend view and a focus suggestion, not a best/worst claim; filtering them by level
+    would hide recent history and no incorrect decision was reproduced.
+  - Speed Tap ignores taps before the circle appears by design (`canRespond` false); reaction
+    time is measured from onset, and adding a false-start penalty would change the construct
+    without evidence.
+  - Audio cues remain a dead end: the README intentionally ships no audio, EEG or biometric
+    modules; adding sound would change the stated scope and safety posture.
+  - Every prior open candidate (badge microtext, metric copy, pluralization, destructive end,
+    level visibility, level-aware bests, citations) is fixed and covered by before/after
+    evidence in cycles 1–10.
+- **VERIFICATION**: `python aikit.py check noesis` — test/typecheck/build/hygiene/guidelines/
+  secrets 6/6 pass after cycle 10; `npm run ai:verify` — 400 deterministic simulations;
+  `npm run test:all` — 29 Python + 260 Vitest. No code change this cycle, so no new commit
+  beyond this record.
+- **RESULT**: zero verified improvements in this cycle; the run stops here per the goal's stop
+  condition. The full evidence trail is this file, `.aikit/decisions.md` ADR-032…ADR-039, and
+  the `scripts/*-proof.mjs` harnesses.
 
 ## Commands run
 

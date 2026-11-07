@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-cycle10-level-bests",
+    "task_id": "noesis-cycle11-final-audit",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
-    "updated_at": 1794081465.956499,
-    "owner": "opencode:cycle10",
-    "started_by": "opencode:cycle10",
-    "continuations": []
+    "active_phase": 5,
+    "status": "completed",
+    "updated_at": 1794081722.7224004,
+    "owner": "opencode:cycle11",
+    "started_by": "opencode:cycle11",
+    "continuations": [],
+    "completed_at": 1794081794.705888
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-cycle5-quick-lineup",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-cycle5-quick-lineup' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794079238.9162748,
-      "timestamp_str": "2026-11-07 22:20:38",
-      "agent": "opencode:cycle6",
-      "continued_from": "opencode:cycle5"
-    },
-    {
-      "task_id": "noesis-cycle6-level-visibility",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: session header and result cards must show the block level, and completed results must record it",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794079250.0933092,
-      "timestamp_str": "2026-11-07 22:20:50",
-      "agent": "opencode:cycle6",
-      "impact_assessment": {
-        "why": "Settings tells users to compare within level, adaptive changes levels, but headers/cards show no level and results do not store difficulty",
-        "benefits": "Adaptive changes become visible and auditable; blocks can be grouped by level in history/export",
-        "risks": "contract: MechanicResult gains optional difficulty and SessionView gains blockDifficulty; dependency: none; concurrency: none; state: additive field, old records valid",
-        "mitigation": "failing-first engine assertions, UI level tests, fixed-clock adaptive playthrough with before/after frames, README update, full gates"
-      },
-      "plan_digest": "40f2138795f9883d90d2658e1c3214229776b076cffc5e6139440475be9962d2"
-    },
-    {
-      "task_id": "noesis-cycle6-level-visibility",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Fix: completeBlock records block difficulty; SessionView blockDifficulty; header shows Level L; result cards show Level badge; level test + scripts/level-visibility-proof.mjs added; README updated",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794079289.5201926,
-      "timestamp_str": "2026-11-07 22:21:29",
-      "agent": "opencode:cycle6"
-    },
-    {
-      "task_id": "noesis-cycle6-level-visibility",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: same adaptive seed/state; before headers no level/result null, after Level 1 N-back and Level 3 Go/No-Go in headers and cards; 29 Python + 253 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794079294.691183,
-      "timestamp_str": "2026-11-07 22:21:34",
-      "agent": "opencode:cycle6"
-    },
     {
       "task_id": "noesis-cycle6-level-visibility",
       "phase": "completed",
@@ -261,6 +211,55 @@
       "timestamp": 1794081465.956499,
       "timestamp_str": "2026-11-07 22:57:45",
       "agent": "opencode:cycle10"
+    },
+    {
+      "task_id": "noesis-cycle10-level-bests",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-cycle10-level-bests' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794081510.049369,
+      "timestamp_str": "2026-11-07 22:58:30",
+      "agent": "opencode:cycle10"
+    },
+    {
+      "task_id": "noesis-cycle11-final-audit",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: whole-app final audit across the seven rotation areas; implement only reproduced defects",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794081721.7753365,
+      "timestamp_str": "2026-11-07 23:02:01",
+      "agent": "opencode:cycle11",
+      "impact_assessment": {
+        "why": "Goal stop condition requires a full cycle that finds zero verified improvements before stopping",
+        "benefits": "Honest closure with gate and audit evidence; no speculative changes",
+        "risks": "contract: none (read-only audit plus record); dependency: none; concurrency: none; state: record/ledger only",
+        "mitigation": "ui-audit, 400 ai simulations, full test/typecheck/build/hygiene/secret gates; candidate list explicitly killed with reasons"
+      },
+      "plan_digest": "26ffb194d934a077484be38c6c98c1630ba7bc4cee1b0a70abc6c134f953b2c3"
+    },
+    {
+      "task_id": "noesis-cycle11-final-audit",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Zero verified findings: ui-audit consoleErrors [], no horizontal scroll, tinyText 0 everywhere, citation minHeight 59/allAtLeast44; only checkbox-in-label smallTargets; 6/6 gates, 29 Python + 260 Vitest, ai:verify 400/400; stop per goal",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794081722.7224004,
+      "timestamp_str": "2026-11-07 23:02:02",
+      "agent": "opencode:cycle11"
+    },
+    {
+      "task_id": "noesis-cycle11-final-audit",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-cycle11-final-audit' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794081794.7058897,
+      "timestamp_str": "2026-11-07 23:03:14",
+      "agent": "opencode:cycle11"
     }
   ]
 }
