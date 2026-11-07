@@ -1,72 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-cycle3-feedback-visibility",
+    "task_id": "noesis-cycle4-gonogo-prompt",
     "last_phase": "phase 4",
     "active_phase": 4,
     "status": "in_progress",
-    "updated_at": 1794076918.4365406,
-    "owner": "opencode:cycle3",
-    "started_by": "opencode:cycle3",
+    "updated_at": 1794078021.3094687,
+    "owner": "opencode:cycle4",
+    "started_by": "opencode:cycle4",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-adherence-row-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] Dedupe guard verified, 6.26 merge, R53 extended, morning-hint test; 228 Vitest + 29 Python green, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793635936.4681575,
-      "timestamp_str": "2026-11-02 19:12:16",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-adherence-row-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-adherence-row-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793635947.4508128,
-      "timestamp_str": "2026-11-02 19:12:27",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-journey-gaps-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: control-arm exposure assertions plus App-level far-check journey",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793636489.778477,
-      "timestamp_str": "2026-11-02 19:21:29",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Engagement-arm exposure is asserted but control arm and far-check App wiring rely on unit coverage alone"
-      }
-    },
-    {
-      "task_id": "noesis-journey-gaps-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] Control-arm exposure assertions plus App-level far-check journey; 242 Vitest + 29 Python green",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793636551.2858324,
-      "timestamp_str": "2026-11-02 19:22:31",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-journey-gaps-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-journey-gaps-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793636551.580977,
-      "timestamp_str": "2026-11-02 19:22:31",
-      "agent": "kilo:main"
-    },
     {
       "task_id": "noesis-wave-audit-v1",
       "phase": "phase 1",
@@ -256,6 +200,67 @@
       "timestamp": 1794076918.4365406,
       "timestamp_str": "2026-11-07 21:41:58",
       "agent": "opencode:cycle3"
+    },
+    {
+      "task_id": "noesis-cycle3-feedback-visibility",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-cycle3-feedback-visibility' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794076965.1114602,
+      "timestamp_str": "2026-11-07 21:42:45",
+      "agent": "opencode:cycle3"
+    },
+    {
+      "task_id": "noesis-cycle4-gonogo-prompt",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: Go/No-Go prompt must be trial-independent after the shape disappears",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794077618.941632,
+      "timestamp_str": "2026-11-07 21:53:38",
+      "agent": "opencode:cycle4",
+      "impact_assessment": {
+        "why": "The blank response window named the current trial (go: Respond to the circle; no-go: Do not respond to the square), letting a late response read the answer",
+        "benefits": "Response inhibition is measured from the shape, not the prompt; no information leak after stimulus offset",
+        "risks": "contract: prompt copy changes but timing, window, scoring and input unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first prompt-equality test, fixed-seed browser response-window playthrough with before/after frames and a late commission, full gates"
+      },
+      "plan_digest": "d89455376d4cce5b542b05a428521fbbbcd812c415cab8fa4bded36d53ac6f79"
+    },
+    {
+      "task_id": "noesis-cycle4-gonogo-prompt",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Fix: static Circles/Squares prompt in stimulus/response/feedback, Get ready in ITI; failing-first prompt-equality test and scripts/gonogo-prompt-proof.mjs added; before promptsEqual false, after true",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794077638.515397,
+      "timestamp_str": "2026-11-07 21:53:58",
+      "agent": "opencode:cycle4"
+    },
+    {
+      "task_id": "noesis-cycle4-gonogo-prompt",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: 390x844@2x before/after no-go response frames same seed/index; prompts differ -> identical; late no-go still commission; 29 Python + 250 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794077644.0648549,
+      "timestamp_str": "2026-11-07 21:54:04",
+      "agent": "opencode:cycle4"
+    },
+    {
+      "task_id": "noesis-cycle4-gonogo-prompt",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3 follow-up] Gate stability: batched study-journey block dispatches (12.96s -> 0.64s focused, 21.36s -> 9.46s full); assertions unchanged; rerun aikit check 6/6 passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794078021.3094687,
+      "timestamp_str": "2026-11-07 22:00:21",
+      "agent": "opencode:cycle4"
     }
   ]
 }

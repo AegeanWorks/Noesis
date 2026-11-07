@@ -235,9 +235,9 @@ export function gonogoView(state: GoNoGoState): MechanicView {
     prompt:
       state.phase === "complete"
         ? "Block complete"
-        : trial?.go
-          ? "Respond to the circle."
-          : "Do not respond to the square.",
+        : state.phase === "iti"
+          ? "Get ready."
+          : "Circles: respond. Squares: withhold.",
     stimulus:
       (state.phase === "stimulus" || state.phase === "feedback") && trial
         ? trial.go

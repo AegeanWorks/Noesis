@@ -250,5 +250,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Expose the trial stimulus during the `feedback` phase in N-back, Go/No-Go and Speed views, dim it to 55% via `data-phase="feedback"`, and add `data-feedback="correct|incorrect|neutral"` to every mechanic stage for a non-flashing green/red border tint. Scoring, timing, input gating and copy are unchanged; high contrast keeps the border and text while dropping the shadow.
 - **Consequences**: Players can connect a result to the trial it belongs to, and feedback is redundant beyond colour (text + icon-free border). The dimmed stimulus is a 120ms opacity transition that reduced-motion disables; the next trial still blanks and resets normally.
 
+### ADR-035: Go/No-Go prompts never name the current trial
+- **Date**: 2026-11-07
+- **Status**: Accepted
+- **Context**: In the blank response window the prompt still said `Respond to the circle.` for go trials and `Do not respond to the square.` for no-go trials. A late response could therefore read the answer after the shape had gone, contaminating the inhibition measure; a scripted run recorded `promptsEqual: false` and still scored the late no-go response as a commission.
+- **Decision**: Replace the trial-specific prompt with one static line in stimulus, response and feedback (`Circles: respond. Squares: withhold.`), `Get ready.` during the inter-trial interval and `Block complete` at the end. No timing, response window, scoring or input gating changes.
+- **Consequences**: The blank response window carries no trial identity; only the shape shown earlier can guide a response. Headless scoring still records the late no-go response as a commission, and the new test asserts the go and no-go response-window prompts are identical.
+
+
 
 

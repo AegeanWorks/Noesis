@@ -70,6 +70,29 @@ describe("go / no-go", () => {
     expect(feedback.stimulus).toBe(view.stimulus);
   });
 
+  it("does not leak the trial shape once the stimulus is gone", () => {
+    const base = createGoNoGo(9, gonogoConfig(1, 30));
+    const goIndex = base.trials.findIndex((trial) => trial.go);
+    const noGoIndex = base.trials.findIndex((trial) => !trial.go);
+    expect(goIndex).toBeGreaterThanOrEqual(0);
+    expect(noGoIndex).toBeGreaterThanOrEqual(0);
+    const atResponse = (index: number) => ({
+      ...base,
+      index,
+      phase: "response" as const,
+      phaseElapsed: 0,
+      phaseDuration: base.config.responseWindowMs,
+      respondedThisTrial: false,
+    });
+    const goView = gonogoView(atResponse(goIndex));
+    const noGoView = gonogoView(atResponse(noGoIndex));
+    expect(goView.stimulus).toBeNull();
+    expect(noGoView.stimulus).toBeNull();
+    expect(goView.canRespond).toBe(true);
+    expect(noGoView.canRespond).toBe(true);
+    expect(goView.prompt).toBe(noGoView.prompt);
+  });
+
   it("replays exactly from its action stream", () => {
     const run = drive(41, "random");
     const replay = replayMechanic("gonogo", 41, 1, 30, run.actions);

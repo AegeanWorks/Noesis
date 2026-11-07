@@ -10,6 +10,9 @@ Covered so far:
 1. Progression and saves — 2026-11-07 — cycle 1
 2. UI readability — 2026-11-07 — cycle 2
 3. Graphics and effects — 2026-11-07 — cycle 3
+4. Mechanic feel — 2026-11-07 — cycle 4
+
+Open candidates (not yet cycles): claim badges at 11.52px; `1 impulse errors` summary pluralization.
 
 ## Cycle 1 — Progression and saves: resumed block-boundary momentum
 
@@ -146,6 +149,55 @@ Covered so far:
   6/6 gates pass.
 - **STATUS**: committed with the cycle; next area is mechanic feel (the combat-feel rotation).
 
+## Cycle 4 — Mechanic feel: Go/No-Go prompt leaked the trial shape
+
+- **Area**: mechanic feel (rotation 4/7, the combat-feel slot).
+- **FIND**: In the blank response window the stage prompt still named the current trial:
+  no-go showed `Do not respond to the square.` and go showed `Respond to the circle.` while
+  `stimulus: null` and `canRespond: true`. A late response could read the answer after the shape
+  disappeared; scripted before-run recorded `promptsEqual: false` at indices 4 (no-go) and 5
+  (go), then scored the late no-go response as `commission`.
+- **ANALYZE**: `gonogoView` built `prompt` from `trial.go`, independent of whether the shape was
+  still visible. The response window intentionally outlives the 790ms stimulus; the prompt must
+  be trial-independent for the inhibition measure to mean anything. Fix is view copy only.
+- **KILLED**: None. A cue that only says `Respond now` on go trials was rejected because it
+  keeps the same leak; the static reminder is the only version that adds no trial identity.
+- **IMPLEMENT**: Failing-first engine test builds a go and a no-go state at the same response
+  phase, asserts both have `stimulus: null`/`canRespond: true` and requires identical prompts;
+  it failed with `Respond to the circle.` vs `Do not respond to the square.`. `gonogoView` now
+  uses `Circles: respond. Squares: withhold.` during stimulus/response/feedback, `Get ready.`
+  during ITI and `Block complete` at the end. Added `scripts/gonogo-prompt-proof.mjs`, which
+  drives a fixed-seed focus block to the no-go and go response windows, records both prompts,
+  clicks a late no-go response, then finishes the block and reads the result summary.
+- **PROOF (screenshots)**: same viewport 390x844@2x, same fixed seed 2721744568, same no-go
+  index 4, same response window; only the build differs.
+  - before: `%TEMP%\opencode\noesis-cycles\cycle4-before\before-01-gonogo-nogo-response.png`
+    SHA-256 `7EB46DF2E9194DE880395509D22048D49E86C9512B21226C7F6F25B3F1561224`
+    (`Do not respond to the square.` over the blank stage)
+  - after: `%TEMP%\opencode\noesis-cycles\cycle4-after\after-01-gonogo-nogo-response.png`
+    SHA-256 `8EF2F19A2E2D9CD5F4F629DD72B7F9C9913C46511B02220C2775CEE1C5F3E05A`
+    (`Circles: respond. Squares: withhold.` over the blank stage)
+- **PROOF (played run)**: `node scripts/gonogo-prompt-proof.mjs before|after <dir>` played a
+  focus Go/No-Go block through both response windows. Before: no-go prompt `Do not respond to
+  the square.`, go prompt `Respond to the circle.`, `promptsEqual false`. After: both
+  `Circles: respond. Squares: withhold.`, `promptsEqual true`; the late no-go response remained
+  `{kind: commission, correct: false}`; the finished block reported
+  `Go/No-Go: 27% accuracy, 1 impulse errors, 0 ms mean go reaction.` in both builds. Frame
+  health: `consoleErrors []`, no page errors. What improved: the blank window no longer reveals
+  the trial. What stayed the same: stimulus timing, response window, scoring and the block
+  summary.
+- **GATES**: `npm run test:all` — 29 Python + 250 Vitest, all pass; `npm run ai:verify` — 400
+  deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
+  6/6 gates pass.
+- **GATE STABILITY**: the first `aikit check` run hit the 10s timeout in
+  `tests/ui/study-journey.test.tsx` because it dispatched every 50ms simulator tick through its
+  own `act()` (12.96s for four tests). The helper now batches one block's mechanic actions into
+  one `act()` and keeps `next` in a second, so the `block_complete` frame that Motivation needs
+  still renders once per block while intermediate trial frames do not. Assertions are unchanged;
+  the focused file dropped to 0.64s and `npm run test:all` to 9.46s; the rerun `aikit check`
+  passed 6/6.
+- **STATUS**: committed with the cycle; next area is enemies/bosses (session structure).
+
 ## Commands run
 
 ```text
@@ -173,4 +225,13 @@ npx vitest run tests/engine/nback.test.ts tests/engine/gonogo.test.ts tests/engi
 $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/feedback-proof.mjs before|after <dir>
   before: stimulus null in both feedback frames, stageFeedback null
   after:  N-back stimulus D / correct; Go/No-Go stimulus square / incorrect; consoleErrors []
+
+npx vitest run tests/engine/gonogo.test.ts
+  before fix: 1 failed (prompt differs by trial)
+  after fix:  8 passed
+node scripts/gonogo-prompt-proof.mjs before|after <dir>
+  before: promptsEqual false ("Respond to the circle." vs "Do not respond to the square.")
+  after:  promptsEqual true (static instruction); commission still counted; consoleErrors []
+npm run test:all                 29 Python + 250 Vitest passed
+python aikit.py check noesis     6/6 gates passed
 ```
