@@ -77,4 +77,18 @@ describe("resume at a block boundary", () => {
     const unbanked = Number(/Unbanked (\d+)/.exec(text)?.[1]);
     expect(unbanked).toBe(points);
   });
+
+  it("credits a boundary snapshot saved before its outcome exactly once", () => {
+    const state = blockCompleteState();
+    const expected = addBlockMotivation(createMotivation(42), 0, state.results[0]!, null)
+      .outcomes[0]!.points;
+    saveSessionSnapshot(state, createMotivation(42));
+
+    render(<App />);
+    fireEvent.click(screen.getByTestId("start-session"));
+
+    const text = screen.getByTestId("momentum").textContent ?? "";
+    const unbanked = Number(/Unbanked (\d+)/.exec(text)?.[1]);
+    expect(unbanked).toBe(expected);
+  });
 });

@@ -117,6 +117,39 @@ describe("go / no-go", () => {
     expect(goView.prompt).toBe(noGoView.prompt);
   });
 
+  it("keeps the prompt static in feedback while the shape stays visible", () => {
+    const base = createGoNoGo(9, gonogoConfig(1, 30));
+    const goIndex = base.trials.findIndex((trial) => trial.go);
+    const noGoIndex = base.trials.findIndex((trial) => !trial.go);
+    const atFeedback = (index: number) => {
+      const go = base.trials[index]!.go;
+      return {
+        ...base,
+        index,
+        phase: "feedback" as const,
+        phaseElapsed: 0,
+        phaseDuration: base.config.feedbackMs,
+        respondedThisTrial: true,
+        responses: [
+          {
+            trial: index,
+            go,
+            responded: true,
+            correct: go,
+            kind: (go ? "hit" : "commission") as "hit" | "commission",
+            reactionMs: 120,
+          },
+        ],
+      };
+    };
+    const goView = gonogoView(atFeedback(goIndex));
+    const noGoView = gonogoView(atFeedback(noGoIndex));
+    expect(goView.prompt).toBe(noGoView.prompt);
+    expect(goView.feedback).not.toBe(noGoView.feedback);
+    expect(goView.stimulus).toBe("circle");
+    expect(noGoView.stimulus).toBe("square");
+  });
+
   it("replays exactly from its action stream", () => {
     const run = drive(41, "random");
     const replay = replayMechanic("gonogo", 41, 1, 30, run.actions);
