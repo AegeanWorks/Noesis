@@ -24,6 +24,7 @@ An evidence-led cognitive training app. Every mechanic is a deterministic, headl
   ```bash
   npm run dev
   ```
+- **One-click start**: double-click `start.cmd` on Windows, or run `npm start` (macOS/Linux: `./start.sh`). It installs dependencies on the first launch, starts the app and opens it in your browser.
 - **Canonical Regression Shield Gate**:
   ```bash
   npm run test:all
@@ -156,6 +157,8 @@ noesis/
 ├── package-lock.json             <- locked npm dependency graph
 ├── package.json                  <- app dependencies and scripts
 ├── pyproject.toml                <- Python metadata
+├── start.cmd                     <- one-click launcher for Windows
+├── start.sh                      <- one-click launcher for macOS/Linux
 ├── tsconfig.json                 <- TypeScript compiler settings
 ├── vite.config.ts                <- Vite and Vitest configuration
 └── README.md

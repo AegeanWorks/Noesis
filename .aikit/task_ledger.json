@@ -1,67 +1,23 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-push-review",
-    "last_phase": "phase 4",
+    "task_id": "noesis-one-click-start",
+    "last_phase": "phase 2",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794083725.5662584,
-    "owner": "opencode:push-review",
-    "started_by": "opencode:push-review",
+    "updated_at": 1794084573.417535,
+    "owner": "opencode:oneclick",
+    "started_by": "opencode:oneclick",
     "continuations": [],
-    "completed_at": 1794083835.4702976
+    "impact_assessment": {
+      "why": "Noesis has a one-click session CTA but no one-click way to launch the app; the README still requires a terminal, npm install and npm run dev",
+      "benefits": "First-run dependency install, clear Node/port errors, browser opens automatically; Windows double-click and macOS/Linux script",
+      "risks": "contract: new root launchers and start script only; dependency: none beyond existing Vite/npm; concurrency: none; state: none",
+      "mitigation": "unit tests for arg parsing and Node gate, --check/--help runs, real HTTP 200 launch on a free port, full aikit check"
+    },
+    "completed_at": 1794084592.8780427
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-cycle7-end-guard",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-cycle7-end-guard' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794080039.641515,
-      "timestamp_str": "2026-11-07 22:33:59",
-      "agent": "opencode:cycle7"
-    },
-    {
-      "task_id": "noesis-cycle8-microtext",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: raise remaining sub-12px claim badges and session-date text for older-adult readability",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794080516.9089205,
-      "timestamp_str": "2026-11-07 22:41:56",
-      "agent": "opencode:cycle8",
-      "impact_assessment": {
-        "why": "390x844 audit still found badges at 11.52px and seed at 11.84px across home/evidence; these labels carry claim and recency meaning",
-        "benefits": "No sub-12px text on audited screens; claim labels easier to read",
-        "risks": "contract: CSS only; dependency: none; concurrency: none; state: none",
-        "mitigation": "same ui-audit harness before/after, screenshot pair, full gates"
-      },
-      "plan_digest": "01cccdad39eec71d7872c56ff7d2dc14f94de27b5add1d1bef397bc151270494"
-    },
-    {
-      "task_id": "noesis-cycle8-microtext",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Fix: .badge 0.72rem -> 0.78rem, .seed 0.74rem -> 0.8rem; CSS-only, no copy/layout/engine change",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794080518.0439723,
-      "timestamp_str": "2026-11-07 22:41:58",
-      "agent": "opencode:cycle8"
-    },
-    {
-      "task_id": "noesis-cycle8-microtext",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: same audited state; tinyText home-empty 2->0, home-history 3->0, evidence 2->0; all screens 0; consoleErrors []; 29 Python + 254 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794080519.2535825,
-      "timestamp_str": "2026-11-07 22:41:59",
-      "agent": "opencode:cycle8"
-    },
     {
       "task_id": "noesis-cycle8-microtext",
       "phase": "completed",
@@ -260,6 +216,56 @@
       "timestamp": 1794083835.4703002,
       "timestamp_str": "2026-11-07 23:37:15",
       "agent": "opencode:push-review"
+    },
+    {
+      "task_id": "noesis-one-click-start",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Impl: scripts/start.mjs (Node gate, dependency install, Vite spawn, --open default), start.cmd/start.sh wrappers, npm start, README quick-start and tree; 4 launcher tests",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794084557.9622457,
+      "timestamp_str": "2026-11-07 23:49:17",
+      "agent": "opencode:oneclick"
+    },
+    {
+      "task_id": "noesis-one-click-start",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: --help/--check pass, start.cmd --check passes, real launcher served HTTP 200 on :5183 with Noesis content; 29 Python + 266 Vitest, ai:verify 400/400, aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794084558.7719157,
+      "timestamp_str": "2026-11-07 23:49:18",
+      "agent": "opencode:oneclick"
+    },
+    {
+      "task_id": "noesis-one-click-start",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: add a double-click / npm start launcher that installs deps, starts Vite and opens the app",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794084573.417535,
+      "timestamp_str": "2026-11-07 23:49:33",
+      "agent": "opencode:oneclick",
+      "impact_assessment": {
+        "why": "Noesis has a one-click session CTA but no one-click way to launch the app; the README still requires a terminal, npm install and npm run dev",
+        "benefits": "First-run dependency install, clear Node/port errors, browser opens automatically; Windows double-click and macOS/Linux script",
+        "risks": "contract: new root launchers and start script only; dependency: none beyond existing Vite/npm; concurrency: none; state: none",
+        "mitigation": "unit tests for arg parsing and Node gate, --check/--help runs, real HTTP 200 launch on a free port, full aikit check"
+      },
+      "plan_digest": "d663e878df3b01c4a5f3afb3797f68724998faeb385afb2c6a36511326c9595c"
+    },
+    {
+      "task_id": "noesis-one-click-start",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-one-click-start' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794084592.8780446,
+      "timestamp_str": "2026-11-07 23:49:52",
+      "agent": "opencode:oneclick"
     }
   ]
 }

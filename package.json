@@ -9,6 +9,7 @@
     "node": ">=20.19"
   },
   "scripts": {
+    "start": "node scripts/start.mjs",
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
