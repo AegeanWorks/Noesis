@@ -115,7 +115,16 @@ export function App() {
   const motivationPaused =
     engagement.motivationPausedDay !== null && isMotivationPaused();
   const motivationActive = settings.motivationMode && !motivationPaused;
-  const motivatedBlock = useRef<number>(-1);
+  // A restored block-boundary snapshot may already carry this block's outcome;
+  // credit it only once when the session is resumed.
+  const motivatedBlock = useRef<number>(
+    boot?.state.phase === "block_complete" &&
+      boot.motivation?.outcomes.some(
+        (outcome) => outcome.blockIndex === boot.state.blockIndex,
+      )
+      ? boot.state.blockIndex
+      : -1,
+  );
   const state = useSessionState();
   const newMilestones = detectMilestones(history, adaptive.log, engagement.seenMilestones);
   const newBests = detectNewBests(state?.results ?? [], history, lastSessionId ?? "");

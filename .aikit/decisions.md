@@ -228,3 +228,11 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Context**: No screenshots existed; the app is mobile-first with an Android export path, but no emulator is available here.
 - **Decision**: Run the project's own `npm run ui:shots` (seeded safety/settings, driven full session) at commit `aa99b88` and register six keepers (desktop home plus mobile home/session/results/settings/evidence) in `.aikit/media.json` and the README `aegean:screenshots` block. The native Android shell stays uncaptured.
 - **Consequences**: README proves home, driven play, measured results with claim boundaries, settings and evidence. Reproduce with: `npm run dev`, then `npm run ui:shots`.
+
+### ADR-032: Restored block-boundary snapshots credit momentum once
+- **Date**: 2026-11-07
+- **Status**: Accepted
+- **Context**: Session snapshots are saved at `block_complete` together with Motivation state. On reload the App restored both, then the block-completion layout effect ran with a fresh credited-block ref and credited the same block again: a scripted browser playthrough saved `Unbanked 100` and the resumed screen showed `Unbanked 200`, and a regression test saw 36 points where 18 were expected.
+- **Decision**: Seed the credited-block ref from the boot snapshot when its motivation already contains an outcome for the restored block index; otherwise keep `-1` so a snapshot saved before the credit, including an unresolved risk, is processed normally once. No storage format or UI change.
+- **Consequences**: Resume now shows the same momentum, bank prompt and banked total as the pre-reload session. The guard is per block index, so older snapshots and snapshots without that block's outcome behave as before; a resumed boundary can never silently grow its reward.
+
