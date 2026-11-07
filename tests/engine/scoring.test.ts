@@ -1,7 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { clamp, dPrime, probit, rate, round } from "../../src/engine/scoring";
+import { clamp, countLabel, dPrime, probit, rate, round } from "../../src/engine/scoring";
 
 describe("scoring", () => {
+  it("labels counts with singular and plural forms", () => {
+    expect(countLabel(0, "false alarm")).toBe("0 false alarms");
+    expect(countLabel(1, "false alarm")).toBe("1 false alarm");
+    expect(countLabel(2, "false alarm")).toBe("2 false alarms");
+  });
+
   it("computes the inverse normal at known points", () => {
     expect(probit(0.5)).toBeCloseTo(0, 6);
     expect(probit(0.975)).toBeCloseTo(1.96, 2);

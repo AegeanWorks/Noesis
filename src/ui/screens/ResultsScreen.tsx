@@ -56,11 +56,9 @@ const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
   speed: ["accuracy", "median_reaction_ms", "lapses"],
 };
 
-function formatMetric(key: string, value: number): string {
+export function formatMetric(key: string, value: number): string {
   if (key.includes("accuracy")) return `${Math.round(value * 100)}%`;
-  if (key.endsWith("_ms")) {
-    return value > 0 && value < 40 ? "<40 ms" : `${Math.round(value)} ms`;
-  }
+  if (key.endsWith("_ms")) return `${Math.round(value)} ms`;
   if (key === "d_prime") return value.toFixed(2);
   return String(value);
 }

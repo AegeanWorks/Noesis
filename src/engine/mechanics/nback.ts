@@ -1,5 +1,5 @@
 import { stableHash } from "../hash";
-import { clamp, currentStreak, dPrime, longestStreak, mean, rate, round } from "../scoring";
+import { clamp, countLabel, currentStreak, dPrime, longestStreak, mean, rate, round } from "../scoring";
 import { normalizeSeed, randomInt, sampleIndices } from "../rng";
 import type {
   MechanicAction,
@@ -303,7 +303,7 @@ export function nbackResult(state: NBackState): MechanicResult {
     trials: state.trials.length,
     durationMs: state.tick,
     metrics,
-    summary: `${state.config.n}-back: ${Math.round(accuracy * 100)}% accuracy, ${hits}/${targets} targets, ${falseAlarms} false alarms.`,
+    summary: `${state.config.n}-back: ${Math.round(accuracy * 100)}% accuracy, ${hits}/${targets} targets, ${countLabel(falseAlarms, "false alarm")}.`,
     seed: state.seed,
     stateHash: stableHash(state),
   };

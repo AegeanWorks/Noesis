@@ -1,5 +1,5 @@
 import { stableHash } from "../hash";
-import { clamp, currentStreak, longestStreak, mean, rate, round } from "../scoring";
+import { clamp, countLabel, currentStreak, longestStreak, mean, rate, round } from "../scoring";
 import { normalizeSeed, sampleIndices } from "../rng";
 import type {
   GoNoGoConfig,
@@ -270,7 +270,7 @@ export function gonogoResult(state: GoNoGoState): MechanicResult {
     trials: state.trials.length,
     durationMs: state.tick,
     metrics,
-    summary: `Go/No-Go: ${Math.round(accuracy * 100)}% accuracy, ${commissions} impulse errors, ${metrics.mean_go_reaction_ms ?? 0} ms mean go reaction.`,
+    summary: `Go/No-Go: ${Math.round(accuracy * 100)}% accuracy, ${countLabel(commissions, "impulse error")}, ${metrics.mean_go_reaction_ms ?? 0} ms mean go reaction.`,
     seed: state.seed,
     stateHash: stableHash(state),
   };

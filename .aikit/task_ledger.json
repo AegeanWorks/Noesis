@@ -1,67 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-cycle8-microtext",
+    "task_id": "noesis-cycle9-results-copy",
     "last_phase": "phase 4",
     "active_phase": 4,
     "status": "in_progress",
-    "updated_at": 1794080519.2535825,
-    "owner": "opencode:cycle8",
-    "started_by": "opencode:cycle8",
+    "updated_at": 1794080942.3093026,
+    "owner": "opencode:cycle9",
+    "started_by": "opencode:cycle9",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-cycle4-gonogo-prompt",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: Go/No-Go prompt must be trial-independent after the shape disappears",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794077618.941632,
-      "timestamp_str": "2026-11-07 21:53:38",
-      "agent": "opencode:cycle4",
-      "impact_assessment": {
-        "why": "The blank response window named the current trial (go: Respond to the circle; no-go: Do not respond to the square), letting a late response read the answer",
-        "benefits": "Response inhibition is measured from the shape, not the prompt; no information leak after stimulus offset",
-        "risks": "contract: prompt copy changes but timing, window, scoring and input unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "failing-first prompt-equality test, fixed-seed browser response-window playthrough with before/after frames and a late commission, full gates"
-      },
-      "plan_digest": "d89455376d4cce5b542b05a428521fbbbcd812c415cab8fa4bded36d53ac6f79"
-    },
-    {
-      "task_id": "noesis-cycle4-gonogo-prompt",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Fix: static Circles/Squares prompt in stimulus/response/feedback, Get ready in ITI; failing-first prompt-equality test and scripts/gonogo-prompt-proof.mjs added; before promptsEqual false, after true",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794077638.515397,
-      "timestamp_str": "2026-11-07 21:53:58",
-      "agent": "opencode:cycle4"
-    },
-    {
-      "task_id": "noesis-cycle4-gonogo-prompt",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: 390x844@2x before/after no-go response frames same seed/index; prompts differ -> identical; late no-go still commission; 29 Python + 250 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794077644.0648549,
-      "timestamp_str": "2026-11-07 21:54:04",
-      "agent": "opencode:cycle4"
-    },
-    {
-      "task_id": "noesis-cycle4-gonogo-prompt",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3 follow-up] Gate stability: batched study-journey block dispatches (12.96s -> 0.64s focused, 21.36s -> 9.46s full); assertions unchanged; rerun aikit check 6/6 passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794078021.3094687,
-      "timestamp_str": "2026-11-07 22:00:21",
-      "agent": "opencode:cycle4"
-    },
     {
       "task_id": "noesis-cycle4-gonogo-prompt",
       "phase": "completed",
@@ -262,6 +211,56 @@
       "timestamp": 1794080519.2535825,
       "timestamp_str": "2026-11-07 22:41:59",
       "agent": "opencode:cycle8"
+    },
+    {
+      "task_id": "noesis-cycle8-microtext",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-cycle8-microtext' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794080564.5682433,
+      "timestamp_str": "2026-11-07 22:42:44",
+      "agent": "opencode:cycle8"
+    },
+    {
+      "task_id": "noesis-cycle9-results-copy",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: result summaries and tiles must agree on counts and exact milliseconds",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794080940.891695,
+      "timestamp_str": "2026-11-07 22:49:00",
+      "agent": "opencode:cycle9",
+      "impact_assessment": {
+        "why": "One commission rendered '1 impulse errors' and the tile '<40 ms' while the summary said 15 ms; N-back false alarms and Speed Tap lapses shared the plural hazard",
+        "benefits": "Consistent portable record and on-screen copy; exact reaction time",
+        "risks": "contract: summary strings and tile format change, scoring unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first countLabel/summary/formatMetric tests, fixed-clock one-commission played run with before/after frames, full gates"
+      },
+      "plan_digest": "b6a402e5d15726e3cdb3a8b95ddb283aba14e68d963b4e6a1c756565bbb34bb7"
+    },
+    {
+      "task_id": "noesis-cycle9-results-copy",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Fix: countLabel helper used for false alarms/impulse errors/lapses; formatMetric prints rounded ms; results-copy test and scripts/results-copy-proof.mjs added",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794080941.6179,
+      "timestamp_str": "2026-11-07 22:49:01",
+      "agent": "opencode:cycle9"
+    },
+    {
+      "task_id": "noesis-cycle9-results-copy",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: same one-commission state; before 1 impulse errors/<40 ms, after 1 impulse error/15 ms; same trials/hits; 29 Python + 257 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794080942.3093026,
+      "timestamp_str": "2026-11-07 22:49:02",
+      "agent": "opencode:cycle9"
     }
   ]
 }

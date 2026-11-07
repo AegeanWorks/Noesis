@@ -1,6 +1,7 @@
 import { stableHash } from "../hash";
 import {
   clamp,
+  countLabel,
   currentStreak,
   longestStreak,
   mean,
@@ -238,7 +239,7 @@ export function speedResult(state: SpeedState): MechanicResult {
     trials: state.foreperiods.length,
     durationMs: state.tick,
     metrics,
-    summary: `Speed Tap: ${metrics.hits}/${state.foreperiods.length} responses, ${metrics.median_reaction_ms ?? 0} ms median reaction, ${metrics.lapses ?? 0} lapses.`,
+    summary: `Speed Tap: ${metrics.hits}/${state.foreperiods.length} responses, ${metrics.median_reaction_ms ?? 0} ms median reaction, ${countLabel(metrics.lapses ?? 0, "lapse")}.`,
     seed: state.seed,
     stateHash: stableHash(state),
   };

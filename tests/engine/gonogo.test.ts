@@ -6,7 +6,7 @@ import {
   gonogoResult,
   gonogoView,
 } from "../../src/engine/mechanics/gonogo";
-import { policyFor, replayMechanic, runMechanic } from "../../src/engine/simulate";
+import { optimalPolicy, policyFor, replayMechanic, runMechanic } from "../../src/engine/simulate";
 import { stableHash } from "../../src/engine/hash";
 
 function drive(seed: number, strategy: string) {
@@ -56,6 +56,30 @@ describe("go / no-go", () => {
       (result.metrics.go_trials ?? 0) / 30,
       2,
     );
+  });
+
+  it("uses singular impulse-error copy for exactly one commission", () => {
+    let commissioned = false;
+    const policy = (state: Parameters<typeof optimalPolicy>[0]) => {
+      if (state.mechanic !== "gonogo") return null;
+      const trial = state.trials[state.index];
+      if (
+        !commissioned &&
+        trial &&
+        !trial.go &&
+        state.phase === "stimulus" &&
+        !state.respondedThisTrial
+      ) {
+        commissioned = true;
+        return { type: "respond" as const };
+      }
+      return optimalPolicy(state);
+    };
+    const run = runMechanic("gonogo", 7, 1, 30, policy);
+    const result = gonogoResult(run.state);
+    expect(result.metrics.commissions).toBe(1);
+    expect(result.summary).toContain("1 impulse error,");
+    expect(result.summary).not.toContain("1 impulse errors");
   });
 
   it("shows a circle for go and a square for no-go", () => {

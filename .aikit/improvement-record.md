@@ -15,12 +15,12 @@ Covered so far:
 6. Levels — 2026-11-07 — cycle 6
 7. Session safety — 2026-11-07 — cycle 7
 8. UI readability (second pass) — 2026-11-07 — cycle 8
+9. Results copy — 2026-11-07 — cycle 9
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
 
-Open candidates (not yet cycles): `1 impulse errors` summary pluralization; result-tile
-`<40 ms` versus the summary's exact reaction time.
+Open candidates (not yet cycles): none from the current audits.
 
 ## Cycle 1 — Progression and saves: resumed block-boundary momentum
 
@@ -367,6 +367,46 @@ Open candidates (not yet cycles): `1 impulse errors` summary pluralization; resu
   6/6 gates pass.
 - **STATUS**: committed with the cycle; next area is the results-copy consistency candidate.
 
+## Cycle 9 — Results copy: singular impulse error and exact reaction time
+
+- **Area**: results copy (readability/consistency; new findings from the results screens).
+- **FIND**: A one-commission Go/No-Go result read `1 impulse errors` and its card showed
+  `Reaction time <40 ms` while the same card's summary said `15 ms mean go reaction`. The
+  scripted before-run recorded `summary "…1 impulse errors…"`, `tileReaction "<40 ms"`,
+  `meanGoReaction 15`, `singularCopy false`, `tileMatchesSummary false`.
+- **ANALYZE**: `gonogoResult` hard-coded `impulse errors`; `formatMetric` replaced every value
+  between 1 and 39 ms with `<40 ms` even though the summary printed the exact number. N-back
+  false alarms and Speed Tap lapses had the same plural hazard. Fix is copy/format only.
+- **KILLED**: Hiding the precision in the summary instead was rejected (the summary is the
+  portable text record); showing "0 ms" as "—" was rejected because a genuine zero is
+  meaningful and the unit tests can pin it.
+- **IMPLEMENT**: Failing-first tests: `countLabel` singular/plural, Go/No-Go singular summary
+  with exactly one commission, and `formatMetric` returning `15 ms`/`0 ms`; all failed before.
+  Added `countLabel` to scoring and used it in the N-back false-alarm, Go/No-Go commission and
+  Speed Tap lapse summaries; `formatMetric` now always prints the rounded millisecond value.
+  Added `scripts/results-copy-proof.mjs`, which completes a quick N-back + Go/No-Go session with
+  exactly one commission and 15 ms reactions and reads the result copy.
+- **PROOF (screenshots)**: same viewport 390x844@2x, same fixed clock/seed, same one-commission
+  state; only the build differs.
+  - before: `%TEMP%\opencode\noesis-cycles\cycle9-before\before-01-results-copy.png`
+    SHA-256 `A45D4D8B3114C2554BD52B933285CCE89AC27D3A78E1C9FA7D9FD6D25A6E34E9`
+    (`1 impulse errors`, tile `<40 ms`, summary `15 ms`)
+  - after: `%TEMP%\opencode\noesis-cycles\cycle9-after\after-01-results-copy.png`
+    SHA-256 `94DABD32594FE92C00696B5FCCACCCF9D6B80F3CD959CE65949A8BCFA5C563F0`
+    (`1 impulse error`, tile `15 ms`)
+- **PROOF (played run)**: `node scripts/results-copy-proof.mjs before|after <dir>` started a
+  quick session, played N-back optimally and Go/No-Go with one deliberate no-go commission and
+  15 ms go responses, then read the results. Before: summary `1 impulse errors`, tile
+  `<40 ms`, 34 trials seen, 24 hits, 1 commission. After: summary `1 impulse error`, tile
+  `15 ms`, identical trials/hits/commission counts; `singularCopy true`, `pluralCopy false`,
+  `tileMatchesSummary true`; `consoleErrors []`, no page errors. What improved: the card and its
+  summary now agree and the singular reads correctly. What stayed the same: scoring, trial
+  counts, motivation and layout.
+- **GATES**: `npm run test:all` — 29 Python + 257 Vitest, all pass; `npm run ai:verify` — 400
+  deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
+  6/6 gates pass.
+- **STATUS**: committed with the cycle; current audits have no open candidates.
+
 ## Commands run
 
 ```text
@@ -435,5 +475,14 @@ node scripts/ui-audit.mjs <dir>
   before: tinyText home-empty 2, home-history 3, evidence 2
   after:  tinyText 0 on every audited screen; consoleErrors []
 npm run test:all                 29 Python + 254 Vitest passed
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/engine/scoring.test.ts tests/engine/gonogo.test.ts tests/ui/results-copy.test.tsx
+  before fix: 3 failed (countLabel/formatMetric absent, plural summary)
+  after fix:  15 passed
+node scripts/results-copy-proof.mjs before|after <dir>
+  before: "1 impulse errors", tile "<40 ms", summary 15 ms
+  after:  "1 impulse error", tile "15 ms"; same trials/hits; consoleErrors []
+npm run test:all                 29 Python + 257 Vitest passed
 python aikit.py check noesis     6/6 gates passed
 ```

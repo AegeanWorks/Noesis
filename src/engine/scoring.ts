@@ -78,6 +78,10 @@ export function rate(numerator: number, denominator: number): number {
   return round(numerator / denominator, 3);
 }
 
+export function countLabel(count: number, singular: string, plural = `${singular}s`): string {
+  return `${count} ${count === 1 ? singular : plural}`;
+}
+
 export function median(values: readonly number[]): number | null {
   if (values.length === 0) return null;
   const sorted = [...values].sort((a, b) => a - b);
