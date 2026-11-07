@@ -271,7 +271,7 @@ export function App() {
         base,
         state.blockIndex,
         result,
-        bestAccuracyFor(history, result.mechanic),
+        bestAccuracyFor(history, result.mechanic, result.difficulty),
       );
     });
   }, [state, motivationActive, history]);

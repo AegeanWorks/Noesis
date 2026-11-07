@@ -37,6 +37,12 @@ function record(id: string, accuracy: number, mechanic: "nback" | "gonogo" = "nb
   };
 }
 
+function leveled(id: string, accuracy: number, difficulty: number): SessionRecord {
+  const entry = record(id, accuracy);
+  entry.results[0]!.difficulty = difficulty;
+  return entry;
+}
+
 afterEach(() => {
   clearHistory();
 });
@@ -85,6 +91,14 @@ describe("session history", () => {
     expect(bestAccuracyFor(history, "nback")).toBe(0.9);
     expect(bestAccuracyFor(history, "gonogo")).toBe(0.7);
     expect(bestAccuracyFor(history, "reasoning")).toBeNull();
+  });
+
+  it("filters the best accuracy by block level", () => {
+    const history = [leveled("l1", 0.7, 1), leveled("l3", 0.9, 3), record("legacy", 0.85)];
+    expect(bestAccuracyFor(history, "nback", 1)).toBe(0.7);
+    expect(bestAccuracyFor(history, "nback", 3)).toBe(0.9);
+    expect(bestAccuracyFor(history, "nback", 2)).toBeNull();
+    expect(bestAccuracyFor(history, "nback")).toBe(0.9);
   });
 
   it("counts only sessions in the current week", () => {
@@ -178,6 +192,13 @@ describe("consistency and personal bests", () => {
     expect(detectNewBests(current.results, [current], "new")).toEqual([]);
     const worse = dated("low", at(2026, 10, 2), 0.4);
     expect(detectNewBests(worse.results, [prior, worse], "low")).toEqual([]);
+  });
+
+  it("flags a new best within the current level, not across levels", () => {
+    const level1 = leveled("l1", 0.7, 1);
+    const level3 = leveled("l3", 0.95, 3);
+    const current = leveled("new", 0.8, 1);
+    expect(detectNewBests(current.results, [level1, level3, current], "new")).toEqual(["nback"]);
   });
 
   it("finds the weakest recent mechanic and ignores perfect runs", () => {

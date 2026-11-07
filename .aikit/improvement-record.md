@@ -16,6 +16,7 @@ Covered so far:
 7. Session safety — 2026-11-07 — cycle 7
 8. UI readability (second pass) — 2026-11-07 — cycle 8
 9. Results copy — 2026-11-07 — cycle 9
+10. Level-aware bests — 2026-11-07 — cycle 10
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -407,6 +408,56 @@ Open candidates (not yet cycles): none from the current audits.
   6/6 gates pass.
 - **STATUS**: committed with the cycle; current audits have no open candidates.
 
+## Cycle 10 — Levels: bests and the near-best cue ignored the block level
+
+- **Area**: levels/progression (follow-up to the level field added in cycle 6).
+- **FIND**: `bestAccuracyFor`, `detectNewBests` and the Motivation near-best lookup compared
+  every historical accuracy regardless of level, even though Settings says to compare within a
+  level. A scripted state with a level-1 best of 85% and a level-3 best of 95% showed home
+  `Last 85% / Best 95%`; a level-1 block at 83% earned no near-best cue and 44 momentum.
+- **ANALYZE**: the history layer had no level parameter, and the App passed only mechanic.
+  Cycle 6 made the level available on every new result, so the filter belongs in
+  `bestAccuracyFor` and its two callers, with legacy results without a level excluded when a
+  level is requested. Home labels should show the level being compared.
+- **KILLED**: Comparing against all levels for users with legacy history was rejected (it is the
+  defect); treating the first new-level block as a new best was rejected (there is no prior
+  same-level best to beat).
+- **IMPLEMENT**: Failing-first history tests require level-filtered bests and a same-level new
+  best; a Home test requires `Last L2 80%`/`Best L2 90%` and ignores a level-3 95%. Two failed
+  before the change. `bestAccuracyFor` takes an optional difficulty; `detectNewBests` and the
+  App near-best lookup pass it; Home labels the last/best level. README states the same-level
+  near-best rule and level labels. Added `scripts/level-best-proof.mjs`, which seeds a level-1
+  85% best and level-3 95% best, plays a level-1 N-back block to 83% and reads the home labels,
+  momentum and near-best line.
+- **PROOF (screenshots)**: same viewport 390x844@2x, same fixed clock, same seeded history and
+  same 83% block; only the build differs.
+  - before home: `%TEMP%\opencode\noesis-cycles\cycle10-before\before-01-home-best.png`
+    SHA-256 `997D06C9AAFD2C303AEFA4C8744D0CB7B811579EC504875A7560BE4CD45AA433`
+    (`Last 85%`, `Best 95%`)
+  - after home: `%TEMP%\opencode\noesis-cycles\cycle10-after\after-01-home-best.png`
+    SHA-256 `24EC3E20CF919FBF349446949E61774821E60FC0AEDE1DEC2F92375E7EEC9F82`
+    (`Last L1 85%`, `Best L1 85%`)
+  - before block complete:
+    `%TEMP%\opencode\noesis-cycles\cycle10-before\before-02-block-complete-near-best.png`
+    SHA-256 `A5B4C52F1AD94FD083FE0E6B3BAC80B05631164D727721FD5197352FD8A0D667`
+    (`+44 momentum`, no near-best line)
+  - after block complete:
+    `%TEMP%\opencode\noesis-cycles\cycle10-after\after-02-block-complete-near-best.png`
+    SHA-256 `BEB1A0E90B20711B7D7DD80F882CDC685480E48CB0943D92BA2B2C69F6E0D932`
+    (`+64 momentum`, `So close to your best: +10`)
+- **PROOF (played run)**: `node scripts/level-best-proof.mjs before|after <dir>` seeded the two
+  level bests, started a focus N-back session (adaptive level 1) and hit two of five targets for
+  exactly 83% accuracy. Before: home `Last 85% / Best 95%`; block `+44 momentum`, streak 6,
+  `nearBestCue false`, `earnedTenBonus false`. After: home `Last L1 85% / Best L1 85%`; the same
+  83% block earned `+64 momentum` with `So close to your best: +10`, `nearBestCue true`,
+  `earnedTenBonus true`; block difficulty 1. `consoleErrors []`, no page errors. What improved:
+  the bonus and the displayed best now compare like with like. What stayed the same: accuracy,
+  streak, level and scoring.
+- **GATES**: `npm run test:all` — 29 Python + 260 Vitest, all pass; `npm run ai:verify` — 400
+  deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
+  6/6 gates pass.
+- **STATUS**: committed with the cycle; current audits have no open candidates.
+
 ## Commands run
 
 ```text
@@ -484,5 +535,14 @@ node scripts/results-copy-proof.mjs before|after <dir>
   before: "1 impulse errors", tile "<40 ms", summary 15 ms
   after:  "1 impulse error", tile "15 ms"; same trials/hits; consoleErrors []
 npm run test:all                 29 Python + 257 Vitest passed
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/storage/history.test.ts tests/ui/home.test.tsx
+  before fix: 3 failed (level filter, level new best, level labels)
+  after fix:  34 passed
+node scripts/level-best-proof.mjs before|after <dir>
+  before: Best 95%, no near-best, +44 momentum
+  after:  Best L1 85%, near-best +10, +64 momentum; same 83% accuracy; consoleErrors []
+npm run test:all                 29 Python + 260 Vitest passed
 python aikit.py check noesis     6/6 gates passed
 ```

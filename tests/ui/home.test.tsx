@@ -8,7 +8,7 @@ import type { PracticeIntention } from "../../src/storage/intention";
 
 afterEach(cleanup);
 
-function record(accuracy: number, finishedAt = "2026-10-31T10:00:00.000Z"): SessionRecord {
+function record(accuracy: number, finishedAt = "2026-10-31T10:00:00.000Z", difficulty?: number): SessionRecord {
   return {
     id: `session-${finishedAt}`,
     finishedAt,
@@ -23,6 +23,7 @@ function record(accuracy: number, finishedAt = "2026-10-31T10:00:00.000Z"): Sess
         summary: "2-back summary",
         seed: 42,
         stateHash: "0123456789abcdef",
+        ...(difficulty === undefined ? {} : { difficulty }),
       },
     ],
   };
@@ -102,6 +103,21 @@ describe("HomeScreen", () => {
     expect(screen.getByText(/This week:/)).toBeTruthy();
     expect(screen.getByLabelText("N-back recent accuracy trend")).toBeTruthy();
     expect(screen.getByText(/A break is fine/)).toBeTruthy();
+  });
+
+  it("shows last and best within the last block's level", () => {
+    renderHome({
+      history: [
+        record(0.8, "2026-10-31T10:00:00.000Z", 2),
+        record(0.95, "2026-10-30T10:00:00.000Z", 3),
+        record(0.9, "2026-10-29T10:00:00.000Z", 2),
+      ],
+      week: { sessions: 3, days: 3, minutes: 3 },
+      today: { sessions: 1, minutes: 1 },
+    });
+    expect(screen.getByText("Last L2 80%")).toBeTruthy();
+    expect(screen.getByText("Best L2 90%")).toBeTruthy();
+    expect(screen.queryByText(/Best L3/)).toBeNull();
   });
 
   it("saves an optional when/where plan", () => {

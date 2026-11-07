@@ -1,66 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-cycle9-results-copy",
+    "task_id": "noesis-cycle10-level-bests",
     "last_phase": "phase 4",
     "active_phase": 4,
     "status": "in_progress",
-    "updated_at": 1794080942.3093026,
-    "owner": "opencode:cycle9",
-    "started_by": "opencode:cycle9",
+    "updated_at": 1794081465.956499,
+    "owner": "opencode:cycle10",
+    "started_by": "opencode:cycle10",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-cycle4-gonogo-prompt",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-cycle4-gonogo-prompt' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794078105.7673922,
-      "timestamp_str": "2026-11-07 22:01:45",
-      "agent": "opencode:cycle4"
-    },
-    {
-      "task_id": "noesis-cycle5-quick-lineup",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: quick sessions must rotate the two-mechanic window so repeated short sessions cover all four tasks",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794078587.3464942,
-      "timestamp_str": "2026-11-07 22:09:47",
-      "agent": "opencode:cycle5",
-      "impact_assessment": {
-        "why": "Quick sessions always took nback+gonogo; four fixed-clock runs recorded one pair and only 2/4 mechanics",
-        "benefits": "Reasoning and Speed Tap become reachable without changing the five-minute length; seed determinism retained",
-        "risks": "contract: quick lineup changes, standard/focus unchanged; dependency: none; concurrency: none; state: no storage change",
-        "mitigation": "failing-first rotation test, fixed-clock four-session browser playthrough including one completed quick session, README update, full gates"
-      },
-      "plan_digest": "e6e9b22414d0797de0cca22aac1884e568b64b97d00f982083016b00a3bd2a6a"
-    },
-    {
-      "task_id": "noesis-cycle5-quick-lineup",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Fix: sessionBlocks accepts a rotation offset; defaultSessionConfig passes normalizeSeed(seed) for quick only; README documents rotation; rotation test + scripts/quick-lineup-proof.mjs added",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794078589.2058334,
-      "timestamp_str": "2026-11-07 22:09:49",
-      "agent": "opencode:cycle5"
-    },
-    {
-      "task_id": "noesis-cycle5-quick-lineup",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: same seed 2721744569 before N-back vs after Go/No-Go block 1 of 2; 1 -> 4 distinct pairs, 2/4 -> 4/4 mechanics; gonogo+reasoning quick session completed 100%; 29 Python + 251 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794078590.9845712,
-      "timestamp_str": "2026-11-07 22:09:50",
-      "agent": "opencode:cycle5"
-    },
     {
       "task_id": "noesis-cycle5-quick-lineup",
       "phase": "completed",
@@ -261,6 +211,56 @@
       "timestamp": 1794080942.3093026,
       "timestamp_str": "2026-11-07 22:49:02",
       "agent": "opencode:cycle9"
+    },
+    {
+      "task_id": "noesis-cycle9-results-copy",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-cycle9-results-copy' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794081035.0348818,
+      "timestamp_str": "2026-11-07 22:50:35",
+      "agent": "opencode:cycle9"
+    },
+    {
+      "task_id": "noesis-cycle10-level-bests",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: bests, new-best badges and the near-best cue must compare within the block level",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794081463.6797705,
+      "timestamp_str": "2026-11-07 22:57:43",
+      "agent": "opencode:cycle10",
+      "impact_assessment": {
+        "why": "History/App compared every level; a level-1 83% block was measured against a level-3 95% best, suppressing the near-best cue and showing Best 95% on a level-1 row",
+        "benefits": "Honest like-for-like comparisons; level labels on home; bonus stops being suppressed by harder levels",
+        "risks": "contract: best lookup gains optional level filter, legacy results without level are excluded when filtering; dependency: none; concurrency: none; state: no format change",
+        "mitigation": "failing-first history/home tests, fixed-clock played run with seeded level bests and before/after frames, README update, full gates"
+      },
+      "plan_digest": "3eeb2630e6aef9fd3d03945f9a971b804124e7f6b630d51ef5afbc019ccb3d88"
+    },
+    {
+      "task_id": "noesis-cycle10-level-bests",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Fix: bestAccuracyFor optional difficulty; detectNewBests and App near-best pass result level; Home shows Last/Best L{level}; level-best proof script; README updated",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794081464.6612713,
+      "timestamp_str": "2026-11-07 22:57:44",
+      "agent": "opencode:cycle10"
+    },
+    {
+      "task_id": "noesis-cycle10-level-bests",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: same seeded level1 85/level3 95 bests and same 83% block; before Best 95%/+44 no cue, after Best L1 85%/+64 with near-best +10; 29 Python + 260 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794081465.956499,
+      "timestamp_str": "2026-11-07 22:57:45",
+      "agent": "opencode:cycle10"
     }
   ]
 }

@@ -278,6 +278,14 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: The first **End session** click switches the same paused dialog to a confirmation state with **Keep practicing** and **End session**; only the second End calls the abort. The confirmation resets whenever the session is not paused. Copy states that unfinished blocks are not saved and completed sessions remain in history. No auto-save of partial sessions and no snapshot-format change.
 - **Consequences**: An accidental end is recoverable without changing deliberate abort behavior or storage. Ending takes one extra tap by design; completed-session history is untouched.
 
+### ADR-039: Personal bests and near-best cues compare within a level
+- **Date**: 2026-11-07
+- **Status**: Accepted
+- **Context**: Results now record their block level (ADR-037) and Settings says to compare only within the same level, but `bestAccuracyFor`, `detectNewBests` and the Motivation near-best cue still compared every historical accuracy regardless of level. A level-1 block at 83% could be measured against a level-3 best of 95%, suppressing both the near-best cue and the home "Best" value.
+- **Decision**: `bestAccuracyFor(history, mechanic, difficulty?)` filters by exact result difficulty when a level is given; `detectNewBests` and the App's near-best lookup pass the current result's level; the home practice row derives the level from its last result and labels `Last L{level}` / `Best L{level}`. Legacy results without a level only participate when no level is requested; a first new-level block has no prior best and is not flagged.
+- **Consequences**: Bests, new-best badges and near-best bonuses are honest within a level and cannot be inflated by an easier level. Old-history users see unlabelled comparisons until their next same-level block, then level-labelled ones.
+
+
 
 
 

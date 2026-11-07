@@ -153,11 +153,13 @@ export function lastResultFor(
 export function bestAccuracyFor(
   history: readonly SessionRecord[],
   mechanic: MechanicResult["mechanic"],
+  difficulty?: number,
 ): number | null {
   let best: number | null = null;
   for (const session of history) {
     for (const result of session.results) {
       if (result.mechanic !== mechanic) continue;
+      if (typeof difficulty === "number" && result.difficulty !== difficulty) continue;
       const accuracy = result.metrics.accuracy;
       if (typeof accuracy !== "number") continue;
       if (best === null || accuracy > best) best = accuracy;
@@ -231,7 +233,7 @@ export function detectNewBests(
   for (const result of results) {
     const accuracy = result.metrics.accuracy;
     if (typeof accuracy !== "number") continue;
-    const before = bestAccuracyFor(prior, result.mechanic);
+    const before = bestAccuracyFor(prior, result.mechanic, result.difficulty);
     if (before !== null && accuracy > before) bests.push(result.mechanic);
   }
   return bests;

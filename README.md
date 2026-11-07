@@ -46,7 +46,7 @@ Session length (quick or standard) and difficulty (gentle, standard or challenge
 
 An active session is snapshotted locally while it runs. After a browser reload or an Android WebView restart, the home screen offers **Resume session** instead of losing progress. Pausing then choosing **End session** asks for confirmation first, so an accidental tap can return to the paused session instead of discarding it.
 
-The home screen also shows a per-mechanic accuracy sparkline for recent sessions, a 14-day practice calendar, and caring check-ins: heavy-use patterns trigger a rest suggestion with a one-tap Motivation pause, a missed yesterday gets a no-shame nudge, and a long absence gets a welcome-back. Settings offers larger text, high contrast, reduced motion and a hideable session clock.
+The home screen also shows a per-mechanic accuracy sparkline for recent sessions with last and best accuracy labeled by level, a 14-day practice calendar, and caring check-ins: heavy-use patterns trigger a rest suggestion with a one-tap Motivation pause, a missed yesterday gets a no-shame nudge, and a long absence gets a welcome-back. Settings offers larger text, high contrast, reduced motion and a hideable session clock.
 
 Completed sessions are stored locally and summarized per mechanic. Monthly word-recognition far checks, symptom reports and study enrollment (for trials) are stored separately from practice. There is no account and no server. Settings can export everything as JSON or clear it with one tap.
 
@@ -56,7 +56,7 @@ Noesis's behavioral-psychology review is integrated as a bounded **Motivation mo
 
 - **Variable bonuses:** 70% steady, 20% boost, 10% rare cosmetic momentum. Odds are disclosed and capped at 100 points per block.
 - **Streaks:** x1-x3 momentum multiplier based on consecutive correct trials.
-- **Near-best cue:** a real +10 bonus when a block comes within 5% of your personal best.
+- **Near-best cue:** a real +10 bonus when a block comes within 5% of your personal best at the same level.
 - **Corrective near-miss:** an N-back false alarm that matches the N-1 or N+1 position gets an explanatory cue, not a reward.
 - **Optional push-your-luck:** bank bonus momentum or risk it on the next block (70% accuracy threshold). Core progress is always banked first.
 - **Target time:** 8 minutes standard, 5 minutes quick; no penalty for exceeding it.

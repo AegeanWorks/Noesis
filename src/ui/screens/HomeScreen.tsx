@@ -263,7 +263,8 @@ function PracticeSummary({
         {(Object.keys(MECHANIC_META) as MechanicId[]).map((id) => {
           const meta = MECHANIC_META[id];
           const last = lastResultFor(history, id);
-          const best = bestAccuracyFor(history, id);
+          const level = typeof last?.difficulty === "number" ? last.difficulty : null;
+          const best = bestAccuracyFor(history, id, level ?? undefined);
           return (
             <div className="practice-row" key={id}>
               <dt>{meta.name}</dt>
@@ -272,8 +273,14 @@ function PracticeSummary({
                   values={accuracySeries(history, id)}
                   label={`${meta.name} recent accuracy trend`}
                 />
-                <span className="practice-last">Last {percent(last?.metrics.accuracy ?? null)}</span>
-                <span className="practice-best">Best {percent(best)}</span>
+                <span className="practice-last">
+                  Last {level !== null ? `L${level} ` : ""}
+                  {percent(last?.metrics.accuracy ?? null)}
+                </span>
+                <span className="practice-best">
+                  Best {level !== null ? `L${level} ` : ""}
+                  {percent(best)}
+                </span>
               </dd>
             </div>
           );
