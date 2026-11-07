@@ -14,12 +14,13 @@ Covered so far:
 5. Session structure — 2026-11-07 — cycle 5
 6. Levels — 2026-11-07 — cycle 6
 7. Session safety — 2026-11-07 — cycle 7
+8. UI readability (second pass) — 2026-11-07 — cycle 8
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
 
-Open candidates (not yet cycles): claim badges at 11.52px; `1 impulse errors` summary
-pluralization; result-tile `<40 ms` versus the summary's exact reaction time.
+Open candidates (not yet cycles): `1 impulse errors` summary pluralization; result-tile
+`<40 ms` versus the summary's exact reaction time.
 
 ## Cycle 1 — Progression and saves: resumed block-boundary momentum
 
@@ -337,6 +338,35 @@ pluralization; result-tile `<40 ms` versus the summary's exact reaction time.
 - **STATUS**: committed with the cycle; audio cues recorded as a dead end (no audio modules by
   design); next area is a second readability pass on the remaining open candidates.
 
+## Cycle 8 — UI readability: claim badges and the session date were below 12px
+
+- **Area**: UI readability, second pass (new findings, not a repeat of cycle 2).
+- **FIND**: The 390x844 audit still reported seven tiny-text instances across home, home with
+  history and evidence: `badge badge-supported` and `badge badge-experimental` at 11.52px and
+  `seed` at 11.84px. These are the claim labels and the last-session date, both load-bearing for
+  older adults.
+- **ANALYZE**: `.badge` used 0.72rem and `.seed` 0.74rem; everything else in the audited screens
+  was already at least 12px after cycle 2's PMID change. Fix is CSS-only.
+- **KILLED**: No candidate dropped. The two remaining `smallTargets` audit flags are checkbox
+  inputs inside full-size labels, not real undersized targets; changing them would be noise.
+- **IMPLEMENT**: `.badge` font-size 0.72rem → 0.78rem (12.48px) and `.seed` 0.74rem → 0.8rem
+  (12.8px). No layout, copy, engine or storage change.
+- **PROOF (screenshots)**: same viewport 390x844@2x, same seeded quick session and fixed clock,
+  same `scripts/ui-audit.mjs` run; only the build differs.
+  - before: `%TEMP%\opencode\noesis-cycles\cycle8-before\04-home-history.png`
+    SHA-256 `516706765589B4C8381DF640E42A2E5F9D42E2237ABD46D4A4DF50508552C169`
+  - after: `%TEMP%\opencode\noesis-cycles\cycle8-after\04-home-history.png`
+    SHA-256 `20DBFB91C05333AD78AB5902A35C39998C9BD4ACBED4ACBEB359A46E7D695508`
+- **PROOF (played run)**: `node scripts/ui-audit.mjs <dir>` drove a quick session to results and
+  visited home, session, results, settings, evidence and large-text. Tiny-text counts went
+  `home-empty 2 → 0`, `home-history 3 → 0`, `evidence 2 → 0`; every audited screen now reports
+  `tinyText: 0`. `consoleErrors []` and no page errors; `session-nback` and `results` layouts
+  unchanged; all citation rows remained 59px high.
+- **GATES**: `npm run test:all` — 29 Python + 254 Vitest, all pass; `npm run ai:verify` — 400
+  deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
+  6/6 gates pass.
+- **STATUS**: committed with the cycle; next area is the results-copy consistency candidate.
+
 ## Commands run
 
 ```text
@@ -398,6 +428,12 @@ npx vitest run tests/ui/end-confirmation.test.tsx
 node scripts/end-guard-proof.mjs before|after <dir>
   before: one End click -> home, store null, snapshot false
   after:  confirm shown, keep returns to session; confirm -> home; consoleErrors []
+npm run test:all                 29 Python + 254 Vitest passed
+python aikit.py check noesis     6/6 gates passed
+
+node scripts/ui-audit.mjs <dir>
+  before: tinyText home-empty 2, home-history 3, evidence 2
+  after:  tinyText 0 on every audited screen; consoleErrors []
 npm run test:all                 29 Python + 254 Vitest passed
 python aikit.py check noesis     6/6 gates passed
 ```
