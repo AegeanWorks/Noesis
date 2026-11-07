@@ -57,6 +57,20 @@ describe("session", () => {
     expect(config.blocks.every((block) => block.difficulty === 3)).toBe(true);
   });
 
+  it("rotates the quick lineup so every mechanic appears across seeds", () => {
+    const pairs = new Set<string>();
+    const seen = new Set<string>();
+    for (let seed = 1; seed <= 8; seed += 1) {
+      const config = defaultSessionConfig(seed, 2, "quick");
+      expect(config.blocks).toHaveLength(2);
+      pairs.add(config.blocks.map((block) => block.mechanic).join(","));
+      for (const block of config.blocks) seen.add(block.mechanic);
+    }
+    expect(pairs.size).toBeGreaterThan(1);
+    expect([...seen].sort()).toEqual(["gonogo", "nback", "reasoning", "speed"]);
+    expect(defaultSessionConfig(5, 2, "quick")).toEqual(defaultSessionConfig(5, 2, "quick"));
+  });
+
   it("builds a standard four-block session with the chosen difficulty", () => {
     const config = defaultSessionConfig(7, 1, "standard");
     expect(config.blocks).toHaveLength(4);

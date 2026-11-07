@@ -42,7 +42,7 @@ An evidence-led cognitive training app. Every mechanic is a deterministic, headl
 
 The home screen has one primary action: **Start session**. It creates and begins the first block in the same click. If a session is already active, the same button resumes it. First-time users answer the safety screen once; its final button also starts the session immediately.
 
-Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.
+Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.
 
 An active session is snapshotted locally while it runs. After a browser reload or an Android WebView restart, the home screen offers **Resume session** instead of losing progress.
 

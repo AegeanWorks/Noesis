@@ -257,6 +257,14 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Replace the trial-specific prompt with one static line in stimulus, response and feedback (`Circles: respond. Squares: withhold.`), `Get ready.` during the inter-trial interval and `Block complete` at the end. No timing, response window, scoring or input gating changes.
 - **Consequences**: The blank response window carries no trial identity; only the shape shown earlier can guide a response. Headless scoring still records the late no-go response as a commission, and the new test asserts the go and no-go response-window prompts are identical.
 
+### ADR-036: Quick sessions rotate the two-mechanic window
+- **Date**: 2026-11-07
+- **Status**: Accepted
+- **Context**: Quick sessions always took the first two blocks of the four-mechanic lineup, so repeated short sessions only ever trained N-back and Go/No-Go. A scripted run under four fixed clocks recorded four identical `nback,gonogo` lineups and `allFourCovered: false`, leaving Reasoning and Speed Tap reachable only through standard or focus sessions.
+- **Decision**: `sessionBlocks` accepts a rotation offset and rotates the mechanic list before taking the quick two-block window; `defaultSessionConfig` passes the normalized session seed for quick sessions only. Standard sessions keep the fixed four-block interleaved order and focus sessions are unchanged. README's one-click section states the rotation.
+- **Consequences**: Four consecutive seeds now produce `nback,gonogo`, `gonogo,reasoning`, `reasoning,speed` and `speed,nback`, so repeated quick sessions cover all four tasks while staying two blocks. The lineup is still deterministic from the seed, and per-mechanic history stays comparable because scoring is per block.
+
+
 
 
 

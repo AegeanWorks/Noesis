@@ -11,6 +11,7 @@ Covered so far:
 2. UI readability — 2026-11-07 — cycle 2
 3. Graphics and effects — 2026-11-07 — cycle 3
 4. Mechanic feel — 2026-11-07 — cycle 4
+5. Session structure — 2026-11-07 — cycle 5
 
 Open candidates (not yet cycles): claim badges at 11.52px; `1 impulse errors` summary pluralization.
 
@@ -198,6 +199,48 @@ Open candidates (not yet cycles): claim badges at 11.52px; `1 impulse errors` su
   passed 6/6.
 - **STATUS**: committed with the cycle; next area is enemies/bosses (session structure).
 
+## Cycle 5 — Session structure: quick sessions always used the same two mechanics
+
+- **Area**: session structure (rotation 5/7, the enemies/bosses slot).
+- **FIND**: Every quick session took the first two blocks of the lineup. The scripted
+  four-clock run recorded `pairs: ["nback,gonogo"]`, `distinctPairs: 1`, `seen: ["gonogo",
+  "nback"]`, `allFourCovered: false`. A user who always chooses the short session never trains
+  Reasoning or Speed Tap outside a focus session.
+- **ANALYZE**: `sessionBlocks` built the full lineup and returned `blocks.slice(0, 2)` for quick;
+  no input let the window move. The lineup is deterministic per session seed, so the seed is
+  available to rotate the window without new state or storage. Standard/focus lineups must not
+  change.
+- **KILLED**: Randomising the pair at runtime was rejected (non-deterministic and untestable);
+  extending quick to four blocks was rejected (it is the five-minute option); changing standard
+  order was rejected (ADR-028 keeps the fixed interleaved four).
+- **IMPLEMENT**: Failing-first test starts eight quick sessions and requires more than one pair
+  and all four mechanics; it failed with `expected 1 to be greater than 1`. `sessionBlocks` now
+  takes a rotation offset, rotates the mechanic list, then slices to two; `defaultSessionConfig`
+  passes `normalizeSeed(seed)` only for quick sessions. README's one-click section documents the
+  rotation. Added `scripts/quick-lineup-proof.mjs`, which starts four quick sessions under fixed
+  clocks, records every lineup, and plays one through to results.
+- **PROOF (screenshots)**: same viewport 390x844@2x, same fixed clock 2721744569 (seed +1),
+  same first-block state; only the build differs.
+  - before: `%TEMP%\opencode\noesis-cycles\cycle5-before\before-01-first-block-seed2.png`
+    SHA-256 `072ACC29A8EBF833FD4C1AD0D440D9E0E1B5214EC2768F577B51C907368F9849`
+    (Block 1 of 2: N-back)
+  - after: `%TEMP%\opencode\noesis-cycles\cycle5-after\after-01-first-block-seed2.png`
+    SHA-256 `4F084661940CCB12E0035EACC0403DCC413D1F662E3E66E1AE4E6372229DB41D`
+    (Block 1 of 2: Go / No-Go for the same seed)
+- **PROOF (played run)**: `node scripts/quick-lineup-proof.mjs before|after <dir>` started four
+  quick sessions at clocks `…568`–`…571`. Before: all four were `["nback","gonogo"]`. After:
+  `["nback","gonogo"]`, `["gonogo","reasoning"]`, `["reasoning","speed"]`,
+  `["speed","nback"]`; `distinctPairs 4`, `allFourCovered true`. The seed-2 session was played
+  end to end: `Go/No-Go: 100% accuracy, 0 impulse errors, 22 ms mean go reaction.` then
+  `Reasoning: 8/8 correct (100%), 0 timed out.` with the same results screen. Frame health:
+  `consoleErrors []`, no page errors, quick target still 5:00. What improved: repeated short
+  sessions now exercise Reasoning and Speed Tap. What stayed the same: two-block length,
+  difficulty mapping, per-mechanic scoring and standard/focus lineups.
+- **GATES**: `npm run test:all` — 29 Python + 251 Vitest, all pass; `npm run ai:verify` — 400
+  deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
+  6/6 gates pass.
+- **STATUS**: committed with the cycle; next area is levels (difficulty/adaptation visibility).
+
 ## Commands run
 
 ```text
@@ -233,5 +276,14 @@ node scripts/gonogo-prompt-proof.mjs before|after <dir>
   before: promptsEqual false ("Respond to the circle." vs "Do not respond to the square.")
   after:  promptsEqual true (static instruction); commission still counted; consoleErrors []
 npm run test:all                 29 Python + 250 Vitest passed
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/engine/session.test.ts
+  before fix: 1 failed (expected 1 pair to be greater than 1)
+  after fix:  14 passed
+node scripts/quick-lineup-proof.mjs before|after <dir>
+  before: 4/4 quick lineups nback,gonogo; allFourCovered false
+  after:  four distinct pairs; allFourCovered true; gonogo+reasoning session completed 100%
+npm run test:all                 29 Python + 251 Vitest passed
 python aikit.py check noesis     6/6 gates passed
 ```

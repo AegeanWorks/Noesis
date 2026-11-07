@@ -28,9 +28,19 @@ export function sessionBlocks(
   length: SessionLength,
   levels?: Partial<Record<MechanicId, number>>,
   mechanics: readonly MechanicId[] = BLOCK_MECHANICS,
+  rotation = 0,
 ): BlockConfig[] {
   const safeDifficulty = Math.min(3, Math.max(1, Math.round(difficulty)));
-  const blocks: BlockConfig[] = mechanics.map((mechanic) => {
+  const offset =
+    mechanics.length > 0
+      ? ((Math.trunc(rotation) % mechanics.length) + mechanics.length) % mechanics.length
+      : 0;
+  // Quick sessions rotate the two-mechanic window by the session seed so repeated
+  // short sessions still cover all four tasks; standard sessions keep the full
+  // interleaved lineup in its fixed order.
+  const lineup =
+    offset === 0 ? [...mechanics] : [...mechanics.slice(offset), ...mechanics.slice(0, offset)];
+  const blocks: BlockConfig[] = lineup.map((mechanic) => {
     const level = levels?.[mechanic];
     const blockDifficulty =
       typeof level === "number" ? Math.min(3, Math.max(1, Math.round(level))) : safeDifficulty;
@@ -71,7 +81,13 @@ export function defaultSessionConfig(
   return {
     seed: normalizeSeed(seed),
     label: length === "quick" ? "Quick session" : "Starter session",
-    blocks: sessionBlocks(difficulty, length, levels),
+    blocks: sessionBlocks(
+      difficulty,
+      length,
+      levels,
+      undefined,
+      length === "quick" ? normalizeSeed(seed) : 0,
+    ),
   };
 }
 
