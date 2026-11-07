@@ -16,7 +16,31 @@ import { defaultSessionConfig } from "./engine/session";
 import { sessionView } from "./engine/session";
 import { sessionStore } from "./engine/store";
 import type { SessionRecord } from "./storage/history";
-import { downloadHistoryExport } from "./storage/export";
+import {
+  buildHistoryExport,
+  downloadHistoryExport,
+  downloadTextFile,
+  toResearchExport,
+  type StudyExport,
+} from "./storage/export";
+import {
+  isActiveResearchConsent,
+  loadResearchConsent,
+  withdrawResearchConsent,
+  clearResearchConsent,
+  type ResearchConsent,
+} from "./storage/researchConsent";
+import {
+  isValidEmail,
+  normalizeEmail,
+  loadResearchSettings,
+  saveResearchSettings,
+  clearResearchSettings,
+} from "./storage/researchSettings";
+import {
+  buildResearchEmailDraft,
+  type ResearchEmailDraft,
+} from "./storage/researchEmail";
 import {
   appendSession,
   bestAccuracyFor,
@@ -40,6 +64,7 @@ import {
   loadStudy,
   withdrawStudy,
   type StudyArm,
+  type StudyState,
 } from "./storage/study";
 import {
   clearEngagement,
@@ -82,6 +107,7 @@ import {
   PracticeMenuScreen,
   type MenuTab,
 } from "./ui/screens/PracticeMenuScreen";
+import { ResearchConsentScreen } from "./ui/screens/ResearchConsentScreen";
 import { ResultsScreen } from "./ui/screens/ResultsScreen";
 import { SafetyScreen } from "./ui/screens/SafetyScreen";
 import { SessionScreen } from "./ui/screens/SessionScreen";
@@ -95,10 +121,17 @@ type Screen =
   | "evidence"
   | "settings"
   | "farcheck"
-  | "menu";
+  | "menu"
+  | "consent";
 
 function initialScreen(): Screen {
   return loadSafety()?.acknowledged ? "home" : "safety";
+}
+
+function studyForExport(study: StudyState): StudyExport | null {
+  return study.enrolled && study.studyId && study.arm && study.consentedAt
+    ? { studyId: study.studyId, arm: study.arm, consentedAt: study.consentedAt }
+    : null;
 }
 
 export function App() {
@@ -112,6 +145,10 @@ export function App() {
   const [paused, setPaused] = useState(false);
   const [menuTab, setMenuTab] = useState<MenuTab>("tests");
   const [briefingOpen, setBriefingOpen] = useState(false);
+  const [researchSettings, setResearchSettings] = useState(() => loadResearchSettings());
+  const [researchConsent, setResearchConsent] = useState(() => loadResearchConsent());
+  const [researchDraft, setResearchDraft] = useState<ResearchEmailDraft | null>(null);
+  const [researchError, setResearchError] = useState<string | null>(null);
   const [settings, setSettings] = useState(() => loadSettings());
   const [history, setHistory] = useState<SessionRecord[]>(() => loadHistory());
   const [intention, setIntention] = useState<PracticeIntention | null>(() => loadIntention());
@@ -322,18 +359,13 @@ export function App() {
   }, []);
 
   const exportHistory = useCallback(() => {
-    downloadHistoryExport(
-      history,
-      study.enrolled && study.studyId && study.arm && study.consentedAt
-        ? { studyId: study.studyId, arm: study.arm, consentedAt: study.consentedAt }
-        : null,
-      {
-        farChecks: loadFarChecks(),
-        adverseEvents: loadAdverseEvents(),
-        adaptationLog: loadAdaptive().log,
-      },
-    );
-  }, [history, study]);
+    downloadHistoryExport(history, studyForExport(study), {
+      farChecks: loadFarChecks(),
+      adverseEvents: loadAdverseEvents(),
+      adaptationLog: loadAdaptive().log,
+      research: toResearchExport(researchConsent),
+    });
+  }, [history, study, researchConsent]);
 
   const clearPracticeHistory = useCallback(() => {
     clearHistory();
@@ -344,6 +376,75 @@ export function App() {
     clearAdverseEvents();
     setAdverseEvents([]);
   }, []);
+
+  const handleStudyContactEmail = useCallback((value: string) => {
+    setResearchSettings(saveResearchSettings({ studyContactEmail: value }));
+    setResearchDraft(null);
+    setResearchError(null);
+  }, []);
+
+  const handleOpenConsent = useCallback(() => {
+    setScreen("consent");
+  }, []);
+
+  const handleResearchConsentComplete = useCallback((consent: ResearchConsent) => {
+    setResearchConsent(consent);
+    setResearchDraft(null);
+    setResearchError(null);
+    setScreen("settings");
+  }, []);
+
+  const handleWithdrawResearchConsent = useCallback(() => {
+    setResearchConsent(withdrawResearchConsent());
+    setResearchDraft(null);
+    setResearchError(null);
+  }, []);
+
+  const handlePrepareResearchEmail = useCallback(() => {
+    const preparedAt = new Date();
+    if (!isActiveResearchConsent(researchConsent)) {
+      setResearchError("Read and give informed consent before sending research data.");
+      return;
+    }
+    if (!isValidEmail(researchSettings.studyContactEmail)) {
+      setResearchError("Enter a valid study team email before sending research data.");
+      return;
+    }
+    if (
+      normalizeEmail(researchSettings.studyContactEmail) !==
+      normalizeEmail(researchConsent.studyContactEmail)
+    ) {
+      setResearchError(
+        "The study email changed. Read the informed consent again before sending data.",
+      );
+      return;
+    }
+    const enrolled = loadStudy();
+    setStudy(enrolled);
+    try {
+      const payload = buildHistoryExport(history, studyForExport(enrolled), preparedAt, {
+        farChecks: loadFarChecks(),
+        adverseEvents: loadAdverseEvents(),
+        adaptationLog: loadAdaptive().log,
+        research: toResearchExport(researchConsent),
+      });
+      const draft = buildResearchEmailDraft(
+        payload,
+        researchSettings.studyContactEmail,
+        preparedAt,
+      );
+      downloadTextFile(draft.filename, payload);
+      setResearchDraft(draft);
+      setResearchError(null);
+    } catch (error) {
+      setResearchDraft(null);
+      setResearchError(
+        error instanceof Error
+          ? error.message
+          : "The research email could not be prepared.",
+      );
+    }
+  }, [history, researchConsent, researchSettings.studyContactEmail]);
 
   const handlePauseMotivation = useCallback(() => {
     setEngagement(pauseMotivationToday());
@@ -426,11 +527,17 @@ export function App() {
     clearAdaptive();
     clearFarChecks();
     clearSessionSnapshot();
+    clearResearchConsent();
+    clearResearchSettings();
     setHistory([]);
     setAdverseEvents([]);
     setFarChecks([]);
     setEngagement(loadEngagement());
     setStudy(loadStudy());
+    setResearchConsent(loadResearchConsent());
+    setResearchSettings(loadResearchSettings());
+    setResearchDraft(null);
+    setResearchError(null);
     setLastSessionId(null);
     setIntention(null);
     setMotivation(null);
@@ -619,6 +726,15 @@ export function App() {
           />
         ) : null}
 
+        {screen === "consent" ? (
+          <ResearchConsentScreen
+            studyContactEmail={researchSettings.studyContactEmail}
+            existingConsent={researchConsent}
+            onComplete={handleResearchConsentComplete}
+            onCancel={() => setScreen("settings")}
+          />
+        ) : null}
+
         {screen === "session" ? (
           view ? (
             <SessionScreen
@@ -692,6 +808,16 @@ export function App() {
             study={study}
             onEnrollStudy={handleEnrollStudy}
             onWithdrawStudy={handleWithdrawStudy}
+            research={{
+              settings: researchSettings,
+              consent: researchConsent,
+              draft: researchDraft,
+              error: researchError,
+              onStudyContactEmail: handleStudyContactEmail,
+              onOpenConsent: handleOpenConsent,
+              onWithdrawConsent: handleWithdrawResearchConsent,
+              onPrepareEmail: handlePrepareResearchEmail,
+            }}
             motivationPaused={motivationPaused}
             onResumeMotivation={handleResumeMotivation}
             adaptiveEnabled={adaptive.enabled}

@@ -1,66 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-literature-menu-briefing",
+    "task_id": "noesis-research-consent-email",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794092200.8406935,
-    "owner": "opencode:litmenu",
-    "started_by": "opencode:litmenu",
+    "updated_at": 1794095259.3862622,
+    "owner": "opencode:research-email",
+    "started_by": "opencode:research-email",
     "continuations": [],
-    "completed_at": 1794092281.1943767
+    "completed_at": 1794095269.196643
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-cycle10-level-bests",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-cycle10-level-bests' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794081510.049369,
-      "timestamp_str": "2026-11-07 22:58:30",
-      "agent": "opencode:cycle10"
-    },
-    {
-      "task_id": "noesis-cycle11-final-audit",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: whole-app final audit across the seven rotation areas; implement only reproduced defects",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794081721.7753365,
-      "timestamp_str": "2026-11-07 23:02:01",
-      "agent": "opencode:cycle11",
-      "impact_assessment": {
-        "why": "Goal stop condition requires a full cycle that finds zero verified improvements before stopping",
-        "benefits": "Honest closure with gate and audit evidence; no speculative changes",
-        "risks": "contract: none (read-only audit plus record); dependency: none; concurrency: none; state: record/ledger only",
-        "mitigation": "ui-audit, 400 ai simulations, full test/typecheck/build/hygiene/secret gates; candidate list explicitly killed with reasons"
-      },
-      "plan_digest": "26ffb194d934a077484be38c6c98c1630ba7bc4cee1b0a70abc6c134f953b2c3"
-    },
-    {
-      "task_id": "noesis-cycle11-final-audit",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Zero verified findings: ui-audit consoleErrors [], no horizontal scroll, tinyText 0 everywhere, citation minHeight 59/allAtLeast44; only checkbox-in-label smallTargets; 6/6 gates, 29 Python + 260 Vitest, ai:verify 400/400; stop per goal",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794081722.7224004,
-      "timestamp_str": "2026-11-07 23:02:02",
-      "agent": "opencode:cycle11"
-    },
-    {
-      "task_id": "noesis-cycle11-final-audit",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-cycle11-final-audit' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794081794.7058897,
-      "timestamp_str": "2026-11-07 23:03:14",
-      "agent": "opencode:cycle11"
-    },
     {
       "task_id": "noesis-push-review",
       "phase": "phase 2",
@@ -260,6 +211,56 @@
       "timestamp": 1794092281.1943781,
       "timestamp_str": "2026-11-08 01:58:01",
       "agent": "opencode:litmenu"
+    },
+    {
+      "task_id": "noesis-research-consent-email",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/6] Plan: add a literature-based e-consent flow and a privacy-preserving email data-return path for future research articles",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794092777.9866486,
+      "timestamp_str": "2026-11-08 02:06:17",
+      "agent": "opencode:research-email",
+      "impact_assessment": {
+        "why": "The user wants Noesis to collect data for future articles; that requires documented informed consent, a pseudonymous participant code, and a user-triggered way to send the export to the study team's email without adding a server or silent data transmission",
+        "benefits": "Opt-in research participation; bilingual EN/TR consent; versioned consent record in the export; email draft + JSON download; no account, no server, no automatic send",
+        "risks": "contract: new storage keys, a new consent screen, export schema fields and Settings panel; dependency: none; concurrency: none; state: existing local data remains valid, new optional fields",
+        "mitigation": "failing-first storage/UI/export tests, pure email-draft builder, no network code, browser proof of consent + download, full gates"
+      },
+      "plan_digest": "af040f1fe1fc9d49eaadf709cd0618909075cb9597595f418a40f2c8382f12a2"
+    },
+    {
+      "task_id": "noesis-research-consent-email",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/6] Impl: two e-consent context records; researchSettings/researchConsent/researchEmail storage; bilingual EN/TR consent screen; ResearchDataPanel; export research metadata; local JSON download + mailto draft with manual attach; withdrawal and contact-change re-consent; Settings and App wiring",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794095248.5688567,
+      "timestamp_str": "2026-11-08 02:47:28",
+      "agent": "opencode:research-email"
+    },
+    {
+      "task_id": "noesis-research-consent-email",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/6] Verified: review 116 records/277 outcomes valid; 29 Python + 308 Vitest; typecheck/build clean; ai:verify 400/400; browser proof 5 checkboxes, Turkish title, downloaded noesis-research-*.json, mailto draft, contact absent from file, withdrawal disables sends, consoleErrors []; UI audit no horizontal scroll/tiny text; aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794095259.3862622,
+      "timestamp_str": "2026-11-08 02:47:39",
+      "agent": "opencode:research-email"
+    },
+    {
+      "task_id": "noesis-research-consent-email",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-research-consent-email' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794095269.1966453,
+      "timestamp_str": "2026-11-08 02:47:49",
+      "agent": "opencode:research-email"
     }
   ]
 }

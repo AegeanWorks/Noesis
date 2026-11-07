@@ -1024,6 +1024,7 @@ code {
 
 /* Settings form controls: 44px minimum targets (R33) */
 .settings-screen input[type="text"],
+.settings-screen input[type="email"],
 .settings-screen select {
   min-height: 44px;
   padding: 10px 12px;
@@ -1555,4 +1556,62 @@ html.high-contrast .speed-ring-active {
     grid-column: 1 / -1;
     justify-self: start;
   }
+}
+
+/* Research consent and email data return */
+.consent-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.consent-language {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.consent-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.consent-section h2 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.consent-agreement {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.consent-agreement h2 {
+  font-size: 1.05rem;
+}
+
+.research-panel input[type="email"] {
+  width: 100%;
+}
+
+.research-email-draft {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(139, 233, 253, 0.06);
+  border-color: rgba(139, 233, 253, 0.35);
+}
+
+.research-email-draft code {
+  overflow-wrap: anywhere;
+}
+
+.email-body {
+  max-height: 240px;
+  overflow: auto;
+  font-size: 0.82rem;
 }

@@ -4,11 +4,21 @@ import type { StudyArm } from "./study";
 import type { AdaptationEvent } from "./adaptive";
 import type { FarCheck } from "./farChecks";
 import type { AdverseEvent } from "./adverseEvents";
+import type { ConsentLanguage, ResearchConsent } from "./researchConsent";
 
 export interface StudyExport {
   studyId: string;
   arm: StudyArm;
   consentedAt: string;
+}
+
+export interface ResearchExport {
+  participantCode: string;
+  consentVersion: number;
+  consentedAt: string;
+  withdrawnAt: string | null;
+  scopes: { dataSharing: boolean; futureArticles: boolean };
+  language: ConsentLanguage;
 }
 
 export interface HistoryExport {
@@ -21,12 +31,28 @@ export interface HistoryExport {
   farChecks: FarCheck[];
   adverseEvents: AdverseEvent[];
   adaptationLog: AdaptationEvent[];
+  research: ResearchExport | null;
 }
 
 export interface ExportExtras {
   farChecks?: readonly FarCheck[];
   adverseEvents?: readonly AdverseEvent[];
   adaptationLog?: readonly AdaptationEvent[];
+  research?: ResearchExport | null;
+}
+
+export function toResearchExport(
+  consent: ResearchConsent | null,
+): ResearchExport | null {
+  if (!consent) return null;
+  return {
+    participantCode: consent.participantCode,
+    consentVersion: consent.version,
+    consentedAt: consent.consentedAt,
+    withdrawnAt: consent.withdrawnAt,
+    scopes: { ...consent.scopes },
+    language: consent.language,
+  };
 }
 
 export function buildHistoryExport(
@@ -45,6 +71,7 @@ export function buildHistoryExport(
     farChecks: [...(extras.farChecks ?? [])],
     adverseEvents: [...(extras.adverseEvents ?? [])],
     adaptationLog: [...(extras.adaptationLog ?? [])],
+    research: extras.research ?? null,
   };
   return `${JSON.stringify(payload, null, 2)}\n`;
 }
@@ -69,20 +96,29 @@ export function buildWeekSummaryText(
   );
 }
 
+export function downloadTextFile(
+  filename: string,
+  text: string,
+  type = "application/json",
+): void {
+  const blob = new Blob([text], { type });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
+  URL.revokeObjectURL(url);
+}
+
 export function downloadHistoryExport(
   sessions: readonly SessionRecord[],
   study: StudyExport | null = null,
   extras: ExportExtras = {},
 ): void {
-  const blob = new Blob([buildHistoryExport(sessions, study, new Date(), extras)], {
-    type: "application/json",
-  });
-  const url = URL.createObjectURL(blob);
-  const anchor = document.createElement("a");
-  anchor.href = url;
-  anchor.download = `noesis-history-${new Date().toISOString().slice(0, 10)}.json`;
-  document.body.append(anchor);
-  anchor.click();
-  anchor.remove();
-  URL.revokeObjectURL(url);
+  downloadTextFile(
+    `noesis-history-${new Date().toISOString().slice(0, 10)}.json`,
+    buildHistoryExport(sessions, study, new Date(), extras),
+  );
 }

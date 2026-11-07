@@ -508,6 +508,30 @@ Open candidates (not yet cycles): none from the current audits.
   clock that does not advance. The UI audit records no console errors and no horizontal
   scroll on menu, briefing or history.
 
+## Cycle 13 - Research consent and local email data return
+
+- **Area**: research data collection, consent, privacy and export.
+- **FIND**: the app could export data locally but had no informed-consent process, no
+  participant code, no study contact and no way to prepare a research email. A user could
+  not use Noesis as a data collector for future articles without adding a server or
+  inventing a consent process.
+- **ANALYZE**: a targeted PubMed update added two e-consent systematic reviews as context
+  records (PMID 37656499, 36810093): digital consent was better or not worse than paper for
+  comprehension, acceptability and usability, with no study favouring paper, while
+  enrolment effects were mixed. A data-banking Perspective (PMID 42443473) and a
+  data-sharing measurement review (PMID 41813053) stayed narrative-only. The design keeps
+  consent opt-in, bilingual, versioned and separate from safety onboarding.
+- **IMPLEMENT**: `researchConsent` and `researchSettings` storage; bilingual consent text;
+  `ResearchConsentScreen`; `ResearchDataPanel`; `researchEmail` draft builder; export
+  `research` metadata; Settings research card; local JSON download + `mailto` draft with a
+  manual attach step; withdrawal and contact-change re-consent rules. No server, no SMTP
+  credential, no automatic send.
+- **VERIFICATION**: see commands below; the browser proof records five checkboxes, the
+  Turkish title, a participant code in the file, no study contact in the file, a downloaded
+  `noesis-research-*.json`, a `mailto:` draft, withdrawal disabling future sends, and no
+  console errors. The UI audit covers the consent screen with no horizontal scroll and no
+  tiny text.
+
 ## Commands run
 
 ```text
@@ -607,5 +631,16 @@ $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/menu-briefing-proof.mjs
   menu 4 cards all claim/boundary/PMID; chosenMechanic speed; scrollBeforeStart 2557 -> scrollOnBriefing 0; tickWhileBriefing 0; tickAfterBegin 911; clockStopped true; consoleErrors []
 $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
   consoleErrors []; no horizontal scroll; tinyText 0; new source links >=44px; menu/history/briefing audited
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/storage/researchConsent.test.ts tests/storage/researchSettings.test.ts tests/storage/researchEmail.test.ts tests/storage/export.test.ts tests/ui/research-consent.test.tsx tests/ui/research-data.test.tsx
+  before fix: 5 suites failed on missing modules; export.research undefined
+  after fix:  44 passed
+python -m noesis review check    116 records validated (90 primary, 26 context)
+npm run test:all                 29 Python + 308 Vitest passed
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/research-consent-email-proof.mjs
+  5 checkboxes; Turkish title; participant code N-...; contact absent from file; downloaded noesis-research-*.json; mailto draft; withdrawal disables sends; consoleErrors []
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
+  consoleErrors []; no horizontal scroll; consent screen tinyText 0; only checkbox-in-label small target
 python aikit.py check noesis     6/6 gates passed
 ```

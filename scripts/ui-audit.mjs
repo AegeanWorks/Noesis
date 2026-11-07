@@ -40,8 +40,13 @@ await context.addInitScript(({ fixedNow }) => {
       weeklyGoal: 3,
     }),
   );
+  localStorage.setItem(
+    "noesis.research.v1",
+    JSON.stringify({ studyContactEmail: "study@example.org" }),
+  );
   localStorage.removeItem("noesis.history.v1");
   localStorage.removeItem("noesis.session.v1");
+  localStorage.removeItem("noesis.research-consent.v1");
 }, { fixedNow: FIXED_NOW });
 
 const page = await context.newPage();
@@ -191,6 +196,14 @@ await page.getByRole("heading", { name: "Local control" }).waitFor();
 await page.waitForTimeout(300);
 await page.screenshot({ path: join(OUT, "08-settings.png"), fullPage: true });
 results.push(await audit("settings"));
+
+await page.getByTestId("open-research-consent").click();
+await page.getByRole("heading", { name: /informed consent for research data sharing/i }).waitFor();
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, "08b-research-consent.png"), fullPage: true });
+results.push(await audit("research-consent"));
+await page.getByRole("button", { name: "Cancel", exact: true }).click();
+await page.getByRole("heading", { name: "Local control" }).waitFor();
 
 await page.getByRole("button", { name: "Evidence", exact: true }).click();
 await page.getByRole("heading", { name: "What each mechanic can and cannot claim" }).waitFor();

@@ -6982,6 +6982,96 @@
    ],
    "synthesis_role": "context",
    "product_use": "Supports autonomy-supportive choice in the menu and clear rationale before each test; no cognitive-efficacy claim."
+  },
+  {
+   "pmid": "37656499",
+   "doi": "10.2196/43883",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Journal of Medical Internet Research",
+   "title": "Comparative Effectiveness of eConsent: Systematic Review",
+   "modality": "safety",
+   "design": "sr",
+   "populations": [
+    "adults"
+   ],
+   "k": 35,
+   "n": 13281,
+   "comparators": [
+    "paper_consent"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "descriptive",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "eConsent was better or not worse than paper for comprehension, acceptability and usability; no study favoured paper; cycle time increased; enrollment and retention data limited"
+    }
+   ],
+   "findings": [
+    "eConsent improved or matched paper consent for comprehension, acceptability and usability",
+    "No study reported better results with paper consent",
+    "Cycle time increased and enrollment/retention data were limited"
+   ],
+   "limitations": [
+    "Heterogeneous studies and few high-validity comparisons",
+    "Comparator and outcome definitions varied"
+   ],
+   "flags": [
+    "heterogeneity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the bilingual e-consent screen: comprehension-first wording, required confirmation boxes, and a versioned consent record in the export."
+  },
+  {
+   "pmid": "36810093",
+   "doi": "10.1186/s13063-022-06959-6",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Trials",
+   "title": "Electronic informed consent: effects on enrolment, practical and economic benefits, challenges, and drawbacks-a systematic review of studies within randomized controlled trials",
+   "modality": "safety",
+   "design": "sr",
+   "populations": [
+    "adults"
+   ],
+   "k": 12,
+   "n": 8864,
+   "comparators": [
+    "paper_consent"
+   ],
+   "outcomes": [
+    {
+     "domain": "adherence",
+     "transfer": "na",
+     "measure": "descriptive",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "mixed",
+     "certainty": "low",
+     "note": "mixed enrolment effects; e-IC may improve comprehension and recall; high heterogeneity and risk of bias"
+    }
+   ],
+   "findings": [
+    "Effects on enrolment were mixed across five heterogeneous studies",
+    "Included studies suggested e-consent may improve comprehension and recall"
+   ],
+   "limitations": [
+    "Mostly qualitative findings and high risk of bias",
+    "Meta-analysis was not possible"
+   ],
+   "flags": [
+    "heterogeneity",
+    "risk_of_bias"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Keeps e-consent optional and makes no enrolment claim; required comprehension checks and a stored consent version make the process auditable."
   }
  ]
 }

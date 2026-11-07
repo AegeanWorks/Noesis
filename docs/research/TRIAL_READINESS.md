@@ -1,4 +1,4 @@
-# Noesis Investigational Use: Trial Dossier (v1.0, 2026-11-02)
+# Noesis Investigational Use: Trial Dossier (v1.0, 2026-11-02; data-sharing update 2026-11-08)
 
 This document is for investigators running a randomised controlled trial with
 Noesis. It states what each trial arm does, what each record carries and how
@@ -36,10 +36,15 @@ and in the export; it never randomises (R38, ADR-014).
 - `adaptationLog[]`: `{ at, mechanic, from, to, accuracy }` — the adaptive
   difficulty trajectory for dose-response analysis.
 - `study`: `{ studyId, arm, consentedAt }` or `null` outside a study.
+- `research`: `{ participantCode, consentVersion, consentedAt, withdrawnAt,
+  scopes, language }` or `null` when research consent was not given. The
+  study contact email is deliberately not written into the file (R57).
 
 Export also includes a copyable plain-text weekly summary for adherence
-reporting. All data lives on-device until exported or copied by the user;
-there are no accounts and no servers (R49, ADR-025).
+reporting. All data lives on-device until exported, copied or emailed by the
+user; there are no accounts and no servers (R49, R57-R59, ADR-025,
+ADR-041). The email hand-off downloads a JSON file and prepares a mailto
+draft; the user attaches the file and sends it.
 
 ## 3. Safety monitoring (all arms)
 
@@ -69,3 +74,12 @@ In-app enrollment requires an investigator-provided trial ID, an assigned arm
 and an explicit consent checkbox, and withdrawal is one tap with data kept
 (R38, ADR-014). This in-app step records consent for data tagging; it does
 not replace the trial's own informed-consent process or ethics approval.
+
+Research data sharing has a second, separate consent: the bilingual
+English/Turkish informed-consent screen records a random participant code, a
+consent version, the two scopes (current study and future articles) and a
+withdrawal timestamp (R58, ADR-041). The study team must configure a contact
+email in Settings before consent can be given. Withdrawal stops future email
+drafts but cannot recall data already sent. The ethics committee or IRB must
+review the consent text, the contact details and the retention plan before
+the app is used for data collection.

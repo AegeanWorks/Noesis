@@ -94,6 +94,24 @@ describe("history export", () => {
     expect(parsed.farChecks).toEqual([]);
     expect(parsed.adverseEvents).toEqual([]);
     expect(parsed.adaptationLog).toEqual([]);
+    expect(parsed.research).toBeNull();
+  });
+
+  it("carries research consent metadata without the study contact email", () => {
+    const research = {
+      participantCode: "N-ABC12345",
+      consentVersion: 1,
+      consentedAt: "2026-11-08T10:00:00.000Z",
+      withdrawnAt: null,
+      scopes: { dataSharing: true, futureArticles: true },
+      language: "en" as const,
+    };
+    const text = buildHistoryExport([], null, new Date("2026-11-08T12:00:00.000Z"), {
+      research,
+    });
+    const parsed = JSON.parse(text) as Record<string, unknown>;
+    expect(parsed.research).toEqual(research);
+    expect(text).not.toContain("studyContactEmail");
   });
 
   it("carries the adaptation log for dose-response analysis", () => {

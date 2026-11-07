@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 114 |
-| Outcomes | 275 |
+| Records | 116 |
+| Outcomes | 277 |
 | Primary outcomes | 222 |
 | Systematic reviews/meta-analyses | 67 |
 | Network meta-analyses | 18 |
-| Other systematic reviews | 21 |
+| Other systematic reviews | 23 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 103 |
+| DOI verified | 105 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,12 +137,12 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 36 |
+| cct | 37 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
 | multi_intervention | 5 |
-| safety | 6 |
+| safety | 8 |
 | engagement | 26 |
 
 ## 9. Metadata verification
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 103 |
+| DOI verified | 105 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **114** |
+| **Total** | **116** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -179,6 +179,8 @@ Two mental-contrasting records joined the table the same day (PMIDs 34054628, 30
 One test-anxiety record joined the table the same day (PMID 29156362, 238 studies): anxiety is negatively related to performance and perceived pressure raises it; untimed beats timed, most for anxious test-takers. It grounds R50 (hide the clock) and the low-stakes framing throughout.
 
 A 2026-11-08 targeted UX update added two self-determination-theory meta-analyses as context records: Sheeran et al. 2020 (PMID 32437175; 56 articles, 65 tests, d+=0.23, corrected d+>=0.15; autonomous motivation and perceived competence mediated) and Ntoumanis et al. 2021 (PMID 31983293; 73 studies; small-to-medium changes in need support, autonomous motivation and health behaviour). Both DOIs were checked against Crossref and both stay `context` because they measure engagement design, not cognitive-training efficacy. They ground R54 (practice menu with explicit choice) and R55 (brief autonomy-supportive test explanations). The same update added the literature note [PRACTICE_MENU_AND_BRIEFING.md](PRACTICE_MENU_AND_BRIEFING.md).
+
+A 2026-11-08 data-collection update added two e-consent systematic reviews as context records: Cohen et al. 2023 (PMID 37656499; 35 studies, 13,281 participants; eConsent was better or not worse than paper for comprehension, acceptability and usability, no study favoured paper, cycle time increased) and Mazzochi et al. 2023 (PMID 36810093; 12 studies, 8,864 participants; enrolment effects mixed, comprehension/recall may improve, high heterogeneity). Both DOIs were checked against Crossref. The 2026 perspective on digital-phenotyping data banking (PMID 42443473) and the data-sharing measurement review (PMID 41813053) stayed narrative-only in [DATA_COLLECTION_AND_CONSENT.md](DATA_COLLECTION_AND_CONSENT.md): the first is a Perspective and the second found low-certainty survey measurement. These sources ground R57-R59.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

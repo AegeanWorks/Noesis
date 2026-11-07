@@ -16,6 +16,8 @@ The first vertical slice implements:
 - local practice history with per-mechanic last/best accuracy, JSON export and targeted clearing;
 - a practice menu that selects a single test or the interleaved session and shows the full block history;
 - a literature-based briefing before every test block, with the clock paused until the user begins;
+- an optional bilingual research consent flow with a random participant code and versioned consent record;
+- a local email hand-off that downloads the JSON export and prepares a mailto draft for the study team;
 - resumable sessions: a validated local snapshot survives reloads and Android WebView restarts;
 - an optional when/where practice plan, user-selected session length and difficulty, and a non-punitive weekly summary;
 - a bounded Motivation mode: cosmetic variable bonuses, streak multipliers, a real near-best cue, optional bonus-only risk and a target time;
@@ -133,6 +135,9 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R54 | A practice menu exposes every test and the complete local block history. Users can start one test, start or resume the interleaved session, or review past blocks. Explicit choice is autonomy support and is never marketed as a cognitive advantage. | SDT interventions have a small reliable behaviour effect mediated by autonomous motivation and perceived competence; focus sessions already provide the blocked exception. | 32437175; 31983293; ADR-040 |
 | R55 | Before every test block, a brief explanation states the construct, the response rule, the supported claim, the explicit non-claims, a primary source and the safety note. The session clock does not run until the user begins. The briefing changes no score and is not itself efficacy evidence. | Test anxiety is negatively related to performance and perceived pressure raises it; predictable low-stakes framing plus claim transparency reduces avoidable ambiguity without adding a cognitive claim. | 29156362; ADR-040 |
 | R56 | History reports each block separately with its mechanic, level, accuracy and summary. It never creates a composite score and never compares blocks across levels. | The review's measurement unit is the domain-specific block; composite scores can hide domain-specific nulls. | 40640327; 27697851; ADR-040 |
+| R57 | Research data sharing is opt-in, consent-gated and pseudonymous. The export carries a random participant code and a versioned consent record, but no name, email address or account identifier. The study contact email is never written into the data file. | eConsent improves comprehension and auditability; data banking needs participant control and data minimisation. | 37656499; 36810093; 42443473; ADR-041 |
+| R58 | Informed consent is a separate, bilingual (English/Turkish), versioned document covering purpose, data, hand-off, voluntariness, risks, benefits, confidentiality, retention, withdrawal and contact. Consent is blocked when the study contact is missing; withdrawal is available in Settings and stops future emails. | eConsent is better or not worse than paper for comprehension, acceptability and usability; a contact and a withdrawal path are part of an informed process. | 37656499; 36810093; ADR-041 |
+| R59 | The email hand-off is user-triggered and local: the app downloads the JSON file and prepares a recipient/subject/body draft with attachment instructions. It never sends automatically, never stores an SMTP credential, and never uploads data to a Noesis server. | A server-backed upload would add a new controller and security surface; local-first portability is already required. | R49; 37656499; ADR-041 |
 
 ---
 

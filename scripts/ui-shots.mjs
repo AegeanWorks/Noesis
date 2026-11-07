@@ -32,6 +32,11 @@ async function seed(context, overrides = {}) {
     ({ safetyProfile, appSettings }) => {
       localStorage.setItem("noesis.safety.v1", JSON.stringify(safetyProfile));
       localStorage.setItem("noesis.settings.v1", JSON.stringify(appSettings));
+      localStorage.setItem(
+        "noesis.research.v1",
+        JSON.stringify({ studyContactEmail: "study@example.org" }),
+      );
+      localStorage.removeItem("noesis.research-consent.v1");
       localStorage.removeItem("noesis.history.v1");
       localStorage.removeItem("noesis.session.v1");
       localStorage.removeItem("noesis.intention.v1");
@@ -171,6 +176,12 @@ await mobile.page.getByRole("button", { name: "Settings", exact: true }).click()
 await mobile.page.getByRole("heading", { name: "Local control" }).waitFor();
 await mobile.page.waitForTimeout(300);
 await mobile.page.screenshot({ path: `${OUT}/06-settings-mobile.png`, fullPage: true });
+await mobile.page.getByTestId("open-research-consent").click();
+await mobile.page.getByRole("heading", { name: /informed consent for research data sharing/i }).waitFor();
+await mobile.page.waitForTimeout(300);
+await mobile.page.screenshot({ path: `${OUT}/06b-research-consent-mobile.png`, fullPage: true });
+await mobile.page.getByRole("button", { name: "Cancel", exact: true }).click();
+await mobile.page.getByRole("heading", { name: "Local control" }).waitFor();
 await mobile.page.getByRole("button", { name: "Evidence", exact: true }).click();
 await mobile.page.getByRole("heading", { name: "What each mechanic can and cannot claim" }).waitFor();
 await mobile.page.waitForTimeout(300);

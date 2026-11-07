@@ -11,7 +11,7 @@
 
 An evidence-led cognitive training app. Every mechanic is a deterministic, headlessly drivable state machine, so the web app, the Android WebView build, the test suite and AI simulators run the same logic.
 
-**Current phase: first working vertical slice.** One-click sessions, four mechanics, a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
+**Current phase: first working vertical slice.** One-click sessions, four mechanics, a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
 
 ## 30-Second Cold-Start Quick Reference
 
@@ -67,6 +67,21 @@ counted as practice time. The explanation is identical for a standard block and 
 and it never changes the score. The literature basis is
 [docs/research/PRACTICE_MENU_AND_BRIEFING.md](docs/research/PRACTICE_MENU_AND_BRIEFING.md).
 
+## Research Data Sharing and Informed Consent
+
+Research participation is optional and separate from safety onboarding. A user can open the
+bilingual **Informed consent for research data sharing** screen (English/Türkçe), read what
+data is included, consent to the current study and future articles, and receive a random
+participant code. Consent is versioned, stored locally, and included in the export.
+
+To send data, the study team first sets its email address in Settings. The participant then
+chooses **Send research data**: the app downloads a JSON export and prepares a local email
+draft addressed to the study team. The user must attach the downloaded file and send it from
+their own email app. No data is uploaded automatically, no server is involved, and no SMTP
+credential is stored. Withdrawal stops future emails; data already sent cannot be recalled.
+The literature basis and privacy boundaries are in
+[docs/research/DATA_COLLECTION_AND_CONSENT.md](docs/research/DATA_COLLECTION_AND_CONSENT.md).
+
 ## Behavioral Engagement
 
 Noesis's behavioral-psychology review is integrated as a bounded **Motivation mode** for adult and older-adult engagement:
@@ -117,7 +132,7 @@ window.__NOESIS__.getState()
 
 ## What the Evidence Says
 
-The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 114 records with 275 outcomes (90 primary, 24 context).
+The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 116 records with 277 outcomes (90 primary, 26 context).
 
 - Cognitive training reliably improves trained tasks and short-term near transfer; broad far transfer is not established.
 - Neurofeedback for ADHD shows no significant probably blinded effect; consumer-grade neurofeedback shows no cognitive benefit.
@@ -141,6 +156,7 @@ noesis/
 │   ├── records/                  <- raw PubMed, OpenAlex, trial-registry and behavioral-literature records
 │   ├── BEHAVIORAL_ENGAGEMENT.md  <- Motivation mode audit, citations and safeguards
 │   ├── DESIGN_IMPLICATIONS.md    <- product requirements traceable to evidence
+│   ├── DATA_COLLECTION_AND_CONSENT.md <- e-consent and email data-return note
 │   ├── PRACTICE_MENU_AND_BRIEFING.md <- menu and pre-test briefing evidence note
 │   ├── PRISMA_FLOW.md            <- PRISMA flow and checklist
 │   ├── PROTOCOL.md               <- pre-registered review protocol
@@ -224,7 +240,7 @@ npm run test:all
 This runs:
 
 1. the Python review suite (`python -m unittest discover -s tests -t .`), which validates the evidence table's schema, identifiers, confidence intervals, flags and synthesis matrix;
-2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, and the React safety/mechanic screens.
+2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, research consent and email-draft storage, and the React safety/mechanic/settings screens.
 
 `npm run ai:verify` runs 400 seeded mechanic simulations (4 mechanics × 50 seeds × 2 strategies), checks every metric is finite, completes every run, and verifies the replay hash matches.
 
@@ -235,6 +251,7 @@ This runs:
 - [Search strategy](docs/research/SEARCH_STRATEGY.md)
 - [PRISMA flow](docs/research/PRISMA_FLOW.md)
 - [Design implications](docs/research/DESIGN_IMPLICATIONS.md)
+- [Data collection and consent](docs/research/DATA_COLLECTION_AND_CONSENT.md)
 - [Safety and regulation](docs/research/SAFETY_AND_REGULATION.md)
 
 Validate the evidence table:

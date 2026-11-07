@@ -36,6 +36,16 @@ const BASE = {
   study: { enrolled: false, studyId: null, arm: null, consentedAt: null },
   onEnrollStudy: () => {},
   onWithdrawStudy: () => {},
+  research: {
+    settings: { studyContactEmail: "" },
+    consent: null,
+    draft: null,
+    error: null,
+    onStudyContactEmail: () => {},
+    onOpenConsent: () => {},
+    onWithdrawConsent: () => {},
+    onPrepareEmail: () => {},
+  },
 };
 
 const REPORT: AdverseEvent = {

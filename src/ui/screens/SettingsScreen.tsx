@@ -13,6 +13,10 @@ import type { AdaptiveLevels } from "../../storage/adaptive";
 import type { StudyArm, StudyState } from "../../storage/study";
 import type { Difficulty, SessionLength } from "../../storage/settings";
 import { Button } from "../components/Button";
+import {
+  ResearchDataPanel,
+  type ResearchPanelState,
+} from "../components/ResearchDataPanel";
 
 interface SettingsScreenProps {
   reducedMotion: boolean;
@@ -35,6 +39,7 @@ interface SettingsScreenProps {
   study: StudyState;
   onEnrollStudy: (studyId: string, arm: StudyArm) => void;
   onWithdrawStudy: () => void;
+  research: ResearchPanelState;
   onReducedMotion: (value: boolean) => void;
   onDifficulty: (value: Difficulty) => void;
   onSessionLength: (value: SessionLength) => void;
@@ -134,6 +139,7 @@ export function SettingsScreen({
   study,
   onEnrollStudy,
   onWithdrawStudy,
+  research,
   onReducedMotion,
   onDifficulty,
   onSessionLength,
@@ -356,6 +362,8 @@ export function SettingsScreen({
           <StudyEnrollForm onEnroll={onEnrollStudy} />
         )}
       </div>
+
+      <ResearchDataPanel {...research} />
 
       <div className="card stack">
         <h2>AI test mode</h2>
