@@ -67,3 +67,20 @@ Two test gaps from the forward pass were closed:
 Verification before the final push: `python aikit.py check noesis` 6/6, `npm run test:all`
 29 Python + 262 Vitest, `npm run ai:verify` 400/400 deterministic simulations.
 Final push fast-forwards `c7daf75..HEAD` to `origin/master`.
+
+## Post-push review — one-click launcher (`2fce61f`, pushed after `d7e463b`)
+
+- Reviewed the one-commit launcher addition against the README, `start.cmd`, `start.sh` and
+  `scripts/start.mjs`.
+- Gaps found: only spaced `--port`/`--host` values were accepted; `start.cmd` checked Node but
+  not npm and printed **Noesis stopped with an error** after any non-zero stop, including a
+  normal Ctrl+C; `hasDependencies` and missing-value flags had no tests.
+- Fixes in this commit: `--port=<n>` / `--host=<host>` accepted alongside the spaced forms,
+  `nodeVersionOk` accepts `20.19` as well as `20.19.0`, `start.cmd` checks `npm` with a Why/Fix
+  message and uses a neutral stop message, and the launcher test file now has five cases
+  including the dependency probe.
+- Verification: 5 launcher tests; `--check` via the script and via `start.cmd`; real launch with
+  `--no-open --port=5184` returned HTTP 200 with Noesis content; `npm run test:all` 29 Python +
+  267 Vitest; `npm run ai:verify` 400/400; `python aikit.py check noesis` 6/6.
+- Push: `d7e463b..HEAD` fast-forward to `origin/master`.
+

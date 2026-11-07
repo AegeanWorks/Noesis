@@ -22,8 +22,9 @@ export function parseStartArgs(argv) {
       options.open = false;
     } else if (arg === "--open") {
       options.open = true;
-    } else if (arg === "--port") {
-      const raw = argv[index + 1];
+    } else if (arg === "--port" || arg.startsWith("--port=")) {
+      const raw = arg === "--port" ? argv[index + 1] : arg.slice("--port=".length);
+      if (arg === "--port") index += 1;
       const port = Number(raw);
       if (!Number.isInteger(port) || port < 1 || port > 65535) {
         throw new Error(
@@ -31,12 +32,11 @@ export function parseStartArgs(argv) {
         );
       }
       options.port = port;
-      index += 1;
-    } else if (arg === "--host") {
-      const host = argv[index + 1];
+    } else if (arg === "--host" || arg.startsWith("--host=")) {
+      const host = arg === "--host" ? argv[index + 1] : arg.slice("--host=".length);
+      if (arg === "--host") index += 1;
       if (!host) throw new Error("--host needs a value");
       options.host = host;
-      index += 1;
     } else if (arg === "--") {
       // npm may pass the separator; ignore it.
     } else {
@@ -47,7 +47,7 @@ export function parseStartArgs(argv) {
 }
 
 export function nodeVersionOk(version) {
-  const match = /^v?(\d+)\.(\d+)\./.exec(String(version));
+  const match = /^v?(\d+)\.(\d+)(?:\.|$)/.exec(String(version));
   if (!match) return false;
   const major = Number(match[1]);
   const minor = Number(match[2]);
