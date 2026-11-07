@@ -74,6 +74,7 @@ describe("Speed Tap", () => {
     expect(responded.phase).toBe("feedback");
     expect(responded.responses).toHaveLength(1);
     expect(responded.responses[0]?.reactionMs).toBe(0);
+    expect(speedView(responded).stimulus).toBe("circle");
   });
 
   it("replays exactly from its action stream", () => {

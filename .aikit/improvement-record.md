@@ -9,6 +9,7 @@ Covered so far:
 
 1. Progression and saves — 2026-11-07 — cycle 1
 2. UI readability — 2026-11-07 — cycle 2
+3. Graphics and effects — 2026-11-07 — cycle 3
 
 ## Cycle 1 — Progression and saves: resumed block-boundary momentum
 
@@ -98,6 +99,53 @@ Covered so far:
   6/6 gates pass.
 - **STATUS**: committed with the cycle; next area is graphics and effects.
 
+## Cycle 3 — Graphics and effects: feedback now keeps the trial stimulus
+
+- **Area**: graphics and effects (rotation 3/7).
+- **FIND**: At the feedback state the trial stimulus vanished, leaving `Hit` or `Impulse error`
+  over an empty 220px box and no visual tie to what was just shown. Scripted capture:
+  N-back `{phase: feedback, feedback: Hit, tone: correct, stimulus: null, stageFeedback: null}`;
+  Go/No-Go `{feedback: Impulse error, tone: incorrect, stimulus: null, stageFeedback: null}`.
+- **ANALYZE**: `nbackView`, `gonogoView` and `speedView` gated `stimulus` to the active trial
+  phase only; `MechanicStage` had no feedback attribute. The engine already had `feedbackTone`,
+  so the fix is view/attribute/CSS only, with no scoring or timing change.
+- **KILLED**: None dropped. A full-screen flash or animation was rejected on the safety
+  constraint (photosensitivity; no flashing by design); the chosen signal is a static border plus
+  a dimmed stimulus, with the existing text still carrying the meaning.
+- **IMPLEMENT**: Failing-first assertions in the N-back, Go/No-Go and Speed engine tests now
+  require the stimulus to survive into feedback; a `MechanicStage` test requires
+  `data-feedback="correct"`. Views expose the stimulus during `feedback`; every stage sets
+  `data-feedback`; CSS dims the stimulus to 0.55 in feedback and tints the stage border
+  green/red (shadow dropped in high-contrast). Added `scripts/feedback-proof.mjs`, which drives
+  a focus N-back hit and a focus Go/No-Go commission to their feedback frames and records the
+  view and stage attributes.
+- **PROOF (screenshots)**: same viewport 390x844@2x, same fixed seed 2721744568, same harness;
+  only the build differs.
+  - before N-back: `%TEMP%\opencode\noesis-cycles\cycle3-before\before-01-nback-hit-feedback.png`
+    SHA-256 `E2E6D6B8484D598A4311605BC4DEE86D4030D6B82F2AEB9EC85D6A8246332971` (blank box)
+  - after N-back: `%TEMP%\opencode\noesis-cycles\cycle3-after\after-01-nback-hit-feedback.png`
+    SHA-256 `68869D54CA4708A46068D75F501833883C08165F9276623DB047E7B075CD5496` (letter D dimmed,
+    green border)
+  - before Go/No-Go:
+    `%TEMP%\opencode\noesis-cycles\cycle3-before\before-02-gonogo-commission-feedback.png`
+    SHA-256 `589FBF2BB50D56F0FAB49D89692E61362177570BB3430955A242FCFD32D48145` (blank stage)
+  - after Go/No-Go:
+    `%TEMP%\opencode\noesis-cycles\cycle3-after\after-02-gonogo-commission-feedback.png`
+    SHA-256 `544951AE40F17DF53FCE283E5AC87831A2951E8580276C506515FC563E6792BB` (dimmed square,
+    red border)
+- **PROOF (played run)**: `node scripts/feedback-proof.mjs before|after <dir>` played a focus
+  N-back session until a real target and a focus Go/No-Go session until a real no-go, responding
+  through the live store, then captured the feedback frame. Before: both captures had
+  `stimulus: null`, `stageFeedback: null`. After: N-back `stimulus: "D"`, `stageFeedback:
+  "correct"`, feedback `Hit`; Go/No-Go `stimulus: "square"`, `stageFeedback: "incorrect"`,
+  feedback `Impulse error`. `consoleErrors []` in both runs; no page errors; scores and block
+  completion unchanged. What improved: the result is now visibly attached to the trial. What
+  stayed the same: input gating, timing, scoring, and the next-trial reset.
+- **GATES**: `npm run test:all` — 29 Python + 249 Vitest, all pass; `npm run ai:verify` — 400
+  deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
+  6/6 gates pass.
+- **STATUS**: committed with the cycle; next area is mechanic feel (the combat-feel rotation).
+
 ## Commands run
 
 ```text
@@ -118,4 +166,11 @@ npm run test:all                 29 Python + 249 Vitest passed
 npm run ai:verify                400/400 deterministic simulations passed
 npm run typecheck                clean
 python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/engine/nback.test.ts tests/engine/gonogo.test.ts tests/engine/speed.test.ts tests/ui/mechanic-stage.test.tsx
+  before fix: 4 failed (stimulus null / data-feedback null)
+  after fix:  33 passed
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/feedback-proof.mjs before|after <dir>
+  before: stimulus null in both feedback frames, stageFeedback null
+  after:  N-back stimulus D / correct; Go/No-Go stimulus square / incorrect; consoleErrors []
 ```

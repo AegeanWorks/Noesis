@@ -22,7 +22,12 @@ function Feedback({ view }: { view: MechanicView }) {
 
 function NBackStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) {
   return (
-    <div className="stage stage-nback" data-mechanic="nback" data-phase={view.phase}>
+    <div
+      className="stage stage-nback"
+      data-mechanic="nback"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
       <div className="stimulus-letter" aria-live="polite" data-testid="stimulus">
         {view.stimulus ?? "\u00a0"}
       </div>
@@ -43,7 +48,12 @@ function NBackStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) {
 function GoNoGoStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) {
   const shape = view.stimulus;
   return (
-    <div className="stage stage-gonogo" data-mechanic="gonogo" data-phase={view.phase}>
+    <div
+      className="stage stage-gonogo"
+      data-mechanic="gonogo"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
       <div
         className={`shape shape-${shape ?? "blank"}`}
         role="img"
@@ -67,7 +77,12 @@ function GoNoGoStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) 
 
 function SpeedStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) {
   return (
-    <div className="stage stage-speed" data-mechanic="speed" data-phase={view.phase}>
+    <div
+      className="stage stage-speed"
+      data-mechanic="speed"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
       <div
         className={`speed-ring ${view.stimulus ? "speed-ring-active" : "speed-ring-idle"}`}
         role="img"
@@ -91,7 +106,12 @@ function SpeedStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) {
 
 function ReasoningStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   return (
-    <div className="stage stage-reasoning" data-mechanic="reasoning" data-phase={view.phase}>
+    <div
+      className="stage stage-reasoning"
+      data-mechanic="reasoning"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
       <h2 className="reasoning-prompt" data-testid="stimulus">
         {view.prompt}
       </h2>

@@ -243,4 +243,12 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Render each citation as one anchor containing its label and PMID, styled as a bordered row with `min-height: 48px` and 8px vertical padding; `href`, `target="_blank"` and `rel="noreferrer"` are unchanged. Raise the PMID metadata from 0.74rem to 0.8rem. No evidence copy, route or storage change.
 - **Consequences**: The same 13 sources are now 13 single tappable rows (59px minimum at 390px), each exposing its PMID in the accessible name and still opening the correct PubMed page. Claim badges remain at 11.52px; they are a later readability candidate, not part of this change.
 
+### ADR-034: Feedback keeps the trial stimulus and tints the stage
+- **Date**: 2026-11-07
+- **Status**: Accepted
+- **Context**: The feedback state blanked the trial stimulus, so `Hit` / `Impulse error` appeared over an empty stage with nothing tying the result to what was just shown. A scripted playthrough captured `stimulus: null` and no stage tone in both N-back and Go/No-Go feedback frames.
+- **Decision**: Expose the trial stimulus during the `feedback` phase in N-back, Go/No-Go and Speed views, dim it to 55% via `data-phase="feedback"`, and add `data-feedback="correct|incorrect|neutral"` to every mechanic stage for a non-flashing green/red border tint. Scoring, timing, input gating and copy are unchanged; high contrast keeps the border and text while dropping the shadow.
+- **Consequences**: Players can connect a result to the trial it belongs to, and feedback is redundant beyond colour (text + icon-free border). The dimmed stimulus is a 120ms opacity transition that reduced-motion disables; the next trial still blanks and resets normally.
+
+
 

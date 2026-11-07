@@ -46,6 +46,8 @@ describe("MechanicStage", () => {
     );
     expect((screen.getByTestId("respond") as HTMLButtonElement).disabled).toBe(true);
     expect(screen.getByTestId("feedback").textContent).toBe("Hit");
+    expect(screen.getByTestId("stimulus").textContent).toBe("A");
+    expect(document.querySelector(".stage")?.getAttribute("data-feedback")).toBe("correct");
   });
 
   it("renders reasoning options and sends the chosen index", () => {

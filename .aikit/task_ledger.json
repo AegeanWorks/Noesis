@@ -1,62 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-cycle2-evidence-citations",
+    "task_id": "noesis-cycle3-feedback-visibility",
     "last_phase": "phase 4",
     "active_phase": 4,
     "status": "in_progress",
-    "updated_at": 1794076078.7354171,
-    "owner": "opencode:cycle2",
-    "started_by": "opencode:cycle2",
+    "updated_at": 1794076918.4365406,
+    "owner": "opencode:cycle3",
+    "started_by": "opencode:cycle3",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-adherence-barrier-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] R53 no-push rule, ADR-029, BEHAVIORAL 6.26, 112-record table; 228 Vitest + 29 Python green",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793635342.018529,
-      "timestamp_str": "2026-11-02 19:02:22",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-adherence-barrier-v1",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[2/2] R53 no-push rule, ADR-029, BEHAVIORAL 6.26, 112-record table; visual QA found zero console errors; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793635649.7354255,
-      "timestamp_str": "2026-11-02 19:07:29",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-adherence-barrier-v1",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-adherence-barrier-v1' completed successfully.",
-      "status": "completed",
-      "timestamp": 1793635675.9452207,
-      "timestamp_str": "2026-11-02 19:07:55",
-      "agent": "kilo:main"
-    },
-    {
-      "task_id": "noesis-adherence-row-v1",
-      "phase": "phase 1",
-      "phase_num": 1,
-      "description": "[1/2] Plan: adherence-factors review row plus morning-hint test",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1793635738.8274133,
-      "timestamp_str": "2026-11-02 19:08:58",
-      "agent": "kilo:main",
-      "impact_assessment": {
-        "why": "Jakob et al. 2022 SR (99 studies) names personalization, reminders, usable stable design and human support as adherence drivers with technical difficulties the top barrier; the review lacked this row and the morning hint lacked a test"
-      }
-    },
     {
       "task_id": "noesis-adherence-row-v1",
       "phase": "phase 2",
@@ -252,6 +206,56 @@
       "timestamp": 1794076078.7354171,
       "timestamp_str": "2026-11-07 21:27:58",
       "agent": "opencode:cycle2"
+    },
+    {
+      "task_id": "noesis-cycle2-evidence-citations",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-cycle2-evidence-citations' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794076160.5836887,
+      "timestamp_str": "2026-11-07 21:29:20",
+      "agent": "opencode:cycle2"
+    },
+    {
+      "task_id": "noesis-cycle3-feedback-visibility",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: feedback frames must keep the just-shown trial stimulus and mark the stage with its tone",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794076893.4539926,
+      "timestamp_str": "2026-11-07 21:41:33",
+      "agent": "opencode:cycle3",
+      "impact_assessment": {
+        "why": "Feedback appeared over an empty stage; scripted capture showed stimulus null and stageFeedback null in both N-back and Go/No-Go",
+        "benefits": "Result is visibly attached to the trial it belongs to; redundant non-colour signal",
+        "risks": "contract: scoring, timing and copy unchanged; dependency: none; concurrency: none; state: view payload gains feedback-phase stimulus but session state shape is unchanged",
+        "mitigation": "failing-first engine and stage tests, fixed-clock browser feedback harness with before/after frames, full gates"
+      },
+      "plan_digest": "407877d42158597b7e7b46348e7e54470e27119e6224256da83b0cdbb060b386"
+    },
+    {
+      "task_id": "noesis-cycle3-feedback-visibility",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Fix: N-back/Go-No-Go/Speed views expose stimulus in feedback; MechanicStage data-feedback on all four stages; CSS dims stimulus and tints border; failing-first tests and scripts/feedback-proof.mjs added",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794076907.0415301,
+      "timestamp_str": "2026-11-07 21:41:47",
+      "agent": "opencode:cycle3"
+    },
+    {
+      "task_id": "noesis-cycle3-feedback-visibility",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: 390x844@2x before/after N-back and Go/No-Go feedback frames same seed; before stimulus null both, after D/correct and square/incorrect; 29 Python + 249 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794076918.4365406,
+      "timestamp_str": "2026-11-07 21:41:58",
+      "agent": "opencode:cycle3"
     }
   ]
 }

@@ -214,7 +214,7 @@ export function speedView(state: SpeedState): MechanicView {
             : state.phase === "feedback"
               ? "Keep your eyes on the centre."
               : "Get ready.",
-    stimulus: state.phase === "stimulus" ? "circle" : null,
+    stimulus: state.phase === "stimulus" || state.phase === "feedback" ? "circle" : null,
     options: null,
     explanation: null,
     progressCurrent: state.completed

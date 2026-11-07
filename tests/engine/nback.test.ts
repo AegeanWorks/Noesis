@@ -96,7 +96,10 @@ describe("n-back", () => {
     const responded = applyNBackAction(initial, { type: "respond" });
     expect(responded.phase).toBe("feedback");
     expect(responded.responses).toHaveLength(1);
-    expect(nbackView(responded).canRespond).toBe(false);
+    const feedback = nbackView(responded);
+    expect(feedback.canRespond).toBe(false);
+    expect(feedback.stimulus).toBe(trial?.letter);
+    expect(feedback.feedbackTone).toBe("incorrect");
   });
 
   it("replays exactly from its action stream", () => {

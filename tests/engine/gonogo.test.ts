@@ -65,7 +65,9 @@ describe("go / no-go", () => {
     expect(view.canRespond).toBe(true);
     const responded = applyGoNoGoAction(state, { type: "respond" });
     expect(responded.phase).toBe("feedback");
-    expect(gonogoView(responded).canRespond).toBe(false);
+    const feedback = gonogoView(responded);
+    expect(feedback.canRespond).toBe(false);
+    expect(feedback.stimulus).toBe(view.stimulus);
   });
 
   it("replays exactly from its action stream", () => {

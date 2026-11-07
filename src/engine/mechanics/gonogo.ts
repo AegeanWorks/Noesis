@@ -238,7 +238,12 @@ export function gonogoView(state: GoNoGoState): MechanicView {
         : trial?.go
           ? "Respond to the circle."
           : "Do not respond to the square.",
-    stimulus: state.phase === "stimulus" && trial ? (trial.go ? "circle" : "square") : null,
+    stimulus:
+      (state.phase === "stimulus" || state.phase === "feedback") && trial
+        ? trial.go
+          ? "circle"
+          : "square"
+        : null,
     options: null,
     explanation: null,
     progressCurrent: state.completed

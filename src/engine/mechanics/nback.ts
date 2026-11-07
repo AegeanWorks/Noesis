@@ -280,7 +280,7 @@ export function nbackView(state: NBackState): MechanicView {
       state.phase === "complete"
         ? "Block complete"
         : `Match when the letter is the same as ${state.config.n} back.`,
-    stimulus: state.phase === "trial" && trial ? trial.letter : null,
+    stimulus: state.phase === "trial" || state.phase === "feedback" ? trial?.letter ?? null : null,
     options: null,
     explanation: null,
     progressCurrent: state.completed ? state.trials.length : Math.min(state.index + 1, state.trials.length),
