@@ -5,7 +5,7 @@ import { join } from "node:path";
 
 const OUT = process.env.SHOT_DIR ?? join(tmpdir(), "noesis-ui-shots");
 const EDGE = process.env.EDGE_PATH ?? "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
-const URL = "http://127.0.0.1:5173/";
+const URL = process.env.NOESIS_URL ?? "http://127.0.0.1:5173/";
 
 await mkdir(OUT, { recursive: true });
 
@@ -81,6 +81,12 @@ async function drive(page, onBlockComplete) {
       continue;
     }
     if (snap.phase !== "running") continue;
+    const begin = await page.$('[data-testid="begin-test"]');
+    if (begin) {
+      await begin.click();
+      await page.waitForTimeout(120);
+      continue;
+    }
     const action = await page.evaluate(() => {
       const s = window.__NOESIS__.getState();
       if (!s || !s.current) return null;
@@ -125,6 +131,10 @@ const mobile = await openPage(browser, { width: 390, height: 844 });
 await mobile.page.waitForTimeout(300);
 await mobile.page.screenshot({ path: `${OUT}/01-home-mobile-empty.png`, fullPage: true });
 await mobile.page.click('[data-testid="start-session"]');
+await mobile.page.waitForSelector('[data-testid="test-briefing"]');
+await mobile.page.waitForTimeout(300);
+await mobile.page.screenshot({ path: `${OUT}/02-session-briefing-mobile.png`, fullPage: true });
+await mobile.page.click('[data-testid="begin-test"]');
 await mobile.page.waitForSelector('[data-testid="session-root"]');
 await mobile.page.waitForTimeout(1200);
 await mobile.page.screenshot({ path: `${OUT}/02-session-mobile.png` });
@@ -135,6 +145,7 @@ await drive(mobile.page, async (blockIndex) => {
   if (!capturedSpeed && blockIndex === 2) {
     capturedSpeed = true;
     await mobile.page.getByTestId("bank-next").click();
+    await mobile.page.getByTestId("begin-test").click();
     await mobile.page.waitForSelector('[data-testid="stimulus"][data-shape="circle"]', {
       timeout: 5000,
     });
@@ -148,6 +159,14 @@ await mobile.page.getByRole("button", { name: "Noesis home" }).click();
 await mobile.page.waitForSelector('[data-testid="start-session"]');
 await mobile.page.waitForTimeout(300);
 await mobile.page.screenshot({ path: `${OUT}/05-home-mobile-history.png`, fullPage: true });
+await mobile.page.getByRole("button", { name: "Menu", exact: true }).click();
+await mobile.page.getByRole("heading", { name: "Choose a test or review your history" }).waitFor();
+await mobile.page.waitForTimeout(300);
+await mobile.page.screenshot({ path: `${OUT}/05b-menu-tests-mobile.png`, fullPage: true });
+await mobile.page.getByRole("tab", { name: /History/ }).click();
+await mobile.page.waitForSelector('[data-testid="history-session"]');
+await mobile.page.waitForTimeout(300);
+await mobile.page.screenshot({ path: `${OUT}/05c-menu-history-mobile.png`, fullPage: true });
 await mobile.page.getByRole("button", { name: "Settings", exact: true }).click();
 await mobile.page.getByRole("heading", { name: "Local control" }).waitFor();
 await mobile.page.waitForTimeout(300);
@@ -189,6 +208,10 @@ await contrast.context.close();
 const desktop = await openPage(browser, { width: 1280, height: 900 });
 await desktop.page.screenshot({ path: `${OUT}/10-home-desktop.png` });
 await desktop.page.click('[data-testid="start-session"]');
+await desktop.page.waitForSelector('[data-testid="test-briefing"]');
+await desktop.page.waitForTimeout(300);
+await desktop.page.screenshot({ path: `${OUT}/10b-session-briefing-desktop.png`, fullPage: true });
+await desktop.page.click('[data-testid="begin-test"]');
 await desktop.page.waitForSelector('[data-testid="session-root"]');
 await desktop.page.waitForTimeout(1200);
 await desktop.page.screenshot({ path: `${OUT}/11-session-desktop.png` });

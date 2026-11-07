@@ -104,9 +104,22 @@ await page.screenshot({ path: join(OUT, "01-home.png"), fullPage: true });
 results.push(await audit("home-empty"));
 
 await page.click('[data-testid="start-session"]');
-await page.waitForSelector('[data-testid="session-root"]');
-await page.waitForTimeout(900);
-await page.screenshot({ path: join(OUT, "02-session-nback.png") });
+await page.waitForSelector('[data-testid="test-briefing"]');
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, "02-session-briefing.png"), fullPage: true });
+results.push(await audit("session-briefing"));
+const briefingReport = await page.$eval('[data-testid="test-briefing"]', (node) => ({
+  text: (node.textContent ?? "").replace(/\s+/g, " ").trim(),
+  hasMeasures: /what this measures/i.test(node.textContent ?? ""),
+  hasClaim: /what the evidence supports/i.test(node.textContent ?? ""),
+  hasNonClaims: /not claimed/i.test(node.textContent ?? ""),
+  hasPmid: /PMID \d+/.test(node.textContent ?? ""),
+  hasSafety: /safety/i.test(node.textContent ?? ""),
+}));
+await page.click('[data-testid="begin-test"]');
+await page.waitForSelector('[data-testid="stimulus"]', { timeout: 15000 });
+await page.waitForTimeout(600);
+await page.screenshot({ path: join(OUT, "03-session-nback.png") });
 results.push(await audit("session-nback"));
 
 for (let step = 0; step < 6000; step += 1) {
@@ -127,6 +140,12 @@ for (let step = 0; step < 6000; step += 1) {
     continue;
   }
   if (snap.phase !== "running") continue;
+  const begin = await page.$('[data-testid="begin-test"]');
+  if (begin) {
+    await begin.click();
+    await page.waitForTimeout(120);
+    continue;
+  }
   const action = await page.evaluate(() => {
     const state = window.__NOESIS__.getState();
     const current = state?.current;
@@ -152,13 +171,25 @@ results.push(await audit("results"));
 await page.getByRole("button", { name: "Noesis home" }).click();
 await page.waitForSelector('[data-testid="start-session"]');
 await page.waitForTimeout(300);
-await page.screenshot({ path: join(OUT, "04-home-history.png"), fullPage: true });
+await page.screenshot({ path: join(OUT, "05-home-history.png"), fullPage: true });
 results.push(await audit("home-history"));
+
+await page.getByRole("button", { name: "Menu", exact: true }).click();
+await page.getByRole("heading", { name: "Choose a test or review your history" }).waitFor();
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, "06-menu-tests.png"), fullPage: true });
+results.push(await audit("menu-tests"));
+
+await page.getByRole("tab", { name: /History/ }).click();
+await page.waitForSelector('[data-testid="history-session"]');
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, "07-menu-history.png"), fullPage: true });
+results.push(await audit("menu-history"));
 
 await page.getByRole("button", { name: "Settings", exact: true }).click();
 await page.getByRole("heading", { name: "Local control" }).waitFor();
 await page.waitForTimeout(300);
-await page.screenshot({ path: join(OUT, "05-settings.png"), fullPage: true });
+await page.screenshot({ path: join(OUT, "08-settings.png"), fullPage: true });
 results.push(await audit("settings"));
 
 await page.getByRole("button", { name: "Evidence", exact: true }).click();
@@ -188,22 +219,22 @@ const citationReport = {
   firstHref: citationLinks[0]?.href ?? null,
   popupUrl,
 };
-await page.screenshot({ path: join(OUT, "06-evidence.png"), fullPage: true });
+await page.screenshot({ path: join(OUT, "09-evidence.png"), fullPage: true });
 results.push(await audit("evidence"));
 
 await page.getByRole("button", { name: "Noesis home" }).click();
 await page.waitForSelector('[data-testid="start-session"]');
 await page.evaluate(() => document.documentElement.classList.add("large-text"));
 await page.waitForTimeout(300);
-await page.screenshot({ path: join(OUT, "07-home-large-text.png"), fullPage: true });
+await page.screenshot({ path: join(OUT, "10-home-large-text.png"), fullPage: true });
 results.push(await audit("home-large-text"));
 
 await writeFile(
   join(OUT, "audit-report.json"),
-  `${JSON.stringify({ consoleErrors, citationReport, results }, null, 2)}\n`,
+  `${JSON.stringify({ consoleErrors, citationReport, briefingReport, results }, null, 2)}\n`,
   "utf8",
 );
-console.log(JSON.stringify({ consoleErrors, citationReport, summary: results.map((r) => ({
+console.log(JSON.stringify({ consoleErrors, citationReport, briefingReport, summary: results.map((r) => ({
   label: r.label,
   horizontalScroll: r.horizontalScroll,
   documentWidth: r.documentWidth,

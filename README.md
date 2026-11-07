@@ -11,7 +11,7 @@
 
 An evidence-led cognitive training app. Every mechanic is a deterministic, headlessly drivable state machine, so the web app, the Android WebView build, the test suite and AI simulators run the same logic.
 
-**Current phase: first working vertical slice.** One-click sessions, four mechanics, local practice history, safety onboarding, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
+**Current phase: first working vertical slice.** One-click sessions, four mechanics, a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
 
 ## 30-Second Cold-Start Quick Reference
 
@@ -50,6 +50,22 @@ An active session is snapshotted locally while it runs. After a browser reload o
 The home screen also shows a per-mechanic accuracy sparkline for recent sessions with last and best accuracy labeled by level, a 14-day practice calendar, and caring check-ins: heavy-use patterns trigger a rest suggestion with a one-tap Motivation pause, a missed yesterday gets a no-shame nudge, and a long absence gets a welcome-back. Settings offers larger text, high contrast, reduced motion and a hideable session clock.
 
 Completed sessions are stored locally and summarized per mechanic. Monthly word-recognition far checks, symptom reports and study enrollment (for trials) are stored separately from practice. There is no account and no server. Settings can export everything as JSON or clear it with one tap.
+
+## Practice Menu and Pre-Test Briefing
+
+The **Menu** tab is the explicit choice point. It lists all four tests with a short,
+literature-grounded explanation, the claim boundary, a primary PMID link, and the user's
+last/best accuracy and block count for that test. From there a user can start a single-test
+session or start/resume the interleaved session. The same screen has a **History** tab that
+lists completed sessions block by block, with each block's mechanic, level, accuracy and
+summary; there is no composite score.
+
+Every test block begins with a **Before this test** card: what the task measures, how to
+respond, what the evidence supports, what it does not claim, the primary source and the safety
+note. The session clock is paused until **Begin test** is pressed, so reading time is not
+counted as practice time. The explanation is identical for a standard block and a focused block,
+and it never changes the score. The literature basis is
+[docs/research/PRACTICE_MENU_AND_BRIEFING.md](docs/research/PRACTICE_MENU_AND_BRIEFING.md).
 
 ## Behavioral Engagement
 
@@ -101,7 +117,7 @@ window.__NOESIS__.getState()
 
 ## What the Evidence Says
 
-The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 112 records with 273 outcomes (90 primary, 22 context).
+The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 114 records with 275 outcomes (90 primary, 24 context).
 
 - Cognitive training reliably improves trained tasks and short-term near transfer; broad far transfer is not established.
 - Neurofeedback for ADHD shows no significant probably blinded effect; consumer-grade neurofeedback shows no cognitive benefit.
@@ -125,6 +141,7 @@ noesis/
 │   ├── records/                  <- raw PubMed, OpenAlex, trial-registry and behavioral-literature records
 │   ├── BEHAVIORAL_ENGAGEMENT.md  <- Motivation mode audit, citations and safeguards
 │   ├── DESIGN_IMPLICATIONS.md    <- product requirements traceable to evidence
+│   ├── PRACTICE_MENU_AND_BRIEFING.md <- menu and pre-test briefing evidence note
 │   ├── PRISMA_FLOW.md            <- PRISMA flow and checklist
 │   ├── PROTOCOL.md               <- pre-registered review protocol
 │   ├── README.md                 <- research index
@@ -207,7 +224,7 @@ npm run test:all
 This runs:
 
 1. the Python review suite (`python -m unittest discover -s tests -t .`), which validates the evidence table's schema, identifiers, confidence intervals, flags and synthesis matrix;
-2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, and the React safety/mechanic screens.
+2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, and the React safety/mechanic screens.
 
 `npm run ai:verify` runs 400 seeded mechanic simulations (4 mechanics × 50 seeds × 2 strategies), checks every metric is finite, completes every run, and verifies the replay hash matches.
 

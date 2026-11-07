@@ -37,6 +37,8 @@ interface HomeScreenProps {
   onSaveIntention: (when: string, where: string, pairing: string, obstacle: string) => void;
   onClearIntention: () => void;
   onEvidence: () => void;
+  onMenu: () => void;
+  onHistory: () => void;
   onPauseMotivation: () => void;
   onDismissHeavyUse: () => void;
   onDismissMilestones: () => void;
@@ -371,6 +373,8 @@ export function HomeScreen({
   onSaveIntention,
   onClearIntention,
   onEvidence,
+  onMenu,
+  onHistory,
   onPauseMotivation,
   onDismissHeavyUse,
   onDismissMilestones,
@@ -405,6 +409,12 @@ export function HomeScreen({
               Start a new session
             </Button>
           ) : null}
+          <Button variant="subtle" onClick={onMenu}>
+            Browse tests
+          </Button>
+          <Button variant="subtle" onClick={onHistory}>
+            View history
+          </Button>
           <Button variant="subtle" onClick={onEvidence}>
             Read the evidence
           </Button>

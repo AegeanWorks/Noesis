@@ -40,6 +40,8 @@ describe("one-click start", () => {
     fireEvent.click(screen.getByTestId("start-session"));
     const root = screen.getByTestId("session-root");
     expect(root.getAttribute("data-phase")).toBe("running");
+    expect(screen.getByTestId("test-briefing")).toBeTruthy();
+    fireEvent.click(screen.getByTestId("begin-test"));
     expect(screen.getByTestId("stimulus")).toBeTruthy();
     expect(sessionStore.getSnapshot()?.phase).toBe("running");
     expect(sessionStore.getSnapshot()?.current?.mechanic).toBe("nback");
@@ -56,6 +58,8 @@ describe("one-click start", () => {
     expect(resume.textContent).toContain("Resume session");
     fireEvent.click(resume);
     expect(screen.getByTestId("session-root").getAttribute("data-phase")).toBe("running");
+    expect(screen.getByTestId("test-briefing")).toBeTruthy();
+    fireEvent.click(screen.getByTestId("begin-test"));
     expect(sessionStore.getSnapshot()?.config.seed).toBe(42);
   });
 
@@ -67,5 +71,17 @@ describe("one-click start", () => {
     expect(resume.textContent).toContain("Resume session");
     fireEvent.click(resume);
     expect(screen.getByTestId("session-root").getAttribute("data-phase")).toBe("running");
+    expect(screen.getByTestId("test-briefing")).toBeTruthy();
+  });
+
+  it("starts a chosen test from the menu at the top of the briefing", () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole("button", { name: "Menu" }));
+    document.documentElement.scrollTop = 900;
+    fireEvent.click(screen.getByTestId("start-nback"));
+    expect(document.documentElement.scrollTop).toBe(0);
+    expect(screen.getByTestId("test-briefing")).toBeTruthy();
+    expect(sessionStore.getSnapshot()?.current?.mechanic).toBe("nback");
+    expect(sessionStore.getSnapshot()?.config.blocks).toHaveLength(3);
   });
 });

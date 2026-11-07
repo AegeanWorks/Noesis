@@ -14,6 +14,8 @@ The first vertical slice implements:
 - a one-click start that begins the first block immediately;
 - a session runner with per-block scoring and no composite score;
 - local practice history with per-mechanic last/best accuracy, JSON export and targeted clearing;
+- a practice menu that selects a single test or the interleaved session and shows the full block history;
+- a literature-based briefing before every test block, with the clock paused until the user begins;
 - resumable sessions: a validated local snapshot survives reloads and Android WebView restarts;
 - an optional when/where practice plan, user-selected session length and difficulty, and a non-punitive weekly summary;
 - a bounded Motivation mode: cosmetic variable bonuses, streak multipliers, a real near-best cue, optional bonus-only risk and a target time;
@@ -128,6 +130,9 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R52 | Default sessions interleave the four mechanics; focus sessions are the deliberate blocked exception. Interleaving beats blocking for inductive learning (g=0.42, strongest for complex similar material); word lists reverse it (blocking wins, g=-0.39), which the far checks blocked word-study respects. | Scheduling shapes inductive learning; material determines the direction. | 31556629; ADR-028 |
 | R53 | In-app notices are the only engagement prompts: milestones, far-check due, weekly-goal nudges. No push channel is built or planned; unsolicited push would trade against autonomy, and adherence evidence names personalization, reminders and stable usable design as the drivers with technical difficulties the top barrier. See ADR-029. | Technology prompts beat no strategy (RR 1.27) with high heterogeneity; new-content prompts sent early work best. | 26747176; 35612886; ADR-029 |
 | R46 | Settings offers a copyable one-line weekly summary (days, sessions, minutes, goal progress) for accountability reporting to a coach, clinician or investigator. Social support aids adherence; accounts do not exist, so the user pastes it themselves. | Self-monitoring plus social accountability support adherence; no new data leaves the device except by user action. | ADR-022 |
+| R54 | A practice menu exposes every test and the complete local block history. Users can start one test, start or resume the interleaved session, or review past blocks. Explicit choice is autonomy support and is never marketed as a cognitive advantage. | SDT interventions have a small reliable behaviour effect mediated by autonomous motivation and perceived competence; focus sessions already provide the blocked exception. | 32437175; 31983293; ADR-040 |
+| R55 | Before every test block, a brief explanation states the construct, the response rule, the supported claim, the explicit non-claims, a primary source and the safety note. The session clock does not run until the user begins. The briefing changes no score and is not itself efficacy evidence. | Test anxiety is negatively related to performance and perceived pressure raises it; predictable low-stakes framing plus claim transparency reduces avoidable ambiguity without adding a cognitive claim. | 29156362; ADR-040 |
+| R56 | History reports each block separately with its mechanic, level, accuracy and summary. It never creates a composite score and never compares blocks across levels. | The review's measurement unit is the domain-specific block; composite scores can hide domain-specific nulls. | 40640327; 27697851; ADR-040 |
 
 ---
 

@@ -14,6 +14,8 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     tagline: "Working-memory updating",
     instructions:
       "A letter appears. Press Match only when it is the same as the letter N positions back.",
+    brief:
+      "Working-memory updating: you keep a stream of letters in mind and decide whether the current one matches the one N positions back. N-back is a standard updating paradigm; training improves the trained task and closely related working-memory tasks, but the best-controlled reviews find no general intelligence or academic gain.",
     claimLevel: "supported",
     claim:
       "Trains working-memory updating; may improve performance on closely related working-memory tasks during training.",
@@ -33,6 +35,8 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     domain: "inhibition",
     tagline: "Response inhibition",
     instructions: "Press Respond for circles. Do not respond to squares.",
+    brief:
+      "Response inhibition and sustained attention: you press for one shape and withhold for another. Go/No-Go is a standard inhibition paradigm; practice improves performance on this task, but it is not an ADHD treatment and does not measure everyday impulse control.",
     claimLevel: "experimental",
     claim: "Practices response inhibition and sustained attention.",
     qualifier:
@@ -50,6 +54,8 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     domain: "reasoning",
     tagline: "Inductive reasoning",
     instructions: "Choose the best answer. You can take up to 30 seconds per item.",
+    brief:
+      "Inductive reasoning: you find the rule in sequences, analogies and logic items. Reasoning training has the most durable domain-specific evidence in older adults (the ACTIVE trial); this is practice on reasoning items, not an IQ test and not a dementia-prevention programme.",
     claimLevel: "supported",
     claim:
       "Practices inductive reasoning; reasoning training has shown durable domain-specific effects in older adults.",
@@ -62,12 +68,15 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
       { pmid: "41016407", label: "Lifestyle intervention network (2025)" },
     ],
     safety: "Text only. No flashing.",
-  },  speed: {
+  },
+  speed: {
     id: "speed",
     name: "Speed Tap",
     domain: "processing_speed",
     tagline: "Processing speed",
     instructions: "Wait for the circle, then tap as quickly as you can.",
+    brief:
+      "Simple reaction time and timing consistency: you wait for a circle, then tap as fast as you can. This is reaction-time practice, not the UFOV divided-attention protocol that showed speed-training effects in ACTIVE; it does not measure everyday processing speed.",
     claimLevel: "experimental",
     claim:
       "Practices simple reaction speed and timing consistency; it is not a substitute for divided-attention speed training.",

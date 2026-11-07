@@ -1,8 +1,8 @@
 # Noesis Evidence Review
 
-**Status:** v1.0 complete, AI-assisted, internally pre-registered  
-**Search date:** 2026-10-31  
-**Records:** 112 included (90 primary, 22 context), 273 outcomes  
+**Status:** v1.0 complete plus the 2026-11-08 targeted UX update, AI-assisted, internally pre-registered
+**Search date:** 2026-10-31; targeted update 2026-11-08
+**Records:** 114 included (90 primary, 24 context), 275 outcomes
 **Review type:** PRISMA 2020 systematic umbrella review with landmark-RCT update
 
 ---
@@ -39,11 +39,12 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [SYNTHESIS.md](SYNTHESIS.md) | Main evidence synthesis, population findings, claim ladder |
 | [DESIGN_IMPLICATIONS.md](DESIGN_IMPLICATIONS.md) | Product requirements traceable to evidence |
 | [BEHAVIORAL_ENGAGEMENT.md](BEHAVIORAL_ENGAGEMENT.md) | Bounded Motivation mode integration of Noesis behavioral mechanics, with evidence caveats and safeguards |
+| [PRACTICE_MENU_AND_BRIEFING.md](PRACTICE_MENU_AND_BRIEFING.md) | Literature basis for the test-selection menu, local history and pre-test briefing |
 | [TRIAL_READINESS.md](TRIAL_READINESS.md) | Investigator-facing trial dossier: arms, data schema, safety monitoring |
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |
 | [REFERENCES.bib](REFERENCES.bib) | BibTeX for the included records |
-| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (112 records, 273 outcomes) |
+| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (114 records, 275 outcomes) |
 | [analysis/screening_reviews.csv](analysis/screening_reviews.csv) | Rule-based screen of the 1,495-review PubMed corpus |
 | [analysis/screening_summary.json](analysis/screening_summary.json) | Screening counts |
 | [records/](records/) | Raw PubMed, OpenAlex, trial-registry and metadata-verification records |

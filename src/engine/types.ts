@@ -12,6 +12,8 @@ export interface MechanicMeta {
   domain: Domain;
   tagline: string;
   instructions: string;
+  /** Brief, literature-grounded explanation shown before every test block. */
+  brief: string;
   claimLevel: ClaimLevel;
   claim: string;
   qualifier: string;

@@ -78,12 +78,24 @@ import { useSessionPersistence } from "./ui/useSessionPersistence";
 import { useSessionState } from "./ui/useSession";
 import { EvidenceScreen } from "./ui/screens/EvidenceScreen";
 import { HomeScreen } from "./ui/screens/HomeScreen";
+import {
+  PracticeMenuScreen,
+  type MenuTab,
+} from "./ui/screens/PracticeMenuScreen";
 import { ResultsScreen } from "./ui/screens/ResultsScreen";
 import { SafetyScreen } from "./ui/screens/SafetyScreen";
 import { SessionScreen } from "./ui/screens/SessionScreen";
 import { SettingsScreen } from "./ui/screens/SettingsScreen";
 
-  type Screen = "home" | "safety" | "session" | "results" | "evidence" | "settings" | "farcheck";
+type Screen =
+  | "home"
+  | "safety"
+  | "session"
+  | "results"
+  | "evidence"
+  | "settings"
+  | "farcheck"
+  | "menu";
 
 function initialScreen(): Screen {
   return loadSafety()?.acknowledged ? "home" : "safety";
@@ -98,6 +110,8 @@ export function App() {
   const [safety, setSafety] = useState<SafetyProfile | null>(() => loadSafety());
   const [screen, setScreen] = useState<Screen>(initialScreen);
   const [paused, setPaused] = useState(false);
+  const [menuTab, setMenuTab] = useState<MenuTab>("tests");
+  const [briefingOpen, setBriefingOpen] = useState(false);
   const [settings, setSettings] = useState(() => loadSettings());
   const [history, setHistory] = useState<SessionRecord[]>(() => loadHistory());
   const [intention, setIntention] = useState<PracticeIntention | null>(() => loadIntention());
@@ -129,7 +143,7 @@ export function App() {
   const newMilestones = detectMilestones(history, adaptive.log, engagement.seenMilestones);
   const newBests = detectNewBests(state?.results ?? [], history, lastSessionId ?? "");
 
-  useSessionClock(paused || screen !== "session");
+  useSessionClock(paused || screen !== "session" || briefingOpen);
   useSessionPersistence(
     state,
     motivationActive ? motivation : null,
@@ -144,7 +158,15 @@ export function App() {
   }, [settings.reducedMotion, settings.largeText, settings.highContrast]);
 
   useEffect(() => {
+    // A long menu card can leave the page scrolled when the session mounts;
+    // start every screen, especially the pre-test briefing, at the top.
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [screen]);
+
+  useEffect(() => {
     if (state?.phase !== "complete" || state.results.length === 0) return;
+    setBriefingOpen(false);
     clearSessionSnapshot();
     const id = stableHash({ seed: state.config.seed, results: state.results });
     if (savedSession.current !== id) {
@@ -183,7 +205,9 @@ export function App() {
 
   const startSession = useCallback(
     (focus?: MechanicId) => {
-      clearSessionSnapshot();      const seed = Date.now() >>> 0;
+      clearSessionSnapshot();
+      const seed = Date.now() >>> 0;
+      setBriefingOpen(true);
       motivatedBlock.current = -1;
       const adaptiveState = loadAdaptive();
       setAdaptive(adaptiveState);
@@ -220,8 +244,14 @@ export function App() {
     [startSession],
   );
 
+  const openMenu = useCallback((tab: MenuTab) => {
+    setMenuTab(tab);
+    setScreen("menu");
+  }, []);
+
   const continueSession = useCallback(() => {
     if (sessionStore.getSnapshot()) {
+      setBriefingOpen(true);
       setPaused(false);
       setScreen("session");
     } else {
@@ -233,6 +263,7 @@ export function App() {
     clearSessionSnapshot();
     sessionStore.dispatch({ type: "abort" });
     sessionStore.reset();
+    setBriefingOpen(false);
     setMotivation(null);
     setPaused(false);
     setScreen("home");
@@ -247,15 +278,18 @@ export function App() {
   }, []);
 
   const nextBlock = useCallback(() => {
+    setBriefingOpen(true);
     sessionStore.dispatch({ type: "next" });
   }, []);
 
   const bankAndNext = useCallback(() => {
+    setBriefingOpen(true);
     setMotivation((current) => (current ? bankMotivation(current) : current));
     sessionStore.dispatch({ type: "next" });
   }, []);
 
   const riskAndNext = useCallback(() => {
+    setBriefingOpen(true);
     setMotivation((current) => (current ? riskMotivation(current) : current));
     sessionStore.dispatch({ type: "next" });
   }, []);
@@ -508,6 +542,14 @@ export function App() {
             </button>
             <button
               type="button"
+              className={screen === "menu" ? "nav-active" : ""}
+              onClick={() => openMenu("tests")}
+              aria-current={screen === "menu" ? "page" : undefined}
+            >
+              Menu
+            </button>
+            <button
+              type="button"
               className={screen === "evidence" ? "nav-active" : ""}
               onClick={() => setScreen("evidence")}
               aria-current={screen === "evidence" ? "page" : undefined}
@@ -555,15 +597,32 @@ export function App() {
             onSaveIntention={handleSaveIntention}
             onClearIntention={handleClearIntention}
             onEvidence={() => setScreen("evidence")}
+            onMenu={() => openMenu("tests")}
+            onHistory={() => openMenu("history")}
             onPauseMotivation={handlePauseMotivation}
             onDismissHeavyUse={handleDismissHeavyUse}
             onDismissMilestones={handleDismissMilestones}
           />
         ) : null}
 
+        {screen === "menu" ? (
+          <PracticeMenuScreen
+            history={history}
+            hasSession={hasSession}
+            sessionLength={settings.sessionLength}
+            initialTab={menuTab}
+            onStartTest={handleFocusMechanic}
+            onStartSession={() => startSession()}
+            onResume={continueSession}
+            onExportHistory={exportHistory}
+            onHome={() => setScreen("home")}
+          />
+        ) : null}
+
         {screen === "session" ? (
           view ? (
             <SessionScreen
+              key={state?.config.seed ?? "session"}
               view={view}
               paused={paused}
               onPause={() => setPaused(true)}
@@ -574,6 +633,7 @@ export function App() {
               onRiskAndNext={riskAndNext}
               onRespond={respond}
               onAnswer={answer}
+              onBriefingChange={setBriefingOpen}
               motivation={motivationActive ? motivation : null}
               targetMs={settings.sessionLength === "quick" ? 5 * 60_000 : 8 * 60_000}
               elapsedMs={state?.tick ?? 0}

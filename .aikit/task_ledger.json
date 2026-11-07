@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-start-hardening",
+    "task_id": "noesis-literature-menu-briefing",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794084966.5608394,
-    "owner": "opencode:startpolish",
-    "started_by": "opencode:startpolish",
+    "updated_at": 1794092200.8406935,
+    "owner": "opencode:litmenu",
+    "started_by": "opencode:litmenu",
     "continuations": [],
-    "completed_at": 1794084986.669097
+    "completed_at": 1794092281.1943767
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-cycle9-results-copy",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-cycle9-results-copy' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794081035.0348818,
-      "timestamp_str": "2026-11-07 22:50:35",
-      "agent": "opencode:cycle9"
-    },
-    {
-      "task_id": "noesis-cycle10-level-bests",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: bests, new-best badges and the near-best cue must compare within the block level",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794081463.6797705,
-      "timestamp_str": "2026-11-07 22:57:43",
-      "agent": "opencode:cycle10",
-      "impact_assessment": {
-        "why": "History/App compared every level; a level-1 83% block was measured against a level-3 95% best, suppressing the near-best cue and showing Best 95% on a level-1 row",
-        "benefits": "Honest like-for-like comparisons; level labels on home; bonus stops being suppressed by harder levels",
-        "risks": "contract: best lookup gains optional level filter, legacy results without level are excluded when filtering; dependency: none; concurrency: none; state: no format change",
-        "mitigation": "failing-first history/home tests, fixed-clock played run with seeded level bests and before/after frames, README update, full gates"
-      },
-      "plan_digest": "3eeb2630e6aef9fd3d03945f9a971b804124e7f6b630d51ef5afbc019ccb3d88"
-    },
-    {
-      "task_id": "noesis-cycle10-level-bests",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Fix: bestAccuracyFor optional difficulty; detectNewBests and App near-best pass result level; Home shows Last/Best L{level}; level-best proof script; README updated",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794081464.6612713,
-      "timestamp_str": "2026-11-07 22:57:44",
-      "agent": "opencode:cycle10"
-    },
-    {
-      "task_id": "noesis-cycle10-level-bests",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: same seeded level1 85/level3 95 bests and same 83% block; before Best 95%/+44 no cue, after Best L1 85%/+64 with near-best +10; 29 Python + 260 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794081465.956499,
-      "timestamp_str": "2026-11-07 22:57:45",
-      "agent": "opencode:cycle10"
-    },
     {
       "task_id": "noesis-cycle10-level-bests",
       "phase": "completed",
@@ -260,6 +210,56 @@
       "timestamp": 1794084986.669099,
       "timestamp_str": "2026-11-07 23:56:26",
       "agent": "opencode:startpolish"
+    },
+    {
+      "task_id": "noesis-literature-menu-briefing",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/6] Plan: add a literature-based practice menu with test selection and full block history, plus a brief evidence explanation before every test block",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794089851.83107,
+      "timestamp_str": "2026-11-08 01:17:31",
+      "agent": "opencode:litmenu",
+      "impact_assessment": {
+        "why": "The user asked for a test-selection/history menu and a brief explanation before every test; the review already supports autonomy, low-stakes framing and per-block measurement, and a targeted 2026-11-08 literature update adds two SDT meta-analyses",
+        "benefits": "Explicit choice (full session vs single test) and local history in one menu; every block states what it measures, the response rule, claim boundary, source and safety before scoring starts; all content traceable to PMIDs",
+        "risks": "contract: new menu screen, new briefing gate and MechanicMeta.brief field; dependency: none; concurrency: clock pauses while briefing is open; state: no history format change",
+        "mitigation": "failing-first UI and evidence tests, engine untouched, full test/typecheck/build/ai-verify/aikit gates, browser UI audit with screenshots"
+      },
+      "plan_digest": "f9b106a915528cc620cd965549079699bcec43fd679d47f9c0e6ba2541d7f727"
+    },
+    {
+      "task_id": "noesis-literature-menu-briefing",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/6] Impl: two SDT context records and count/reference updates; MechanicMeta.brief; PracticeMenuScreen with test and history tabs; TestBriefing before every block with clock gate; Home/Menu nav; scroll reset; docs R54-R56, ADR-040, research note; failing-first UI tests",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794092187.3451996,
+      "timestamp_str": "2026-11-08 01:56:27",
+      "agent": "opencode:litmenu"
+    },
+    {
+      "task_id": "noesis-literature-menu-briefing",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/6] Verified: review 114 records/275 outcomes valid; 29 Python + 278 Vitest; typecheck/build clean; ai:verify 400/400; ui audit consoleErrors [], no horizontal scroll, new links >=44px; proof scroll 2557->0, tick 0 while briefing then 911; aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794092200.8406935,
+      "timestamp_str": "2026-11-08 01:56:40",
+      "agent": "opencode:litmenu"
+    },
+    {
+      "task_id": "noesis-literature-menu-briefing",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-literature-menu-briefing' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794092281.1943781,
+      "timestamp_str": "2026-11-08 01:58:01",
+      "agent": "opencode:litmenu"
     }
   ]
 }

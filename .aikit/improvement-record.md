@@ -487,6 +487,27 @@ Open candidates (not yet cycles): none from the current audits.
   condition. The full evidence trail is this file, `.aikit/decisions.md` ADR-032…ADR-039, and
   the `scripts/*-proof.mjs` harnesses.
 
+## Cycle 12 - Literature-based practice menu and pre-test briefing
+
+- **Area**: navigation, measurement history, test onboarding.
+- **FIND**: the app had per-mechanic focus buttons on Home and per-mechanic last/best
+  values, but no single menu to compare tests, choose one, or read completed blocks. A
+  session began scoring immediately with only a one-line instruction, so a user could not
+  see the construct, claim boundary or source before starting. The user requested both.
+- **ANALYZE**: the existing review already supports per-block reporting, focus sessions and
+  low-stakes framing. A targeted PubMed update added two SDT meta-analyses as context
+  records (PMID 32437175, 31983293) and reused the test-anxiety record (PMID 29156362).
+  The menu and briefing are autonomy-support and transparency features, not efficacy claims.
+- **IMPLEMENT**: `PracticeMenuScreen` with Choose a test / History tabs; `TestBriefing`
+  before every block; `MechanicMeta.brief`; clock pause until Begin test; Home links to
+  Menu and History; README, DESIGN_IMPLICATIONS R54-R56, ADR-040 and the research note
+  `PRACTICE_MENU_AND_BRIEFING.md`.
+- **VERIFICATION**: see the commands below; the browser proof records 4 menu cards with
+  claim boundaries and PMIDs, a Speed Tap start from a menu scrolled 2,557px that lands at
+  `scrollOnBriefingPx: 0`, `tickWhileBriefingMs: 0`, `tickAfterBeginMs: 911`, and a paused
+  clock that does not advance. The UI audit records no console errors and no horizontal
+  scroll on menu, briefing or history.
+
 ## Commands run
 
 ```text
@@ -573,5 +594,18 @@ node scripts/level-best-proof.mjs before|after <dir>
   before: Best 95%, no near-best, +44 momentum
   after:  Best L1 85%, near-best +10, +64 momentum; same 83% accuracy; consoleErrors []
 npm run test:all                 29 Python + 260 Vitest passed
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/ui/practice-menu.test.tsx tests/ui/test-briefing.test.tsx
+  before fix: 1 failed suite (PracticeMenuScreen missing) + 2 failed briefing tests
+  after fix:  9 passed
+npx vitest run tests/ui/briefing-clock.test.tsx
+  passed: briefing open -> no frame/tick; Begin test -> tick advances
+python -m noesis review check    114 records validated (90 primary, 24 context)
+npm run test:all                 29 Python + 278 Vitest passed
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/menu-briefing-proof.mjs
+  menu 4 cards all claim/boundary/PMID; chosenMechanic speed; scrollBeforeStart 2557 -> scrollOnBriefing 0; tickWhileBriefing 0; tickAfterBegin 911; clockStopped true; consoleErrors []
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
+  consoleErrors []; no horizontal scroll; tinyText 0; new source links >=44px; menu/history/briefing audited
 python aikit.py check noesis     6/6 gates passed
 ```

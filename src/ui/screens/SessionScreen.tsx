@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { mechanicMeta } from "../../engine/evidence";
 import type { MotivationState } from "../../engine/motivation";
 import { MOTIVATION_TIERS, riskThreshold, totalMomentum } from "../../engine/motivation";
@@ -6,6 +6,7 @@ import type { SessionView } from "../../engine/types";
 import { Button } from "../components/Button";
 import { MechanicStage } from "../components/MechanicStage";
 import { ProgressBar } from "../components/ProgressBar";
+import { TestBriefing } from "../components/TestBriefing";
 
 interface SessionScreenProps {
   view: SessionView;
@@ -22,6 +23,7 @@ interface SessionScreenProps {
   onRiskAndNext: () => void;
   onRespond: () => void;
   onAnswer: (option: number) => void;
+  onBriefingChange?: (open: boolean) => void;
 }
 
 function isInteractiveTarget(target: EventTarget | null): boolean {
@@ -51,18 +53,41 @@ export function SessionScreen({
   onRiskAndNext,
   onRespond,
   onAnswer,
+  onBriefingChange,
 }: SessionScreenProps) {
   const isLastBlock = view.blockIndex + 1 >= view.blockCount;
   const outcome = motivation?.outcomes[motivation.outcomes.length - 1] ?? null;
   const [confirmEnd, setConfirmEnd] = useState(false);
+  const [briefedBlock, setBriefedBlock] = useState<number | null>(null);
+  const mechanic = view.mechanic;
+  const meta = mechanic ? mechanicMeta(mechanic.mechanic) : null;
+  const briefingVisible =
+    view.phase === "running" && mechanic !== null && briefedBlock !== view.blockIndex;
 
   useEffect(() => {
     if (!paused) setConfirmEnd(false);
   }, [paused]);
 
   useEffect(() => {
+    onBriefingChange?.(briefingVisible);
+    return () => onBriefingChange?.(false);
+  }, [briefingVisible, onBriefingChange]);
+
+  const beginBriefing = useCallback(
+    () => setBriefedBlock(view.blockIndex),
+    [view.blockIndex],
+  );
+
+  useEffect(() => {
     const handler = (event: KeyboardEvent) => {
       if (event.defaultPrevented || isInteractiveTarget(event.target)) return;
+      if (briefingVisible) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          beginBriefing();
+        }
+        return;
+      }
       if (view.phase === "block_complete") {
         if (event.key === "Enter") {
           event.preventDefault();
@@ -89,10 +114,18 @@ export function SessionScreen({
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [view, paused, motivation, onNext, onBankAndNext, onRespond, onAnswer]);
+  }, [
+    view,
+    paused,
+    motivation,
+    briefingVisible,
+    beginBriefing,
+    onNext,
+    onBankAndNext,
+    onRespond,
+    onAnswer,
+  ]);
 
-  const mechanic = view.mechanic;
-  const meta = mechanic ? mechanicMeta(mechanic.mechanic) : null;
   const lastResult = view.results[view.results.length - 1] ?? null;
   const streak = mechanic?.metrics.current_streak ?? 0;
   const bestStreak = mechanic?.metrics.max_streak ?? 0;
@@ -115,7 +148,7 @@ export function SessionScreen({
         <Button
           variant="ghost"
           onClick={onPause}
-          disabled={paused || view.phase !== "running"}
+          disabled={paused || view.phase !== "running" || briefingVisible}
           data-testid="pause"
         >
           Pause
@@ -124,12 +157,20 @@ export function SessionScreen({
 
       {mechanic ? (
         <>
-          <ProgressBar
-            current={mechanic.progressCurrent}
-            total={mechanic.progressTotal}
-            label={`${meta?.name ?? "Block"} progress`}
-          />
-          {motivation ? (
+          {briefingVisible ? (
+            <ProgressBar
+              current={view.blockIndex + 1}
+              total={view.blockCount}
+              label="Session progress"
+            />
+          ) : (
+            <ProgressBar
+              current={mechanic.progressCurrent}
+              total={mechanic.progressTotal}
+              label={`${meta?.name ?? "Block"} progress`}
+            />
+          )}
+          {motivation && !briefingVisible ? (
             <div className="streak-row" data-testid="streak">
               <span>
                 Streak <strong>{streak}</strong>
@@ -143,8 +184,16 @@ export function SessionScreen({
               </span>
             </div>
           ) : null}
-          <p className="instruction">{meta?.instructions}</p>
-          {view.phase === "block_complete" ? (
+          {!briefingVisible ? <p className="instruction">{meta?.instructions}</p> : null}
+          {briefingVisible && meta ? (
+            <TestBriefing
+              meta={meta}
+              blockIndex={view.blockIndex}
+              blockCount={view.blockCount}
+              difficulty={view.blockDifficulty}
+              onBegin={beginBriefing}
+            />
+          ) : view.phase === "block_complete" ? (
             <div className="card completion-card" data-testid="block-complete">
               <p className="eyebrow">Block complete</p>
               <h2>{meta?.name}</h2>

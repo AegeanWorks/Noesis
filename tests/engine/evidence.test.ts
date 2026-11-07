@@ -11,6 +11,7 @@ describe("evidence registry", () => {
     for (const meta of Object.values(MECHANIC_META)) {
       expect(meta.claim.length).toBeGreaterThan(20);
       expect(meta.qualifier.length).toBeGreaterThan(20);
+      expect(meta.brief.length).toBeGreaterThan(80);
       expect(meta.notClaimed.length).toBeGreaterThan(0);
       expect(meta.citations.length).toBeGreaterThan(0);
       expect(["supported", "experimental", "wellness_only"]).toContain(meta.claimLevel);

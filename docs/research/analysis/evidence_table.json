@@ -6889,6 +6889,99 @@
    "flags": [],
    "synthesis_role": "primary",
    "product_use": "Technical stability is an adherence intervention: no crashes, no lost data, no dead ends. Personalization and reminders are already in the product; usability is the standing gate."
+  },
+  {
+   "pmid": "32437175",
+   "doi": "10.1037/ccp0000501",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Journal of Consulting and Clinical Psychology",
+   "title": "Self-determination theory interventions for health behavior change: Meta-analysis and meta-analytic structural equation modeling of randomized controlled trials",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "mixed_adults"
+   ],
+   "k": 65,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "adherence",
+     "transfer": "na",
+     "measure": "Cohen d",
+     "value": 0.23,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "56 articles and 65 independent tests; health-behaviour effect d+=0.23, range 0.16-0.29; corrected for publication and small-sample bias d+>=0.15; autonomous motivation and perceived competence mediated"
+    }
+   ],
+   "findings": [
+    "SDT interventions produced a small but reliable health-behaviour effect (d+=0.23)",
+    "Autonomous motivation and perceived competence mediated the effect"
+   ],
+   "limitations": [
+    "Publication bias and small-sample bias were present",
+    "Behaviour outcomes, not cognitive outcomes"
+   ],
+   "flags": [
+    "publication_bias",
+    "small_sample_bias"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Supports explicit choice and autonomy-supportive framing in the practice menu; choice is engagement design, not an efficacy claim."
+  },
+  {
+   "pmid": "31983293",
+   "doi": "10.1080/17437199.2020.1718529",
+   "doi_status": "verified",
+   "year": 2021,
+   "journal": "Health Psychology Review",
+   "title": "A meta-analysis of self-determination theory-informed intervention studies in the health domain: effects on motivation, health behavior, physical, and psychological health",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "mixed_adults"
+   ],
+   "k": 73,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "adherence",
+     "transfer": "na",
+     "measure": "standardized mean change",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "73 studies; small-to-medium changes in SDT constructs and health behaviours at post-test and follow-up; increases in need support and autonomous motivation were associated with behaviour change"
+    }
+   ],
+   "findings": [
+    "SDT-informed interventions changed need support, autonomous motivation and health behaviour",
+    "Effects were modest, heterogeneous and partly mediated by self-determined motivation"
+   ],
+   "limitations": [
+    "Effects are small-to-medium and heterogeneous",
+    "Certainty is source-reported and provisional"
+   ],
+   "flags": [
+    "heterogeneity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Supports autonomy-supportive choice in the menu and clear rationale before each test; no cognitive-efficacy claim."
   }
  ]
 }

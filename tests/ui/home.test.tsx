@@ -56,6 +56,8 @@ function renderHome(overrides: Partial<ComponentProps<typeof HomeScreen>> = {}) 
     onSaveIntention: vi.fn(),
     onClearIntention: vi.fn(),
     onEvidence: vi.fn(),
+    onMenu: vi.fn(),
+    onHistory: vi.fn(),
     onPauseMotivation: vi.fn(),
     onDismissHeavyUse: vi.fn(),
     onDismissMilestones: vi.fn(),
