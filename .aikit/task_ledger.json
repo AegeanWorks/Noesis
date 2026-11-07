@@ -3,25 +3,15 @@
   "active_task": {
     "task_id": "noesis-push-review",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1794083725.5662584,
     "owner": "opencode:push-review",
     "started_by": "opencode:push-review",
-    "continuations": []
+    "continuations": [],
+    "completed_at": 1794083835.4702976
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-cycle7-end-guard",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: same paused state; before one click -> home/store null/snapshot false, after confirm shown + keep returns + confirm ends; 29 Python + 254 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794079993.378039,
-      "timestamp_str": "2026-11-07 22:33:13",
-      "agent": "opencode:cycle7"
-    },
     {
       "task_id": "noesis-cycle7-end-guard",
       "phase": "completed",
@@ -259,6 +249,16 @@
       "status": "in_progress",
       "timestamp": 1794083725.5662584,
       "timestamp_str": "2026-11-07 23:35:25",
+      "agent": "opencode:push-review"
+    },
+    {
+      "task_id": "noesis-push-review",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-push-review' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794083835.4703002,
+      "timestamp_str": "2026-11-07 23:37:15",
       "agent": "opencode:push-review"
     }
   ]
