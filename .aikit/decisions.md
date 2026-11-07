@@ -236,3 +236,11 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Seed the credited-block ref from the boot snapshot when its motivation already contains an outcome for the restored block index; otherwise keep `-1` so a snapshot saved before the credit, including an unresolved risk, is processed normally once. No storage format or UI change.
 - **Consequences**: Resume now shows the same momentum, bank prompt and banked total as the pre-reload session. The guard is per block index, so older snapshots and snapshots without that block's outcome behave as before; a resumed boundary can never silently grow its reward.
 
+### ADR-033: Evidence citations are single 48px PubMed rows
+- **Date**: 2026-11-07
+- **Status**: Accepted
+- **Context**: R33 requires 44px interactive targets for older adults, but the evidence screen rendered 13 inline citation links only 21px high, with the PMID outside the link and no row boundary. A 390x844 audit found five visible links under the floor and `allAtLeast44High: false`; the tap target was easy to miss on a phone.
+- **Decision**: Render each citation as one anchor containing its label and PMID, styled as a bordered row with `min-height: 48px` and 8px vertical padding; `href`, `target="_blank"` and `rel="noreferrer"` are unchanged. Raise the PMID metadata from 0.74rem to 0.8rem. No evidence copy, route or storage change.
+- **Consequences**: The same 13 sources are now 13 single tappable rows (59px minimum at 390px), each exposing its PMID in the accessible name and still opening the correct PubMed page. Claim badges remain at 11.52px; they are a later readability candidate, not part of this change.
+
+

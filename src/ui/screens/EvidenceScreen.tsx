@@ -6,6 +6,23 @@ interface EvidenceScreenProps {
   onHome: () => void;
 }
 
+function CitationLink({
+  href,
+  label,
+  pmid,
+}: {
+  href: string;
+  label: string;
+  pmid: string;
+}) {
+  return (
+    <a href={href} target="_blank" rel="noreferrer">
+      <span className="citation-label">{label}</span>
+      <span className="pmid">PMID {pmid}</span>
+    </a>
+  );
+}
+
 export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
   return (
     <section className="screen evidence-screen">
@@ -39,14 +56,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
             <ul className="citations">
               {meta.citations.map((citation) => (
                 <li key={citation.pmid}>
-                  <a
+                  <CitationLink
                     href={`https://pubmed.ncbi.nlm.nih.gov/${citation.pmid}/`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {citation.label}
-                  </a>{" "}
-                  <span className="pmid">PMID {citation.pmid}</span>
+                    label={citation.label}
+                    pmid={citation.pmid}
+                  />
                 </li>
               ))}
             </ul>
@@ -66,34 +80,25 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
         </p>
         <ul className="citations">
           <li>
-            <a
+            <CitationLink
               href="https://pubmed.ncbi.nlm.nih.gov/19217383/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Clark et al. (2009): near misses increase desire to play
-            </a>{" "}
-            <span className="pmid">PMID 19217383</span>
+              label="Clark et al. (2009): near misses increase desire to play"
+              pmid="19217383"
+            />
           </li>
           <li>
-            <a
+            <CitationLink
               href="https://pubmed.ncbi.nlm.nih.gov/33028074/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Global gaming-disorder prevalence: 3.05%
-            </a>{" "}
-            <span className="pmid">PMID 33028074</span>
+              label="Global gaming-disorder prevalence: 3.05%"
+              pmid="33028074"
+            />
           </li>
           <li>
-            <a
+            <CitationLink
               href="https://pubmed.ncbi.nlm.nih.gov/34982715/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Gamification meta-analysis: short-term effects
-            </a>{" "}
-            <span className="pmid">PMID 34982715</span>
+              label="Gamification meta-analysis: short-term effects"
+              pmid="34982715"
+            />
           </li>
         </ul>
       </aside>

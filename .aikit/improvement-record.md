@@ -7,7 +7,8 @@ audio cues (none shipped by design) and progression/saves. One area per cycle.
 
 Covered so far:
 
-1. Progression and saves — 2026-11-07 — cycle 1 (this entry)
+1. Progression and saves — 2026-11-07 — cycle 1
+2. UI readability — 2026-11-07 — cycle 2
 
 ## Cycle 1 — Progression and saves: resumed block-boundary momentum
 
@@ -53,8 +54,49 @@ Covered so far:
 - **GATES**: `npm run test:all` — 29 Python + 248 Vitest, all pass; `npm run ai:verify` — 400
   deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
   test/typecheck/build/hygiene/guidelines/secrets 6/6 pass. No console errors in the played run.
-- **COMMANDS**: see "Commands run" below.
 - **STATUS**: committed with the cycle; next area is UI readability.
+
+## Cycle 2 — UI readability: evidence citations were 21px tap targets
+
+- **Area**: UI readability (rotation 2/7).
+- **FIND**: The evidence screen's 13 PubMed citations rendered as inline links 21px high,
+  below the project's own 44px touch floor (ADR-030/R33), with the PMID outside the link and no
+  row boundary. The 390x844 audit found `allAtLeast44High: false`, `minHeight: 21` and five
+  visible links under the floor.
+- **ANALYZE**: `EvidenceScreen.tsx` emitted a bare `<a>{label}</a>` followed by a sibling
+  `<span class="pmid">`; `.citations a` only set a colour. The link was correct but too small to
+  hit reliably on a phone and its accessible name omitted the identifier. Fix belongs in the
+  render structure plus the citation row CSS; no copy, href, route or storage change.
+- **KILLED**: No candidate was dropped. The remaining audit flags (badges at 11.52px, 13px
+  checkbox inputs inside 44px labels) are outside this item; checkboxes are already wrapped by
+  full-size labels, and badges are a later readability candidate.
+- **IMPLEMENT**: Failing-first `tests/ui/evidence-citations.test.tsx` expects each citation to
+  be one PubMed link whose text carries its PMID; it failed on the first citation before the
+  change. Added a `CitationLink` child that wraps label + `PMID` in one anchor, reused for the
+  mechanic sources and the three Motivation citations. CSS turns `.citations` into a gap-spaced
+  list and each anchor into a bordered 48px-minimum row; PMID raised to 0.8rem. Added
+  `scripts/ui-audit.mjs`, a fixed-clock 390x844 audit that drives a quick session, captures
+  home/session/results/settings/evidence/large-text, checks overflow, tiny text, tap targets and
+  clipping, and clicks the first citation to verify the popup URL.
+- **PROOF (screenshots)**: same viewport 390x844@2x, same fixed seed and save state, same audit
+  script; only the build differs.
+  - before: `%TEMP%\opencode\noesis-cycles\cycle2-before\06-evidence.png`
+    SHA-256 `C55D1C06E51577E2E867DAB708B67B372405D3A88E1A404ECB8721424FD87145`
+    (inline links, `minHeight 21`, `allAtLeast44High false`, `allCarryPmid false`)
+  - after: `%TEMP%\opencode\noesis-cycles\cycle2-after\06-evidence.png`
+    SHA-256 `7BD1BD486F1A3CFFC858027E7B3B98DE4CAF4FA64D4A1ED02BF374050ECA28F6`
+    (bordered rows, `minHeight 59`, `allAtLeast44High true`, `allCarryPmid true`)
+- **PROOF (played run)**: `scripts/ui-audit.mjs` navigated Home → session → results → Home →
+  Settings → Evidence at 390x844, drove the quick session to completion (2 blocks) with no
+  console errors, then clicked the first citation: `popupUrl
+  https://pubmed.ncbi.nlm.nih.gov/42711482/` in both builds. Evidence screen tap-target count
+  went 5 → 0; the two remaining `smallTargets` flags on results/settings are checkbox inputs
+  inside full-size labels. Frame health: `consoleErrors []`; no page errors; no horizontal
+  overflow at any audited screen.
+- **GATES**: `npm run test:all` — 29 Python + 249 Vitest, all pass; `npm run ai:verify` — 400
+  deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
+  6/6 gates pass.
+- **STATUS**: committed with the cycle; next area is graphics and effects.
 
 ## Commands run
 
@@ -66,7 +108,13 @@ $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/resume-proof.mjs before <
   200 shown vs 100 saved; doubled true; consoleErrors []
 $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/resume-proof.mjs after <dir>
   100 shown vs 100 saved; doubled false; banked 100; consoleErrors []
-npm run test:all                 29 Python + 248 Vitest passed
+npx vitest run tests/ui/evidence-citations.test.tsx
+  before fix: 1 failed (link text had no PMID)
+  after fix:  1 passed
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
+  evidence citations: minHeight 21 -> 59; 5 -> 0 small targets; popup URL unchanged
+  consoleErrors [] on every audited screen
+npm run test:all                 29 Python + 249 Vitest passed
 npm run ai:verify                400/400 deterministic simulations passed
 npm run typecheck                clean
 python aikit.py check noesis     6/6 gates passed
