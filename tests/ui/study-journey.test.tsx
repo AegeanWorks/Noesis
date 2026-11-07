@@ -40,17 +40,24 @@ function completeSession(): void {
   const config = sessionStore.getSnapshot()?.config ?? defaultSessionConfig(1);
   config.blocks.forEach((block, index) => {
     const blockSeed = (config.seed + (index + 1) * 1009) >>> 0;
-    const actions: SessionAction[] = [
-      ...runMechanic(block.mechanic, blockSeed, block.difficulty, block.trials, optimalPolicy).actions,
-      { type: "next" },
-    ];
-    // One act() per dispatch so every intermediate phase renders and the
-    // per-block motivation effect observes each block completion.
-    for (const action of actions) {
-      act(() => {
+    const actions: SessionAction[] = runMechanic(
+      block.mechanic,
+      blockSeed,
+      block.difficulty,
+      block.trials,
+      optimalPolicy,
+    ).actions;
+    // Batch the block's 50 ms ticks into one act: React still renders the
+    // block_complete frame (where the per-block Motivation effect runs),
+    // but not thousands of intermediate trial frames.
+    act(() => {
+      for (const action of actions) {
         sessionStore.dispatch(action);
-      });
-    }
+      }
+    });
+    act(() => {
+      sessionStore.dispatch({ type: "next" });
+    });
   });
 }
 
