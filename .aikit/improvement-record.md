@@ -13,8 +13,13 @@ Covered so far:
 4. Mechanic feel — 2026-11-07 — cycle 4
 5. Session structure — 2026-11-07 — cycle 5
 6. Levels — 2026-11-07 — cycle 6
+7. Session safety — 2026-11-07 — cycle 7
 
-Open candidates (not yet cycles): claim badges at 11.52px; `1 impulse errors` summary pluralization.
+Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
+ship; adding sound would change the stated product scope and safety posture, so no cycle.
+
+Open candidates (not yet cycles): claim badges at 11.52px; `1 impulse errors` summary
+pluralization; result-tile `<40 ms` versus the summary's exact reaction time.
 
 ## Cycle 1 — Progression and saves: resumed block-boundary momentum
 
@@ -290,6 +295,48 @@ Open candidates (not yet cycles): claim badges at 11.52px; `1 impulse errors` su
   6/6 gates pass.
 - **STATUS**: committed with the cycle; next area is audio cues (rotation 7/7).
 
+## Cycle 7 — Session safety: End session discarded progress without confirmation
+
+- **Area**: session safety/session structure (rotation 7/7).
+- **FIND**: The paused overlay's **End session** button cleared the snapshot and aborted the
+  session on the first click. A scripted pause-and-end run recorded
+  `confirmShown: false`, `sessionVisible: false`, `homeVisible: true`, `storePhase: null`,
+  `snapshot: false` immediately after that one click; the session was unrecoverable.
+- **ANALYZE**: `SessionScreen` wired the danger button straight to `onEnd`, and `App.endSession`
+  clears the snapshot, aborts the store and returns home. The destructive action needs a local
+  confirm step; the abort contract and snapshot format should stay unchanged.
+- **KILLED**: Auto-saving partial sessions was rejected (it changes the history and trial-data
+  contract); a browser `confirm()` was rejected (blocks the UI and is hard to style/test); moving
+  End off the pause overlay was rejected (it hides a legitimate action).
+- **IMPLEMENT**: Failing-first `tests/ui/end-confirmation.test.tsx` clicks **End session** and
+  expects `onEnd` not to fire, then keeps the session, then confirms and expects one call; it
+  failed on the missing confirm target. `SessionScreen` now has a local `confirmEnd` state:
+  first click opens **End this session?** with **Keep practicing** and **End session**; only the
+  second click calls `onEnd`. The state resets when the session unpauses. Added
+  `scripts/end-guard-proof.mjs`, which pauses a quick session, clicks End, records the state,
+  keeps the session, then confirms the end.
+- **PROOF (screenshots)**: same viewport 390x844@2x, same fixed clock, same paused state before
+  the click; only the build differs.
+  - before: `%TEMP%\opencode\noesis-cycles\cycle7-before\before-02-after-first-end-click.png`
+    SHA-256 `EBC24476D57604D5670A3F4E2D4CCD268DA536FF8E71EDB0DBD3ECB16B51BB7F`
+    (home screen after the single click; session gone)
+  - after: `%TEMP%\opencode\noesis-cycles\cycle7-after\after-02-after-first-end-click.png`
+    SHA-256 `6815ABB96C7BAFDCFF99CD413BCB3F9D5C99BC345E281B8502E041461503E56F`
+    (**End this session?** confirm with Keep practicing / End session)
+- **PROOF (played run)**: `node scripts/end-guard-proof.mjs before|after <dir>` started a quick
+  session, paused it and clicked End. Before: `confirmShown false`, `homeVisible true`,
+  `sessionVisible false`, `storePhase null`, `snapshot false`. After: `confirmShown true`,
+  `sessionVisible true`, `storePhase "running"`, `snapshot true`; **Keep practicing** returned
+  to the session (`keepReturnedToSession true`); the second End + confirm returned home with
+  `store null` and `snapshot false`. `consoleErrors []`, no page errors. What improved: an
+  accidental end is recoverable. What stayed the same: deliberate end semantics, snapshot
+  format, and completed-session history.
+- **GATES**: `npm run test:all` — 29 Python + 254 Vitest, all pass; `npm run ai:verify` — 400
+  deterministic simulations; `npm run typecheck` — clean; `python aikit.py check noesis` —
+  6/6 gates pass.
+- **STATUS**: committed with the cycle; audio cues recorded as a dead end (no audio modules by
+  design); next area is a second readability pass on the remaining open candidates.
+
 ## Commands run
 
 ```text
@@ -343,5 +390,14 @@ node scripts/level-visibility-proof.mjs before|after <dir>
   before: headers without level, no badges, result difficulty null
   after:  Level 1/3 headers; Level 1/3 badges; result difficulty [1,3]; consoleErrors []
 npm run test:all                 29 Python + 253 Vitest passed
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/ui/end-confirmation.test.tsx
+  before fix: 1 failed (no confirmation target)
+  after fix:  1 passed
+node scripts/end-guard-proof.mjs before|after <dir>
+  before: one End click -> home, store null, snapshot false
+  after:  confirm shown, keep returns to session; confirm -> home; consoleErrors []
+npm run test:all                 29 Python + 254 Vitest passed
 python aikit.py check noesis     6/6 gates passed
 ```

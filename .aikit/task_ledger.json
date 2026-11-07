@@ -1,66 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-cycle6-level-visibility",
+    "task_id": "noesis-cycle7-end-guard",
     "last_phase": "phase 4",
     "active_phase": 4,
     "status": "in_progress",
-    "updated_at": 1794079294.691183,
-    "owner": "opencode:cycle6",
-    "started_by": "opencode:cycle6",
+    "updated_at": 1794079993.378039,
+    "owner": "opencode:cycle7",
+    "started_by": "opencode:cycle7",
     "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-cycle2-evidence-citations",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: evidence citations must be single 44px+ tappable PubMed rows with the PMID in the accessible name",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794076068.471641,
-      "timestamp_str": "2026-11-07 21:27:48",
-      "agent": "opencode:cycle2",
-      "impact_assessment": {
-        "why": "390x844 audit measured 13 citation links at 21px high, below the project's own 44px floor (ADR-030/R33), with PMIDs outside the link and no row boundary",
-        "benefits": "Older-adult touch targets, clearer source rows, PMID exposed in the link name and focus target",
-        "risks": "contract: evidence copy, hrefs and routes unchanged; dependency: none; concurrency: none; state: no storage change",
-        "mitigation": "failing-first structure test, fixed-clock browser audit with before/after screenshots and popup check, full gates before commit"
-      },
-      "plan_digest": "1d2b78e0a63e6274b257852a886c293cd59926a87bcf2361e1c01e3ab5e5ac4b"
-    },
-    {
-      "task_id": "noesis-cycle2-evidence-citations",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Fix: CitationLink wraps label + PMID in one anchor; .citations rows min-height 48px; PMID 0.8rem; failing-first test and scripts/ui-audit.mjs added; audit 21px/5 small targets -> 59px/0",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794076073.9365454,
-      "timestamp_str": "2026-11-07 21:27:53",
-      "agent": "opencode:cycle2"
-    },
-    {
-      "task_id": "noesis-cycle2-evidence-citations",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: before/after 390x844@2x evidence screenshots same seed/state; minHeight 21->59, 5->0 small targets, popup URL same; 29 Python + 249 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794076078.7354171,
-      "timestamp_str": "2026-11-07 21:27:58",
-      "agent": "opencode:cycle2"
-    },
-    {
-      "task_id": "noesis-cycle2-evidence-citations",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-cycle2-evidence-citations' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794076160.5836887,
-      "timestamp_str": "2026-11-07 21:29:20",
-      "agent": "opencode:cycle2"
-    },
     {
       "task_id": "noesis-cycle3-feedback-visibility",
       "phase": "phase 2",
@@ -262,6 +212,56 @@
       "timestamp": 1794079294.691183,
       "timestamp_str": "2026-11-07 22:21:34",
       "agent": "opencode:cycle6"
+    },
+    {
+      "task_id": "noesis-cycle6-level-visibility",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-cycle6-level-visibility' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794079347.7390387,
+      "timestamp_str": "2026-11-07 22:22:27",
+      "agent": "opencode:cycle6"
+    },
+    {
+      "task_id": "noesis-cycle7-end-guard",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: End session must ask for confirmation so a mis-tap cannot discard an unfinished session",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794079991.8587382,
+      "timestamp_str": "2026-11-07 22:33:11",
+      "agent": "opencode:cycle7",
+      "impact_assessment": {
+        "why": "One click on End session in the pause overlay cleared the snapshot and aborted the session; scripted before-run went straight home with store null and snapshot false",
+        "benefits": "Recoverable accidental exits; no change to deliberate abort semantics",
+        "risks": "contract: UI flow only, abort/snapshot unchanged; dependency: none; concurrency: none; state: local confirmation flag",
+        "mitigation": "failing-first component test, fixed-clock pause/end browser playthrough with before/after frames and a keep-then-confirm run, full gates"
+      },
+      "plan_digest": "4041e388bc06c6281e1dede6e9ba64fdaf5a9675c03ff327038c2e738f2f0d0d"
+    },
+    {
+      "task_id": "noesis-cycle7-end-guard",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Fix: two-step End confirmation with Keep practicing; resets on unpause; end-confirmation test and scripts/end-guard-proof.mjs added; README documents it",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794079992.7821653,
+      "timestamp_str": "2026-11-07 22:33:12",
+      "agent": "opencode:cycle7"
+    },
+    {
+      "task_id": "noesis-cycle7-end-guard",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: same paused state; before one click -> home/store null/snapshot false, after confirm shown + keep returns + confirm ends; 29 Python + 254 Vitest, ai:verify 400/400, typecheck clean, aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794079993.378039,
+      "timestamp_str": "2026-11-07 22:33:13",
+      "agent": "opencode:cycle7"
     }
   ]
 }

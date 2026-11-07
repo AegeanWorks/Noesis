@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { mechanicMeta } from "../../engine/evidence";
 import type { MotivationState } from "../../engine/motivation";
 import { MOTIVATION_TIERS, riskThreshold, totalMomentum } from "../../engine/motivation";
@@ -54,6 +54,11 @@ export function SessionScreen({
 }: SessionScreenProps) {
   const isLastBlock = view.blockIndex + 1 >= view.blockCount;
   const outcome = motivation?.outcomes[motivation.outcomes.length - 1] ?? null;
+  const [confirmEnd, setConfirmEnd] = useState(false);
+
+  useEffect(() => {
+    if (!paused) setConfirmEnd(false);
+  }, [paused]);
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
@@ -211,16 +216,45 @@ export function SessionScreen({
       ) : null}
 
       {paused ? (
-        <div className="overlay" role="dialog" aria-modal="true" aria-label="Session paused">
+        <div
+          className="overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-label={confirmEnd ? "Confirm ending session" : "Session paused"}
+        >
           <div className="card overlay-card">
-            <h2>Paused</h2>
-            <p className="muted">The clock is stopped. Take your time.</p>
-            <div className="hero-actions">
-              <Button onClick={onResume}>Resume</Button>
-              <Button variant="danger" onClick={onEnd}>
-                End session
-              </Button>
-            </div>
+            {confirmEnd ? (
+              <>
+                <h2>End this session?</h2>
+                <p className="muted">
+                  The session will stop and its unfinished blocks are not saved. Completed
+                  sessions stay in your practice history.
+                </p>
+                <div className="hero-actions">
+                  <Button onClick={() => setConfirmEnd(false)} data-testid="keep-session">
+                    Keep practicing
+                  </Button>
+                  <Button variant="danger" onClick={onEnd} data-testid="confirm-end">
+                    End session
+                  </Button>
+                </div>
+              </>
+            ) : (
+              <>
+                <h2>Paused</h2>
+                <p className="muted">The clock is stopped. Take your time.</p>
+                <div className="hero-actions">
+                  <Button onClick={onResume}>Resume</Button>
+                  <Button
+                    variant="danger"
+                    onClick={() => setConfirmEnd(true)}
+                    data-testid="end-session"
+                  >
+                    End session
+                  </Button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       ) : null}

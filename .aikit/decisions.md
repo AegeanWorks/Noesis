@@ -271,6 +271,14 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: `completeBlock` copies the block's difficulty into the `MechanicResult` (optional, so old records remain valid), `SessionView` exposes `blockDifficulty`, the session eyebrow reads `Block N of M · Level L`, and each result card carries a `Level L` badge. The export/history pick the field up automatically; no scoring, timing or storage-version change.
 - **Consequences**: Adaptive level changes are visible during the session and preserved with the result, so later comparisons can be grouped by level. Pre-v0.2 records simply show no badge, and results remain valid without the field.
 
+### ADR-038: Ending a paused session asks for confirmation
+- **Date**: 2026-11-07
+- **Status**: Accepted
+- **Context**: The paused overlay's single **End session** button cleared the snapshot and aborted the session immediately. A scripted run recorded one click leading to the home screen with `store: null` and `snapshot: false`; a mis-tap loses every unfinished block with no recovery.
+- **Decision**: The first **End session** click switches the same paused dialog to a confirmation state with **Keep practicing** and **End session**; only the second End calls the abort. The confirmation resets whenever the session is not paused. Copy states that unfinished blocks are not saved and completed sessions remain in history. No auto-save of partial sessions and no snapshot-format change.
+- **Consequences**: An accidental end is recoverable without changing deliberate abort behavior or storage. Ending takes one extra tap by design; completed-session history is untouched.
+
+
 
 
 
