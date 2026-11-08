@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-switch-cost-history",
+    "task_id": "noesis-switch-change",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794131997.6300812,
-    "owner": "opencode:switchcost",
-    "started_by": "opencode:switchcost",
+    "updated_at": 1794132636.3269792,
+    "owner": "opencode:switchchange",
+    "started_by": "opencode:switchchange",
     "continuations": [],
-    "completed_at": 1794132034.0565739
+    "completed_at": 1794132645.5138762
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-menu-adherence",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/4] Plan: surface the neutral session completion summary in the Menu History tab, not only Settings",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794109636.4331365,
-      "timestamp_str": "2026-11-08 06:47:16",
-      "agent": "opencode:menu-adherence",
-      "impact_assessment": {
-        "why": "Adherence data is now logged and exported, but the user only sees it in Settings. The review supports self-monitoring and feedback on behaviour (R23), and a visible neutral summary makes the history meaningful without loss framing.",
-        "benefits": "Started/completed/ended-early counts and completion rate in Menu History; same local data as the export; no new storage",
-        "risks": "contract: PracticeMenuScreen prop; dependency: none; concurrency: none; state: none",
-        "mitigation": "failing-first menu test, neutral copy review, browser/UI audit, full gates"
-      },
-      "plan_digest": "206a0f6827f46d6c5af0c75511998c1c5443ad345f921be3e09e533d6399d2ad"
-    },
-    {
-      "task_id": "noesis-menu-adherence",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/4] Impl: Menu History shows started/completed/ended-early counts, all-time completion percentage, and neutral not-a-failure copy; same adherence data as Settings/export",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794110011.5452986,
-      "timestamp_str": "2026-11-08 06:53:31",
-      "agent": "opencode:menu-adherence"
-    },
-    {
-      "task_id": "noesis-menu-adherence",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/4] Verified: 29 Python + 328 Vitest; typecheck/build clean; ai:verify 400/400; review 116/277 valid; UI audit menu-history no console errors/horizontal scroll/tiny text; aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794110022.899886,
-      "timestamp_str": "2026-11-08 06:53:42",
-      "agent": "opencode:menu-adherence"
-    },
-    {
-      "task_id": "noesis-menu-adherence",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-menu-adherence' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794110104.721491,
-      "timestamp_str": "2026-11-08 06:55:04",
-      "agent": "opencode:menu-adherence"
-    },
     {
       "task_id": "noesis-task-switch",
       "phase": "phase 3",
@@ -261,6 +211,56 @@
       "timestamp": 1794132034.0565763,
       "timestamp_str": "2026-11-08 13:00:34",
       "agent": "opencode:switchcost"
+    },
+    {
+      "task_id": "noesis-switch-change",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add a same-level switch-cost change indicator to each Task Switch history row",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794132505.8468428,
+      "timestamp_str": "2026-11-08 13:08:25",
+      "agent": "opencode:switchchange",
+      "impact_assessment": {
+        "why": "The trend showed last/mean/lowest but no direction versus the previous block at that level; cross-level comparison would be invalid",
+        "benefits": "Users see improved/worsened/unchanged within the correct level; first-block state explicit",
+        "risks": "contract: history UI only; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first three-state test, seeded before/after screenshots, real level-2 run with a deliberate switch delay, full gates"
+      },
+      "plan_digest": "3e72a4f48ad39669dc4c2c8b83e73d523866bfd5ac2d42647513585d1f20b168"
+    },
+    {
+      "task_id": "noesis-switch-change",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: previous/delta per level; improved/worsened/unchanged/first copy and color; tests; proof script level-2 delay; record",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794132635.536275,
+      "timestamp_str": "2026-11-08 13:10:35",
+      "agent": "opencode:switchchange"
+    },
+    {
+      "task_id": "noesis-switch-change",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded L3 worsened +20, L2 improved 20, L1 first; played L2 5 blocks last300/mean91/lowest-6, worsened +300, L3/L1 unchanged; consoleErrors []; 29 Python + 341 Vitest, 500 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794132636.3269792,
+      "timestamp_str": "2026-11-08 13:10:36",
+      "agent": "opencode:switchchange"
+    },
+    {
+      "task_id": "noesis-switch-change",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-switch-change' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794132645.5138774,
+      "timestamp_str": "2026-11-08 13:10:45",
+      "agent": "opencode:switchchange"
     }
   ]
 }

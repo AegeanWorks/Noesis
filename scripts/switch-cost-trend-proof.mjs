@@ -134,7 +134,8 @@ for (let step = 0; step < 5000; step += 1) {
   }
   if (state.phase !== "running") continue;
   const answered = await page.evaluate(() => {
-    const current = window.__NOESIS__.getState()?.current;
+    const state = window.__NOESIS__.getState();
+    const current = state?.current;
     if (!current || current.mechanic !== "switching" || current.phase !== "question") {
       return false;
     }
@@ -147,6 +148,9 @@ for (let step = 0; step < 5000; step += 1) {
         : trial.shape === "circle"
           ? 0
           : 1;
+    if (state.blockIndex === 2 && trial.switched) {
+      window.__NOESIS__.dispatch({ type: "advance", ms: 300 });
+    }
     window.__NOESIS__.dispatch({ type: "answer", option: correct });
     return true;
   });

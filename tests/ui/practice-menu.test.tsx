@@ -176,6 +176,15 @@ describe("PracticeMenuScreen", () => {
     expect(level3.textContent).not.toMatch(/50 ms/);
     expect(screen.getByTestId("switch-cost-level-2").textContent).toMatch(/Last 70 ms/);
     expect(screen.getByTestId("switch-cost-level-1").textContent).toMatch(/Last 50 ms/);
+    expect(screen.getByTestId("switch-cost-change-3").textContent).toBe(
+      "Worsened +20 ms vs previous block at this level",
+    );
+    expect(screen.getByTestId("switch-cost-change-2").textContent).toBe(
+      "Improved 20 ms vs previous block at this level",
+    );
+    expect(screen.getByTestId("switch-cost-change-1").textContent).toBe(
+      "First block at this level",
+    );
   });
 
   it("omits the switch-cost trend when there are no Task Switch blocks", () => {

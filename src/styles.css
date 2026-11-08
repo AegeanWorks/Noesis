@@ -1725,3 +1725,23 @@ html.high-contrast .speed-ring-active {
   color: var(--text);
 }
 
+
+.switch-cost-change {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.switch-cost-change-first,
+.switch-cost-change-same {
+  color: var(--muted);
+}
+
+.switch-cost-change-improved {
+  color: var(--ok);
+}
+
+.switch-cost-change-worsened {
+  color: var(--bad);
+}
+

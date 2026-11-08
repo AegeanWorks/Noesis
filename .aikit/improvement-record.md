@@ -20,6 +20,7 @@ Covered so far:
 11. Final audit — 2026-11-07 — zero verified findings (stop)
 12. Task Switch resume and switch-cost interpretation — 2026-11-08 — cycle 12
 13. Level-aware switch-cost history — 2026-11-08 — cycle 13
+14. Same-level switch-cost change — 2026-11-08 — cycle 14
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -850,3 +851,30 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 341 Vitest; `npm run ai:verify` — 500/500;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's UI, test, proof script and record.
+
+## Cycle 14 — Same-level switch-cost change indicator
+
+- **Area**: Task Switch history readability, still within the same-level switch-cost evidence.
+- **FIND**: The level-aware card showed a trend and last/mean/lowest values, but it did not say
+  whether the latest block was better or worse than the previous block at that level. Cross-level
+  comparisons would be invalid, so the direction must be computed within the row only.
+- **IMPLEMENT**: `SwitchCostLevel` now carries `previous` and `delta`; each level row compares
+  its two most recent values and renders one of `First block at this level`, `Improved N ms vs
+  previous block at this level`, `Worsened +N ms ...` or `No change ...`, with color and a
+  `data-direction` attribute. Tests assert the three states. The candidate note documents the
+  same-level comparison.
+- **PROOF (screenshots)**: seeded history levels 1-3, same 390x844@2x viewport:
+  - before: `%TEMP%\opencode\noesis-switch-change-before\before-01-history-seeded.png` SHA-256
+    `ECBC2F3F2C10393B757B64F0B0C43389A8D5E1E922EC35608F28E89219513DB4` (trend, no change line)
+  - after: `%TEMP%\opencode\noesis-switch-change-after\after-01-history-seeded.png` SHA-256
+    `313A81FCA08C2A8F772B86D105DBA2A13B2075436A01C5E3ECB8BB1C8C8CF13D`
+    (Level 3 `Worsened +20 ms`, Level 2 `Improved 20 ms`, Level 1 `First block at this level`)
+- **PROOF (played run)**: a real level-2 Task Switch focus session added three blocks; the final
+  block deliberately advanced 300 ms on switch trials before answering. Level 2 updated to
+  `5 blocks · last 300 ms · mean 91 ms · lowest -6 ms · Worsened +300 ms vs previous block at
+  this level`; Level 3 (`Worsened +20 ms`) and Level 1 (`First block`) were unchanged. Screenshot:
+  `%TEMP%\opencode\noesis-switch-change-after\after-02-history-after-play.png` SHA-256
+  `5CAAFB9894726BB4A1E3455565645B04C506638B03F80896278A4B5AA3D24CA4`; `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 341 Vitest; `npm run ai:verify` — 500/500;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's change indicator, test, proof script update and record.

@@ -82,7 +82,8 @@ quantitative basis.
 - Metrics: accuracy, switch/repeat accuracy, mean response time, switch cost, timeouts and
   streaks. The result card explains switch cost as the switch-trial mean minus the repeat-trial
   mean; a negative value means switching was faster in that block and is descriptive, not a
-  diagnosis.
+  diagnosis. The History card compares only blocks at the same level and labels the latest block
+  as improved, worsened or unchanged versus the previous block at that level.
 - It is available from the Menu as a three-block focus test. The default standard session stays
   the validated four-core lineup; Task Switch is not silently mixed in.
 - No general-intelligence, academic, dementia-prevention or everyday-function claim.

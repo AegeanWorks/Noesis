@@ -72,6 +72,8 @@ interface SwitchCostLevel {
   level: number;
   values: number[];
   last: number;
+  previous: number | null;
+  delta: number | null;
   mean: number;
   best: number;
 }
@@ -99,10 +101,14 @@ function switchCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] 
     .map(([level, entry]) => {
       const values = entry.values.slice(-10);
       const total = values.reduce((sum, value) => sum + value, 0);
+      const last = values[values.length - 1] ?? 0;
+      const previous = values.length >= 2 ? (values[values.length - 2] ?? null) : null;
       return {
         level,
         values,
-        last: values[values.length - 1] ?? 0,
+        last,
+        previous,
+        delta: previous === null ? null : last - previous,
         mean: Math.round(total / values.length),
         best: Math.min(...values),
       };
@@ -297,6 +303,35 @@ function HistoryPanel({
                 <p className="switch-cost-stats">
                   Last <strong>{entry.last} ms</strong> · Mean {entry.mean} ms · Lowest{" "}
                   {entry.best} ms
+                </p>
+                <p
+                  className={`switch-cost-change ${
+                    entry.delta === null
+                      ? "switch-cost-change-first"
+                      : entry.delta < 0
+                        ? "switch-cost-change-improved"
+                        : entry.delta > 0
+                          ? "switch-cost-change-worsened"
+                          : "switch-cost-change-same"
+                  }`}
+                  data-testid={`switch-cost-change-${entry.level}`}
+                  data-direction={
+                    entry.delta === null
+                      ? "first"
+                      : entry.delta < 0
+                        ? "improved"
+                        : entry.delta > 0
+                          ? "worsened"
+                          : "same"
+                  }
+                >
+                  {entry.previous === null
+                    ? "First block at this level"
+                    : entry.delta === 0
+                      ? "No change vs previous block at this level"
+                      : entry.delta !== null && entry.delta < 0
+                        ? `Improved ${Math.abs(entry.delta)} ms vs previous block at this level`
+                        : `Worsened +${entry.delta} ms vs previous block at this level`}
                 </p>
               </div>
             ))}
