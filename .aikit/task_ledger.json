@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-rotation",
+    "task_id": "noesis-rotation-resume",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794142706.8020465,
-    "owner": "opencode:rotation",
-    "started_by": "opencode:rotation",
+    "updated_at": 1794142934.1614845,
+    "owner": "opencode:rotationresume",
+    "started_by": "opencode:rotationresume",
     "continuations": [],
-    "completed_at": 1794142714.1061523
+    "completed_at": 1794142940.0405712
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-spatial-span",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: add an experimental Spatial Span (Corsi-style) focus test after verifying task-specific Corsi evidence and metadata",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794140375.3969176,
-      "timestamp_str": "2026-11-08 15:19:35",
-      "agent": "opencode:spatial",
-      "impact_assessment": {
-        "why": "The candidate matrix listed spatial span/Corsi; a 2025 meta-analysis found a small Corsi Block effect (d=0.16) in healthy older adults, while broader reviews show near transfer without far transfer",
-        "benefits": "A seventh measured mechanic for visuospatial working-memory practice; one new context record and v1.3 evidence table",
-        "risks": "contract: new mechanic across types/schema/UI/AI; default four-core lineup unchanged; dependency: none; concurrency: none; state: additive adaptive level and snapshot support",
-        "mitigation": "failing-first engine/UI tests, fixed-clock before/after Menu/stage/results proof, explicit ADR-047/R65 claim boundary, full gates"
-      },
-      "plan_digest": "9072ceaa5612129c5d85d47dd3a636ca6c662d4050f7441c873709a43c9e6a63"
-    },
-    {
-      "task_id": "noesis-spatial-span",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Impl: deterministic 3x3 adaptive span engine; stage/keyboard/results; evidence table 37822255 (119 records, 281 outcomes, v1.3); README/docs/ADR/R65; AI 700 sims",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794140377.0793145,
-      "timestamp_str": "2026-11-08 15:19:37",
-      "agent": "opencode:spatial"
-    },
-    {
-      "task_id": "noesis-spatial-span",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: before Menu no card; after card+briefing+3 level-2 blocks 8/8 each, mean span 6.8, longest 8; consoleErrors []; 29 Python + 367 Vitest, 700 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794140378.7079883,
-      "timestamp_str": "2026-11-08 15:19:38",
-      "agent": "opencode:spatial"
-    },
-    {
-      "task_id": "noesis-spatial-span",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-spatial-span' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794140391.6925495,
-      "timestamp_str": "2026-11-08 15:19:51",
-      "agent": "opencode:spatial"
-    },
     {
       "task_id": "noesis-spatial-trend",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794142714.1061542,
       "timestamp_str": "2026-11-08 15:58:34",
       "agent": "opencode:rotation"
+    },
+    {
+      "task_id": "noesis-rotation-resume",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: prove a Mental Rotation focus session survives reload and resumes with the same seed, block, level and trial",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794142933.1716416,
+      "timestamp_str": "2026-11-08 16:02:13",
+      "agent": "opencode:rotationresume",
+      "impact_assessment": {
+        "why": "Mental Rotation had only a storage round-trip test; no browser-level recovery proof existed",
+        "benefits": "Verified save/resume for Mental Rotation; screenshots and console-error evidence analogous to the other focus tests",
+        "risks": "contract: proof script only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "fixed-clock Playwright run with mid/stored/resumed comparison, three-block completion, full gates"
+      },
+      "plan_digest": "8f3c8426e15584b0520aa53a90fc7bd8d5c85eb7531d44542242c8e46cceef5d"
+    },
+    {
+      "task_id": "noesis-rotation-resume",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: scripts/rotation-resume-proof.mjs with three trials before reload, Resume session, briefing dismissal, completion and screenshots",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794142933.634975,
+      "timestamp_str": "2026-11-08 16:02:13",
+      "agent": "opencode:rotationresume"
+    },
+    {
+      "task_id": "noesis-rotation-resume",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seed 2721744568, block 0/3, rotation, level 2, trial 3 question identical mid/stored/resumed; Resume session; 3 blocks 12/12 mean 570/400/400; consoleErrors []; 29 Python + 381 Vitest, 800 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794142934.1614845,
+      "timestamp_str": "2026-11-08 16:02:14",
+      "agent": "opencode:rotationresume"
+    },
+    {
+      "task_id": "noesis-rotation-resume",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-rotation-resume' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794142940.0405731,
+      "timestamp_str": "2026-11-08 16:02:20",
+      "agent": "opencode:rotationresume"
     }
   ]
 }
