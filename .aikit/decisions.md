@@ -404,6 +404,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Keep the optional confidence check, but state its evidence boundary in the briefing: item-level confidence judgments can subtly change memory, confidence is often a weak predictor of accuracy, and the block-level prompt is a reflection, not a validated memory intervention. Repeat the weak-predictor caveat on the result note and in the Menu History confidence summary. Add Ingendahl 2025 as a context record; the review moves to 123 records, 285 outcomes and revision v1.7.
 - **Consequences**: The app makes no memory-improvement claim for the confidence check. The evidence note is test-covered, and the review count/version gates are updated deliberately.
 
+### ADR-057: N-back brief grounded in task-specific training meta-analysis
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The core N-back mechanic cited broad working-memory reviews but not the task-specific N-back training meta-analysis. Soveri et al. 2017 (PMID 28116702; *Psychonomic Bulletin & Review*) meta-analysed 203 effect sizes from 33 published randomized controlled n-back training trials in healthy adults: medium transfer to untrained n-back tasks, but very small effects on other working-memory tasks, fluid intelligence and cognitive control; no moderation by age, dose, single versus dual training, or verbal versus visuospatial content. The 2026 asymmetry meta-analysis (PMID 42711482) already cited by the app found updating-to-span transfer g=0.176 but span-to-updating g=0.048.
+- **Decision**: Add Soveri 2017 as a context record and make it the first N-back citation. Tighten the N-back brief, claim and qualifier from "closely related working-memory tasks" to "untrained n-back tasks, with little transfer beyond the task". The claim remains supported, but only for task-specific near transfer; no general-intelligence or academic claim is made.
+- **Consequences**: The review moves to 124 records, 286 outcomes and revision v1.8. The N-back briefing now shows the task-specific meta-analysis as its primary source, and a dedicated test locks the citation and claim wording.
+
 
 
 

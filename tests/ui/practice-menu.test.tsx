@@ -268,7 +268,8 @@ describe("PracticeMenuScreen", () => {
     }
     const nback = screen.getByTestId("menu-test-nback");
     expect(nback.textContent).toMatch(/working-memory updating/i);
-    expect(nback.textContent).toMatch(/PMID 42711482/);
+    expect(nback.textContent).toMatch(/untrained n-back/i);
+    expect(nback.textContent).toMatch(/PMID 28116702/);
     expect(nback.textContent).toMatch(/not claim/i);
     fireEvent.click(screen.getByRole("button", { name: "Start N-back test" }));
     expect(props.onStartTest).toHaveBeenCalledWith("nback");

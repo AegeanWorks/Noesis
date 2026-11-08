@@ -76,7 +76,8 @@ describe("pre-test briefing", () => {
     expect(briefing.textContent).toMatch(/what this measures/i);
     expect(briefing.textContent).toMatch(/working-memory updating/i);
     expect(briefing.textContent).toMatch(/what the evidence supports/i);
-    expect(briefing.textContent).toMatch(/PMID 42711482/);
+    expect(briefing.textContent).toMatch(/untrained n-back/i);
+    expect(briefing.textContent).toMatch(/PMID 28116702/);
     expect(briefing.textContent).toMatch(/not claimed/i);
     expect(briefing.textContent).toMatch(/safety/i);
     expect(screen.queryByTestId("stimulus")).toBeNull();

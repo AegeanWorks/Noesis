@@ -7415,6 +7415,53 @@
    ],
    "synthesis_role": "context",
    "product_use": "Bounds the optional confidence check: item-level confidence judgments can change memory, but confidence is often a weak predictor of accuracy; the app labels its block-level prompt as a reflection, not a validated intervention."
+  },
+  {
+   "pmid": "28116702",
+   "doi": "10.3758/s13423-016-1217-0",
+   "doi_status": "verified",
+   "year": 2017,
+   "journal": "Psychonomic Bulletin & Review",
+   "title": "Working memory training revisited: A multi-level meta-analysis of n-back training studies",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 33,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "meta_analysis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "medium transfer to untrained n-back tasks; very small effects on other working-memory tasks, fluid intelligence and cognitive control"
+    }
+   ],
+   "findings": [
+    "203 effect sizes from 33 published randomized controlled n-back training trials in healthy adults",
+    "A medium-sized transfer effect was observed to untrained n-back tasks",
+    "Effects on other working-memory tasks, fluid intelligence and cognitive control were very small"
+   ],
+   "limitations": [
+    "A substantial part of transfer was task-specific",
+    "No moderator effects were found for age, training dose, single versus dual training, or verbal versus visuospatial content",
+    "Certainty is source-reported and provisional"
+   ],
+   "flags": [
+    "heterogeneity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the core N-back mechanic: near transfer to untrained n-back tasks is medium-sized, but transfer to other working-memory tasks, fluid intelligence and cognitive control is very small."
   }
  ]
 }

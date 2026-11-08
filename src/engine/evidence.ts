@@ -15,14 +15,15 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     instructions:
       "A letter appears. Press Match only when it is the same as the letter N positions back.",
     brief:
-      "Working-memory updating: you keep a stream of letters in mind and decide whether the current one matches the one N positions back. N-back is a standard updating paradigm; training improves the trained task and closely related working-memory tasks, but the best-controlled reviews find no general intelligence or academic gain.",
+      "Working-memory updating: you keep a stream of letters in mind and decide whether the current one matches the one N positions back. A 2017 multi-level meta-analysis of 33 randomized n-back training trials in healthy adults found medium transfer to untrained n-back tasks, but only very small effects on other working-memory tasks and cognitive control, with no evidence of a general-intelligence gain.",
     claimLevel: "supported",
     claim:
-      "Trains working-memory updating; may improve performance on closely related working-memory tasks during training.",
+      "Trains working-memory updating; improves performance on untrained n-back tasks, with little transfer beyond the task.",
     qualifier:
-      "Near transfer only. The best-controlled reviews find no general intelligence or academic gain.",
+      "Near transfer to untrained n-back only. The meta-analysis found very small effects on other working-memory tasks and cognitive control, and no evidence of a general-intelligence gain.",
     notClaimed: ["General intelligence", "Academic achievement", "Dementia prevention"],
     citations: [
+      { pmid: "28116702", label: "N-back training meta-analysis (2017)" },
       { pmid: "42711482", label: "Asymmetric working-memory transfer (2026)" },
       { pmid: "22612437", label: "Working-memory training meta-analysis (2013)" },
       { pmid: "27474138", label: "No far transfer with treated controls (2016)" },

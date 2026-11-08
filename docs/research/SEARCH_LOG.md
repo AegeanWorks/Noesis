@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 123 |
-| Outcomes | 285 |
+| Records | 124 |
+| Outcomes | 286 |
 | Primary outcomes | 226 |
-| Systematic reviews/meta-analyses | 74 |
+| Systematic reviews/meta-analyses | 75 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 23 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 112 |
+| DOI verified | 113 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 44 |
+| cct | 45 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 112 |
+| DOI verified | 113 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **123** |
+| **Total** | **124** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -205,6 +205,8 @@ A 2026-11-08 metacognition search found no confidence-calibration training meta-
 A 2026-11-08 visual working-memory search found no eligible change-detection training meta-analysis. The broader working-memory/executive-function training records (PMIDs 30998045, 32011155) already in the corpus stayed the quantitative basis. Change Detection was added as an experimental focus test with an explicit task-specific evidence exception (R69, ADR-055), using a static coloured grid and one brief change; no evidence-table record was added.
 
 A 2026-11-08 judgments-of-learning search added one context record: Ingendahl et al. 2025 (PMID 40875340; *Psychological Bulletin*; 344 effect sizes from 175 experiments, N=15,079; immediate JOL reactivity g=0.22, 95% CI [0.17, 0.27]; related pairs g=0.44, unrelated pairs g=-0.09; publication bias indicated). The DOI and metadata were verified via PubMed esummary/efetch. It bounds the optional confidence check: the app now states in the briefing that item-level confidence judgments can subtly change memory and that confidence is often a weak predictor, and it labels the block-level prompt as a reflection rather than a validated memory intervention (ADR-056). Double et al. 2018 (PMID 29161973) and Hu et al. 2025 (PMID 40845062) stayed narrative-only. The review is now 123 records and 285 outcomes, revision v1.7.
+
+A 2026-11-08 targeted n-back search added one task-specific context record: Soveri et al. 2017 (PMID 28116702; *Psychonomic Bulletin & Review*; 203 effect sizes from 33 published randomized controlled n-back training trials in healthy adults; medium transfer to untrained n-back tasks, but very small effects on other working-memory tasks, fluid intelligence and cognitive control; no moderation by age, dose, single versus dual training, or verbal versus visuospatial content). The DOI and metadata were verified via PubMed esummary/efetch. It becomes the first N-back citation and tightens the core mechanic's brief, claim and qualifier from "closely related working-memory tasks" to "untrained n-back tasks, with little transfer beyond the task". The 2026 asymmetry meta-analysis (PMID 42711482) remains a supporting citation. The review is now 124 records and 286 outcomes, revision v1.8.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

@@ -1865,3 +1865,38 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 442 Vitest; `npm run ai:verify` — 1,100/1,100;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's evidence record, confidence copy, tests, proofs and record.
+
+## Cycle 43 — Task-specific N-back evidence tightens the core claim
+
+- **Area**: literature research and the core N-back mechanic's evidence base.
+- **FIND**: The N-back mechanic cited broad working-memory reviews but not the task-specific
+  meta-analysis. Soveri et al. 2017 (PMID 28116702; *Psychonomic Bulletin & Review*) meta-analysed
+  203 effect sizes from 33 published randomized controlled n-back training trials in healthy
+  adults: medium transfer to untrained n-back tasks, but only very small effects on other
+  working-memory tasks, fluid intelligence and cognitive control; no moderation by age, dose,
+  single versus dual training, or verbal versus visuospatial content.
+- **DECISION**: Add Soveri 2017 as a context record and make it the first N-back citation.
+  Tighten the brief, claim and qualifier from "closely related working-memory tasks" to
+  "untrained n-back tasks, with little transfer beyond the task". The claim remains supported but
+  only for task-specific near transfer; no general-intelligence or academic claim. The review
+  moves to 124 records, 286 outcomes, revision v1.8. Recorded in ADR-057.
+- **IMPLEMENT**: Evidence-table record and references; N-back copy and citation order; counts,
+  review version and Evidence screen count; dedicated `nback-evidence` test covering the first
+  citation and claim wording.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before briefing: `%TEMP%\opencode\noesis-nback-evidence-before\before-01-briefing.png`
+    SHA-256 `B463F65578D6689B191D962D368E927917B437FAB1846F9CFF93A4B25964736A`
+    (old broad copy; primary source 42711482)
+  - after briefing: `%TEMP%\opencode\noesis-nback-evidence-after\after-01-briefing.png`
+    SHA-256 `FDAC109DAB0E6DABE555753D2F74E17F49510783387B45931B21FCA155C13302`
+    (33 randomized trials, untrained n-back only; primary source 28116702)
+  - before results: `before-02-results.png` SHA-256
+    `B2A574A845A6836495164ABFDA9D18C54D531D9104F0DC956F19C6DABB588ADC`
+  - after results: `after-02-results.png` SHA-256
+    `1EACA334E30EF9B09B386D954B946771D4C3FC2EF35CF14AC9B2E331A70F6DAC`
+- **PROOF (played run)**: `scripts/nback-evidence-proof.mjs` played a real three-block level-2
+  N-back focus session: 100% accuracy, 6/6 targets, 0 false alarms in each block;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 444 Vitest; `npm run ai:verify` — 1,100/1,100;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's evidence record, N-back copy, test, proof and record.
