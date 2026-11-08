@@ -1163,3 +1163,32 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 370 Vitest; `npm run ai:verify` — 700/700;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's span trend, tests, proof script and record.
+
+## Cycle 23 — Same-level mean-span delta on the Spatial Span result card
+
+- **Area**: Spatial Span result readability, completing the same-level comparison across
+  Choose, History and Results.
+- **FIND**: The result card showed mean and longest span but did not compare the block with the
+  previous Spatial Span block at the same level. Choose and History already did so.
+- **IMPLEMENT**: `ResultsScreen` reuses `costComparisons` for `mean_span` and adds `spanChange`,
+  where a higher delta is an improvement. Each Spatial Span card shows one of:
+  `First block at this level; no earlier mean-span comparison.`,
+  `Improved +N mean span vs previous Level L block (previous → current).`,
+  `Worsened -N mean span ...`, or `No change ...`. It carries
+  `data-testid="spatial-span-vs-previous-{index}"` and `data-direction`. Levels are never mixed.
+- **PROOF (screenshots)**: real three-block level-2 Spatial Span session with seeded prior level-2
+  mean 5.0, 390x844@2x:
+  - before: `%TEMP%\opencode\noesis-spatial-delta-before\before-04-spatial-results.png`
+    SHA-256 `8752029DDE75630DD4DDB7C6289C6A791891EB603FCF817CE1E1A8845A4A29D0`
+    (no span delta)
+  - after: `%TEMP%\opencode\noesis-spatial-delta-after\after-04-spatial-results.png`
+    SHA-256 `BA37DB263509C95BFC230754584E0F0C44B5D6E27018FA379BC76825D49AD0B0`
+- **PROOF (played run)**: the proof played three level-2 Spatial Span blocks with means
+  `[6.8, 6.8, 6.8]` and longest span `[8, 8, 8]`. Deltas:
+  - block 1: `Improved +1.8 mean span vs previous Level 2 block (5.0 → 6.8).`
+  - blocks 2-3: `No change vs previous Level 2 block (6.8 mean span).`
+  `consoleErrors []`. Tests also cover worsened, first-block and different-level cases
+  (`tests/ui/spatial-result-delta.test.tsx`, 4 tests).
+- **GATES**: `npm run test:all` — 29 Python + 374 Vitest; `npm run ai:verify` — 700/700;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's result delta, tests, proof and record.

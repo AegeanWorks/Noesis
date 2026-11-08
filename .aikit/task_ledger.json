@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-spatial-trend",
+    "task_id": "noesis-spatial-result-delta",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794141114.240715,
-    "owner": "opencode:spatialtrend",
-    "started_by": "opencode:spatialtrend",
+    "updated_at": 1794141538.5413733,
+    "owner": "opencode:spatialdelta",
+    "started_by": "opencode:spatialdelta",
     "continuations": [],
-    "completed_at": 1794141126.083341
+    "completed_at": 1794141543.7221594
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-flanker-resume",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: prove Flanker focus sessions resume after reload and explain the interference-cost metric on the result card",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794138127.9945266,
-      "timestamp_str": "2026-11-08 14:42:07",
-      "agent": "opencode:flankerresume",
-      "impact_assessment": {
-        "why": "The new mechanic had no reload/resume proof, and the result card exposed a raw interference-cost number with no direction or negative-value explanation",
-        "benefits": "Verified save/resume for Flanker; readable, non-diagnostic interference reporting",
-        "risks": "contract: result copy and proof only; dependency: none; concurrency: none; state: none",
-        "mitigation": "failing-first note test, Flanker snapshot test, fixed-clock reload/resume proof, full gates"
-      },
-      "plan_digest": "f4fca1ea38ba0ebdaaa46fc7db2a377540c63800f911a94a2dd77d5619ab11d9"
-    },
-    {
-      "task_id": "noesis-flanker-resume",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: interference note + test, snapshot round-trip test, scripts/flanker-resume-proof.mjs, record",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794138128.3804176,
-      "timestamp_str": "2026-11-08 14:42:08",
-      "agent": "opencode:flankerresume"
-    },
-    {
-      "task_id": "noesis-flanker-resume",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: mid/stored/resumed identical block0/3 flanker trial8 level2; 3 blocks 20/20, interference 104/0/0; note present; consoleErrors []; 29 Python + 352 Vitest, 600 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794138128.920177,
-      "timestamp_str": "2026-11-08 14:42:08",
-      "agent": "opencode:flankerresume"
-    },
-    {
-      "task_id": "noesis-flanker-resume",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-flanker-resume' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794138135.6054454,
-      "timestamp_str": "2026-11-08 14:42:15",
-      "agent": "opencode:flankerresume"
-    },
     {
       "task_id": "noesis-flanker-cost-trend",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794141126.0833426,
       "timestamp_str": "2026-11-08 15:32:06",
       "agent": "opencode:spatialtrend"
+    },
+    {
+      "task_id": "noesis-spatial-result-delta",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add the same-level mean-span delta to the Spatial Span result card",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794141537.10007,
+      "timestamp_str": "2026-11-08 15:38:57",
+      "agent": "opencode:spatialdelta",
+      "impact_assessment": {
+        "why": "Choose and History compare span within level, but the result card showed only raw mean/longest span; higher span is better, so the direction differs from cost deltas",
+        "benefits": "Consistent same-level comparison across Choose, History and Results; first/improved/worsened/no-change states explicit",
+        "risks": "contract: ResultsScreen internal helper and copy; history prop already present; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first improved/worsened/same/first/different-level tests, real three-block level-2 before/after proof, full gates"
+      },
+      "plan_digest": "d2fb771a3bbc439144c37a46d187a52fe340a47f59baf774baf07633a3bb0c35"
+    },
+    {
+      "task_id": "noesis-spatial-result-delta",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: spanComparisons + spanChange with higher-is-better direction; result paragraph and data-direction; tests; proof captures deltas and results frame",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794141537.8226964,
+      "timestamp_str": "2026-11-08 15:38:57",
+      "agent": "opencode:spatialdelta"
+    },
+    {
+      "task_id": "noesis-spatial-result-delta",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded prior 5.0, played means 6.8/6.8/6.8 gave improved+1.8 then same/same; worsened/first/different-level covered; consoleErrors []; 29 Python + 374 Vitest, 700 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794141538.5413733,
+      "timestamp_str": "2026-11-08 15:38:58",
+      "agent": "opencode:spatialdelta"
+    },
+    {
+      "task_id": "noesis-spatial-result-delta",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-spatial-result-delta' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794141543.7221613,
+      "timestamp_str": "2026-11-08 15:39:03",
+      "agent": "opencode:spatialdelta"
     }
   ]
 }

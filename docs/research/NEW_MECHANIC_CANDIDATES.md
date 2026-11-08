@@ -116,10 +116,9 @@ quantitative basis.
 - The span starts at 3/4/5 by level and moves up after a correct trial and down after a miss,
   bounded at 2-8.
 - Metrics: accuracy, mean span, longest correctly recalled span, timeouts and streaks. The
-  Choose-a-test card shows the latest same-level mean and longest span; the History card groups
-  blocks by level, compares mean span only within the same level, and labels the latest block as
-  improved, worsened or unchanged. Higher span is better; the first block at a level has no
-  delta.
+  Choose-a-test card shows the latest same-level mean and longest span; the result and History
+  cards compare mean span only within the same level and label the latest block as improved,
+  worsened or unchanged. Higher span is better; the first block at a level has no delta.
 - It is available from the Menu as a three-block focus test. It is not in the default lineup.
 - **Evidence:** the 2025 meta-analysis by Olegário et al. (PMID 37822255; 31 included trials,
   13 in the meta-analysis) found a small Corsi Block improvement in healthy older adults

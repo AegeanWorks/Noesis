@@ -170,13 +170,23 @@ for (let step = 0; step < 6000; step += 1) {
   if (!answered) await page.waitForTimeout(5);
 }
 await page.waitForSelector("text=Your blocks, separately", { timeout: 15000 });
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, `${LABEL}-04-spatial-results.png`), fullPage: true });
 const played = await page.evaluate(() => {
   const state = window.__NOESIS__.getState();
+  const changes = [...document.querySelectorAll('[data-testid^="spatial-span-vs-previous-"]')].map(
+    (node) => ({
+      testId: node.getAttribute("data-testid"),
+      text: (node.textContent ?? "").replace(/\s+/g, " ").trim(),
+      direction: node.getAttribute("data-direction"),
+    }),
+  );
   return {
     mechanics: state?.results.map((result) => result.mechanic) ?? [],
     difficulties: state?.results.map((result) => result.difficulty ?? null) ?? [],
     means: state?.results.map((result) => result.metrics.mean_span ?? null) ?? [],
     longest: state?.results.map((result) => result.metrics.max_span ?? null) ?? [],
+    changes,
   };
 });
 

@@ -148,6 +148,14 @@ function interferenceCostComparisons(
   return costComparisons(history, sessionId, results, "flanker", "interference_cost_ms");
 }
 
+function spanComparisons(
+  history: readonly SessionRecord[],
+  sessionId: string | null,
+  results: readonly MechanicResult[],
+): Array<SwitchCostComparison | null> {
+  return costComparisons(history, sessionId, results, "spatial", "mean_span");
+}
+
 function costChange(
   comparison: SwitchCostComparison | null,
   level: number | undefined,
@@ -181,18 +189,53 @@ function costChange(
   };
 }
 
+function spanChange(
+  comparison: SwitchCostComparison | null,
+  level: number | undefined,
+  current: number | undefined,
+): { direction: string; text: string } {
+  if (comparison === null) {
+    return {
+      direction: "first",
+      text:
+        typeof level === "number"
+          ? "First block at this level; no earlier mean-span comparison."
+          : "No earlier mean-span comparison.",
+    };
+  }
+  const delta = Math.round(comparison.delta * 10) / 10;
+  if (delta > 0) {
+    return {
+      direction: "improved",
+      text: `Improved +${delta.toFixed(1)} mean span vs previous Level ${level} block (${comparison.previous.toFixed(1)} → ${(current ?? 0).toFixed(1)}).`,
+    };
+  }
+  if (delta < 0) {
+    return {
+      direction: "worsened",
+      text: `Worsened ${delta.toFixed(1)} mean span vs previous Level ${level} block (${comparison.previous.toFixed(1)} → ${(current ?? 0).toFixed(1)}).`,
+    };
+  }
+  return {
+    direction: "same",
+    text: `No change vs previous Level ${level} block (${comparison.previous.toFixed(1)} mean span).`,
+  };
+}
+
 function ResultCard({
   result,
   index,
   isNewBest,
   switchCostComparison,
   interferenceCostComparison,
+  spanComparison,
 }: {
   result: MechanicResult;
   index: number;
   isNewBest: boolean;
   switchCostComparison: SwitchCostComparison | null;
   interferenceCostComparison: SwitchCostComparison | null;
+  spanComparison: SwitchCostComparison | null;
 }) {
   const meta = mechanicMeta(result.mechanic);
   const primaryKeys = PRIMARY_METRICS[result.mechanic].filter(
@@ -212,6 +255,11 @@ function ResultCard({
     result.difficulty,
     result.metrics.interference_cost_ms,
     "interference-cost",
+  );
+  const span = spanChange(
+    spanComparison,
+    result.difficulty,
+    result.metrics.mean_span,
   );
 
   return (
@@ -260,6 +308,15 @@ function ResultCard({
           </p>
         </>
       ) : null}
+      {result.mechanic === "spatial" ? (
+        <p
+          className={`fine switch-cost-change switch-cost-change-${span.direction}`}
+          data-testid={`spatial-span-vs-previous-${index}`}
+          data-direction={span.direction}
+        >
+          {span.text}
+        </p>
+      ) : null}
       {isNewBest ? (
         <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
           New personal best
@@ -301,6 +358,7 @@ export function ResultsScreen({
   );
   const switchComparisons = switchCostComparisons(history, sessionId, results);
   const interferenceComparisons = interferenceCostComparisons(history, sessionId, results);
+  const spanComparisonsByIndex = spanComparisons(history, sessionId, results);
 
   return (
     <section className="screen results-screen">
@@ -323,6 +381,7 @@ export function ResultsScreen({
               isNewBest={newBests.includes(result.mechanic)}
               switchCostComparison={switchComparisons[index] ?? null}
               interferenceCostComparison={interferenceComparisons[index] ?? null}
+              spanComparison={spanComparisonsByIndex[index] ?? null}
             />
           ))}
         </div>
