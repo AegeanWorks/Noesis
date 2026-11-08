@@ -117,4 +117,16 @@ describe("session snapshot", () => {
     saveSessionSnapshot(state);
     expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("switching");
   });
+
+  it("round-trips a running Flanker block", () => {
+    const state = applySessionAction(
+      createSession(defaultSessionConfig(9, 2, "standard", undefined, "flanker")),
+      { type: "begin" },
+    );
+    if (state.current?.mechanic !== "flanker") {
+      throw new Error("expected a Flanker session");
+    }
+    saveSessionSnapshot(state);
+    expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("flanker");
+  });
 });

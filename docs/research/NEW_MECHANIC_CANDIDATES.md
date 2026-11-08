@@ -96,7 +96,9 @@ quantitative basis.
   the same way and incongruent flankers point the other way.
 - Two answer buttons show **Left** and **Right**; keys 1 and 2 work.
 - Metrics: accuracy, congruent/incongruent accuracy and reaction time, interference cost,
-  timeouts and streaks.
+  timeouts and streaks. The result card explains interference cost as the incongruent-trial mean
+  minus the congruent-trial mean; a negative value means conflicting flankers did not slow the
+  user in that block, and the measure is descriptive, not a diagnosis.
 - It is available from the Menu as a three-block focus test. It is not in the default lineup.
 - **Evidence limit:** the review search found no eligible Flanker-specific training
   meta-analysis. The task is a standard interference-control paradigm and the broader

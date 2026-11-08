@@ -195,6 +195,13 @@ function ResultCard({
           </p>
         </>
       ) : null}
+      {result.mechanic === "flanker" ? (
+        <p className="fine flanker-interference-note" data-testid="flanker-interference-note">
+          Interference cost = mean reaction on incongruent trials minus congruent trials. A
+          negative value means conflicting flankers did not slow you in this block; it is a
+          descriptive within-session measure, not a diagnosis.
+        </p>
+      ) : null}
       {isNewBest ? (
         <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
           New personal best

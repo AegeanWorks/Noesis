@@ -24,6 +24,7 @@ Covered so far:
 15. Same-level result delta — 2026-11-08 — cycle 15
 16. Choose-card switch-cost line — 2026-11-08 — cycle 16
 17. Experimental Flanker mechanic — 2026-11-08 — cycle 17
+18. Flanker resume and interference note — 2026-11-08 — cycle 18
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -973,3 +974,30 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 350 Vitest; `npm run ai:verify` — 600/600;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's Flanker engine, UI, tests, evidence docs, proof and record.
+
+## Cycle 18 — Flanker resume proof and interference-cost explanation
+
+- **Area**: Flanker integration and result readability.
+- **FIND**: The new Flanker mechanic had no end-to-end reload/resume proof, and the result card
+  showed the interference-cost number without explaining its direction or negative values.
+- **IMPLEMENT**: Added a failing-first `flanker-interference-note` test and result-card copy:
+  `Interference cost = incongruent mean − congruent mean`, with the negative-value case and a
+  "not a diagnosis" caveat. Added a Flanker snapshot round-trip test and
+  `scripts/flanker-resume-proof.mjs`, which plays eight trials, waits for the snapshot, reloads,
+  resumes and completes three blocks while capturing the result note.
+- **PROOF (resume)**: fixed seed 2721744568, adaptive level 2:
+  mid/stored/resumed all `block 0/3 · flanker · difficulty [2,2,2] · trial 8`;
+  after reload the CTA read `Resume session`; the completed session was three level-2 blocks,
+  20/20 correct each, interference `[104, 0, 0]`; `consoleErrors []`.
+  Screenshot: `%TEMP%\opencode\noesis-flanker-resume-after\after-03-flanker-resumed.png`
+  SHA-256 `98DA110CB9B138019829EB24E0863A454324361B9F66D22C51EE43B6CB0C635A`.
+- **PROOF (result note)**: same three-block level-2 state before/after:
+  - before: `%TEMP%\opencode\noesis-flanker-resume-before\before-04-flanker-results.png`
+    SHA-256 `1C9A746260D0DF9CA7DE32CE77A548F54EFCF8CB56B5F095421F5AA22850F16F`
+    (no interference explanation)
+  - after: `%TEMP%\opencode\noesis-flanker-resume-after\after-04-flanker-results.png`
+    SHA-256 `ED4706C082DA57F105172BA3D840693F308668E0883C2852FF159CBD3730D310`
+    (interference note present; results remain 3 × level 2, 20/20)
+- **GATES**: `npm run test:all` — 29 Python + 352 Vitest; `npm run ai:verify` — 600/600;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's note, tests, snapshot coverage, proof and record.
