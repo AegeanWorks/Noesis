@@ -26,6 +26,7 @@ Covered so far:
 17. Experimental Flanker mechanic — 2026-11-08 — cycle 17
 18. Flanker resume and interference note — 2026-11-08 — cycle 18
 19. Flanker interference-cost Choose/History trend — 2026-11-08 — cycle 19
+20. Flanker same-level result delta — 2026-11-08 — cycle 20
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -1048,3 +1049,36 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 355 Vitest; `npm run ai:verify` — 600/600;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's Flanker trend, tests, proof script and record.
+
+## Cycle 20 — Same-level interference-cost delta on the Flanker result card
+
+- **Area**: Flanker result readability, completing the same-level comparison across Choose,
+  History and Results.
+- **FIND**: The Flanker result card explained interference cost but did not compare the block
+  with the previous Flanker block at the same level. History and Choose showed the comparison;
+  the screen where the block is reported did not.
+- **IMPLEMENT**: `ResultsScreen` now uses a shared `costComparisons` helper for both switch and
+  interference cost. `costChange` produces one of first/improved/worsened/no-change copy.
+  Each Flanker card shows `First block at this level; no earlier interference-cost
+  comparison.`, `Improved N ms vs previous Level L block (previous → current ms).`,
+  `Worsened +N ms ...`, or `No change ...` with `data-testid="flanker-cost-vs-previous-{index}"`
+  and `data-direction`. Prior sessions at the same level seed the comparison; current-session
+  blocks compare sequentially; levels are never mixed.
+- **PROOF (screenshots)**: real three-block level-2 Flanker focus session with a mid-session
+  reload, seed 2721744568, 390x844@2x:
+  - before: `%TEMP%\opencode\noesis-flanker-result-delta-before\before-04-flanker-results.png`
+    SHA-256 `71B4DEE792476AC2C2735199AE20168A30745CC9473A4A5231FA7D898837B4A2`
+    (interference note only, no delta)
+  - after: `%TEMP%\opencode\noesis-flanker-result-delta-after\after-04-flanker-results.png`
+    SHA-256 `FBD1BF5CFD29FD63B9EEC2D461023597F326AED816A46649B1629BBCA088AEE2`
+- **PROOF (played run)**: mid/stored/resumed remained block 0/3, Flanker, level 2, trial 8.
+  Deliberately slowing incongruent trials in the first and last blocks produced interference
+  costs `[161, 0, 300] ms` and the three delta states:
+  - block 1: `First block at this level; no earlier interference-cost comparison.`
+  - block 2: `Improved 161 ms vs previous Level 2 block (161 → 0 ms).`
+  - block 3: `Worsened +300 ms vs previous Level 2 block (0 → 300 ms).`
+  `consoleErrors []`. Tests also cover the `No change` and different-level cases
+  (`tests/ui/flanker-result-note.test.tsx`, 6 tests).
+- **GATES**: `npm run test:all` — 29 Python + 360 Vitest; `npm run ai:verify` — 600/600;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's result delta, tests, proof script update and record.

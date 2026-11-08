@@ -99,9 +99,9 @@ quantitative basis.
   timeouts and streaks. The result card explains interference cost as the incongruent-trial mean
   minus the congruent-trial mean; a negative value means conflicting flankers did not slow the
   user in that block, and the measure is descriptive, not a diagnosis. The Choose-a-test card
-  shows the latest same-level interference cost and trend; the History card compares only blocks
-  at the same level and labels the latest block as improved, worsened or unchanged versus the
-  previous block at that level; the first block at a level has no delta.
+  shows the latest same-level interference cost and trend; the result and History cards compare
+  only blocks at the same level and label the latest block as improved, worsened or unchanged
+  versus the previous block at that level; the first block at a level has no delta.
 - It is available from the Menu as a three-block focus test. It is not in the default lineup.
 - **Evidence limit:** the review search found no eligible Flanker-specific training
   meta-analysis. The task is a standard interference-control paradigm and the broader

@@ -97,27 +97,29 @@ interface SwitchCostComparison {
   delta: number;
 }
 
-function switchCostComparisons(
+function costComparisons(
   history: readonly SessionRecord[],
   sessionId: string | null,
   results: readonly MechanicResult[],
+  mechanic: MechanicResult["mechanic"],
+  metricKey: string,
 ): Array<SwitchCostComparison | null> {
   const previousByLevel = new Map<number, number>();
   for (const record of [...history].reverse()) {
     if (record.id === sessionId) continue;
     for (const result of record.results) {
-      if (result.mechanic !== "switching") continue;
+      if (result.mechanic !== mechanic) continue;
       const level = result.difficulty;
-      const cost = result.metrics.switch_cost_ms;
+      const cost = result.metrics[metricKey];
       if (typeof level === "number" && typeof cost === "number" && Number.isFinite(cost)) {
         previousByLevel.set(level, cost);
       }
     }
   }
   return results.map((result) => {
-    if (result.mechanic !== "switching") return null;
+    if (result.mechanic !== mechanic) return null;
     const level = result.difficulty;
-    const cost = result.metrics.switch_cost_ms;
+    const cost = result.metrics[metricKey];
     if (typeof level !== "number" || typeof cost !== "number" || !Number.isFinite(cost)) {
       return null;
     }
@@ -127,16 +129,67 @@ function switchCostComparisons(
   });
 }
 
+function switchCostComparisons(
+  history: readonly SessionRecord[],
+  sessionId: string | null,
+  results: readonly MechanicResult[],
+): Array<SwitchCostComparison | null> {
+  return costComparisons(history, sessionId, results, "switching", "switch_cost_ms");
+}
+
+function interferenceCostComparisons(
+  history: readonly SessionRecord[],
+  sessionId: string | null,
+  results: readonly MechanicResult[],
+): Array<SwitchCostComparison | null> {
+  return costComparisons(history, sessionId, results, "flanker", "interference_cost_ms");
+}
+
+function costChange(
+  comparison: SwitchCostComparison | null,
+  level: number | undefined,
+  current: number | undefined,
+  metricName: string,
+): { direction: string; text: string } {
+  if (comparison === null) {
+    return {
+      direction: "first",
+      text:
+        typeof level === "number"
+          ? `First block at this level; no earlier ${metricName} comparison.`
+          : `No earlier ${metricName} comparison.`,
+    };
+  }
+  if (comparison.delta < 0) {
+    return {
+      direction: "improved",
+      text: `Improved ${Math.abs(comparison.delta)} ms vs previous Level ${level} block (${comparison.previous} → ${Math.round(current ?? 0)} ms).`,
+    };
+  }
+  if (comparison.delta > 0) {
+    return {
+      direction: "worsened",
+      text: `Worsened +${comparison.delta} ms vs previous Level ${level} block (${comparison.previous} → ${Math.round(current ?? 0)} ms).`,
+    };
+  }
+  return {
+    direction: "same",
+    text: `No change vs previous Level ${level} block (${comparison.previous} ms).`,
+  };
+}
+
 function ResultCard({
   result,
   index,
   isNewBest,
   switchCostComparison,
+  interferenceCostComparison,
 }: {
   result: MechanicResult;
   index: number;
   isNewBest: boolean;
   switchCostComparison: SwitchCostComparison | null;
+  interferenceCostComparison: SwitchCostComparison | null;
 }) {
   const meta = mechanicMeta(result.mechanic);
   const primaryKeys = PRIMARY_METRICS[result.mechanic].filter(
@@ -145,25 +198,18 @@ function ResultCard({
   const secondary = Object.entries(result.metrics).filter(
     ([key]) => !primaryKeys.includes(key),
   );
-  const switchCost = result.metrics.switch_cost_ms;
-  const switchDirection =
-    switchCostComparison === null
-      ? "first"
-      : switchCostComparison.delta < 0
-        ? "improved"
-        : switchCostComparison.delta > 0
-          ? "worsened"
-          : "same";
-  const switchChangeText =
-    switchCostComparison === null
-      ? typeof result.difficulty === "number"
-        ? "First block at this level; no earlier switch-cost comparison."
-        : "No earlier switch-cost comparison."
-      : switchCostComparison.delta < 0
-        ? `Improved ${Math.abs(switchCostComparison.delta)} ms vs previous Level ${result.difficulty} block (${switchCostComparison.previous} → ${Math.round(switchCost ?? 0)} ms).`
-        : switchCostComparison.delta > 0
-          ? `Worsened +${switchCostComparison.delta} ms vs previous Level ${result.difficulty} block (${switchCostComparison.previous} → ${Math.round(switchCost ?? 0)} ms).`
-          : `No change vs previous Level ${result.difficulty} block (${switchCostComparison.previous} ms).`;
+  const switchChange = costChange(
+    switchCostComparison,
+    result.difficulty,
+    result.metrics.switch_cost_ms,
+    "switch-cost",
+  );
+  const interferenceChange = costChange(
+    interferenceCostComparison,
+    result.difficulty,
+    result.metrics.interference_cost_ms,
+    "interference-cost",
+  );
 
   return (
     <article className="card result-card">
@@ -187,20 +233,29 @@ function ResultCard({
             within-session measure, not a diagnosis.
           </p>
           <p
-            className={`fine switch-cost-change switch-cost-change-${switchDirection}`}
+            className={`fine switch-cost-change switch-cost-change-${switchChange.direction}`}
             data-testid={`switch-cost-vs-previous-${index}`}
-            data-direction={switchDirection}
+            data-direction={switchChange.direction}
           >
-            {switchChangeText}
+            {switchChange.text}
           </p>
         </>
       ) : null}
       {result.mechanic === "flanker" ? (
-        <p className="fine flanker-interference-note" data-testid="flanker-interference-note">
-          Interference cost = mean reaction on incongruent trials minus congruent trials. A
-          negative value means conflicting flankers did not slow you in this block; it is a
-          descriptive within-session measure, not a diagnosis.
-        </p>
+        <>
+          <p className="fine flanker-interference-note" data-testid="flanker-interference-note">
+            Interference cost = mean reaction on incongruent trials minus congruent trials. A
+            negative value means conflicting flankers did not slow you in this block; it is a
+            descriptive within-session measure, not a diagnosis.
+          </p>
+          <p
+            className={`fine switch-cost-change switch-cost-change-${interferenceChange.direction}`}
+            data-testid={`flanker-cost-vs-previous-${index}`}
+            data-direction={interferenceChange.direction}
+          >
+            {interferenceChange.text}
+          </p>
+        </>
       ) : null}
       {isNewBest ? (
         <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
@@ -242,6 +297,7 @@ export function ResultsScreen({
     new Set(results.flatMap((result) => mechanicMeta(result.mechanic).notClaimed)),
   );
   const switchComparisons = switchCostComparisons(history, sessionId, results);
+  const interferenceComparisons = interferenceCostComparisons(history, sessionId, results);
 
   return (
     <section className="screen results-screen">
@@ -263,6 +319,7 @@ export function ResultsScreen({
               index={index}
               isNewBest={newBests.includes(result.mechanic)}
               switchCostComparison={switchComparisons[index] ?? null}
+              interferenceCostComparison={interferenceComparisons[index] ?? null}
             />
           ))}
         </div>

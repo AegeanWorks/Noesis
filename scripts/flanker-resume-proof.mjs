@@ -104,11 +104,21 @@ async function snapshot() {
 
 async function answerCorrect() {
   return page.evaluate(() => {
-    const current = window.__NOESIS__.getState()?.current;
+    const session = window.__NOESIS__.getState();
+    const current = session?.current;
     if (!current || current.mechanic !== "flanker" || current.phase !== "question") {
       return false;
     }
     const trial = current.trials[current.index];
+    // Slow incongruent trials in the first and last blocks so the played run
+    // demonstrates first / improved / worsened same-level comparisons.
+    if (!trial.congruent) {
+      if (session.blockIndex === 0) {
+        window.__NOESIS__.dispatch({ type: "advance", ms: 200 });
+      } else if (session.blockIndex === 2) {
+        window.__NOESIS__.dispatch({ type: "advance", ms: 300 });
+      }
+    }
     window.__NOESIS__.dispatch({
       type: "answer",
       option: trial.centre === "left" ? 0 : 1,
@@ -173,11 +183,19 @@ await page.screenshot({ path: join(OUT, `${LABEL}-04-flanker-results.png`), full
 const results = await page.evaluate(() => {
   const state = window.__NOESIS__.getState();
   const note = document.querySelector('[data-testid="flanker-interference-note"]');
+  const changes = [...document.querySelectorAll('[data-testid^="flanker-cost-vs-previous-"]')].map(
+    (node) => ({
+      testId: node.getAttribute("data-testid"),
+      text: (node.textContent ?? "").replace(/\s+/g, " ").trim(),
+      direction: node.getAttribute("data-direction"),
+    }),
+  );
   return {
     mechanics: state?.results.map((result) => result.mechanic) ?? [],
     difficulties: state?.results.map((result) => result.difficulty ?? null) ?? [],
     interference: state?.results.map((result) => result.metrics.interference_cost_ms ?? null) ?? [],
     note: note ? (note.textContent ?? "").replace(/\s+/g, " ").trim() : null,
+    changes,
   };
 });
 

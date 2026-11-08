@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-flanker-cost-trend",
+    "task_id": "noesis-flanker-result-delta",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794138683.2174342,
-    "owner": "opencode:flankercost",
-    "started_by": "opencode:flankercost",
+    "updated_at": 1794139067.24653,
+    "owner": "opencode:flankerdelta",
+    "started_by": "opencode:flankerdelta",
     "continuations": [],
-    "completed_at": 1794138686.7376034
+    "completed_at": 1794139074.8825607
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-switch-result-delta",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add the same-level switch-cost delta to the Task Switch result card",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794133207.0213058,
-      "timestamp_str": "2026-11-08 13:20:07",
-      "agent": "opencode:switchdelta",
-      "impact_assessment": {
-        "why": "History rows show improved/worsened, but the result card still shows only the raw switch cost; users need the comparison where the block is reported",
-        "benefits": "Consistent same-level comparison across result and history; first/improved/worsened/no-change states explicit",
-        "risks": "contract: ResultsScreen gains a history prop; App passes existing history; no engine/storage change; dependency: none; concurrency: none; state: none",
-        "mitigation": "failing-first prior-history and first-block tests, real three-block result screenshots, full gates"
-      },
-      "plan_digest": "edd9fe5094dee65adbeacb1a834c02f6fb29622ddf5ac6abd6764bc727093979"
-    },
-    {
-      "task_id": "noesis-switch-result-delta",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: switchCostComparisons helper; per-card first/improved/worsened/same copy and color; App history wiring; tests; proof capture",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794133208.3845494,
-      "timestamp_str": "2026-11-08 13:20:08",
-      "agent": "opencode:switchdelta"
-    },
-    {
-      "task_id": "noesis-switch-result-delta",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: real block costs 141/0/0 gave first/improved 141/same; consoleErrors []; 29 Python + 343 Vitest, 500 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794133210.555615,
-      "timestamp_str": "2026-11-08 13:20:10",
-      "agent": "opencode:switchdelta"
-    },
-    {
-      "task_id": "noesis-switch-result-delta",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-switch-result-delta' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794133220.079375,
-      "timestamp_str": "2026-11-08 13:20:20",
-      "agent": "opencode:switchdelta"
-    },
     {
       "task_id": "noesis-choose-switch-cost",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794138686.7376046,
       "timestamp_str": "2026-11-08 14:51:26",
       "agent": "opencode:flankercost"
+    },
+    {
+      "task_id": "noesis-flanker-result-delta",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add the same-level interference-cost delta to the Flanker result card",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794139063.0262213,
+      "timestamp_str": "2026-11-08 14:57:43",
+      "agent": "opencode:flankerdelta",
+      "impact_assessment": {
+        "why": "Choose and History already compare within level, but the Flanker result card explained interference cost without comparing the block to the previous same-level block",
+        "benefits": "Consistent same-level comparison across Choose, History and Results; first/improved/worsened/no-change states explicit",
+        "risks": "contract: ResultsScreen internal refactor; history prop already present; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first improved/worsened/first/different-level tests plus no-change test, real three-block level-2 proof before/after, full gates"
+      },
+      "plan_digest": "d043c6ff47971bb7897432ec2fbfb8aa7d2110ce01958ed8ea1db14099d904fe"
+    },
+    {
+      "task_id": "noesis-flanker-result-delta",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: shared costComparisons/costChange helpers; Flanker delta paragraph with data-direction; tests; proof captures deltas and slows block 1/3 incongruent trials",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794139064.9278286,
+      "timestamp_str": "2026-11-08 14:57:44",
+      "agent": "opencode:flankerdelta"
+    },
+    {
+      "task_id": "noesis-flanker-result-delta",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: mid/stored/resumed same seed block0/3 level2 trial8; interference 161/0/300 gave first/improved161/worsened300; no-change and different-level covered; consoleErrors []; 29 Python + 360 Vitest, 600 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794139067.24653,
+      "timestamp_str": "2026-11-08 14:57:47",
+      "agent": "opencode:flankerdelta"
+    },
+    {
+      "task_id": "noesis-flanker-result-delta",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-flanker-result-delta' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794139074.8825622,
+      "timestamp_str": "2026-11-08 14:57:54",
+      "agent": "opencode:flankerdelta"
     }
   ]
 }
