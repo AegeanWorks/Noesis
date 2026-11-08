@@ -81,7 +81,8 @@ their own email app. No data is uploaded automatically, no server is involved, a
 credential is stored. Withdrawal stops future emails; data already sent cannot be recalled.
 The export also carries a session-level **adherence log**: every start, completion and early
 ending, with the blocks completed and the study arm, so dropout is measurable rather than
-inferred from completers only. The JSON file is self-describing: a `manifest` records the app
+inferred from completers only. The Menu History tab shows a neutral started/completed/ended-early
+summary; stopping early is framed as information, not a failure. The JSON file is self-describing: a `manifest` records the app
 version, export schema version, evidence-review version, data-dictionary version, consent
 version and record counts. Settings also offers two analysis-ready local CSV downloads: one row
 per session block and one row per adherence event, with stable headers and the full

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MECHANIC_META } from "../../engine/evidence";
 import type { MechanicId, MechanicResult } from "../../engine/types";
+import type { AdherenceCounts } from "../../storage/adherence";
 import type { SessionRecord } from "../../storage/history";
 import { bestAccuracyFor } from "../../storage/history";
 import type { SessionLength } from "../../storage/settings";
@@ -11,6 +12,7 @@ export type MenuTab = "tests" | "history";
 
 interface PracticeMenuScreenProps {
   history: readonly SessionRecord[];
+  adherenceCounts: AdherenceCounts;
   hasSession: boolean;
   sessionLength: SessionLength;
   initialTab?: MenuTab;
@@ -129,11 +131,18 @@ function TestCard({
 
 function HistoryPanel({
   history,
+  adherenceCounts,
   onExportHistory,
 }: {
   history: readonly SessionRecord[];
+  adherenceCounts: AdherenceCounts;
   onExportHistory: () => void;
 }) {
+  const completionRate =
+    adherenceCounts.started === 0
+      ? null
+      : Math.round((adherenceCounts.completed / adherenceCounts.started) * 100);
+
   return (
     <div
       className="stack"
@@ -158,6 +167,31 @@ function HistoryPanel({
           Export practice data
         </Button>
       </div>
+
+      <section className="card adherence-card" data-testid="menu-adherence">
+        <div className="card-top">
+          <div>
+            <p className="eyebrow">Your adherence</p>
+            <h2>Session completion</h2>
+          </div>
+          {completionRate !== null ? (
+            <span className="seed">{completionRate}% completed</span>
+          ) : null}
+        </div>
+        {adherenceCounts.started === 0 ? (
+          <p className="muted">No sessions started yet.</p>
+        ) : (
+          <p className="week-line">
+            <strong>{adherenceCounts.started}</strong> started ·{" "}
+            <strong>{adherenceCounts.completed}</strong> completed ·{" "}
+            <strong>{adherenceCounts.aborted}</strong> ended early
+          </p>
+        )}
+        <p className="fine">
+          Stopping early is not a failure; it is recorded so the study team can understand
+          real-world use. This summary stays on this device.
+        </p>
+      </section>
 
       {history.length === 0 ? (
         <section className="card" data-testid="menu-history-empty">
@@ -209,6 +243,7 @@ function HistoryPanel({
 
 export function PracticeMenuScreen({
   history,
+  adherenceCounts,
   hasSession,
   sessionLength,
   initialTab = "tests",
@@ -298,7 +333,11 @@ export function PracticeMenuScreen({
           </p>
         </div>
       ) : (
-        <HistoryPanel history={history} onExportHistory={onExportHistory} />
+        <HistoryPanel
+          history={history}
+          adherenceCounts={adherenceCounts}
+          onExportHistory={onExportHistory}
+        />
       )}
 
       <Button variant="ghost" onClick={onHome}>

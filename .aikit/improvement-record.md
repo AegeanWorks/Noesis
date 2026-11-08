@@ -582,6 +582,20 @@ Open candidates (not yet cycles): none from the current audits.
 - **VERIFICATION**: see commands below; export tests assert the manifest shape, counts and
   consent version, and the browser proof checks the manifest in the downloaded JSON.
 
+## Cycle 17 - Neutral adherence summary in Menu History
+
+- **Area**: self-monitoring and history presentation.
+- **FIND**: the adherence log was visible only in Settings; the History tab showed completed
+  sessions but not starts or early endings. The review supports self-monitoring and feedback
+  on behaviour (R23), and the data was already available.
+- **ANALYZE**: a neutral summary is consistent with the non-punitive weekly summary (R30) and
+  the existing adherence record (R60). No new storage or claim.
+- **IMPLEMENT**: Menu History shows started/completed/ended-early counts, an all-time
+  completion percentage, and copy stating that stopping early is not a failure. Same data as
+  Settings and the export.
+- **VERIFICATION**: the menu test asserts 4 started / 3 completed / 1 ended early / 75%;
+  the UI audit includes the History tab; full gates follow.
+
 ## Commands run
 
 ```text
@@ -721,5 +735,13 @@ npx vitest run tests/storage/export.test.ts
 npm run test:all                 29 Python + 327 Vitest passed
 $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/research-consent-email-proof.mjs
   manifest appVersion 0.1.0, evidenceReview v1.1 (2026-11-08), dataDictionaryVersion 2026-11-08, consentVersion 1, counts adherence 1; consoleErrors []
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/ui/practice-menu.test.tsx
+  before fix: menu-adherence testid absent
+  after fix:  6 passed
+npm run test:all                 29 Python + 328 Vitest passed
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
+  menu-history audited with adherence card; consoleErrors []; no horizontal scroll/tiny text
 python aikit.py check noesis     6/6 gates passed
 ```

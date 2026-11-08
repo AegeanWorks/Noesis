@@ -759,6 +759,7 @@ export function App() {
         {screen === "menu" ? (
           <PracticeMenuScreen
             history={history}
+            adherenceCounts={adherenceCounts(adherence)}
             hasSession={hasSession}
             sessionLength={settings.sessionLength}
             initialTab={menuTab}

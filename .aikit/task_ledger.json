@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-export-manifest",
+    "task_id": "noesis-menu-adherence",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794109380.6728828,
-    "owner": "opencode:manifest",
-    "started_by": "opencode:manifest",
+    "updated_at": 1794110022.899886,
+    "owner": "opencode:menu-adherence",
+    "started_by": "opencode:menu-adherence",
     "continuations": [],
-    "completed_at": 1794109500.878734
+    "completed_at": 1794110104.7214894
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-literature-menu-briefing",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/6] Plan: add a literature-based practice menu with test selection and full block history, plus a brief evidence explanation before every test block",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794089851.83107,
-      "timestamp_str": "2026-11-08 01:17:31",
-      "agent": "opencode:litmenu",
-      "impact_assessment": {
-        "why": "The user asked for a test-selection/history menu and a brief explanation before every test; the review already supports autonomy, low-stakes framing and per-block measurement, and a targeted 2026-11-08 literature update adds two SDT meta-analyses",
-        "benefits": "Explicit choice (full session vs single test) and local history in one menu; every block states what it measures, the response rule, claim boundary, source and safety before scoring starts; all content traceable to PMIDs",
-        "risks": "contract: new menu screen, new briefing gate and MechanicMeta.brief field; dependency: none; concurrency: clock pauses while briefing is open; state: no history format change",
-        "mitigation": "failing-first UI and evidence tests, engine untouched, full test/typecheck/build/ai-verify/aikit gates, browser UI audit with screenshots"
-      },
-      "plan_digest": "f9b106a915528cc620cd965549079699bcec43fd679d47f9c0e6ba2541d7f727"
-    },
-    {
-      "task_id": "noesis-literature-menu-briefing",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/6] Impl: two SDT context records and count/reference updates; MechanicMeta.brief; PracticeMenuScreen with test and history tabs; TestBriefing before every block with clock gate; Home/Menu nav; scroll reset; docs R54-R56, ADR-040, research note; failing-first UI tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794092187.3451996,
-      "timestamp_str": "2026-11-08 01:56:27",
-      "agent": "opencode:litmenu"
-    },
-    {
-      "task_id": "noesis-literature-menu-briefing",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/6] Verified: review 114 records/275 outcomes valid; 29 Python + 278 Vitest; typecheck/build clean; ai:verify 400/400; ui audit consoleErrors [], no horizontal scroll, new links >=44px; proof scroll 2557->0, tick 0 while briefing then 911; aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794092200.8406935,
-      "timestamp_str": "2026-11-08 01:56:40",
-      "agent": "opencode:litmenu"
-    },
-    {
-      "task_id": "noesis-literature-menu-briefing",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-literature-menu-briefing' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794092281.1943781,
-      "timestamp_str": "2026-11-08 01:58:01",
-      "agent": "opencode:litmenu"
-    },
     {
       "task_id": "noesis-research-consent-email",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794109500.8787365,
       "timestamp_str": "2026-11-08 06:45:00",
       "agent": "opencode:manifest"
+    },
+    {
+      "task_id": "noesis-menu-adherence",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/4] Plan: surface the neutral session completion summary in the Menu History tab, not only Settings",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794109636.4331365,
+      "timestamp_str": "2026-11-08 06:47:16",
+      "agent": "opencode:menu-adherence",
+      "impact_assessment": {
+        "why": "Adherence data is now logged and exported, but the user only sees it in Settings. The review supports self-monitoring and feedback on behaviour (R23), and a visible neutral summary makes the history meaningful without loss framing.",
+        "benefits": "Started/completed/ended-early counts and completion rate in Menu History; same local data as the export; no new storage",
+        "risks": "contract: PracticeMenuScreen prop; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first menu test, neutral copy review, browser/UI audit, full gates"
+      },
+      "plan_digest": "206a0f6827f46d6c5af0c75511998c1c5443ad345f921be3e09e533d6399d2ad"
+    },
+    {
+      "task_id": "noesis-menu-adherence",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/4] Impl: Menu History shows started/completed/ended-early counts, all-time completion percentage, and neutral not-a-failure copy; same adherence data as Settings/export",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794110011.5452986,
+      "timestamp_str": "2026-11-08 06:53:31",
+      "agent": "opencode:menu-adherence"
+    },
+    {
+      "task_id": "noesis-menu-adherence",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/4] Verified: 29 Python + 328 Vitest; typecheck/build clean; ai:verify 400/400; review 116/277 valid; UI audit menu-history no console errors/horizontal scroll/tiny text; aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794110022.899886,
+      "timestamp_str": "2026-11-08 06:53:42",
+      "agent": "opencode:menu-adherence"
+    },
+    {
+      "task_id": "noesis-menu-adherence",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-menu-adherence' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794110104.721491,
+      "timestamp_str": "2026-11-08 06:55:04",
+      "agent": "opencode:menu-adherence"
     }
   ]
 }

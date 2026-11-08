@@ -42,7 +42,7 @@ delivered.
 | Log an early ending with blocks completed | A participant can stop after one block; that is not the same as never starting |
 | Close dangling starts when a new session begins | Closing the app without an explicit end must not leave an open event forever |
 | Store seed, start/end timestamps, block count and study arm | Lets the study team link the event to the session and arm without storing a name or email |
-| Show a local summary in Settings | Transparency: the participant can see what is recorded before exporting |
+| Show a neutral local summary in Settings and Menu History | Transparency: the participant can see what is recorded before exporting; completion is framed as information, not a failure |
 | Include the log in every JSON export | The study team gets adherence without a separate analytics service |
 | Delete it with **Delete local data** | Local-first retention and withdrawal control |
 

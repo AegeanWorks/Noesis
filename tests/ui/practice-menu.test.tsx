@@ -45,6 +45,7 @@ function record(
 function renderMenu(overrides: Partial<ComponentProps<typeof PracticeMenuScreen>> = {}) {
   const props: ComponentProps<typeof PracticeMenuScreen> = {
     history: [],
+    adherenceCounts: { started: 0, completed: 0, aborted: 0 },
     hasSession: false,
     sessionLength: "standard",
     initialTab: "tests",
@@ -86,6 +87,19 @@ describe("PracticeMenuScreen", () => {
     expect(screen.getByTestId("menu-start-session").textContent).toMatch(/resume/i);
     fireEvent.click(screen.getByTestId("menu-start-session"));
     expect(onResume).toHaveBeenCalledTimes(1);
+  });
+
+  it("shows a neutral session completion summary in History", () => {
+    renderMenu({
+      initialTab: "history",
+      adherenceCounts: { started: 4, completed: 3, aborted: 1 },
+    });
+    const summary = screen.getByTestId("menu-adherence");
+    expect(summary.textContent).toMatch(/4 started/i);
+    expect(summary.textContent).toMatch(/3 completed/i);
+    expect(summary.textContent).toMatch(/1 ended early/i);
+    expect(summary.textContent).toMatch(/75%/);
+    expect(summary.textContent).toMatch(/not a failure/i);
   });
 
   it("shows an empty history state before the first session", () => {

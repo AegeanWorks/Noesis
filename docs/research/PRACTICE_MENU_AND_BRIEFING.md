@@ -73,7 +73,9 @@ enhancement. It must not delay or replace the first response once the user begin
 The review's measurement rule is domain-specific reporting with no composite "brain score"
 (see SYNTHESIS §2.4 and DESIGN_IMPLICATIONS R2/R34). The history view therefore lists each block
 with its mechanic, level, accuracy and existing summary. It never averages blocks across
-mechanics and never turns the record into a single progress number.
+mechanics and never turns the record into a single progress number. It also shows a neutral
+started/completed/ended-early summary from the adherence log (R60); completion is information,
+not a performance score.
 
 ### 3.5 Claim transparency is already a product requirement
 
