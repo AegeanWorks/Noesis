@@ -1529,3 +1529,34 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 409 Vitest; `npm run ai:verify` — 1,000/1,000;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's paired engine, UI, evidence table, tests, proof and record.
+
+## Cycle 34 — Paired Associates mid-session reload and resume proof
+
+- **Area**: Paired Associates persistence and recovery, alongside the storage round-trip test.
+- **FIND**: Paired Associates had a snapshot unit test but no browser-level proof that a real
+  study/test focus session survives reload and resumes with the same seed, block, level and
+  trial.
+- **IMPLEMENT**: `scripts/paired-resume-proof.mjs` starts a level-2 Paired Associates focus
+  session from the Menu, answers three study/test trials, waits for the 1.5 s snapshot, reloads,
+  presses **Resume session**, dismisses the re-shown briefing, verifies the restored state,
+  completes all three blocks and captures screenshots plus console errors.
+- **PROOF**: fixed seed `2721744568`, adaptive paired level 2:
+  - mid: `block 0/3 · paired · difficulty [2,2,2] · trial 3 · study`
+    (`Block 1 of 3 · Level 2`)
+  - stored snapshot: identical seed, block, mechanic, difficulty 2, trial 3, study
+  - after reload: CTA `Resume session`
+  - resumed: identical to mid, including `trial 3 · study`
+  - completed: three level-2 blocks, 100% accuracy, 12/12 correct each, mean response
+    428/400/400 ms; `consoleErrors []`
+  - screenshots:
+    `%TEMP%\opencode\noesis-paired-resume\01-paired-mid-session.png` SHA-256
+    `7058157F4718B82962BF81C7912F8ADB1CF649FE7BA81731DBBBCFF7927E5E3B`;
+    `02-home-after-reload.png` SHA-256
+    `991B16366F124D3C406B6F1FDA3005469E3E585B392A64FB63EBA80647B834D1`;
+    `03-paired-resumed.png` SHA-256
+    `0217C0CC06735013116C50AD17F7E8F8D216A4F6FBA029DED13C698FC3627114`;
+    `04-paired-results.png` SHA-256
+    `C47E3E8F085DE293C286651B1234DFE135E9E679D8FBCEF0F1A4BA0C809328B8`.
+- **GATES**: `npm run test:all` — 29 Python + 409 Vitest; `npm run ai:verify` — 1,000/1,000;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's resume proof and record.
