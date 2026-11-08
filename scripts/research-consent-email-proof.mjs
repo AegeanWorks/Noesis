@@ -124,6 +124,14 @@ console.log(
         firstStatus: parsed.adherence?.[0]?.status ?? null,
         firstBlocksCompleted: parsed.adherence?.[0]?.blocksCompleted ?? null,
       },
+      manifest: {
+        appVersion: parsed.manifest?.appVersion ?? null,
+        exportSchemaVersion: parsed.manifest?.exportSchemaVersion ?? null,
+        evidenceReview: parsed.manifest?.evidenceReview ?? null,
+        dataDictionaryVersion: parsed.manifest?.dataDictionaryVersion ?? null,
+        consentVersion: parsed.manifest?.consentVersion ?? null,
+        counts: parsed.manifest?.counts ?? null,
+      },
       email: {
         suggestedFilename,
         draftVisible,

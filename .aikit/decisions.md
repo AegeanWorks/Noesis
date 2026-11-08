@@ -313,6 +313,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add two local CSV exports in Settings. The sessions CSV has one row per mechanic result with stable headers and preserves the full metric and motivation objects as escaped JSON strings. The adherence CSV has one row per start/completion/aborted event. Both are generated from the same local stores as the JSON export, use RFC 4180-style quoting, are date-stamped, and contain no name, email address or account identifier. Buttons are disabled when the relevant store is empty.
 - **Consequences**: Researchers can open the main analysis tables directly while the JSON remains the source of truth for nested fields, consent and future schema additions. The CSV is a flat view; a metric that exists only in `metrics_json` must be parsed in the analysis tool. No server, storage format or scoring change.
 
+### ADR-044: Self-describing export manifest and data dictionary
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The JSON export had a top-level `version` and a session count, but a receiving team could not tell which app release, evidence review or consent version produced a file, nor what each field meant. FAIR reuse requires metadata to travel with the data (PMID 26978244). The Settings footer also still said "evidence review v1.0" after two review updates.
+- **Decision**: Add a `manifest` object to every JSON export with `appVersion`, `exportSchemaVersion`, `evidenceReview`, `dataDictionaryVersion`, `exportedAt`, `consentVersion` and counts for sessions, blocks, far checks, symptom reports, adherence events and adaptation events. Centralize app and review versions in `src/content/appMeta.ts`, and use them in the Settings footer. Add `docs/research/DATA_DICTIONARY.md` covering every JSON field and both CSV layouts. A field change must update the dictionary and `DATA_DICTIONARY_VERSION` in the same commit.
+- **Consequences**: Every export is self-describing without requiring the app build, and the Settings footer no longer reports a stale review version. The manifest is additive, so old exports and consumers remain valid. The dictionary is manual prose, not generated; a missed update is a documentation defect, and the export tests assert the manifest shape and counts.
+
 
 
 

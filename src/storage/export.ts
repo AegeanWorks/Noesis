@@ -6,6 +6,12 @@ import type { FarCheck } from "./farChecks";
 import type { AdverseEvent } from "./adverseEvents";
 import type { ConsentLanguage, ResearchConsent } from "./researchConsent";
 import type { AdherenceEvent } from "./adherence";
+import {
+  APP_VERSION,
+  DATA_DICTIONARY_VERSION,
+  EVIDENCE_REVIEW_VERSION,
+  EXPORT_SCHEMA_VERSION,
+} from "../content/appMeta";
 
 export interface StudyExport {
   studyId: string;
@@ -22,6 +28,24 @@ export interface ResearchExport {
   language: ConsentLanguage;
 }
 
+export interface ExportManifest {
+  app: "noesis";
+  appVersion: string;
+  exportSchemaVersion: number;
+  evidenceReview: string;
+  dataDictionaryVersion: string;
+  exportedAt: string;
+  consentVersion: number | null;
+  counts: {
+    sessions: number;
+    blocks: number;
+    farChecks: number;
+    adverseEvents: number;
+    adherence: number;
+    adaptationEvents: number;
+  };
+}
+
 export interface HistoryExport {
   app: "noesis";
   version: 1;
@@ -34,6 +58,7 @@ export interface HistoryExport {
   adaptationLog: AdaptationEvent[];
   adherence: AdherenceEvent[];
   research: ResearchExport | null;
+  manifest: ExportManifest;
 }
 
 export interface ExportExtras {
@@ -64,18 +89,41 @@ export function buildHistoryExport(
   exportedAt: Date = new Date(),
   extras: ExportExtras = {},
 ): string {
+  const farChecks = [...(extras.farChecks ?? [])];
+  const adverseEvents = [...(extras.adverseEvents ?? [])];
+  const adaptationLog = [...(extras.adaptationLog ?? [])];
+  const adherence = [...(extras.adherence ?? [])];
+  const research = extras.research ?? null;
+  const exportedAtIso = exportedAt.toISOString();
   const payload: HistoryExport = {
     app: "noesis",
     version: 1,
-    exportedAt: exportedAt.toISOString(),
+    exportedAt: exportedAtIso,
     sessionCount: sessions.length,
     sessions: [...sessions],
     study: study,
-    farChecks: [...(extras.farChecks ?? [])],
-    adverseEvents: [...(extras.adverseEvents ?? [])],
-    adaptationLog: [...(extras.adaptationLog ?? [])],
-    adherence: [...(extras.adherence ?? [])],
-    research: extras.research ?? null,
+    farChecks,
+    adverseEvents,
+    adaptationLog,
+    adherence,
+    research,
+    manifest: {
+      app: "noesis",
+      appVersion: APP_VERSION,
+      exportSchemaVersion: EXPORT_SCHEMA_VERSION,
+      evidenceReview: EVIDENCE_REVIEW_VERSION,
+      dataDictionaryVersion: DATA_DICTIONARY_VERSION,
+      exportedAt: exportedAtIso,
+      consentVersion: research?.consentVersion ?? null,
+      counts: {
+        sessions: sessions.length,
+        blocks: sessions.reduce((sum, session) => sum + session.results.length, 0),
+        farChecks: farChecks.length,
+        adverseEvents: adverseEvents.length,
+        adherence: adherence.length,
+        adaptationEvents: adaptationLog.length,
+      },
+    },
   };
   return `${JSON.stringify(payload, null, 2)}\n`;
 }

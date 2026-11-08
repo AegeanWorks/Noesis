@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { APP_VERSION, EVIDENCE_REVIEW_VERSION } from "../../content/appMeta";
 import {
   FINISHER_BONUS,
   scheduleLabel,
@@ -481,7 +482,9 @@ export function SettingsScreen({
         </div>
       </div>
 
-      <p className="fine">Noesis app 0.1.0 · evidence review v1.0</p>
+      <p className="fine">
+        Noesis app {APP_VERSION} · evidence review {EVIDENCE_REVIEW_VERSION}
+      </p>
       <Button variant="ghost" onClick={onHome}>
         Back to home
       </Button>

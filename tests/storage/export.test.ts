@@ -119,6 +119,67 @@ describe("history export", () => {
     expect((parsed.adherence as { status: string }[])[0]?.status).toBe("aborted");
   });
 
+  it("carries a self-describing manifest with provenance and counts", () => {
+    const exportedAt = new Date("2026-11-08T12:00:00.000Z");
+    const parsed = JSON.parse(
+      buildHistoryExport([SESSION], null, exportedAt, {
+        adherence: [
+          {
+            id: "session-42-1",
+            seed: 42,
+            startedAt: "2026-11-08T10:00:00.000Z",
+            endedAt: "2026-11-08T10:05:00.000Z",
+            status: "completed",
+            blocksCompleted: 1,
+            blockCount: 1,
+            arm: null,
+          },
+        ],
+        research: {
+          participantCode: "N-ABC12345",
+          consentVersion: 1,
+          consentedAt: "2026-11-08T10:00:00.000Z",
+          withdrawnAt: null,
+          scopes: { dataSharing: true, futureArticles: true },
+          language: "en",
+        },
+      }),
+    ) as Record<string, unknown>;
+    expect(parsed.manifest).toMatchObject({
+      app: "noesis",
+      appVersion: "0.1.0",
+      exportSchemaVersion: 1,
+      evidenceReview: expect.stringMatching(/v1\.1/),
+      consentVersion: 1,
+      exportedAt: "2026-11-08T12:00:00.000Z",
+      counts: {
+        sessions: 1,
+        blocks: 1,
+        farChecks: 0,
+        adverseEvents: 0,
+        adherence: 1,
+        adaptationEvents: 0,
+      },
+    });
+  });
+
+  it("defaults the manifest to zero counts and no consent version", () => {
+    const parsed = JSON.parse(
+      buildHistoryExport([], null, new Date("2026-11-08T12:00:00.000Z")),
+    ) as Record<string, unknown>;
+    expect(parsed.manifest).toMatchObject({
+      consentVersion: null,
+      counts: {
+        sessions: 0,
+        blocks: 0,
+        farChecks: 0,
+        adverseEvents: 0,
+        adherence: 0,
+        adaptationEvents: 0,
+      },
+    });
+  });
+
   it("carries research consent metadata without the study contact email", () => {
     const research = {
       participantCode: "N-ABC12345",

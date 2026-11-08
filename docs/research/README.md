@@ -42,7 +42,8 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [PRACTICE_MENU_AND_BRIEFING.md](PRACTICE_MENU_AND_BRIEFING.md) | Literature basis for the test-selection menu, local history and pre-test briefing |
 | [DATA_COLLECTION_AND_CONSENT.md](DATA_COLLECTION_AND_CONSENT.md) | Literature basis for e-consent, local research data sharing and the email return path |
 | [ADHERENCE_LOGGING.md](ADHERENCE_LOGGING.md) | Literature basis for session starts, completions and early-ending logging |
-| [DATA_EXPORT_AND_REUSE.md](DATA_EXPORT_AND_REUSE.md) | FAIR/data-reuse basis for the sessions and adherence CSV exports |
+| [DATA_EXPORT_AND_REUSE.md](DATA_EXPORT_AND_REUSE.md) | FAIR/data-reuse basis for the JSON manifest and CSV exports |
+| [DATA_DICTIONARY.md](DATA_DICTIONARY.md) | Field-level dictionary for the JSON export and both CSV layouts |
 | [TRIAL_READINESS.md](TRIAL_READINESS.md) | Investigator-facing trial dossier: arms, data schema, safety monitoring |
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |

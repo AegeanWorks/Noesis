@@ -41,6 +41,8 @@ same local record: one CSV for session blocks and one for adherence events.
 | Preserve motivation exposure as `motivation_json` | Engagement exposure remains auditable without expanding the main table |
 | Download from Settings, locally | No server, no account and no silent upload |
 | Disable the buttons when the relevant store is empty | Avoid empty files that look like data loss |
+| Carry a manifest in every JSON export | The receiving team can see the app, schema, evidence-review, consent version and counts without guessing |
+| Publish a field-level data dictionary | Column names and units become reusable without reverse-engineering the app |
 
 ### 3.1 Sessions CSV columns
 
@@ -62,13 +64,25 @@ accuracy, summary, state_hash, metrics_json, motivation_json`
 
 ---
 
-## 4. Requirement added
+### 3.3 Export manifest
+
+Every JSON export carries a `manifest` with `appVersion`, `exportSchemaVersion`,
+`evidenceReview`, `dataDictionaryVersion`, `exportedAt`, `consentVersion` and counts for
+sessions, blocks, far checks, symptom reports, adherence events and adaptation events. This is
+the provenance that makes the file self-describing. The field-level dictionary is
+[DATA_DICTIONARY.md](DATA_DICTIONARY.md).
+
+## 4. Requirements added
 
 - **R61:** Settings offers local CSV exports for session blocks and adherence events. The
   sessions CSV has one row per block with stable headers and preserves the full metric and
   motivation objects as JSON strings; the adherence CSV has one row per event. Both are
   generated from the same local stores as the JSON export, use no server, and contain no name,
   email address or account identifier.
+- **R62:** Every JSON export carries a manifest with the app version, export schema version,
+  evidence-review version, data-dictionary version, export timestamp, consent version and
+  record counts. The data dictionary documents every JSON field and both CSV layouts; a field
+  change updates the dictionary and its version in the same commit.
 
 ---
 

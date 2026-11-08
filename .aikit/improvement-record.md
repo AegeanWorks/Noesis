@@ -567,6 +567,21 @@ Open candidates (not yet cycles): none from the current audits.
   seeded session and adherence record, checks the exact headers, row counts and expected
   values, and reports no console errors.
 
+## Cycle 16 - Self-describing export manifest and data dictionary
+
+- **Area**: research provenance, metadata and documentation.
+- **FIND**: the JSON export carried only a payload version and session count. A study team
+  could not tell which app release, evidence review or consent version produced a file, and
+  the field meanings were only in the code. The Settings footer still said "evidence review
+  v1.0" after two review updates.
+- **ANALYZE**: FAIR reuse requires metadata to travel with the data (PMID 26978244). The fix
+  is additive: a manifest in the JSON and a field-level dictionary, not a new export format.
+- **IMPLEMENT**: `manifest` with app/schema/review/dictionary/consent versions and counts;
+  centralized `appMeta` constants; Settings footer uses them; `DATA_DICTIONARY.md` covers
+  JSON and both CSV layouts; ADR-044 and R62.
+- **VERIFICATION**: see commands below; export tests assert the manifest shape, counts and
+  consent version, and the browser proof checks the manifest in the downloaded JSON.
+
 ## Commands run
 
 ```text
@@ -698,5 +713,13 @@ $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/csv-export-proof.mjs
   sessions CSV header exact, 1 row, session-1 present; adherence CSV header exact, 1 row, completed present; consoleErrors []
 $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
   consoleErrors []; no horizontal scroll; CSV buttons >=44px; settings/consent audit unchanged
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/storage/export.test.ts
+  before fix: manifest undefined
+  after fix:  12 passed
+npm run test:all                 29 Python + 327 Vitest passed
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/research-consent-email-proof.mjs
+  manifest appVersion 0.1.0, evidenceReview v1.1 (2026-11-08), dataDictionaryVersion 2026-11-08, consentVersion 1, counts adherence 1; consoleErrors []
 python aikit.py check noesis     6/6 gates passed
 ```

@@ -54,6 +54,11 @@ local stores: one row per session block (with `metrics_json` and
 `motivation_json` preserved) and one row per adherence event (R61, ADR-043).
 The CSV files contain no name, email address or account identifier.
 
+The JSON export carries a `manifest` with the app version, export schema
+version, evidence-review version, data-dictionary version, consent version
+and record counts. [DATA_DICTIONARY.md](DATA_DICTIONARY.md) documents every
+JSON field and both CSV layouts (R62, ADR-044).
+
 ## 3. Safety monitoring (all arms)
 
 - Pre-training photosensitivity screen with hard content limits (R14, R15).

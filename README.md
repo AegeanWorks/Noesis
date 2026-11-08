@@ -81,10 +81,13 @@ their own email app. No data is uploaded automatically, no server is involved, a
 credential is stored. Withdrawal stops future emails; data already sent cannot be recalled.
 The export also carries a session-level **adherence log**: every start, completion and early
 ending, with the blocks completed and the study arm, so dropout is measurable rather than
-inferred from completers only. Settings also offers two analysis-ready local CSV downloads:
-one row per session block and one row per adherence event, with stable headers and the full
-metric/motivation objects preserved as JSON strings. The literature basis and privacy
-boundaries are in
+inferred from completers only. The JSON file is self-describing: a `manifest` records the app
+version, export schema version, evidence-review version, data-dictionary version, consent
+version and record counts. Settings also offers two analysis-ready local CSV downloads: one row
+per session block and one row per adherence event, with stable headers and the full
+metric/motivation objects preserved as JSON strings. The field-level
+[DATA_DICTIONARY.md](docs/research/DATA_DICTIONARY.md) documents every field. The literature
+basis and privacy boundaries are in
 [docs/research/DATA_COLLECTION_AND_CONSENT.md](docs/research/DATA_COLLECTION_AND_CONSENT.md),
 [docs/research/ADHERENCE_LOGGING.md](docs/research/ADHERENCE_LOGGING.md) and
 [docs/research/DATA_EXPORT_AND_REUSE.md](docs/research/DATA_EXPORT_AND_REUSE.md).
@@ -165,7 +168,8 @@ noesis/
 │   ├── DESIGN_IMPLICATIONS.md    <- product requirements traceable to evidence
 │   ├── ADHERENCE_LOGGING.md      <- session start/completion/early-ending note
 │   ├── DATA_COLLECTION_AND_CONSENT.md <- e-consent and email data-return note
-│   ├── DATA_EXPORT_AND_REUSE.md  <- FAIR/data-reuse basis for CSV exports
+│   ├── DATA_DICTIONARY.md        <- field-level JSON/CSV dictionary
+│   ├── DATA_EXPORT_AND_REUSE.md  <- FAIR/data-reuse basis for the manifest and CSV exports
 │   ├── PRACTICE_MENU_AND_BRIEFING.md <- menu and pre-test briefing evidence note
 │   ├── PRISMA_FLOW.md            <- PRISMA flow and checklist
 │   ├── PROTOCOL.md               <- pre-registered review protocol
@@ -249,7 +253,7 @@ npm run test:all
 This runs:
 
 1. the Python review suite (`python -m unittest discover -s tests -t .`), which validates the evidence table's schema, identifiers, confidence intervals, flags and synthesis matrix;
-2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, research consent and email-draft storage, session adherence logging, CSV export builders, and the React safety/mechanic/settings screens.
+2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, research consent and email-draft storage, session adherence logging, CSV export builders, the export manifest, and the React safety/mechanic/settings screens.
 
 `npm run ai:verify` runs 400 seeded mechanic simulations (4 mechanics × 50 seeds × 2 strategies), checks every metric is finite, completes every run, and verifies the replay hash matches.
 
@@ -263,6 +267,7 @@ This runs:
 - [Data collection and consent](docs/research/DATA_COLLECTION_AND_CONSENT.md)
 - [Adherence logging](docs/research/ADHERENCE_LOGGING.md)
 - [Data export and reuse](docs/research/DATA_EXPORT_AND_REUSE.md)
+- [Data dictionary](docs/research/DATA_DICTIONARY.md)
 - [Safety and regulation](docs/research/SAFETY_AND_REGULATION.md)
 
 Validate the evidence table:
