@@ -1823,3 +1823,45 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 440 Vitest; `npm run ai:verify` — 1,100/1,100;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's resume proof, trends, result deltas, tests, proofs and record.
+
+## Cycle 42 — Judgments-of-learning evidence bounds the confidence check
+
+- **Area**: literature research and the claim boundary of the optional confidence check.
+- **FIND**: Ingendahl et al. 2025 (PMID 40875340; *Psychological Bulletin*) meta-analysed 344
+  effect sizes from 175 experiments and 15,079 adults. Immediate item-level judgments of learning
+  improved memory overall (g=0.22, 95% CI [0.17, 0.27]); related word pairs showed g=0.44,
+  unrelated pairs g=-0.09, and publication bias favoured positive reactivity. Double et al. 2018
+  (PMID 29161973) found no overall effect but positive reactivity for related pairs and word
+  lists. Hu et al. 2025 (PMID 40845062; N=2,406) found better learners had slightly poorer
+  monitoring accuracy. The evidence concerns item-level judgments made during study, not the
+  app's single block-level pre-test rating.
+- **DECISION**: Keep the optional confidence check but state its evidence boundary. The briefing
+  now says item-level confidence judgments can subtly change memory (g≈0.22), confidence is often
+  a weak predictor of accuracy, and the block-level prompt is a reflection, not a validated
+  memory intervention. The result note and Menu History summary repeat the weak-predictor caveat.
+  Add Ingendahl 2025 as a context record; the review moves to 123 records, 285 outcomes,
+  revision v1.7. Recorded in ADR-056.
+- **IMPLEMENT**: `confidence-evidence` note with a PubMed link in `TestBriefing`; caveat in the
+  result note and `ConfidenceSummary`. Failing-first tests cover the evidence note, the result
+  caveat and the History caveat.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before briefing: `%TEMP%\opencode\noesis-jol-before\before-01-briefing.png` SHA-256
+    `D66BD6B205078CAAB381750444DFCF7277CDEC1A33E9377B99A18C43687141E0`
+  - after briefing: `%TEMP%\opencode\noesis-jol-after\after-01-briefing.png` SHA-256
+    `398A1CABF0F47555A4FD3CB071E3B1E35AC9F77A9D8CC4DC97F4844180E430E1`
+    (evidence note and PMID 40875340 link visible)
+  - before results: `before-02-results.png` SHA-256
+    `1075A7413326D19C04C8541D9554095D91C4AEF1100A28D0009417B163B13098`
+  - after results: `after-02-results.png` SHA-256
+    `90AFBE17C44586C5FFD9A7DD80DDB302966C03F5BE7A986C282268845939A76A`
+  - before History: `before-03-history.png` SHA-256
+    `F709AA0B40F55961DCD73847B41719ED36A36EAE53787F5C05BA61B97F749C40`
+  - after History: `after-03-history.png` SHA-256
+    `C64F2683E3105080FFB6886C8BBB11942719CC6513DFE5DDD7932AC85549A5CD`
+- **PROOF (played run)**: `scripts/confidence-proof.mjs` selected High, persisted it across a
+  reload, completed three level-2 Paired Associates blocks, and read the weak-predictor caveat on
+  all three result notes and in `Paired Associates L2: High 100% (3 blocks)` History summary;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 442 Vitest; `npm run ai:verify` — 1,100/1,100;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's evidence record, confidence copy, tests, proofs and record.

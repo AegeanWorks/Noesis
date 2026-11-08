@@ -132,6 +132,15 @@ describe("pre-test briefing", () => {
     expect(onConfidence).toHaveBeenCalledWith("low");
   });
 
+  it("bounds the confidence check with judgments-of-learning evidence", () => {
+    renderSession({ onConfidence: vi.fn() });
+    const note = screen.getByTestId("confidence-evidence");
+    expect(note.textContent).toMatch(/weak predictor|weakly related/i);
+    expect(note.textContent).toMatch(/not a validated memory intervention/i);
+    const link = note.querySelector('a[href*="40875340"]');
+    expect(link).toBeTruthy();
+  });
+
   it("does not brief a paused or completed block", () => {
     renderSession({ view: { ...view(), phase: "block_complete" } });
     expect(screen.queryByTestId("test-briefing")).toBeNull();

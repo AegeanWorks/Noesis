@@ -672,6 +672,15 @@ describe("PracticeMenuScreen", () => {
     expect(screen.queryByTestId("confidence-summary")).toBeNull();
   });
 
+  it("cautions that confidence is a weak predictor in the summary", () => {
+    renderMenu({
+      history: [confidenceRecord("nback", 2, [["high", 0.9]], "c1")],
+      initialTab: "history",
+    });
+    const card = screen.getByTestId("confidence-summary");
+    expect(card.textContent).toMatch(/weak predictor|weakly related/i);
+  });
+
   it("shows a level-aware Change Detection accuracy, set-size and response-time trend", () => {
     renderMenu({
       history: [

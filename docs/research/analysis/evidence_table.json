@@ -7367,6 +7367,54 @@
    ],
    "synthesis_role": "context",
    "product_use": "Supports an experimental paired-associates focus test as verbal episodic-memory practice; no far-transfer, everyday-function or diagnostic claim."
+  },
+  {
+   "pmid": "40875340",
+   "doi": "10.1037/bul0000487",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "Psychological Bulletin",
+   "title": "Do immediate judgments of learning alter memory performance? A meta-analytical review",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults"
+   ],
+   "k": 175,
+   "n": 15079,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "episodic_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.22,
+     "ci_low": 0.17,
+     "ci_high": 0.27,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "immediate judgments-of-learning reactivity across 344 effect sizes; word pairs g=0.23, related pairs g=0.44, unrelated pairs g=-0.09; indications of publication bias"
+    }
+   ],
+   "findings": [
+    "Making immediate judgments of learning improved memory overall (g=0.22, 95% CI [0.17, 0.27])",
+    "Reactivity was positive for related word pairs (g=0.44) and slightly negative for unrelated pairs (g=-0.09)",
+    "The meta-analysis covered 344 effect sizes from 175 experiments and 15,079 adults"
+   ],
+   "limitations": [
+    "Evidence concerns item-level judgments made during study, not a single block-level pre-test rating",
+    "Publication bias favoured positive reactivity over no or negative reactivity",
+    "Moderator effects were only partially consistent with theoretical accounts"
+   ],
+   "flags": [
+    "heterogeneity",
+    "publication_bias_suspected"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Bounds the optional confidence check: item-level confidence judgments can change memory, but confidence is often a weak predictor of accuracy; the app labels its block-level prompt as a reflection, not a validated intervention."
   }
  ]
 }

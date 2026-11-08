@@ -93,6 +93,18 @@ export function TestBriefing({
               </button>
             ))}
           </div>
+          <p className="fine confidence-evidence" data-testid="confidence-evidence">
+            Evidence note: item-level confidence judgments can slightly change what people
+            remember (g≈0.22), and confidence is often a weak predictor of actual accuracy. This
+            block-level prompt is a reflection, not a validated memory intervention.{" "}
+            <a
+              href="https://pubmed.ncbi.nlm.nih.gov/40875340/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              PMID 40875340
+            </a>
+          </p>
         </section>
       ) : null}
 

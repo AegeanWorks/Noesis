@@ -1042,7 +1042,7 @@ function ConfidenceSummary({ rows }: { rows: readonly ConfidenceRow[] }) {
       </div>
       <p className="fine">
         Same-level blocks only. Confidence is an optional reflection, not a score or a
-        diagnostic calibration.
+        diagnostic calibration. Confidence is often only a weak predictor of actual accuracy.
       </p>
       <div className="confidence-summary-rows">
         {rows.map((row) => (

@@ -47,6 +47,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 - The malleability of spatial skills: a meta-analysis of training studies. *Psychological Bulletin*. 2013. PMID: [22663761](https://pubmed.ncbi.nlm.nih.gov/22663761/). DOI: [10.1037/a0028446](https://doi.org/10.1037/a0028446).
 - Prospective Memory Training in Older Adults: A Systematic Review and Meta-Analysis. *Neuropsychology Review*. 2023. PMID: [35543836](https://pubmed.ncbi.nlm.nih.gov/35543836/). DOI: [10.1007/s11065-022-09536-5](https://doi.org/10.1007/s11065-022-09536-5).
 - Long-term effects of mnemonic training in healthy older adults: A meta-analysis. *Psychology and Aging*. 2022. PMID: [36301274](https://pubmed.ncbi.nlm.nih.gov/36301274/). DOI: [10.1037/pag0000712](https://doi.org/10.1037/pag0000712).
+- Do immediate judgments of learning alter memory performance? A meta-analytical review. *Psychological Bulletin*. 2025. PMID: [40875340](https://pubmed.ncbi.nlm.nih.gov/40875340/). DOI: [10.1037/bul0000487](https://doi.org/10.1037/bul0000487).
 
 ## Neurofeedback
 

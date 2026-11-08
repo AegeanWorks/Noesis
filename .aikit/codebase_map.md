@@ -10,7 +10,7 @@
 - **Total Classes**: `9`
 - **Total Top-Level Functions**: `20`
 - **Total Class Methods**: `31`
-- **Total Source Lines**: `742`
+- **Total Source Lines**: `743`
 
 ---
 
@@ -142,7 +142,7 @@
 ### [`tests/test_review_snapshot.py`](tests/test_review_snapshot.py)
 > *Snapshot checks for the current evidence review.*
 
-**Size**: `68` lines (`2506` bytes)
+**Size**: `69` lines (`2507` bytes)
 
 **Classes:**
 - `class ReviewSnapshotTest`

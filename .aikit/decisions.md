@@ -397,6 +397,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add an experimental **Change Detection** focus test: a brief coloured array is shown, followed by a delay and the same array with one changed square; the user taps the changed square. It reports accuracy, set size, mean response time, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims visual working-memory practice only; no general-memory, academic, everyday-function or diagnostic claim.
 - **Consequences**: The app gains an eleventh mechanic and `npm run ai:verify` grows to 1,100 simulations (11 × 50 × 2). No evidence-table record is added; the review remains at 122 records and 284 outcomes. The task-specific evidence exception is recorded in R69 and the candidate note, following the Flanker precedent.
 
+### ADR-056: Judgments-of-learning evidence bounds the confidence check
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: A targeted judgments-of-learning search found Ingendahl et al. 2025 (PMID 40875340; *Psychological Bulletin*; 344 effect sizes from 175 experiments, N=15,079): immediate item-level JOL reactivity was g=0.22 (95% CI [0.17, 0.27]); related word pairs showed g=0.44, unrelated pairs g=-0.09, and publication bias favoured positive reactivity. Double et al. 2018 (PMID 29161973) found no overall effect but positive reactivity for related pairs and word lists. Hu et al. 2025 (PMID 40845062; meta-analysis N=2,406) found better learners had slightly poorer monitoring accuracy. This evidence concerns item-level judgments made during study, not the app's single block-level pre-test rating.
+- **Decision**: Keep the optional confidence check, but state its evidence boundary in the briefing: item-level confidence judgments can subtly change memory, confidence is often a weak predictor of accuracy, and the block-level prompt is a reflection, not a validated memory intervention. Repeat the weak-predictor caveat on the result note and in the Menu History confidence summary. Add Ingendahl 2025 as a context record; the review moves to 123 records, 285 outcomes and revision v1.7.
+- **Consequences**: The app makes no memory-improvement claim for the confidence check. The evidence note is test-covered, and the review count/version gates are updated deliberately.
+
 
 
 

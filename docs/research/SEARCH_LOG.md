@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 122 |
-| Outcomes | 284 |
+| Records | 123 |
+| Outcomes | 285 |
 | Primary outcomes | 226 |
-| Systematic reviews/meta-analyses | 73 |
+| Systematic reviews/meta-analyses | 74 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 23 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 111 |
+| DOI verified | 112 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 43 |
+| cct | 44 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 111 |
+| DOI verified | 112 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **122** |
+| **Total** | **123** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -203,6 +203,8 @@ A 2026-11-08 verbal-fluency and face-name search kept both candidates out of sco
 A 2026-11-08 metacognition search found no confidence-calibration training meta-analysis. Sella et al. 2023 (PMID 36218025; 25 studies, 1,768 older adults; metacognitive training memory d=0.52, strategic training d=0.44, limited methodological quality) stayed narrative-only. An optional Low/Medium/High confidence check was added to the pre-test briefing and echoed on the result card with an explicit "not scored, not diagnostic" note (ADR-054); it is a reflection prompt, not metacognitive training. The check is now persisted per block in the session snapshot and completed result, and Menu History summarizes confidence versus accuracy within each mechanic level. Sessions CSV gains a `confidence` column.
 
 A 2026-11-08 visual working-memory search found no eligible change-detection training meta-analysis. The broader working-memory/executive-function training records (PMIDs 30998045, 32011155) already in the corpus stayed the quantitative basis. Change Detection was added as an experimental focus test with an explicit task-specific evidence exception (R69, ADR-055), using a static coloured grid and one brief change; no evidence-table record was added.
+
+A 2026-11-08 judgments-of-learning search added one context record: Ingendahl et al. 2025 (PMID 40875340; *Psychological Bulletin*; 344 effect sizes from 175 experiments, N=15,079; immediate JOL reactivity g=0.22, 95% CI [0.17, 0.27]; related pairs g=0.44, unrelated pairs g=-0.09; publication bias indicated). The DOI and metadata were verified via PubMed esummary/efetch. It bounds the optional confidence check: the app now states in the briefing that item-level confidence judgments can subtly change memory and that confidence is often a weak predictor, and it labels the block-level prompt as a reflection rather than a validated memory intervention (ADR-056). Double et al. 2018 (PMID 29161973) and Hu et al. 2025 (PMID 40845062) stayed narrative-only. The review is now 123 records and 285 outcomes, revision v1.7.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

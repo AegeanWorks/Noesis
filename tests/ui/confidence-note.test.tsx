@@ -40,6 +40,7 @@ describe("Results confidence note", () => {
     const note = screen.getByTestId("confidence-note-0").textContent ?? "";
     expect(note).toMatch(/Confidence: High/i);
     expect(note).toMatch(/not scored|not a diagnostic/i);
+    expect(note).toMatch(/weak predictor/i);
   });
 
   it("omits the note when no confidence was selected", () => {

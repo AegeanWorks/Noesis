@@ -514,7 +514,7 @@ function ResultCard({
         <p className="fine confidence-note" data-testid={`confidence-note-${index}`}>
           Confidence: {confidence[0]?.toUpperCase()}
           {confidence.slice(1)}. This is an optional reflection, not scored and not a diagnostic
-          calibration.
+          calibration. Confidence is often only a weak predictor of accuracy.
         </p>
       ) : null}
       {result.mechanic === "switching" ? (

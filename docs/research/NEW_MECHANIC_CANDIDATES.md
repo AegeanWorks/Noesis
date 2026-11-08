@@ -335,5 +335,15 @@ These decisions are scope decisions, not evidence that the training modes are in
   in the session snapshot, is stored on the completed result, and feeds a same-mechanic,
   same-level confidence-versus-accuracy summary in Menu History. The app does not claim that this
   prompt is metacognitive training or that it improves memory. Recorded in ADR-054.
+- **Judgments-of-learning boundary:** Ingendahl et al. 2025 (PMID 40875340; *Psychological
+  Bulletin*) meta-analysed 344 effect sizes from 175 experiments and 15,079 adults. Making
+  immediate item-level judgments of learning improved memory overall (g=0.22, 95% CI
+  [0.17, 0.27]); related word pairs showed g=0.44, unrelated pairs g=-0.09, and publication bias
+  favoured positive reactivity. Double et al. 2018 (PMID 29161973) found no overall effect but
+  positive reactivity for related pairs and word lists. Hu et al. 2025 (PMID 40845062) found that
+  better learners had slightly poorer monitoring accuracy (N=2,406). The app therefore describes
+  its block-level check as a reflection prompt whose confidence is often only a weak predictor,
+  not as item-level JOL training and not as a validated memory intervention. Recorded in
+  ADR-056.
 
 These decisions are scope decisions, not evidence that the training modes are ineffective.
