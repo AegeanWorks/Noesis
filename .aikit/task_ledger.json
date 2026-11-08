@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-rotation-resume",
+    "task_id": "noesis-rotation-trend",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794142934.1614845,
-    "owner": "opencode:rotationresume",
-    "started_by": "opencode:rotationresume",
+    "updated_at": 1794143287.6046412,
+    "owner": "opencode:rotationtrend",
+    "started_by": "opencode:rotationtrend",
     "continuations": [],
-    "completed_at": 1794142940.0405712
+    "completed_at": 1794143294.3437016
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-spatial-trend",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add a level-aware Spatial Span mean/longest-span trend to Choose and Menu History",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794141112.735969,
-      "timestamp_str": "2026-11-08 15:31:52",
-      "agent": "opencode:spatialtrend",
-      "impact_assessment": {
-        "why": "Spatial Span had only per-block summaries; Choose and History lacked an aggregated span view, and span direction is opposite to cost (higher is better)",
-        "benefits": "Users see the Spatial Span outcome where they choose and review it, with same-level comparison and no level mixing",
-        "risks": "contract: Menu UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "three failing-first tests (ordering/values/direction, exact Choose line, empty case), seeded before/after screenshots, real level-2 played run, full gates"
-      },
-      "plan_digest": "fa908a64e353d420e841c9b1652b558e33409160772a393188dabe885fcab70b"
-    },
-    {
-      "task_id": "noesis-spatial-trend",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: spatialSpanLevels + SpanTrendCard; zeroBaseline trend option; Choose line; tests; spatial-trend-proof.mjs; record",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794141113.5093505,
-      "timestamp_str": "2026-11-08 15:31:53",
-      "agent": "opencode:spatialtrend"
-    },
-    {
-      "task_id": "noesis-spatial-trend",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seeded L3 6.5/8 improved+0.5, L2 5.0/7 worsened-0.5, L1 4.0/5 first; real level-2 run means 6.8/6.8/6.8 longest 8 updated L2 to 5 blocks no-change; consoleErrors []; 29 Python + 370 Vitest, 700 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794141114.240715,
-      "timestamp_str": "2026-11-08 15:31:54",
-      "agent": "opencode:spatialtrend"
-    },
-    {
-      "task_id": "noesis-spatial-trend",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-spatial-trend' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794141126.0833426,
-      "timestamp_str": "2026-11-08 15:32:06",
-      "agent": "opencode:spatialtrend"
-    },
     {
       "task_id": "noesis-spatial-result-delta",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794142940.0405731,
       "timestamp_str": "2026-11-08 16:02:20",
       "agent": "opencode:rotationresume"
+    },
+    {
+      "task_id": "noesis-rotation-trend",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add a level-aware Mental Rotation accuracy and mean-response-time trend to Choose and Menu History",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794143285.9965303,
+      "timestamp_str": "2026-11-08 16:08:05",
+      "agent": "opencode:rotationtrend",
+      "impact_assessment": {
+        "why": "Mental Rotation had only per-block summaries; pooling levels is invalid and the two metrics point in opposite directions",
+        "benefits": "Users see accuracy and speed where they choose and review the test, with same-level comparison",
+        "risks": "contract: Menu UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "three failing-first tests, seeded before/after screenshots, real level-2 played run, full gates"
+      },
+      "plan_digest": "d5782423f0f5ccfe004bada994ab4a87909aca1ac7b4fea71268023a1425742e"
+    },
+    {
+      "task_id": "noesis-rotation-trend",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: rotationLevels + RotationTrendCard with separate accuracy/RT lines; Choose line; tests; rotation-trend-proof.mjs; record",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794143286.8531249,
+      "timestamp_str": "2026-11-08 16:08:06",
+      "agent": "opencode:rotationtrend"
+    },
+    {
+      "task_id": "noesis-rotation-trend",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded L3 100%/400, L2 90%/500, L1 70%/700; played L2 5 blocks last 100% RT400 mean461, L3/L1 unchanged; consoleErrors []; 29 Python + 384 Vitest, 800 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794143287.6046412,
+      "timestamp_str": "2026-11-08 16:08:07",
+      "agent": "opencode:rotationtrend"
+    },
+    {
+      "task_id": "noesis-rotation-trend",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-rotation-trend' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794143294.3437028,
+      "timestamp_str": "2026-11-08 16:08:14",
+      "agent": "opencode:rotationtrend"
     }
   ]
 }

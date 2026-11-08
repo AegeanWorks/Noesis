@@ -1290,3 +1290,44 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 381 Vitest; `npm run ai:verify` — 800/800;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's resume proof and record.
+
+## Cycle 27 — Level-aware Mental Rotation accuracy and response-time trend
+
+- **Area**: Mental Rotation history readability, using the accuracy and mean response time that
+  the mechanic already reports.
+- **FIND**: Mental Rotation results appeared only as per-block summaries. Choose and History had
+  no aggregated view, and pooling levels would mix incomparable difficulty settings. The two
+  metrics also point in opposite directions: higher accuracy is better, lower response time is
+  better.
+- **IMPLEMENT**: `rotationLevels` groups accuracy and mean response time per level in
+  chronological order. `RotationTrendCard` shows one row per level with separate accuracy and
+  response-time trend lines, last/best accuracy and last/mean response time. The Choose card
+  shows `Mental rotation L{level}: last N% accuracy · RT N ms · best N%`. Three failing-first
+  tests cover level ordering/values, the exact Choose line and the no-rotation empty case.
+- **PROOF (screenshots)**: seeded rotation results at levels 1-3, 390x844@2x:
+  - before Choose: `%TEMP%\opencode\noesis-rotation-trend-before\before-00-choose-tests.png`
+    SHA-256 `ACB1B4817507FE5998A3828AD2C9E207F54F3D92FB58BEDAED6AFA3358F13314`
+    (no rotation line)
+  - before History: `%TEMP%\opencode\noesis-rotation-trend-before\before-01-history-seeded.png`
+    SHA-256 `821BFBBF8018A28F748D9B68F43BE20ADEFBBC085B18B3E3DE9448E143658EBA`
+    (no rotation card)
+  - after Choose: `%TEMP%\opencode\noesis-rotation-trend-after\after-00-choose-tests.png`
+    SHA-256 `9C0962E24C7EA97601F7206B5E61035229FF0C4FE5407B786EBA6C663C60E180`
+    (`Mental rotation L3: last 100% accuracy · RT 400 ms · best 100%`)
+  - after History: `%TEMP%\opencode\noesis-rotation-trend-after\after-01-history-seeded.png`
+    SHA-256 `31479577BB761DDB58ECC3D831F86A9FAD83ABF5E2F9927690550452D9A8EB48`
+    (Level 3 100%/400 ms, Level 2 90%/500 ms, Level 1 70%/700 ms)
+- **PROOF (played run)**: `scripts/rotation-trend-proof.mjs` played a real level-2 Mental
+  Rotation focus session: three blocks, accuracy `[1, 1, 1]`, mean response
+  `[407, 400, 400]` ms. Level 2 updated to 5 blocks with last accuracy 100%, best 100%, last
+  response 400 ms and mean 461 ms, moving to the top as the most recently practised level;
+  Level 3 and Level 1 stayed unchanged. The Choose card then read
+  `Mental rotation L2: last 100% accuracy · RT 400 ms · best 100%`.
+  Screenshots: `after-02-history-after-play.png` SHA-256
+  `E7FB164147B4203F86428D6A99F03C018E8CA686B3F6FE815E28CA0CBD12BB6B` and
+  `after-03-choose-tests-after-play.png` SHA-256
+  `CDEDABA170938D1C041EF81D7BBECFAFC6C2050B762EF6445B1A741E8623332E`;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 384 Vitest; `npm run ai:verify` — 800/800;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's rotation trend, tests, proof script and record.

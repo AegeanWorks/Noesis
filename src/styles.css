@@ -1778,6 +1778,18 @@ html.high-contrast .speed-ring-active {
   font-variant-numeric: tabular-nums;
 }
 
+.menu-rotation-trend {
+  margin-top: -4px;
+  color: var(--ok);
+  font-variant-numeric: tabular-nums;
+}
+
+.rotation-metric-label {
+  margin: 6px 0 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
 
 .flanker-interference-note {
   margin: 4px 0 8px;

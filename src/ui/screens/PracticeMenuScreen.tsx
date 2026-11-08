@@ -393,6 +393,127 @@ function SpanTrendCard({ levels }: { levels: readonly SpatialSpanLevel[] }) {
   );
 }
 
+interface RotationLevel {
+  level: number;
+  accuracies: number[];
+  responseTimes: number[];
+  lastAccuracy: number;
+  bestAccuracy: number;
+  lastResponse: number;
+  meanResponse: number;
+}
+
+function rotationLevels(history: readonly SessionRecord[]): RotationLevel[] {
+  const levels = new Map<
+    number,
+    { accuracies: number[]; responseTimes: number[]; lastSeen: number }
+  >();
+  let seen = 0;
+  for (const record of [...history].reverse()) {
+    for (const result of record.results) {
+      if (result.mechanic !== "rotation") continue;
+      const level = result.difficulty;
+      const accuracy = result.metrics.accuracy;
+      const response = result.metrics.mean_response_ms;
+      if (
+        typeof level !== "number" ||
+        typeof accuracy !== "number" ||
+        !Number.isFinite(accuracy) ||
+        typeof response !== "number" ||
+        !Number.isFinite(response)
+      ) {
+        continue;
+      }
+      const entry = levels.get(level) ?? { accuracies: [], responseTimes: [], lastSeen: 0 };
+      entry.accuracies.push(accuracy);
+      entry.responseTimes.push(response);
+      entry.lastSeen = seen;
+      seen += 1;
+      levels.set(level, entry);
+    }
+  }
+  return [...levels.entries()]
+    .sort((a, b) => b[1].lastSeen - a[1].lastSeen)
+    .map(([level, entry]) => {
+      const accuracies = entry.accuracies.slice(-10);
+      const responseTimes = entry.responseTimes.slice(-10);
+      const total = responseTimes.reduce((sum, value) => sum + value, 0);
+      return {
+        level,
+        accuracies,
+        responseTimes,
+        lastAccuracy: accuracies[accuracies.length - 1] ?? 0,
+        bestAccuracy: Math.max(...accuracies),
+        lastResponse: responseTimes[responseTimes.length - 1] ?? 0,
+        meanResponse: Math.round(total / responseTimes.length),
+      };
+    });
+}
+
+function rotationLine(entry: RotationLevel): string {
+  return `Mental rotation L${entry.level}: last ${percent(entry.lastAccuracy)} accuracy · RT ${Math.round(entry.lastResponse)} ms · best ${percent(entry.bestAccuracy)}`;
+}
+
+function RotationTrendCard({ levels }: { levels: readonly RotationLevel[] }) {
+  return (
+    <section className="card switch-cost-card" data-testid="rotation-trend">
+      <div className="card-top">
+        <div>
+          <p className="eyebrow">Mental Rotation</p>
+          <h2>Accuracy and response time by level</h2>
+        </div>
+      </div>
+      <p className="fine">
+        Accuracy is the share of correct rotation-versus-mirror judgements. Response time is the
+        block mean. Higher accuracy and lower response time are better; compare blocks only within
+        the same level.
+      </p>
+      <div className="switch-cost-levels">
+        {levels.map((entry) => (
+          <div
+            className="switch-cost-level"
+            data-testid={`rotation-level-${entry.level}`}
+            key={entry.level}
+          >
+            <div className="switch-cost-head">
+              <span className="level-badge">Level {entry.level}</span>
+              <span className="fine">
+                {entry.accuracies.length} {entry.accuracies.length === 1 ? "block" : "blocks"}
+              </span>
+            </div>
+            <p className="fine rotation-metric-label">Accuracy</p>
+            <SwitchCostTrendLine
+              values={entry.accuracies}
+              level={entry.level}
+              metricLabel="accuracy"
+              zeroBaseline={false}
+            />
+            <p className="switch-cost-stats" data-testid={`rotation-accuracy-${entry.level}`}>
+              Last <strong>{percent(entry.lastAccuracy)}</strong> · Best{" "}
+              <strong>{percent(entry.bestAccuracy)}</strong>
+            </p>
+            <p className="fine rotation-metric-label">Response time</p>
+            <SwitchCostTrendLine
+              values={entry.responseTimes}
+              level={entry.level}
+              metricLabel="mean response time"
+              zeroBaseline={false}
+            />
+            <p className="switch-cost-stats" data-testid={`rotation-rt-${entry.level}`}>
+              Last <strong>{Math.round(entry.lastResponse)} ms</strong> · Mean{" "}
+              <strong>{entry.meanResponse} ms</strong>
+            </p>
+          </div>
+        ))}
+      </div>
+      <p className="fine">
+        A single block is a baseline, not a trend; these are descriptive practice values, not a
+        diagnosis.
+      </p>
+    </section>
+  );
+}
+
 function TestCard({
   mechanic,
   history,
@@ -423,6 +544,11 @@ function TestCard({
       ? (spatialSpanLevels(history).find((entry) => entry.level === level) ?? null)
       : null;
   const spanLine = spanLevel ? spatialSpanLine(spanLevel) : null;
+  const rotationLevel =
+    mechanic === "rotation" && level !== null
+      ? (rotationLevels(history).find((entry) => entry.level === level) ?? null)
+      : null;
+  const rotationTrendLine = rotationLevel ? rotationLine(rotationLevel) : null;
 
   return (
     <article className="card menu-test-card" data-testid={`menu-test-${mechanic}`}>
@@ -477,6 +603,11 @@ function TestCard({
           {spanLine}
         </p>
       ) : null}
+      {rotationTrendLine ? (
+        <p className="fine menu-rotation-trend" data-testid="menu-rotation-trend">
+          {rotationTrendLine}
+        </p>
+      ) : null}
       <div className="hero-actions">
         <Button onClick={() => onStartTest(mechanic)} data-testid={`start-${mechanic}`}>
           Start {meta.name} test
@@ -502,6 +633,7 @@ function HistoryPanel({
   const costLevels = switchCostLevels(history);
   const interferenceLevels = flankerCostLevels(history);
   const spanLevels = spatialSpanLevels(history);
+  const rotationTrendLevels = rotationLevels(history);
 
   return (
     <div
@@ -578,6 +710,10 @@ function HistoryPanel({
       ) : null}
 
       {spanLevels.length > 0 ? <SpanTrendCard levels={spanLevels} /> : null}
+
+      {rotationTrendLevels.length > 0 ? (
+        <RotationTrendCard levels={rotationTrendLevels} />
+      ) : null}
 
       {history.length === 0 ? (
         <section className="card" data-testid="menu-history-empty">

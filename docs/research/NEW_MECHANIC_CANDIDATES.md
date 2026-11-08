@@ -134,7 +134,10 @@ quantitative basis.
 - Two static block figures appear side by side. The right figure is the same shape rotated by
   0/90/180/270 degrees, or a mirror image of it.
 - Two answer buttons show **Same** and **Mirrored**; keys 1 and 2 work.
-- Metrics: accuracy, same/mirror accuracy, mean response time, timeouts and streaks.
+- Metrics: accuracy, same/mirror accuracy, mean response time, timeouts and streaks. The
+  Choose-a-test card shows the latest same-level accuracy and response time; the History card
+  groups blocks by level and plots both accuracy and response-time trends, comparing only within
+  the same level. Higher accuracy and lower response time are better.
 - It is available from the Menu as a three-block focus test. It is not in the default lineup.
 - **Evidence:** Uttal et al. (2013, PMID 22663761) meta-analysed 217 spatial-training studies
   and found an average effect of g=0.47, stable over delays and transferred to untrained spatial
