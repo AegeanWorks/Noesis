@@ -78,13 +78,17 @@ interface SwitchCostLevel {
   best: number;
 }
 
-function switchCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] {
+function costLevelsFor(
+  history: readonly SessionRecord[],
+  mechanic: MechanicId,
+  metricKey: string,
+): SwitchCostLevel[] {
   const levels = new Map<number, { values: number[]; lastSeen: number }>();
   let seen = 0;
   for (const record of [...history].reverse()) {
     for (const result of record.results) {
-      if (result.mechanic !== "switching") continue;
-      const cost = result.metrics.switch_cost_ms;
+      if (result.mechanic !== mechanic) continue;
+      const cost = result.metrics[metricKey];
       const level = result.difficulty;
       if (typeof level !== "number" || typeof cost !== "number" || !Number.isFinite(cost)) {
         continue;
@@ -115,7 +119,19 @@ function switchCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] 
     });
 }
 
-function SwitchCostTrendLine({ values, level }: { values: readonly number[]; level: number }) {
+function switchCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] {
+  return costLevelsFor(history, "switching", "switch_cost_ms");
+}
+
+function SwitchCostTrendLine({
+  values,
+  level,
+  metricLabel = "switch cost",
+}: {
+  values: readonly number[];
+  level: number;
+  metricLabel?: string;
+}) {
   const width = 140;
   const height = 34;
   const pad = 4;
@@ -135,7 +151,7 @@ function SwitchCostTrendLine({ values, level }: { values: readonly number[]; lev
       className="switch-cost-series"
       viewBox={`0 0 ${width} ${height}`}
       role="img"
-      aria-label={`Level ${level} switch cost trend: ${values.join(" ms, ")} ms`}
+      aria-label={`Level ${level} ${metricLabel} trend: ${values.join(" ms, ")} ms`}
     >
       <line x1={pad} y1={zeroY} x2={width - pad} y2={zeroY} className="switch-cost-zero" />
       {values.length === 1 ? (
@@ -144,6 +160,113 @@ function SwitchCostTrendLine({ values, level }: { values: readonly number[]; lev
         <polyline points={points.join(" ")} />
       )}
     </svg>
+  );
+}
+
+function flankerCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] {
+  return costLevelsFor(history, "flanker", "interference_cost_ms");
+}
+
+function costLine(entry: SwitchCostLevel, label: string): string {
+  if (entry.values.length <= 1) {
+    return `${label} L${entry.level}: last ${entry.last} ms · first block at this level`;
+  }
+  const change =
+    entry.delta === null || entry.delta === 0
+      ? "no change"
+      : entry.delta < 0
+        ? `improved ${Math.abs(entry.delta)} ms`
+        : `worsened +${entry.delta} ms`;
+  return `${label} L${entry.level}: last ${entry.last} ms · ${
+    entry.previous ?? 0
+  } → ${entry.last} ms · ${change}`;
+}
+
+function changeCopy(entry: SwitchCostLevel): { direction: string; copy: string } {
+  if (entry.previous === null) {
+    return { direction: "first", copy: "First block at this level" };
+  }
+  if (entry.delta === 0) {
+    return { direction: "same", copy: "No change vs previous block at this level" };
+  }
+  if (entry.delta !== null && entry.delta < 0) {
+    return {
+      direction: "improved",
+      copy: `Improved ${Math.abs(entry.delta)} ms vs previous block at this level`,
+    };
+  }
+  return {
+    direction: "worsened",
+    copy: `Worsened +${entry.delta} ms vs previous block at this level`,
+  };
+}
+
+function CostTrendCard({
+  testId,
+  prefix,
+  eyebrow,
+  title,
+  metricLabel,
+  definition,
+  levels,
+}: {
+  testId: string;
+  prefix: string;
+  eyebrow: string;
+  title: string;
+  metricLabel: string;
+  definition: string;
+  levels: readonly SwitchCostLevel[];
+}) {
+  return (
+    <section className="card switch-cost-card" data-testid={testId}>
+      <div className="card-top">
+        <div>
+          <p className="eyebrow">{eyebrow}</p>
+          <h2>{title}</h2>
+        </div>
+      </div>
+      <p className="fine">{definition}</p>
+      <div className="switch-cost-levels">
+        {levels.map((entry) => {
+          const change = changeCopy(entry);
+          return (
+            <div
+              className="switch-cost-level"
+              data-testid={`${prefix}-level-${entry.level}`}
+              key={entry.level}
+            >
+              <div className="switch-cost-head">
+                <span className="level-badge">Level {entry.level}</span>
+                <span className="fine">
+                  {entry.values.length} {entry.values.length === 1 ? "block" : "blocks"}
+                </span>
+              </div>
+              <SwitchCostTrendLine
+                values={entry.values}
+                level={entry.level}
+                metricLabel={metricLabel}
+              />
+              <p className="switch-cost-stats">
+                Last <strong>{entry.last} ms</strong> · Mean {entry.mean} ms · Lowest{" "}
+                {entry.best} ms
+              </p>
+              <p
+                className={`switch-cost-change switch-cost-change-${change.direction}`}
+                data-testid={`${prefix}-change-${entry.level}`}
+                data-direction={change.direction}
+              >
+                {change.copy}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+      <p className="fine">
+        A single block is a baseline, not a trend; these are descriptive practice values, not
+        a diagnosis.
+      </p>
+    </section>
   );
 }
 
@@ -164,18 +287,13 @@ function TestCard({
     mechanic === "switching" && level !== null
       ? (switchCostLevels(history).find((entry) => entry.level === level) ?? null)
       : null;
-  const switchCostLine = costLevel
-    ? `Switch cost L${costLevel.level}: last ${costLevel.last} ms${
-        costLevel.values.length > 1
-          ? ` · ${costLevel.previous ?? 0} → ${costLevel.last} ms · ${
-              costLevel.delta !== null && costLevel.delta < 0
-                ? `improved ${Math.abs(costLevel.delta)} ms`
-                : costLevel.delta !== null && costLevel.delta > 0
-                  ? `worsened +${costLevel.delta} ms`
-                  : "no change"
-            }`
-          : " · first block at this level"
-      }`
+  const switchCostLine = costLevel ? costLine(costLevel, "Switch cost") : null;
+  const interferenceLevel =
+    mechanic === "flanker" && level !== null
+      ? (flankerCostLevels(history).find((entry) => entry.level === level) ?? null)
+      : null;
+  const interferenceLine = interferenceLevel
+    ? costLine(interferenceLevel, "Interference cost")
     : null;
 
   return (
@@ -221,6 +339,11 @@ function TestCard({
           {switchCostLine}
         </p>
       ) : null}
+      {interferenceLine ? (
+        <p className="fine menu-flanker-cost" data-testid="menu-flanker-cost">
+          {interferenceLine}
+        </p>
+      ) : null}
       <div className="hero-actions">
         <Button onClick={() => onStartTest(mechanic)} data-testid={`start-${mechanic}`}>
           Start {meta.name} test
@@ -244,6 +367,7 @@ function HistoryPanel({
       ? null
       : Math.round((adherenceCounts.completed / adherenceCounts.started) * 100);
   const costLevels = switchCostLevels(history);
+  const interferenceLevels = flankerCostLevels(history);
 
   return (
     <div
@@ -296,73 +420,27 @@ function HistoryPanel({
       </section>
 
       {costLevels.length > 0 ? (
-        <section className="card switch-cost-card" data-testid="switch-cost-trend">
-          <div className="card-top">
-            <div>
-              <p className="eyebrow">Task Switch</p>
-              <h2>Switch cost by level</h2>
-            </div>
-          </div>
-          <p className="fine">
-            Switch cost = switch-trial reaction time minus repeat-trial reaction time. Lower is
-            faster switching; a negative value is possible. Compare blocks only within the same
-            level.
-          </p>
-          <div className="switch-cost-levels">
-            {costLevels.map((entry) => (
-              <div
-                className="switch-cost-level"
-                data-testid={`switch-cost-level-${entry.level}`}
-                key={entry.level}
-              >
-                <div className="switch-cost-head">
-                  <span className="level-badge">Level {entry.level}</span>
-                  <span className="fine">
-                    {entry.values.length} {entry.values.length === 1 ? "block" : "blocks"}
-                  </span>
-                </div>
-                <SwitchCostTrendLine values={entry.values} level={entry.level} />
-                <p className="switch-cost-stats">
-                  Last <strong>{entry.last} ms</strong> · Mean {entry.mean} ms · Lowest{" "}
-                  {entry.best} ms
-                </p>
-                <p
-                  className={`switch-cost-change ${
-                    entry.delta === null
-                      ? "switch-cost-change-first"
-                      : entry.delta < 0
-                        ? "switch-cost-change-improved"
-                        : entry.delta > 0
-                          ? "switch-cost-change-worsened"
-                          : "switch-cost-change-same"
-                  }`}
-                  data-testid={`switch-cost-change-${entry.level}`}
-                  data-direction={
-                    entry.delta === null
-                      ? "first"
-                      : entry.delta < 0
-                        ? "improved"
-                        : entry.delta > 0
-                          ? "worsened"
-                          : "same"
-                  }
-                >
-                  {entry.previous === null
-                    ? "First block at this level"
-                    : entry.delta === 0
-                      ? "No change vs previous block at this level"
-                      : entry.delta !== null && entry.delta < 0
-                        ? `Improved ${Math.abs(entry.delta)} ms vs previous block at this level`
-                        : `Worsened +${entry.delta} ms vs previous block at this level`}
-                </p>
-              </div>
-            ))}
-          </div>
-          <p className="fine">
-            A single block is a baseline, not a trend; these are descriptive practice values, not
-            a diagnosis.
-          </p>
-        </section>
+        <CostTrendCard
+          testId="switch-cost-trend"
+          prefix="switch-cost"
+          eyebrow="Task Switch"
+          title="Switch cost by level"
+          metricLabel="switch cost"
+          definition="Switch cost = switch-trial reaction time minus repeat-trial reaction time. Lower is faster switching; a negative value is possible. Compare blocks only within the same level."
+          levels={costLevels}
+        />
+      ) : null}
+
+      {interferenceLevels.length > 0 ? (
+        <CostTrendCard
+          testId="flanker-cost-trend"
+          prefix="flanker-cost"
+          eyebrow="Flanker"
+          title="Interference cost by level"
+          metricLabel="interference cost"
+          definition="Interference cost = incongruent-trial reaction time minus congruent-trial reaction time. Lower is less interference; a negative value is possible. Compare blocks only within the same level."
+          levels={interferenceLevels}
+        />
       ) : null}
 
       {history.length === 0 ? (

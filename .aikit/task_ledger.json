@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-flanker-resume",
+    "task_id": "noesis-flanker-cost-trend",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794138128.920177,
-    "owner": "opencode:flankerresume",
-    "started_by": "opencode:flankerresume",
+    "updated_at": 1794138683.2174342,
+    "owner": "opencode:flankercost",
+    "started_by": "opencode:flankercost",
     "continuations": [],
-    "completed_at": 1794138135.605444
+    "completed_at": 1794138686.7376034
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-switch-change",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add a same-level switch-cost change indicator to each Task Switch history row",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794132505.8468428,
-      "timestamp_str": "2026-11-08 13:08:25",
-      "agent": "opencode:switchchange",
-      "impact_assessment": {
-        "why": "The trend showed last/mean/lowest but no direction versus the previous block at that level; cross-level comparison would be invalid",
-        "benefits": "Users see improved/worsened/unchanged within the correct level; first-block state explicit",
-        "risks": "contract: history UI only; dependency: none; concurrency: none; state: none",
-        "mitigation": "failing-first three-state test, seeded before/after screenshots, real level-2 run with a deliberate switch delay, full gates"
-      },
-      "plan_digest": "3e72a4f48ad39669dc4c2c8b83e73d523866bfd5ac2d42647513585d1f20b168"
-    },
-    {
-      "task_id": "noesis-switch-change",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: previous/delta per level; improved/worsened/unchanged/first copy and color; tests; proof script level-2 delay; record",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794132635.536275,
-      "timestamp_str": "2026-11-08 13:10:35",
-      "agent": "opencode:switchchange"
-    },
-    {
-      "task_id": "noesis-switch-change",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seeded L3 worsened +20, L2 improved 20, L1 first; played L2 5 blocks last300/mean91/lowest-6, worsened +300, L3/L1 unchanged; consoleErrors []; 29 Python + 341 Vitest, 500 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794132636.3269792,
-      "timestamp_str": "2026-11-08 13:10:36",
-      "agent": "opencode:switchchange"
-    },
-    {
-      "task_id": "noesis-switch-change",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-switch-change' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794132645.5138774,
-      "timestamp_str": "2026-11-08 13:10:45",
-      "agent": "opencode:switchchange"
-    },
     {
       "task_id": "noesis-switch-result-delta",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794138135.6054454,
       "timestamp_str": "2026-11-08 14:42:15",
       "agent": "opencode:flankerresume"
+    },
+    {
+      "task_id": "noesis-flanker-cost-trend",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add a level-aware Flanker interference-cost trend to the Choose-a-test card and Menu History, with same-level change",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794138682.2639663,
+      "timestamp_str": "2026-11-08 14:51:22",
+      "agent": "opencode:flankercost",
+      "impact_assessment": {
+        "why": "Flanker history had only per-block summaries; neither Choose nor History aggregated interference cost, and averaging across levels would be invalid",
+        "benefits": "Users see the Flanker outcome where they choose and review the test; one shared level grouping for both cost metrics",
+        "risks": "contract: Menu UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "three failing-first tests (ordering/values/change, exact card line, empty case), seeded before/after screenshots, real level-2 Flanker playthrough, full gates"
+      },
+      "plan_digest": "02de072569d929e8c51b83f7e55c72c091fb946519c27dc5702ce390180d4d87"
+    },
+    {
+      "task_id": "noesis-flanker-cost-trend",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: costLevelsFor/costLine/changeCopy shared helpers; Flanker Choose line and History card with metricLabel; tests; flanker-cost-trend-proof.mjs; docs/record",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794138682.74943,
+      "timestamp_str": "2026-11-08 14:51:22",
+      "agent": "opencode:flankercost"
+    },
+    {
+      "task_id": "noesis-flanker-cost-trend",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded L3 last90 120->90 improved30, L2 last80 60->80 worsened20, L1 first; real level-2 run costs 17/0/300 updated L2 to 5 blocks last300 mean91 worsened+300; consoleErrors []; 29 Python + 355 Vitest, 600 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794138683.2174342,
+      "timestamp_str": "2026-11-08 14:51:23",
+      "agent": "opencode:flankercost"
+    },
+    {
+      "task_id": "noesis-flanker-cost-trend",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-flanker-cost-trend' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794138686.7376046,
+      "timestamp_str": "2026-11-08 14:51:26",
+      "agent": "opencode:flankercost"
     }
   ]
 }

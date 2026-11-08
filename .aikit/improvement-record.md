@@ -25,6 +25,7 @@ Covered so far:
 16. Choose-card switch-cost line — 2026-11-08 — cycle 16
 17. Experimental Flanker mechanic — 2026-11-08 — cycle 17
 18. Flanker resume and interference note — 2026-11-08 — cycle 18
+19. Flanker interference-cost Choose/History trend — 2026-11-08 — cycle 19
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -1001,3 +1002,49 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 352 Vitest; `npm run ai:verify` — 600/600;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's note, tests, snapshot coverage, proof and record.
+
+## Cycle 19 — Level-aware Flanker interference-cost trend in Choose and History
+
+- **Area**: Flanker history readability, derived from the same interference-cost metric as the
+  result note.
+- **FIND**: Flanker results appeared in the Menu history list only as per-block summaries. The
+  Choose-a-test card and History panel had no aggregated interference-cost view, and averaging
+  across levels would compare incomparable blocks.
+- **ANALYZE**: Completed records already store `difficulty` and
+  `metrics.interference_cost_ms`. The existing level grouping and trend component were
+  generalized to any mechanic/metric pair, so no engine, storage or scoring change was needed.
+- **IMPLEMENT**: `costLevelsFor(history, mechanic, metricKey)` now backs both
+  `switchCostLevels` and `flankerCostLevels`; `costLine` and `changeCopy` are shared. The Flanker
+  Choose card shows `Interference cost L{level}: last N ms · previous → last ms ·
+  improved/worsened/no change`. A History card with `flanker-cost-trend`,
+  `flanker-cost-level-{level}` and `flanker-cost-change-{level}` uses
+  `SwitchCostTrendLine metricLabel="interference cost"`. Three failing-first tests cover level
+  ordering/values/change, the exact Choose-card line and the no-Flanker empty case.
+- **PROOF (screenshots)**: seeded history with Flanker results at levels 1-3, same 390x844@2x
+  viewport, same save; only the build differs.
+  - before Choose: `%TEMP%\opencode\noesis-flanker-cost-trend-before\before-00-choose-tests.png`
+    SHA-256 `2AB7679FE90DD8F8A1834DEBE6086983CFF8AA180B55772DF8F24DEF88E8B2CB`
+    (no interference line)
+  - before History: `%TEMP%\opencode\noesis-flanker-cost-trend-before\before-01-history-seeded.png`
+    SHA-256 `BAAF092AA3F89D848BDCDE041036C23173C7D7D5C6812A6E424D3CA4520C4D4C`
+    (no trend card)
+  - after Choose: `%TEMP%\opencode\noesis-flanker-cost-trend-after\after-00-choose-tests.png`
+    SHA-256 `10EE99E3A9B594EDFBFE86CB59B28D7EA938CE841F9565DCDC747E7F28F0B9E6`
+    (`Interference cost L3: last 90 ms · 120 → 90 ms · improved 30 ms`)
+  - after History: `%TEMP%\opencode\noesis-flanker-cost-trend-after\after-01-history-seeded.png`
+    SHA-256 `89926A4583676121BC00C283B3632B5871EB2D2599EE966D13BF637F9863228B`
+    (Level 3 improved 30 ms, Level 2 worsened +20 ms, Level 1 first block)
+- **PROOF (played run)**: `scripts/flanker-cost-trend-proof.mjs` then played a real level-2
+  Flanker focus session (three blocks). Deliberately slowing incongruent trials in the last
+  block produced interference costs `[17, 0, 300] ms`. Level 2 updated to
+  `5 blocks · last 300 ms · mean 91 ms · lowest 0 ms · worsened +300 ms`, moved to the top as
+  the most recently practised level, and Level 3 / Level 1 stayed unchanged. The Choose card
+  then read `Interference cost L2: last 300 ms · 0 → 300 ms · worsened +300 ms`.
+  Screenshots: `%TEMP%\opencode\noesis-flanker-cost-trend-after\after-02-history-after-play.png`
+  SHA-256 `7EF91E892A41DAED2BE8608409AC752B230A5594E60DD6F55457C9DBB75AEDD3` and
+  `%TEMP%\opencode\noesis-flanker-cost-trend-after\after-03-choose-tests-after-play.png`
+  SHA-256 `DC3C105A8FD2814ECB1D841355FE4960C74573364E7CEFD86C5C226D97D22D33`.
+  `consoleErrors []` in both runs.
+- **GATES**: `npm run test:all` — 29 Python + 355 Vitest; `npm run ai:verify` — 600/600;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's Flanker trend, tests, proof script and record.

@@ -10,7 +10,8 @@ afterEach(cleanup);
 function record(
   finishedAt = "2026-11-08T10:00:00.000Z",
   id = "session-1",
-): SessionRecord {  return {
+): SessionRecord {
+  return {
     id,
     finishedAt,
     seed: 42,
@@ -58,6 +59,30 @@ function switchingRecord(
       durationMs: 70_000,
       metrics: { accuracy: 1, switch_cost_ms: cost },
       summary: `Task Switch: 100% accuracy, 24/24 correct, ${cost} ms switch cost.`,
+      seed: 42,
+      stateHash: `0123456789abcde${index}`,
+      difficulty: level,
+    })),
+  };
+}
+
+function flankerRecord(
+  level: number,
+  costs: readonly number[],
+  id: string,
+  finishedAt: string,
+): SessionRecord {
+  return {
+    id,
+    finishedAt,
+    seed: 42,
+    results: costs.map((cost, index) => ({
+      mechanic: "flanker",
+      domain: "executive_function",
+      trials: 20,
+      durationMs: 60_000,
+      metrics: { accuracy: 1, interference_cost_ms: cost },
+      summary: `Flanker: 100% accuracy, 20/20 correct, ${cost} ms interference cost.`,
       seed: 42,
       stateHash: `0123456789abcde${index}`,
       difficulty: level,
@@ -202,6 +227,62 @@ describe("PracticeMenuScreen", () => {
   it("omits the switch-cost trend when there are no Task Switch blocks", () => {
     renderMenu({ history: [record()], initialTab: "history" });
     expect(screen.queryByTestId("switch-cost-trend")).toBeNull();
+  });
+
+  it("shows a level-aware Flanker interference-cost trend", () => {
+    renderMenu({
+      history: [
+        flankerRecord(3, [120, 90], "f3", "2026-11-03T10:00:00.000Z"),
+        flankerRecord(2, [60, 80], "f2", "2026-11-02T10:00:00.000Z"),
+        flankerRecord(1, [40], "f1", "2026-11-01T10:00:00.000Z"),
+      ],
+      initialTab: "history",
+    });
+    const card = screen.getByTestId("flanker-cost-trend");
+    expect(card.textContent).toMatch(/interference cost/i);
+    expect(card.textContent).toMatch(/incongruent/i);
+    const rows = screen.getAllByTestId(/^flanker-cost-level-/);
+    expect(rows.map((row) => row.getAttribute("data-testid"))).toEqual([
+      "flanker-cost-level-3",
+      "flanker-cost-level-2",
+      "flanker-cost-level-1",
+    ]);
+    const level3 = screen.getByTestId("flanker-cost-level-3");
+    expect(level3.textContent).toMatch(/Last 90 ms/);
+    expect(level3.textContent).toMatch(/Mean 105 ms/);
+    expect(level3.textContent).toMatch(/Lowest 90 ms/);
+    expect(level3.textContent).not.toMatch(/40 ms/);
+    expect(screen.getByTestId("flanker-cost-level-2").textContent).toMatch(/Last 80 ms/);
+    expect(screen.getByTestId("flanker-cost-level-1").textContent).toMatch(/Last 40 ms/);
+    expect(screen.getByTestId("flanker-cost-change-3").textContent).toBe(
+      "Improved 30 ms vs previous block at this level",
+    );
+    expect(screen.getByTestId("flanker-cost-change-2").textContent).toBe(
+      "Worsened +20 ms vs previous block at this level",
+    );
+    expect(screen.getByTestId("flanker-cost-change-1").textContent).toBe(
+      "First block at this level",
+    );
+  });
+
+  it("shows the latest same-level interference cost on the Flanker card", () => {
+    renderMenu({
+      history: [
+        flankerRecord(2, [60, 80], "f2", "2026-11-08T10:00:00.000Z"),
+        flankerRecord(3, [120, 90], "f3", "2026-11-07T10:00:00.000Z"),
+      ],
+    });
+    expect(screen.getByTestId("menu-flanker-cost").textContent).toBe(
+      "Interference cost L2: last 80 ms · 60 → 80 ms · worsened +20 ms",
+    );
+  });
+
+  it("omits the Flanker trend when there are no Flanker blocks", () => {
+    renderMenu({ history: [record()], initialTab: "history" });
+    expect(screen.queryByTestId("flanker-cost-trend")).toBeNull();
+    cleanup();
+    renderMenu({ history: [record()] });
+    expect(screen.queryByTestId("menu-flanker-cost")).toBeNull();
   });
 
   it("switches between choosing a test and viewing history", () => {
