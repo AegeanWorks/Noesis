@@ -124,6 +124,14 @@ describe("pre-test briefing", () => {
     expect(hint.textContent).toMatch(/link/i);
   });
 
+  it("offers an optional confidence check and reports the choice", () => {
+    const onConfidence = vi.fn();
+    renderSession({ onConfidence, confidence: "high" });
+    expect(screen.getByTestId("confidence-high").getAttribute("aria-pressed")).toBe("true");
+    fireEvent.click(screen.getByTestId("confidence-low"));
+    expect(onConfidence).toHaveBeenCalledWith("low");
+  });
+
   it("does not brief a paused or completed block", () => {
     renderSession({ view: { ...view(), phase: "block_complete" } });
     expect(screen.queryByTestId("test-briefing")).toBeNull();

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { mechanicMeta } from "../../engine/evidence";
 import type { MotivationState } from "../../engine/motivation";
 import { MOTIVATION_TIERS, riskThreshold, totalMomentum } from "../../engine/motivation";
-import type { SessionView } from "../../engine/types";
+import type { Confidence, SessionView } from "../../engine/types";
 import { Button } from "../components/Button";
 import { MechanicStage } from "../components/MechanicStage";
 import { ProgressBar } from "../components/ProgressBar";
@@ -24,6 +24,8 @@ interface SessionScreenProps {
   onRespond: () => void;
   onAnswer: (option: number) => void;
   onBriefingChange?: (open: boolean) => void;
+  confidence?: Confidence | null | undefined;
+  onConfidence?: ((value: Confidence) => void) | undefined;
 }
 
 function isInteractiveTarget(target: EventTarget | null): boolean {
@@ -54,6 +56,8 @@ export function SessionScreen({
   onRespond,
   onAnswer,
   onBriefingChange,
+  confidence = null,
+  onConfidence,
 }: SessionScreenProps) {
   const isLastBlock = view.blockIndex + 1 >= view.blockCount;
   const outcome = motivation?.outcomes[motivation.outcomes.length - 1] ?? null;
@@ -213,6 +217,8 @@ export function SessionScreen({
               blockIndex={view.blockIndex}
               blockCount={view.blockCount}
               difficulty={view.blockDifficulty}
+              confidence={confidence}
+              onConfidence={onConfidence}
               onBegin={beginBriefing}
             />
           ) : view.phase === "block_complete" ? (

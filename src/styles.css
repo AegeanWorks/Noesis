@@ -1988,3 +1988,35 @@ html.high-contrast .speed-ring-active {
   max-width: 460px;
 }
 
+
+.confidence-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.confidence-option {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.confidence-option:hover,
+.confidence-option-active {
+  border-color: var(--accent);
+  background: rgba(139, 233, 253, 0.14);
+  color: var(--text);
+}
+
+.confidence-note {
+  margin: 4px 0 8px;
+  padding-left: 10px;
+  border-left: 3px solid rgba(189, 147, 249, 0.5);
+}
+

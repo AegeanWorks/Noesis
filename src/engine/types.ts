@@ -23,6 +23,7 @@ export type Domain =
 export type SessionLength = "quick" | "standard";
 export type ClaimLevel = "supported" | "experimental" | "wellness_only";
 export type FeedbackTone = "correct" | "incorrect" | "neutral";
+export type Confidence = "low" | "medium" | "high";
 
 export interface MechanicMeta {
   id: MechanicId;

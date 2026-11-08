@@ -1,4 +1,4 @@
-import type { MechanicMeta } from "../../engine/types";
+import type { Confidence, MechanicMeta } from "../../engine/types";
 import { Button } from "./Button";
 import { EvidenceBadge } from "./EvidenceBadge";
 
@@ -7,14 +7,24 @@ interface TestBriefingProps {
   blockIndex: number;
   blockCount: number;
   difficulty: number | null;
+  confidence?: Confidence | null | undefined;
+  onConfidence?: ((value: Confidence) => void) | undefined;
   onBegin: () => void;
 }
+
+const CONFIDENCE_OPTIONS: readonly { value: Confidence; label: string }[] = [
+  { value: "low", label: "Low" },
+  { value: "medium", label: "Medium" },
+  { value: "high", label: "High" },
+];
 
 export function TestBriefing({
   meta,
   blockIndex,
   blockCount,
   difficulty,
+  confidence = null,
+  onConfidence,
   onBegin,
 }: TestBriefingProps) {
   const source = meta.citations[0];
@@ -57,6 +67,32 @@ export function TestBriefing({
         >
           <h3>Strategy tip</h3>
           <p>{meta.strategyHint}</p>
+        </section>
+      ) : null}
+
+      {onConfidence ? (
+        <section className="briefing-section briefing-confidence">
+          <h3>Confidence check (optional)</h3>
+          <p className="fine">
+            How confident are you about this block? This is a reflection, not a score or a
+            diagnostic calibration.
+          </p>
+          <div className="confidence-options" role="group" aria-label="Confidence check">
+            {CONFIDENCE_OPTIONS.map((option) => (
+              <button
+                key={option.value}
+                type="button"
+                className={`confidence-option${
+                  confidence === option.value ? " confidence-option-active" : ""
+                }`}
+                aria-pressed={confidence === option.value}
+                data-testid={`confidence-${option.value}`}
+                onClick={() => onConfidence(option.value)}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
         </section>
       ) : null}
 

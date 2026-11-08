@@ -383,6 +383,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Do not add verbal-fluency or face-name mechanics. Move the existing Paired Associates mnemonic hint into the pre-test briefing as an optional Strategy tip, while keeping it on the study screen. It does not change scoring and is not claimed as a validated protocol or a source of far transfer.
 - **Consequences**: No new mechanic or evidence-table record is added; the review remains at 122 records and 284 outcomes. The briefing hint is covered by a UI test and a before/after briefing proof.
 
+### ADR-054: Optional confidence check, not metacognitive training
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: A targeted confidence-calibration search found no training meta-analysis. Sella et al. 2023 (PMID 36218025) meta-analysed 25 studies in 1,768 older adults: metacognitive training improved memory (d=0.52) and strategic metacognitive training improved memory (d=0.44), metacognitive beliefs, strategy use and some well-being outcomes, but methodological quality was limited. A single confidence rating is a monitoring prompt, not the multi-session training those trials evaluated.
+- **Decision**: Add an optional **Confidence check** to the pre-test briefing (Low/Medium/High) and repeat the selected level on the corresponding result card. It is clearly labelled as a reflection, not scored and not a diagnostic calibration. No new mechanic or evidence-table record is added.
+- **Consequences**: The app gains a small metacognitive awareness prompt without a training claim. The prompt is test-covered and has a before/after briefing and results proof; the review remains at 122 records and 284 outcomes.
+
 
 
 

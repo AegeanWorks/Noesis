@@ -301,4 +301,17 @@ These decisions are scope decisions, not evidence that the training modes are in
 - **Decision:** no verbal-fluency or face-name mechanic. The mnemonic strategy evidence is applied
   instead as an optional pre-test briefing tip for Paired Associates. Recorded in ADR-053.
 
+### 6.5 Metacognitive/confidence-calibration training
+
+- A targeted search found no confidence-calibration training meta-analysis. The closest eligible
+  record is Sella et al. 2023 (PMID 36218025; *Aging & Mental Health*): 25 studies, 1,768 older
+  adults; metacognitive training improved memory (d=0.52) and strategic metacognitive training
+  improved memory (d=0.44), metacognitive beliefs, strategy use and some well-being outcomes, with
+  limited methodological quality.
+- **Applied feature, not a mechanic:** an optional **Confidence check** on the pre-test briefing
+  records Low/Medium/High for the block, and the result card repeats the choice with an explicit
+  note that it is a reflection, not scored and not a diagnostic calibration. The app does not
+  claim that this prompt is metacognitive training or that it improves memory. Recorded in
+  ADR-054.
+
 These decisions are scope decisions, not evidence that the training modes are ineffective.

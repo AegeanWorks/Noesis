@@ -3,13 +3,14 @@ import type { MotivationState } from "../../engine/motivation";
 import { MOTIVATION_TIERS } from "../../engine/motivation";
 import type { AdverseEvent } from "../../storage/adverseEvents";
 import type { SessionRecord } from "../../storage/history";
-import type { MechanicResult } from "../../engine/types";
+import type { MechanicResult, Confidence } from "../../engine/types";
 import { Button } from "../components/Button";
 import { SymptomCheckin } from "../components/SymptomCheckin";
 
 interface ResultsScreenProps {
   results: MechanicResult[];
   history: readonly SessionRecord[];
+  confidences?: readonly (Confidence | null)[];
   motivation: MotivationState | null;
   sessionId: string | null;
   newBests: MechanicResult["mechanic"][];
@@ -407,6 +408,7 @@ function ResultCard({
   result,
   index,
   isNewBest,
+  confidence,
   switchCostComparison,
   interferenceCostComparison,
   spanComparison,
@@ -419,6 +421,7 @@ function ResultCard({
   result: MechanicResult;
   index: number;
   isNewBest: boolean;
+  confidence: Confidence | null;
   switchCostComparison: SwitchCostComparison | null;
   interferenceCostComparison: SwitchCostComparison | null;
   spanComparison: SwitchCostComparison | null;
@@ -491,6 +494,13 @@ function ResultCard({
         ) : null}
       </div>
       <p className="result-summary">{result.summary}</p>
+      {confidence ? (
+        <p className="fine confidence-note" data-testid={`confidence-note-${index}`}>
+          Confidence: {confidence[0]?.toUpperCase()}
+          {confidence.slice(1)}. This is an optional reflection, not scored and not a diagnostic
+          calibration.
+        </p>
+      ) : null}
       {result.mechanic === "switching" ? (
         <>
           <p className="fine switch-cost-note" data-testid="switch-cost-note">
@@ -605,6 +615,7 @@ function ResultCard({
 export function ResultsScreen({
   results,
   history,
+  confidences = [],
   motivation,
   sessionId,
   newBests,
@@ -668,6 +679,7 @@ export function ResultsScreen({
               result={result}
               index={index}
               isNewBest={newBests.includes(result.mechanic)}
+              confidence={confidences[index] ?? null}
               switchCostComparison={switchComparisons[index] ?? null}
               interferenceCostComparison={interferenceComparisons[index] ?? null}
               spanComparison={spanComparisonsByIndex[index] ?? null}

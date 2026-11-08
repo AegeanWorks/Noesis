@@ -1664,3 +1664,36 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 418 Vitest; `npm run ai:verify` — 1,000/1,000;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's briefing hint, test, scope note, proof and record.
+
+## Cycle 38 — Metacognition scan and optional confidence check
+
+- **Area**: literature scan plus a metacognitive awareness prompt.
+- **FIND**: No confidence-calibration training meta-analysis exists. Sella et al. 2023 (PMID
+  36218025; 25 studies, 1,768 older adults) found metacognitive training improved memory (d=0.52)
+  and strategic metacognitive training improved memory (d=0.44), metacognitive beliefs and
+  strategy use, but methodological quality was limited. A single confidence rating is a
+  monitoring prompt, not the multi-session training those trials evaluated.
+- **DECISION**: Add an optional **Confidence check** to the pre-test briefing (Low/Medium/High)
+  and repeat the selected level on the result card with an explicit note that it is a
+  reflection, not scored and not a diagnostic calibration. No new mechanic or evidence-table
+  record; recorded in ADR-054 and section 6.5.
+- **IMPLEMENT**: optional `Confidence` type; App state keyed by block; SessionScreen passes it to
+  TestBriefing; ResultsScreen renders `confidence-note-{index}`. Failing-first tests cover the
+  briefing buttons and the result note.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before briefing: `%TEMP%\opencode\noesis-confidence-before\before-01-briefing.png` SHA-256
+    `CCEEABD6D637282A903B11D6A1F119851590F778DF7CDC76C1156DAC340076FE`
+  - after briefing with High selected:
+    `%TEMP%\opencode\noesis-confidence-after\after-01-briefing.png` SHA-256
+    `D66BD6B205078CAAB381750444DFCF7277CDEC1A33E9377B99A18C43687141E0`
+  - before results: `before-02-results.png` SHA-256
+    `63DC99559795B0BF305D87152CB870FDD32BD38EDE0A00ED749E13B42C73399D`
+  - after results: `after-02-results.png` SHA-256
+    `67D2D7622759533D855F5B29054E8C34E441F2B83E938C20679EB93A091E63BC`
+- **PROOF (played run)**: `scripts/confidence-proof.mjs` selected High in the Paired Associates
+  briefing and completed three level-2 blocks; the first result carried
+  `Confidence: High. This is an optional reflection, not scored and not a diagnostic
+  calibration.`; `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 421 Vitest; `npm run ai:verify` — 1,000/1,000;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's confidence check, tests, scope note, proof and record.

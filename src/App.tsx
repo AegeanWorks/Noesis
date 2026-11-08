@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { stableHash } from "./engine/hash";
-import type { MechanicId } from "./engine/types";
+import type { Confidence, MechanicId } from "./engine/types";
 import {
   addBlockMotivation,
   bankMotivation,
@@ -155,6 +155,7 @@ export function App() {
   const [paused, setPaused] = useState(false);
   const [menuTab, setMenuTab] = useState<MenuTab>("tests");
   const [briefingOpen, setBriefingOpen] = useState(false);
+  const [confidenceByBlock, setConfidenceByBlock] = useState<Record<number, Confidence>>({});
   const [researchSettings, setResearchSettings] = useState(() => loadResearchSettings());
   const [researchConsent, setResearchConsent] = useState(() => loadResearchConsent());
   const [researchDraft, setResearchDraft] = useState<ResearchEmailDraft | null>(null);
@@ -262,6 +263,7 @@ export function App() {
       clearSessionSnapshot();
       const seed = Date.now() >>> 0;
       setBriefingOpen(true);
+      setConfidenceByBlock({});
       motivatedBlock.current = -1;
       const adaptiveState = loadAdaptive();
       setAdaptive(adaptiveState);
@@ -795,6 +797,13 @@ export function App() {
               onRespond={respond}
               onAnswer={answer}
               onBriefingChange={setBriefingOpen}
+              confidence={confidenceByBlock[view.blockIndex] ?? null}
+              onConfidence={(value) =>
+                setConfidenceByBlock((current) => ({
+                  ...current,
+                  [view.blockIndex]: value,
+                }))
+              }
               motivation={motivationActive ? motivation : null}
               targetMs={settings.sessionLength === "quick" ? 5 * 60_000 : 8 * 60_000}
               elapsedMs={state?.tick ?? 0}
@@ -823,6 +832,9 @@ export function App() {
           <ResultsScreen
             results={state?.results ?? []}
             history={history}
+            confidences={state?.results.map(
+              (_, index) => confidenceByBlock[index] ?? null,
+            ) ?? []}
             motivation={motivation}
             sessionId={lastSessionId}
             newBests={newBests}
