@@ -1745,6 +1745,20 @@ html.high-contrast .speed-ring-active {
   color: var(--bad);
 }
 
+.stage-flanker .flanker-arrows {
+  font-family: var(--mono);
+  font-size: clamp(2.2rem, 11vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.1;
+  color: var(--text);
+  text-indent: 0.16em;
+}
+
+.stage-flanker .options {
+  max-width: 420px;
+}
+
 
 .menu-switch-cost {
   margin-top: -4px;

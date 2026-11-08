@@ -115,6 +115,33 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Static shapes and text only. No flashing.",
   },
+  flanker: {
+    id: "flanker",
+    name: "Flanker",
+    domain: "executive_function",
+    tagline: "Interference control",
+    instructions:
+      "Choose the direction of the centre arrow. The surrounding arrows may point the other way. Keys 1 (left) and 2 (right) work too.",
+    brief:
+      "Interference control: you respond to the centre arrow while ignoring conflicting flankers. Executive-function training meta-analyses show small near-transfer effects in older adults; no Flanker-specific training meta-analysis was found in this review, so this is an experimental focus test, not a validated protocol or a general-intelligence or everyday-function claim.",
+    claimLevel: "experimental",
+    claim:
+      "Practices interference control and the ability to suppress conflicting response cues.",
+    qualifier:
+      "Task practice only. Interference cost is a within-session descriptive measure; this is not a diagnostic test and does not train general intelligence or everyday function.",
+    notClaimed: [
+      "General intelligence",
+      "Academic achievement",
+      "Dementia prevention",
+      "Everyday function",
+      "ADHD treatment",
+    ],
+    citations: [
+      { pmid: "30998045", label: "Executive-function training meta-analysis (2019)" },
+      { pmid: "32011155", label: "Cognitive training modules meta-analysis (2020)" },
+    ],
+    safety: "Static arrow characters. No flashing.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

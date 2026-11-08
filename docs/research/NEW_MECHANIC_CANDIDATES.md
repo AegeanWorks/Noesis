@@ -52,7 +52,7 @@ The following sources stayed narrative-only:
 | Candidate | Construct | Evidence | Safety / fit | Decision |
 |---|---|---|---|---|
 | **Task Switch** | Set-shifting / cognitive flexibility | Core-EF meta-analyses show small near and far transfer; single-component EF training was most effective in one analysis, while multicomponent training also transferred and improved everyday functioning (30998045, 32011155) | Static coloured shapes; no flashing; easy deterministic state machine | **Implement as experimental focus test** |
-| Flanker | Interference control | No eligible task-specific meta-analysis in this search; flanker is a standard inhibition paradigm | Static arrows; safe | Candidate, not implemented |
+| Flanker | Interference control | No eligible Flanker-specific training meta-analysis in this search; the standard interference-control paradigm is covered by broader EF training evidence with small near transfer (30998045, 32011155) | Static arrows; safe | **Implement as experimental focus test, claim-bounded** |
 | Stop-signal | Response inhibition / cancellation | Strong paradigm, but Go/No-Go already covers inhibition in the core lineup | Static go/stop cues; safe | Candidate, not implemented |
 | Spatial span / Corsi | Visuospatial working memory | Near transfer is plausible; less evidence for broad transfer | Grid sequence; safe | Candidate, not implemented |
 | Mental rotation | Spatial ability | Training improves spatial tasks; far transfer to academic outcomes is not established | Static 2D/3D shapes; safe | Candidate, not implemented |
@@ -90,6 +90,20 @@ quantitative basis.
   the validated four-core lineup; Task Switch is not silently mixed in.
 - No general-intelligence, academic, dementia-prevention or everyday-function claim.
 
+### 4.1 Flanker implementation and evidence limit
+
+- A five-character arrow row has a left- or right-pointing centre arrow; congruent flankers point
+  the same way and incongruent flankers point the other way.
+- Two answer buttons show **Left** and **Right**; keys 1 and 2 work.
+- Metrics: accuracy, congruent/incongruent accuracy and reaction time, interference cost,
+  timeouts and streaks.
+- It is available from the Menu as a three-block focus test. It is not in the default lineup.
+- **Evidence limit:** the review search found no eligible Flanker-specific training
+  meta-analysis. The task is a standard interference-control paradigm and the broader
+  executive-function training meta-analyses show small near transfer, so the app ships it as an
+  experimental, claim-bounded focus test rather than a validated protocol. It makes no
+  general-intelligence, academic, dementia-prevention or everyday-function claim.
+
 ---
 
 ## 5. Requirement and limits
@@ -100,9 +114,11 @@ quantitative basis.
   revalidated.
 
 Limits: the evidence is for executive-function training broadly, not for this exact
-colour/shape task. Both meta-analyses also report benefits from multicomponent training,
-including everyday functioning in Basak et al., and Nguyen et al. recommend adaptive
-multidomain training. Task Switch is therefore a conservative single-task focus test, not
-evidence that single-component training is superior, and it does not replace the core lineup.
-The task is a practice and measurement instrument, not a diagnostic test. Future candidates
-should be selected by task-specific evidence and safety, not by genre labels.
+colour/shape or arrow task. Both meta-analyses also report benefits from multicomponent
+training, including everyday functioning in Basak et al., and Nguyen et al. recommend adaptive
+multidomain training. Task Switch and Flanker are therefore conservative single-task focus
+tests, not evidence that single-component training is superior, and they do not replace the
+core lineup. Flanker has no task-specific training meta-analysis in this review; its claim is
+limited to task practice. The tasks are practice and measurement instruments, not diagnostic
+tests. Future candidates should be selected by task-specific evidence and safety, not by genre
+labels.

@@ -1,5 +1,6 @@
 import { REASONING_ITEMS } from "../content/reasoningItems";
 import { applyMechanicAction, createMechanic } from "./mechanics";
+import { flankerCorrectIndex } from "./mechanics/flanker";
 import { switchingChoices } from "./mechanics/switching";
 import { normalizeSeed, nextRandom, randomInt } from "./rng";
 import type {
@@ -11,6 +12,7 @@ import type {
   ReasoningState,
   SpeedState,
   SwitchingState,
+  FlankerState,
 } from "./types";
 
 export type Policy = (state: MechanicState) => MechanicAction | null;
@@ -49,6 +51,11 @@ export function optimalPolicy(state: MechanicState): MechanicAction | null {
       ? { type: "answer", option: switchingChoices(trial).correctIndex }
       : null;
   }
+  if (state.mechanic === "flanker") {
+    if (state.phase !== "question" || state.phaseElapsed < 500) return null;
+    const trial = current(state.trials, state.index);
+    return trial ? { type: "answer", option: flankerCorrectIndex(trial) } : null;
+  }
   if (state.phase !== "question") return null;
   if (state.phaseElapsed < 500) return null;
   const id = state.order[state.index];
@@ -76,6 +83,9 @@ export function alwaysPolicy(state: MechanicState): MechanicAction | null {
       : null;
   }
   if (state.mechanic === "switching") {
+    return state.phase === "question" ? { type: "answer", option: 0 } : null;
+  }
+  if (state.mechanic === "flanker") {
     return state.phase === "question" ? { type: "answer", option: 0 } : null;
   }
   return state.phase === "question" ? { type: "answer", option: 0 } : null;
@@ -108,6 +118,12 @@ export function randomPolicy(seed: number): Policy {
       return respond < 0.5 ? { type: "respond" } : null;
     }
     if (state.mechanic === "switching") {
+      if (state.phase !== "question") return null;
+      const [option, next] = randomInt(rng, 2);
+      rng = next;
+      return { type: "answer", option };
+    }
+    if (state.mechanic === "flanker") {
       if (state.phase !== "question") return null;
       const [option, next] = randomInt(rng, 2);
       rng = next;
@@ -179,6 +195,14 @@ export function runMechanic(
   policy: Policy,
   options?: SimulationOptions,
 ): SimulationResult<SwitchingState>;
+export function runMechanic(
+  id: "flanker",
+  seed: number,
+  difficulty: number,
+  trials: number,
+  policy: Policy,
+  options?: SimulationOptions,
+): SimulationResult<FlankerState>;
 export function runMechanic(
   id: MechanicId,
   seed: number,

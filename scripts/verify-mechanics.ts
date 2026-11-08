@@ -1,10 +1,10 @@
-import { stableHash } from "../src/engine/hash";
+﻿import { stableHash } from "../src/engine/hash";
 import { mechanicResult } from "../src/engine/mechanics";
 import { defaultTrials } from "../src/engine/mechanics";
 import { policyFor, replayMechanic, runMechanic } from "../src/engine/simulate";
 import type { MechanicId } from "../src/engine/types";
 
-const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed", "switching"];
+const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed", "switching", "flanker"];
 const STRATEGIES = ["optimal", "random"] as const;
 const SEEDS = Array.from({ length: 50 }, (_, index) => index + 1);
 
@@ -56,3 +56,4 @@ try {
   console.error(`[FAIL] ${error instanceof Error ? error.message : String(error)}`);
   process.exit(1);
 }
+

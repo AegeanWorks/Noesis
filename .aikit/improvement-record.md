@@ -23,6 +23,7 @@ Covered so far:
 14. Same-level switch-cost change — 2026-11-08 — cycle 14
 15. Same-level result delta — 2026-11-08 — cycle 15
 16. Choose-card switch-cost line — 2026-11-08 — cycle 16
+17. Experimental Flanker mechanic — 2026-11-08 — cycle 17
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -937,3 +938,38 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 344 Vitest; `npm run ai:verify` — 500/500;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's card line, test, proof script capture and record.
+
+## Cycle 17 — Experimental Flanker focus test from the literature matrix
+
+- **Area**: new approach / literature matrix, candidate selected after evidence verification.
+- **FIND**: The matrix listed Flanker as a standard interference-control candidate but not
+  implemented. PubMed searches on 2026-11-08 (`flanker task` + training + meta-analysis/
+  systematic review; `interference control training`; `Eriksen flanker`) found no eligible
+  Flanker-specific cognitive-training meta-analysis. The broader executive-function training
+  meta-analyses already in the table (PMID 30998045, 32011155) show small near-transfer effects
+  in older adults; their titles, journals, years, DOIs and abstracts were verified earlier.
+- **ANALYSE / DECISION**: Implement Flanker only as an experimental, claim-bounded focus test,
+  not as a validated protocol and not in the default lineup. Recorded as ADR-046 and R64 because
+  it is an explicit exception to the task-specific-evidence preference.
+- **IMPLEMENT**: New deterministic `flanker` mechanic: five static arrows, centre left/right,
+  congruent/incongruent flankers, Left/Right answers, accuracy, congruent/incongruent reaction
+  times, interference cost, timeouts and streaks. Integrated into types, schema, simulation,
+  evidence metadata, adaptive defaults, session UI, results metrics, AI CLI, menu card and
+  tests. `npm run ai:verify` grows from 500 to 600 simulations.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before Menu (no Flanker card):
+    `%TEMP%\opencode\noesis-flanker-before\before-01-menu.png` SHA-256
+    `D241BDEE87F707413DB80FF717F8183CDD893BA3F023106FE5CEDF871B0A03BD`
+  - after Menu: `%TEMP%\opencode\noesis-flanker-after\after-01-menu.png` SHA-256
+    `9005A72247E3377218D42B935CD140836E1E8C9911FAA502CC863DC807A704E3`
+  - stage: `%TEMP%\opencode\noesis-flanker-after\after-02-flanker-stage.png` SHA-256
+    `1EB6CF17FA4A095185F938A574EE9D148701CB88F39139753B4294D695A19828`
+  - results: `%TEMP%\opencode\noesis-flanker-after\after-03-flanker-results.png` SHA-256
+    `AC615893234868059EF0E1E623DBB568F957C100AD00DCF4C6BEFB170A37814C`
+- **PROOF (played run)**: `scripts/flanker-proof.mjs` opened the Menu, started Flanker, read the
+  briefing ("interference control"), played all three level-2 blocks correctly, and reported
+  `mechanics ["flanker","flanker","flanker"]`, `difficulties [2,2,2]`, 20/20 correct each, and
+  interference costs `[-71, 0, 0] ms`; `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 350 Vitest; `npm run ai:verify` — 600/600;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's Flanker engine, UI, tests, evidence docs, proof and record.

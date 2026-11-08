@@ -1,4 +1,4 @@
-export const MECHANIC_IDS = ["nback", "gonogo", "reasoning", "speed", "switching"] as const;
+export const MECHANIC_IDS = ["nback", "gonogo", "reasoning", "speed", "switching", "flanker"] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
 export type Domain =
@@ -6,7 +6,8 @@ export type Domain =
   | "inhibition"
   | "reasoning"
   | "processing_speed"
-  | "cognitive_flexibility";
+  | "cognitive_flexibility"
+  | "executive_function";
 export type SessionLength = "quick" | "standard";
 export type ClaimLevel = "supported" | "experimental" | "wellness_only";
 export type FeedbackTone = "correct" | "incorrect" | "neutral";
@@ -236,6 +237,48 @@ export interface SwitchingState {
   completed: boolean;
 }
 
+export interface FlankerConfig {
+  trials: number;
+  congruentRate: number;
+  timeLimitMs: number;
+  feedbackMs: number;
+}
+
+export type FlankerDirection = "left" | "right";
+
+export interface FlankerTrial {
+  centre: FlankerDirection;
+  congruent: boolean;
+  arrows: string;
+}
+
+export interface FlankerResponse {
+  trial: number;
+  centre: FlankerDirection;
+  congruent: boolean;
+  selected: number | null;
+  correct: boolean;
+  reactionMs: number | null;
+  timedOut: boolean;
+}
+
+export interface FlankerState {
+  mechanic: "flanker";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: FlankerConfig;
+  trials: FlankerTrial[];
+  index: number;
+  phase: "question" | "feedback" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  itemStartTick: number;
+  selected: number | null;
+  responses: FlankerResponse[];
+  completed: boolean;
+}
+
 export interface ReasoningState {
   mechanic: "reasoning";
   seed: number;
@@ -258,7 +301,8 @@ export type MechanicState =
   | GoNoGoState
   | ReasoningState
   | SpeedState
-  | SwitchingState;
+  | SwitchingState
+  | FlankerState;
 
 export type MechanicAction =
   | { type: "respond" }

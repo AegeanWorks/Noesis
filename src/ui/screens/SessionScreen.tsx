@@ -109,11 +109,13 @@ export function SessionScreen({
       }
       if (
         (view.mechanic.mechanic === "reasoning" ||
-          view.mechanic.mechanic === "switching") &&
+          view.mechanic.mechanic === "switching" ||
+          view.mechanic.mechanic === "flanker") &&
         /^[1-4]$/.test(event.key)
       ) {
         const option = Number(event.key) - 1;
-        const max = view.mechanic.mechanic === "switching" ? 2 : 4;
+        const max =
+          view.mechanic.mechanic === "reasoning" ? 4 : 2;
         if (option < max) {
           event.preventDefault();
           if (view.mechanic.canRespond) onAnswer(option);

@@ -327,6 +327,14 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add an experimental **Task Switch** mechanic: a static coloured shape is answered under an alternating colour/shape rule, with switch/repeat accuracy and switch cost. It is available from the Menu as a three-block focus test. The default standard session stays the four-core lineup; Task Switch is not mixed in silently. It is `experimental`, uses no flashing, and carries no general-intelligence, academic, dementia-prevention or everyday-function claim.
 - **Consequences**: The app gains a literature-selected cognitive-flexibility task and a new measurement outcome without changing the validated core session. `npm run ai:verify` grows from 400 to 500 deterministic simulations (5 mechanics × 50 seeds × 2 strategies). The candidate matrix and limits are in `docs/research/NEW_MECHANIC_CANDIDATES.md`; future tasks must be chosen by task-specific evidence and safety, not genre labels.
 
+### ADR-046: Experimental Flanker focus test
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The user asked to continue from the candidate matrix. PubMed searches found no eligible Flanker-specific training meta-analysis; the broader executive-function training meta-analyses (PMID 30998045, 32011155) show small near-transfer effects in older adults, and Flanker is a standard interference-control paradigm. The matrix's preference for task-specific evidence therefore cannot be met exactly.
+- **Decision**: Add an experimental **Flanker** focus test: a static five-arrow row with a left/right centre arrow and congruent or incongruent flankers; answer Left/Right; report accuracy, congruent/incongruent reaction time and interference cost. It is available from the Menu as a three-block focus test, not in the default lineup. The copy states explicitly that no Flanker-specific meta-analysis was found and that this is task practice, not a validated protocol, diagnostic, general-intelligence or everyday-function claim.
+- **Consequences**: The app gains a sixth mechanic and `npm run ai:verify` grows to 600 simulations (6 × 50 × 2). The exception to the task-specific-evidence preference is recorded in the candidate matrix and this ADR; future candidates still need task-specific evidence or a similarly explicit, claim-bounded rationale.
+
+
 
 
 

@@ -1,4 +1,4 @@
-// @vitest-environment jsdom
+﻿// @vitest-environment jsdom
 import { afterEach, describe, expect, it } from "vitest";
 import {
   adaptLevel,
@@ -31,7 +31,7 @@ afterEach(() => {
 describe("adaptive difficulty store", () => {
   it("stays fixed by default", () => {
     expect(loadAdaptive().enabled).toBe(false);
-    expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2 });
+    expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 });
   });
 
   it("toggles the experiment without touching levels", () => {
@@ -59,6 +59,7 @@ describe("adaptive difficulty store", () => {
       reasoning: 3,
       speed: 2,
       switching: 2,
+      flanker: 2,
     });
   });
 });
@@ -81,7 +82,7 @@ describe("adaptation rule", () => {
 
   it("uses the latest result per mechanic", () => {
     const { levels, events } = adaptLevels(
-      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2 },
+      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 },
       [result("nback", 0.2), result("nback", 1)],
     );
     expect(levels.nback).toBe(3);
@@ -91,7 +92,7 @@ describe("adaptation rule", () => {
 
   it("adapts each mechanic separately", () => {
     const { levels } = adaptLevels(
-      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2 },
+      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 },
       [result("nback", 1), result("speed", 0.1)],
     );
     expect(levels).toMatchObject({ nback: 3, speed: 1, gonogo: 2 });
@@ -121,3 +122,5 @@ describe("session application", () => {
     expect(loadAdaptive().levels.nback).toBe(3);
   });
 });
+
+

@@ -7,6 +7,7 @@ export const MechanicIdSchema = z.enum([
   "reasoning",
   "speed",
   "switching",
+  "flanker",
 ]);
 
 export const BlockConfigSchema = z.object({

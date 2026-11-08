@@ -135,4 +135,23 @@ describe("MechanicStage", () => {
     );
     expect(screen.getByTestId("stimulus").className).toMatch(/shape-square/);
   });
+
+  it("renders flanker arrows and sends the chosen direction", () => {
+    const onAnswer = vi.fn();
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "flanker",
+          name: "Flanker",
+          stimulus: "<<><<",
+          options: ["Left", "Right"],
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(screen.getByTestId("stimulus").textContent).toBe("<<><<");
+    fireEvent.click(screen.getByTestId("option-1"));
+    expect(onAnswer).toHaveBeenCalledWith(1);
+  });
 });

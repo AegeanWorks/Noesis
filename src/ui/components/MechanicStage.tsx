@@ -145,6 +145,48 @@ function SwitchingStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond"
   );
 }
 
+function FlankerStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  return (
+    <div
+      className="stage stage-flanker"
+      data-mechanic="flanker"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
+      <p className="stage-prompt">{view.prompt}</p>
+      <div
+        className="flanker-arrows"
+        role="img"
+        aria-label={`Flanker arrows: ${view.stimulus ?? "blank"}`}
+        data-testid="stimulus"
+      >
+        {view.stimulus ?? "\u00a0"}
+      </div>
+      <div className="options" role="group" aria-label="Answer options">
+        {(view.options ?? []).map((option, index) => (
+          <Button
+            key={`${option}-${index}`}
+            variant="ghost"
+            className="option"
+            disabled={!view.canRespond}
+            onClick={() => onAnswer(index)}
+            data-testid={`option-${index}`}
+          >
+            <span className="option-key">{index + 1}</span>
+            {option}
+          </Button>
+        ))}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function ReasoningStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   return (
     <div
@@ -194,6 +236,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "switching") {
     return <SwitchingStage view={view} onAnswer={props.onAnswer} />;
+  }
+  if (view.mechanic === "flanker") {
+    return <FlankerStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

@@ -38,6 +38,14 @@ import {
   switchingResult,
   switchingView,
 } from "./switching";
+import {
+  applyFlankerAction,
+  createFlanker,
+  flankerComplete,
+  flankerConfig,
+  flankerResult,
+  flankerView,
+} from "./flanker";
 import type {
   MechanicAction,
   MechanicId,
@@ -51,6 +59,7 @@ export function defaultTrials(id: MechanicId, difficulty: number): number {
   if (id === "gonogo") return 30 + (difficulty - 1) * 4;
   if (id === "speed") return 20 + (difficulty - 1) * 2;
   if (id === "switching") return 16 + (difficulty - 1) * 4;
+  if (id === "flanker") return 18 + (difficulty - 1) * 2;
   return 8;
 }
 
@@ -64,6 +73,7 @@ export function createMechanic(
   if (id === "gonogo") return createGoNoGo(seed, gonogoConfig(difficulty, trials));
   if (id === "speed") return createSpeed(seed, speedConfig(difficulty, trials));
   if (id === "switching") return createSwitching(seed, switchingConfig(difficulty, trials));
+  if (id === "flanker") return createFlanker(seed, flankerConfig(difficulty, trials));
   return createReasoning(seed, reasoningConfig(difficulty, trials));
 }
 
@@ -75,6 +85,7 @@ export function applyMechanicAction(
   if (state.mechanic === "gonogo") return applyGoNoGoAction(state, action);
   if (state.mechanic === "speed") return applySpeedAction(state, action);
   if (state.mechanic === "switching") return applySwitchingAction(state, action);
+  if (state.mechanic === "flanker") return applyFlankerAction(state, action);
   return applyReasoningAction(state, action);
 }
 
@@ -83,6 +94,7 @@ export function mechanicView(state: MechanicState): MechanicView {
   if (state.mechanic === "gonogo") return gonogoView(state);
   if (state.mechanic === "speed") return speedView(state);
   if (state.mechanic === "switching") return switchingView(state);
+  if (state.mechanic === "flanker") return flankerView(state);
   return reasoningView(state);
 }
 
@@ -91,6 +103,7 @@ export function mechanicResult(state: MechanicState): MechanicResult {
   if (state.mechanic === "gonogo") return gonogoResult(state);
   if (state.mechanic === "speed") return speedResult(state);
   if (state.mechanic === "switching") return switchingResult(state);
+  if (state.mechanic === "flanker") return flankerResult(state);
   return reasoningResult(state);
 }
 
@@ -99,5 +112,6 @@ export function mechanicComplete(state: MechanicState): boolean {
   if (state.mechanic === "gonogo") return gonogoComplete(state);
   if (state.mechanic === "speed") return speedComplete(state);
   if (state.mechanic === "switching") return switchingComplete(state);
+  if (state.mechanic === "flanker") return flankerComplete(state);
   return reasoningComplete(state);
 }

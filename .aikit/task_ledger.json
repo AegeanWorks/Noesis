@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-choose-switch-cost",
+    "task_id": "noesis-flanker-mechanic",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794133658.5512185,
-    "owner": "opencode:choosecost",
-    "started_by": "opencode:choosecost",
+    "updated_at": 1794135832.1077816,
+    "owner": "opencode:flanker",
+    "started_by": "opencode:flanker",
     "continuations": [],
-    "completed_at": 1794133672.225813
+    "completed_at": 1794135844.7774363
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-switch-resume-proof",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: prove an end-to-end Task Switch focus session resumes after reload with adaptive level persistence, and explain the switch-cost result metric",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794130799.3918967,
-      "timestamp_str": "2026-11-08 12:39:59",
-      "agent": "opencode:switchproof",
-      "impact_assessment": {
-        "why": "The new Task Switch had no browser reload/resume proof, and the result card exposed switch cost without a definition or negative-value caveat",
-        "benefits": "Verified save/resume for the new mechanic; readable, non-diagnostic switch-cost reporting",
-        "risks": "contract: proof script, copy and one CSS note; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "fixed-clock Playwright resume proof, new component test, full aikit check and 500-simulation verify"
-      },
-      "plan_digest": "6f969995921ee36ee0fb3543db436b5ef5460005c2ba9a47a7fcd3b0a2e0836b"
-    },
-    {
-      "task_id": "noesis-switch-resume-proof",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: switching-resume-proof.mjs; switch-cost note and test; candidate-note definition; record entry",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794130800.4765115,
-      "timestamp_str": "2026-11-08 12:40:00",
-      "agent": "opencode:switchproof"
-    },
-    {
-      "task_id": "noesis-switch-resume-proof",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: mid/stored/resumed identical at seed 2721744568, block 0/3, trial 8, level 3; 3 blocks completed 24/24; consoleErrors []; before/after results frames; 29 Python + 339 Vitest, 500 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794130801.8305507,
-      "timestamp_str": "2026-11-08 12:40:01",
-      "agent": "opencode:switchproof"
-    },
-    {
-      "task_id": "noesis-switch-resume-proof",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-switch-resume-proof' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794130842.896496,
-      "timestamp_str": "2026-11-08 12:40:42",
-      "agent": "opencode:switchproof"
-    },
     {
       "task_id": "noesis-switch-cost-history",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794133672.2258148,
       "timestamp_str": "2026-11-08 13:27:52",
       "agent": "opencode:choosecost"
+    },
+    {
+      "task_id": "noesis-flanker-mechanic",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: add an experimental Flanker focus test after verifying that no task-specific meta-analysis is eligible",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794135828.6206083,
+      "timestamp_str": "2026-11-08 14:03:48",
+      "agent": "opencode:flanker",
+      "impact_assessment": {
+        "why": "The literature matrix listed Flanker as a standard interference-control candidate; searches found no Flanker-specific training meta-analysis, but broader EF training evidence supports small near transfer",
+        "benefits": "A new measured interference-control task, focus-only and claim-bounded; 600 deterministic simulations",
+        "risks": "contract: sixth mechanic adds types/API/UI; default four-core lineup unchanged; dependency: none; concurrency: none; state: additive adaptive level",
+        "mitigation": "failing-first engine/UI tests, fixed-clock Menu/stage/results proof, explicit ADR/R64 evidence limit, full gates"
+      },
+      "plan_digest": "bb8e13b20ca4fb025b5fad843d55ce652e1d9b80e48bfa6104ff143d5fb42378"
+    },
+    {
+      "task_id": "noesis-flanker-mechanic",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Impl: deterministic arrows engine, interference metrics, UI stage, schema/sim/adaptive/results/AI integration, README/docs/ADR-046, proof script",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794135830.370507,
+      "timestamp_str": "2026-11-08 14:03:50",
+      "agent": "opencode:flanker"
+    },
+    {
+      "task_id": "noesis-flanker-mechanic",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: before Menu no card; after card + briefing + 3 level-2 blocks 20/20 each, interference -71/0/0, consoleErrors []; 29 Python + 350 Vitest, 600 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794135832.1077816,
+      "timestamp_str": "2026-11-08 14:03:52",
+      "agent": "opencode:flanker"
+    },
+    {
+      "task_id": "noesis-flanker-mechanic",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-flanker-mechanic' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794135844.7774386,
+      "timestamp_str": "2026-11-08 14:04:04",
+      "agent": "opencode:flanker"
     }
   ]
 }

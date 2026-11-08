@@ -58,6 +58,13 @@ const METRIC_LABELS: Record<string, string> = {
   switch_mean_response_ms: "Switch reaction",
   repeat_mean_response_ms: "Repeat reaction",
   switch_cost_ms: "Switch cost",
+  congruent_trials: "Congruent trials",
+  incongruent_trials: "Incongruent trials",
+  congruent_accuracy: "Congruent accuracy",
+  incongruent_accuracy: "Incongruent accuracy",
+  congruent_mean_response_ms: "Congruent reaction",
+  incongruent_mean_response_ms: "Incongruent reaction",
+  interference_cost_ms: "Interference cost",
 };
 
 const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
@@ -66,6 +73,7 @@ const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
   reasoning: ["accuracy", "mean_response_ms", "timed_out"],
   speed: ["accuracy", "median_reaction_ms", "lapses"],
   switching: ["accuracy", "switch_cost_ms", "switch_accuracy"],
+  flanker: ["accuracy", "interference_cost_ms", "incongruent_accuracy"],
 };
 
 export function formatMetric(key: string, value: number): string {
