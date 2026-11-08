@@ -3,24 +3,15 @@
   "active_task": {
     "task_id": "noesis-switch-resume-proof",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1794130801.8305507,
     "owner": "opencode:switchproof",
     "started_by": "opencode:switchproof",
-    "continuations": []
+    "continuations": [],
+    "completed_at": 1794130842.896494
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-csv-export",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-csv-export' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794108644.746591,
-      "timestamp_str": "2026-11-08 06:30:44",
-      "agent": "opencode:csv"
-    },
     {
       "task_id": "noesis-export-manifest",
       "phase": "phase 2",
@@ -259,6 +250,16 @@
       "status": "in_progress",
       "timestamp": 1794130801.8305507,
       "timestamp_str": "2026-11-08 12:40:01",
+      "agent": "opencode:switchproof"
+    },
+    {
+      "task_id": "noesis-switch-resume-proof",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-switch-resume-proof' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794130842.896496,
+      "timestamp_str": "2026-11-08 12:40:42",
       "agent": "opencode:switchproof"
     }
   ]
