@@ -8,6 +8,7 @@ export const MECHANIC_IDS = [
   "spatial",
   "rotation",
   "prospective",
+  "paired",
 ] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
@@ -410,6 +411,47 @@ export interface ProspectiveState {
   completed: boolean;
 }
 
+export interface PairedConfig {
+  trials: number;
+  studyMs: number;
+  testLimitMs: number;
+  feedbackMs: number;
+}
+
+export interface PairedTrial {
+  first: string;
+  second: string;
+  options: string[];
+  correctIndex: number;
+}
+
+export interface PairedResponse {
+  trial: number;
+  first: string;
+  second: string;
+  selected: number | null;
+  correct: boolean;
+  reactionMs: number | null;
+  timedOut: boolean;
+}
+
+export interface PairedState {
+  mechanic: "paired";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: PairedConfig;
+  trials: PairedTrial[];
+  index: number;
+  phase: "study" | "test" | "feedback" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  itemStartTick: number;
+  selected: number | null;
+  responses: PairedResponse[];
+  completed: boolean;
+}
+
 export interface ReasoningState {
   mechanic: "reasoning";
   seed: number;
@@ -436,7 +478,8 @@ export type MechanicState =
   | FlankerState
   | SpatialState
   | RotationState
-  | ProspectiveState;
+  | ProspectiveState
+  | PairedState;
 
 export type MechanicAction =
   | { type: "respond" }

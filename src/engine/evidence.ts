@@ -219,6 +219,31 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Static letters; no flashing.",
   },
+  paired: {
+    id: "paired",
+    name: "Paired Associates",
+    domain: "episodic_memory",
+    tagline: "Verbal episodic memory",
+    instructions:
+      "Study the word pair, then choose the word that was paired with the cue. Keys 1-4 work too.",
+    brief:
+      "Verbal episodic-memory practice: study a word pair, then retrieve its partner. A 2022 meta-analysis of 21 randomized trials found mnemonic training improved episodic memory immediately (g=0.408) and at follow-up (g=0.418) in healthy older adults; the evidence concerns strategy training, not this exact task. This is an experimental focus test with no far-transfer or everyday-function claim.",
+    claimLevel: "experimental",
+    claim: "Practices encoding and retrieving arbitrary word pairs.",
+    qualifier:
+      "Task practice only. Accuracy is a within-session descriptive measure; this is not a diagnostic test and does not claim general memory, academic or everyday-function improvement.",
+    notClaimed: [
+      "General intelligence",
+      "Everyday function",
+      "Dementia prevention",
+      "ADHD treatment",
+      "Long-term memory improvement",
+    ],
+    citations: [
+      { pmid: "36301274", label: "Mnemonic memory-training meta-analysis (2022)" },
+    ],
+    safety: "Static words; no flashing.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

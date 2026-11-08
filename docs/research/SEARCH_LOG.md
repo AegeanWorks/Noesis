@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 121 |
-| Outcomes | 283 |
-| Primary outcomes | 225 |
-| Systematic reviews/meta-analyses | 72 |
+| Records | 122 |
+| Outcomes | 284 |
+| Primary outcomes | 226 |
+| Systematic reviews/meta-analyses | 73 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 23 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 110 |
+| DOI verified | 111 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 42 |
+| cct | 43 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 110 |
+| DOI verified | 111 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **121** |
+| **Total** | **122** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -193,6 +193,8 @@ A 2026-11-08 mental-rotation search added one context record: Uttal et al. 2013 
 A 2026-11-08 scope search evaluated the remaining UFOV/visual-search and stop-signal candidates; both stayed out of scope and narrative-only (ADR-049). Edwards et al. 2018 (PMID 29175362) reviewed 44 UFOV-training studies from 17 RCTs: speed/attention and everyday-function gains, durable across ten years, adaptive better than non-adaptive, but no transfer to other neuropsychological outcomes. Woutersen et al. 2017 (PMID 29270605) found the UFOV subtests are not construct-pure, and UFOV remains a proprietary protocol with brief adaptive presentation. McGreen et al. 2024 (PMID 38309625) meta-analysed 32 Go/No-Go and Stop-Signal studies for appetitive behaviour (g=-0.21), not cognitive-training transfer; Go/No-Go already covers inhibition. No evidence-table record was added, so the review remained at 120 records and 282 outcomes.
 
 A 2026-11-08 prospective-memory search added one context record: Tse et al. 2023 (PMID 35543836; 48 studies in the systematic review, 29 RCTs in the meta-analysis; immediate prospective-memory training effect g=0.54, long-term g=0.20 and not significant). The DOI and metadata were verified via PubMed esummary. It grounds the experimental Prospective Memory focus test (R67, ADR-050). The review is now 121 records and 283 outcomes, revision v1.5.
+
+A 2026-11-08 paired-associates search added one context record: Chen et al. 2022 (PMID 36301274; 21 RCTs, 4,149 healthy older adults; mnemonic training improved episodic memory immediately g=0.408 and at follow-up g=0.418). The DOI and metadata were verified via PubMed esummary. It grounds the experimental Paired Associates focus test (R68, ADR-051). Gross et al. 2012 (PMID 22423647; 35 studies, g=0.31) stayed narrative-only as broader memory-strategy evidence. The review is now 122 records and 284 outcomes, revision v1.6.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

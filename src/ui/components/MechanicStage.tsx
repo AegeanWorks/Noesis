@@ -276,6 +276,52 @@ function RotationFigure({
   );
 }
 
+function PairedStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  const [first = "", second = ""] = (view.stimulus ?? "").split("|");
+  return (
+    <div
+      className="stage stage-paired"
+      data-mechanic="paired"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
+      <p className="stage-prompt">{view.prompt}</p>
+      {view.phase === "study" ? (
+        <div className="paired-study" data-testid="stimulus">
+          <span>{first}</span>
+          <span className="paired-dash">—</span>
+          <span>{second}</span>
+        </div>
+      ) : (
+        <div className="paired-cue" data-testid="stimulus">
+          {view.stimulus ?? "\u00a0"}
+        </div>
+      )}
+      <div className="options" role="group" aria-label="Answer options">
+        {(view.options ?? []).map((option, index) => (
+          <Button
+            key={`${option}-${index}`}
+            variant="ghost"
+            className="option"
+            disabled={!view.canRespond}
+            onClick={() => onAnswer(index)}
+            data-testid={`option-${index}`}
+          >
+            <span className="option-key">{index + 1}</span>
+            {option}
+          </Button>
+        ))}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function ProspectiveStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   return (
     <div
@@ -433,6 +479,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "prospective") {
     return <ProspectiveStage view={view} onAnswer={props.onAnswer} />;
+  }
+  if (view.mechanic === "paired") {
+    return <PairedStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

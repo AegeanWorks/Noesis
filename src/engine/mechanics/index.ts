@@ -70,6 +70,14 @@ import {
   prospectiveResult,
   prospectiveView,
 } from "./prospective";
+import {
+  applyPairedAction,
+  createPaired,
+  pairedComplete,
+  pairedConfig,
+  pairedResult,
+  pairedView,
+} from "./paired";
 import type {
   MechanicAction,
   MechanicId,
@@ -87,6 +95,7 @@ export function defaultTrials(id: MechanicId, difficulty: number): number {
   if (id === "spatial") return 8;
   if (id === "rotation") return 12;
   if (id === "prospective") return 24;
+  if (id === "paired") return 12;
   return 8;
 }
 
@@ -104,6 +113,7 @@ export function createMechanic(
   if (id === "spatial") return createSpatial(seed, spatialConfig(difficulty, trials));
   if (id === "rotation") return createRotation(seed, rotationConfig(difficulty, trials));
   if (id === "prospective") return createProspective(seed, prospectiveConfig(difficulty, trials));
+  if (id === "paired") return createPaired(seed, pairedConfig(difficulty, trials));
   return createReasoning(seed, reasoningConfig(difficulty, trials));
 }
 
@@ -119,6 +129,7 @@ export function applyMechanicAction(
   if (state.mechanic === "spatial") return applySpatialAction(state, action);
   if (state.mechanic === "rotation") return applyRotationAction(state, action);
   if (state.mechanic === "prospective") return applyProspectiveAction(state, action);
+  if (state.mechanic === "paired") return applyPairedAction(state, action);
   return applyReasoningAction(state, action);
 }
 
@@ -131,6 +142,7 @@ export function mechanicView(state: MechanicState): MechanicView {
   if (state.mechanic === "spatial") return spatialView(state);
   if (state.mechanic === "rotation") return rotationView(state);
   if (state.mechanic === "prospective") return prospectiveView(state);
+  if (state.mechanic === "paired") return pairedView(state);
   return reasoningView(state);
 }
 
@@ -143,6 +155,7 @@ export function mechanicResult(state: MechanicState): MechanicResult {
   if (state.mechanic === "spatial") return spatialResult(state);
   if (state.mechanic === "rotation") return rotationResult(state);
   if (state.mechanic === "prospective") return prospectiveResult(state);
+  if (state.mechanic === "paired") return pairedResult(state);
   return reasoningResult(state);
 }
 
@@ -155,5 +168,6 @@ export function mechanicComplete(state: MechanicState): boolean {
   if (state.mechanic === "spatial") return spatialComplete(state);
   if (state.mechanic === "rotation") return rotationComplete(state);
   if (state.mechanic === "prospective") return prospectiveComplete(state);
+  if (state.mechanic === "paired") return pairedComplete(state);
   return reasoningComplete(state);
 }

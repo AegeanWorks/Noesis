@@ -18,6 +18,7 @@ import type {
   SpatialState,
   RotationState,
   ProspectiveState,
+  PairedState,
 } from "./types";
 
 export type Policy = (state: MechanicState) => MechanicAction | null;
@@ -77,6 +78,11 @@ export function optimalPolicy(state: MechanicState): MechanicAction | null {
     const trial = current(state.trials, state.index);
     return trial ? { type: "answer", option: prospectiveCorrectIndex(trial) } : null;
   }
+  if (state.mechanic === "paired") {
+    if (state.phase !== "test" || state.phaseElapsed < 300) return null;
+    const trial = current(state.trials, state.index);
+    return trial ? { type: "answer", option: trial.correctIndex } : null;
+  }
   if (state.phase !== "question") return null;
   if (state.phaseElapsed < 500) return null;
   const id = state.order[state.index];
@@ -117,6 +123,9 @@ export function alwaysPolicy(state: MechanicState): MechanicAction | null {
   }
   if (state.mechanic === "prospective") {
     return state.phase === "question" ? { type: "answer", option: 0 } : null;
+  }
+  if (state.mechanic === "paired") {
+    return state.phase === "test" ? { type: "answer", option: 0 } : null;
   }
   return state.phase === "question" ? { type: "answer", option: 0 } : null;
 }
@@ -174,6 +183,12 @@ export function randomPolicy(seed: number): Policy {
     if (state.mechanic === "prospective") {
       if (state.phase !== "question") return null;
       const [option, next] = randomInt(rng, 3);
+      rng = next;
+      return { type: "answer", option };
+    }
+    if (state.mechanic === "paired") {
+      if (state.phase !== "test") return null;
+      const [option, next] = randomInt(rng, 4);
       rng = next;
       return { type: "answer", option };
     }
@@ -275,6 +290,14 @@ export function runMechanic(
   policy: Policy,
   options?: SimulationOptions,
 ): SimulationResult<ProspectiveState>;
+export function runMechanic(
+  id: "paired",
+  seed: number,
+  difficulty: number,
+  trials: number,
+  policy: Policy,
+  options?: SimulationOptions,
+): SimulationResult<PairedState>;
 export function runMechanic(
   id: MechanicId,
   seed: number,

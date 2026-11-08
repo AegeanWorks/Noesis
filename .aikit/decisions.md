@@ -362,6 +362,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add an experimental **Prospective Memory** focus test: an ongoing vowel/consonant classification with an event-based Q cue that requires a Remember response. It reports overall accuracy, ongoing accuracy, cue hits/misses, false alarms, mean response time, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims delayed-intention practice only; no long-term, everyday-function or diagnostic claim.
 - **Consequences**: The app gains a ninth mechanic and `npm run ai:verify` grows to 900 simulations (9 × 50 × 2). The evidence table gains one context record (35543836), taking the review to 121 records, 283 outcomes and revision v1.5. The claim boundary is recorded in R67.
 
+### ADR-051: Experimental Paired Associates focus test
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The fresh scan next evaluated verbal paired-associate / episodic-memory training. Chen et al. 2022 (PMID 36301274; *Psychology and Aging*) meta-analysed 21 RCTs with 4,149 healthy older adults: mnemonic training improved episodic memory immediately (g=0.408) and at follow-up (g=0.418), and subjective memory improved. The evidence is for mnemonic strategy training, not repeated paired-associate practice. Gross et al. 2012 (PMID 22423647; 35 studies, g=0.31) stayed narrative-only as broader memory-strategy evidence.
+- **Decision**: Add an experimental **Paired Associates** focus test: a word pair is studied for a short interval, then the first word cues retrieval of the second from four options. It reports accuracy, mean response time, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims verbal episodic-memory practice only; no general-memory, academic, everyday-function or diagnostic claim.
+- **Consequences**: The app gains a tenth mechanic and `npm run ai:verify` grows to 1,000 simulations (10 × 50 × 2). The evidence table gains one context record (36301274), taking the review to 122 records, 284 outcomes and revision v1.6. The claim boundary is recorded in R68.
+
 
 
 

@@ -1496,3 +1496,36 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 402 Vitest; `npm run ai:verify` — 900/900;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's trends, result delta, tests, proof and record.
+
+## Cycle 33 — Experimental Paired Associates focus test from verified mnemonic-training evidence
+
+- **Area**: new approach / fresh literature scan.
+- **FIND**: A paired-associates / episodic-memory scan found Chen et al. 2022 (PMID 36301274;
+  *Psychology and Aging*): 21 RCTs, 4,149 healthy older adults; mnemonic training improved
+  episodic memory immediately (g=0.408) and at follow-up (g=0.418), with subjective-memory gains.
+  Gross et al. 2012 (PMID 22423647; 35 studies, g=0.31) stayed narrative-only as broader
+  memory-strategy evidence. The evidence is strategy-based, not the exact paired-associate task.
+- **DECISION**: Implement a claim-bounded experimental Paired Associates focus test. It claims
+  verbal episodic-memory practice only; no general-memory, academic, everyday-function or
+  diagnostic benefit. Recorded as ADR-051 and R68; Chen 2022 was added as context, taking the
+  review to 122 records, 284 outcomes and revision v1.6.
+- **IMPLEMENT**: Deterministic `paired` mechanic: study a word pair, then choose its partner from
+  four options. Metrics: accuracy, mean response time, timeouts and streaks. Integrated types,
+  schema, simulation, evidence metadata, adaptive defaults, Menu, stage, keyboard, results, AI
+  CLI and tests. `npm run ai:verify` grows to 1,000 simulations.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before Menu (no Paired Associates card):
+    `%TEMP%\opencode\noesis-paired-before\before-01-menu.png` SHA-256
+    `9F7AA45A80FDB510421800C28165E41A82FBEFF8896B302D8A4500E2CA7CA43A`
+  - after Menu: `%TEMP%\opencode\noesis-paired-after\after-01-menu.png` SHA-256
+    `CD6A96B1ED52E1F06FD9CAA5E4E733725C0B180ACD181FF7178144AFF827E796`
+  - study pair: `after-02-paired-study.png` SHA-256
+    `45C606706AFA97D8EEEE24845C2EAF00068B01EA4D38A55A3C09431548EE2CB1`
+  - results: `after-03-paired-results.png` SHA-256
+    `B85DCDA848EC4CD98FD78F2884B142758883712707A1C2CD1D63774B7594323B`
+- **PROOF (played run)**: `scripts/paired-proof.mjs` opened the Menu, started Paired Associates,
+  read the briefing, and completed three level-2 blocks: 100% accuracy, 12/12 correct, mean
+  response 1,333/1,300/1,300 ms; `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 409 Vitest; `npm run ai:verify` — 1,000/1,000;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's paired engine, UI, evidence table, tests, proof and record.

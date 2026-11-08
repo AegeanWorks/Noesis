@@ -165,4 +165,16 @@ describe("session snapshot", () => {
     saveSessionSnapshot(state);
     expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("prospective");
   });
+
+  it("round-trips a running Paired Associates block", () => {
+    const state = applySessionAction(
+      createSession(defaultSessionConfig(9, 2, "standard", undefined, "paired")),
+      { type: "begin" },
+    );
+    if (state.current?.mechanic !== "paired") {
+      throw new Error("expected a Paired Associates session");
+    }
+    saveSessionSnapshot(state);
+    expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("paired");
+  });
 });

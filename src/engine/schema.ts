@@ -11,6 +11,7 @@ export const MechanicIdSchema = z.enum([
   "spatial",
   "rotation",
   "prospective",
+  "paired",
 ]);
 
 export const BlockConfigSchema = z.object({

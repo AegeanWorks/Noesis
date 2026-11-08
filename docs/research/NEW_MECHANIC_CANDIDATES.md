@@ -57,6 +57,7 @@ The following sources stayed narrative-only:
 | Spatial span / Corsi | Visuospatial working memory | A 2025 meta-analysis found a small Corsi Block effect (d=0.16) in healthy older adults; broader working-memory reviews show short-term near transfer but no convincing far transfer (37822255, 22612437, 27474138) | Grid sequence; safe | **Implement as experimental focus test, claim-bounded** |
 | Mental rotation | Spatial ability | Training improved spatial skills (217 studies, g=0.47) and transferred to untrained spatial tasks (22663761); spatial training also improved mathematics (g=0.28), but concrete materials beat computerized training and near outcomes transferred more than distal ones (35073120) | Static block figures; safe | **Implement as experimental focus test, claim-bounded** |
 | Prospective memory | Delayed intentions / episodic memory | 2023 meta-analysis of 29 RCTs: immediate prospective-memory training effect g=0.54, but long-term g=0.20 was not significant (35543836) | Static letter stream with one cue; safe | **Implement as experimental focus test, claim-bounded** |
+| Paired associates | Verbal episodic memory | 2022 meta-analysis of 21 RCTs (n=4,149): mnemonic training improved episodic memory immediately (g=0.408) and at follow-up (g=0.418); strategy-based, not the exact task (36301274) | Static word pairs; safe | **Implement as experimental focus test, claim-bounded** |
 | Visual search / UFOV-like | Processing speed / attention | UFOV training shows speed/attention and everyday-function gains (44 studies/17 RCTs; 29175362), but UFOV is a proprietary multi-subtest protocol and its subtests are not construct-pure (29270605); a simple search task is not the validated protocol | Brief adaptive presentation conflicts with the static no-flashing safety posture; Speed Tap is explicitly not UFOV | Out of scope for now (reason in section 6) |
 | Action video game | Attention / spatial cognition | g=0.34 intervention (29172564), but genre is broad and often fast/flashing | Conflicts with the no-flashing safety posture | Do not build a flashing action game |
 | Commercial brain-training suite | Mixed | Small near transfer; no robust objective far transfer (34251578) | Program-specific, not a task | Do not copy a commercial suite |
@@ -167,6 +168,19 @@ quantitative basis.
   bias. The app therefore claims delayed-intention practice only, not long-term, everyday-function
   or diagnostic benefit.
 
+### 4.5 Paired Associates implementation and evidence limit
+
+- A word pair is shown for a short study interval, then the first word appears as a cue and the
+  user chooses its partner from four options.
+- Keys 1-4 work. Feedback reveals the correct pair.
+- Metrics: accuracy, mean response time, timeouts and streaks.
+- It is available from the Menu as a three-block focus test. It is not in the default lineup.
+- **Evidence:** Chen et al. 2022 (PMID 36301274; *Psychology and Aging*) meta-analysed 21 RCTs
+  with 4,149 healthy older adults. Mnemonic training improved episodic memory immediately
+  (g=0.408) and at follow-up (g=0.418). The evidence is for mnemonic strategy training, not
+  repeated paired-associate practice, so the app claims verbal episodic-memory practice only and
+  makes no general-memory, academic, everyday-function or diagnostic claim.
+
 ---
 
 ## 5. Requirement and limits
@@ -190,6 +204,10 @@ quantitative basis.
   cue hits/misses, false alarms and reaction time. A 2023 meta-analysis supports a moderate
   immediate effect but not a significant long-term effect; no everyday-function or diagnostic
   claim is made.
+- **R68:** Paired Associates is an experimental focus test: a word pair is studied, then the
+  second word is retrieved from four options. It reports accuracy and reaction time. A 2022
+  meta-analysis supports mnemonic training gains in episodic memory, but not this exact task;
+  no general-memory, academic, everyday-function or diagnostic claim is made.
 
 Limits: the evidence is for executive-function, working-memory and spatial training broadly,
 not for these exact colour/shape, arrow, grid or block-rotation tasks. The meta-analyses also

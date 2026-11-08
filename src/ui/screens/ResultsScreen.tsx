@@ -87,6 +87,7 @@ const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
   spatial: ["accuracy", "max_span", "mean_span"],
   rotation: ["accuracy", "mean_response_ms", "mirror_accuracy"],
   prospective: ["accuracy", "cue_accuracy", "false_alarms"],
+  paired: ["accuracy", "mean_response_ms", "max_streak"],
 };
 
 export function formatMetric(key: string, value: number): string {

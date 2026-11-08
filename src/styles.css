@@ -1920,3 +1920,44 @@ html.high-contrast .speed-ring-active {
   max-width: 420px;
 }
 
+.stage-paired {
+  align-items: center;
+}
+
+.paired-study {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min(100%, 460px);
+  margin: 6px auto;
+  border: 2px solid rgba(139, 233, 253, 0.35);
+  border-radius: 16px;
+  padding: 18px;
+  background: rgba(139, 233, 253, 0.06);
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  font-weight: 700;
+}
+
+.paired-dash {
+  color: var(--muted);
+}
+
+.paired-cue {
+  display: grid;
+  place-items: center;
+  width: min(100%, 460px);
+  min-height: 96px;
+  margin: 6px auto;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 800;
+}
+
+.stage-paired .options {
+  max-width: 460px;
+}
+

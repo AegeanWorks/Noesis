@@ -222,4 +222,41 @@ describe("MechanicStage", () => {
     fireEvent.click(screen.getByTestId("option-2"));
     expect(onAnswer).toHaveBeenCalledWith(2);
   });
+
+  it("renders a paired-associates study pair and test options", () => {
+    const { unmount } = render(
+      <MechanicStage
+        view={view({
+          mechanic: "paired",
+          name: "Paired Associates",
+          phase: "study",
+          prompt: "Remember this word pair",
+          stimulus: "apple|bridge",
+          options: null,
+        })}
+        onRespond={vi.fn()}
+        onAnswer={vi.fn()}
+      />,
+    );
+    expect(screen.getByTestId("stimulus").textContent).toMatch(/apple/);
+    expect(screen.getByTestId("stimulus").textContent).toMatch(/bridge/);
+    unmount();
+    const onAnswer = vi.fn();
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "paired",
+          name: "Paired Associates",
+          phase: "test",
+          prompt: 'Which word was paired with "apple"?',
+          stimulus: "apple",
+          options: ["bridge", "candle", "desert", "engine"],
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    fireEvent.click(screen.getByTestId("option-0"));
+    expect(onAnswer).toHaveBeenCalledWith(0);
+  });
 });
