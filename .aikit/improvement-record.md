@@ -1421,3 +1421,33 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 395 Vitest; `npm run ai:verify` — 900/900;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's prospective engine, UI, evidence table, tests, proof and record.
+
+## Cycle 31 — Prospective Memory mid-session reload and resume proof
+
+- **Area**: Prospective Memory persistence and recovery, alongside the storage round-trip test.
+- **FIND**: Prospective Memory had a snapshot unit test but no browser-level proof that a real
+  focus session survives reload and resumes with the same seed, block, level and trial.
+- **IMPLEMENT**: `scripts/prospective-resume-proof.mjs` starts a level-2 Prospective Memory focus
+  session from the Menu, answers three trials, waits for the 1.5 s snapshot, reloads, presses
+  **Resume session**, dismisses the re-shown briefing, verifies the restored state, completes all
+  three blocks and captures screenshots plus console errors.
+- **PROOF**: fixed seed `2721744568`, adaptive prospective level 2:
+  - mid: `block 0/3 · prospective · difficulty [2,2,2] · trial 3 · question`
+    (`Block 1 of 3 · Level 2`)
+  - stored snapshot: identical seed, block, mechanic, difficulty 2, trial 3, question
+  - after reload: CTA `Resume session`
+  - resumed: identical to mid, including `trial 3 · question`
+  - completed: three level-2 blocks, 100% overall and ongoing accuracy, 4/4 cues remembered,
+    0 false alarms each, mean response 491/400/400 ms; `consoleErrors []`
+  - screenshots:
+    `%TEMP%\opencode\noesis-prospective-resume\01-prospective-mid-session.png` SHA-256
+    `70273BD651E1E0E8932BC11AB210DF69B2F276B3B72C5DC2B1DA4D6D8D0FC0B6`;
+    `02-home-after-reload.png` SHA-256
+    `4BB5D7318A98F10D263FC76DAFA6D77799295B89D39158C7F77A8F10F5716FE4`;
+    `03-prospective-resumed.png` SHA-256
+    `69B95DD91D40BFAA0E733EFE87A2687655CEEA60017D9DC8AB4D2A8CAB23DA2F`;
+    `04-prospective-results.png` SHA-256
+    `4FB36317F992BC47D7D3C4938D7C4B5A1F45C03F3955C622401FB212EC63057F`.
+- **GATES**: `npm run test:all` — 29 Python + 395 Vitest; `npm run ai:verify` — 900/900;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's resume proof and record.

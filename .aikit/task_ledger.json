@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-prospective",
+    "task_id": "noesis-prospective-resume",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794144482.988364,
-    "owner": "opencode:prospective",
-    "started_by": "opencode:prospective",
+    "updated_at": 1794144670.5716276,
+    "owner": "opencode:prospectiveresume",
+    "started_by": "opencode:prospectiveresume",
     "continuations": [],
-    "completed_at": 1794144489.8620262
+    "completed_at": 1794144676.8965886
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-rotation-resume",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: prove a Mental Rotation focus session survives reload and resumes with the same seed, block, level and trial",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794142933.1716416,
-      "timestamp_str": "2026-11-08 16:02:13",
-      "agent": "opencode:rotationresume",
-      "impact_assessment": {
-        "why": "Mental Rotation had only a storage round-trip test; no browser-level recovery proof existed",
-        "benefits": "Verified save/resume for Mental Rotation; screenshots and console-error evidence analogous to the other focus tests",
-        "risks": "contract: proof script only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "fixed-clock Playwright run with mid/stored/resumed comparison, three-block completion, full gates"
-      },
-      "plan_digest": "8f3c8426e15584b0520aa53a90fc7bd8d5c85eb7531d44542242c8e46cceef5d"
-    },
-    {
-      "task_id": "noesis-rotation-resume",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: scripts/rotation-resume-proof.mjs with three trials before reload, Resume session, briefing dismissal, completion and screenshots",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794142933.634975,
-      "timestamp_str": "2026-11-08 16:02:13",
-      "agent": "opencode:rotationresume"
-    },
-    {
-      "task_id": "noesis-rotation-resume",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seed 2721744568, block 0/3, rotation, level 2, trial 3 question identical mid/stored/resumed; Resume session; 3 blocks 12/12 mean 570/400/400; consoleErrors []; 29 Python + 381 Vitest, 800 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794142934.1614845,
-      "timestamp_str": "2026-11-08 16:02:14",
-      "agent": "opencode:rotationresume"
-    },
-    {
-      "task_id": "noesis-rotation-resume",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-rotation-resume' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794142940.0405731,
-      "timestamp_str": "2026-11-08 16:02:20",
-      "agent": "opencode:rotationresume"
-    },
     {
       "task_id": "noesis-rotation-trend",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794144489.8620284,
       "timestamp_str": "2026-11-08 16:28:09",
       "agent": "opencode:prospective"
+    },
+    {
+      "task_id": "noesis-prospective-resume",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: prove a Prospective Memory focus session survives reload and resumes with the same seed, block, level and trial",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794144669.2130117,
+      "timestamp_str": "2026-11-08 16:31:09",
+      "agent": "opencode:prospectiveresume",
+      "impact_assessment": {
+        "why": "Prospective Memory had only a storage round-trip test; no browser-level recovery proof existed",
+        "benefits": "Verified save/resume for Prospective Memory; screenshots and console-error evidence analogous to the other focus tests",
+        "risks": "contract: proof script only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "fixed-clock Playwright run with mid/stored/resumed comparison, three-block completion, full gates"
+      },
+      "plan_digest": "fec7152fa2e03c27dcced44108de20b7b6e220b5475e1869de2a202ebb256f89"
+    },
+    {
+      "task_id": "noesis-prospective-resume",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: scripts/prospective-resume-proof.mjs with three trials before reload, Resume session, briefing dismissal, completion and screenshots",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794144669.9459627,
+      "timestamp_str": "2026-11-08 16:31:09",
+      "agent": "opencode:prospectiveresume"
+    },
+    {
+      "task_id": "noesis-prospective-resume",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seed 2721744568, block 0/3, prospective, level 2, trial 3 question identical mid/stored/resumed; Resume session; 3 blocks 4/4 cues, 0 false alarms, mean 491/400/400; consoleErrors []; 29 Python + 395 Vitest, 900 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794144670.5716276,
+      "timestamp_str": "2026-11-08 16:31:10",
+      "agent": "opencode:prospectiveresume"
+    },
+    {
+      "task_id": "noesis-prospective-resume",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-prospective-resume' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794144676.8965907,
+      "timestamp_str": "2026-11-08 16:31:16",
+      "agent": "opencode:prospectiveresume"
     }
   ]
 }
