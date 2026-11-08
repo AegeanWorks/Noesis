@@ -347,3 +347,17 @@ These decisions are scope decisions, not evidence that the training modes are in
   ADR-056.
 
 These decisions are scope decisions, not evidence that the training modes are ineffective.
+
+### 6.6 Complex-span and sustained-attention training
+
+- A targeted complex-span search found no eligible training meta-analysis. Complex span
+  (reading/operation span) is normally an outcome measure in working-memory studies, not a
+  training protocol with its own pooled evidence. The app already has N-back updating, Spatial
+  Span and Change Detection; adding a fifth working-memory task would duplicate constructs
+  without task-specific evidence.
+- A targeted sustained-attention/vigilance search found no eligible training meta-analysis in
+  healthy adults. Go/No-Go and Speed Tap already include sustained-attention task demands, and the
+  app makes no vigilance-training claim.
+- **Decision:** no complex-span or vigilance mechanic. Instead, the Choose-a-test page gains a
+  domain filter so users can narrow eleven tests by construct. This is a navigational aid under
+  the existing explicit-choice design (R54), not a new efficacy claim. Recorded in ADR-058.

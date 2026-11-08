@@ -52,6 +52,12 @@ autonomous motivation and perceived competence rather than by external pressure 
 a defensible autonomy support: it gives a reason, offers a meaningful choice and keeps the
 default available. It is not evidence that choosing a test improves cognition.
 
+As the menu grew to eleven tests, a domain filter was added above the test grid. It preserves
+explicit choice while reducing scanning: the user can narrow to working memory, inhibition,
+reasoning, processing speed, cognitive flexibility, executive function or episodic memory, and
+the full list remains one option away. The filter changes presentation only; it does not alter
+scoring, recommendations or claims. Recorded in ADR-058.
+
 ### 3.2 Predictable, low-stakes instructions reduce avoidable pressure
 
 Test anxiety is negatively related to performance across a 30-year meta-analytic review of 238

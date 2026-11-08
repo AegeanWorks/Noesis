@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MECHANIC_META } from "../../engine/evidence";
-import type { Confidence, MechanicId, MechanicResult } from "../../engine/types";
+import type { Confidence, Domain, MechanicId, MechanicResult } from "../../engine/types";
 import type { AdherenceCounts } from "../../storage/adherence";
 import type { SessionRecord } from "../../storage/history";
 import { bestAccuracyFor } from "../../storage/history";
@@ -9,6 +9,26 @@ import { Button } from "../components/Button";
 import { EvidenceBadge } from "../components/EvidenceBadge";
 
 export type MenuTab = "tests" | "history";
+
+const DOMAIN_ORDER: readonly Domain[] = [
+  "working_memory",
+  "inhibition",
+  "reasoning",
+  "processing_speed",
+  "cognitive_flexibility",
+  "executive_function",
+  "episodic_memory",
+];
+
+const DOMAIN_LABELS: Record<Domain, string> = {
+  working_memory: "Working memory",
+  inhibition: "Inhibition",
+  reasoning: "Reasoning",
+  processing_speed: "Processing speed",
+  cognitive_flexibility: "Cognitive flexibility",
+  executive_function: "Executive function",
+  episodic_memory: "Episodic memory",
+};
 
 interface PracticeMenuScreenProps {
   history: readonly SessionRecord[];
@@ -1231,6 +1251,11 @@ export function PracticeMenuScreen({
   onHome,
 }: PracticeMenuScreenProps) {
   const [tab, setTab] = useState<MenuTab>(initialTab);
+  const [domain, setDomain] = useState<Domain | "all">("all");
+  const allMechanics = Object.keys(MECHANIC_META) as MechanicId[];
+  const visibleMechanics = allMechanics.filter(
+    (mechanic) => domain === "all" || MECHANIC_META[mechanic].domain === domain,
+  );
 
   return (
     <section className="screen practice-menu-screen">
@@ -1293,16 +1318,39 @@ export function PracticeMenuScreen({
           id="menu-panel-tests"
           aria-labelledby="menu-tab-tests"
         >
-          <div className="grid menu-test-grid">
-            {(Object.keys(MECHANIC_META) as MechanicId[]).map((mechanic) => (
-              <TestCard
-                key={mechanic}
-                mechanic={mechanic}
-                history={history}
-                onStartTest={onStartTest}
-              />
-            ))}
+          <div className="menu-filter" data-testid="menu-filter">
+            <label htmlFor="domain-filter">Filter by domain</label>
+            <select
+              id="domain-filter"
+              data-testid="domain-filter"
+              value={domain}
+              onChange={(event) => setDomain(event.target.value as Domain | "all")}
+            >
+              <option value="all">All tests</option>
+              {DOMAIN_ORDER.map((entry) => (
+                <option key={entry} value={entry}>
+                  {DOMAIN_LABELS[entry]}
+                </option>
+              ))}
+            </select>
+            <span className="fine" data-testid="menu-filter-count">
+              {visibleMechanics.length} of {allMechanics.length} tests
+            </span>
           </div>
+          {visibleMechanics.length === 0 ? (
+            <p className="notice">No tests in this domain.</p>
+          ) : (
+            <div className="grid menu-test-grid">
+              {visibleMechanics.map((mechanic) => (
+                <TestCard
+                  key={mechanic}
+                  mechanic={mechanic}
+                  history={history}
+                  onStartTest={onStartTest}
+                />
+              ))}
+            </div>
+          )}
           <p className="fine">
             A single-test session runs three blocks of the same task. The full session
             interleaves the four tasks. Both begin each block with the same explanation, and

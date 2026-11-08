@@ -1900,3 +1900,40 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 444 Vitest; `npm run ai:verify` — 1,100/1,100;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's evidence record, N-back copy, test, proof and record.
+
+## Cycle 44 — Complex-span/vigilance scope decision and Choose-page domain filter
+
+- **Area**: literature scope decision plus choice architecture.
+- **FIND**: A targeted complex-span search found no eligible training meta-analysis; complex span
+  is normally an outcome measure, and the app already has N-back updating, Spatial Span and
+  Change Detection. A sustained-attention/vigilance search also found no eligible training
+  meta-analysis in healthy adults; Go/No-Go and Speed Tap already include sustained-attention
+  demands. Meanwhile the Choose page now lists eleven tests, making the full list slower to scan.
+- **DECISION**: Do not add complex-span or vigilance mechanics (ADR-058). Add a domain filter to
+  the Choose-a-test page with an All tests option and the seven mechanic domains. The filter
+  changes presentation only and supports the existing explicit-choice design (R54); it makes no
+  new efficacy claim.
+- **IMPLEMENT**: `DOMAIN_ORDER`/`DOMAIN_LABELS`, local filter state, a labelled select with
+  `domain-filter`, a `menu-filter-count`, and a visible-mechanics list. Failing-first tests cover
+  the working-memory filter, hidden cards, starting a filtered test, the episodic-memory count and
+  restoring All tests.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before full list (no filter):
+    `%TEMP%\opencode\noesis-menu-filter-before\before-00-choose-all.png` SHA-256
+    `3B57D44A36D38B7AB617CF266F499F420E57787D49A4A607155B2FB18B2CA5BC`
+  - after full list (filter present):
+    `%TEMP%\opencode\noesis-menu-filter-after\after-00-choose-all.png` SHA-256
+    `E684A0C01EF0C08655A1C21044A9783A9AAB26908805546207416D2FF389307F`
+  - after Working memory filter (`3 of 11 tests`):
+    `after-01-choose-working-memory.png` SHA-256
+    `23091DC69EC64B6A99556ACDEB508E6C7436CF785C737ED5884E3AE435E2A100`
+  - before results: `before-02-results.png` SHA-256
+    `D92CB5E89A3FBAE33084B2CDC84DF33B714C3A17D5B4F4D3B6F3F4AFBCBDC360`
+  - after results: `after-02-results.png` SHA-256
+    `DC82B77BEA9797244DB0C91BA243ADCA9384F2CCDD762F6966053CC36562A8FB`
+- **PROOF (played run)**: `scripts/menu-filter-proof.mjs` narrowed to Working memory and started
+  Change Detection from the filtered list. It completed three level-2 blocks at 100% accuracy,
+  12/12 correct, set size 5; `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 446 Vitest; `npm run ai:verify` — 1,100/1,100;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's filter, tests, scope note, proof and record.

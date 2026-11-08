@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-nback-evidence",
+    "task_id": "noesis-menu-domain-filter",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794151774.1977131,
-    "owner": "opencode:nbackevidence",
-    "started_by": "opencode:nbackevidence",
+    "updated_at": 1794152301.4608104,
+    "owner": "opencode:menufilter",
+    "started_by": "opencode:menufilter",
     "continuations": [],
-    "completed_at": 1794151778.801888
+    "completed_at": 1794152308.538192
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-confidence-persist",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: persist per-block confidence in session state/snapshot/result and add a same-level confidence-vs-accuracy summary to Menu History",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794149463.2292364,
-      "timestamp_str": "2026-11-08 17:51:03",
-      "agent": "opencode:confpersist",
-      "impact_assessment": {
-        "why": "The confidence check was React-only, lost on reload, absent from completed results and invisible in history",
-        "benefits": "Survives reload, appears on result cards, feeds a bounded reflection summary, and is exported in JSON/CSV",
-        "risks": "contract: session action/schema/snapshot migration and CSV column; scoring unchanged; dependency: none; concurrency: none; state: old snapshots migrate to null confidence",
-        "mitigation": "failing-first session/snapshot/history tests, migration test, before/after reload proof, full gates"
-      },
-      "plan_digest": "c637a9e8d41a7e9d0fbdb0f53a488645c22e99f689121cde886679493b7f0cba"
-    },
-    {
-      "task_id": "noesis-confidence-persist",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: confidenceByBlock state/action/result field; snapshot migration; results read result.confidence; History confidence-summary; CSV confidence column; docs",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794149464.22166,
-      "timestamp_str": "2026-11-08 17:51:04",
-      "agent": "opencode:confpersist"
-    },
-    {
-      "task_id": "noesis-confidence-persist",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: before reload selection lost, after High persists; 3 results notes; History Paired Associates L2 High 100% (3 blocks); consoleErrors []; 29 Python + 426 Vitest, 1000 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794149465.1765337,
-      "timestamp_str": "2026-11-08 17:51:05",
-      "agent": "opencode:confpersist"
-    },
-    {
-      "task_id": "noesis-confidence-persist",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-confidence-persist' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794149474.5368886,
-      "timestamp_str": "2026-11-08 17:51:14",
-      "agent": "opencode:confpersist"
-    },
     {
       "task_id": "noesis-change",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794151778.8018901,
       "timestamp_str": "2026-11-08 18:29:38",
       "agent": "opencode:nbackevidence"
+    },
+    {
+      "task_id": "noesis-menu-domain-filter",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: scan complex-span and sustained-attention training, record the scope decision, and add a domain filter to the Choose-a-test page",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794152298.3007853,
+      "timestamp_str": "2026-11-08 18:38:18",
+      "agent": "opencode:menufilter",
+      "impact_assessment": {
+        "why": "Neither candidate had an eligible training meta-analysis; the Choose page now lists eleven tests and is slower to scan",
+        "benefits": "A researched scope boundary plus a navigational aid that preserves explicit choice",
+        "risks": "contract: Menu UI only; scoring/claims unchanged; dependency: none; concurrency: none; state: session-local filter",
+        "mitigation": "failing-first filter tests, before/after screenshots, real filtered played run, full gates"
+      },
+      "plan_digest": "69eec93466956cf52177d02863a053f409bb23e8c649c55e4c5a81ada6907f2a"
+    },
+    {
+      "task_id": "noesis-menu-domain-filter",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Impl: DOMAIN_ORDER/LABELS, domain-filter select, menu-filter-count, visible mechanics, CSS; scope section 6.6/ADR-058/search log/practice-menu note",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794152299.9388652,
+      "timestamp_str": "2026-11-08 18:38:19",
+      "agent": "opencode:menufilter"
+    },
+    {
+      "task_id": "noesis-menu-domain-filter",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: before no filter 11 cards; after All 11/11 and Working memory 3/11 with only N-back/Spatial Span/Change Detection; played Change Detection 3 blocks 100% 12/12; consoleErrors []; 29 Python + 446 Vitest, 1100 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794152301.4608104,
+      "timestamp_str": "2026-11-08 18:38:21",
+      "agent": "opencode:menufilter"
+    },
+    {
+      "task_id": "noesis-menu-domain-filter",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-menu-domain-filter' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794152308.5381944,
+      "timestamp_str": "2026-11-08 18:38:28",
+      "agent": "opencode:menufilter"
     }
   ]
 }

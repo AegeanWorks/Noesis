@@ -411,6 +411,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Soveri 2017 as a context record and make it the first N-back citation. Tighten the N-back brief, claim and qualifier from "closely related working-memory tasks" to "untrained n-back tasks, with little transfer beyond the task". The claim remains supported, but only for task-specific near transfer; no general-intelligence or academic claim is made.
 - **Consequences**: The review moves to 124 records, 286 outcomes and revision v1.8. The N-back briefing now shows the task-specific meta-analysis as its primary source, and a dedicated test locks the citation and claim wording.
 
+### ADR-058: Complex-span and vigilance stay out of scope; the Choose page gains a domain filter
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: A targeted complex-span search found no eligible training meta-analysis; complex span is normally an outcome measure. The app already has N-back updating, Spatial Span and Change Detection. A sustained-attention/vigilance search also found no eligible training meta-analysis in healthy adults; Go/No-Go and Speed Tap already include sustained-attention demands. The Choose page now lists eleven tests, so scanning every card is slower than it was at four.
+- **Decision**: Do not add complex-span or vigilance mechanics. Add a domain filter to the Choose-a-test page with an All tests option and the seven mechanic domains. The filter changes presentation only and does not alter scoring, recommendations or claims; it supports the existing explicit-choice design (R54).
+- **Consequences**: No new mechanic or evidence-table record is added; the review remains at 124 records and 286 outcomes. The filter is covered by failing-first UI tests, before/after screenshots and a played run that starts Change Detection from the filtered view.
+
 
 
 

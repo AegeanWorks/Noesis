@@ -1427,6 +1427,43 @@ html.high-contrast .speed-ring-active {
   border-bottom-color: var(--accent);
 }
 
+.menu-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.menu-filter label {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.menu-filter select {
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--panel-solid);
+  color: var(--text);
+  font: inherit;
+}
+
+.menu-filter .fine {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 520px) {
+  .menu-filter .fine {
+    margin-left: 0;
+  }
+}
+
 .menu-test-card {
   display: flex;
   flex-direction: column;
