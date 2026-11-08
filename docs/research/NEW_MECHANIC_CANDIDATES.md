@@ -64,6 +64,13 @@ The game-factor review (37531408) supports designing around **features** — ada
 feedback, changing rules — rather than claiming a genre. Task Switch uses rule changes and
 immediate feedback, which is the feature-level rationale for choosing it first.
 
+A task-specific training study stayed narrative-only: Karbach and Kray (2009, PMID 19840052)
+found near transfer of task-switching training in all age groups, especially children and
+older adults, plus far transfer to executive tasks and fluid intelligence in a single
+developmental sample. The app treats the near-transfer result as supporting the task and does
+not claim the far-transfer result as established; the two meta-analyses above remain the
+quantitative basis.
+
 ---
 
 ## 4. Task Switch implementation
