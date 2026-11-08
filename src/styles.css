@@ -1665,3 +1665,63 @@ html.high-contrast .speed-ring-active {
 .switch-shape-blank {
   opacity: 0;
 }
+
+.switch-cost-levels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.switch-cost-level {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.switch-cost-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.switch-cost-series {
+  display: block;
+  width: 140px;
+  height: 34px;
+  margin: 4px 0;
+}
+
+.switch-cost-series line {
+  stroke: rgba(148, 163, 214, 0.4);
+  stroke-width: 1;
+}
+
+.switch-cost-series polyline {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.switch-cost-series circle {
+  fill: var(--accent);
+}
+
+.switch-cost-zero {
+  stroke-dasharray: 3 3;
+}
+
+.switch-cost-stats {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.switch-cost-stats strong {
+  color: var(--text);
+}
+

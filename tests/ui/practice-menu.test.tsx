@@ -10,8 +10,7 @@ afterEach(cleanup);
 function record(
   finishedAt = "2026-11-08T10:00:00.000Z",
   id = "session-1",
-): SessionRecord {
-  return {
+): SessionRecord {  return {
     id,
     finishedAt,
     seed: 42,
@@ -39,6 +38,30 @@ function record(
         difficulty: 2,
       },
     ],
+  };
+}
+
+function switchingRecord(
+  level: number,
+  costs: readonly number[],
+  id: string,
+  finishedAt: string,
+): SessionRecord {
+  return {
+    id,
+    finishedAt,
+    seed: 42,
+    results: costs.map((cost, index) => ({
+      mechanic: "switching",
+      domain: "cognitive_flexibility",
+      trials: 24,
+      durationMs: 70_000,
+      metrics: { accuracy: 1, switch_cost_ms: cost },
+      summary: `Task Switch: 100% accuracy, 24/24 correct, ${cost} ms switch cost.`,
+      seed: 42,
+      stateHash: `0123456789abcde${index}`,
+      difficulty: level,
+    })),
   };
 }
 
@@ -127,6 +150,37 @@ describe("PracticeMenuScreen", () => {
     expect(session.textContent).not.toMatch(/composite score of/i);
     fireEvent.click(screen.getByRole("button", { name: "Export practice data" }));
     expect(onExportHistory).toHaveBeenCalledTimes(1);
+  });
+
+  it("shows a level-aware Task Switch switch-cost trend", () => {
+    renderMenu({
+      history: [
+        switchingRecord(3, [180, 200], "s3", "2026-11-03T10:00:00.000Z"),
+        switchingRecord(2, [90, 70], "s2", "2026-11-02T10:00:00.000Z"),
+        switchingRecord(1, [50], "s1", "2026-11-01T10:00:00.000Z"),
+      ],
+      initialTab: "history",
+    });
+    const card = screen.getByTestId("switch-cost-trend");
+    expect(card.textContent).toMatch(/switch cost/i);
+    const rows = screen.getAllByTestId(/^switch-cost-level-/);
+    expect(rows.map((row) => row.getAttribute("data-testid"))).toEqual([
+      "switch-cost-level-3",
+      "switch-cost-level-2",
+      "switch-cost-level-1",
+    ]);
+    const level3 = screen.getByTestId("switch-cost-level-3");
+    expect(level3.textContent).toMatch(/Last 200 ms/);
+    expect(level3.textContent).toMatch(/Mean 190 ms/);
+    expect(level3.textContent).toMatch(/Lowest 180 ms/);
+    expect(level3.textContent).not.toMatch(/50 ms/);
+    expect(screen.getByTestId("switch-cost-level-2").textContent).toMatch(/Last 70 ms/);
+    expect(screen.getByTestId("switch-cost-level-1").textContent).toMatch(/Last 50 ms/);
+  });
+
+  it("omits the switch-cost trend when there are no Task Switch blocks", () => {
+    renderMenu({ history: [record()], initialTab: "history" });
+    expect(screen.queryByTestId("switch-cost-trend")).toBeNull();
   });
 
   it("switches between choosing a test and viewing history", () => {

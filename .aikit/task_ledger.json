@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-switch-resume-proof",
+    "task_id": "noesis-switch-cost-history",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794130801.8305507,
-    "owner": "opencode:switchproof",
-    "started_by": "opencode:switchproof",
+    "updated_at": 1794131997.6300812,
+    "owner": "opencode:switchcost",
+    "started_by": "opencode:switchcost",
     "continuations": [],
-    "completed_at": 1794130842.896494
+    "completed_at": 1794132034.0565739
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-export-manifest",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/4] Plan: add a self-describing export manifest and field-level data dictionary for reproducible research reuse",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794108754.7775028,
-      "timestamp_str": "2026-11-08 06:32:34",
-      "agent": "opencode:manifest",
-      "impact_assessment": {
-        "why": "The JSON export has a version and counts, but not the app/review/consent provenance or a field-level dictionary, so a study team cannot tell which evidence version and consent version produced a file; FAIR reuse needs metadata that travels with the data.",
-        "benefits": "Self-describing JSON exports, explicit app/evidence/consent provenance, count summary, and a data dictionary covering JSON and CSV fields",
-        "risks": "contract: additive export field and shared version constants; dependency: none; concurrency: none; state: old exports remain valid",
-        "mitigation": "failing-first export tests, browser proof manifest checks, data dictionary review, full gates"
-      },
-      "plan_digest": "495594bbbaf619986458c747c36ebd11692de8b6bad7fe0f109ad614ec9daa70"
-    },
-    {
-      "task_id": "noesis-export-manifest",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/4] Impl: manifest with app/schema/review/dictionary/consent versions and counts; centralized appMeta; Settings footer uses review v1.1; DATA_DICTIONARY.md covers JSON/CSV; R62 and ADR-044",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794109369.1674118,
-      "timestamp_str": "2026-11-08 06:42:49",
-      "agent": "opencode:manifest"
-    },
-    {
-      "task_id": "noesis-export-manifest",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/4] Verified: 29 Python + 327 Vitest; typecheck/build clean; ai:verify 400/400; review 116/277 valid; browser proof manifest appVersion 0.1.0, review v1.1, dictionary 2026-11-08, consentVersion 1, adherence count 1; consoleErrors []; aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794109380.6728828,
-      "timestamp_str": "2026-11-08 06:43:00",
-      "agent": "opencode:manifest"
-    },
-    {
-      "task_id": "noesis-export-manifest",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-export-manifest' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794109500.8787365,
-      "timestamp_str": "2026-11-08 06:45:00",
-      "agent": "opencode:manifest"
-    },
     {
       "task_id": "noesis-menu-adherence",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794130842.896496,
       "timestamp_str": "2026-11-08 12:40:42",
       "agent": "opencode:switchproof"
+    },
+    {
+      "task_id": "noesis-switch-cost-history",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add a level-aware Task Switch switch-cost trend to Menu History, derived from stored switch-cost metrics without mixing levels",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794131994.8314276,
+      "timestamp_str": "2026-11-08 12:59:54",
+      "agent": "opencode:switchcost",
+      "impact_assessment": {
+        "why": "History listed block summaries but no aggregated switch-cost view; averaging across levels would compare incomparable blocks",
+        "benefits": "Users can see within-level switch-cost direction and compare like with like; no engine/storage change",
+        "risks": "contract: Menu history UI only; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first level-ordering and per-level-value tests, fixed-history before/after screenshots, a real level-2 focus playthrough, full gates"
+      },
+      "plan_digest": "c9639e8c5f4ac024b160a57d6aa7a2006e2bcc2dce04eb9ca13f1e72270dfa11"
+    },
+    {
+      "task_id": "noesis-switch-cost-history",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: switchCostLevels + SVG per-level trend + History card; tests for ordering/values/empty; switch-cost-trend-proof.mjs; record",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794131996.2524583,
+      "timestamp_str": "2026-11-08 12:59:56",
+      "agent": "opencode:switchcost"
+    },
+    {
+      "task_id": "noesis-switch-cost-history",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded levels 1/2/3 before panel null, after level3 200/190/180, level2 70/80/70, level1 50/50/50; real level2 session updated only level2 to 5 blocks; consoleErrors []; 29 Python + 341 Vitest, 500 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794131997.6300812,
+      "timestamp_str": "2026-11-08 12:59:57",
+      "agent": "opencode:switchcost"
+    },
+    {
+      "task_id": "noesis-switch-cost-history",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-switch-cost-history' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794132034.0565763,
+      "timestamp_str": "2026-11-08 13:00:34",
+      "agent": "opencode:switchcost"
     }
   ]
 }

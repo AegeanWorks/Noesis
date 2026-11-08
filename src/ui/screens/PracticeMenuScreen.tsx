@@ -68,6 +68,79 @@ function resultFor(
   return { blocks, last, best };
 }
 
+interface SwitchCostLevel {
+  level: number;
+  values: number[];
+  last: number;
+  mean: number;
+  best: number;
+}
+
+function switchCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] {
+  const levels = new Map<number, { values: number[]; lastSeen: number }>();
+  let seen = 0;
+  for (const record of [...history].reverse()) {
+    for (const result of record.results) {
+      if (result.mechanic !== "switching") continue;
+      const cost = result.metrics.switch_cost_ms;
+      const level = result.difficulty;
+      if (typeof level !== "number" || typeof cost !== "number" || !Number.isFinite(cost)) {
+        continue;
+      }
+      const entry = levels.get(level) ?? { values: [], lastSeen: 0 };
+      entry.values.push(cost);
+      entry.lastSeen = seen;
+      seen += 1;
+      levels.set(level, entry);
+    }
+  }
+  return [...levels.entries()]
+    .sort((a, b) => b[1].lastSeen - a[1].lastSeen)
+    .map(([level, entry]) => {
+      const values = entry.values.slice(-10);
+      const total = values.reduce((sum, value) => sum + value, 0);
+      return {
+        level,
+        values,
+        last: values[values.length - 1] ?? 0,
+        mean: Math.round(total / values.length),
+        best: Math.min(...values),
+      };
+    });
+}
+
+function SwitchCostTrendLine({ values, level }: { values: readonly number[]; level: number }) {
+  const width = 140;
+  const height = 34;
+  const pad = 4;
+  const min = Math.min(0, ...values);
+  const max = Math.max(0, ...values);
+  const span = Math.max(1, max - min);
+  const step = values.length === 1 ? 0 : (width - pad * 2) / (values.length - 1);
+  const point = (value: number, index: number) => {
+    const x = values.length === 1 ? width / 2 : pad + index * step;
+    const y = height - pad - ((value - min) / span) * (height - pad * 2);
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  };
+  const points = values.map(point);
+  const zeroY = height - pad - ((0 - min) / span) * (height - pad * 2);
+  return (
+    <svg
+      className="switch-cost-series"
+      viewBox={`0 0 ${width} ${height}`}
+      role="img"
+      aria-label={`Level ${level} switch cost trend: ${values.join(" ms, ")} ms`}
+    >
+      <line x1={pad} y1={zeroY} x2={width - pad} y2={zeroY} className="switch-cost-zero" />
+      {values.length === 1 ? (
+        <circle cx={width / 2} cy={Number(points[0]?.split(",")[1] ?? height / 2)} r="3" />
+      ) : (
+        <polyline points={points.join(" ")} />
+      )}
+    </svg>
+  );
+}
+
 function TestCard({
   mechanic,
   history,
@@ -142,6 +215,7 @@ function HistoryPanel({
     adherenceCounts.started === 0
       ? null
       : Math.round((adherenceCounts.completed / adherenceCounts.started) * 100);
+  const costLevels = switchCostLevels(history);
 
   return (
     <div
@@ -192,6 +266,47 @@ function HistoryPanel({
           real-world use. This summary stays on this device.
         </p>
       </section>
+
+      {costLevels.length > 0 ? (
+        <section className="card switch-cost-card" data-testid="switch-cost-trend">
+          <div className="card-top">
+            <div>
+              <p className="eyebrow">Task Switch</p>
+              <h2>Switch cost by level</h2>
+            </div>
+          </div>
+          <p className="fine">
+            Switch cost = switch-trial reaction time minus repeat-trial reaction time. Lower is
+            faster switching; a negative value is possible. Compare blocks only within the same
+            level.
+          </p>
+          <div className="switch-cost-levels">
+            {costLevels.map((entry) => (
+              <div
+                className="switch-cost-level"
+                data-testid={`switch-cost-level-${entry.level}`}
+                key={entry.level}
+              >
+                <div className="switch-cost-head">
+                  <span className="level-badge">Level {entry.level}</span>
+                  <span className="fine">
+                    {entry.values.length} {entry.values.length === 1 ? "block" : "blocks"}
+                  </span>
+                </div>
+                <SwitchCostTrendLine values={entry.values} level={entry.level} />
+                <p className="switch-cost-stats">
+                  Last <strong>{entry.last} ms</strong> · Mean {entry.mean} ms · Lowest{" "}
+                  {entry.best} ms
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="fine">
+            A single block is a baseline, not a trend; these are descriptive practice values, not
+            a diagnosis.
+          </p>
+        </section>
+      ) : null}
 
       {history.length === 0 ? (
         <section className="card" data-testid="menu-history-empty">

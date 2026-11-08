@@ -19,6 +19,7 @@ Covered so far:
 10. Level-aware bests — 2026-11-07 — cycle 10
 11. Final audit — 2026-11-07 — zero verified findings (stop)
 12. Task Switch resume and switch-cost interpretation — 2026-11-08 — cycle 12
+13. Level-aware switch-cost history — 2026-11-08 — cycle 13
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -812,3 +813,40 @@ python aikit.py check noesis     6/6 gates passed
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMITS**: `2631d33` (persistence/migration/timing), `374aad1` (literature nuance), this
   commit (resume proof and switch-cost note).
+
+## Cycle 13 — Level-aware Task Switch switch-cost trend in Menu History
+
+- **Area**: Task Switch history readability, derived from the task-switching switch-cost
+  evidence.
+- **FIND**: Menu History listed each block and its summary, but it gave no aggregated view of
+  switch cost, the main task-switching outcome, and averaging across levels would mix
+  incomparable blocks.
+- **ANALYZE**: Completed records already store `difficulty` and `metrics.switch_cost_ms`.
+  Grouping by difficulty in the UI needs no engine, storage or scoring change. Levels are
+  ordered by their most recent occurrence so the level the user just practised appears first.
+- **IMPLEMENT**: `switchCostLevels` groups finite switch-cost values per level (last 10 values),
+  orders levels by most recent block, and computes last/mean/lowest. `SwitchCostTrendLine`
+  draws a small per-level SVG trend with a zero reference line. A History card shows one row per
+  level with a block count, trend and the three statistics, plus the "lower is faster switching;
+  negative values are possible; compare within a level" note. Tests in
+  `tests/ui/practice-menu.test.tsx` cover level ordering, per-level values and the no-switching
+  empty case. Added `scripts/switch-cost-trend-proof.mjs`.
+- **PROOF (screenshots)**: seeded history with Task Switch results at levels 1-3, same
+  390x844@2x viewport, same save; only the build differs.
+  - before: `%TEMP%\opencode\noesis-switch-cost-trend-before\before-01-history-seeded.png`
+    SHA-256 `5B2CEEACAD60A0EF280F71FC15EA3917437341954F520E8D33A59A953C4FE9CF`
+    (no trend card)
+  - after: `%TEMP%\opencode\noesis-switch-cost-trend-after\after-01-history-seeded.png`
+    SHA-256 `ECBC2F3F2C10393B757B64F0B0C43389A8D5E1E922EC35608F28E89219513DB4`
+    (Level 3: 2 blocks, last 200 ms, mean 190, lowest 180; Level 2: 2 blocks, 70/80/70;
+    Level 1: 1 block, 50/50/50)
+- **PROOF (played run)**: after the visual capture, the script started a real level-2 Task
+  Switch focus session from the Menu and completed three blocks. The level-2 row updated from
+  2 to 5 blocks (`last 0 ms, mean 23 ms, lowest -46 ms`), while Level 3 and Level 1 values stayed
+  unchanged; level 2 moved to the top as the most recently practised level. Screenshot:
+  `%TEMP%\opencode\noesis-switch-cost-trend-after\after-02-history-after-play.png` SHA-256
+  `F57EDF4C613B4DC2A232715CBD9AF43C7C1FDF62AC35D3E919C9E738CCE7F100`.
+  `consoleErrors []` before and after.
+- **GATES**: `npm run test:all` — 29 Python + 341 Vitest; `npm run ai:verify` — 500/500;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's UI, test, proof script and record.
