@@ -297,6 +297,15 @@ function PairedStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) 
           {view.stimulus ?? "\u00a0"}
         </div>
       )}
+      {view.phase === "study" ? (
+        <details className="paired-strategy-hint" data-testid="paired-strategy-hint">
+          <summary>Strategy tip</summary>
+          <p>
+            Link the two words in a vivid image or a short sentence. The link can be silly; that
+            is what makes it memorable.
+          </p>
+        </details>
+      ) : null}
       <div className="options" role="group" aria-label="Answer options">
         {(view.options ?? []).map((option, index) => (
           <Button

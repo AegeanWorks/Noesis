@@ -369,6 +369,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add an experimental **Paired Associates** focus test: a word pair is studied for a short interval, then the first word cues retrieval of the second from four options. It reports accuracy, mean response time, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims verbal episodic-memory practice only; no general-memory, academic, everyday-function or diagnostic claim.
 - **Consequences**: The app gains a tenth mechanic and `npm run ai:verify` grows to 1,000 simulations (10 × 50 × 2). The evidence table gains one context record (36301274), taking the review to 122 records, 284 outcomes and revision v1.6. The claim boundary is recorded in R68.
 
+### ADR-052: Dual-task training stays out of scope; Paired Associates adds an optional mnemonic hint
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: A fresh scan evaluated cognitive-motor dual-task training. Gao and Liu 2025 (PMID 40410069) found improvements in gait, balance, executive function and fall risk in community older adults, and Hao et al. 2025 (PMID 40304821) network meta-analysed 32 RCTs in MCI/dementia, finding dual cognitive-task training best for global cognition. Both are clinical or motor-cognitive populations, not healthy-adult screen-based cognitive training. The Paired Associates evidence (Chen et al. 2022, PMID 36301274) is mnemonic-strategy training, so an optional strategy hint applies that evidence directly without changing scoring.
+- **Decision**: Do not add a dual-task mechanic; the app is sedentary and screen-only, and a meaningful protocol would need a motor or continuous tracking component with unresolved safety and measurement issues. Add a collapsed "Strategy tip" to the Paired Associates study screen: link the two words in a vivid image or short sentence. The hint is optional, does not affect scoring, and is not claimed as a validated protocol or a source of far transfer.
+- **Consequences**: No new mechanic or evidence-table record is added for dual-task training; the review remains at 122 records and 284 outcomes. The Paired Associates hint is covered by a UI test and a before/after study-screen proof.
+
 
 
 

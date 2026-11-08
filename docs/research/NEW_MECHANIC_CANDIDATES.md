@@ -183,6 +183,10 @@ quantitative basis.
   (g=0.408) and at follow-up (g=0.418). The evidence is for mnemonic strategy training, not
   repeated paired-associate practice, so the app claims verbal episodic-memory practice only and
   makes no general-memory, academic, everyday-function or diagnostic claim.
+- **Strategy hint:** the study screen offers a collapsed tip to link the two words in a vivid
+  image or short sentence. This is a direct, optional application of the mnemonic-strategy
+  evidence; it does not change scoring, and the app does not claim that the hint is a validated
+  training protocol or that it produces far transfer.
 
 ---
 
@@ -264,3 +268,21 @@ Two remaining matrix candidates were researched and deliberately **not** impleme
 
 These decisions are recorded in ADR-049. They are scope decisions, not evidence that UFOV or
 stop-signal training is ineffective.
+
+### 6.3 Cognitive-motor dual-task training
+
+- Gao and Liu 2025 (PMID 40410069; *Geriatric Nursing*) meta-analysed cognitive-motor dual-task
+  training for falls prevention in community older adults. It improved gait, static and dynamic
+  balance, executive function and fall risk versus traditional fall-prevention interventions;
+  lower-limb strength and fear of falling were inconclusive.
+- Hao et al. 2025 (PMID 40304821; *Aging Clinical and Experimental Research*) network
+  meta-analysed 32 RCTs in older adults with mild cognitive impairment or dementia. Dual
+  cognitive-task training ranked best for global cognition; motor-cognitive training improved
+  executive function and daily living.
+- **Decision:** no dual-task mechanic. The evidence is clinical (falls, MCI, dementia) and
+  motor-cognitive, not healthy-adult cognitive training, and the app is sedentary and
+  screen-only. A meaningful dual-task protocol would require a motor or continuous tracking
+  component, which introduces safety and measurement problems outside this app's scope.
+  Recorded in ADR-052.
+
+These decisions are scope decisions, not evidence that the training modes are ineffective.

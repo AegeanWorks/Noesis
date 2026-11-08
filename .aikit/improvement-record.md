@@ -1605,3 +1605,33 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 416 Vitest; `npm run ai:verify` — 1,000/1,000;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's trends, result deltas, tests, proof and record.
+
+## Cycle 36 — Dual-task scope decision and Paired Associates strategy hint
+
+- **Area**: literature scan plus a small evidence-backed UX improvement.
+- **FIND**: A fresh dual-task scan found Gao and Liu 2025 (PMID 40410069; cognitive-motor
+  dual-task training improved gait, balance, executive function and fall risk in community older
+  adults) and Hao et al. 2025 (PMID 40304821; 32 RCTs in MCI/dementia; dual cognitive-task
+  training best for global cognition). Both are clinical or motor-cognitive populations, not
+  healthy-adult screen-based cognitive training. Chen et al. 2022 (PMID 36301274) supports
+  mnemonic strategy training, so an optional strategy hint is a direct fit for Paired Associates.
+- **DECISION**: No dual-task mechanic; the app is sedentary and screen-only, and a meaningful
+  protocol would need a motor or continuous tracking component with unresolved safety and
+  measurement issues (ADR-052). Add a collapsed **Strategy tip** to the Paired Associates study
+  screen: link the two words in a vivid image or short sentence. Optional, no scoring change, no
+  validated-protocol or far-transfer claim.
+- **IMPLEMENT**: `PairedStage` renders the hint during study; a failing-first MechanicStage test
+  checks the `paired-strategy-hint` test id and copy. The candidate note and search log record the
+  dual-task decision; no evidence-table counts changed.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before study screen (no hint): `%TEMP%\opencode\noesis-paired-hint-before\before-02-paired-study.png`
+    SHA-256 `45C606706AFA97D8EEEE24845C2EAF00068B01EA4D38A55A3C09431548EE2CB1`
+  - after study screen with the hint expanded:
+    `%TEMP%\opencode\noesis-paired-hint-after\after-02-paired-study.png` SHA-256
+    `1FF32DDD839487FD0B9D5B138F98D0B38B7C75F152C1E5F1045616BCCD479415`
+- **PROOF (played run)**: `scripts/paired-proof.mjs` completed three level-2 Paired Associates
+  blocks with 100% accuracy, 12/12 correct each and mean response 1,346/1,300/1,300 ms;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 417 Vitest; `npm run ai:verify` — 1,000/1,000;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's hint, tests, scope note, proof and record.

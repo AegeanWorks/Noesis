@@ -103,6 +103,9 @@ const briefing = await page.$eval('[data-testid="test-briefing"]', (node) =>
 await page.getByTestId("begin-test").click();
 await page.waitForSelector(".stage-paired");
 await page.waitForTimeout(300);
+const hint = await page.$('[data-testid="paired-strategy-hint"] summary');
+if (hint) await hint.click();
+await page.waitForTimeout(150);
 await page.screenshot({ path: join(OUT, `${LABEL}-02-paired-study.png`) });
 
 for (let step = 0; step < 6000; step += 1) {

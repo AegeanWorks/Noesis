@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-paired-trend",
+    "task_id": "noesis-dual-task-hint",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794146444.8725574,
-    "owner": "opencode:pairedtrend",
-    "started_by": "opencode:pairedtrend",
+    "updated_at": 1794146824.8168092,
+    "owner": "opencode:dualhint",
+    "started_by": "opencode:dualhint",
     "continuations": [],
-    "completed_at": 1794146451.7484994
+    "completed_at": 1794146839.2168179
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-prospective-resume",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: prove a Prospective Memory focus session survives reload and resumes with the same seed, block, level and trial",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794144669.2130117,
-      "timestamp_str": "2026-11-08 16:31:09",
-      "agent": "opencode:prospectiveresume",
-      "impact_assessment": {
-        "why": "Prospective Memory had only a storage round-trip test; no browser-level recovery proof existed",
-        "benefits": "Verified save/resume for Prospective Memory; screenshots and console-error evidence analogous to the other focus tests",
-        "risks": "contract: proof script only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "fixed-clock Playwright run with mid/stored/resumed comparison, three-block completion, full gates"
-      },
-      "plan_digest": "fec7152fa2e03c27dcced44108de20b7b6e220b5475e1869de2a202ebb256f89"
-    },
-    {
-      "task_id": "noesis-prospective-resume",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: scripts/prospective-resume-proof.mjs with three trials before reload, Resume session, briefing dismissal, completion and screenshots",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794144669.9459627,
-      "timestamp_str": "2026-11-08 16:31:09",
-      "agent": "opencode:prospectiveresume"
-    },
-    {
-      "task_id": "noesis-prospective-resume",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seed 2721744568, block 0/3, prospective, level 2, trial 3 question identical mid/stored/resumed; Resume session; 3 blocks 4/4 cues, 0 false alarms, mean 491/400/400; consoleErrors []; 29 Python + 395 Vitest, 900 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794144670.5716276,
-      "timestamp_str": "2026-11-08 16:31:10",
-      "agent": "opencode:prospectiveresume"
-    },
-    {
-      "task_id": "noesis-prospective-resume",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-prospective-resume' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794144676.8965907,
-      "timestamp_str": "2026-11-08 16:31:16",
-      "agent": "opencode:prospectiveresume"
-    },
     {
       "task_id": "noesis-prospective-trend",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794146451.748502,
       "timestamp_str": "2026-11-08 17:00:51",
       "agent": "opencode:pairedtrend"
+    },
+    {
+      "task_id": "noesis-dual-task-hint",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: scan dual-task training, record its scope decision, and add an evidence-backed mnemonic strategy hint to Paired Associates",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794146823.5172136,
+      "timestamp_str": "2026-11-08 17:07:03",
+      "agent": "opencode:dualhint",
+      "impact_assessment": {
+        "why": "The next candidate scan found only clinical/motor dual-task evidence; the mnemonic-training evidence directly supports an optional strategy hint for the new Paired Associates task",
+        "benefits": "A researched scope boundary plus a low-risk UX aid grounded in the same memory-training evidence",
+        "risks": "contract: content/UI only; scoring unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first hint test, before/after study-screen proof, full playthrough and gates"
+      },
+      "plan_digest": "698773b30707f33f63ca2eca1ce3d6121199fdfd01fed491da01258ebd3a8b48"
+    },
+    {
+      "task_id": "noesis-dual-task-hint",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: Paired study Strategy tip with vivid-image/sentence copy; candidate note section 6.3; ADR-052; search log; test; proof opens the hint",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794146824.1189709,
+      "timestamp_str": "2026-11-08 17:07:04",
+      "agent": "opencode:dualhint"
+    },
+    {
+      "task_id": "noesis-dual-task-hint",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: before study screen no hint; after hint expanded; three level-2 blocks 12/12 mean 1346/1300/1300; consoleErrors []; 29 Python + 417 Vitest, 1000 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794146824.8168092,
+      "timestamp_str": "2026-11-08 17:07:04",
+      "agent": "opencode:dualhint"
+    },
+    {
+      "task_id": "noesis-dual-task-hint",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-dual-task-hint' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794146839.21682,
+      "timestamp_str": "2026-11-08 17:07:19",
+      "agent": "opencode:dualhint"
     }
   ]
 }

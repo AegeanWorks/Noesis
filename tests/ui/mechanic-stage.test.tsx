@@ -259,4 +259,24 @@ describe("MechanicStage", () => {
     fireEvent.click(screen.getByTestId("option-0"));
     expect(onAnswer).toHaveBeenCalledWith(0);
   });
+
+  it("offers a mnemonic strategy hint during paired study", () => {
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "paired",
+          name: "Paired Associates",
+          phase: "study",
+          prompt: "Remember this word pair",
+          stimulus: "apple|bridge",
+          options: null,
+        })}
+        onRespond={vi.fn()}
+        onAnswer={vi.fn()}
+      />,
+    );
+    const hint = screen.getByTestId("paired-strategy-hint");
+    expect(hint.textContent).toMatch(/vivid image|short sentence/i);
+    expect(hint.textContent).toMatch(/link/i);
+  });
 });

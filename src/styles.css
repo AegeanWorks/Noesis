@@ -1963,6 +1963,27 @@ html.high-contrast .speed-ring-active {
   font-weight: 800;
 }
 
+.paired-strategy-hint {
+  width: min(100%, 460px);
+  margin: 2px auto 6px;
+  border: 1px solid rgba(139, 233, 253, 0.22);
+  border-radius: 12px;
+  padding: 8px 12px;
+  background: rgba(139, 233, 253, 0.05);
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.paired-strategy-hint summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.paired-strategy-hint p {
+  margin: 6px 0 0;
+}
+
 .stage-paired .options {
   max-width: 460px;
 }
