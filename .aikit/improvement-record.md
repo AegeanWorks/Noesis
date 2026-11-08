@@ -22,6 +22,7 @@ Covered so far:
 13. Level-aware switch-cost history — 2026-11-08 — cycle 13
 14. Same-level switch-cost change — 2026-11-08 — cycle 14
 15. Same-level result delta — 2026-11-08 — cycle 15
+16. Choose-card switch-cost line — 2026-11-08 — cycle 16
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -908,3 +909,31 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 343 Vitest; `npm run ai:verify` — 500/500;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's result delta, tests, proof script update and record.
+
+## Cycle 16 — Level-aware switch-cost last/trend on the Choose-a-test card
+
+- **Area**: Task Switch test-selection card, completing the same-level switch-cost view across
+  Choose, History and Results.
+- **FIND**: The Task Switch card in Choose a test showed last/best accuracy and block count but
+  not the switch-cost outcome, so a user choosing the test could not see the most recent
+  same-level switch cost before starting.
+- **IMPLEMENT**: `TestCard` reuses `switchCostLevels(history)` for the level of its latest block
+  and renders `Switch cost L{level}: last N ms · previous → last ms · improved/worsened/no
+  change`, or `first block at this level`. No new engine or storage state. Test asserts the
+  exact Level 2 line and the empty case remains unchanged. The trend proof script now captures
+  the Choose card before and after the real level-2 session.
+- **PROOF (screenshots)**: seeded history with level 3 latest, same 390x844@2x viewport:
+  - before: `%TEMP%\opencode\noesis-choose-card-before\before-00-choose-tests.png` SHA-256
+    `D85A562777D788C20CA4E6149962EBCB1FAD98E7CE9E6A815D8F4E833C50BD12` (no switch-cost line)
+  - after: `%TEMP%\opencode\noesis-choose-card-after\after-00-choose-tests.png` SHA-256
+    `8021723697FA12090483514A0FAFBA1B1A516A4D5DAEAC0D9AA342C465C7C845`
+    (`Switch cost L3: last 200 ms · 180 → 200 ms · worsened +20 ms`)
+- **PROOF (played run)**: the proof played a real level-2 Task Switch focus session. The Choose
+  card updated to `Switch cost L2: last 300 ms · 0 → 300 ms · worsened +300 ms` while Level 3
+  and Level 1 remained unchanged; the History panel agreed. Screenshot:
+  `%TEMP%\opencode\noesis-choose-card-after\after-03-choose-tests-after-play.png` SHA-256
+  `FB5B2CB755CCFC83FA51967AB436D925B313C82A47A413640F64B37E09E454FE`;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 344 Vitest; `npm run ai:verify` — 500/500;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's card line, test, proof script capture and record.

@@ -93,6 +93,13 @@ page.on("pageerror", (error) => consoleErrors.push(error.message));
 await page.goto(URL, { waitUntil: "networkidle" });
 await page.waitForSelector('[data-testid="start-session"]');
 await page.getByRole("button", { name: "Menu", exact: true }).click();
+await page.waitForSelector('[data-testid="menu-test-switching"]');
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, `${LABEL}-00-choose-tests.png`), fullPage: true });
+const chooseBefore = await page.$eval('[data-testid="menu-test-switching"]', (node) => {
+  const line = node.querySelector('[data-testid="menu-switch-cost"]');
+  return line ? (line.textContent ?? "").replace(/\s+/g, " ").trim() : null;
+});
 await page.getByRole("tab", { name: /history/i }).click();
 await page.waitForSelector('[data-testid="menu-history"]');
 await page.waitForTimeout(300);
@@ -172,11 +179,21 @@ await page.waitForSelector('[data-testid="menu-history"]');
 await page.waitForTimeout(300);
 await page.screenshot({ path: join(OUT, `${LABEL}-02-history-after-play.png`), fullPage: true });
 const playedPanel = await readPanel();
+await page.getByRole("tab", { name: /choose a test/i }).click();
+await page.waitForSelector('[data-testid="menu-test-switching"]');
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, `${LABEL}-03-choose-tests-after-play.png`), fullPage: true });
+const chooseAfter = await page.$eval('[data-testid="menu-test-switching"]', (node) => {
+  const line = node.querySelector('[data-testid="menu-switch-cost"]');
+  return line ? (line.textContent ?? "").replace(/\s+/g, " ").trim() : null;
+});
 
 const report = {
   label: LABEL,
+  chooseBefore,
   seededPanel,
   played,
+  chooseAfter,
   playedPanel,
   consoleErrors,
   shots: OUT,

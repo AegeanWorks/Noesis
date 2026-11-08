@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-switch-result-delta",
+    "task_id": "noesis-choose-switch-cost",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794133210.555615,
-    "owner": "opencode:switchdelta",
-    "started_by": "opencode:switchdelta",
+    "updated_at": 1794133658.5512185,
+    "owner": "opencode:choosecost",
+    "started_by": "opencode:choosecost",
     "continuations": [],
-    "completed_at": 1794133220.0793726
+    "completed_at": 1794133672.225813
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-switching-completion",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: complete Task Switch persistence, adaptive-state migration and coarse time-step handling, and tighten the literature wording",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794129026.001212,
-      "timestamp_str": "2026-11-08 12:10:26",
-      "agent": "opencode:switch",
-      "impact_assessment": {
-        "why": "Post-commit review found Task Switch focus sessions were rejected by the snapshot allow-list, pre-Task-Switch adaptive settings reset because switching was mandatory, and a single coarse advance skipped timeout/feedback transitions; the new EF meta-analysis wording over-simplified multicomponent findings",
-        "benefits": "Task Switch resumes after reload; existing adaptive settings survive; engine timing matches the other mechanics; research text separates single- and multicomponent evidence",
-        "risks": "contract: allow-list and migration are backward-compatible; engine transition semantics align with existing mechanics; dependency: none; concurrency: none; state: old snapshots/adaptive state remain valid",
-        "mitigation": "failing-first snapshot/adaptive/coarse-step tests, full test/typecheck/build/ai:verify, browser Task Switch proof, reviewed PubMed abstracts for both new PMIDs"
-      },
-      "plan_digest": "3be28cf9ec3e698e13dec238c2da40ec67afad5ee3f5579cfcc3a7022a5815df"
-    },
-    {
-      "task_id": "noesis-switching-completion",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Fix: snapshot allow-list uses MECHANIC_IDS; adaptive loader merges missing levels; switching advance loops through timeout/feedback/next; README/menu, export/dictionary and review-version wording synced",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794129026.749974,
-      "timestamp_str": "2026-11-08 12:10:26",
-      "agent": "opencode:switch"
-    },
-    {
-      "task_id": "noesis-switching-completion",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: 338 tests (incl. 3 new), 500 ai simulations, browser Task Switch proof (Menu/briefing/stage/answer/feedback, no console errors), 6/6 gates; PMID 30998045/32011155 abstracts verified; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794129027.4256942,
-      "timestamp_str": "2026-11-08 12:10:27",
-      "agent": "opencode:switch"
-    },
-    {
-      "task_id": "noesis-switching-completion",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-switching-completion' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794129036.4016333,
-      "timestamp_str": "2026-11-08 12:10:36",
-      "agent": "opencode:switch"
-    },
     {
       "task_id": "noesis-switch-resume-proof",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794133220.079375,
       "timestamp_str": "2026-11-08 13:20:20",
       "agent": "opencode:switchdelta"
+    },
+    {
+      "task_id": "noesis-choose-switch-cost",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add the latest same-level Task Switch switch-cost last/trend line to the Choose-a-test card",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794133657.2014832,
+      "timestamp_str": "2026-11-08 13:27:37",
+      "agent": "opencode:choosecost",
+      "impact_assessment": {
+        "why": "The Choose card showed accuracy and block count but not switch cost, while History and Results already had same-level comparisons",
+        "benefits": "The test-selection screen shows the outcome that defines the task, without mixing levels",
+        "risks": "contract: Choose card presentation only; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first exact-line test, seeded before/after screenshots, real level-2 playthrough updating the card, full gates"
+      },
+      "plan_digest": "dae3c2104db3a2f6088f1652c49aa2762f53e4ed9cf508638d475c0430505d4e"
+    },
+    {
+      "task_id": "noesis-choose-switch-cost",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: TestCard reuses switchCostLevels for the latest level; last/previous/delta line; test; proof script captures Choose before/after play; docs/record",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794133657.8526633,
+      "timestamp_str": "2026-11-08 13:27:37",
+      "agent": "opencode:choosecost"
+    },
+    {
+      "task_id": "noesis-choose-switch-cost",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded L3 last200 180\u2192200 worsened+20; played L2 last300 0\u2192300 worsened+300, L1/L3 unchanged; consoleErrors []; 29 Python + 344 Vitest, 500 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794133658.5512185,
+      "timestamp_str": "2026-11-08 13:27:38",
+      "agent": "opencode:choosecost"
+    },
+    {
+      "task_id": "noesis-choose-switch-cost",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-choose-switch-cost' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794133672.2258148,
+      "timestamp_str": "2026-11-08 13:27:52",
+      "agent": "opencode:choosecost"
     }
   ]
 }

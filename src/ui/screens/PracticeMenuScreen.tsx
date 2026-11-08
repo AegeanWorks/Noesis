@@ -160,6 +160,23 @@ function TestCard({
   const stats = resultFor(history, mechanic);
   const level = typeof stats.last?.difficulty === "number" ? stats.last.difficulty : null;
   const source = meta.citations[0];
+  const costLevel =
+    mechanic === "switching" && level !== null
+      ? (switchCostLevels(history).find((entry) => entry.level === level) ?? null)
+      : null;
+  const switchCostLine = costLevel
+    ? `Switch cost L${costLevel.level}: last ${costLevel.last} ms${
+        costLevel.values.length > 1
+          ? ` · ${costLevel.previous ?? 0} → ${costLevel.last} ms · ${
+              costLevel.delta !== null && costLevel.delta < 0
+                ? `improved ${Math.abs(costLevel.delta)} ms`
+                : costLevel.delta !== null && costLevel.delta > 0
+                  ? `worsened +${costLevel.delta} ms`
+                  : "no change"
+            }`
+          : " · first block at this level"
+      }`
+    : null;
 
   return (
     <article className="card menu-test-card" data-testid={`menu-test-${mechanic}`}>
@@ -199,6 +216,11 @@ function TestCard({
             } ${stats.blocks === 1 ? "block" : "blocks"} practised`
           : "No blocks practised yet. The first block is a baseline, not a test you can fail."}
       </p>
+      {switchCostLine ? (
+        <p className="fine menu-switch-cost" data-testid="menu-switch-cost">
+          {switchCostLine}
+        </p>
+      ) : null}
       <div className="hero-actions">
         <Button onClick={() => onStartTest(mechanic)} data-testid={`start-${mechanic}`}>
           Start {meta.name} test

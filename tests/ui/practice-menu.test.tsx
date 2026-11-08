@@ -187,6 +187,18 @@ describe("PracticeMenuScreen", () => {
     );
   });
 
+  it("shows the latest same-level switch cost on the Task Switch card", () => {
+    renderMenu({
+      history: [
+        switchingRecord(2, [90, 70], "s2", "2026-11-08T10:00:00.000Z"),
+        switchingRecord(3, [180, 200], "s3", "2026-11-07T10:00:00.000Z"),
+      ],
+    });
+    expect(screen.getByTestId("menu-switch-cost").textContent).toBe(
+      "Switch cost L2: last 70 ms · 90 → 70 ms · improved 20 ms",
+    );
+  });
+
   it("omits the switch-cost trend when there are no Task Switch blocks", () => {
     renderMenu({ history: [record()], initialTab: "history" });
     expect(screen.queryByTestId("switch-cost-trend")).toBeNull();

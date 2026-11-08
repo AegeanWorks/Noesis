@@ -1745,3 +1745,10 @@ html.high-contrast .speed-ring-active {
   color: var(--bad);
 }
 
+
+.menu-switch-cost {
+  margin-top: -4px;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
