@@ -53,7 +53,7 @@ Completed sessions are stored locally and summarized per mechanic. Monthly word-
 
 ## Practice Menu and Pre-Test Briefing
 
-The **Menu** tab is the explicit choice point. It lists all four tests with a short,
+The **Menu** tab is the explicit choice point. It lists every test — four core mechanics plus the experimental Task Switch — with a short,
 literature-grounded explanation, the claim boundary, a primary PMID link, and the user's
 last/best accuracy and block count for that test. From there a user can start a single-test
 session or start/resume the interleaved session. The same screen has a **History** tab that

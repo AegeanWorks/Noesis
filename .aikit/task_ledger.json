@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-task-switch",
+    "task_id": "noesis-switching-completion",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794128214.058755,
-    "owner": "opencode:task-switch",
-    "started_by": "opencode:task-switch",
+    "updated_at": 1794129027.4256942,
+    "owner": "opencode:switch",
+    "started_by": "opencode:switch",
     "continuations": [],
-    "completed_at": 1794128235.809038
+    "completed_at": 1794129036.4016309
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-adherence-log",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/5] Plan: log every session start, completion and early ending so adherence and dropout are measurable in research exports",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794106143.500388,
-      "timestamp_str": "2026-11-08 05:49:03",
-      "agent": "opencode:adherence",
-      "impact_assessment": {
-        "why": "The review makes adherence a primary metric (R22) and the export currently contains only completed sessions; dropout cannot be measured, which blocks the app as a data collector for future articles. A pilot RCT in computerized training reported 38.5%/57.1% dropout (PMID 30881315), so starts and early endings must be logged.",
-        "benefits": "Session-level adherence log with seed, timestamps, blocks completed and arm; export and Settings summary; no server and no change to cognitive scores",
-        "risks": "contract: new storage key, export field and Settings prop; dependency: none; concurrency: no cross-tab guarantees beyond existing local storage; state: old exports remain valid because adherence defaults to []",
-        "mitigation": "failing-first storage/export/UI tests, explicit start/complete/abort paths, dangling-start closure on a new session, full gates and browser proof"
-      },
-      "plan_digest": "f32e2ada5e17c37245aded9d11eb04a6810442237198cfd90f47e67e35678696"
-    },
-    {
-      "task_id": "noesis-adherence-log",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/5] Impl: adherence storage with start/complete/abort events; dangling starts closed on new session; export adherence[]; Settings session-log summary; Delete local data clears it; ADR-042 and ADHERENCE_LOGGING.md; R60",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794107200.4330225,
-      "timestamp_str": "2026-11-08 06:06:40",
-      "agent": "opencode:adherence"
-    },
-    {
-      "task_id": "noesis-adherence-log",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/5] Verified: 29 Python + 318 Vitest; typecheck/build clean; ai:verify 400/400; review 116/277 valid; browser proof downloaded JSON has adherence eventCount 1/status aborted/blocks 0; UI audit no console errors/horizontal scroll; aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794107217.0250933,
-      "timestamp_str": "2026-11-08 06:06:57",
-      "agent": "opencode:adherence"
-    },
-    {
-      "task_id": "noesis-adherence-log",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-adherence-log' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794107236.5326228,
-      "timestamp_str": "2026-11-08 06:07:16",
-      "agent": "opencode:adherence"
-    },
     {
       "task_id": "noesis-csv-export",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794128235.8090398,
       "timestamp_str": "2026-11-08 11:57:15",
       "agent": "opencode:task-switch"
+    },
+    {
+      "task_id": "noesis-switching-completion",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: complete Task Switch persistence, adaptive-state migration and coarse time-step handling, and tighten the literature wording",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794129026.001212,
+      "timestamp_str": "2026-11-08 12:10:26",
+      "agent": "opencode:switch",
+      "impact_assessment": {
+        "why": "Post-commit review found Task Switch focus sessions were rejected by the snapshot allow-list, pre-Task-Switch adaptive settings reset because switching was mandatory, and a single coarse advance skipped timeout/feedback transitions; the new EF meta-analysis wording over-simplified multicomponent findings",
+        "benefits": "Task Switch resumes after reload; existing adaptive settings survive; engine timing matches the other mechanics; research text separates single- and multicomponent evidence",
+        "risks": "contract: allow-list and migration are backward-compatible; engine transition semantics align with existing mechanics; dependency: none; concurrency: none; state: old snapshots/adaptive state remain valid",
+        "mitigation": "failing-first snapshot/adaptive/coarse-step tests, full test/typecheck/build/ai:verify, browser Task Switch proof, reviewed PubMed abstracts for both new PMIDs"
+      },
+      "plan_digest": "3be28cf9ec3e698e13dec238c2da40ec67afad5ee3f5579cfcc3a7022a5815df"
+    },
+    {
+      "task_id": "noesis-switching-completion",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Fix: snapshot allow-list uses MECHANIC_IDS; adaptive loader merges missing levels; switching advance loops through timeout/feedback/next; README/menu, export/dictionary and review-version wording synced",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794129026.749974,
+      "timestamp_str": "2026-11-08 12:10:26",
+      "agent": "opencode:switch"
+    },
+    {
+      "task_id": "noesis-switching-completion",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: 338 tests (incl. 3 new), 500 ai simulations, browser Task Switch proof (Menu/briefing/stage/answer/feedback, no console errors), 6/6 gates; PMID 30998045/32011155 abstracts verified; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794129027.4256942,
+      "timestamp_str": "2026-11-08 12:10:27",
+      "agent": "opencode:switch"
+    },
+    {
+      "task_id": "noesis-switching-completion",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-switching-completion' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794129036.4016333,
+      "timestamp_str": "2026-11-08 12:10:36",
+      "agent": "opencode:switch"
     }
   ]
 }

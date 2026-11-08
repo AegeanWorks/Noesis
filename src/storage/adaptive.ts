@@ -1,4 +1,5 @@
 import type { MechanicId, MechanicResult } from "../engine/types";
+import { MECHANIC_IDS } from "../engine/types";
 import { readLocal, removeLocal, writeLocal } from "./browserStorage";
 
 export type AdaptiveLevel = 1 | 2 | 3;
@@ -31,13 +32,7 @@ const DEFAULTS: AdaptiveState = {
   log: [],
 };
 
-const MECHANICS: readonly MechanicId[] = [
-  "nback",
-  "gonogo",
-  "reasoning",
-  "speed",
-  "switching",
-];
+const MECHANICS: readonly MechanicId[] = MECHANIC_IDS;
 
 function isLevel(value: unknown): value is AdaptiveLevel {
   return value === 1 || value === 2 || value === 3;
@@ -56,7 +51,13 @@ function isState(value: unknown): value is AdaptiveState {
   if (typeof state.enabled !== "boolean") return false;
   if (typeof state.levels !== "object" || state.levels === null) return false;
   const levels = state.levels as Partial<Record<string, unknown>>;
-  if (!MECHANICS.every((mechanic) => isLevel(levels[mechanic]))) return false;
+  for (const mechanic of MECHANICS) {
+    const level = levels[mechanic];
+    if (level !== undefined && !isLevel(level)) return false;
+  }
+  for (const key of Object.keys(levels)) {
+    if (!(MECHANICS as readonly string[]).includes(key)) return false;
+  }
   if (!Array.isArray(state.log)) return false;
   return state.log.every(
     (entry) =>
@@ -76,7 +77,12 @@ export function loadAdaptive(): AdaptiveState {
     if (!raw) return structuredClone(DEFAULTS);
     const parsed = JSON.parse(raw) as unknown;
     if (!isState(parsed)) return structuredClone(DEFAULTS);
-    return { ...parsed, log: parsed.log.slice(-MAX_LOG) };
+    return {
+      ...DEFAULTS,
+      ...parsed,
+      levels: { ...DEFAULTS.levels, ...parsed.levels },
+      log: parsed.log.slice(-MAX_LOG),
+    };
   } catch {
     return structuredClone(DEFAULTS);
   }

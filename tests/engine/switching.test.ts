@@ -70,6 +70,17 @@ describe("Task Switch mechanic", () => {
     expect(state.responses[0]?.reactionMs).toBeNull();
   });
 
+  it("carries a coarse advance through feedback into the next trial", () => {
+    const state = createSwitching(7, switchingConfig(1, 2));
+    const advanced = applySwitchingAction(state, { type: "advance", ms: 6_000 });
+    expect(advanced.index).toBe(1);
+    expect(advanced.phase).toBe("question");
+    expect(advanced.responses).toHaveLength(1);
+    expect(advanced.responses[0]?.timedOut).toBe(true);
+    expect(advanced.phaseElapsed).toBe(300);
+    expect(advanced.tick).toBe(6_000);
+  });
+
   it("completes a block and reports finite switch metrics", () => {
     let state = createSwitching(11, switchingConfig(2, 8));
     let guard = 0;

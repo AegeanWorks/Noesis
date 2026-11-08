@@ -8,6 +8,7 @@ import {
   loadAdaptive,
   setAdaptiveEnabled,
 } from "../../src/storage/adaptive";
+import { writeLocal } from "../../src/storage/browserStorage";
 import type { MechanicResult } from "../../src/engine/types";
 
 function result(mechanic: MechanicResult["mechanic"], accuracy: number): MechanicResult {
@@ -39,6 +40,26 @@ describe("adaptive difficulty store", () => {
     setAdaptiveEnabled(false);
     expect(loadAdaptive().enabled).toBe(false);
     expect(loadAdaptive().levels.nback).toBe(2);
+  });
+
+  it("migrates a pre-Task-Switch state without losing settings", () => {
+    writeLocal(
+      "noesis.adaptive.v1",
+      JSON.stringify({
+        enabled: true,
+        levels: { nback: 1, gonogo: 2, reasoning: 3, speed: 2 },
+        log: [],
+      }),
+    );
+    const loaded = loadAdaptive();
+    expect(loaded.enabled).toBe(true);
+    expect(loaded.levels).toEqual({
+      nback: 1,
+      gonogo: 2,
+      reasoning: 3,
+      speed: 2,
+      switching: 2,
+    });
   });
 });
 

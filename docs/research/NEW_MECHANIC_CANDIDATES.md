@@ -34,7 +34,7 @@ Two executive-function meta-analyses were added to the evidence table as context
 | PMID | Record | Key result |
 |---|---|---|
 | 30998045 | Nguyen et al. (2019), *Psychol Bull* | 64 studies / 3,594 older adults; core-EF training produced large trained-task effects and small near- and far-transfer effects, maintained at follow-up |
-| 32011155 | Basak et al. (2020), *Psychol Aging* | 215 training studies; overall g=0.28, near g=0.37, far g=0.22; single-component executive-function training was most effective on near and far transfer |
+| 32011155 | Basak et al. (2020), *Psychol Aging* | 215 training studies; overall g=0.28, near g=0.37, far g=0.22; single-component EF training was most effective on near/far transfer, while multicomponent training also transferred and improved everyday functioning |
 
 The following sources stayed narrative-only:
 
@@ -51,7 +51,7 @@ The following sources stayed narrative-only:
 
 | Candidate | Construct | Evidence | Safety / fit | Decision |
 |---|---|---|---|---|
-| **Task Switch** | Set-shifting / cognitive flexibility | Core-EF meta-analysis shows small near and far transfer; single-component EF training most effective (30998045, 32011155) | Static coloured shapes; no flashing; easy deterministic state machine | **Implement as experimental focus test** |
+| **Task Switch** | Set-shifting / cognitive flexibility | Core-EF meta-analyses show small near and far transfer; single-component EF training was most effective in one analysis, while multicomponent training also transferred and improved everyday functioning (30998045, 32011155) | Static coloured shapes; no flashing; easy deterministic state machine | **Implement as experimental focus test** |
 | Flanker | Interference control | No eligible task-specific meta-analysis in this search; flanker is a standard inhibition paradigm | Static arrows; safe | Candidate, not implemented |
 | Stop-signal | Response inhibition / cancellation | Strong paradigm, but Go/No-Go already covers inhibition in the core lineup | Static go/stop cues; safe | Candidate, not implemented |
 | Spatial span / Corsi | Visuospatial working memory | Near transfer is plausible; less evidence for broad transfer | Grid sequence; safe | Candidate, not implemented |

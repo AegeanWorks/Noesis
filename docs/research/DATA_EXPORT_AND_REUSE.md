@@ -49,7 +49,7 @@ same local record: one CSV for session blocks and one for adherence events.
 `session_id, finished_at, seed, arm, mechanic, domain, difficulty, trials, duration_ms,
 accuracy, summary, state_hash, metrics_json, motivation_json`
 
-- One row per mechanic result, so a four-block session produces four rows.
+- One row per mechanic result, so a four-block session produces four rows; a focus session produces one row per completed block (one to three).
 - `arm` is blank outside a study.
 - `difficulty` is blank for pre-level records.
 - `metrics_json` and `motivation_json` are JSON strings escaped for CSV.

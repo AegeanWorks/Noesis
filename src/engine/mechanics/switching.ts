@@ -233,15 +233,26 @@ export function applySwitchingAction(
   if (action.type !== "advance") return state;
   const ms = sanitizeMs(action.ms);
   if (ms === 0) return state;
-  const tick = state.tick + ms;
-  const phaseElapsed = state.phaseElapsed + ms;
-  if (state.phase === "question" && phaseElapsed >= state.phaseDuration) {
-    return recordResponse({ ...state, tick, phaseElapsed }, null, true);
+  let next: SwitchingState = { ...state, tick: state.tick + ms };
+  let remaining = ms;
+  while (remaining > 0 && !next.completed) {
+    const space = Math.max(0, next.phaseDuration - next.phaseElapsed);
+    if (space > remaining) {
+      next = { ...next, phaseElapsed: next.phaseElapsed + remaining };
+      remaining = 0;
+      break;
+    }
+    next = { ...next, phaseElapsed: next.phaseElapsed + space };
+    remaining -= space;
+    if (next.phase === "question") {
+      next = recordResponse(next, null, true);
+    } else if (next.phase === "feedback") {
+      next = nextTrial(next);
+    } else {
+      break;
+    }
   }
-  if (state.phase === "feedback" && phaseElapsed >= state.phaseDuration) {
-    return nextTrial({ ...state, tick, phaseElapsed });
-  }
-  return { ...state, tick, phaseElapsed };
+  return next;
 }
 
 export function switchingComplete(state: SwitchingState): boolean {

@@ -1,5 +1,6 @@
 import type { MotivationState } from "../engine/motivation";
 import { SessionConfigSchema } from "../engine/schema";
+import { MECHANIC_IDS } from "../engine/types";
 import type { SessionState } from "../engine/types";
 import { readLocal, removeLocal, writeLocal } from "./browserStorage";
 
@@ -11,7 +12,7 @@ export interface SessionSnapshot {
 }
 
 const KEY = "noesis.session.v1";
-const MECHANICS = new Set(["nback", "gonogo", "reasoning", "speed"]);
+const MECHANICS = new Set<string>(MECHANIC_IDS);
 const RESUMABLE_PHASES = new Set(["running", "block_complete"]);
 
 function isObject(value: unknown): value is Record<string, unknown> {

@@ -105,4 +105,16 @@ describe("session snapshot", () => {
     saveSessionSnapshot(state);
     expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("speed");
   });
+
+  it("round-trips a running Task Switch block", () => {
+    const state = applySessionAction(
+      createSession(defaultSessionConfig(9, 2, "standard", undefined, "switching")),
+      { type: "begin" },
+    );
+    if (state.current?.mechanic !== "switching") {
+      throw new Error("expected a Task Switch session");
+    }
+    saveSessionSnapshot(state);
+    expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("switching");
+  });
 });

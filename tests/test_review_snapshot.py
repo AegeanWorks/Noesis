@@ -1,4 +1,4 @@
-"""Snapshot checks for the frozen v1.0 evidence review.
+"""Snapshot checks for the current evidence review.
 
 These counts are quoted in the review prose. If the table changes, this test
 must change deliberately in the same commit as the prose.

@@ -1,6 +1,6 @@
 # Noesis Evidence Review
 
-**Status:** v1.0 complete plus the 2026-11-08 targeted UX and data-collection updates, AI-assisted, internally pre-registered
+**Status:** v1.0 corpus complete; current review revision v1.2 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered
 **Search date:** 2026-10-31; targeted update 2026-11-08
 **Records:** 118 included (90 primary, 28 context), 280 outcomes
 **Review type:** PRISMA 2020 systematic umbrella review with landmark-RCT update

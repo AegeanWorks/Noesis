@@ -140,9 +140,9 @@
 ---
 
 ### [`tests/test_review_snapshot.py`](tests/test_review_snapshot.py)
-> *Snapshot checks for the frozen v1.0 evidence review.*
+> *Snapshot checks for the current evidence review.*
 
-**Size**: `68` lines (`2510` bytes)
+**Size**: `68` lines (`2506` bytes)
 
 **Classes:**
 - `class ReviewSnapshotTest`
