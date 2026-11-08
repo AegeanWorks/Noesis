@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-prospective-resume",
+    "task_id": "noesis-prospective-trend",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794144670.5716276,
-    "owner": "opencode:prospectiveresume",
-    "started_by": "opencode:prospectiveresume",
+    "updated_at": 1794145114.3562114,
+    "owner": "opencode:prospectivetrend",
+    "started_by": "opencode:prospectivetrend",
     "continuations": [],
-    "completed_at": 1794144676.8965886
+    "completed_at": 1794145122.8910856
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-rotation-trend",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add a level-aware Mental Rotation accuracy and mean-response-time trend to Choose and Menu History",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794143285.9965303,
-      "timestamp_str": "2026-11-08 16:08:05",
-      "agent": "opencode:rotationtrend",
-      "impact_assessment": {
-        "why": "Mental Rotation had only per-block summaries; pooling levels is invalid and the two metrics point in opposite directions",
-        "benefits": "Users see accuracy and speed where they choose and review the test, with same-level comparison",
-        "risks": "contract: Menu UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "three failing-first tests, seeded before/after screenshots, real level-2 played run, full gates"
-      },
-      "plan_digest": "d5782423f0f5ccfe004bada994ab4a87909aca1ac7b4fea71268023a1425742e"
-    },
-    {
-      "task_id": "noesis-rotation-trend",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: rotationLevels + RotationTrendCard with separate accuracy/RT lines; Choose line; tests; rotation-trend-proof.mjs; record",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794143286.8531249,
-      "timestamp_str": "2026-11-08 16:08:06",
-      "agent": "opencode:rotationtrend"
-    },
-    {
-      "task_id": "noesis-rotation-trend",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seeded L3 100%/400, L2 90%/500, L1 70%/700; played L2 5 blocks last 100% RT400 mean461, L3/L1 unchanged; consoleErrors []; 29 Python + 384 Vitest, 800 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794143287.6046412,
-      "timestamp_str": "2026-11-08 16:08:07",
-      "agent": "opencode:rotationtrend"
-    },
-    {
-      "task_id": "noesis-rotation-trend",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-rotation-trend' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794143294.3437028,
-      "timestamp_str": "2026-11-08 16:08:14",
-      "agent": "opencode:rotationtrend"
-    },
     {
       "task_id": "noesis-rotation-result-delta",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794144676.8965907,
       "timestamp_str": "2026-11-08 16:31:16",
       "agent": "opencode:prospectiveresume"
+    },
+    {
+      "task_id": "noesis-prospective-trend",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add level-aware Prospective Memory ongoing/cue/false-alarm trends and a same-level result delta",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794145111.129157,
+      "timestamp_str": "2026-11-08 16:38:31",
+      "agent": "opencode:prospectivetrend",
+      "impact_assessment": {
+        "why": "Choose, History and Results had only per-block Prospective Memory summaries; the three measures need same-level comparison and lower false alarms are better",
+        "benefits": "Consistent level-aware comparison across all three screens; explicit cue and false-alarm reporting",
+        "risks": "contract: Menu/results UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "three failing-first menu tests and four result tests, seeded before/after screenshots, real level-2 played run, full gates"
+      },
+      "plan_digest": "0f47141de50fb06a98043c7ed637724763599d3aa2bde323aa8b0c699bfc36f2"
+    },
+    {
+      "task_id": "noesis-prospective-trend",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: prospectiveLevels + three-line trend card; Choose line; prospectiveComparisons/result delta; tests; prospective-trend-proof.mjs; record",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794145112.8932018,
+      "timestamp_str": "2026-11-08 16:38:32",
+      "agent": "opencode:prospectivetrend"
+    },
+    {
+      "task_id": "noesis-prospective-trend",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded L3 100%/4-4/0, L2 90%/3-4/1, L1 80%/2-4/2; played L2 100%/4-4/0 gave improved +10pp/cue4-4/FA0 then no change; consoleErrors []; 29 Python + 402 Vitest, 900 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794145114.3562114,
+      "timestamp_str": "2026-11-08 16:38:34",
+      "agent": "opencode:prospectivetrend"
+    },
+    {
+      "task_id": "noesis-prospective-trend",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-prospective-trend' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794145122.8910873,
+      "timestamp_str": "2026-11-08 16:38:42",
+      "agent": "opencode:prospectivetrend"
     }
   ]
 }

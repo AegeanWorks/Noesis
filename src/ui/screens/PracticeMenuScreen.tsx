@@ -514,6 +514,174 @@ function RotationTrendCard({ levels }: { levels: readonly RotationLevel[] }) {
   );
 }
 
+interface ProspectiveLevel {
+  level: number;
+  blocks: number;
+  ongoing: number[];
+  cueAccuracy: number[];
+  falseAlarms: number[];
+  lastOngoing: number;
+  bestOngoing: number;
+  lastCueAccuracy: number;
+  bestCueAccuracy: number;
+  lastCueHits: number;
+  lastCueTrials: number;
+  lastFalseAlarms: number;
+  totalFalseAlarms: number;
+}
+
+function prospectiveLevels(history: readonly SessionRecord[]): ProspectiveLevel[] {
+  const levels = new Map<
+    number,
+    {
+      ongoing: number[];
+      cueAccuracy: number[];
+      cueHits: number[];
+      cueTrials: number[];
+      falseAlarms: number[];
+      lastSeen: number;
+    }
+  >();
+  let seen = 0;
+  for (const record of [...history].reverse()) {
+    for (const result of record.results) {
+      if (result.mechanic !== "prospective") continue;
+      const level = result.difficulty;
+      const ongoing = result.metrics.ongoing_accuracy;
+      const cueHits = result.metrics.cue_hits;
+      const cueTrials = result.metrics.cue_trials;
+      const falseAlarms = result.metrics.false_alarms;
+      if (
+        typeof level !== "number" ||
+        typeof ongoing !== "number" ||
+        !Number.isFinite(ongoing) ||
+        typeof cueHits !== "number" ||
+        typeof cueTrials !== "number" ||
+        cueTrials <= 0 ||
+        typeof falseAlarms !== "number" ||
+        !Number.isFinite(falseAlarms)
+      ) {
+        continue;
+      }
+      const entry = levels.get(level) ?? {
+        ongoing: [],
+        cueAccuracy: [],
+        cueHits: [],
+        cueTrials: [],
+        falseAlarms: [],
+        lastSeen: 0,
+      };
+      entry.ongoing.push(ongoing);
+      entry.cueAccuracy.push(cueHits / cueTrials);
+      entry.cueHits.push(cueHits);
+      entry.cueTrials.push(cueTrials);
+      entry.falseAlarms.push(falseAlarms);
+      entry.lastSeen = seen;
+      seen += 1;
+      levels.set(level, entry);
+    }
+  }
+  return [...levels.entries()]
+    .sort((a, b) => b[1].lastSeen - a[1].lastSeen)
+    .map(([level, entry]) => {
+      const ongoing = entry.ongoing.slice(-10);
+      const cueAccuracy = entry.cueAccuracy.slice(-10);
+      const cueHits = entry.cueHits.slice(-10);
+      const cueTrials = entry.cueTrials.slice(-10);
+      const falseAlarms = entry.falseAlarms.slice(-10);
+      return {
+        level,
+        blocks: ongoing.length,
+        ongoing,
+        cueAccuracy,
+        falseAlarms,
+        lastOngoing: ongoing[ongoing.length - 1] ?? 0,
+        bestOngoing: Math.max(...ongoing),
+        lastCueAccuracy: cueAccuracy[cueAccuracy.length - 1] ?? 0,
+        bestCueAccuracy: Math.max(...cueAccuracy),
+        lastCueHits: cueHits[cueHits.length - 1] ?? 0,
+        lastCueTrials: cueTrials[cueTrials.length - 1] ?? 0,
+        lastFalseAlarms: falseAlarms[falseAlarms.length - 1] ?? 0,
+        totalFalseAlarms: falseAlarms.reduce((sum, value) => sum + value, 0),
+      };
+    });
+}
+
+function prospectiveLine(entry: ProspectiveLevel): string {
+  return `Prospective memory L${entry.level}: ongoing ${percent(entry.lastOngoing)} · cues ${entry.lastCueHits}/${entry.lastCueTrials} · false alarms ${entry.lastFalseAlarms}`;
+}
+
+function ProspectiveTrendCard({ levels }: { levels: readonly ProspectiveLevel[] }) {
+  return (
+    <section className="card switch-cost-card" data-testid="prospective-trend">
+      <div className="card-top">
+        <div>
+          <p className="eyebrow">Prospective Memory</p>
+          <h2>Ongoing, cue and false-alarm trends by level</h2>
+        </div>
+      </div>
+      <p className="fine">
+        Ongoing accuracy covers non-cue letters; cue accuracy covers the Q Remember trials.
+        False alarms are Remember responses on non-cue letters. Higher accuracy and cue hits are
+        better; lower false alarms are better. Compare blocks only within the same level.
+      </p>
+      <div className="switch-cost-levels">
+        {levels.map((entry) => (
+          <div
+            className="switch-cost-level"
+            data-testid={`prospective-level-${entry.level}`}
+            key={entry.level}
+          >
+            <div className="switch-cost-head">
+              <span className="level-badge">Level {entry.level}</span>
+              <span className="fine">
+                {entry.blocks} {entry.blocks === 1 ? "block" : "blocks"}
+              </span>
+            </div>
+            <p className="fine rotation-metric-label">Ongoing accuracy</p>
+            <SwitchCostTrendLine
+              values={entry.ongoing}
+              level={entry.level}
+              metricLabel="ongoing accuracy"
+              zeroBaseline={false}
+            />
+            <p className="switch-cost-stats" data-testid={`prospective-ongoing-${entry.level}`}>
+              Last <strong>{percent(entry.lastOngoing)}</strong> · Best{" "}
+              <strong>{percent(entry.bestOngoing)}</strong>
+            </p>
+            <p className="fine rotation-metric-label">Cue accuracy</p>
+            <SwitchCostTrendLine
+              values={entry.cueAccuracy}
+              level={entry.level}
+              metricLabel="cue accuracy"
+              zeroBaseline={false}
+            />
+            <p className="switch-cost-stats" data-testid={`prospective-cue-${entry.level}`}>
+              Last <strong>{entry.lastCueHits}/{entry.lastCueTrials}</strong> ·{" "}
+              {percent(entry.lastCueAccuracy)} · Best {percent(entry.bestCueAccuracy)}
+            </p>
+            <p className="fine rotation-metric-label">False alarms</p>
+            <SwitchCostTrendLine
+              values={entry.falseAlarms}
+              level={entry.level}
+              metricLabel="false alarms"
+              zeroBaseline={false}
+            />
+            <p className="switch-cost-stats" data-testid={`prospective-false-alarms-${entry.level}`}>
+              Last <strong>{entry.lastFalseAlarms}</strong> · Total{" "}
+              <strong>{entry.totalFalseAlarms}</strong>
+            </p>
+          </div>
+        ))}
+      </div>
+      <p className="fine">
+        A single block is a baseline, not a trend; these are descriptive practice values, not a
+        diagnosis.
+      </p>
+    </section>
+  );
+}
+
 function TestCard({
   mechanic,
   history,
@@ -549,6 +717,11 @@ function TestCard({
       ? (rotationLevels(history).find((entry) => entry.level === level) ?? null)
       : null;
   const rotationTrendLine = rotationLevel ? rotationLine(rotationLevel) : null;
+  const prospectiveLevel =
+    mechanic === "prospective" && level !== null
+      ? (prospectiveLevels(history).find((entry) => entry.level === level) ?? null)
+      : null;
+  const prospectiveTrendLine = prospectiveLevel ? prospectiveLine(prospectiveLevel) : null;
 
   return (
     <article className="card menu-test-card" data-testid={`menu-test-${mechanic}`}>
@@ -608,6 +781,11 @@ function TestCard({
           {rotationTrendLine}
         </p>
       ) : null}
+      {prospectiveTrendLine ? (
+        <p className="fine menu-prospective-trend" data-testid="menu-prospective-trend">
+          {prospectiveTrendLine}
+        </p>
+      ) : null}
       <div className="hero-actions">
         <Button onClick={() => onStartTest(mechanic)} data-testid={`start-${mechanic}`}>
           Start {meta.name} test
@@ -634,6 +812,7 @@ function HistoryPanel({
   const interferenceLevels = flankerCostLevels(history);
   const spanLevels = spatialSpanLevels(history);
   const rotationTrendLevels = rotationLevels(history);
+  const prospectiveTrendLevels = prospectiveLevels(history);
 
   return (
     <div
@@ -713,6 +892,10 @@ function HistoryPanel({
 
       {rotationTrendLevels.length > 0 ? (
         <RotationTrendCard levels={rotationTrendLevels} />
+      ) : null}
+
+      {prospectiveTrendLevels.length > 0 ? (
+        <ProspectiveTrendCard levels={prospectiveTrendLevels} />
       ) : null}
 
       {history.length === 0 ? (

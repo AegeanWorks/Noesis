@@ -155,7 +155,10 @@ quantitative basis.
 - Keys 1, 2 and 3 work. The cue is event-based and embedded in the ongoing task, not a separate
   reminder.
 - Metrics: overall accuracy, ongoing accuracy, cue trials, cue hits/misses, false alarms,
-  mean response time, timeouts and streaks.
+  mean response time, timeouts and streaks. The Choose-a-test card shows the latest same-level
+  ongoing accuracy, cue hits and false alarms; the result and History cards compare the same
+  three measures only within the same level. Higher accuracy and cue hits are better; lower
+  false alarms are better; the first block at a level has no delta.
 - It is available from the Menu as a three-block focus test. It is not in the default lineup.
 - **Evidence:** Tse et al. 2023 (PMID 35543836; *Neuropsychology Review*) reviewed 48 studies
   and meta-analysed 29 RCTs. Prospective-memory training produced a moderate immediate effect

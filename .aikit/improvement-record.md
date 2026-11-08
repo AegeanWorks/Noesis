@@ -1451,3 +1451,48 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 395 Vitest; `npm run ai:verify` — 900/900;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's resume proof and record.
+
+## Cycle 32 — Level-aware Prospective Memory trends and same-level result delta
+
+- **Area**: Prospective Memory history and result readability.
+- **FIND**: Prospective Memory had per-block summaries only. Choose and History had no
+  aggregated view of ongoing accuracy, cue hits or false alarms, and the result card did not
+  compare the block with the previous block at the same level.
+- **IMPLEMENT**: `prospectiveLevels` groups ongoing accuracy, cue accuracy, cue hits and false
+  alarms per level. `ProspectiveTrendCard` shows three separate trend lines per level with
+  last/best ongoing accuracy, last cue hits/accuracy, and last/total false alarms. The Choose
+  card shows `Prospective memory L{level}: ongoing N% · cues N/N · false alarms N`. The result
+  card adds a same-level comparison covering ongoing accuracy, cue hits and false alarms with a
+  composite direction. Three menu tests and four result tests cover the empty, first, improved,
+  worsened and no-change cases.
+- **PROOF (screenshots)**: seeded Prospective Memory results at levels 1-3, 390x844@2x:
+  - before Choose: `%TEMP%\opencode\noesis-prospective-trend-before\before-00-choose-tests.png`
+    SHA-256 `495B80F8F407996F84D880D3FE027E2F1741FBD8C4E0F5669D0817C001B6B4F6`
+    (no line)
+  - before History: `before-01-history-seeded.png` SHA-256
+    `BEB13DC5AA187BD71FD5463AD1FE5658B91065F7EB06BF1135A3A1E22C2CBCC6`
+    (no card)
+  - before result: `before-04-prospective-results.png` SHA-256
+    `DDA56C6A4521ACEA55A8BDCF53FEDC13CBE513F9BE4D6F26F9103E8349E3DEE6`
+  - after Choose: `after-00-choose-tests.png` SHA-256
+    `A49F212E77746C46C8580BD5EEE39A6A6E8D4509D249E45BE0FE1556A4768A34`
+    (`Prospective memory L3: ongoing 100% · cues 4/4 · false alarms 0`)
+  - after History: `after-01-history-seeded.png` SHA-256
+    `0D4AA178C88411ED5960D8A3FA1B338725A4E1EE7641799E6674F9B7A3B1574A`
+  - after result: `after-04-prospective-results.png` SHA-256
+    `5AED2FE1C9F7AB8A1B6BB682E5326A2345821C86C3724843D52D71A028F9E516`
+- **PROOF (played run)**: `scripts/prospective-trend-proof.mjs` played a real level-2 session
+  with ongoing accuracy `[1,1,1]`, cue hits `[4,4,4]` and false alarms `[0,0,0]`. Deltas:
+  - block 1: `Improved vs previous Level 2 block: ongoing 90% → 100% (+10 pp), cues 3/4 → 4/4, false alarms 1 → 0.`
+  - blocks 2-3: `No change ...`
+  Level 2 updated to 5 blocks with last ongoing 100%, cues 4/4, last false alarms 0 and total 2,
+  and moved to the top. Choose read
+  `Prospective memory L2: ongoing 100% · cues 4/4 · false alarms 0`.
+  Screenshots: `after-02-history-after-play.png` SHA-256
+  `05EEFFCAA379BA5AAF27D4FA61302EC4E9336552A711B42E2285AD6146EC99CB` and
+  `after-03-choose-tests-after-play.png` SHA-256
+  `60FC0028FAEF660C5F51C8274F911FDF9E9CC68640ED3E6FFB9E467CD786258E`;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 402 Vitest; `npm run ai:verify` — 900/900;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's trends, result delta, tests, proof and record.

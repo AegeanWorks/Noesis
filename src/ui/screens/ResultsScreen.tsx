@@ -303,6 +303,105 @@ function responseTimeChange(
   };
 }
 
+interface ProspectiveSnapshot {
+  ongoing: number;
+  cueHits: number;
+  cueTrials: number;
+  falseAlarms: number;
+}
+
+interface ProspectiveComparison {
+  previous: ProspectiveSnapshot;
+  current: ProspectiveSnapshot;
+}
+
+function prospectiveComparisons(
+  history: readonly SessionRecord[],
+  sessionId: string | null,
+  results: readonly MechanicResult[],
+): Array<ProspectiveComparison | null> {
+  const previousByLevel = new Map<number, ProspectiveSnapshot>();
+  for (const record of [...history].reverse()) {
+    if (record.id === sessionId) continue;
+    for (const result of record.results) {
+      if (result.mechanic !== "prospective") continue;
+      const level = result.difficulty;
+      const snapshot = prospectiveSnapshot(result);
+      if (typeof level === "number" && snapshot) previousByLevel.set(level, snapshot);
+    }
+  }
+  return results.map((result) => {
+    if (result.mechanic !== "prospective") return null;
+    const level = result.difficulty;
+    const snapshot = prospectiveSnapshot(result);
+    if (typeof level !== "number" || !snapshot) return null;
+    const previous = previousByLevel.get(level);
+    previousByLevel.set(level, snapshot);
+    return previous ? { previous, current: snapshot } : null;
+  });
+}
+
+function prospectiveSnapshot(result: MechanicResult): ProspectiveSnapshot | null {
+  const ongoing = result.metrics.ongoing_accuracy;
+  const cueHits = result.metrics.cue_hits;
+  const cueTrials = result.metrics.cue_trials;
+  const falseAlarms = result.metrics.false_alarms;
+  if (
+    typeof ongoing !== "number" ||
+    !Number.isFinite(ongoing) ||
+    typeof cueHits !== "number" ||
+    !Number.isFinite(cueHits) ||
+    typeof cueTrials !== "number" ||
+    cueTrials <= 0 ||
+    typeof falseAlarms !== "number" ||
+    !Number.isFinite(falseAlarms)
+  ) {
+    return null;
+  }
+  return { ongoing, cueHits, cueTrials, falseAlarms };
+}
+
+function prospectiveChange(
+  comparison: ProspectiveComparison | null,
+  level: number | undefined,
+): { direction: string; text: string } {
+  if (comparison === null) {
+    return {
+      direction: "first",
+      text:
+        typeof level === "number"
+          ? "First block at this level; no earlier Prospective Memory comparison."
+          : "No earlier Prospective Memory comparison.",
+    };
+  }
+  const { previous, current } = comparison;
+  const ongoingDelta = Math.round((current.ongoing - previous.ongoing) * 100);
+  const cueDelta = current.cueHits - previous.cueHits;
+  const alarmDelta = current.falseAlarms - previous.falseAlarms;
+  const direction =
+    ongoingDelta > 0
+      ? "improved"
+      : ongoingDelta < 0
+        ? "worsened"
+        : cueDelta > 0 || alarmDelta < 0
+          ? "improved"
+          : cueDelta < 0 || alarmDelta > 0
+            ? "worsened"
+            : "same";
+  if (direction === "same") {
+    return {
+      direction,
+      text: `No change vs previous Level ${level} block: ongoing ${Math.round(current.ongoing * 100)}%, cues ${current.cueHits}/${current.cueTrials}, false alarms ${current.falseAlarms}.`,
+    };
+  }
+  const deltaText = ongoingDelta > 0 ? `+${ongoingDelta}` : `${ongoingDelta}`;
+  const prefix = direction === "improved" ? "Improved" : "Worsened";
+  return {
+    direction,
+    text: `${prefix} vs previous Level ${level} block: ongoing ${Math.round(previous.ongoing * 100)}% → ${Math.round(current.ongoing * 100)}% (${deltaText} pp), cues ${previous.cueHits}/${previous.cueTrials} → ${current.cueHits}/${current.cueTrials}, false alarms ${previous.falseAlarms} → ${current.falseAlarms}.`,
+  };
+}
+
 function ResultCard({
   result,
   index,
@@ -312,6 +411,7 @@ function ResultCard({
   spanComparison,
   rotationAccuracyComparison,
   rotationResponseComparison,
+  prospectiveComparison,
 }: {
   result: MechanicResult;
   index: number;
@@ -321,6 +421,7 @@ function ResultCard({
   spanComparison: SwitchCostComparison | null;
   rotationAccuracyComparison: SwitchCostComparison | null;
   rotationResponseComparison: SwitchCostComparison | null;
+  prospectiveComparison: ProspectiveComparison | null;
 }) {
   const meta = mechanicMeta(result.mechanic);
   const primaryKeys = PRIMARY_METRICS[result.mechanic].filter(
@@ -355,6 +456,10 @@ function ResultCard({
     rotationResponseComparison,
     result.difficulty,
     result.metrics.mean_response_ms,
+  );
+  const prospective = prospectiveChange(
+    prospectiveComparison,
+    result.difficulty,
   );
 
   return (
@@ -430,6 +535,15 @@ function ResultCard({
           </p>
         </>
       ) : null}
+      {result.mechanic === "prospective" ? (
+        <p
+          className={`fine switch-cost-change switch-cost-change-${prospective.direction}`}
+          data-testid={`prospective-vs-previous-${index}`}
+          data-direction={prospective.direction}
+        >
+          {prospective.text}
+        </p>
+      ) : null}
       {isNewBest ? (
         <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
           New personal best
@@ -486,6 +600,7 @@ export function ResultsScreen({
     "rotation",
     "mean_response_ms",
   );
+  const prospectiveComparisonsByIndex = prospectiveComparisons(history, sessionId, results);
 
   return (
     <section className="screen results-screen">
@@ -511,6 +626,7 @@ export function ResultsScreen({
               spanComparison={spanComparisonsByIndex[index] ?? null}
               rotationAccuracyComparison={rotationAccuracyComparisons[index] ?? null}
               rotationResponseComparison={rotationResponseComparisons[index] ?? null}
+              prospectiveComparison={prospectiveComparisonsByIndex[index] ?? null}
             />
           ))}
         </div>

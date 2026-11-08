@@ -138,6 +138,37 @@ function rotationRecord(
   };
 }
 
+function prospectiveRecord(
+  level: number,
+  blocks: readonly (readonly [number, number, number, number])[],
+  id: string,
+  finishedAt: string,
+): SessionRecord {
+  return {
+    id,
+    finishedAt,
+    seed: 42,
+    results: blocks.map(([ongoing, cueHits, cueTrials, falseAlarms], index) => ({
+      mechanic: "prospective",
+      domain: "episodic_memory",
+      trials: 24,
+      durationMs: 60_000,
+      metrics: {
+        accuracy: ongoing,
+        ongoing_accuracy: ongoing,
+        cue_hits: cueHits,
+        cue_trials: cueTrials,
+        cue_accuracy: cueTrials === 0 ? 0 : cueHits / cueTrials,
+        false_alarms: falseAlarms,
+      },
+      summary: `Prospective Memory: ${Math.round(ongoing * 100)}% ongoing accuracy.`,
+      seed: 42,
+      stateHash: `0123456789abcde${index}`,
+      difficulty: level,
+    })),
+  };
+}
+
 function renderMenu(overrides: Partial<ComponentProps<typeof PracticeMenuScreen>> = {}) {
   const props: ComponentProps<typeof PracticeMenuScreen> = {
     history: [],
@@ -437,6 +468,58 @@ describe("PracticeMenuScreen", () => {
     cleanup();
     renderMenu({ history: [record()] });
     expect(screen.queryByTestId("menu-rotation-trend")).toBeNull();
+  });
+
+  it("shows a level-aware Prospective Memory accuracy, cue and false-alarm trend", () => {
+    renderMenu({
+      history: [
+        prospectiveRecord(3, [[1, 4, 4, 0], [1, 4, 4, 0]], "m3", "2026-11-03T10:00:00.000Z"),
+        prospectiveRecord(2, [[0.9, 3, 4, 1], [1, 4, 4, 0]], "m2", "2026-11-02T10:00:00.000Z"),
+        prospectiveRecord(1, [[0.8, 2, 4, 2]], "m1", "2026-11-01T10:00:00.000Z"),
+      ],
+      initialTab: "history",
+    });
+    const card = screen.getByTestId("prospective-trend");
+    expect(card.textContent).toMatch(/ongoing accuracy/i);
+    expect(card.textContent).toMatch(/cue accuracy/i);
+    expect(card.textContent).toMatch(/false alarms/i);
+    const rows = screen.getAllByTestId(/^prospective-level-/);
+    expect(rows.map((row) => row.getAttribute("data-testid"))).toEqual([
+      "prospective-level-3",
+      "prospective-level-2",
+      "prospective-level-1",
+    ]);
+    const level3 = screen.getByTestId("prospective-level-3");
+    expect(level3.textContent).toMatch(/Last 100%/);
+    expect(level3.textContent).toMatch(/Last 4\/4/);
+    expect(level3.textContent).toMatch(/Last 0/);
+    expect(level3.textContent).toMatch(/Total 0/);
+    expect(level3.textContent).not.toMatch(/Last 2\/4/);
+    const level2 = screen.getByTestId("prospective-level-2");
+    expect(level2.textContent).toMatch(/Last 100%/);
+    expect(level2.textContent).toMatch(/Last 4\/4/);
+    expect(level2.textContent).toMatch(/Total 1/);
+    expect(screen.getByTestId("prospective-level-1").textContent).toMatch(/Last 2\/4/);
+  });
+
+  it("shows the latest same-level Prospective Memory values on its card", () => {
+    renderMenu({
+      history: [
+        prospectiveRecord(2, [[0.9, 3, 4, 1], [1, 4, 4, 0]], "m2", "2026-11-08T10:00:00.000Z"),
+        prospectiveRecord(3, [[1, 4, 4, 0], [1, 4, 4, 0]], "m3", "2026-11-07T10:00:00.000Z"),
+      ],
+    });
+    expect(screen.getByTestId("menu-prospective-trend").textContent).toBe(
+      "Prospective memory L2: ongoing 100% · cues 4/4 · false alarms 0",
+    );
+  });
+
+  it("omits the Prospective Memory trend when there are no blocks", () => {
+    renderMenu({ history: [record()], initialTab: "history" });
+    expect(screen.queryByTestId("prospective-trend")).toBeNull();
+    cleanup();
+    renderMenu({ history: [record()] });
+    expect(screen.queryByTestId("menu-prospective-trend")).toBeNull();
   });
 
   it("switches between choosing a test and viewing history", () => {
