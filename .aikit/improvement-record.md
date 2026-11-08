@@ -1765,3 +1765,61 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 433 Vitest; `npm run ai:verify` — 1,100/1,100;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's change engine, UI, evidence docs, tests, proof and record.
+
+## Cycle 41 — Change Detection resume proof and level-aware trends
+
+- **Area**: Change Detection persistence, history readability and same-level result comparison.
+- **FIND**: The new Change Detection task had only a storage round-trip test, and neither the
+  Choose card nor History aggregated accuracy, set size or response time. The result card did
+  not compare a block with the previous block at the same level.
+- **IMPLEMENT**: `scripts/change-resume-proof.mjs` plays three trials, stops on the next 8 s
+  test window, waits for the snapshot, reloads, resumes and completes three level-2 blocks.
+  `changeLevels` groups accuracy and mean response time per level and carries the set size;
+  `ChangeTrendCard` renders `change-trend`, `change-level-{n}`, `change-accuracy-{n}`,
+  `change-set-size-{n}` and `change-rt-{n}`. The Choose card shows
+  `Change detection L{n}: last N% accuracy · set N · RT N ms · best N%`. The result card adds
+  same-level accuracy and response-time deltas with `change-accuracy-vs-previous-{index}` and
+  `change-rt-vs-previous-{index}`.
+- **PROOF (resume)**: fixed seed `2721744568`, adaptive change level 2. Mid, stored and resumed
+  were identical: `block 0/3 · change · difficulty [2,2,2] · trial 3 · test`, header
+  `Block 1 of 3 · Level 2`; CTA `Resume session`; completed three level-2 blocks at 100%
+  accuracy, 12/12 correct, set size 5, mean response 540/400/400 ms; `consoleErrors []`.
+  Screenshots: `%TEMP%\opencode\noesis-change-resume\01-change-mid-session.png` SHA-256
+  `B6B5C3CB93B9F9973B8067A7E406E9CAE235EEBB6E0E4557A8F306EC347DDAD1`;
+  `02-home-after-reload.png` SHA-256
+  `38AD72B4FEF961839E697AA9592297CE37D5DCF37C6B94E84D14B37E03BDD7CE`;
+  `03-change-resumed.png` SHA-256
+  `C3D25220535CF524F946F1F2DED8420F30C799226D63EC0DE68EA62590011333`;
+  `04-change-results.png` SHA-256
+  `2749AFE4D168F5B541D3046D29E59810784E76077ECCFB9548E39CD81ACBDE5B`.
+- **PROOF (trend)**: seeded Change Detection results at levels 1-3, 390x844@2x.
+  - before Choose: `%TEMP%\opencode\noesis-change-trend-before\before-00-choose-tests.png`
+    SHA-256 `F1FC3B3194C16F76D237100C9249976156B01247986769F8B74C72E8F773090F` (no line)
+  - before History: `before-01-history-seeded.png` SHA-256
+    `70EF707BB3E786B7B62862235DEB292A87B45C6B16C1FF5C5AC241FDAB15245E` (no card)
+  - before result: `before-04-change-results.png` SHA-256
+    `8FB36712AB7F2239772BB370EAFA4A1103B4AA0FA942C33C0C127A2AE7B226C2` (no delta)
+  - after Choose: `after-00-choose-tests.png` SHA-256
+    `DCA316D641FDBA925EB4EF4983861A926D656A14345897E287EF680D5FFAE695`
+    (`Change detection L3: last 100% accuracy · set 6 · RT 400 ms · best 100%`)
+  - after History: `after-01-history-seeded.png` SHA-256
+    `FF4A367A3566477F6C63DD8DC12D148F9CD286B01FBA61CE422D57B1C039888C`
+    (Level 3 100%/set 6/400 ms, Level 2 90%/set 5/500 ms, Level 1 70%/set 4/700 ms)
+  - after result: `after-04-change-results.png` SHA-256
+    `99AA3BD2C50139508AB8D0D97EE7BCBD66B200B52B4FFB659738A5F5CEE93E50`
+- **PROOF (played run)**: `scripts/change-trend-proof.mjs` played a real level-2 session with
+  accuracy `[1,1,1]`, set sizes `[5,5,5]` and mean response `[416,400,400]` ms. Deltas:
+  - block 1: accuracy improved +10 pp (90% → 100%); response improved 84 ms faster (500 → 416 ms)
+  - block 2: accuracy unchanged; response improved 16 ms faster (416 → 400 ms)
+  - block 3: accuracy and response unchanged
+  Level 2 updated to 5 blocks with last accuracy 100%, set size 5, last response 400 ms and mean
+  463 ms, and moved to the top. Choose read
+  `Change detection L2: last 100% accuracy · set 5 · RT 400 ms · best 100%`.
+  Screenshots: `after-02-history-after-play.png` SHA-256
+  `9590712AC5CEAC4B171480626E052F11D1D8A3B35921ED7B2EB06F96B3497790` and
+  `after-03-choose-tests-after-play.png` SHA-256
+  `C6B3F4C3528EB5407A57971F6342C7AC5A2C28D48FDCEEEEFA64849093E7EB4C`;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 440 Vitest; `npm run ai:verify` — 1,100/1,100;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's resume proof, trends, result deltas, tests, proofs and record.

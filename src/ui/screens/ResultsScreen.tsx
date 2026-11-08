@@ -419,6 +419,8 @@ function ResultCard({
   prospectiveComparison,
   pairedAccuracyComparison,
   pairedResponseComparison,
+  changeAccuracyComparison,
+  changeResponseComparison,
 }: {
   result: MechanicResult;
   index: number;
@@ -432,6 +434,8 @@ function ResultCard({
   prospectiveComparison: ProspectiveComparison | null;
   pairedAccuracyComparison: SwitchCostComparison | null;
   pairedResponseComparison: SwitchCostComparison | null;
+  changeAccuracyComparison: SwitchCostComparison | null;
+  changeResponseComparison: SwitchCostComparison | null;
 }) {
   const meta = mechanicMeta(result.mechanic);
   const primaryKeys = PRIMARY_METRICS[result.mechanic].filter(
@@ -478,6 +482,16 @@ function ResultCard({
   );
   const pairedResponse = responseTimeChange(
     pairedResponseComparison,
+    result.difficulty,
+    result.metrics.mean_response_ms,
+  );
+  const changeAccuracy = accuracyChange(
+    changeAccuracyComparison,
+    result.difficulty,
+    result.metrics.accuracy,
+  );
+  const changeResponse = responseTimeChange(
+    changeResponseComparison,
     result.difficulty,
     result.metrics.mean_response_ms,
   );
@@ -589,6 +603,24 @@ function ResultCard({
           </p>
         </>
       ) : null}
+      {result.mechanic === "change" ? (
+        <>
+          <p
+            className={`fine switch-cost-change switch-cost-change-${changeAccuracy.direction}`}
+            data-testid={`change-accuracy-vs-previous-${index}`}
+            data-direction={changeAccuracy.direction}
+          >
+            {changeAccuracy.text}
+          </p>
+          <p
+            className={`fine switch-cost-change switch-cost-change-${changeResponse.direction}`}
+            data-testid={`change-rt-vs-previous-${index}`}
+            data-direction={changeResponse.direction}
+          >
+            {changeResponse.text}
+          </p>
+        </>
+      ) : null}
       {isNewBest ? (
         <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
           New personal best
@@ -661,6 +693,20 @@ export function ResultsScreen({
     "paired",
     "mean_response_ms",
   );
+  const changeAccuracyComparisons = costComparisons(
+    history,
+    sessionId,
+    results,
+    "change",
+    "accuracy",
+  );
+  const changeResponseComparisons = costComparisons(
+    history,
+    sessionId,
+    results,
+    "change",
+    "mean_response_ms",
+  );
 
   return (
     <section className="screen results-screen">
@@ -690,6 +736,8 @@ export function ResultsScreen({
               prospectiveComparison={prospectiveComparisonsByIndex[index] ?? null}
               pairedAccuracyComparison={pairedAccuracyComparisons[index] ?? null}
               pairedResponseComparison={pairedResponseComparisons[index] ?? null}
+              changeAccuracyComparison={changeAccuracyComparisons[index] ?? null}
+              changeResponseComparison={changeResponseComparisons[index] ?? null}
             />
           ))}
         </div>

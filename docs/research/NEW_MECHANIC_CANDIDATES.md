@@ -194,7 +194,10 @@ quantitative basis.
 - A brief array of coloured squares appears, followed by a blank delay and the same array with
   one square changed. The user taps the changed square.
 - Keys 1-9 work. Set size is 4/5/6 by level; study time shortens with level.
-- Metrics: accuracy, set size, mean response time, timeouts and streaks.
+- Metrics: accuracy, set size, mean response time, timeouts and streaks. The Choose-a-test card
+  shows the latest same-level accuracy, set size and response time; the result and History cards
+  compare accuracy and response time only within the same level. Higher accuracy and lower
+  response time are better; the first block at a level has no delta.
 - It is available from the Menu as a three-block focus test. It is not in the default lineup.
 - **Evidence limit:** the targeted search found no eligible change-detection training
   meta-analysis. The broader working-memory and executive-function training meta-analyses

@@ -218,6 +218,30 @@ function confidenceRecord(
   };
 }
 
+function changeRecord(
+  level: number,
+  blocks: readonly (readonly [number, number, number])[],
+  id: string,
+  finishedAt: string,
+): SessionRecord {
+  return {
+    id,
+    finishedAt,
+    seed: 42,
+    results: blocks.map(([accuracy, setSize, responseMs], index) => ({
+      mechanic: "change",
+      domain: "working_memory",
+      trials: 12,
+      durationMs: 60_000,
+      metrics: { accuracy, set_size: setSize, mean_response_ms: responseMs },
+      summary: `Change Detection: ${Math.round(accuracy * 100)}% accuracy.`,
+      seed: 42,
+      stateHash: `0123456789abcde${index}`,
+      difficulty: level,
+    })),
+  };
+}
+
 function renderMenu(overrides: Partial<ComponentProps<typeof PracticeMenuScreen>> = {}) {
   const props: ComponentProps<typeof PracticeMenuScreen> = {
     history: [],
@@ -646,6 +670,56 @@ describe("PracticeMenuScreen", () => {
   it("omits the confidence summary when no result has a confidence value", () => {
     renderMenu({ history: [record()], initialTab: "history" });
     expect(screen.queryByTestId("confidence-summary")).toBeNull();
+  });
+
+  it("shows a level-aware Change Detection accuracy, set-size and response-time trend", () => {
+    renderMenu({
+      history: [
+        changeRecord(3, [[0.9, 6, 500], [1, 6, 400]], "h3", "2026-11-03T10:00:00.000Z"),
+        changeRecord(2, [[0.8, 5, 600], [0.9, 5, 500]], "h2", "2026-11-02T10:00:00.000Z"),
+        changeRecord(1, [[0.7, 4, 700]], "h1", "2026-11-01T10:00:00.000Z"),
+      ],
+      initialTab: "history",
+    });
+    expect(screen.getByTestId("change-trend")).toBeTruthy();
+    const rows = screen.getAllByTestId(/^change-level-/);
+    expect(rows.map((row) => row.getAttribute("data-testid"))).toEqual([
+      "change-level-3",
+      "change-level-2",
+      "change-level-1",
+    ]);
+    const level3 = screen.getByTestId("change-level-3");
+    expect(level3.textContent).toMatch(/Last 100%/);
+    expect(level3.textContent).toMatch(/Best 100%/);
+    expect(level3.textContent).toMatch(/Set size 6/);
+    expect(level3.textContent).toMatch(/Last 400 ms/);
+    expect(level3.textContent).toMatch(/Mean 450 ms/);
+    expect(level3.textContent).not.toMatch(/70%/);
+    const level2 = screen.getByTestId("change-level-2");
+    expect(level2.textContent).toMatch(/Last 90%/);
+    expect(level2.textContent).toMatch(/Set size 5/);
+    expect(level2.textContent).toMatch(/Last 500 ms/);
+    expect(screen.getByTestId("change-level-1").textContent).toMatch(/Set size 4/);
+  });
+
+  it("shows the latest same-level values on the Change Detection card", () => {
+    renderMenu({
+      history: [
+        changeRecord(2, [[0.8, 5, 600], [0.9, 5, 500]], "h2", "2026-11-08T10:00:00.000Z"),
+        changeRecord(3, [[0.9, 6, 500], [1, 6, 400]], "h3", "2026-11-07T10:00:00.000Z"),
+      ],
+    });
+    expect(screen.getByTestId("menu-change-trend").textContent).toBe(
+      "Change detection L2: last 90% accuracy · set 5 · RT 500 ms · best 90%",
+    );
+  });
+
+  it("omits the Change Detection trend when there are no blocks", () => {
+    renderMenu({ history: [record()], initialTab: "history" });
+    expect(screen.queryByTestId("change-trend")).toBeNull();
+    cleanup();
+    renderMenu({ history: [record()] });
+    expect(screen.queryByTestId("menu-change-trend")).toBeNull();
   });
 
   it("switches between choosing a test and viewing history", () => {

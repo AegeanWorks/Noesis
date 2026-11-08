@@ -405,7 +405,7 @@ interface DualMetricLevel {
 
 function dualMetricLevels(
   history: readonly SessionRecord[],
-  mechanic: "rotation" | "paired",
+  mechanic: "rotation" | "paired" | "change",
 ): DualMetricLevel[] {
   const levels = new Map<
     number,
@@ -566,6 +566,99 @@ function PairedTrendCard({ levels }: { levels: readonly DualMetricLevel[] }) {
       title="Accuracy and response time by level"
       description="Accuracy is the share of correctly retrieved word partners. Response time is the block mean. Higher accuracy and lower response time are better; compare blocks only within the same level."
     />
+  );
+}
+
+interface ChangeLevel extends DualMetricLevel {
+  setSize: number;
+}
+
+function changeLevels(history: readonly SessionRecord[]): ChangeLevel[] {
+  const setSizes = new Map<number, number>();
+  for (const record of [...history].reverse()) {
+    for (const result of record.results) {
+      if (result.mechanic !== "change") continue;
+      const level = result.difficulty;
+      const setSize = result.metrics.set_size;
+      if (typeof level === "number" && typeof setSize === "number" && Number.isFinite(setSize)) {
+        setSizes.set(level, Math.round(setSize));
+      }
+    }
+  }
+  return dualMetricLevels(history, "change").map((entry) => ({
+    ...entry,
+    setSize: setSizes.get(entry.level) ?? 0,
+  }));
+}
+
+function changeLine(entry: ChangeLevel): string {
+  return `Change detection L${entry.level}: last ${percent(
+    entry.lastAccuracy,
+  )} accuracy · set ${entry.setSize} · RT ${Math.round(entry.lastResponse)} ms · best ${percent(
+    entry.bestAccuracy,
+  )}`;
+}
+
+function ChangeTrendCard({ levels }: { levels: readonly ChangeLevel[] }) {
+  return (
+    <section className="card switch-cost-card" data-testid="change-trend">
+      <div className="card-top">
+        <div>
+          <p className="eyebrow">Change Detection</p>
+          <h2>Accuracy, set size and response time by level</h2>
+        </div>
+      </div>
+      <p className="fine">
+        Accuracy is the share of correctly identified changed squares. Set size is the number of
+        squares held in the array. Response time is the block mean. Higher accuracy and lower
+        response time are better; compare blocks only within the same level.
+      </p>
+      <div className="switch-cost-levels">
+        {levels.map((entry) => (
+          <div
+            className="switch-cost-level"
+            data-testid={`change-level-${entry.level}`}
+            key={entry.level}
+          >
+            <div className="switch-cost-head">
+              <span className="level-badge">Level {entry.level}</span>
+              <span className="fine">
+                {entry.accuracies.length} {entry.accuracies.length === 1 ? "block" : "blocks"}
+              </span>
+            </div>
+            <p className="fine rotation-metric-label">Accuracy</p>
+            <SwitchCostTrendLine
+              values={entry.accuracies}
+              level={entry.level}
+              metricLabel="accuracy"
+              zeroBaseline={false}
+            />
+            <p className="switch-cost-stats" data-testid={`change-accuracy-${entry.level}`}>
+              Last <strong>{percent(entry.lastAccuracy)}</strong> · Best{" "}
+              <strong>{percent(entry.bestAccuracy)}</strong>
+            </p>
+            <p className="switch-cost-stats" data-testid={`change-set-size-${entry.level}`}>
+              Set size <strong>{entry.setSize}</strong>
+            </p>
+            <p className="fine rotation-metric-label">Response time</p>
+            <SwitchCostTrendLine
+              values={entry.responseTimes}
+              level={entry.level}
+              metricLabel="mean response time"
+              zeroBaseline={false}
+            />
+            <p className="switch-cost-stats" data-testid={`change-rt-${entry.level}`}>
+              Last <strong>{Math.round(entry.lastResponse)} ms</strong> · Mean{" "}
+              <strong>{entry.meanResponse} ms</strong>
+            </p>
+          </div>
+        ))}
+      </div>
+      <p className="fine">
+        A single block is a baseline, not a trend; these are descriptive practice values, not a
+        diagnosis.
+      </p>
+    </section>
   );
 }
 
@@ -777,6 +870,11 @@ function TestCard({
       ? (pairedLevels(history).find((entry) => entry.level === level) ?? null)
       : null;
   const pairedTrendLine = pairedLevel ? pairedLine(pairedLevel) : null;
+  const changeLevel =
+    mechanic === "change" && level !== null
+      ? (changeLevels(history).find((entry) => entry.level === level) ?? null)
+      : null;
+  const changeTrendLine = changeLevel ? changeLine(changeLevel) : null;
   const prospectiveLevel =
     mechanic === "prospective" && level !== null
       ? (prospectiveLevels(history).find((entry) => entry.level === level) ?? null)
@@ -844,6 +942,11 @@ function TestCard({
       {pairedTrendLine ? (
         <p className="fine menu-paired-trend" data-testid="menu-paired-trend">
           {pairedTrendLine}
+        </p>
+      ) : null}
+      {changeTrendLine ? (
+        <p className="fine menu-change-trend" data-testid="menu-change-trend">
+          {changeTrendLine}
         </p>
       ) : null}
       {prospectiveTrendLine ? (
@@ -973,6 +1076,7 @@ function HistoryPanel({
   const spanLevels = spatialSpanLevels(history);
   const rotationTrendLevels = rotationLevels(history);
   const pairedTrendLevels = pairedLevels(history);
+  const changeTrendLevels = changeLevels(history);
   const confidenceRows = confidenceSummary(history);
   const prospectiveTrendLevels = prospectiveLevels(history);
 
@@ -1057,6 +1161,8 @@ function HistoryPanel({
       ) : null}
 
       {pairedTrendLevels.length > 0 ? <PairedTrendCard levels={pairedTrendLevels} /> : null}
+
+      {changeTrendLevels.length > 0 ? <ChangeTrendCard levels={changeTrendLevels} /> : null}
 
       {confidenceRows.length > 0 ? <ConfidenceSummary rows={confidenceRows} /> : null}
 
