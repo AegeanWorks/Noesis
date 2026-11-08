@@ -35,6 +35,14 @@ describe("go / no-go", () => {
     expect(result.metrics.current_streak).toBe(30);
   });
 
+  it("reports signal-detection sensitivity for Go / No-Go", () => {
+    const optimal = gonogoResult(drive(31, "optimal").state);
+    expect(optimal.metrics.d_prime).toBeGreaterThan(3);
+    expect(optimal.metrics.d_prime).toBeLessThanOrEqual(5);
+    const never = gonogoResult(drive(32, "never").state);
+    expect(never.metrics.d_prime).toBeLessThan(1);
+  });
+
   it("scores a no-response run", () => {
     const run = drive(32, "never");
     const result = gonogoResult(run.state);

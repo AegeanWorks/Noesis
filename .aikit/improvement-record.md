@@ -1937,3 +1937,34 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 446 Vitest; `npm run ai:verify` — 1,100/1,100;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's filter, tests, scope note, proof and record.
+
+## Cycle 45 — Go/No-Go d′ measurement and training-evidence scope decision
+
+- **Area**: literature scope decision plus signal-detection measurement.
+- **FIND**: Targeted Go/No-Go and processing-speed training searches found no eligible
+  task-specific cognitive-training meta-analysis. Go/No-Go training records concern appetitive
+  behaviour change rather than cognitive transfer; the existing inhibitory-control network
+  meta-analysis (PMID 40398202) remains the basis. Processing-speed evidence is covered by the
+  broad cognitive-training meta-analysis (PMID 32011155), and Speed Tap is not UFOV. The Go/No-Go
+  engine already records hits, misses, commissions and correct rejections, but reported only raw
+  accuracy and impulse errors; it had no bias-corrected sensitivity measure.
+- **DECISION**: No new Go/No-Go or processing-speed mechanic or claim (ADR-059). Add d′
+  (log-linear-corrected hit rate minus false-alarm rate) to Go/No-Go metrics and show it as a
+  primary result metric, with a note explaining response bias and the descriptive boundary.
+- **IMPLEMENT**: `dPrime` import in `gonogo.ts`; `d_prime` in the metrics; `d_prime` added to the
+  Go/No-Go primary metrics; `gonogo-dprime-note` on the result card; CSS. Failing-first tests
+  cover the engine metric and the result tile/note.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before result: `%TEMP%\opencode\noesis-gonogo-dprime-before\before-01-results.png` SHA-256
+    `546AB663B75F066980107D87268310D48A50E37DC05BA13051F367159D6E704A`
+    (no Sensitivity tile or note; `d_prime` null)
+  - after result: `%TEMP%\opencode\noesis-gonogo-dprime-after\after-01-results.png` SHA-256
+    `5A31711587F9CB70E80939168F04BA77DA0D8BD737E68FB36218D2A71420D8D4`
+    (Sensitivity 3.74 and the response-bias note)
+- **PROOF (played run)**: `scripts/gonogo-dprime-proof.mjs` played a real three-block level-2
+  Go/No-Go focus session with a few deliberate No-Go commissions. Sensitivities were
+  3.744 / 3.151 / 3.744, with commissions 0 / 1 / 0; the note text was present on every card;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 449 Vitest; `npm run ai:verify` — 1,100/1,100;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's d′ metric, note, tests, scope note, proof and record.

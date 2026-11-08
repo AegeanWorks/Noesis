@@ -2127,3 +2127,10 @@ html.high-contrast .speed-ring-active {
   border-color: var(--accent);
 }
 
+
+.gonogo-dprime-note {
+  margin: 4px 0 8px;
+  padding-left: 10px;
+  border-left: 3px solid rgba(139, 233, 253, 0.45);
+}
+

@@ -418,6 +418,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Do not add complex-span or vigilance mechanics. Add a domain filter to the Choose-a-test page with an All tests option and the seven mechanic domains. The filter changes presentation only and does not alter scoring, recommendations or claims; it supports the existing explicit-choice design (R54).
 - **Consequences**: No new mechanic or evidence-table record is added; the review remains at 124 records and 286 outcomes. The filter is covered by failing-first UI tests, before/after screenshots and a played run that starts Change Detection from the filtered view.
 
+### ADR-059: Go/No-Go reports d′; no new Go/No-Go or processing-speed mechanic
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: Targeted Go/No-Go and processing-speed training searches found no eligible task-specific cognitive-training meta-analyses. The Go/No-Go training literature is behaviour-change focused; the broad processing-speed evidence is already covered by PMID 32011155, and Speed Tap is explicitly not UFOV. The Go/No-Go engine already records hits, misses, commissions and correct rejections, so a signal-detection sensitivity measure is available without changing the trials.
+- **Decision**: Add d′ (log-linear-corrected hit rate minus false-alarm rate) to Go/No-Go metrics and show it as a primary result metric alongside accuracy and impulse errors. Add a result note explaining that d′ corrects for the tendency to respond or withhold, that higher is better, and that it is descriptive rather than diagnostic. No new mechanic and no processing-speed claim.
+- **Consequences**: The Go/No-Go result card gains a bias-corrected sensitivity tile and note. No evidence-table record or review count changes; engine and UI tests cover the metric and the note.
+
 
 
 

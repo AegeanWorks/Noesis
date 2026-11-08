@@ -81,7 +81,7 @@ const METRIC_LABELS: Record<string, string> = {
 
 const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
   nback: ["accuracy", "mean_hit_reaction_ms", "max_streak"],
-  gonogo: ["accuracy", "commissions", "mean_go_reaction_ms"],
+  gonogo: ["accuracy", "d_prime", "commissions"],
   reasoning: ["accuracy", "mean_response_ms", "timed_out"],
   speed: ["accuracy", "median_reaction_ms", "lapses"],
   switching: ["accuracy", "switch_cost_ms", "switch_accuracy"],
@@ -515,6 +515,13 @@ function ResultCard({
           Confidence: {confidence[0]?.toUpperCase()}
           {confidence.slice(1)}. This is an optional reflection, not scored and not a diagnostic
           calibration. Confidence is often only a weak predictor of accuracy.
+        </p>
+      ) : null}
+      {result.mechanic === "gonogo" ? (
+        <p className="fine gonogo-dprime-note" data-testid="gonogo-dprime-note">
+          Sensitivity (d′) = how well you distinguished Go from No-Go after correcting for the
+          tendency to respond or withhold. Higher is better; it is a descriptive within-session
+          measure, not a diagnosis.
         </p>
       ) : null}
       {result.mechanic === "switching" ? (

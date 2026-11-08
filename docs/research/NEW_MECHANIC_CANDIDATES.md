@@ -361,3 +361,18 @@ These decisions are scope decisions, not evidence that the training modes are in
 - **Decision:** no complex-span or vigilance mechanic. Instead, the Choose-a-test page gains a
   domain filter so users can narrow eleven tests by construct. This is a navigational aid under
   the existing explicit-choice design (R54), not a new efficacy claim. Recorded in ADR-058.
+
+### 6.7 Go/No-Go and processing-speed training
+
+- A targeted Go/No-Go training search found no eligible task-specific cognitive-training
+  meta-analysis. The training literature returned by the search concerns appetitive behaviour
+  change, not cognitive transfer, and the app already cites an inhibitory-control network
+  meta-analysis (PMID 40398202) and an ADHD executive-function review (PMID 37450981) for
+  Go/No-Go. No new mechanic or claim.
+- A targeted processing-speed training search found no task-specific meta-analysis; the broad
+  cognitive-training meta-analysis (PMID 32011155) is already in the corpus. Speed Tap remains
+  explicitly not UFOV (section 6.1), so no processing-speed claim is added.
+- **Measurement improvement:** Go/No-Go now reports signal-detection sensitivity (d′), computed
+  from hits, misses, commissions and correct rejections, alongside impulse errors. d′ corrects
+  for the tendency to respond or withhold and is descriptive only. The result card explains this.
+  Recorded in ADR-059.

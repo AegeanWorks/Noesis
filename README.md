@@ -217,7 +217,7 @@ noesis/
 | Mechanic | Domain | Claim level | What it does |
 |---|---|---|---|
 | N-back | Working-memory updating | Supported (near transfer) | Match a letter that equals the one N positions back. |
-| Go / No-Go | Response inhibition | Experimental | Respond to circles, withhold responses to squares. |
+| Go / No-Go | Response inhibition | Experimental | Respond to circles, withhold responses to squares; reports accuracy, sensitivity (d′), impulse errors and reaction time. |
 | Reasoning | Inductive reasoning | Supported (older-adult evidence) | Multiple-choice sequences, analogies and logic items. |
 | Speed Tap | Processing speed | Experimental | Wait for a circle, then tap as fast as possible; reports reaction time, variability and lapses. |
 | Task Switch | Cognitive flexibility | Experimental (focus test) | Alternate between a colour rule and a shape rule; reports accuracy, switch/repeat accuracy and switch cost. |

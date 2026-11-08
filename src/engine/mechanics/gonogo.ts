@@ -1,5 +1,5 @@
 import { stableHash } from "../hash";
-import { clamp, countLabel, currentStreak, longestStreak, mean, rate, round } from "../scoring";
+import { clamp, countLabel, currentStreak, dPrime, longestStreak, mean, rate, round } from "../scoring";
 import { normalizeSeed, sampleIndices } from "../rng";
 import type {
   GoNoGoConfig,
@@ -203,6 +203,7 @@ function computeMetrics(state: GoNoGoState, final: boolean): Record<string, numb
     go_accuracy: rate(hits, goTrials),
     no_go_accuracy: rate(correctRejections, noGoTrials),
     accuracy: rate(hits + correctRejections, seen.length),
+    d_prime: dPrime(hits, goTrials, commissions, noGoTrials),
     mean_go_reaction_ms: meanGoReaction === null ? 0 : round(meanGoReaction, 0),
     current_streak: currentStreak(correct, Boolean),
     max_streak: longestStreak(correct, Boolean),
