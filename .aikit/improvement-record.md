@@ -1331,3 +1331,34 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 384 Vitest; `npm run ai:verify` — 800/800;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's rotation trend, tests, proof script and record.
+
+## Cycle 28 — Same-level accuracy and response-time deltas on the Mental Rotation result card
+
+- **Area**: Mental Rotation result readability, completing the same-level comparison across
+  Choose, History and Results.
+- **FIND**: The result card showed accuracy and mean response time but did not compare them with
+  the previous Mental Rotation block at the same level. The two metrics point in opposite
+  directions, so a single combined delta would be ambiguous.
+- **IMPLEMENT**: `ResultsScreen` reuses `costComparisons` for accuracy and response time and adds
+  `accuracyChange` (percentage points; higher is better) and `responseTimeChange` (ms; lower is
+  better). Each card shows two lines with `data-testid="rotation-accuracy-vs-previous-{index}"`
+  and `rotation-rt-vs-previous-{index}`, each with its own `data-direction`. Levels are never
+  mixed; first-block, unchanged and cross-level cases are covered.
+- **PROOF (screenshots)**: real three-block level-2 Mental Rotation session with seeded prior
+  level-2 90% / 500 ms, 390x844@2x:
+  - before: `%TEMP%\opencode\noesis-rotation-delta-before\before-04-rotation-results.png`
+    SHA-256 `4725E25D83C1EED49F683341B540C2F7FE59A030FB0CBB188CC01DAD3B14F46A`
+    (no result delta)
+  - after: `%TEMP%\opencode\noesis-rotation-delta-after\after-04-rotation-results.png`
+    SHA-256 `ABEDD1B5B04B92B090BD9CBD7967E358D414F60A182DB54EC81E4DC5B6E16018`
+- **PROOF (played run)**: the proof played three level-2 blocks with accuracy `[1,1,1]` and
+  mean response `[413, 400, 400]` ms. Deltas:
+  - block 1: `Accuracy improved +10 pp ... (90% → 100%)` and
+    `Response time improved 87 ms faster ... (500 → 413 ms)`
+  - block 2: accuracy unchanged, response improved 13 ms
+  - block 3: accuracy and response unchanged
+  `consoleErrors []`. Four tests in `tests/ui/rotation-result-delta.test.tsx` cover
+  improved/worsened/unchanged/first/cross-level.
+- **GATES**: `npm run test:all` — 29 Python + 388 Vitest; `npm run ai:verify` — 800/800;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's result deltas, tests, proof and record.

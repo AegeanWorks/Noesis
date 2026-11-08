@@ -170,13 +170,31 @@ for (let step = 0; step < 5000; step += 1) {
   if (!answered) await page.waitForTimeout(5);
 }
 await page.waitForSelector("text=Your blocks, separately", { timeout: 15000 });
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, `${LABEL}-04-rotation-results.png`), fullPage: true });
 const played = await page.evaluate(() => {
   const state = window.__NOESIS__.getState();
+  const accuracyChanges = [
+    ...document.querySelectorAll('[data-testid^="rotation-accuracy-vs-previous-"]'),
+  ].map((node) => ({
+    testId: node.getAttribute("data-testid"),
+    text: (node.textContent ?? "").replace(/\s+/g, " ").trim(),
+    direction: node.getAttribute("data-direction"),
+  }));
+  const responseChanges = [
+    ...document.querySelectorAll('[data-testid^="rotation-rt-vs-previous-"]'),
+  ].map((node) => ({
+    testId: node.getAttribute("data-testid"),
+    text: (node.textContent ?? "").replace(/\s+/g, " ").trim(),
+    direction: node.getAttribute("data-direction"),
+  }));
   return {
     mechanics: state?.results.map((result) => result.mechanic) ?? [],
     difficulties: state?.results.map((result) => result.difficulty ?? null) ?? [],
     accuracies: state?.results.map((result) => result.metrics.accuracy ?? null) ?? [],
     responses: state?.results.map((result) => result.metrics.mean_response_ms ?? null) ?? [],
+    accuracyChanges,
+    responseChanges,
   };
 });
 

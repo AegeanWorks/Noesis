@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-rotation-trend",
+    "task_id": "noesis-rotation-result-delta",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794143287.6046412,
-    "owner": "opencode:rotationtrend",
-    "started_by": "opencode:rotationtrend",
+    "updated_at": 1794143613.7567296,
+    "owner": "opencode:rotationdelta",
+    "started_by": "opencode:rotationdelta",
     "continuations": [],
-    "completed_at": 1794143294.3437016
+    "completed_at": 1794143619.7088714
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-spatial-result-delta",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add the same-level mean-span delta to the Spatial Span result card",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794141537.10007,
-      "timestamp_str": "2026-11-08 15:38:57",
-      "agent": "opencode:spatialdelta",
-      "impact_assessment": {
-        "why": "Choose and History compare span within level, but the result card showed only raw mean/longest span; higher span is better, so the direction differs from cost deltas",
-        "benefits": "Consistent same-level comparison across Choose, History and Results; first/improved/worsened/no-change states explicit",
-        "risks": "contract: ResultsScreen internal helper and copy; history prop already present; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "failing-first improved/worsened/same/first/different-level tests, real three-block level-2 before/after proof, full gates"
-      },
-      "plan_digest": "d2fb771a3bbc439144c37a46d187a52fe340a47f59baf774baf07633a3bb0c35"
-    },
-    {
-      "task_id": "noesis-spatial-result-delta",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: spanComparisons + spanChange with higher-is-better direction; result paragraph and data-direction; tests; proof captures deltas and results frame",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794141537.8226964,
-      "timestamp_str": "2026-11-08 15:38:57",
-      "agent": "opencode:spatialdelta"
-    },
-    {
-      "task_id": "noesis-spatial-result-delta",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seeded prior 5.0, played means 6.8/6.8/6.8 gave improved+1.8 then same/same; worsened/first/different-level covered; consoleErrors []; 29 Python + 374 Vitest, 700 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794141538.5413733,
-      "timestamp_str": "2026-11-08 15:38:58",
-      "agent": "opencode:spatialdelta"
-    },
-    {
-      "task_id": "noesis-spatial-result-delta",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-spatial-result-delta' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794141543.7221613,
-      "timestamp_str": "2026-11-08 15:39:03",
-      "agent": "opencode:spatialdelta"
-    },
     {
       "task_id": "noesis-spatial-resume",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794143294.3437028,
       "timestamp_str": "2026-11-08 16:08:14",
       "agent": "opencode:rotationtrend"
+    },
+    {
+      "task_id": "noesis-rotation-result-delta",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add same-level accuracy and response-time deltas to the Mental Rotation result card",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794143612.9883037,
+      "timestamp_str": "2026-11-08 16:13:32",
+      "agent": "opencode:rotationdelta",
+      "impact_assessment": {
+        "why": "Choose and History compare rotation within level, but the result card showed only raw accuracy/RT; the metrics have opposite directions",
+        "benefits": "Consistent same-level comparison across Choose, History and Results; separate directions avoid ambiguous combined verdicts",
+        "risks": "contract: ResultsScreen helper and copy; history prop already present; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first improved/worsened/unchanged/first/cross-level tests, real three-block level-2 before/after proof, full gates"
+      },
+      "plan_digest": "238a8056a1bdcd8bd0ad7f8fa67b52c8ca9ff4d87b911aec48c536be9aa8e3da"
+    },
+    {
+      "task_id": "noesis-rotation-result-delta",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: accuracyChange/responseTimeChange and two result lines with data-direction; tests; proof captures result deltas and frame",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794143613.3754907,
+      "timestamp_str": "2026-11-08 16:13:33",
+      "agent": "opencode:rotationdelta"
+    },
+    {
+      "task_id": "noesis-rotation-result-delta",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded prior 90%/500, played 100%/413,100%/400,100%/400 gave accuracy +10pp then unchanged; RT 87ms/13ms faster then unchanged; consoleErrors []; 29 Python + 388 Vitest, 800 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794143613.7567296,
+      "timestamp_str": "2026-11-08 16:13:33",
+      "agent": "opencode:rotationdelta"
+    },
+    {
+      "task_id": "noesis-rotation-result-delta",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-rotation-result-delta' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794143619.7088728,
+      "timestamp_str": "2026-11-08 16:13:39",
+      "agent": "opencode:rotationdelta"
     }
   ]
 }

@@ -227,6 +227,77 @@ function spanChange(
   };
 }
 
+function accuracyChange(
+  comparison: SwitchCostComparison | null,
+  level: number | undefined,
+  current: number | undefined,
+): { direction: string; text: string } {
+  if (comparison === null) {
+    return {
+      direction: "first",
+      text:
+        typeof level === "number"
+          ? "First block at this level; no earlier accuracy comparison."
+          : "No earlier accuracy comparison.",
+    };
+  }
+  const delta = Math.round(comparison.delta * 100);
+  const previous = `${Math.round(comparison.previous * 100)}%`;
+  const currentText = `${Math.round((current ?? 0) * 100)}%`;
+  if (delta > 0) {
+    return {
+      direction: "improved",
+      text: `Accuracy improved +${delta} pp vs previous Level ${level} block (${previous} → ${currentText}).`,
+    };
+  }
+  if (delta < 0) {
+    return {
+      direction: "worsened",
+      text: `Accuracy worsened ${delta} pp vs previous Level ${level} block (${previous} → ${currentText}).`,
+    };
+  }
+  return {
+    direction: "same",
+    text: `Accuracy unchanged vs previous Level ${level} block (${previous}).`,
+  };
+}
+
+function responseTimeChange(
+  comparison: SwitchCostComparison | null,
+  level: number | undefined,
+  current: number | undefined,
+): { direction: string; text: string } {
+  if (comparison === null) {
+    return {
+      direction: "first",
+      text:
+        typeof level === "number"
+          ? "First block at this level; no earlier response-time comparison."
+          : "No earlier response-time comparison.",
+    };
+  }
+  const delta = Math.round(comparison.delta);
+  const previous = `${Math.round(comparison.previous)}`;
+  const previousWithUnit = `${previous} ms`;
+  const currentText = `${Math.round(current ?? 0)} ms`;
+  if (delta < 0) {
+    return {
+      direction: "improved",
+      text: `Response time improved ${Math.abs(delta)} ms faster vs previous Level ${level} block (${previous} → ${currentText}).`,
+    };
+  }
+  if (delta > 0) {
+    return {
+      direction: "worsened",
+      text: `Response time worsened +${delta} ms slower vs previous Level ${level} block (${previous} → ${currentText}).`,
+    };
+  }
+  return {
+    direction: "same",
+    text: `Response time unchanged vs previous Level ${level} block (${previousWithUnit}).`,
+  };
+}
+
 function ResultCard({
   result,
   index,
@@ -234,6 +305,8 @@ function ResultCard({
   switchCostComparison,
   interferenceCostComparison,
   spanComparison,
+  rotationAccuracyComparison,
+  rotationResponseComparison,
 }: {
   result: MechanicResult;
   index: number;
@@ -241,6 +314,8 @@ function ResultCard({
   switchCostComparison: SwitchCostComparison | null;
   interferenceCostComparison: SwitchCostComparison | null;
   spanComparison: SwitchCostComparison | null;
+  rotationAccuracyComparison: SwitchCostComparison | null;
+  rotationResponseComparison: SwitchCostComparison | null;
 }) {
   const meta = mechanicMeta(result.mechanic);
   const primaryKeys = PRIMARY_METRICS[result.mechanic].filter(
@@ -265,6 +340,16 @@ function ResultCard({
     spanComparison,
     result.difficulty,
     result.metrics.mean_span,
+  );
+  const rotationAccuracy = accuracyChange(
+    rotationAccuracyComparison,
+    result.difficulty,
+    result.metrics.accuracy,
+  );
+  const rotationResponse = responseTimeChange(
+    rotationResponseComparison,
+    result.difficulty,
+    result.metrics.mean_response_ms,
   );
 
   return (
@@ -322,6 +407,24 @@ function ResultCard({
           {span.text}
         </p>
       ) : null}
+      {result.mechanic === "rotation" ? (
+        <>
+          <p
+            className={`fine switch-cost-change switch-cost-change-${rotationAccuracy.direction}`}
+            data-testid={`rotation-accuracy-vs-previous-${index}`}
+            data-direction={rotationAccuracy.direction}
+          >
+            {rotationAccuracy.text}
+          </p>
+          <p
+            className={`fine switch-cost-change switch-cost-change-${rotationResponse.direction}`}
+            data-testid={`rotation-rt-vs-previous-${index}`}
+            data-direction={rotationResponse.direction}
+          >
+            {rotationResponse.text}
+          </p>
+        </>
+      ) : null}
       {isNewBest ? (
         <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
           New personal best
@@ -364,6 +467,20 @@ export function ResultsScreen({
   const switchComparisons = switchCostComparisons(history, sessionId, results);
   const interferenceComparisons = interferenceCostComparisons(history, sessionId, results);
   const spanComparisonsByIndex = spanComparisons(history, sessionId, results);
+  const rotationAccuracyComparisons = costComparisons(
+    history,
+    sessionId,
+    results,
+    "rotation",
+    "accuracy",
+  );
+  const rotationResponseComparisons = costComparisons(
+    history,
+    sessionId,
+    results,
+    "rotation",
+    "mean_response_ms",
+  );
 
   return (
     <section className="screen results-screen">
@@ -387,6 +504,8 @@ export function ResultsScreen({
               switchCostComparison={switchComparisons[index] ?? null}
               interferenceCostComparison={interferenceComparisons[index] ?? null}
               spanComparison={spanComparisonsByIndex[index] ?? null}
+              rotationAccuracyComparison={rotationAccuracyComparisons[index] ?? null}
+              rotationResponseComparison={rotationResponseComparisons[index] ?? null}
             />
           ))}
         </div>
