@@ -55,7 +55,7 @@ The following sources stayed narrative-only:
 | Flanker | Interference control | No eligible Flanker-specific training meta-analysis in this search; the standard interference-control paradigm is covered by broader EF training evidence with small near transfer (30998045, 32011155) | Static arrows; safe | **Implement as experimental focus test, claim-bounded** |
 | Stop-signal | Response inhibition / cancellation | Strong paradigm, but Go/No-Go already covers inhibition in the core lineup | Static go/stop cues; safe | Candidate, not implemented |
 | Spatial span / Corsi | Visuospatial working memory | A 2025 meta-analysis found a small Corsi Block effect (d=0.16) in healthy older adults; broader working-memory reviews show short-term near transfer but no convincing far transfer (37822255, 22612437, 27474138) | Grid sequence; safe | **Implement as experimental focus test, claim-bounded** |
-| Mental rotation | Spatial ability | Training improves spatial tasks; far transfer to academic outcomes is not established | Static 2D/3D shapes; safe | Candidate, not implemented |
+| Mental rotation | Spatial ability | Training improved spatial skills (217 studies, g=0.47) and transferred to untrained spatial tasks (22663761); spatial training also improved mathematics (g=0.28), but concrete materials beat computerized training and near outcomes transferred more than distal ones (35073120) | Static block figures; safe | **Implement as experimental focus test, claim-bounded** |
 | Visual search / UFOV-like | Processing speed / attention | ACTIVE supports speed training, but this app's Speed Tap is not UFOV and a simple search task would not be the validated protocol | Static search array; safe | Candidate, not implemented |
 | Action video game | Attention / spatial cognition | g=0.34 intervention (29172564), but genre is broad and often fast/flashing | Conflicts with the no-flashing safety posture | Do not build a flashing action game |
 | Commercial brain-training suite | Mixed | Small near transfer; no robust objective far transfer (34251578) | Program-specific, not a task | Do not copy a commercial suite |
@@ -129,6 +129,21 @@ quantitative basis.
   visuospatial working-memory practice only, not a validated protocol, diagnostic, or
   general-intelligence/academic/everyday-function benefit.
 
+### 4.3 Mental Rotation implementation and evidence limit
+
+- Two static block figures appear side by side. The right figure is the same shape rotated by
+  0/90/180/270 degrees, or a mirror image of it.
+- Two answer buttons show **Same** and **Mirrored**; keys 1 and 2 work.
+- Metrics: accuracy, same/mirror accuracy, mean response time, timeouts and streaks.
+- It is available from the Menu as a three-block focus test. It is not in the default lineup.
+- **Evidence:** Uttal et al. (2013, PMID 22663761) meta-analysed 217 spatial-training studies
+  and found an average effect of g=0.47, stable over delays and transferred to untrained spatial
+  tasks. Hawes et al. (2022, PMID 35073120) found spatial training improved spatial thinking
+  (g=0.49) and mathematics (g=0.28), but concrete materials outperformed computerized training
+  and near mathematics outcomes transferred more than distal ones. Sala and Gobet (2017, PMID
+  29276344) found far transfer rarely occurs. The app therefore claims spatial-task practice
+  only, not mathematics, academic, general-intelligence or everyday-function benefit.
+
 ---
 
 ## 5. Requirement and limits
@@ -143,13 +158,20 @@ quantitative basis.
 - **R65:** Spatial Span is an experimental focus test with a slow 3x3 sequence, adaptive span,
   and accuracy/mean-span/longest-span metrics. A small Corsi Block effect supports
   visuospatial working-memory practice only; far transfer is not claimed.
+- **R66:** Mental Rotation is an experimental focus test with static block figures, a
+  rotation-versus-mirror judgement and accuracy/reaction-time metrics. Spatial-training
+  meta-analyses support near transfer to spatial tasks; mathematics, academic and
+  general-intelligence gains are not claimed, especially for computerized training.
 
-Limits: the evidence is for executive-function and working-memory training broadly, not for
-these exact colour/shape, arrow or grid tasks. The meta-analyses also report benefits from
-multicomponent training, and Nguyen et al. recommend adaptive multidomain training. Task
-Switch, Flanker and Spatial Span are therefore conservative single-task focus tests, not
-evidence that single-component training is superior, and they do not replace the core lineup.
-Flanker has no task-specific training meta-analysis in this review; its claim is limited to
-task practice. Spatial Span has a small Corsi-specific pooled effect but no far-transfer
-evidence. The tasks are practice and measurement instruments, not diagnostic tests. Future
-candidates should be selected by task-specific evidence and safety, not by genre labels.
+Limits: the evidence is for executive-function, working-memory and spatial training broadly,
+not for these exact colour/shape, arrow, grid or block-rotation tasks. The meta-analyses also
+report benefits from multicomponent or hands-on training, and Nguyen et al. recommend adaptive
+multidomain training. Task Switch, Flanker, Spatial Span and Mental Rotation are therefore
+conservative single-task focus tests, not evidence that single-component or computerized
+training is superior, and they do not replace the core lineup. Flanker has no task-specific
+training meta-analysis in this review; its claim is limited to task practice. Spatial Span has
+a small Corsi-specific pooled effect but no far-transfer evidence. Mental Rotation has
+moderate spatial-training evidence but the mathematics effect favours concrete materials, so no
+academic gain is claimed. The tasks are practice and measurement instruments, not diagnostic
+tests. Future candidates should be selected by task-specific evidence and safety, not by genre
+labels.

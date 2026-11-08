@@ -168,6 +168,31 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Static grid; highlights change at a slow fixed pace with no flashing.",
   },
+  rotation: {
+    id: "rotation",
+    name: "Mental Rotation",
+    domain: "reasoning",
+    tagline: "Spatial reasoning",
+    instructions:
+      "Two block figures appear. Decide whether the right figure is the same shape rotated, or a mirror image. Keys 1 (same) and 2 (mirrored) work too.",
+    brief:
+      "Spatial-reasoning practice: decide whether a rotated block figure is the same shape or a mirror image. A 2013 meta-analysis of 217 training studies found a moderate average spatial-training effect (g=0.47) that was stable and transferred to untrained spatial tasks. A 2022 meta-analysis also found a small mathematics effect (g=0.28), but concrete materials outperformed computerized training, so this app claims spatial-task practice only.",
+    claimLevel: "experimental",
+    claim: "Practices mentally rotating and comparing spatial figures.",
+    qualifier:
+      "Task practice only. Accuracy is a within-session descriptive measure; this is not a diagnostic test and does not claim academic, general-intelligence or everyday-function benefits.",
+    notClaimed: [
+      "General intelligence",
+      "Mathematics achievement",
+      "Academic achievement",
+      "Dementia prevention",
+      "Everyday function",
+    ],
+    citations: [
+      { pmid: "22663761", label: "Spatial skills training meta-analysis (2013)" },
+    ],
+    safety: "Static block figures; no flashing.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

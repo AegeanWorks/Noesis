@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-spatial-resume",
+    "task_id": "noesis-rotation",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794141835.1559644,
-    "owner": "opencode:spatialresume",
-    "started_by": "opencode:spatialresume",
+    "updated_at": 1794142706.8020465,
+    "owner": "opencode:rotation",
+    "started_by": "opencode:rotation",
     "continuations": [],
-    "completed_at": 1794141841.239386
+    "completed_at": 1794142714.1061523
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-flanker-result-delta",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add the same-level interference-cost delta to the Flanker result card",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794139063.0262213,
-      "timestamp_str": "2026-11-08 14:57:43",
-      "agent": "opencode:flankerdelta",
-      "impact_assessment": {
-        "why": "Choose and History already compare within level, but the Flanker result card explained interference cost without comparing the block to the previous same-level block",
-        "benefits": "Consistent same-level comparison across Choose, History and Results; first/improved/worsened/no-change states explicit",
-        "risks": "contract: ResultsScreen internal refactor; history prop already present; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "failing-first improved/worsened/first/different-level tests plus no-change test, real three-block level-2 proof before/after, full gates"
-      },
-      "plan_digest": "d043c6ff47971bb7897432ec2fbfb8aa7d2110ce01958ed8ea1db14099d904fe"
-    },
-    {
-      "task_id": "noesis-flanker-result-delta",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: shared costComparisons/costChange helpers; Flanker delta paragraph with data-direction; tests; proof captures deltas and slows block 1/3 incongruent trials",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794139064.9278286,
-      "timestamp_str": "2026-11-08 14:57:44",
-      "agent": "opencode:flankerdelta"
-    },
-    {
-      "task_id": "noesis-flanker-result-delta",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: mid/stored/resumed same seed block0/3 level2 trial8; interference 161/0/300 gave first/improved161/worsened300; no-change and different-level covered; consoleErrors []; 29 Python + 360 Vitest, 600 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794139067.24653,
-      "timestamp_str": "2026-11-08 14:57:47",
-      "agent": "opencode:flankerdelta"
-    },
-    {
-      "task_id": "noesis-flanker-result-delta",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-flanker-result-delta' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794139074.8825622,
-      "timestamp_str": "2026-11-08 14:57:54",
-      "agent": "opencode:flankerdelta"
-    },
     {
       "task_id": "noesis-spatial-span",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794141841.239388,
       "timestamp_str": "2026-11-08 15:44:01",
       "agent": "opencode:spatialresume"
+    },
+    {
+      "task_id": "noesis-rotation",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: add an experimental Mental Rotation focus test after verifying spatial-training evidence and metadata",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794142705.1541953,
+      "timestamp_str": "2026-11-08 15:58:25",
+      "agent": "opencode:rotation",
+      "impact_assessment": {
+        "why": "Mental rotation was the remaining spatial candidate; Uttal 2013 found g=0.47 across 217 studies with transfer to untrained spatial tasks, while computerized math transfer is weaker",
+        "benefits": "A measured spatial-reasoning task with explicit claim boundaries; one new context record and v1.4 evidence table",
+        "risks": "contract: new mechanic across types/schema/UI/AI; default four-core lineup unchanged; dependency: none; concurrency: none; state: additive adaptive level and snapshot support",
+        "mitigation": "engine/UI tests, fixed-clock before/after Menu/stage/results proof, ADR-048/R66 claim boundary, full gates"
+      },
+      "plan_digest": "d3d2f97e99ffd8936a3fefc2e09f2ffda9d0a995221e636c08a41a38cdc808ed"
+    },
+    {
+      "task_id": "noesis-rotation",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Impl: deterministic rotation/parity engine with two chiral block shapes; stage SVG; results metrics; evidence table 22663761 (120 records, 282 outcomes, v1.4); README/docs/ADR/R66; AI 800 sims",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794142706.028942,
+      "timestamp_str": "2026-11-08 15:58:26",
+      "agent": "opencode:rotation"
+    },
+    {
+      "task_id": "noesis-rotation",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: before Menu no card; after card+briefing+3 level-2 blocks 12/12 each, same/mirror 100%, mean 450/400/400 ms; consoleErrors []; 29 Python + 381 Vitest, 800 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794142706.8020465,
+      "timestamp_str": "2026-11-08 15:58:26",
+      "agent": "opencode:rotation"
+    },
+    {
+      "task_id": "noesis-rotation",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-rotation' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794142714.1061542,
+      "timestamp_str": "2026-11-08 15:58:34",
+      "agent": "opencode:rotation"
     }
   ]
 }

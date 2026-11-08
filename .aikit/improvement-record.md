@@ -1222,3 +1222,41 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 374 Vitest; `npm run ai:verify` — 700/700;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's resume proof and record.
+
+## Cycle 25 — Experimental Mental Rotation focus test from verified spatial-training evidence
+
+- **Area**: new approach / literature matrix, candidate selected after targeted PubMed verification.
+- **FIND**: The matrix's remaining spatial candidate was mental rotation. Uttal et al. 2013
+  (PMID 22663761; *Psychological Bulletin*; 217 training studies) found an average
+  spatial-training effect of g=0.47, stable over delays and transferred to untrained spatial
+  tasks. Hawes et al. 2022 (PMID 35073120; 29 studies, N=3,765, k=89) found spatial thinking
+  g=0.49 and mathematics g=0.28, but concrete materials outperformed computerized training and
+  near mathematics outcomes transferred more than distal ones. Sala and Gobet 2017 (PMID
+  29276344) found far transfer rarely occurs. Metadata and DOIs were verified via esummary.
+- **DECISION**: Implement a claim-bounded experimental Mental Rotation focus test. It claims
+  spatial-task practice only; mathematics, academic, general-intelligence and everyday-function
+  benefits are explicitly excluded, especially for computerized training. Recorded as ADR-048
+  and R66; Uttal 2013 was added as a context record, taking the review to 120 records,
+  282 outcomes and revision v1.4.
+- **IMPLEMENT**: Deterministic `rotation` mechanic: two static block figures (L/S polyominoes),
+  a right figure rotated 0/90/180/270 degrees or mirrored, Same/Mirrored answers, accuracy,
+  same/mirror accuracy, mean response time, timeouts and streaks. Integrated types, schema,
+  simulation, evidence metadata, adaptive defaults, Menu, stage, keyboard, results, AI CLI and
+  tests. `npm run ai:verify` grows from 700 to 800 simulations.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before Menu (no Mental Rotation card):
+    `%TEMP%\opencode\noesis-rotation-before\before-01-menu.png` SHA-256
+    `4C4A0F5258391C3B9C14793C2CCD21E0F5EC1FAD8A34586526E150AD9C35278A`
+  - after Menu: `%TEMP%\opencode\noesis-rotation-after\after-01-menu.png` SHA-256
+    `587E5B67E98674F52FD330595200F4727A77CE67F5A20304F800BF13A92E9126`
+  - stage: `%TEMP%\opencode\noesis-rotation-after\after-02-rotation-stage.png` SHA-256
+    `7FD4CD0A54AAADA65F099CEAA2E57D0E5273AC4C52F6E09C879F72CB9A81AA70`
+  - results: `%TEMP%\opencode\noesis-rotation-after\after-03-rotation-results.png` SHA-256
+    `274896CC88C0C58DDB214218C35EB2E0B6B9A30046AD446507EB9AE0AC83FAED`
+- **PROOF (played run)**: `scripts/rotation-proof.mjs` opened the Menu, started Mental Rotation,
+  read the briefing, and completed three level-2 blocks: mechanics
+  `["rotation","rotation","rotation"]`, difficulties `[2,2,2]`, each 100% accuracy, 12/12
+  correct, same/mirror accuracy 100%, mean response 450/400/400 ms; `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 381 Vitest; `npm run ai:verify` — 800/800;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's rotation engine, UI, evidence table, tests, proof and record.

@@ -7224,6 +7224,55 @@
    ],
    "synthesis_role": "context",
    "product_use": "Supports a Corsi-style spatial-span focus test as working-memory practice; no far-transfer or everyday-function claim."
+  },
+  {
+   "pmid": "22663761",
+   "doi": "10.1037/a0028446",
+   "doi_status": "verified",
+   "year": 2013,
+   "journal": "Psychological Bulletin",
+   "title": "The malleability of spatial skills: a meta-analysis of training studies",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children",
+    "adults",
+    "older_adults"
+   ],
+   "k": 217,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "visuospatial_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.47,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "average training effect across 217 studies; effects were stable over delays and transferred to untrained spatial tasks"
+    }
+   ],
+   "findings": [
+    "Spatial training produced an average Hedges g of 0.47 across 217 studies",
+    "Training effects were stable and transferred to untrained spatial tasks",
+    "Control-group type, sex, age and training type moderated the effects"
+   ],
+   "limitations": [
+    "Training types and outcome measures were heterogeneous",
+    "Many studies used no-treatment or passive controls",
+    "Certainty is source-reported and provisional"
+   ],
+   "flags": [
+    "heterogeneity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Supports an experimental mental-rotation focus test as spatial-task practice; no academic, general-intelligence or everyday-function claim."
   }
  ]
 }

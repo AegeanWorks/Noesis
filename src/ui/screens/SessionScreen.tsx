@@ -111,7 +111,8 @@ export function SessionScreen({
         (view.mechanic.mechanic === "reasoning" ||
           view.mechanic.mechanic === "switching" ||
           view.mechanic.mechanic === "flanker" ||
-          view.mechanic.mechanic === "spatial") &&
+          view.mechanic.mechanic === "spatial" ||
+          view.mechanic.mechanic === "rotation") &&
         /^[1-9]$/.test(event.key)
       ) {
         const option = Number(event.key) - 1;

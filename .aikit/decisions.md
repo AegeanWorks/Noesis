@@ -341,6 +341,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add an experimental **Spatial Span** focus test: a 3x3 grid presents a slow sequence of highlighted blocks, then the user taps the same order. The span starts at 3/4/5 by level and adapts after each trial. The block reports accuracy, mean span, longest correctly recalled span, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims visuospatial working-memory practice only, not general intelligence, academic achievement, everyday function or a diagnostic result.
 - **Consequences**: The app gains a seventh mechanic and `npm run ai:verify` grows to 700 simulations (7 × 50 × 2). The evidence table gains one context record (37822255), taking the review to 119 records and 281 outcomes and revision v1.3. The small Corsi effect and absent far-transfer evidence are stated in the candidate note and R65.
 
+### ADR-048: Experimental Mental Rotation focus test
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The candidate matrix listed mental rotation as the remaining untested spatial candidate. A targeted PubMed search found Uttal et al. 2013 (PMID 22663761), a meta-analysis of 217 spatial-training studies with an average effect of g=0.47, stable over delays and transferred to untrained spatial tasks. Hawes et al. 2022 (PMID 35073120) found spatial training improved spatial thinking (g=0.49) and mathematics (g=0.28), but concrete materials outperformed computerized training and near mathematics outcomes transferred more than distal ones. Sala and Gobet (PMID 29276344) found far transfer rarely occurs.
+- **Decision**: Add an experimental **Mental Rotation** focus test: two static block figures are shown, and the user decides whether the right figure is the same shape rotated or a mirror image. It reports accuracy, same/mirror accuracy, mean response time, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims spatial-task practice only; mathematics, academic, general-intelligence and everyday-function gains are explicitly not claimed, especially for computerized training.
+- **Consequences**: The app gains an eighth mechanic and `npm run ai:verify` grows to 800 simulations (8 × 50 × 2). The evidence table gains one context record (22663761), taking the review to 120 records and 282 outcomes and revision v1.4. The claim boundary is recorded in R66 and the candidate note.
+
 
 
 

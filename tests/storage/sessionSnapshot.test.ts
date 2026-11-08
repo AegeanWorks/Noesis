@@ -141,4 +141,16 @@ describe("session snapshot", () => {
     saveSessionSnapshot(state);
     expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("spatial");
   });
+
+  it("round-trips a running Mental Rotation block", () => {
+    const state = applySessionAction(
+      createSession(defaultSessionConfig(9, 2, "standard", undefined, "rotation")),
+      { type: "begin" },
+    );
+    if (state.current?.mechanic !== "rotation") {
+      throw new Error("expected a Mental Rotation session");
+    }
+    saveSessionSnapshot(state);
+    expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("rotation");
+  });
 });

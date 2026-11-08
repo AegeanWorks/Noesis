@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 119 |
-| Outcomes | 281 |
-| Primary outcomes | 223 |
-| Systematic reviews/meta-analyses | 70 |
+| Records | 120 |
+| Outcomes | 282 |
+| Primary outcomes | 224 |
+| Systematic reviews/meta-analyses | 71 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 23 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 108 |
+| DOI verified | 109 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 40 |
+| cct | 41 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 108 |
+| DOI verified | 109 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **119** |
+| **Total** | **120** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -187,6 +187,8 @@ The FAIR Guiding Principles (PMID 26978244; DOI 10.1038/sdata.2016.18) stayed na
 A 2026-11-08 new-game search added two executive-function context records: Nguyen et al. 2019 (PMID 30998045; 64 studies, 3,594 older adults; small near- and far-transfer effects, maintained at follow-up) and Basak et al. 2020 (PMID 32011155; 215 training studies; overall g=0.28, near g=0.37, far g=0.22; single-component EF training was most effective on near/far transfer, while multicomponent training also transferred and improved everyday functioning). They ground the experimental Task Switch focus test. Action-game and commercial brain-training meta-analyses (PMIDs 29172564, 37531408, 34251578) stayed narrative-only in [NEW_MECHANIC_CANDIDATES.md](NEW_MECHANIC_CANDIDATES.md): action-game genres conflict with the no-flashing safety posture, and the commercial-program review is not specific to a single task paradigm.
 
 A 2026-11-08 spatial-span search added one context record: Olegário et al. 2025 (PMID 37822255; 31 trials in the systematic review, 13 in the meta-analysis; cognitive training improved Corsi Block working memory in healthy older adults, d=0.16, p=.002, while Digit Span backward and N-back were not significant). The DOI and metadata were verified via PubMed esummary. It grounds the experimental Spatial Span focus test (R65, ADR-047). Two task-specific working-memory reviews stayed narrative-only in [NEW_MECHANIC_CANDIDATES.md](NEW_MECHANIC_CANDIDATES.md): Melby-Lervåg and Hulme 2013 (PMID 22612437) found short-term visuospatial near transfer with limited maintenance, and their 2016 meta-analysis (PMID 27474138) found no convincing far transfer against treated controls. The 2026 spatial-memory rehabilitation review (PMID 41570544) is narrative-only because it has eight heterogeneous studies and no meta-analysis.
+
+A 2026-11-08 mental-rotation search added one context record: Uttal et al. 2013 (PMID 22663761; 217 training studies; average spatial-training effect g=0.47, stable over delays and transferred to untrained spatial tasks). The DOI and metadata were verified via PubMed esummary. It grounds the experimental Mental Rotation focus test (R66, ADR-048). Hawes et al. 2022 (PMID 35073120; 29 studies, N=3,765, k=89; spatial thinking g=0.49, mathematics g=0.28) stayed narrative-only in the candidate note because its mathematics effect favoured concrete materials over computerized training; Sala and Gobet 2017 (PMID 29276344) also stayed narrative-only as a general far-transfer caution.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

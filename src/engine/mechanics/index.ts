@@ -54,6 +54,14 @@ import {
   spatialResult,
   spatialView,
 } from "./spatial";
+import {
+  applyRotationAction,
+  createRotation,
+  rotationComplete,
+  rotationConfig,
+  rotationResult,
+  rotationView,
+} from "./rotation";
 import type {
   MechanicAction,
   MechanicId,
@@ -69,6 +77,7 @@ export function defaultTrials(id: MechanicId, difficulty: number): number {
   if (id === "switching") return 16 + (difficulty - 1) * 4;
   if (id === "flanker") return 18 + (difficulty - 1) * 2;
   if (id === "spatial") return 8;
+  if (id === "rotation") return 12;
   return 8;
 }
 
@@ -84,6 +93,7 @@ export function createMechanic(
   if (id === "switching") return createSwitching(seed, switchingConfig(difficulty, trials));
   if (id === "flanker") return createFlanker(seed, flankerConfig(difficulty, trials));
   if (id === "spatial") return createSpatial(seed, spatialConfig(difficulty, trials));
+  if (id === "rotation") return createRotation(seed, rotationConfig(difficulty, trials));
   return createReasoning(seed, reasoningConfig(difficulty, trials));
 }
 
@@ -97,6 +107,7 @@ export function applyMechanicAction(
   if (state.mechanic === "switching") return applySwitchingAction(state, action);
   if (state.mechanic === "flanker") return applyFlankerAction(state, action);
   if (state.mechanic === "spatial") return applySpatialAction(state, action);
+  if (state.mechanic === "rotation") return applyRotationAction(state, action);
   return applyReasoningAction(state, action);
 }
 
@@ -107,6 +118,7 @@ export function mechanicView(state: MechanicState): MechanicView {
   if (state.mechanic === "switching") return switchingView(state);
   if (state.mechanic === "flanker") return flankerView(state);
   if (state.mechanic === "spatial") return spatialView(state);
+  if (state.mechanic === "rotation") return rotationView(state);
   return reasoningView(state);
 }
 
@@ -117,6 +129,7 @@ export function mechanicResult(state: MechanicState): MechanicResult {
   if (state.mechanic === "switching") return switchingResult(state);
   if (state.mechanic === "flanker") return flankerResult(state);
   if (state.mechanic === "spatial") return spatialResult(state);
+  if (state.mechanic === "rotation") return rotationResult(state);
   return reasoningResult(state);
 }
 
@@ -127,5 +140,6 @@ export function mechanicComplete(state: MechanicState): boolean {
   if (state.mechanic === "switching") return switchingComplete(state);
   if (state.mechanic === "flanker") return flankerComplete(state);
   if (state.mechanic === "spatial") return spatialComplete(state);
+  if (state.mechanic === "rotation") return rotationComplete(state);
   return reasoningComplete(state);
 }

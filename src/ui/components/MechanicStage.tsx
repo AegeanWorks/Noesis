@@ -220,6 +220,121 @@ function SpatialStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">)
   );
 }
 
+const ROTATION_SHAPES: readonly (readonly (readonly [number, number])[])[] = [
+  [
+    [0, 0],
+    [1, 0],
+    [2, 0],
+    [0, 1],
+  ],
+  [
+    [0, 0],
+    [1, 0],
+    [1, 1],
+    [2, 1],
+  ],
+];
+
+function RotationFigure({
+  shape,
+  rotation,
+  mirrored,
+  label,
+  testId,
+}: {
+  shape: number;
+  rotation: number;
+  mirrored: boolean;
+  label: string;
+  testId: string;
+}) {
+  const cells = ROTATION_SHAPES[shape] ?? ROTATION_SHAPES[0] ?? [];
+  const cols = Math.max(...cells.map(([col]) => col)) + 1;
+  const rows = Math.max(...cells.map(([, row]) => row)) + 1;
+  const size = 18;
+  return (
+    <svg
+      className="rotation-figure"
+      viewBox="0 0 120 100"
+      role="img"
+      aria-label={label}
+      data-testid={testId}
+    >
+      <g transform={`translate(60 50) rotate(${rotation}) scale(${mirrored ? -1 : 1} 1)`}>
+        {cells.map(([col, row], index) => (
+          <rect
+            key={index}
+            x={(col - (cols - 1) / 2) * size - size / 2}
+            y={(row - (rows - 1) / 2) * size - size / 2}
+            width={size}
+            height={size}
+            rx={3}
+          />
+        ))}
+      </g>
+    </svg>
+  );
+}
+
+function RotationStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  const [shape = 0, rotation = 0, mirrorFlag = 0] = (view.stimulus ?? "0-0-0")
+    .split("-")
+    .map(Number);
+  return (
+    <div
+      className="stage stage-rotation"
+      data-mechanic="rotation"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
+      <p className="stage-prompt">{view.prompt}</p>
+      <div className="rotation-figures">
+        <div className="rotation-panel">
+          <RotationFigure
+            shape={shape}
+            rotation={0}
+            mirrored={false}
+            label="Original block figure"
+            testId="rotation-left"
+          />
+          <span className="fine">Original</span>
+        </div>
+        <div className="rotation-panel">
+          <RotationFigure
+            shape={shape}
+            rotation={rotation}
+            mirrored={mirrorFlag === 1}
+            label="Right block figure"
+            testId="rotation-right"
+          />
+          <span className="fine">Right</span>
+        </div>
+      </div>
+      <div className="options" role="group" aria-label="Answer options">
+        {(view.options ?? []).map((option, index) => (
+          <Button
+            key={`${option}-${index}`}
+            variant="ghost"
+            className="option"
+            disabled={!view.canRespond}
+            onClick={() => onAnswer(index)}
+            data-testid={`option-${index}`}
+          >
+            <span className="option-key">{index + 1}</span>
+            {option}
+          </Button>
+        ))}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function ReasoningStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   return (
     <div
@@ -275,6 +390,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "spatial") {
     return <SpatialStage view={view} onAnswer={props.onAnswer} />;
+  }
+  if (view.mechanic === "rotation") {
+    return <RotationStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

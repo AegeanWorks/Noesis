@@ -1,6 +1,7 @@
 import { REASONING_ITEMS } from "../content/reasoningItems";
 import { applyMechanicAction, createMechanic } from "./mechanics";
 import { flankerCorrectIndex } from "./mechanics/flanker";
+import { rotationCorrectIndex } from "./mechanics/rotation";
 import { switchingChoices } from "./mechanics/switching";
 import { normalizeSeed, nextRandom, randomInt } from "./rng";
 import type {
@@ -14,6 +15,7 @@ import type {
   SwitchingState,
   FlankerState,
   SpatialState,
+  RotationState,
 } from "./types";
 
 export type Policy = (state: MechanicState) => MechanicAction | null;
@@ -63,6 +65,11 @@ export function optimalPolicy(state: MechanicState): MechanicAction | null {
     const cell = trial?.sequence[state.selected.length];
     return cell === undefined ? null : { type: "answer", option: cell };
   }
+  if (state.mechanic === "rotation") {
+    if (state.phase !== "question" || state.phaseElapsed < 400) return null;
+    const trial = current(state.trials, state.index);
+    return trial ? { type: "answer", option: rotationCorrectIndex(trial) } : null;
+  }
   if (state.phase !== "question") return null;
   if (state.phaseElapsed < 500) return null;
   const id = state.order[state.index];
@@ -97,6 +104,9 @@ export function alwaysPolicy(state: MechanicState): MechanicAction | null {
   }
   if (state.mechanic === "spatial") {
     return state.phase === "recall" ? { type: "answer", option: 0 } : null;
+  }
+  if (state.mechanic === "rotation") {
+    return state.phase === "question" ? { type: "answer", option: 0 } : null;
   }
   return state.phase === "question" ? { type: "answer", option: 0 } : null;
 }
@@ -142,6 +152,12 @@ export function randomPolicy(seed: number): Policy {
     if (state.mechanic === "spatial") {
       if (state.phase !== "recall") return null;
       const [option, next] = randomInt(rng, 9);
+      rng = next;
+      return { type: "answer", option };
+    }
+    if (state.mechanic === "rotation") {
+      if (state.phase !== "question") return null;
+      const [option, next] = randomInt(rng, 2);
       rng = next;
       return { type: "answer", option };
     }
@@ -227,6 +243,14 @@ export function runMechanic(
   policy: Policy,
   options?: SimulationOptions,
 ): SimulationResult<SpatialState>;
+export function runMechanic(
+  id: "rotation",
+  seed: number,
+  difficulty: number,
+  trials: number,
+  policy: Policy,
+  options?: SimulationOptions,
+): SimulationResult<RotationState>;
 export function runMechanic(
   id: MechanicId,
   seed: number,

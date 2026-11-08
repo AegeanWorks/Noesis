@@ -179,4 +179,26 @@ describe("MechanicStage", () => {
     fireEvent.click(screen.getByTestId("spatial-cell-4"));
     expect(onAnswer).toHaveBeenCalledWith(4);
   });
+
+  it("renders both mental-rotation figures and sends the chosen parity", () => {
+    const onAnswer = vi.fn();
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "rotation",
+          name: "Mental Rotation",
+          phase: "question",
+          prompt: "Is the right figure a rotation of the left, or a mirror image?",
+          stimulus: "0-90-1",
+          options: ["Same", "Mirrored"],
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(screen.getByTestId("rotation-left")).toBeTruthy();
+    expect(screen.getByTestId("rotation-right")).toBeTruthy();
+    fireEvent.click(screen.getByTestId("option-1"));
+    expect(onAnswer).toHaveBeenCalledWith(1);
+  });
 });

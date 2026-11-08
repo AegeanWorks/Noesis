@@ -1839,3 +1839,42 @@ html.high-contrast .speed-ring-active {
   }
 }
 
+
+.stage-rotation {
+  align-items: center;
+}
+
+.rotation-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: min(100%, 420px);
+  margin: 4px auto;
+}
+
+.rotation-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.rotation-figure {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  fill: var(--accent);
+}
+
+.rotation-panel:nth-child(2) .rotation-figure {
+  fill: var(--accent-2);
+}
+
+.stage-rotation .options {
+  max-width: 420px;
+}
+
