@@ -169,6 +169,30 @@ function prospectiveRecord(
   };
 }
 
+function pairedRecord(
+  level: number,
+  blocks: readonly (readonly [number, number])[],
+  id: string,
+  finishedAt: string,
+): SessionRecord {
+  return {
+    id,
+    finishedAt,
+    seed: 42,
+    results: blocks.map(([accuracy, responseMs], index) => ({
+      mechanic: "paired",
+      domain: "episodic_memory",
+      trials: 12,
+      durationMs: 60_000,
+      metrics: { accuracy, mean_response_ms: responseMs },
+      summary: `Paired Associates: ${Math.round(accuracy * 100)}% accuracy.`,
+      seed: 42,
+      stateHash: `0123456789abcde${index}`,
+      difficulty: level,
+    })),
+  };
+}
+
 function renderMenu(overrides: Partial<ComponentProps<typeof PracticeMenuScreen>> = {}) {
   const props: ComponentProps<typeof PracticeMenuScreen> = {
     history: [],
@@ -520,6 +544,57 @@ describe("PracticeMenuScreen", () => {
     cleanup();
     renderMenu({ history: [record()] });
     expect(screen.queryByTestId("menu-prospective-trend")).toBeNull();
+  });
+
+  it("shows a level-aware Paired Associates accuracy and response-time trend", () => {
+    renderMenu({
+      history: [
+        pairedRecord(3, [[0.9, 500], [1, 400]], "a3", "2026-11-03T10:00:00.000Z"),
+        pairedRecord(2, [[0.8, 600], [0.9, 500]], "a2", "2026-11-02T10:00:00.000Z"),
+        pairedRecord(1, [[0.7, 700]], "a1", "2026-11-01T10:00:00.000Z"),
+      ],
+      initialTab: "history",
+    });
+    const card = screen.getByTestId("paired-trend");
+    expect(card.textContent).toMatch(/accuracy/i);
+    expect(card.textContent).toMatch(/response time/i);
+    const rows = screen.getAllByTestId(/^paired-level-/);
+    expect(rows.map((row) => row.getAttribute("data-testid"))).toEqual([
+      "paired-level-3",
+      "paired-level-2",
+      "paired-level-1",
+    ]);
+    const level3 = screen.getByTestId("paired-level-3");
+    expect(level3.textContent).toMatch(/Last 100%/);
+    expect(level3.textContent).toMatch(/Best 100%/);
+    expect(level3.textContent).toMatch(/Last 400 ms/);
+    expect(level3.textContent).toMatch(/Mean 450 ms/);
+    expect(level3.textContent).not.toMatch(/70%/);
+    const level2 = screen.getByTestId("paired-level-2");
+    expect(level2.textContent).toMatch(/Last 90%/);
+    expect(level2.textContent).toMatch(/Last 500 ms/);
+    expect(level2.textContent).toMatch(/Mean 550 ms/);
+    expect(screen.getByTestId("paired-level-1").textContent).toMatch(/Last 700 ms/);
+  });
+
+  it("shows the latest same-level values on the Paired Associates card", () => {
+    renderMenu({
+      history: [
+        pairedRecord(2, [[0.8, 600], [0.9, 500]], "a2", "2026-11-08T10:00:00.000Z"),
+        pairedRecord(3, [[0.9, 500], [1, 400]], "a3", "2026-11-07T10:00:00.000Z"),
+      ],
+    });
+    expect(screen.getByTestId("menu-paired-trend").textContent).toBe(
+      "Paired associates L2: last 90% accuracy · RT 500 ms · best 90%",
+    );
+  });
+
+  it("omits the Paired Associates trend when there are no blocks", () => {
+    renderMenu({ history: [record()], initialTab: "history" });
+    expect(screen.queryByTestId("paired-trend")).toBeNull();
+    cleanup();
+    renderMenu({ history: [record()] });
+    expect(screen.queryByTestId("menu-paired-trend")).toBeNull();
   });
 
   it("switches between choosing a test and viewing history", () => {

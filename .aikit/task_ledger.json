@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-paired-resume",
+    "task_id": "noesis-paired-trend",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794145984.918769,
-    "owner": "opencode:pairedresume",
-    "started_by": "opencode:pairedresume",
+    "updated_at": 1794146444.8725574,
+    "owner": "opencode:pairedtrend",
+    "started_by": "opencode:pairedtrend",
     "continuations": [],
-    "completed_at": 1794145992.2188325
+    "completed_at": 1794146451.7484994
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-prospective",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: add an experimental Prospective Memory focus test after verifying a task-specific meta-analysis",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794144481.9118662,
-      "timestamp_str": "2026-11-08 16:28:01",
-      "agent": "opencode:prospective",
-      "impact_assessment": {
-        "why": "The matrix was exhausted; a fresh scan found a 2023 meta-analysis of 29 RCTs with a moderate immediate PM effect but no significant long-term effect",
-        "benefits": "A distinct delayed-intention task with explicit claim boundaries; one context record and v1.5 evidence table",
-        "risks": "contract: new mechanic across types/schema/UI/AI; default four-core lineup unchanged; dependency: none; concurrency: none; state: additive adaptive level and snapshot support",
-        "mitigation": "engine/UI tests, fixed-clock before/after proof, ADR-050/R67 claim boundary, full gates"
-      },
-      "plan_digest": "02e1f90d26d78be31264d7b40676b1744ae78973e9fbd2bd3ceb6782b6fd9173"
-    },
-    {
-      "task_id": "noesis-prospective",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Impl: deterministic letter stream with Q cue and Remember action; stage/results/keyboard; evidence table 35543836 (121 records, 283 outcomes, v1.5); README/docs/ADR/R67; AI 900 sims",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794144482.388688,
-      "timestamp_str": "2026-11-08 16:28:02",
-      "agent": "opencode:prospective"
-    },
-    {
-      "task_id": "noesis-prospective",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: before Menu no card; after card+briefing+3 level-2 blocks 100% ongoing, 4/4 cues, 0 false alarms, mean 430/400/400; consoleErrors []; 29 Python + 395 Vitest, 900 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794144482.988364,
-      "timestamp_str": "2026-11-08 16:28:02",
-      "agent": "opencode:prospective"
-    },
-    {
-      "task_id": "noesis-prospective",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-prospective' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794144489.8620284,
-      "timestamp_str": "2026-11-08 16:28:09",
-      "agent": "opencode:prospective"
-    },
     {
       "task_id": "noesis-prospective-resume",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794145992.2188346,
       "timestamp_str": "2026-11-08 16:53:12",
       "agent": "opencode:pairedresume"
+    },
+    {
+      "task_id": "noesis-paired-trend",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add level-aware Paired Associates accuracy/response-time trends and same-level result deltas",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794146443.5160096,
+      "timestamp_str": "2026-11-08 17:00:43",
+      "agent": "opencode:pairedtrend",
+      "impact_assessment": {
+        "why": "Choose, History and Results had only per-block Paired Associates summaries; the two metrics need same-level comparison",
+        "benefits": "Consistent level-aware comparison across all three screens; shared dual-metric helper for rotation and paired",
+        "risks": "contract: Menu/results UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "three failing-first menu tests and four result tests, seeded before/after screenshots, real level-2 played run, full gates"
+      },
+      "plan_digest": "2f0dc2f3546ab001d972c43f5486ede6841b67131a852c2097508c4e2f05a69b"
+    },
+    {
+      "task_id": "noesis-paired-trend",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: dualMetricLevels/DualMetricTrendCard; Paired Choose line and History card; paired result accuracy/RT deltas; tests; paired-trend-proof.mjs; record",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794146444.157051,
+      "timestamp_str": "2026-11-08 17:00:44",
+      "agent": "opencode:pairedtrend"
+    },
+    {
+      "task_id": "noesis-paired-trend",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded L3 100%/400, L2 90%/500, L1 70%/700; played L2 100%/416,100%/400,100%/400 gave +10pp/84ms then unchanged; consoleErrors []; 29 Python + 416 Vitest, 1000 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794146444.8725574,
+      "timestamp_str": "2026-11-08 17:00:44",
+      "agent": "opencode:pairedtrend"
+    },
+    {
+      "task_id": "noesis-paired-trend",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-paired-trend' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794146451.748502,
+      "timestamp_str": "2026-11-08 17:00:51",
+      "agent": "opencode:pairedtrend"
     }
   ]
 }

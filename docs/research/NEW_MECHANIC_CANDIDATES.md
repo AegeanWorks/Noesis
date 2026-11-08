@@ -173,7 +173,10 @@ quantitative basis.
 - A word pair is shown for a short study interval, then the first word appears as a cue and the
   user chooses its partner from four options.
 - Keys 1-4 work. Feedback reveals the correct pair.
-- Metrics: accuracy, mean response time, timeouts and streaks.
+- Metrics: accuracy, mean response time, timeouts and streaks. The Choose-a-test card shows the
+  latest same-level accuracy and response time; the result and History cards compare both
+  metrics only within the same level. Higher accuracy and lower response time are better; the
+  first block at a level has no delta.
 - It is available from the Menu as a three-block focus test. It is not in the default lineup.
 - **Evidence:** Chen et al. 2022 (PMID 36301274; *Psychology and Aging*) meta-analysed 21 RCTs
   with 4,149 healthy older adults. Mnemonic training improved episodic memory immediately

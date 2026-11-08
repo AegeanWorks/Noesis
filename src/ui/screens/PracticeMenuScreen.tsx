@@ -393,7 +393,7 @@ function SpanTrendCard({ levels }: { levels: readonly SpatialSpanLevel[] }) {
   );
 }
 
-interface RotationLevel {
+interface DualMetricLevel {
   level: number;
   accuracies: number[];
   responseTimes: number[];
@@ -403,7 +403,10 @@ interface RotationLevel {
   meanResponse: number;
 }
 
-function rotationLevels(history: readonly SessionRecord[]): RotationLevel[] {
+function dualMetricLevels(
+  history: readonly SessionRecord[],
+  mechanic: "rotation" | "paired",
+): DualMetricLevel[] {
   const levels = new Map<
     number,
     { accuracies: number[]; responseTimes: number[]; lastSeen: number }
@@ -411,7 +414,7 @@ function rotationLevels(history: readonly SessionRecord[]): RotationLevel[] {
   let seen = 0;
   for (const record of [...history].reverse()) {
     for (const result of record.results) {
-      if (result.mechanic !== "rotation") continue;
+      if (result.mechanic !== mechanic) continue;
       const level = result.difficulty;
       const accuracy = result.metrics.accuracy;
       const response = result.metrics.mean_response_ms;
@@ -450,29 +453,39 @@ function rotationLevels(history: readonly SessionRecord[]): RotationLevel[] {
     });
 }
 
-function rotationLine(entry: RotationLevel): string {
-  return `Mental rotation L${entry.level}: last ${percent(entry.lastAccuracy)} accuracy · RT ${Math.round(entry.lastResponse)} ms · best ${percent(entry.bestAccuracy)}`;
+function dualMetricLine(entry: DualMetricLevel, label: string): string {
+  return `${label} L${entry.level}: last ${percent(entry.lastAccuracy)} accuracy · RT ${Math.round(entry.lastResponse)} ms · best ${percent(entry.bestAccuracy)}`;
 }
 
-function RotationTrendCard({ levels }: { levels: readonly RotationLevel[] }) {
+function DualMetricTrendCard({
+  levels,
+  testId,
+  prefix,
+  eyebrow,
+  title,
+  description,
+}: {
+  levels: readonly DualMetricLevel[];
+  testId: string;
+  prefix: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+}) {
   return (
-    <section className="card switch-cost-card" data-testid="rotation-trend">
+    <section className="card switch-cost-card" data-testid={testId}>
       <div className="card-top">
         <div>
-          <p className="eyebrow">Mental Rotation</p>
-          <h2>Accuracy and response time by level</h2>
+          <p className="eyebrow">{eyebrow}</p>
+          <h2>{title}</h2>
         </div>
       </div>
-      <p className="fine">
-        Accuracy is the share of correct rotation-versus-mirror judgements. Response time is the
-        block mean. Higher accuracy and lower response time are better; compare blocks only within
-        the same level.
-      </p>
+      <p className="fine">{description}</p>
       <div className="switch-cost-levels">
         {levels.map((entry) => (
           <div
             className="switch-cost-level"
-            data-testid={`rotation-level-${entry.level}`}
+            data-testid={`${prefix}-level-${entry.level}`}
             key={entry.level}
           >
             <div className="switch-cost-head">
@@ -488,7 +501,7 @@ function RotationTrendCard({ levels }: { levels: readonly RotationLevel[] }) {
               metricLabel="accuracy"
               zeroBaseline={false}
             />
-            <p className="switch-cost-stats" data-testid={`rotation-accuracy-${entry.level}`}>
+            <p className="switch-cost-stats" data-testid={`${prefix}-accuracy-${entry.level}`}>
               Last <strong>{percent(entry.lastAccuracy)}</strong> · Best{" "}
               <strong>{percent(entry.bestAccuracy)}</strong>
             </p>
@@ -499,7 +512,7 @@ function RotationTrendCard({ levels }: { levels: readonly RotationLevel[] }) {
               metricLabel="mean response time"
               zeroBaseline={false}
             />
-            <p className="switch-cost-stats" data-testid={`rotation-rt-${entry.level}`}>
+            <p className="switch-cost-stats" data-testid={`${prefix}-rt-${entry.level}`}>
               Last <strong>{Math.round(entry.lastResponse)} ms</strong> · Mean{" "}
               <strong>{entry.meanResponse} ms</strong>
             </p>
@@ -511,6 +524,48 @@ function RotationTrendCard({ levels }: { levels: readonly RotationLevel[] }) {
         diagnosis.
       </p>
     </section>
+  );
+}
+
+function rotationLevels(history: readonly SessionRecord[]): DualMetricLevel[] {
+  return dualMetricLevels(history, "rotation");
+}
+
+function rotationLine(entry: DualMetricLevel): string {
+  return dualMetricLine(entry, "Mental rotation");
+}
+
+function RotationTrendCard({ levels }: { levels: readonly DualMetricLevel[] }) {
+  return (
+    <DualMetricTrendCard
+      levels={levels}
+      testId="rotation-trend"
+      prefix="rotation"
+      eyebrow="Mental Rotation"
+      title="Accuracy and response time by level"
+      description="Accuracy is the share of correct rotation-versus-mirror judgements. Response time is the block mean. Higher accuracy and lower response time are better; compare blocks only within the same level."
+    />
+  );
+}
+
+function pairedLevels(history: readonly SessionRecord[]): DualMetricLevel[] {
+  return dualMetricLevels(history, "paired");
+}
+
+function pairedLine(entry: DualMetricLevel): string {
+  return dualMetricLine(entry, "Paired associates");
+}
+
+function PairedTrendCard({ levels }: { levels: readonly DualMetricLevel[] }) {
+  return (
+    <DualMetricTrendCard
+      levels={levels}
+      testId="paired-trend"
+      prefix="paired"
+      eyebrow="Paired Associates"
+      title="Accuracy and response time by level"
+      description="Accuracy is the share of correctly retrieved word partners. Response time is the block mean. Higher accuracy and lower response time are better; compare blocks only within the same level."
+    />
   );
 }
 
@@ -717,6 +772,11 @@ function TestCard({
       ? (rotationLevels(history).find((entry) => entry.level === level) ?? null)
       : null;
   const rotationTrendLine = rotationLevel ? rotationLine(rotationLevel) : null;
+  const pairedLevel =
+    mechanic === "paired" && level !== null
+      ? (pairedLevels(history).find((entry) => entry.level === level) ?? null)
+      : null;
+  const pairedTrendLine = pairedLevel ? pairedLine(pairedLevel) : null;
   const prospectiveLevel =
     mechanic === "prospective" && level !== null
       ? (prospectiveLevels(history).find((entry) => entry.level === level) ?? null)
@@ -781,6 +841,11 @@ function TestCard({
           {rotationTrendLine}
         </p>
       ) : null}
+      {pairedTrendLine ? (
+        <p className="fine menu-paired-trend" data-testid="menu-paired-trend">
+          {pairedTrendLine}
+        </p>
+      ) : null}
       {prospectiveTrendLine ? (
         <p className="fine menu-prospective-trend" data-testid="menu-prospective-trend">
           {prospectiveTrendLine}
@@ -812,6 +877,7 @@ function HistoryPanel({
   const interferenceLevels = flankerCostLevels(history);
   const spanLevels = spatialSpanLevels(history);
   const rotationTrendLevels = rotationLevels(history);
+  const pairedTrendLevels = pairedLevels(history);
   const prospectiveTrendLevels = prospectiveLevels(history);
 
   return (
@@ -893,6 +959,8 @@ function HistoryPanel({
       {rotationTrendLevels.length > 0 ? (
         <RotationTrendCard levels={rotationTrendLevels} />
       ) : null}
+
+      {pairedTrendLevels.length > 0 ? <PairedTrendCard levels={pairedTrendLevels} /> : null}
 
       {prospectiveTrendLevels.length > 0 ? (
         <ProspectiveTrendCard levels={prospectiveTrendLevels} />

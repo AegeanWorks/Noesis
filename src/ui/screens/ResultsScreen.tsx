@@ -413,6 +413,8 @@ function ResultCard({
   rotationAccuracyComparison,
   rotationResponseComparison,
   prospectiveComparison,
+  pairedAccuracyComparison,
+  pairedResponseComparison,
 }: {
   result: MechanicResult;
   index: number;
@@ -423,6 +425,8 @@ function ResultCard({
   rotationAccuracyComparison: SwitchCostComparison | null;
   rotationResponseComparison: SwitchCostComparison | null;
   prospectiveComparison: ProspectiveComparison | null;
+  pairedAccuracyComparison: SwitchCostComparison | null;
+  pairedResponseComparison: SwitchCostComparison | null;
 }) {
   const meta = mechanicMeta(result.mechanic);
   const primaryKeys = PRIMARY_METRICS[result.mechanic].filter(
@@ -461,6 +465,16 @@ function ResultCard({
   const prospective = prospectiveChange(
     prospectiveComparison,
     result.difficulty,
+  );
+  const pairedAccuracy = accuracyChange(
+    pairedAccuracyComparison,
+    result.difficulty,
+    result.metrics.accuracy,
+  );
+  const pairedResponse = responseTimeChange(
+    pairedResponseComparison,
+    result.difficulty,
+    result.metrics.mean_response_ms,
   );
 
   return (
@@ -545,6 +559,24 @@ function ResultCard({
           {prospective.text}
         </p>
       ) : null}
+      {result.mechanic === "paired" ? (
+        <>
+          <p
+            className={`fine switch-cost-change switch-cost-change-${pairedAccuracy.direction}`}
+            data-testid={`paired-accuracy-vs-previous-${index}`}
+            data-direction={pairedAccuracy.direction}
+          >
+            {pairedAccuracy.text}
+          </p>
+          <p
+            className={`fine switch-cost-change switch-cost-change-${pairedResponse.direction}`}
+            data-testid={`paired-rt-vs-previous-${index}`}
+            data-direction={pairedResponse.direction}
+          >
+            {pairedResponse.text}
+          </p>
+        </>
+      ) : null}
       {isNewBest ? (
         <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
           New personal best
@@ -602,6 +634,20 @@ export function ResultsScreen({
     "mean_response_ms",
   );
   const prospectiveComparisonsByIndex = prospectiveComparisons(history, sessionId, results);
+  const pairedAccuracyComparisons = costComparisons(
+    history,
+    sessionId,
+    results,
+    "paired",
+    "accuracy",
+  );
+  const pairedResponseComparisons = costComparisons(
+    history,
+    sessionId,
+    results,
+    "paired",
+    "mean_response_ms",
+  );
 
   return (
     <section className="screen results-screen">
@@ -628,6 +674,8 @@ export function ResultsScreen({
               rotationAccuracyComparison={rotationAccuracyComparisons[index] ?? null}
               rotationResponseComparison={rotationResponseComparisons[index] ?? null}
               prospectiveComparison={prospectiveComparisonsByIndex[index] ?? null}
+              pairedAccuracyComparison={pairedAccuracyComparisons[index] ?? null}
+              pairedResponseComparison={pairedResponseComparisons[index] ?? null}
             />
           ))}
         </div>

@@ -1560,3 +1560,48 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 409 Vitest; `npm run ai:verify` — 1,000/1,000;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's resume proof and record.
+
+## Cycle 35 — Level-aware Paired Associates trends and same-level result delta
+
+- **Area**: Paired Associates history and result readability.
+- **FIND**: Paired Associates had per-block summaries only. Choose and History had no aggregated
+  view of accuracy or response time, and the result card did not compare with the previous block
+  at the same level.
+- **IMPLEMENT**: Generalised the rotation helper to `dualMetricLevels(history, mechanic)` and
+  `DualMetricTrendCard`. Paired Associates now shows a level-aware accuracy and response-time
+  trend in History and `Paired associates L{level}: last N% accuracy · RT N ms · best N%` on the
+  Choose card. The result card adds separate same-level accuracy and response-time deltas with
+  `paired-accuracy-vs-previous-{index}` and `paired-rt-vs-previous-{index}`. Three menu tests and
+  four result tests cover the empty, first, improved, worsened and no-change cases.
+- **PROOF (screenshots)**: seeded Paired Associates results at levels 1-3, 390x844@2x:
+  - before Choose: `%TEMP%\opencode\noesis-paired-trend-before\before-00-choose-tests.png`
+    SHA-256 `CBE5C090A849ABCDACA54BAF8F1BBEB9043C04425FAED2AA26131FF3545BDE13`
+    (no line)
+  - before History: `before-01-history-seeded.png` SHA-256
+    `FC7BB5EC258811418C6A83A8D06F9556ABE6AD33497FAEB1703AE99C8F52B838`
+    (no card)
+  - before result: `before-04-paired-results.png` SHA-256
+    `D4D38AA63999AF69063F01F39572FA4229969551678163941E6EBADC82464280`
+  - after Choose: `after-00-choose-tests.png` SHA-256
+    `BC7581FE93F3E1FAE4639FB450C3558552AA9102E6E02308DEEC8BBAF41BED34`
+    (`Paired associates L3: last 100% accuracy · RT 400 ms · best 100%`)
+  - after History: `after-01-history-seeded.png` SHA-256
+    `F59F93F50485E22E1543C4E5BEB3B4AB93017DB5147A9CC7C025B51C9FD3DA8C`
+  - after result: `after-04-paired-results.png` SHA-256
+    `D609004E38726950DEA575C6B532C878130C0DE33D74E360C57336C063085198`
+- **PROOF (played run)**: `scripts/paired-trend-proof.mjs` played a real level-2 session with
+  accuracy `[1,1,1]` and mean response `[416,400,400]` ms:
+  - block 1: accuracy improved +10 pp (90% → 100%); response improved 84 ms faster (500 → 416 ms)
+  - block 2: accuracy unchanged; response improved 16 ms faster
+  - block 3: both unchanged
+  Level 2 updated to 5 blocks with last accuracy 100%, last response 400 ms and mean 463 ms, and
+  moved to the top. Choose read
+  `Paired associates L2: last 100% accuracy · RT 400 ms · best 100%`.
+  Screenshots: `after-02-history-after-play.png` SHA-256
+  `5E7354F2BC2EAD20FC4386999B96B0952FA426B5F1C92C4F896190E501D7267C` and
+  `after-03-choose-tests-after-play.png` SHA-256
+  `6E16B5A85D9459ABFACF55BEF232C62A532F925026BB53D3652E49C92F070D29`;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 416 Vitest; `npm run ai:verify` — 1,000/1,000;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's trends, result deltas, tests, proof and record.
