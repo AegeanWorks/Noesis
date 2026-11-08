@@ -200,4 +200,16 @@ describe("session snapshot", () => {
     saveSessionSnapshot(state);
     expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("paired");
   });
+
+  it("round-trips a running Change Detection block", () => {
+    const state = applySessionAction(
+      createSession(defaultSessionConfig(9, 2, "standard", undefined, "change")),
+      { type: "begin" },
+    );
+    if (state.current?.mechanic !== "change") {
+      throw new Error("expected a Change Detection session");
+    }
+    saveSessionSnapshot(state);
+    expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("change");
+  });
 });

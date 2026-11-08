@@ -58,6 +58,7 @@ The following sources stayed narrative-only:
 | Mental rotation | Spatial ability | Training improved spatial skills (217 studies, g=0.47) and transferred to untrained spatial tasks (22663761); spatial training also improved mathematics (g=0.28), but concrete materials beat computerized training and near outcomes transferred more than distal ones (35073120) | Static block figures; safe | **Implement as experimental focus test, claim-bounded** |
 | Prospective memory | Delayed intentions / episodic memory | 2023 meta-analysis of 29 RCTs: immediate prospective-memory training effect g=0.54, but long-term g=0.20 was not significant (35543836) | Static letter stream with one cue; safe | **Implement as experimental focus test, claim-bounded** |
 | Paired associates | Verbal episodic memory | 2022 meta-analysis of 21 RCTs (n=4,149): mnemonic training improved episodic memory immediately (g=0.408) and at follow-up (g=0.418); strategy-based, not the exact task (36301274) | Static word pairs; safe | **Implement as experimental focus test, claim-bounded** |
+| Change detection | Visual working memory | No task-specific change-detection training meta-analysis; working-memory/executive-function training meta-analyses show short-term near transfer (30998045, 32011155) | Static coloured grid, one brief change; safe | **Implement as experimental focus test, claim-bounded exception** |
 | Visual search / UFOV-like | Processing speed / attention | UFOV training shows speed/attention and everyday-function gains (44 studies/17 RCTs; 29175362), but UFOV is a proprietary multi-subtest protocol and its subtests are not construct-pure (29270605); a simple search task is not the validated protocol | Brief adaptive presentation conflicts with the static no-flashing safety posture; Speed Tap is explicitly not UFOV | Out of scope for now (reason in section 6) |
 | Action video game | Attention / spatial cognition | g=0.34 intervention (29172564), but genre is broad and often fast/flashing | Conflicts with the no-flashing safety posture | Do not build a flashing action game |
 | Commercial brain-training suite | Mixed | Small near transfer; no robust objective far transfer (34251578) | Program-specific, not a task | Do not copy a commercial suite |
@@ -188,6 +189,19 @@ quantitative basis.
   evidence; it does not change scoring, and the app does not claim that the hint is a validated
   training protocol or that it produces far transfer.
 
+### 4.6 Change Detection implementation and evidence limit
+
+- A brief array of coloured squares appears, followed by a blank delay and the same array with
+  one square changed. The user taps the changed square.
+- Keys 1-9 work. Set size is 4/5/6 by level; study time shortens with level.
+- Metrics: accuracy, set size, mean response time, timeouts and streaks.
+- It is available from the Menu as a three-block focus test. It is not in the default lineup.
+- **Evidence limit:** the targeted search found no eligible change-detection training
+  meta-analysis. The broader working-memory and executive-function training meta-analyses
+  (30998045, 32011155) show short-term near transfer but no convincing far transfer, so this is
+  an experimental visual working-memory focus test with a task-practice claim only. It makes no
+  general-memory, academic, everyday-function or diagnostic claim.
+
 ---
 
 ## 5. Requirement and limits
@@ -215,6 +229,10 @@ quantitative basis.
   second word is retrieved from four options. It reports accuracy and reaction time. A 2022
   meta-analysis supports mnemonic training gains in episodic memory, but not this exact task;
   no general-memory, academic, everyday-function or diagnostic claim is made.
+- **R69:** Change Detection is an experimental focus test: a brief coloured array is held across
+  a delay, then the changed square is selected. No task-specific change-detection training
+  meta-analysis exists, so the claim is limited to visual working-memory practice; no
+  general-memory, academic or everyday-function claim is made.
 
 Limits: the evidence is for executive-function, working-memory and spatial training broadly,
 not for these exact colour/shape, arrow, grid or block-rotation tasks. The meta-analyses also

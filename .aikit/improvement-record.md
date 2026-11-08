@@ -1731,3 +1731,37 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 426 Vitest; `npm run ai:verify` — 1,000/1,000;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's persistence, summary, tests, proof and record.
+
+## Cycle 40 — Experimental Change Detection focus test
+
+- **Area**: new approach / fresh visual working-memory scan.
+- **FIND**: The targeted visual working-memory search found no eligible change-detection
+  training meta-analysis. The broader working-memory/executive-function training meta-analyses
+  already in the corpus (PMID 30998045, 32011155) show short-term near transfer but no convincing
+  far transfer. Change detection is a standard visual working-memory paradigm distinct from
+  N-back updating and Spatial Span sequencing.
+- **DECISION**: Add an experimental **Change Detection** focus test with an explicit
+  task-specific evidence exception (R69, ADR-055). Claim visual working-memory practice only; no
+  general-memory, academic, everyday-function or diagnostic claim. No evidence-table record was
+  added; the review remains at 122 records and 284 outcomes.
+- **IMPLEMENT**: Deterministic `change` mechanic: a brief coloured array, a delay, then the same
+  array with one changed square; user taps the changed square. Set size 4/5/6 by level; metrics
+  accuracy, set size, response time, timeouts and streaks. Integrated types, schema, simulation,
+  evidence metadata, adaptive defaults, Menu, stage, keyboard, results, AI CLI and tests.
+  `npm run ai:verify` grows to 1,100 simulations.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before Menu (no Change Detection card):
+    `%TEMP%\opencode\noesis-change-before\before-01-menu.png` SHA-256
+    `CD6A96B1ED52E1F06FD9CAA5E4E733725C0B180ACD181FF7178144AFF827E796`
+  - after Menu: `%TEMP%\opencode\noesis-change-after\after-01-menu.png` SHA-256
+    `DF0C9F1F4ADBC4E59EAF5FAD538D8A91A00B7EFF79B678CDA09B4532C70140B2`
+  - stage: `after-02-change-stage.png` SHA-256
+    `22E7D1FE54AD0DACFAC68119EF8BB34FFF79E53E7884B89ADA64691F8C7B5A3E`
+  - results: `after-03-change-results.png` SHA-256
+    `7D1D523993EB2C3D23BFE6146EBDCDA87D70E44BE9BB587F920CAA335A541EFF`
+- **PROOF (played run)**: `scripts/change-proof.mjs` opened the Menu, started Change Detection,
+  read the briefing, and completed three level-2 blocks: 100% accuracy, 12/12 correct each,
+  set size 5, mean response 414/400/400 ms; `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 433 Vitest; `npm run ai:verify` — 1,100/1,100;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's change engine, UI, evidence docs, tests, proof and record.

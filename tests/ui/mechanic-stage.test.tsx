@@ -279,4 +279,29 @@ describe("MechanicStage", () => {
     expect(hint.textContent).toMatch(/vivid image|short sentence/i);
     expect(hint.textContent).toMatch(/link/i);
   });
+
+  it("renders the change-detection grid and sends the tapped square", () => {
+    const onAnswer = vi.fn();
+    const options = Array.from({ length: 9 }, () => "");
+    options[1] = "c0";
+    options[4] = "c2";
+    options[7] = "c1";
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "change",
+          name: "Change Detection",
+          phase: "test",
+          prompt: "Which square changed colour?",
+          stimulus: null,
+          options,
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(screen.getByTestId("change-cell-1").getAttribute("data-state")).toBe("c0");
+    fireEvent.click(screen.getByTestId("change-cell-4"));
+    expect(onAnswer).toHaveBeenCalledWith(4);
+  });
 });

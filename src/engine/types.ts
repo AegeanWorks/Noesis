@@ -9,6 +9,7 @@ export const MECHANIC_IDS = [
   "rotation",
   "prospective",
   "paired",
+  "change",
 ] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
@@ -457,6 +458,49 @@ export interface PairedState {
   completed: boolean;
 }
 
+export interface ChangeConfig {
+  trials: number;
+  setSize: number;
+  studyMs: number;
+  delayMs: number;
+  testLimitMs: number;
+  feedbackMs: number;
+}
+
+export interface ChangeTrial {
+  positions: number[];
+  studyColours: number[];
+  testColours: number[];
+  changedIndex: number;
+}
+
+export interface ChangeResponse {
+  trial: number;
+  setSize: number;
+  selected: number | null;
+  changedCell: number;
+  correct: boolean;
+  reactionMs: number | null;
+  timedOut: boolean;
+}
+
+export interface ChangeState {
+  mechanic: "change";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: ChangeConfig;
+  trials: ChangeTrial[];
+  index: number;
+  phase: "study" | "delay" | "test" | "feedback" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  itemStartTick: number;
+  selected: number | null;
+  responses: ChangeResponse[];
+  completed: boolean;
+}
+
 export interface ReasoningState {
   mechanic: "reasoning";
   seed: number;
@@ -484,7 +528,8 @@ export type MechanicState =
   | SpatialState
   | RotationState
   | ProspectiveState
-  | PairedState;
+  | PairedState
+  | ChangeState;
 
 export type MechanicAction =
   | { type: "respond" }

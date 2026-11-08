@@ -276,6 +276,40 @@ function RotationFigure({
   );
 }
 
+function ChangeStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  const cells = view.options ?? Array.from({ length: 9 }, () => "");
+  return (
+    <div
+      className="stage stage-change"
+      data-mechanic="change"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
+      <p className="stage-prompt">{view.prompt}</p>
+      <div className="change-grid" role="group" aria-label="Change detection grid">
+        {cells.map((token, index) => (
+          <button
+            key={index}
+            type="button"
+            className={`change-cell ${token ? `change-${token}` : "change-blank"}`}
+            data-testid={`change-cell-${index}`}
+            data-state={token || "blank"}
+            aria-label={`Square ${index + 1}`}
+            disabled={!view.canRespond}
+            onClick={() => onAnswer(index)}
+          />
+        ))}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function PairedStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   const [first = "", second = ""] = (view.stimulus ?? "").split("|");
   return (
@@ -491,6 +525,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "paired") {
     return <PairedStage view={view} onAnswer={props.onAnswer} />;
+  }
+  if (view.mechanic === "change") {
+    return <ChangeStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

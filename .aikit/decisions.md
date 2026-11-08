@@ -390,6 +390,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add an optional **Confidence check** to the pre-test briefing (Low/Medium/High) and repeat the selected level on the corresponding result card. It is clearly labelled as a reflection, not scored and not a diagnostic calibration. No new mechanic or evidence-table record is added. The choice is stored per block in the session state and snapshot so it survives reload, is attached to the completed result, and appears in a same-mechanic, same-level confidence-versus-accuracy summary in Menu History.
 - **Consequences**: The app gains a small metacognitive awareness prompt without a training claim. The prompt is test-covered and has before/after briefing and results proofs; the review remains at 122 records and 284 outcomes. Sessions CSV gains a `confidence` column; JSON exports carry the field on each result.
 
+### ADR-055: Experimental Change Detection focus test
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: A fresh visual working-memory search found no eligible change-detection training meta-analysis. The broader working-memory and executive-function training meta-analyses already in the corpus (PMID 30998045, 32011155) show short-term near transfer but no convincing far transfer. Change detection is a standard visual working-memory paradigm and is distinct from N-back updating and Spatial Span sequencing.
+- **Decision**: Add an experimental **Change Detection** focus test: a brief coloured array is shown, followed by a delay and the same array with one changed square; the user taps the changed square. It reports accuracy, set size, mean response time, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims visual working-memory practice only; no general-memory, academic, everyday-function or diagnostic claim.
+- **Consequences**: The app gains an eleventh mechanic and `npm run ai:verify` grows to 1,100 simulations (11 × 50 × 2). No evidence-table record is added; the review remains at 122 records and 284 outcomes. The task-specific evidence exception is recorded in R69 and the candidate note, following the Flanker precedent.
+
 
 
 

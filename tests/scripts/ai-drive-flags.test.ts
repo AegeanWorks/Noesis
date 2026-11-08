@@ -6,7 +6,7 @@ const source = readFileSync(join(__dirname, "../../scripts/ai-drive.ts"), "utf8"
 
 describe("ai-drive flags", () => {
   it("documents every mechanic in help and error text", () => {
-    expect(source).toContain("nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective|paired");
-    expect(source).toContain("Use nback, gonogo, reasoning, speed, switching, flanker, spatial, rotation, prospective or paired.");
+    expect(source).toContain("nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective|paired|change");
+    expect(source).toContain("Use nback, gonogo, reasoning, speed, switching, flanker, spatial, rotation, prospective, paired or change.");
   });
 });

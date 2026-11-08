@@ -246,6 +246,32 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Static words; no flashing.",
   },
+  change: {
+    id: "change",
+    name: "Change Detection",
+    domain: "working_memory",
+    tagline: "Visual working memory",
+    instructions:
+      "A brief array of coloured squares appears, then one square changes colour. Tap the square that changed. Keys 1-9 work too.",
+    brief:
+      "Visual working-memory practice: hold a short array of colours across a brief delay and detect the changed square. Working-memory and executive-function training meta-analyses show short-term near transfer but no convincing far transfer. This is an experimental focus test, not a validated protocol or a general-intelligence claim.",
+    claimLevel: "experimental",
+    claim: "Practices holding visual colour-location information across a brief delay.",
+    qualifier:
+      "Task practice only. Accuracy and set size are within-session descriptive measures; this is not a diagnostic test and does not claim general memory or everyday-function improvement.",
+    notClaimed: [
+      "General intelligence",
+      "Everyday function",
+      "Dementia prevention",
+      "ADHD treatment",
+      "Long-term memory improvement",
+    ],
+    citations: [
+      { pmid: "30998045", label: "Executive-function training meta-analysis (2019)" },
+      { pmid: "32011155", label: "Cognitive training modules meta-analysis (2020)" },
+    ],
+    safety: "Static coloured squares; one brief change, no flashing.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

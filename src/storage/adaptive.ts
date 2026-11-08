@@ -39,6 +39,7 @@ const DEFAULTS: AdaptiveState = {
     rotation: 2,
     prospective: 2,
     paired: 2,
+    change: 2,
   },
   log: [],
 };

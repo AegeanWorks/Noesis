@@ -118,14 +118,16 @@ export function SessionScreen({
           view.mechanic.mechanic === "spatial" ||
           view.mechanic.mechanic === "rotation" ||
           view.mechanic.mechanic === "prospective" ||
-          view.mechanic.mechanic === "paired") &&
+          view.mechanic.mechanic === "paired" ||
+          view.mechanic.mechanic === "change") &&
         /^[1-9]$/.test(event.key)
       ) {
         const option = Number(event.key) - 1;
         const max =
           view.mechanic.mechanic === "reasoning"
             ? 4
-            : view.mechanic.mechanic === "spatial"
+            : view.mechanic.mechanic === "spatial" ||
+                view.mechanic.mechanic === "change"
               ? 9
               : view.mechanic.mechanic === "prospective"
                 ? 3

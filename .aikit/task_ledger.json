@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-confidence-persist",
+    "task_id": "noesis-change",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794149465.1765337,
-    "owner": "opencode:confpersist",
-    "started_by": "opencode:confpersist",
+    "updated_at": 1794150089.752037,
+    "owner": "opencode:change",
+    "started_by": "opencode:change",
     "continuations": [],
-    "completed_at": 1794149474.5368865
+    "completed_at": 1794150097.095872
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-paired-trend",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add level-aware Paired Associates accuracy/response-time trends and same-level result deltas",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794146443.5160096,
-      "timestamp_str": "2026-11-08 17:00:43",
-      "agent": "opencode:pairedtrend",
-      "impact_assessment": {
-        "why": "Choose, History and Results had only per-block Paired Associates summaries; the two metrics need same-level comparison",
-        "benefits": "Consistent level-aware comparison across all three screens; shared dual-metric helper for rotation and paired",
-        "risks": "contract: Menu/results UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "three failing-first menu tests and four result tests, seeded before/after screenshots, real level-2 played run, full gates"
-      },
-      "plan_digest": "2f0dc2f3546ab001d972c43f5486ede6841b67131a852c2097508c4e2f05a69b"
-    },
-    {
-      "task_id": "noesis-paired-trend",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: dualMetricLevels/DualMetricTrendCard; Paired Choose line and History card; paired result accuracy/RT deltas; tests; paired-trend-proof.mjs; record",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794146444.157051,
-      "timestamp_str": "2026-11-08 17:00:44",
-      "agent": "opencode:pairedtrend"
-    },
-    {
-      "task_id": "noesis-paired-trend",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seeded L3 100%/400, L2 90%/500, L1 70%/700; played L2 100%/416,100%/400,100%/400 gave +10pp/84ms then unchanged; consoleErrors []; 29 Python + 416 Vitest, 1000 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794146444.8725574,
-      "timestamp_str": "2026-11-08 17:00:44",
-      "agent": "opencode:pairedtrend"
-    },
-    {
-      "task_id": "noesis-paired-trend",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-paired-trend' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794146451.748502,
-      "timestamp_str": "2026-11-08 17:00:51",
-      "agent": "opencode:pairedtrend"
-    },
     {
       "task_id": "noesis-dual-task-hint",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794149474.5368886,
       "timestamp_str": "2026-11-08 17:51:14",
       "agent": "opencode:confpersist"
+    },
+    {
+      "task_id": "noesis-change",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: add an experimental Change Detection focus test after a visual working-memory scan found no task-specific meta-analysis",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794150088.4723241,
+      "timestamp_str": "2026-11-08 18:01:28",
+      "agent": "opencode:change",
+      "impact_assessment": {
+        "why": "The fresh scan found no eligible change-detection training meta-analysis; broad WM/EF evidence supports near transfer and change detection is distinct from N-back/Spatial Span",
+        "benefits": "A new visual working-memory focus test with set-size metrics and an explicit evidence exception",
+        "risks": "contract: new mechanic across types/schema/UI/AI; default four-core lineup unchanged; dependency: none; concurrency: none; state: additive adaptive level and snapshot support",
+        "mitigation": "engine/UI tests, fixed-clock before/after proof, R69/ADR-055 claim boundary, full gates"
+      },
+      "plan_digest": "55a9a08c9fb4baa061bd273ac0c7957ee8ba93844194b7513a2de13f85a40953"
+    },
+    {
+      "task_id": "noesis-change",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Impl: deterministic colour-array change engine; stage/results/keyboard; README/docs/R69/ADR-055; AI 1100 sims",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794150089.1085148,
+      "timestamp_str": "2026-11-08 18:01:29",
+      "agent": "opencode:change"
+    },
+    {
+      "task_id": "noesis-change",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: before Menu no card; after card+briefing+3 level-2 blocks 12/12 each set size 5, mean 414/400/400; consoleErrors []; 29 Python + 433 Vitest, 1100 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794150089.752037,
+      "timestamp_str": "2026-11-08 18:01:29",
+      "agent": "opencode:change"
+    },
+    {
+      "task_id": "noesis-change",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-change' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794150097.0958745,
+      "timestamp_str": "2026-11-08 18:01:37",
+      "agent": "opencode:change"
     }
   ]
 }
