@@ -1082,3 +1082,42 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 360 Vitest; `npm run ai:verify` — 600/600;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's result delta, tests, proof script update and record.
+
+## Cycle 21 — Experimental Spatial Span focus test from verified Corsi evidence
+
+- **Area**: new approach / literature matrix, candidate selected after targeted PubMed verification.
+- **FIND**: The matrix listed spatial span/Corsi as an untested visuospatial working-memory
+  candidate. A targeted 2026-11-08 PubMed search found Olegário et al. 2025 (PMID 37822255;
+  *Psychology & Health*; 31 included trials, 13 in the meta-analysis): cognitive training
+  improved Corsi Block working memory in healthy older adults (d=0.16, p=.002), while Digit Span
+  backward and N-back were not significant. Melby-Lervåg and Hulme (2013, PMID 22612437) found
+  short-term visuospatial near transfer with limited maintenance; their 2016 review (PMID
+  27474138) found no convincing far transfer against treated controls. Metadata and DOIs for all
+  records were verified via PubMed esummary.
+- **ANALYSE / DECISION**: Implement a claim-bounded experimental Spatial Span focus test. The
+  evidence supports visuospatial working-memory practice but not general intelligence, academic
+  achievement, everyday function or a diagnostic interpretation. Recorded as ADR-047 and R65;
+  the 2025 record was added to the evidence table as context, taking the review to 119 records,
+  281 outcomes and revision v1.3.
+- **IMPLEMENT**: Deterministic `spatial` mechanic: 3x3 grid, slow sequence presentation, recall
+  by tapping in order, adaptive span 3/4/5 start and 2-8 bounds, wrong-tap trial termination,
+  20 s recall window. Metrics: accuracy, mean span, longest correct span, timeouts, streaks.
+  Integrated types, schema, simulation, evidence metadata, adaptive defaults, Menu, stage,
+  keyboard, results, AI CLI and tests. `npm run ai:verify` grows from 600 to 700 simulations.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before Menu (no Spatial Span card):
+    `%TEMP%\opencode\noesis-spatial-before\before-01-menu.png` SHA-256
+    `9005A72247E3377218D42B935CD140836E1E8C9911FAA502CC863DC807A704E3`
+  - after Menu: `%TEMP%\opencode\noesis-spatial-after\after-01-menu.png` SHA-256
+    `4C4A0F5258391C3B9C14793C2CCD21E0F5EC1FAD8A34586526E150AD9C35278A`
+  - sequence presentation: `%TEMP%\opencode\noesis-spatial-after\after-02-spatial-show.png`
+    SHA-256 `BF61FBAA1F4BC59E93F9A8DB7596D039958B01E963BAEB45C7F64527FDCE88D3`
+  - results: `%TEMP%\opencode\noesis-spatial-after\after-03-spatial-results.png` SHA-256
+    `8752029DDE75630DD4DDB7C6289C6A791891EB603FCF817CE1E1A8845A4A29D0`
+- **PROOF (played run)**: `scripts/spatial-proof.mjs` opened the Menu, started Spatial Span, read
+  the briefing, and completed three level-2 blocks: mechanics `["spatial","spatial","spatial"]`,
+  difficulties `[2,2,2]`, each 100% accuracy, 8/8 correct, mean span 6.8, longest span 8;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 367 Vitest; `npm run ai:verify` — 700/700;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's Spatial Span engine, UI, evidence table, tests, proof and record.

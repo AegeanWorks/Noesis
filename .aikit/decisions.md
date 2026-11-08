@@ -334,6 +334,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add an experimental **Flanker** focus test: a static five-arrow row with a left/right centre arrow and congruent or incongruent flankers; answer Left/Right; report accuracy, congruent/incongruent reaction time and interference cost. It is available from the Menu as a three-block focus test, not in the default lineup. The copy states explicitly that no Flanker-specific meta-analysis was found and that this is task practice, not a validated protocol, diagnostic, general-intelligence or everyday-function claim.
 - **Consequences**: The app gains a sixth mechanic and `npm run ai:verify` grows to 600 simulations (6 × 50 × 2). The exception to the task-specific-evidence preference is recorded in the candidate matrix and this ADR; future candidates still need task-specific evidence or a similarly explicit, claim-bounded rationale.
 
+### ADR-047: Experimental Spatial Span focus test
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The candidate matrix listed spatial span/Corsi as the next untested visuospatial working-memory candidate. A targeted PubMed search on 2026-11-08 found a 2025 systematic review and meta-analysis of cognitive training in healthy older adults (PMID 37822255; 31 included trials, 13 in the meta-analysis) with a small Corsi Block effect (d=0.16, p=.002), while Digit Span backward and N-back were not significant. Broader working-memory reviews (PMIDs 22612437, 27474138) show short-term visuospatial near transfer but no convincing far transfer. The effect is small and task-specific, not a validated protocol.
+- **Decision**: Add an experimental **Spatial Span** focus test: a 3x3 grid presents a slow sequence of highlighted blocks, then the user taps the same order. The span starts at 3/4/5 by level and adapts after each trial. The block reports accuracy, mean span, longest correctly recalled span, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims visuospatial working-memory practice only, not general intelligence, academic achievement, everyday function or a diagnostic result.
+- **Consequences**: The app gains a seventh mechanic and `npm run ai:verify` grows to 700 simulations (7 × 50 × 2). The evidence table gains one context record (37822255), taking the review to 119 records and 281 outcomes and revision v1.3. The small Corsi effect and absent far-transfer evidence are stated in the candidate note and R65.
+
 
 
 

@@ -111,7 +111,7 @@ function renderMenu(overrides: Partial<ComponentProps<typeof PracticeMenuScreen>
 describe("PracticeMenuScreen", () => {
   it("lists every test with a literature brief and starts the chosen one", () => {
     const props = renderMenu();
-    for (const name of ["N-back", "Go / No-Go", "Reasoning", "Speed Tap", "Task Switch", "Flanker"]) {
+    for (const name of ["N-back", "Go / No-Go", "Reasoning", "Speed Tap", "Task Switch", "Flanker", "Spatial Span"]) {
       expect(screen.getByRole("heading", { name })).toBeTruthy();
     }
     const nback = screen.getByTestId("menu-test-nback");

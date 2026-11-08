@@ -28,7 +28,15 @@ export const ADAPT_DOWN_BELOW = 0.6;
 
 const DEFAULTS: AdaptiveState = {
   enabled: false,
-  levels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 },
+  levels: {
+    nback: 2,
+    gonogo: 2,
+    reasoning: 2,
+    speed: 2,
+    switching: 2,
+    flanker: 2,
+    spatial: 2,
+  },
   log: [],
 };
 

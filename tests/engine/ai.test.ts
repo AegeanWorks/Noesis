@@ -1,4 +1,4 @@
-﻿import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 import { createAiApi } from "../../src/engine/ai";
 import { defaultSessionConfig } from "../../src/engine/session";
 import { sessionStore } from "../../src/engine/store";
@@ -10,7 +10,7 @@ afterEach(() => {
 describe("AI harness", () => {
   it("lists every mechanic", () => {
     const api = createAiApi();
-    expect(api.listMechanics()).toHaveLength(6);
+    expect(api.listMechanics()).toHaveLength(7);
   });
 
   it("creates a session and dispatches a parsed action", () => {
@@ -65,4 +65,3 @@ describe("AI harness", () => {
     expect(api.getState()).toBeNull();
   });
 });
-

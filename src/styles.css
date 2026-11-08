@@ -1779,3 +1779,57 @@ html.high-contrast .speed-ring-active {
   border-left: 3px solid rgba(255, 196, 107, 0.45);
 }
 
+
+.stage-spatial {
+  align-items: center;
+}
+
+.spatial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 72px);
+  gap: 12px;
+  margin: 8px auto;
+}
+
+.spatial-cell {
+  width: 72px;
+  height: 72px;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.spatial-cell:disabled {
+  cursor: default;
+}
+
+.spatial-cell-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  transform: scale(1.04);
+}
+
+.spatial-cell-selected {
+  border-color: var(--accent);
+  background: rgba(139, 233, 253, 0.28);
+}
+
+.spatial-cell-correct {
+  border-color: var(--ok);
+  background: rgba(99, 242, 162, 0.28);
+}
+
+.spatial-cell-wrong {
+  border-color: var(--bad);
+  background: rgba(255, 123, 133, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spatial-cell {
+    transition: none;
+  }
+}
+

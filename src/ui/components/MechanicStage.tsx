@@ -187,6 +187,39 @@ function FlankerStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">)
   );
 }
 
+function SpatialStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  return (
+    <div
+      className="stage stage-spatial"
+      data-mechanic="spatial"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
+      <p className="stage-prompt">{view.prompt}</p>
+      <div className="spatial-grid" role="group" aria-label="Spatial span grid">
+        {(view.options ?? []).map((cellState, index) => (
+          <button
+            key={index}
+            type="button"
+            className={`spatial-cell spatial-cell-${cellState || "idle"}`}
+            data-testid={`spatial-cell-${index}`}
+            data-state={cellState || "idle"}
+            aria-label={`Block ${index + 1}${cellState === "active" ? " highlighted" : ""}`}
+            disabled={!view.canRespond}
+            onClick={() => onAnswer(index)}
+          />
+        ))}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function ReasoningStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   return (
     <div
@@ -239,6 +272,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "flanker") {
     return <FlankerStage view={view} onAnswer={props.onAnswer} />;
+  }
+  if (view.mechanic === "spatial") {
+    return <SpatialStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

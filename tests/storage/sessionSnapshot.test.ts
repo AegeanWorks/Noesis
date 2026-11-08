@@ -129,4 +129,16 @@ describe("session snapshot", () => {
     saveSessionSnapshot(state);
     expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("flanker");
   });
+
+  it("round-trips a running Spatial Span block", () => {
+    const state = applySessionAction(
+      createSession(defaultSessionConfig(9, 2, "standard", undefined, "spatial")),
+      { type: "begin" },
+    );
+    if (state.current?.mechanic !== "spatial") {
+      throw new Error("expected a Spatial Span session");
+    }
+    saveSessionSnapshot(state);
+    expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("spatial");
+  });
 });

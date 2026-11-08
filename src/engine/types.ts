@@ -1,4 +1,12 @@
-export const MECHANIC_IDS = ["nback", "gonogo", "reasoning", "speed", "switching", "flanker"] as const;
+export const MECHANIC_IDS = [
+  "nback",
+  "gonogo",
+  "reasoning",
+  "speed",
+  "switching",
+  "flanker",
+  "spatial",
+] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
 export type Domain =
@@ -279,6 +287,46 @@ export interface FlankerState {
   completed: boolean;
 }
 
+export interface SpatialConfig {
+  trials: number;
+  startSpan: number;
+  showMs: number;
+  gapMs: number;
+  feedbackMs: number;
+  recallLimitMs: number;
+}
+
+export interface SpatialTrial {
+  sequence: number[];
+  span: number;
+}
+
+export interface SpatialResponse {
+  trial: number;
+  span: number;
+  selected: number[];
+  correct: boolean;
+  timedOut: boolean;
+}
+
+export interface SpatialState {
+  mechanic: "spatial";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: SpatialConfig;
+  trials: SpatialTrial[];
+  index: number;
+  span: number;
+  phase: "show" | "gap" | "recall" | "feedback" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  showIndex: number;
+  selected: number[];
+  responses: SpatialResponse[];
+  completed: boolean;
+}
+
 export interface ReasoningState {
   mechanic: "reasoning";
   seed: number;
@@ -302,7 +350,8 @@ export type MechanicState =
   | ReasoningState
   | SpeedState
   | SwitchingState
-  | FlankerState;
+  | FlankerState
+  | SpatialState;
 
 export type MechanicAction =
   | { type: "respond" }

@@ -54,7 +54,7 @@ The following sources stayed narrative-only:
 | **Task Switch** | Set-shifting / cognitive flexibility | Core-EF meta-analyses show small near and far transfer; single-component EF training was most effective in one analysis, while multicomponent training also transferred and improved everyday functioning (30998045, 32011155) | Static coloured shapes; no flashing; easy deterministic state machine | **Implement as experimental focus test** |
 | Flanker | Interference control | No eligible Flanker-specific training meta-analysis in this search; the standard interference-control paradigm is covered by broader EF training evidence with small near transfer (30998045, 32011155) | Static arrows; safe | **Implement as experimental focus test, claim-bounded** |
 | Stop-signal | Response inhibition / cancellation | Strong paradigm, but Go/No-Go already covers inhibition in the core lineup | Static go/stop cues; safe | Candidate, not implemented |
-| Spatial span / Corsi | Visuospatial working memory | Near transfer is plausible; less evidence for broad transfer | Grid sequence; safe | Candidate, not implemented |
+| Spatial span / Corsi | Visuospatial working memory | A 2025 meta-analysis found a small Corsi Block effect (d=0.16) in healthy older adults; broader working-memory reviews show short-term near transfer but no convincing far transfer (37822255, 22612437, 27474138) | Grid sequence; safe | **Implement as experimental focus test, claim-bounded** |
 | Mental rotation | Spatial ability | Training improves spatial tasks; far transfer to academic outcomes is not established | Static 2D/3D shapes; safe | Candidate, not implemented |
 | Visual search / UFOV-like | Processing speed / attention | ACTIVE supports speed training, but this app's Speed Tap is not UFOV and a simple search task would not be the validated protocol | Static search array; safe | Candidate, not implemented |
 | Action video game | Attention / spatial cognition | g=0.34 intervention (29172564), but genre is broad and often fast/flashing | Conflicts with the no-flashing safety posture | Do not build a flashing action game |
@@ -109,6 +109,23 @@ quantitative basis.
   experimental, claim-bounded focus test rather than a validated protocol. It makes no
   general-intelligence, academic, dementia-prevention or everyday-function claim.
 
+### 4.2 Spatial Span implementation and evidence limit
+
+- A 3x3 grid shows a sequence of highlighted blocks, one at a time, at a slow fixed pace.
+- After a short gap, the user taps the blocks in the same order. A wrong tap ends the trial.
+- The span starts at 3/4/5 by level and moves up after a correct trial and down after a miss,
+  bounded at 2-8.
+- Metrics: accuracy, mean span, longest correctly recalled span, timeouts and streaks.
+- It is available from the Menu as a three-block focus test. It is not in the default lineup.
+- **Evidence:** the 2025 meta-analysis by Olegário et al. (PMID 37822255; 31 included trials,
+  13 in the meta-analysis) found a small Corsi Block improvement in healthy older adults
+  (d=0.16, p=.002) but no significant effects on Digit Span backward or N-back; it found no
+  cognitive-flexibility effect. Melby-Lervåg and Hulme (2013, PMID 22612437) found short-term
+  visuospatial near transfer with limited maintenance, and their 2016 review (PMID 27474138)
+  found no convincing far transfer against treated controls. The app therefore claims
+  visuospatial working-memory practice only, not a validated protocol, diagnostic, or
+  general-intelligence/academic/everyday-function benefit.
+
 ---
 
 ## 5. Requirement and limits
@@ -117,13 +134,19 @@ quantitative basis.
   switch/repeat accuracy and switch-cost metrics, no flashing, and no general-intelligence or
   everyday-function claim. It is not in the default four-block lineup until the lineup is
   revalidated.
+- **R64:** Flanker is an experimental focus test with static arrows, congruent/incongruent
+  accuracy and reaction time and interference cost. No Flanker-specific training meta-analysis
+  was found; the claim is limited to task practice.
+- **R65:** Spatial Span is an experimental focus test with a slow 3x3 sequence, adaptive span,
+  and accuracy/mean-span/longest-span metrics. A small Corsi Block effect supports
+  visuospatial working-memory practice only; far transfer is not claimed.
 
-Limits: the evidence is for executive-function training broadly, not for this exact
-colour/shape or arrow task. Both meta-analyses also report benefits from multicomponent
-training, including everyday functioning in Basak et al., and Nguyen et al. recommend adaptive
-multidomain training. Task Switch and Flanker are therefore conservative single-task focus
-tests, not evidence that single-component training is superior, and they do not replace the
-core lineup. Flanker has no task-specific training meta-analysis in this review; its claim is
-limited to task practice. The tasks are practice and measurement instruments, not diagnostic
-tests. Future candidates should be selected by task-specific evidence and safety, not by genre
-labels.
+Limits: the evidence is for executive-function and working-memory training broadly, not for
+these exact colour/shape, arrow or grid tasks. The meta-analyses also report benefits from
+multicomponent training, and Nguyen et al. recommend adaptive multidomain training. Task
+Switch, Flanker and Spatial Span are therefore conservative single-task focus tests, not
+evidence that single-component training is superior, and they do not replace the core lineup.
+Flanker has no task-specific training meta-analysis in this review; its claim is limited to
+task practice. Spatial Span has a small Corsi-specific pooled effect but no far-transfer
+evidence. The tasks are practice and measurement instruments, not diagnostic tests. Future
+candidates should be selected by task-specific evidence and safety, not by genre labels.

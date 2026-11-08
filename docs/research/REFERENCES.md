@@ -43,6 +43,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 
 - Immediate and long-term efficacy of executive functions cognitive training in older adults: A systematic review and meta-analysis. *Psychological Bulletin*. 2019. PMID: [30998045](https://pubmed.ncbi.nlm.nih.gov/30998045/). DOI: [10.1037/bul0000196](https://doi.org/10.1037/bul0000196).
 - Differential effects of cognitive training modules in healthy aging and mild cognitive impairment: A comprehensive meta-analysis of randomized controlled trials. *Psychology and Aging*. 2020. PMID: [32011155](https://pubmed.ncbi.nlm.nih.gov/32011155/). DOI: [10.1037/pag0000442](https://doi.org/10.1037/pag0000442).
+- Efficacy of cognitive training on executive functions in healthy older adults: a systematic review with meta-analysis of randomized controlled trials. *Psychology & Health*. 2025. PMID: [37822255](https://pubmed.ncbi.nlm.nih.gov/37822255/). DOI: [10.1080/08870446.2023.2267610](https://doi.org/10.1080/08870446.2023.2267610).
 
 ## Neurofeedback
 

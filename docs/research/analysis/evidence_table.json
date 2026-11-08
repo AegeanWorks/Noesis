@@ -7177,6 +7177,53 @@
    ],
    "synthesis_role": "context",
    "product_use": "Supports an experimental executive-function task-switching test; standard sessions remain the four core mechanics."
+  },
+  {
+   "pmid": "37822255",
+   "doi": "10.1080/08870446.2023.2267610",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "Psychology & Health",
+   "title": "Efficacy of cognitive training on executive functions in healthy older adults: a systematic review with meta-analysis of randomized controlled trials",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults"
+   ],
+   "k": 13,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "Cohen d",
+     "value": 0.16,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Corsi Block task; p=.002; 13 trials entered the meta-analysis; other working-memory measures were not significant"
+    }
+   ],
+   "findings": [
+    "Cognitive training improved working memory measured by the Corsi Block task (d=0.16, p=.002) in healthy older adults",
+    "Digit Span forward was marginal (p=.06); Digit Span backward and N-back were not significant",
+    "Inhibitory control improved on Stroop but not Go/No-Go; cognitive flexibility showed no evidence"
+   ],
+   "limitations": [
+    "Heterogeneous cognitive-training programs; 13 of the 31 included trials entered the meta-analysis",
+    "The Corsi effect was small",
+    "Certainty is source-reported and provisional"
+   ],
+   "flags": [
+    "heterogeneity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Supports a Corsi-style spatial-span focus test as working-memory practice; no far-transfer or everyday-function claim."
   }
  ]
 }

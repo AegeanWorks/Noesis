@@ -13,6 +13,7 @@ import type {
   SpeedState,
   SwitchingState,
   FlankerState,
+  SpatialState,
 } from "./types";
 
 export type Policy = (state: MechanicState) => MechanicAction | null;
@@ -56,6 +57,12 @@ export function optimalPolicy(state: MechanicState): MechanicAction | null {
     const trial = current(state.trials, state.index);
     return trial ? { type: "answer", option: flankerCorrectIndex(trial) } : null;
   }
+  if (state.mechanic === "spatial") {
+    if (state.phase !== "recall") return null;
+    const trial = current(state.trials, state.index);
+    const cell = trial?.sequence[state.selected.length];
+    return cell === undefined ? null : { type: "answer", option: cell };
+  }
   if (state.phase !== "question") return null;
   if (state.phaseElapsed < 500) return null;
   const id = state.order[state.index];
@@ -87,6 +94,9 @@ export function alwaysPolicy(state: MechanicState): MechanicAction | null {
   }
   if (state.mechanic === "flanker") {
     return state.phase === "question" ? { type: "answer", option: 0 } : null;
+  }
+  if (state.mechanic === "spatial") {
+    return state.phase === "recall" ? { type: "answer", option: 0 } : null;
   }
   return state.phase === "question" ? { type: "answer", option: 0 } : null;
 }
@@ -126,6 +136,12 @@ export function randomPolicy(seed: number): Policy {
     if (state.mechanic === "flanker") {
       if (state.phase !== "question") return null;
       const [option, next] = randomInt(rng, 2);
+      rng = next;
+      return { type: "answer", option };
+    }
+    if (state.mechanic === "spatial") {
+      if (state.phase !== "recall") return null;
+      const [option, next] = randomInt(rng, 9);
       rng = next;
       return { type: "answer", option };
     }
@@ -203,6 +219,14 @@ export function runMechanic(
   policy: Policy,
   options?: SimulationOptions,
 ): SimulationResult<FlankerState>;
+export function runMechanic(
+  id: "spatial",
+  seed: number,
+  difficulty: number,
+  trials: number,
+  policy: Policy,
+  options?: SimulationOptions,
+): SimulationResult<SpatialState>;
 export function runMechanic(
   id: MechanicId,
   seed: number,

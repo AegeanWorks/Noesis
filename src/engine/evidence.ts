@@ -142,6 +142,32 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Static arrow characters. No flashing.",
   },
+  spatial: {
+    id: "spatial",
+    name: "Spatial Span",
+    domain: "working_memory",
+    tagline: "Visuospatial working memory",
+    instructions:
+      "Watch the blocks light up in order, then tap them in the same order. The sequence grows after a correct trial and shrinks after a miss. No time pressure beyond a generous recall window.",
+    brief:
+      "Visuospatial working-memory practice: a short block sequence is shown, then reproduced. A 2025 meta-analysis of cognitive training in healthy older adults found a small improvement on the Corsi Block task (d=0.16), and working-memory training reviews show short-term near transfer but no convincing far transfer. This is an experimental focus test, not a validated protocol or a general-intelligence claim.",
+    claimLevel: "experimental",
+    claim:
+      "Practices holding and reproducing a sequence of spatial locations, the task a Corsi block test measures.",
+    qualifier:
+      "Task practice only. Span is a within-session descriptive measure; this is not a diagnostic test and does not train general intelligence or everyday function.",
+    notClaimed: [
+      "General intelligence",
+      "Academic achievement",
+      "Dementia prevention",
+      "Everyday function",
+      "ADHD treatment",
+    ],
+    citations: [
+      { pmid: "37822255", label: "Cognitive training and Corsi Block meta-analysis (2025)" },
+    ],
+    safety: "Static grid; highlights change at a slow fixed pace with no flashing.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

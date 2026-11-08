@@ -154,4 +154,29 @@ describe("MechanicStage", () => {
     fireEvent.click(screen.getByTestId("option-1"));
     expect(onAnswer).toHaveBeenCalledWith(1);
   });
+
+  it("renders the spatial grid and sends the tapped cell", () => {
+    const onAnswer = vi.fn();
+    const options = Array.from({ length: 9 }, () => "");
+    options[2] = "active";
+    options[4] = "selected";
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "spatial",
+          name: "Spatial Span",
+          phase: "recall",
+          prompt: "Tap the blocks in the same order (1/3)",
+          stimulus: null,
+          options,
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(screen.getByTestId("spatial-cell-2").getAttribute("data-state")).toBe("active");
+    expect(screen.getByTestId("spatial-cell-4").getAttribute("data-state")).toBe("selected");
+    fireEvent.click(screen.getByTestId("spatial-cell-4"));
+    expect(onAnswer).toHaveBeenCalledWith(4);
+  });
 });

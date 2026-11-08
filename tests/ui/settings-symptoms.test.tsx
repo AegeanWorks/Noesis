@@ -1,4 +1,4 @@
-﻿// @vitest-environment jsdom
+// @vitest-environment jsdom
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { SettingsScreen } from "../../src/ui/screens/SettingsScreen";
@@ -34,7 +34,7 @@ const BASE = {
   weeklyGoal: 3,
   onWeeklyGoal: () => {},
   adaptiveEnabled: false,
-  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 } as const,
+  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2 } as const,
   onAdaptiveToggle: () => {},
   study: { enrolled: false, studyId: null, arm: null, consentedAt: null },
   onEnrollStudy: () => {},
@@ -166,7 +166,7 @@ describe("SettingsScreen adaptive difficulty", () => {
         onAdaptiveToggle={onToggle}
       />,
     );
-    expect(screen.getAllByText("Level 2")).toHaveLength(6);
+    expect(screen.getAllByText("Level 2")).toHaveLength(7);
   });
 });
 
@@ -291,5 +291,3 @@ describe("SettingsScreen study enrollment", () => {  it("requires an id and cons
     expect(written[0]).toMatch(/noesis practice week of/i);
   });
 });
-
-
