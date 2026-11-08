@@ -2,12 +2,14 @@ import { mechanicMeta } from "../../engine/evidence";
 import type { MotivationState } from "../../engine/motivation";
 import { MOTIVATION_TIERS } from "../../engine/motivation";
 import type { AdverseEvent } from "../../storage/adverseEvents";
+import type { SessionRecord } from "../../storage/history";
 import type { MechanicResult } from "../../engine/types";
 import { Button } from "../components/Button";
 import { SymptomCheckin } from "../components/SymptomCheckin";
 
 interface ResultsScreenProps {
   results: MechanicResult[];
+  history: readonly SessionRecord[];
   motivation: MotivationState | null;
   sessionId: string | null;
   newBests: MechanicResult["mechanic"][];
@@ -82,12 +84,51 @@ function MetricTile({ metricKey, value }: { metricKey: string; value: number }) 
   );
 }
 
+interface SwitchCostComparison {
+  previous: number;
+  delta: number;
+}
+
+function switchCostComparisons(
+  history: readonly SessionRecord[],
+  sessionId: string | null,
+  results: readonly MechanicResult[],
+): Array<SwitchCostComparison | null> {
+  const previousByLevel = new Map<number, number>();
+  for (const record of [...history].reverse()) {
+    if (record.id === sessionId) continue;
+    for (const result of record.results) {
+      if (result.mechanic !== "switching") continue;
+      const level = result.difficulty;
+      const cost = result.metrics.switch_cost_ms;
+      if (typeof level === "number" && typeof cost === "number" && Number.isFinite(cost)) {
+        previousByLevel.set(level, cost);
+      }
+    }
+  }
+  return results.map((result) => {
+    if (result.mechanic !== "switching") return null;
+    const level = result.difficulty;
+    const cost = result.metrics.switch_cost_ms;
+    if (typeof level !== "number" || typeof cost !== "number" || !Number.isFinite(cost)) {
+      return null;
+    }
+    const previous = previousByLevel.get(level);
+    previousByLevel.set(level, cost);
+    return previous === undefined ? null : { previous, delta: cost - previous };
+  });
+}
+
 function ResultCard({
   result,
+  index,
   isNewBest,
+  switchCostComparison,
 }: {
   result: MechanicResult;
+  index: number;
   isNewBest: boolean;
+  switchCostComparison: SwitchCostComparison | null;
 }) {
   const meta = mechanicMeta(result.mechanic);
   const primaryKeys = PRIMARY_METRICS[result.mechanic].filter(
@@ -96,6 +137,25 @@ function ResultCard({
   const secondary = Object.entries(result.metrics).filter(
     ([key]) => !primaryKeys.includes(key),
   );
+  const switchCost = result.metrics.switch_cost_ms;
+  const switchDirection =
+    switchCostComparison === null
+      ? "first"
+      : switchCostComparison.delta < 0
+        ? "improved"
+        : switchCostComparison.delta > 0
+          ? "worsened"
+          : "same";
+  const switchChangeText =
+    switchCostComparison === null
+      ? typeof result.difficulty === "number"
+        ? "First block at this level; no earlier switch-cost comparison."
+        : "No earlier switch-cost comparison."
+      : switchCostComparison.delta < 0
+        ? `Improved ${Math.abs(switchCostComparison.delta)} ms vs previous Level ${result.difficulty} block (${switchCostComparison.previous} → ${Math.round(switchCost ?? 0)} ms).`
+        : switchCostComparison.delta > 0
+          ? `Worsened +${switchCostComparison.delta} ms vs previous Level ${result.difficulty} block (${switchCostComparison.previous} → ${Math.round(switchCost ?? 0)} ms).`
+          : `No change vs previous Level ${result.difficulty} block (${switchCostComparison.previous} ms).`;
 
   return (
     <article className="card result-card">
@@ -112,11 +172,20 @@ function ResultCard({
       </div>
       <p className="result-summary">{result.summary}</p>
       {result.mechanic === "switching" ? (
-        <p className="fine switch-cost-note" data-testid="switch-cost-note">
-          Switch cost = mean reaction on switch trials minus repeat trials. A negative value
-          means switching was faster than repeating in this block; it is a descriptive
-          within-session measure, not a diagnosis.
-        </p>
+        <>
+          <p className="fine switch-cost-note" data-testid="switch-cost-note">
+            Switch cost = mean reaction on switch trials minus repeat trials. A negative value
+            means switching was faster than repeating in this block; it is a descriptive
+            within-session measure, not a diagnosis.
+          </p>
+          <p
+            className={`fine switch-cost-change switch-cost-change-${switchDirection}`}
+            data-testid={`switch-cost-vs-previous-${index}`}
+            data-direction={switchDirection}
+          >
+            {switchChangeText}
+          </p>
+        </>
       ) : null}
       {isNewBest ? (
         <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
@@ -145,6 +214,7 @@ function ResultCard({
 
 export function ResultsScreen({
   results,
+  history,
   motivation,
   sessionId,
   newBests,
@@ -156,6 +226,7 @@ export function ResultsScreen({
   const notClaimed = Array.from(
     new Set(results.flatMap((result) => mechanicMeta(result.mechanic).notClaimed)),
   );
+  const switchComparisons = switchCostComparisons(history, sessionId, results);
 
   return (
     <section className="screen results-screen">
@@ -174,7 +245,9 @@ export function ResultsScreen({
             <ResultCard
               key={`${result.mechanic}-${index}`}
               result={result}
+              index={index}
               isNewBest={newBests.includes(result.mechanic)}
+              switchCostComparison={switchComparisons[index] ?? null}
             />
           ))}
         </div>

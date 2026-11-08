@@ -21,6 +21,7 @@ Covered so far:
 12. Task Switch resume and switch-cost interpretation — 2026-11-08 — cycle 12
 13. Level-aware switch-cost history — 2026-11-08 — cycle 13
 14. Same-level switch-cost change — 2026-11-08 — cycle 14
+15. Same-level result delta — 2026-11-08 — cycle 15
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -878,3 +879,32 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 341 Vitest; `npm run ai:verify` — 500/500;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's change indicator, test, proof script update and record.
+
+## Cycle 15 — Same-level switch-cost delta on the result card
+
+- **Area**: Task Switch result readability, completing the same-level comparison from History.
+- **FIND**: The History row showed improved/worsened versus the previous same-level block, but the
+  just-completed result card still showed only the raw switch cost. A user could see the delta in
+  History but not on the screen where the block is reported.
+- **IMPLEMENT**: `ResultsScreen` now receives `history` and computes `switch-cost comparisons`:
+  prior sessions at the same level seed the previous value, then current-session blocks compare
+  sequentially within their level. Each switching card shows `First block at this level`,
+  `Improved N ms ... (previous → current ms)`, `Worsened +N ms ...`, or `No change ...`, with the
+  matching color and `data-direction`. The comparison is per level only. Tests cover prior-history
+  improvement and first-block copy; App passes history through.
+- **PROOF (screenshots)**: real three-block level-3 Task Switch run, 390x844@2x, same seed
+  2721744568:
+  - before: `%TEMP%\opencode\noesis-switch-result-delta-before\before-04-task-switch-results.png`
+    SHA-256 `73E83BDE0E235FA3E2F9998B2FDF8D4836A1FDA1159E0967EECC461CF285BFF9`
+    (raw note only)
+  - after: `%TEMP%\opencode\noesis-switch-result-delta-after\04-task-switch-results.png`
+    SHA-256 `5949404294E2F7054F9DD32F941B54A019193897183F63DFB2DED4CA076B88BF`
+    (`First block...`, `Improved 141 ms vs previous Level 3 block (141 → 0 ms)`,
+    `No change vs previous Level 3 block (0 ms)`)
+- **PROOF (played run)**: the proof resumed and completed all three level-3 blocks; the result
+  cards reported switch costs `[141, 0, 0]` and the three delta states
+  `first / improved / same`. The comparison uses only level 3; `consoleErrors []`. The same
+  proof also re-confirmed mid-session reload/resume at block 0/3, trial 8.
+- **GATES**: `npm run test:all` — 29 Python + 343 Vitest; `npm run ai:verify` — 500/500;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's result delta, tests, proof script update and record.

@@ -822,6 +822,7 @@ export function App() {
         {screen === "results" ? (
           <ResultsScreen
             results={state?.results ?? []}
+            history={history}
             motivation={motivation}
             sessionId={lastSessionId}
             newBests={newBests}

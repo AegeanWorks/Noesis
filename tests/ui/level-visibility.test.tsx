@@ -60,6 +60,7 @@ describe("difficulty visibility", () => {
     render(
       <ResultsScreen
         results={[RESULT]}
+        history={[]}
         motivation={null}
         sessionId="session-1"
         newBests={[]}

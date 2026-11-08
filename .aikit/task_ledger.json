@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-switch-change",
+    "task_id": "noesis-switch-result-delta",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794132636.3269792,
-    "owner": "opencode:switchchange",
-    "started_by": "opencode:switchchange",
+    "updated_at": 1794133210.555615,
+    "owner": "opencode:switchdelta",
+    "started_by": "opencode:switchdelta",
     "continuations": [],
-    "completed_at": 1794132645.5138762
+    "completed_at": 1794133220.0793726
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-task-switch",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/4] Impl: deterministic Task Switch mechanic (colour/shape rule switching), switch/repeat metrics, UI stage and keys 1/2, focus-session support, Menu test card, evidence meta and two EF context records, 500-simulation verifier, NEW_MECHANIC_CANDIDATES.md, R63 and ADR-045",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794128184.0834453,
-      "timestamp_str": "2026-11-08 11:56:24",
-      "agent": "opencode:task-switch"
-    },
-    {
-      "task_id": "noesis-task-switch",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/4] Plan: search new game paradigms in the literature and add the best-supported safe candidate as an experimental focus test",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794128202.0409129,
-      "timestamp_str": "2026-11-08 11:56:42",
-      "agent": "opencode:task-switch",
-      "impact_assessment": {
-        "why": "The user asked to continue searching new games in the literature. The app had four core mechanics but no cognitive-flexibility task; EF training meta-analyses support a set-shifting practice task, and a candidate matrix shows why other genres/tasks are not first.",
-        "benefits": "A literature-selected Task Switch focus test with switch/repeat accuracy and switch cost; two EF context records; a documented candidate matrix; default four-core lineup unchanged",
-        "risks": "contract: new MechanicId, state machine and focus-only UI; dependency: none; concurrency: none; state: adaptive levels gain a fifth key, old adaptive state resets to defaults",
-        "mitigation": "failing-first engine/UI/session tests, 500 deterministic simulations, browser switching proof, full gates"
-      },
-      "plan_digest": "5514d789b0d517e95151317b53604f456c16bbf6bcc86c57a0c0516db94ee9aa"
-    },
-    {
-      "task_id": "noesis-task-switch",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/4] Verified: 29 Python + 335 Vitest; typecheck/build clean; ai:verify 500/500 (5 mechanics); review 118 records/280 outcomes valid; switching proof cue shape, options Circle/Square, correct feedback, consoleErrors []; UI audit citations 15 all >=44px, no horizontal scroll/tiny text; aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794128214.058755,
-      "timestamp_str": "2026-11-08 11:56:54",
-      "agent": "opencode:task-switch"
-    },
-    {
-      "task_id": "noesis-task-switch",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-task-switch' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794128235.8090398,
-      "timestamp_str": "2026-11-08 11:57:15",
-      "agent": "opencode:task-switch"
-    },
     {
       "task_id": "noesis-switching-completion",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794132645.5138774,
       "timestamp_str": "2026-11-08 13:10:45",
       "agent": "opencode:switchchange"
+    },
+    {
+      "task_id": "noesis-switch-result-delta",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add the same-level switch-cost delta to the Task Switch result card",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794133207.0213058,
+      "timestamp_str": "2026-11-08 13:20:07",
+      "agent": "opencode:switchdelta",
+      "impact_assessment": {
+        "why": "History rows show improved/worsened, but the result card still shows only the raw switch cost; users need the comparison where the block is reported",
+        "benefits": "Consistent same-level comparison across result and history; first/improved/worsened/no-change states explicit",
+        "risks": "contract: ResultsScreen gains a history prop; App passes existing history; no engine/storage change; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first prior-history and first-block tests, real three-block result screenshots, full gates"
+      },
+      "plan_digest": "edd9fe5094dee65adbeacb1a834c02f6fb29622ddf5ac6abd6764bc727093979"
+    },
+    {
+      "task_id": "noesis-switch-result-delta",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: switchCostComparisons helper; per-card first/improved/worsened/same copy and color; App history wiring; tests; proof capture",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794133208.3845494,
+      "timestamp_str": "2026-11-08 13:20:08",
+      "agent": "opencode:switchdelta"
+    },
+    {
+      "task_id": "noesis-switch-result-delta",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: real block costs 141/0/0 gave first/improved 141/same; consoleErrors []; 29 Python + 343 Vitest, 500 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794133210.555615,
+      "timestamp_str": "2026-11-08 13:20:10",
+      "agent": "opencode:switchdelta"
+    },
+    {
+      "task_id": "noesis-switch-result-delta",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-switch-result-delta' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794133220.079375,
+      "timestamp_str": "2026-11-08 13:20:20",
+      "agent": "opencode:switchdelta"
     }
   ]
 }

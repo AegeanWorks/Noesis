@@ -185,10 +185,18 @@ await page.waitForTimeout(300);
 await page.screenshot({ path: join(OUT, "04-task-switch-results.png"), fullPage: true });
 const results = await page.evaluate(() => {
   const state = window.__NOESIS__.getState();
+  const changes = [...document.querySelectorAll('[data-testid^="switch-cost-vs-previous-"]')]
+    .map((node) => ({
+      testId: node.getAttribute("data-testid"),
+      text: (node.textContent ?? "").replace(/\s+/g, " ").trim(),
+      direction: node.getAttribute("data-direction"),
+    }));
   return {
     mechanics: state?.results.map((result) => result.mechanic) ?? [],
     difficulties: state?.results.map((result) => result.difficulty ?? null) ?? [],
     summaries: state?.results.map((result) => result.summary) ?? [],
+    switchCosts: state?.results.map((result) => result.metrics.switch_cost_ms ?? null) ?? [],
+    changes,
   };
 });
 

@@ -21,6 +21,7 @@ function renderResults(newBests: MechanicResult["mechanic"][]) {
   render(
     <ResultsScreen
       results={[nbackResult()]}
+      history={[]}
       motivation={null}
       sessionId="session-1"
       newBests={newBests}
