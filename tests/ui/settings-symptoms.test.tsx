@@ -14,6 +14,7 @@ const BASE = {
   hideClock: false,
   historyCount: 0,
   history: [],
+  adherenceCounts: { started: 0, completed: 0, aborted: 0 },
   onReducedMotion: () => {},
   onDifficulty: () => {},
   onSessionLength: () => {},
@@ -78,6 +79,22 @@ describe("SettingsScreen symptom reports", () => {
     expect(screen.getByText(/headache/i)).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "Clear symptom reports" }));
     expect(onClear).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("SettingsScreen adherence summary", () => {
+  it("reports starts, completions and early endings", () => {
+    render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        adherenceCounts={{ started: 3, completed: 2, aborted: 1 }}
+      />,
+    );
+    expect(screen.getByTestId("adherence-summary").textContent).toMatch(
+      /3 started, 2 completed, 1 ended early/i,
+    );
   });
 });
 

@@ -532,6 +532,24 @@ Open candidates (not yet cycles): none from the current audits.
   console errors. The UI audit covers the consent screen with no horizontal scroll and no
   tiny text.
 
+## Cycle 14 - Session adherence log for dropout analysis
+
+- **Area**: measurement, research export and Settings transparency.
+- **FIND**: the export contained completed sessions only. A participant who started and left
+  was invisible, so dropout and dose could not be measured. The review makes adherence a
+  primary metric (R22) and the measurement plan lists sessions started/completed and dropout.
+  A pilot RCT in computerized training reported 38.5%/57.1% dropout (PMID 30881315).
+- **ANALYZE**: existing adherence sources are PMID 40779747 (BCT/adherence), 35612886 (mHealth
+  adherence) and the narrative-only pilot (30881315). The missing capability was measurement,
+  not a new engagement prompt.
+- **IMPLEMENT**: `adherence` storage with start/complete/abort events; dangling starts closed
+  on a new session; export `adherence[]`; Settings summary; Delete local data clears it; no
+  server, no new prompt, no scoring change.
+- **VERIFICATION**: see commands below; the browser proof now starts and ends a session before
+  consent, and the downloaded JSON carries one aborted event. Settings shows the local summary;
+  tests cover start, completion, early ending, dangling closure, fallback completion and
+  corrupted storage.
+
 ## Commands run
 
 ```text
@@ -642,5 +660,16 @@ $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/research-consent-email-pr
   5 checkboxes; Turkish title; participant code N-...; contact absent from file; downloaded noesis-research-*.json; mailto draft; withdrawal disables sends; consoleErrors []
 $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
   consoleErrors []; no horizontal scroll; consent screen tinyText 0; only checkbox-in-label small target
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/storage/adherence.test.ts tests/storage/export.test.ts tests/ui/settings-symptoms.test.tsx tests/ui/adherence-flow.test.tsx tests/ui/study-journey.test.tsx
+  before fix: module missing / export.adherence undefined / summary absent
+  after fix:  32 passed
+python -m noesis review check    116 records validated (90 primary, 26 context)
+npm run test:all                 29 Python + 318 Vitest passed
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/research-consent-email-proof.mjs
+  adherence eventCount 1, firstStatus aborted, blocksCompleted 0 in the downloaded JSON; consent/email checks unchanged; consoleErrors []
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
+  consoleErrors []; no horizontal scroll; settings summary visible; consent screen unchanged
 python aikit.py check noesis     6/6 gates passed
 ```

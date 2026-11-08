@@ -6,6 +6,7 @@ import { sessionStore } from "../../src/engine/store";
 import { defaultSessionConfig } from "../../src/engine/session";
 import { optimalPolicy, runMechanic } from "../../src/engine/simulate";
 import type { SessionAction } from "../../src/engine/types";
+import { clearAdherence, loadAdherence } from "../../src/storage/adherence";
 import { clearHistory, loadHistory } from "../../src/storage/history";
 import { clearStudy, enrollStudy } from "../../src/storage/study";
 import { clearSafety, saveSafety } from "../../src/storage/safety";
@@ -20,6 +21,7 @@ vi.stubGlobal("cancelAnimationFrame", vi.fn());
 beforeEach(() => {
   sessionStore.reset();
   clearHistory();
+  clearAdherence();
   clearSessionSnapshot();
   clearSafety();
   clearStudy();
@@ -69,6 +71,8 @@ describe("trial data path", () => {
     completeSession();
 
     expect(screen.getByRole("heading", { name: "Your blocks, separately" })).toBeTruthy();
+    expect(loadAdherence()[0]?.status).toBe("completed");
+    expect(loadAdherence()[0]?.blocksCompleted).toBeGreaterThan(0);
     const history = loadHistory();
     expect(history).toHaveLength(1);
     expect(history[0]?.arm).toBe("engagement");

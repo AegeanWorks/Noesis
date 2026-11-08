@@ -5,6 +5,7 @@ import type { AdaptationEvent } from "./adaptive";
 import type { FarCheck } from "./farChecks";
 import type { AdverseEvent } from "./adverseEvents";
 import type { ConsentLanguage, ResearchConsent } from "./researchConsent";
+import type { AdherenceEvent } from "./adherence";
 
 export interface StudyExport {
   studyId: string;
@@ -31,6 +32,7 @@ export interface HistoryExport {
   farChecks: FarCheck[];
   adverseEvents: AdverseEvent[];
   adaptationLog: AdaptationEvent[];
+  adherence: AdherenceEvent[];
   research: ResearchExport | null;
 }
 
@@ -38,6 +40,7 @@ export interface ExportExtras {
   farChecks?: readonly FarCheck[];
   adverseEvents?: readonly AdverseEvent[];
   adaptationLog?: readonly AdaptationEvent[];
+  adherence?: readonly AdherenceEvent[];
   research?: ResearchExport | null;
 }
 
@@ -71,6 +74,7 @@ export function buildHistoryExport(
     farChecks: [...(extras.farChecks ?? [])],
     adverseEvents: [...(extras.adverseEvents ?? [])],
     adaptationLog: [...(extras.adaptationLog ?? [])],
+    adherence: [...(extras.adherence ?? [])],
     research: extras.research ?? null,
   };
   return `${JSON.stringify(payload, null, 2)}\n`;

@@ -35,6 +35,9 @@ and in the export; it never randomises (R38, ADR-014).
   note, stoppedSession }` — per-session symptom check-ins.
 - `adaptationLog[]`: `{ at, mechanic, from, to, accuracy }` — the adaptive
   difficulty trajectory for dose-response analysis.
+- `adherence[]`: `{ id, seed, startedAt, endedAt, status, blocksCompleted,
+  blockCount, arm }` — every session start, completion and early ending, for
+  dropout and dose analysis (R60).
 - `study`: `{ studyId, arm, consentedAt }` or `null` outside a study.
 - `research`: `{ participantCode, consentVersion, consentedAt, withdrawnAt,
   scopes, language }` or `null` when research consent was not given. The

@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-research-consent-email",
+    "task_id": "noesis-adherence-log",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794095259.3862622,
-    "owner": "opencode:research-email",
-    "started_by": "opencode:research-email",
+    "updated_at": 1794107217.0250933,
+    "owner": "opencode:adherence",
+    "started_by": "opencode:adherence",
     "continuations": [],
-    "completed_at": 1794095269.196643
+    "completed_at": 1794107236.532621
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-push-review",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: verify the twelve local commits in cumulative 1->3, 1->6, 1->9 and 1->End ranges, push each fast-forward, then review back to the beginning for gaps",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794083724.038626,
-      "timestamp_str": "2026-11-07 23:35:24",
-      "agent": "opencode:push-review",
-      "impact_assessment": {
-        "why": "The user requested cumulative push-range verification with improvements/bugs/gaps looked for each run",
-        "benefits": "Every pushed range has a gate and proof trail; the reverse pass closes test gaps left by the forward review",
-        "risks": "contract: tests and review record only; dependency: none; concurrency: remote master is fast-forward only; state: no runtime/state change",
-        "mitigation": "full aikit check and ai:verify before the final push; explicit fast-forward refspecs; no force"
-      },
-      "plan_digest": "a5a2d7a8a70cf6ca91d0df2c14e949b5c2877cb1a4720e26d36d4699fae75f76"
-    },
-    {
-      "task_id": "noesis-push-review",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Forward runs 1->3, 1->6, 1->9, 1->End verified and pushed to 6e3cedb, db290ad, b4bb40f, c7daf75; reverse pass added resume-no-outcome and gonogo-feedback-prompt regression tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794083724.7912362,
-      "timestamp_str": "2026-11-07 23:35:24",
-      "agent": "opencode:push-review"
-    },
-    {
-      "task_id": "noesis-push-review",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: 29 Python + 262 Vitest, ai:verify 400/400, aikit check 6/6; push-review record written; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794083725.5662584,
-      "timestamp_str": "2026-11-07 23:35:25",
-      "agent": "opencode:push-review"
-    },
-    {
-      "task_id": "noesis-push-review",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-push-review' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794083835.4703002,
-      "timestamp_str": "2026-11-07 23:37:15",
-      "agent": "opencode:push-review"
-    },
     {
       "task_id": "noesis-one-click-start",
       "phase": "phase 3",
@@ -261,6 +211,56 @@
       "timestamp": 1794095269.1966453,
       "timestamp_str": "2026-11-08 02:47:49",
       "agent": "opencode:research-email"
+    },
+    {
+      "task_id": "noesis-adherence-log",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/5] Plan: log every session start, completion and early ending so adherence and dropout are measurable in research exports",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794106143.500388,
+      "timestamp_str": "2026-11-08 05:49:03",
+      "agent": "opencode:adherence",
+      "impact_assessment": {
+        "why": "The review makes adherence a primary metric (R22) and the export currently contains only completed sessions; dropout cannot be measured, which blocks the app as a data collector for future articles. A pilot RCT in computerized training reported 38.5%/57.1% dropout (PMID 30881315), so starts and early endings must be logged.",
+        "benefits": "Session-level adherence log with seed, timestamps, blocks completed and arm; export and Settings summary; no server and no change to cognitive scores",
+        "risks": "contract: new storage key, export field and Settings prop; dependency: none; concurrency: no cross-tab guarantees beyond existing local storage; state: old exports remain valid because adherence defaults to []",
+        "mitigation": "failing-first storage/export/UI tests, explicit start/complete/abort paths, dangling-start closure on a new session, full gates and browser proof"
+      },
+      "plan_digest": "f32e2ada5e17c37245aded9d11eb04a6810442237198cfd90f47e67e35678696"
+    },
+    {
+      "task_id": "noesis-adherence-log",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/5] Impl: adherence storage with start/complete/abort events; dangling starts closed on new session; export adherence[]; Settings session-log summary; Delete local data clears it; ADR-042 and ADHERENCE_LOGGING.md; R60",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794107200.4330225,
+      "timestamp_str": "2026-11-08 06:06:40",
+      "agent": "opencode:adherence"
+    },
+    {
+      "task_id": "noesis-adherence-log",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/5] Verified: 29 Python + 318 Vitest; typecheck/build clean; ai:verify 400/400; review 116/277 valid; browser proof downloaded JSON has adherence eventCount 1/status aborted/blocks 0; UI audit no console errors/horizontal scroll; aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794107217.0250933,
+      "timestamp_str": "2026-11-08 06:06:57",
+      "agent": "opencode:adherence"
+    },
+    {
+      "task_id": "noesis-adherence-log",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-adherence-log' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794107236.5326228,
+      "timestamp_str": "2026-11-08 06:07:16",
+      "agent": "opencode:adherence"
     }
   ]
 }

@@ -7,6 +7,7 @@ import {
 } from "../../engine/motivation";
 import type { AdverseEvent } from "../../storage/adverseEvents";
 import { SYMPTOM_LABELS } from "../../storage/adverseEvents";
+import type { AdherenceCounts } from "../../storage/adherence";
 import { buildWeekSummaryText } from "../../storage/export";
 import type { SessionRecord } from "../../storage/history";
 import type { AdaptiveLevels } from "../../storage/adaptive";
@@ -29,6 +30,7 @@ interface SettingsScreenProps {
   hideClock: boolean;
   historyCount: number;
   history: readonly SessionRecord[];
+  adherenceCounts: AdherenceCounts;
   adverseEvents: AdverseEvent[];
   onClearAdverseEvents: () => void;
   motivationPaused: boolean;
@@ -129,6 +131,7 @@ export function SettingsScreen({
   hideClock,
   historyCount,
   history,
+  adherenceCounts,
   adverseEvents,
   onClearAdverseEvents,
   motivationPaused,
@@ -420,6 +423,11 @@ export function SettingsScreen({
             ? "No completed sessions are stored yet."
             : `${historyCount} completed ${historyCount === 1 ? "session is" : "sessions are"} stored on this device.`}{" "}
           There is no account and no server.
+        </p>
+        <p className="fine" data-testid="adherence-summary">
+          {adherenceCounts.started === 0
+            ? "Session log: no sessions started yet. Starts, completions and early endings are included in research exports."
+            : `Session log: ${adherenceCounts.started} started, ${adherenceCounts.completed} completed, ${adherenceCounts.aborted} ended early. This log is included in research exports.`}
         </p>
         <div className="hero-actions">
           <Button variant="ghost" onClick={onExportHistory} disabled={historyCount === 0}>

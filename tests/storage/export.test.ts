@@ -95,6 +95,28 @@ describe("history export", () => {
     expect(parsed.adverseEvents).toEqual([]);
     expect(parsed.adaptationLog).toEqual([]);
     expect(parsed.research).toBeNull();
+    expect(parsed.adherence).toEqual([]);
+  });
+
+  it("carries the session adherence log for dropout analysis", () => {
+    const parsed = JSON.parse(
+      buildHistoryExport([], null, new Date("2026-11-08T12:00:00.000Z"), {
+        adherence: [
+          {
+            id: "session-1",
+            seed: 42,
+            startedAt: "2026-11-08T10:00:00.000Z",
+            endedAt: "2026-11-08T10:02:00.000Z",
+            status: "aborted",
+            blocksCompleted: 1,
+            blockCount: 4,
+            arm: null,
+          },
+        ],
+      }),
+    ) as Record<string, unknown>;
+    expect((parsed.adherence as unknown[]).length).toBe(1);
+    expect((parsed.adherence as { status: string }[])[0]?.status).toBe("aborted");
   });
 
   it("carries research consent metadata without the study contact email", () => {

@@ -1,7 +1,7 @@
 # Research Data Collection and Informed Consent
 
 **Status:** data-collection addendum to the Noesis evidence review, 2026-11-08
-**Scope:** consent, local data return and email hand-off; not a new efficacy claim
+**Scope:** consent, adherence logging, local data return and email hand-off; not a new efficacy claim
 **Evidence table:** [analysis/evidence_table.json](analysis/evidence_table.json)
 
 ---
@@ -78,6 +78,16 @@ The existing review requires local-first storage, data minimisation and explicit
 security surface. The app therefore prepares the export and an email draft locally. The user
 must attach the downloaded JSON file and press send in their own email client.
 
+### 3.4 Adherence is measured from starts, not completions
+
+The review makes adherence a primary metric (R22; PMID 40779747), and a pilot RCT in
+computerized training reported 38.5% and 57.1% dropout in the active and placebo arms
+(PMID 30881315). A history of completed sessions cannot estimate that dropout. The export
+therefore includes a session-level `adherence[]` log of starts, completions and early endings,
+with the blocks completed and the study arm. The exact reasons for stopping are not collected.
+
+See [ADHERENCE_LOGGING.md](ADHERENCE_LOGGING.md) for the full design note.
+
 ---
 
 ## 4. Design decisions
@@ -91,6 +101,7 @@ must attach the downloaded JSON file and press send in their own email client.
 | Block consent when the **study contact email** is not configured | A consent form without a contact is not informed | The study team must set the address in Settings before deployment |
 | **Download the JSON** and prepare a **mailto draft**; never auto-send | Local-first posture (R49); no new server or credential | The user attaches the file and sends it; the email provider sees the sender address |
 | Include consent metadata in the export but **not the study contact email** | Data minimisation; the contact is not participant data | The email draft carries the recipient; the JSON carries only the consent scope and code |
+| Include the session **adherence log** in every export | Adherence is a primary outcome (R22/R60); a completed-only history hides dropout | Starts, completions and early endings with blocks completed; no reason text and no account identifier |
 | **Withdrawal stops future emails** but keeps the audit record | Dynamic/broad consent governance (PMID 42443473); R49 | Already-sent data cannot be recalled; the consent screen says so |
 | Add a browser proof for the full flow | eConsent usability evidence (PMID 37656499) | The proof covers consent, language switch, download and withdrawal, not a real mailbox |
 
@@ -108,6 +119,10 @@ must attach the downloaded JSON file and press send in their own email client.
 - **R59:** The email hand-off is user-triggered and local: the app downloads the JSON file and
   prepares a recipient/subject/body draft with attachment instructions. It never sends
   automatically, never stores an SMTP credential, and never uploads data to a Noesis server.
+- **R60:** Every session start is logged with its seed, block count, study arm and timestamp.
+  Completion and early ending update the same event with the ending timestamp and the number
+  of blocks completed. The log is shown in Settings and included in JSON exports; it contains
+  no name, email address or account identifier, and Delete local data clears it.
 
 ---
 

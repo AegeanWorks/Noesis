@@ -54,6 +54,14 @@ page.on("pageerror", (error) => consoleErrors.push(error.message));
 
 await page.goto(URL, { waitUntil: "networkidle" });
 await page.waitForSelector('[data-testid="start-session"]');
+
+await page.getByTestId("start-session").click();
+await page.getByTestId("begin-test").click();
+await page.getByTestId("pause").click();
+await page.getByTestId("end-session").click();
+await page.getByTestId("confirm-end").click();
+await page.waitForSelector('[data-testid="start-session"]');
+
 await page.getByRole("button", { name: "Settings", exact: true }).click();
 await page.getByRole("heading", { name: "Local control" }).waitFor();
 
@@ -110,6 +118,11 @@ console.log(
         hasStudyContactInFile: text.includes("study@example.org"),
         withdrawnStatus,
         disabledAfterWithdrawal,
+      },
+      adherence: {
+        eventCount: Array.isArray(parsed.adherence) ? parsed.adherence.length : null,
+        firstStatus: parsed.adherence?.[0]?.status ?? null,
+        firstBlocksCompleted: parsed.adherence?.[0]?.blocksCompleted ?? null,
       },
       email: {
         suggestedFilename,

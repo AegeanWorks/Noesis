@@ -79,8 +79,11 @@ chooses **Send research data**: the app downloads a JSON export and prepares a l
 draft addressed to the study team. The user must attach the downloaded file and send it from
 their own email app. No data is uploaded automatically, no server is involved, and no SMTP
 credential is stored. Withdrawal stops future emails; data already sent cannot be recalled.
-The literature basis and privacy boundaries are in
-[docs/research/DATA_COLLECTION_AND_CONSENT.md](docs/research/DATA_COLLECTION_AND_CONSENT.md).
+The export also carries a session-level **adherence log**: every start, completion and early
+ending, with the blocks completed and the study arm, so dropout is measurable rather than
+inferred from completers only. The literature basis and privacy boundaries are in
+[docs/research/DATA_COLLECTION_AND_CONSENT.md](docs/research/DATA_COLLECTION_AND_CONSENT.md)
+and [docs/research/ADHERENCE_LOGGING.md](docs/research/ADHERENCE_LOGGING.md).
 
 ## Behavioral Engagement
 
@@ -156,6 +159,7 @@ noesis/
 │   ├── records/                  <- raw PubMed, OpenAlex, trial-registry and behavioral-literature records
 │   ├── BEHAVIORAL_ENGAGEMENT.md  <- Motivation mode audit, citations and safeguards
 │   ├── DESIGN_IMPLICATIONS.md    <- product requirements traceable to evidence
+│   ├── ADHERENCE_LOGGING.md      <- session start/completion/early-ending note
 │   ├── DATA_COLLECTION_AND_CONSENT.md <- e-consent and email data-return note
 │   ├── PRACTICE_MENU_AND_BRIEFING.md <- menu and pre-test briefing evidence note
 │   ├── PRISMA_FLOW.md            <- PRISMA flow and checklist
@@ -240,7 +244,7 @@ npm run test:all
 This runs:
 
 1. the Python review suite (`python -m unittest discover -s tests -t .`), which validates the evidence table's schema, identifiers, confidence intervals, flags and synthesis matrix;
-2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, research consent and email-draft storage, and the React safety/mechanic/settings screens.
+2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, research consent and email-draft storage, session adherence logging, and the React safety/mechanic/settings screens.
 
 `npm run ai:verify` runs 400 seeded mechanic simulations (4 mechanics × 50 seeds × 2 strategies), checks every metric is finite, completes every run, and verifies the replay hash matches.
 
@@ -252,6 +256,7 @@ This runs:
 - [PRISMA flow](docs/research/PRISMA_FLOW.md)
 - [Design implications](docs/research/DESIGN_IMPLICATIONS.md)
 - [Data collection and consent](docs/research/DATA_COLLECTION_AND_CONSENT.md)
+- [Adherence logging](docs/research/ADHERENCE_LOGGING.md)
 - [Safety and regulation](docs/research/SAFETY_AND_REGULATION.md)
 
 Validate the evidence table:

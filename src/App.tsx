@@ -17,6 +17,15 @@ import { sessionView } from "./engine/session";
 import { sessionStore } from "./engine/store";
 import type { SessionRecord } from "./storage/history";
 import {
+  abortSessionAdherence,
+  adherenceCounts,
+  clearAdherence,
+  completeSessionAdherence,
+  loadAdherence,
+  logSessionStart,
+  type AdherenceEvent,
+} from "./storage/adherence";
+import {
   buildHistoryExport,
   downloadHistoryExport,
   downloadTextFile,
@@ -151,6 +160,7 @@ export function App() {
   const [researchError, setResearchError] = useState<string | null>(null);
   const [settings, setSettings] = useState(() => loadSettings());
   const [history, setHistory] = useState<SessionRecord[]>(() => loadHistory());
+  const [adherence, setAdherence] = useState<AdherenceEvent[]>(() => loadAdherence());
   const [intention, setIntention] = useState<PracticeIntention | null>(() => loadIntention());
   const [motivation, setMotivation] = useState<MotivationState | null>(
     () => boot?.motivation ?? null,
@@ -209,6 +219,12 @@ export function App() {
     if (savedSession.current !== id) {
       savedSession.current = id;
       setLastSessionId(id);
+      setAdherence(
+        completeSessionAdherence({
+          seed: state.config.seed,
+          blocksCompleted: state.results.length,
+        }),
+      );
       setAdaptive(applySessionResults(state.results));
       const enrolled = loadStudy();
       setStudy(enrolled);
@@ -258,20 +274,26 @@ export function App() {
             )
           : null,
       );
-      sessionStore.start(
-        defaultSessionConfig(
-          seed,
-          settings.difficulty,
-          settings.sessionLength,
-          adaptiveState.enabled ? adaptiveState.levels : undefined,
-          focus,
-        ),
+      const config = defaultSessionConfig(
+        seed,
+        settings.difficulty,
+        settings.sessionLength,
+        adaptiveState.enabled ? adaptiveState.levels : undefined,
+        focus,
       );
+      setAdherence(
+        logSessionStart({
+          seed,
+          blockCount: config.blocks.length,
+          arm: arm.enrolled ? arm.arm : null,
+        }),
+      );
+      sessionStore.start(config);
       sessionStore.dispatch({ type: "begin" });
       setScreen("session");
       setPaused(false);
     },
-    [settings.difficulty, settings.sessionLength],
+    [settings.difficulty, settings.sessionLength, settings.motivationMode],
   );
 
   const handleFocusMechanic = useCallback(
@@ -297,6 +319,15 @@ export function App() {
   }, [startSession]);
 
   const endSession = useCallback(() => {
+    const current = sessionStore.getSnapshot();
+    if (current && current.phase !== "complete") {
+      setAdherence(
+        abortSessionAdherence({
+          seed: current.config.seed,
+          blocksCompleted: current.results.length,
+        }),
+      );
+    }
     clearSessionSnapshot();
     sessionStore.dispatch({ type: "abort" });
     sessionStore.reset();
@@ -363,9 +394,10 @@ export function App() {
       farChecks: loadFarChecks(),
       adverseEvents: loadAdverseEvents(),
       adaptationLog: loadAdaptive().log,
+      adherence,
       research: toResearchExport(researchConsent),
     });
-  }, [history, study, researchConsent]);
+  }, [history, study, researchConsent, adherence]);
 
   const clearPracticeHistory = useCallback(() => {
     clearHistory();
@@ -426,6 +458,7 @@ export function App() {
         farChecks: loadFarChecks(),
         adverseEvents: loadAdverseEvents(),
         adaptationLog: loadAdaptive().log,
+        adherence,
         research: toResearchExport(researchConsent),
       });
       const draft = buildResearchEmailDraft(
@@ -444,7 +477,7 @@ export function App() {
           : "The research email could not be prepared.",
       );
     }
-  }, [history, researchConsent, researchSettings.studyContactEmail]);
+  }, [history, adherence, researchConsent, researchSettings.studyContactEmail]);
 
   const handlePauseMotivation = useCallback(() => {
     setEngagement(pauseMotivationToday());
@@ -529,7 +562,9 @@ export function App() {
     clearSessionSnapshot();
     clearResearchConsent();
     clearResearchSettings();
+    clearAdherence();
     setHistory([]);
+    setAdherence([]);
     setAdverseEvents([]);
     setFarChecks([]);
     setEngagement(loadEngagement());
@@ -803,6 +838,7 @@ export function App() {
             hideClock={settings.hideClock}
             historyCount={history.length}
             history={history}
+            adherenceCounts={adherenceCounts(adherence)}
             adverseEvents={adverseEvents}
             onClearAdverseEvents={handleClearAdverseEvents}
             study={study}
