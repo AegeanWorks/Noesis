@@ -88,5 +88,9 @@ immediate feedback, which is the feature-level rationale for choosing it first.
   revalidated.
 
 Limits: the evidence is for executive-function training broadly, not for this exact
-colour/shape task. The task is a practice and measurement instrument, not a diagnostic test.
-Future candidates should be selected by task-specific evidence and safety, not by genre labels.
+colour/shape task. Both meta-analyses also report benefits from multicomponent training,
+including everyday functioning in Basak et al., and Nguyen et al. recommend adaptive
+multidomain training. Task Switch is therefore a conservative single-task focus test, not
+evidence that single-component training is superior, and it does not replace the core lineup.
+The task is a practice and measurement instrument, not a diagnostic test. Future candidates
+should be selected by task-specific evidence and safety, not by genre labels.
