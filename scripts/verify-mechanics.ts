@@ -4,7 +4,7 @@ import { defaultTrials } from "../src/engine/mechanics";
 import { policyFor, replayMechanic, runMechanic } from "../src/engine/simulate";
 import type { MechanicId } from "../src/engine/types";
 
-const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed"];
+const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed", "switching"];
 const STRATEGIES = ["optimal", "random"] as const;
 const SEEDS = Array.from({ length: 50 }, (_, index) => index + 1);
 

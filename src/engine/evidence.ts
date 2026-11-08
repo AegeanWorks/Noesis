@@ -89,7 +89,32 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Single circle onset. No flashing.",
   },
-
+  switching: {
+    id: "switching",
+    name: "Task Switch",
+    domain: "cognitive_flexibility",
+    tagline: "Cognitive flexibility",
+    instructions:
+      "Watch the rule. Colour rule: choose the colour. Shape rule: choose the shape. Keys 1 and 2 work too.",
+    brief:
+      "Cognitive flexibility: you alternate between a colour rule and a shape rule, so the same stimulus needs a different answer after a switch. Task-switching practice improves the trained switching task; executive-function training meta-analyses show small near-transfer and far-transfer effects in older adults, but this is not a general intelligence or everyday-function claim.",
+    claimLevel: "experimental",
+    claim:
+      "Practices set-shifting, rule maintenance and switching between competing responses.",
+    qualifier:
+      "Task practice only. Executive-function training effects are small and mostly near transfer; this is not a diagnostic test and does not train general intelligence.",
+    notClaimed: [
+      "General intelligence",
+      "Academic achievement",
+      "Dementia prevention",
+      "Everyday function",
+    ],
+    citations: [
+      { pmid: "30998045", label: "Executive-function training meta-analysis (2019)" },
+      { pmid: "32011155", label: "Cognitive training modules meta-analysis (2020)" },
+    ],
+    safety: "Static shapes and text only. No flashing.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

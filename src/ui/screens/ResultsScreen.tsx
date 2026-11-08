@@ -47,6 +47,15 @@ const METRIC_LABELS: Record<string, string> = {
   current_streak: "Current streak",
   max_streak: "Best streak",
   near_misses: "Near misses",
+  switch_trials: "Switch trials",
+  repeat_trials: "Repeat trials",
+  switch_correct: "Switch correct",
+  repeat_correct: "Repeat correct",
+  switch_accuracy: "Switch accuracy",
+  repeat_accuracy: "Repeat accuracy",
+  switch_mean_response_ms: "Switch reaction",
+  repeat_mean_response_ms: "Repeat reaction",
+  switch_cost_ms: "Switch cost",
 };
 
 const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
@@ -54,6 +63,7 @@ const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
   gonogo: ["accuracy", "commissions", "mean_go_reaction_ms"],
   reasoning: ["accuracy", "mean_response_ms", "timed_out"],
   speed: ["accuracy", "median_reaction_ms", "lapses"],
+  switching: ["accuracy", "switch_cost_ms", "switch_accuracy"],
 };
 
 export function formatMetric(key: string, value: number): string {

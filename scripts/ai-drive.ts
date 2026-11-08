@@ -14,7 +14,7 @@ interface Options {
   help: boolean;
 }
 
-const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed"];
+const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed", "switching"];
 
 function parse(argv: string[]): Options {
   const options: Options = {
@@ -34,7 +34,7 @@ function parse(argv: string[]): Options {
     else if (arg === "--json") options.json = true;
     else if (arg === "--mechanic" && next) {
       if (!MECHANICS.includes(next as MechanicId)) {
-        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning or speed.`);
+        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed or switching.`);
       }
       options.mechanic = next as MechanicId;
       index += 1;
@@ -70,7 +70,7 @@ function parse(argv: string[]): Options {
 function help(): void {
   console.log(`Usage: npm run ai:simulate -- [options]
 
-  --mechanic <nback|gonogo|reasoning|speed>   default: nback
+  --mechanic <nback|gonogo|reasoning|speed|switching>   default: nback
   --seed <integer>                      default: 42
   --difficulty <1|2|3>                  default: 2
   --trials <integer>                    default: mechanic default

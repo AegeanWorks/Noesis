@@ -14,10 +14,11 @@ pre-post difference is a hypothesis the trial tests, not a finding.
 | Streak reminder | none | daily streak card once a day is trained |
 | Everything else | identical | identical |
 
-Both arms share: the same four mechanics, fixed session structure, opt-in
+Both arms share: the same four core mechanics, fixed session structure, opt-in
 Motivation mode with identical risk rules, adaptive difficulty (opt-in),
 weekly day-goals, far checks, adverse-event capture, heavy-use monitoring
-and the Motivation pause. The engagement arm differs only in incentive
+and the Motivation pause. The experimental Task Switch is a Menu focus test
+and is not in the trial lineup unless the protocol adds it explicitly. The engagement arm differs only in incentive
 delivery (R39, R51, ADR-015, ADR-027).
 
 Arm assignment is protocol-side. The app records the assigned arm per session

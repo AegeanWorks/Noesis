@@ -1,7 +1,12 @@
-export const MECHANIC_IDS = ["nback", "gonogo", "reasoning", "speed"] as const;
+export const MECHANIC_IDS = ["nback", "gonogo", "reasoning", "speed", "switching"] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
-export type Domain = "working_memory" | "inhibition" | "reasoning" | "processing_speed";
+export type Domain =
+  | "working_memory"
+  | "inhibition"
+  | "reasoning"
+  | "processing_speed"
+  | "cognitive_flexibility";
 export type SessionLength = "quick" | "standard";
 export type ClaimLevel = "supported" | "experimental" | "wellness_only";
 export type FeedbackTone = "correct" | "incorrect" | "neutral";
@@ -184,6 +189,53 @@ export interface SpeedState {
   completed: boolean;
 }
 
+export interface SwitchingConfig {
+  trials: number;
+  difficulty: 1 | 2 | 3;
+  switchRate: number;
+  timeLimitMs: number;
+  feedbackMs: number;
+}
+
+export type SwitchingCue = "colour" | "shape";
+export type SwitchingColour = "red" | "blue";
+export type SwitchingShape = "circle" | "square";
+
+export interface SwitchingTrial {
+  cue: SwitchingCue;
+  colour: SwitchingColour;
+  shape: SwitchingShape;
+  switched: boolean;
+}
+
+export interface SwitchingResponse {
+  trial: number;
+  cue: SwitchingCue;
+  switched: boolean;
+  selected: number | null;
+  correct: boolean;
+  correctChoice: string;
+  reactionMs: number | null;
+  timedOut: boolean;
+}
+
+export interface SwitchingState {
+  mechanic: "switching";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: SwitchingConfig;
+  trials: SwitchingTrial[];
+  index: number;
+  phase: "question" | "feedback" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  itemStartTick: number;
+  selected: number | null;
+  responses: SwitchingResponse[];
+  completed: boolean;
+}
+
 export interface ReasoningState {
   mechanic: "reasoning";
   seed: number;
@@ -201,7 +253,12 @@ export interface ReasoningState {
   completed: boolean;
 }
 
-export type MechanicState = NBackState | GoNoGoState | ReasoningState | SpeedState;
+export type MechanicState =
+  | NBackState
+  | GoNoGoState
+  | ReasoningState
+  | SpeedState
+  | SwitchingState;
 
 export type MechanicAction =
   | { type: "respond" }

@@ -11,7 +11,7 @@
 
 An evidence-led cognitive training app. Every mechanic is a deterministic, headlessly drivable state machine, so the web app, the Android WebView build, the test suite and AI simulators run the same logic.
 
-**Current phase: first working vertical slice.** One-click sessions, four mechanics, a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
+**Current phase: first working vertical slice.** One-click sessions, four core mechanics plus an experimental Task Switch focus test, a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
 
 ## 30-Second Cold-Start Quick Reference
 
@@ -43,7 +43,7 @@ An evidence-led cognitive training app. Every mechanic is a deterministic, headl
 
 The home screen has one primary action: **Start session**. It creates and begins the first block in the same click. If a session is already active, the same button resumes it. First-time users answer the safety screen once; its final button also starts the session immediately.
 
-Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.
+Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four core mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The experimental Task Switch is available as a single-test focus session from the Menu and is not in the default lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.
 
 An active session is snapshotted locally while it runs. After a browser reload or an Android WebView restart, the home screen offers **Resume session** instead of losing progress. Pausing then choosing **End session** asks for confirmation first, so an accidental tap can return to the paused session instead of discarding it.
 
@@ -143,7 +143,7 @@ window.__NOESIS__.getState()
 
 ## What the Evidence Says
 
-The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 116 records with 277 outcomes (90 primary, 26 context).
+The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 118 records with 280 outcomes (90 primary, 28 context).
 
 - Cognitive training reliably improves trained tasks and short-term near transfer; broad far transfer is not established.
 - Neurofeedback for ADHD shows no significant probably blinded effect; consumer-grade neurofeedback shows no cognitive benefit.
@@ -171,6 +171,7 @@ noesis/
 │   ├── DATA_COLLECTION_AND_CONSENT.md <- e-consent and email data-return note
 │   ├── DATA_DICTIONARY.md        <- field-level JSON/CSV dictionary
 │   ├── DATA_EXPORT_AND_REUSE.md  <- FAIR/data-reuse basis for the manifest and CSV exports
+│   ├── NEW_MECHANIC_CANDIDATES.md <- new-game literature scan and decision matrix
 │   ├── PRACTICE_MENU_AND_BRIEFING.md <- menu and pre-test briefing evidence note
 │   ├── PRISMA_FLOW.md            <- PRISMA flow and checklist
 │   ├── PROTOCOL.md               <- pre-registered review protocol
@@ -219,8 +220,9 @@ noesis/
 | Go / No-Go | Response inhibition | Experimental | Respond to circles, withhold responses to squares. |
 | Reasoning | Inductive reasoning | Supported (older-adult evidence) | Multiple-choice sequences, analogies and logic items. |
 | Speed Tap | Processing speed | Experimental | Wait for a circle, then tap as fast as possible; reports reaction time, variability and lapses. |
+| Task Switch | Cognitive flexibility | Experimental (focus test) | Alternate between a colour rule and a shape rule; reports accuracy, switch/repeat accuracy and switch cost. |
 
-All four are available in the standard starter session: 2-back, go/no-go, reasoning and Speed Tap.
+The four core mechanics are in the standard starter session: 2-back, go/no-go, reasoning and Speed Tap. Task Switch is an experimental focus test from the Menu; it is not in the default lineup and makes no general-intelligence or everyday-function claim.
 
 ## Safety
 
@@ -256,7 +258,7 @@ This runs:
 1. the Python review suite (`python -m unittest discover -s tests -t .`), which validates the evidence table's schema, identifiers, confidence intervals, flags and synthesis matrix;
 2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, research consent and email-draft storage, session adherence logging, CSV export builders, the export manifest, and the React safety/mechanic/settings screens.
 
-`npm run ai:verify` runs 400 seeded mechanic simulations (4 mechanics × 50 seeds × 2 strategies), checks every metric is finite, completes every run, and verifies the replay hash matches.
+`npm run ai:verify` runs 500 seeded mechanic simulations (5 mechanics × 50 seeds × 2 strategies), checks every metric is finite, completes every run, and verifies the replay hash matches.
 
 ## Evidence Review
 
@@ -269,6 +271,7 @@ This runs:
 - [Adherence logging](docs/research/ADHERENCE_LOGGING.md)
 - [Data export and reuse](docs/research/DATA_EXPORT_AND_REUSE.md)
 - [Data dictionary](docs/research/DATA_DICTIONARY.md)
+- [New mechanic candidates](docs/research/NEW_MECHANIC_CANDIDATES.md)
 - [Safety and regulation](docs/research/SAFETY_AND_REGULATION.md)
 
 Validate the evidence table:

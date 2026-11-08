@@ -1,5 +1,6 @@
 import { REASONING_ITEMS } from "../content/reasoningItems";
 import { applyMechanicAction, createMechanic } from "./mechanics";
+import { switchingChoices } from "./mechanics/switching";
 import { normalizeSeed, nextRandom, randomInt } from "./rng";
 import type {
   GoNoGoState,
@@ -9,6 +10,7 @@ import type {
   NBackState,
   ReasoningState,
   SpeedState,
+  SwitchingState,
 } from "./types";
 
 export type Policy = (state: MechanicState) => MechanicAction | null;
@@ -40,6 +42,13 @@ export function optimalPolicy(state: MechanicState): MechanicAction | null {
     if (state.phase !== "stimulus" || state.respondedThisTrial) return null;
     return state.phaseElapsed >= 250 ? { type: "respond" } : null;
   }
+  if (state.mechanic === "switching") {
+    if (state.phase !== "question" || state.phaseElapsed < 500) return null;
+    const trial = current(state.trials, state.index);
+    return trial
+      ? { type: "answer", option: switchingChoices(trial).correctIndex }
+      : null;
+  }
   if (state.phase !== "question") return null;
   if (state.phaseElapsed < 500) return null;
   const id = state.order[state.index];
@@ -65,6 +74,9 @@ export function alwaysPolicy(state: MechanicState): MechanicAction | null {
     return state.phase === "stimulus" && !state.respondedThisTrial
       ? { type: "respond" }
       : null;
+  }
+  if (state.mechanic === "switching") {
+    return state.phase === "question" ? { type: "answer", option: 0 } : null;
   }
   return state.phase === "question" ? { type: "answer", option: 0 } : null;
 }
@@ -94,6 +106,12 @@ export function randomPolicy(seed: number): Policy {
       const [respond, next] = nextRandom(rng);
       rng = next;
       return respond < 0.5 ? { type: "respond" } : null;
+    }
+    if (state.mechanic === "switching") {
+      if (state.phase !== "question") return null;
+      const [option, next] = randomInt(rng, 2);
+      rng = next;
+      return { type: "answer", option };
     }
     if (state.phase !== "question") return null;
     const [option, next] = randomInt(rng, 4);
@@ -153,6 +171,14 @@ export function runMechanic(
   policy: Policy,
   options?: SimulationOptions,
 ): SimulationResult<SpeedState>;
+export function runMechanic(
+  id: "switching",
+  seed: number,
+  difficulty: number,
+  trials: number,
+  policy: Policy,
+  options?: SimulationOptions,
+): SimulationResult<SwitchingState>;
 export function runMechanic(
   id: MechanicId,
   seed: number,

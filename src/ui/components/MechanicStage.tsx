@@ -104,6 +104,47 @@ function SpeedStage({ view, onRespond }: Omit<MechanicStageProps, "onAnswer">) {
   );
 }
 
+function SwitchingStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  const [colour = "blank", shape = "blank"] = (view.stimulus ?? "").split("-");
+  return (
+    <div
+      className="stage stage-switching"
+      data-mechanic="switching"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
+      <p className="switch-cue">{view.prompt}</p>
+      <div
+        className={`switch-stimulus switch-colour-${colour} switch-shape-${shape}`}
+        role="img"
+        aria-label={`${colour} ${shape}`}
+        data-testid="stimulus"
+        data-shape={view.stimulus ?? "blank"}
+      />
+      <div className="options" role="group" aria-label="Answer options">
+        {(view.options ?? []).map((option, index) => (
+          <Button
+            key={`${option}-${index}`}
+            variant="ghost"
+            className="option"
+            disabled={!view.canRespond}
+            onClick={() => onAnswer(index)}
+            data-testid={`option-${index}`}
+          >
+            {option}
+          </Button>
+        ))}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function ReasoningStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   return (
     <div
@@ -150,6 +191,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "speed") {
     return <SpeedStage view={view} onRespond={props.onRespond} />;
+  }
+  if (view.mechanic === "switching") {
+    return <SwitchingStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

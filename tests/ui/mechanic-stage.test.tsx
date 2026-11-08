@@ -83,6 +83,28 @@ describe("MechanicStage", () => {
     expect(onRespond).toHaveBeenCalledTimes(1);
   });
 
+  it("renders a task-switch stimulus and sends the chosen option", () => {
+    const onAnswer = vi.fn();
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "switching",
+          name: "Task Switch",
+          phase: "question",
+          prompt: "Colour rule: choose the colour",
+          stimulus: "red-circle",
+          options: ["Red", "Blue"],
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(screen.getByTestId("stimulus").getAttribute("data-shape")).toBe("red-circle");
+    expect(screen.getByText("Colour rule: choose the colour")).toBeTruthy();
+    fireEvent.click(screen.getByTestId("option-1"));
+    expect(onAnswer).toHaveBeenCalledWith(1);
+  });
+
   it("renders a go/no-go shape", () => {
     render(
       <MechanicStage

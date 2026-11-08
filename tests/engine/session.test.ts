@@ -152,6 +152,19 @@ describe("session", () => {
     expect(config.blocks.map((block) => block.mechanic)).toEqual(["speed", "speed", "speed"]);
   });
 
+  it("offers the experimental Task Switch as a focus test without changing the standard lineup", () => {
+    const config = defaultSessionConfig(9, 2, "standard", undefined, "switching");
+    expect(config.label).toBe("Focus session");
+    expect(config.blocks).toHaveLength(3);
+    expect(config.blocks.every((block) => block.mechanic === "switching")).toBe(true);
+    expect(defaultSessionConfig(9).blocks.map((block) => block.mechanic)).toEqual([
+      "nback",
+      "gonogo",
+      "reasoning",
+      "speed",
+    ]);
+  });
+
   it("filters the standard lineup by mechanic without changing defaults", () => {
     const blocks = sessionBlocks(2, "standard", undefined, ["gonogo"]);
     expect(blocks.map((block) => block.mechanic)).toEqual(["gonogo"]);

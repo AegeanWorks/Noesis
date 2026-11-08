@@ -7072,6 +7072,111 @@
    ],
    "synthesis_role": "context",
    "product_use": "Keeps e-consent optional and makes no enrolment claim; required comprehension checks and a stored consent version make the process auditable."
+  },
+  {
+   "pmid": "30998045",
+   "doi": "10.1037/bul0000196",
+   "doi_status": "verified",
+   "year": 2019,
+   "journal": "Psychological Bulletin",
+   "title": "Immediate and long-term efficacy of executive functions cognitive training in older adults: A systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults"
+   ],
+   "k": 64,
+   "n": 3594,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "significant small near-transfer effects; exact pooled value not reported in the abstract; far-transfer was also small and significant; gains were maintained at follow-up"
+    }
+   ],
+   "findings": [
+    "Core executive-function training produced large trained-task effects and small near- and far-transfer effects in older adults",
+    "Immediate and long-term effects were comparable",
+    "Adaptive multidomain training produced significant effects at each transfer level"
+   ],
+   "limitations": [
+    "Certainty is source-reported and provisional",
+    "Far-transfer effects were small and heterogeneous"
+   ],
+   "flags": [
+    "heterogeneity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Supports a task-switching focus test as a core executive-function practice; no general-intelligence or everyday-function claim."
+  },
+  {
+   "pmid": "32011155",
+   "doi": "10.1037/pag0000442",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Psychology and Aging",
+   "title": "Differential effects of cognitive training modules in healthy aging and mild cognitive impairment: A comprehensive meta-analysis of randomized controlled trials",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "mci"
+   ],
+   "k": 215,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive",
+    "usual_care"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.37,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "near transfer across training modules"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.22,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "far transfer overall; single-component executive-function training was most effective on near and far transfer"
+    }
+   ],
+   "findings": [
+    "Overall net gain was g=0.28 across 215 training studies",
+    "All modules produced significant near transfer; fewer produced far transfer",
+    "Single-component executive-function training was most effective on near and far transfer"
+   ],
+   "limitations": [
+    "Immediate effects only",
+    "Certainty is source-reported and provisional"
+   ],
+   "flags": [
+    "heterogeneity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Supports an experimental executive-function task-switching test; standard sessions remain the four core mechanics."
   }
  ]
 }

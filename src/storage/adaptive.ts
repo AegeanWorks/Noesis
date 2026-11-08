@@ -27,11 +27,17 @@ export const ADAPT_DOWN_BELOW = 0.6;
 
 const DEFAULTS: AdaptiveState = {
   enabled: false,
-  levels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2 },
+  levels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2 },
   log: [],
 };
 
-const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed"];
+const MECHANICS: readonly MechanicId[] = [
+  "nback",
+  "gonogo",
+  "reasoning",
+  "speed",
+  "switching",
+];
 
 function isLevel(value: unknown): value is AdaptiveLevel {
   return value === 1 || value === 2 || value === 3;

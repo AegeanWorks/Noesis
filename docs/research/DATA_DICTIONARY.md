@@ -61,7 +61,7 @@ record, the protocol or the pre-registered analysis plan.
 
 | Field | Type | Meaning |
 |---|---|---|
-| `mechanic` | `nback`, `gonogo`, `reasoning`, `speed` | Task identity |
+| `mechanic` | `nback`, `gonogo`, `reasoning`, `speed`, `switching` | Task identity |
 | `domain` | string | Target domain |
 | `trials` | integer | Trials configured for the block |
 | `durationMs` | integer | Block duration in milliseconds |
@@ -93,6 +93,14 @@ record, the protocol or the pre-registered analysis plan.
 `trials_seen`, `hits`, `misses`, `lapses` (reactions over 500 ms), `accuracy` (0-1),
 `mean_reaction_ms`, `median_reaction_ms`, `fastest_reaction_ms`, `reaction_sd_ms`,
 `current_streak`, `max_streak`.
+
+### 4.5 Task Switch metrics
+
+`trials_seen`, `correct`, `incorrect`, `timed_out`, `switch_trials`, `repeat_trials`,
+`switch_correct`, `repeat_correct`, `switch_accuracy` (0-1), `repeat_accuracy` (0-1),
+`accuracy` (0-1), `mean_response_ms`, `switch_mean_response_ms`, `repeat_mean_response_ms`,
+`switch_cost_ms`, `current_streak`, `max_streak`. `switch_cost_ms` is the switch mean reaction
+time minus the repeat mean reaction time; it can be negative and is 0 when either cell is empty.
 
 ## 5. Study, far checks, symptoms and adaptation
 

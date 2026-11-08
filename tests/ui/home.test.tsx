@@ -166,9 +166,9 @@ describe("HomeScreen", () => {
     expect(onClearIntention).toHaveBeenCalledTimes(1);
   });
 
-  it("shows all four mechanics", () => {
+  it("shows every mechanic, including the experimental Task Switch", () => {
     renderHome();
-    for (const name of ["N-back", "Go / No-Go", "Reasoning", "Speed Tap"]) {
+    for (const name of ["N-back", "Go / No-Go", "Reasoning", "Speed Tap", "Task Switch"]) {
       expect(screen.getByRole("heading", { name })).toBeTruthy();
     }
   });

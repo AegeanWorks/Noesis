@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-menu-adherence",
+    "task_id": "noesis-task-switch",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794110022.899886,
-    "owner": "opencode:menu-adherence",
-    "started_by": "opencode:menu-adherence",
+    "updated_at": 1794128214.058755,
+    "owner": "opencode:task-switch",
+    "started_by": "opencode:task-switch",
     "continuations": [],
-    "completed_at": 1794110104.7214894
+    "completed_at": 1794128235.809038
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-research-consent-email",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/6] Plan: add a literature-based e-consent flow and a privacy-preserving email data-return path for future research articles",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794092777.9866486,
-      "timestamp_str": "2026-11-08 02:06:17",
-      "agent": "opencode:research-email",
-      "impact_assessment": {
-        "why": "The user wants Noesis to collect data for future articles; that requires documented informed consent, a pseudonymous participant code, and a user-triggered way to send the export to the study team's email without adding a server or silent data transmission",
-        "benefits": "Opt-in research participation; bilingual EN/TR consent; versioned consent record in the export; email draft + JSON download; no account, no server, no automatic send",
-        "risks": "contract: new storage keys, a new consent screen, export schema fields and Settings panel; dependency: none; concurrency: none; state: existing local data remains valid, new optional fields",
-        "mitigation": "failing-first storage/UI/export tests, pure email-draft builder, no network code, browser proof of consent + download, full gates"
-      },
-      "plan_digest": "af040f1fe1fc9d49eaadf709cd0618909075cb9597595f418a40f2c8382f12a2"
-    },
-    {
-      "task_id": "noesis-research-consent-email",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/6] Impl: two e-consent context records; researchSettings/researchConsent/researchEmail storage; bilingual EN/TR consent screen; ResearchDataPanel; export research metadata; local JSON download + mailto draft with manual attach; withdrawal and contact-change re-consent; Settings and App wiring",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794095248.5688567,
-      "timestamp_str": "2026-11-08 02:47:28",
-      "agent": "opencode:research-email"
-    },
-    {
-      "task_id": "noesis-research-consent-email",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/6] Verified: review 116 records/277 outcomes valid; 29 Python + 308 Vitest; typecheck/build clean; ai:verify 400/400; browser proof 5 checkboxes, Turkish title, downloaded noesis-research-*.json, mailto draft, contact absent from file, withdrawal disables sends, consoleErrors []; UI audit no horizontal scroll/tiny text; aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794095259.3862622,
-      "timestamp_str": "2026-11-08 02:47:39",
-      "agent": "opencode:research-email"
-    },
-    {
-      "task_id": "noesis-research-consent-email",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-research-consent-email' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794095269.1966453,
-      "timestamp_str": "2026-11-08 02:47:49",
-      "agent": "opencode:research-email"
-    },
     {
       "task_id": "noesis-adherence-log",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794110104.721491,
       "timestamp_str": "2026-11-08 06:55:04",
       "agent": "opencode:menu-adherence"
+    },
+    {
+      "task_id": "noesis-task-switch",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/4] Impl: deterministic Task Switch mechanic (colour/shape rule switching), switch/repeat metrics, UI stage and keys 1/2, focus-session support, Menu test card, evidence meta and two EF context records, 500-simulation verifier, NEW_MECHANIC_CANDIDATES.md, R63 and ADR-045",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794128184.0834453,
+      "timestamp_str": "2026-11-08 11:56:24",
+      "agent": "opencode:task-switch"
+    },
+    {
+      "task_id": "noesis-task-switch",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/4] Plan: search new game paradigms in the literature and add the best-supported safe candidate as an experimental focus test",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794128202.0409129,
+      "timestamp_str": "2026-11-08 11:56:42",
+      "agent": "opencode:task-switch",
+      "impact_assessment": {
+        "why": "The user asked to continue searching new games in the literature. The app had four core mechanics but no cognitive-flexibility task; EF training meta-analyses support a set-shifting practice task, and a candidate matrix shows why other genres/tasks are not first.",
+        "benefits": "A literature-selected Task Switch focus test with switch/repeat accuracy and switch cost; two EF context records; a documented candidate matrix; default four-core lineup unchanged",
+        "risks": "contract: new MechanicId, state machine and focus-only UI; dependency: none; concurrency: none; state: adaptive levels gain a fifth key, old adaptive state resets to defaults",
+        "mitigation": "failing-first engine/UI/session tests, 500 deterministic simulations, browser switching proof, full gates"
+      },
+      "plan_digest": "5514d789b0d517e95151317b53604f456c16bbf6bcc86c57a0c0516db94ee9aa"
+    },
+    {
+      "task_id": "noesis-task-switch",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/4] Verified: 29 Python + 335 Vitest; typecheck/build clean; ai:verify 500/500 (5 mechanics); review 118 records/280 outcomes valid; switching proof cue shape, options Circle/Square, correct feedback, consoleErrors []; UI audit citations 15 all >=44px, no horizontal scroll/tiny text; aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794128214.058755,
+      "timestamp_str": "2026-11-08 11:56:54",
+      "agent": "opencode:task-switch"
+    },
+    {
+      "task_id": "noesis-task-switch",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-task-switch' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794128235.8090398,
+      "timestamp_str": "2026-11-08 11:57:15",
+      "agent": "opencode:task-switch"
     }
   ]
 }

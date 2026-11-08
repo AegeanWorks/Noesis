@@ -2,7 +2,7 @@
 
 **Status:** v1.0 complete plus the 2026-11-08 targeted UX and data-collection updates, AI-assisted, internally pre-registered
 **Search date:** 2026-10-31; targeted update 2026-11-08
-**Records:** 116 included (90 primary, 26 context), 277 outcomes
+**Records:** 118 included (90 primary, 28 context), 280 outcomes
 **Review type:** PRISMA 2020 systematic umbrella review with landmark-RCT update
 
 ---
@@ -39,6 +39,7 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [SYNTHESIS.md](SYNTHESIS.md) | Main evidence synthesis, population findings, claim ladder |
 | [DESIGN_IMPLICATIONS.md](DESIGN_IMPLICATIONS.md) | Product requirements traceable to evidence |
 | [BEHAVIORAL_ENGAGEMENT.md](BEHAVIORAL_ENGAGEMENT.md) | Bounded Motivation mode integration of Noesis behavioral mechanics, with evidence caveats and safeguards |
+| [NEW_MECHANIC_CANDIDATES.md](NEW_MECHANIC_CANDIDATES.md) | Literature scan and decision matrix for new cognitive-training tasks |
 | [PRACTICE_MENU_AND_BRIEFING.md](PRACTICE_MENU_AND_BRIEFING.md) | Literature basis for the test-selection menu, local history and pre-test briefing |
 | [DATA_COLLECTION_AND_CONSENT.md](DATA_COLLECTION_AND_CONSENT.md) | Literature basis for e-consent, local research data sharing and the email return path |
 | [ADHERENCE_LOGGING.md](ADHERENCE_LOGGING.md) | Literature basis for session starts, completions and early-ending logging |
@@ -48,7 +49,7 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |
 | [REFERENCES.bib](REFERENCES.bib) | BibTeX for the included records |
-| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (116 records, 277 outcomes) |
+| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (118 records, 280 outcomes) |
 | [analysis/screening_reviews.csv](analysis/screening_reviews.csv) | Rule-based screen of the 1,495-review PubMed corpus |
 | [analysis/screening_summary.json](analysis/screening_summary.json) | Screening counts |
 | [records/](records/) | Raw PubMed, OpenAlex, trial-registry and metadata-verification records |

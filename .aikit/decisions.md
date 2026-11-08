@@ -320,6 +320,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add a `manifest` object to every JSON export with `appVersion`, `exportSchemaVersion`, `evidenceReview`, `dataDictionaryVersion`, `exportedAt`, `consentVersion` and counts for sessions, blocks, far checks, symptom reports, adherence events and adaptation events. Centralize app and review versions in `src/content/appMeta.ts`, and use them in the Settings footer. Add `docs/research/DATA_DICTIONARY.md` covering every JSON field and both CSV layouts. A field change must update the dictionary and `DATA_DICTIONARY_VERSION` in the same commit.
 - **Consequences**: Every export is self-describing without requiring the app build, and the Settings footer no longer reports a stale review version. The manifest is additive, so old exports and consumers remain valid. The dictionary is manual prose, not generated; a missed update is a documentation defect, and the export tests assert the manifest shape and counts.
 
+### ADR-045: Experimental Task Switch focus test
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The new-game literature search found two executive-function meta-analyses (PMID 30998045, 32011155) showing small near- and far-transfer effects in older adults, with single-component EF training most effective. The candidate matrix also considered Flanker, stop-signal, spatial span, mental rotation, visual search/UFOV, action games and commercial brain-training suites. Action games conflict with the no-flashing safety posture; the other tasks lack a task-specific meta-analysis in this search or duplicate an existing construct.
+- **Decision**: Add an experimental **Task Switch** mechanic: a static coloured shape is answered under an alternating colour/shape rule, with switch/repeat accuracy and switch cost. It is available from the Menu as a three-block focus test. The default standard session stays the four-core lineup; Task Switch is not mixed in silently. It is `experimental`, uses no flashing, and carries no general-intelligence, academic, dementia-prevention or everyday-function claim.
+- **Consequences**: The app gains a literature-selected cognitive-flexibility task and a new measurement outcome without changing the validated core session. `npm run ai:verify` grows from 400 to 500 deterministic simulations (5 mechanics × 50 seeds × 2 strategies). The candidate matrix and limits are in `docs/research/NEW_MECHANIC_CANDIDATES.md`; future tasks must be chosen by task-specific evidence and safety, not genre labels.
+
 
 
 

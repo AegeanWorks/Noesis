@@ -596,6 +596,24 @@ Open candidates (not yet cycles): none from the current audits.
 - **VERIFICATION**: the menu test asserts 4 started / 3 completed / 1 ended early / 75%;
   the UI audit includes the History tab; full gates follow.
 
+## Cycle 18 - New-game literature search and experimental Task Switch
+
+- **Area**: new mechanics from the literature.
+- **FIND**: the app had four core mechanics but no cognitive-flexibility task. The review had
+  no task-switching paradigm. A targeted search found two EF training meta-analyses
+  (PMID 30998045, 32011155) with small near/far transfer in older adults, plus action-game and
+  commercial-program reviews that were not a good safety/task fit.
+- **ANALYZE**: candidate matrix covers Task Switch, Flanker, stop-signal, spatial span, mental
+  rotation, visual search/UFOV, action games and commercial suites. Task Switch was chosen
+  because it is a specific trainable construct, safe with static shapes and already supported
+  by EF meta-analyses.
+- **IMPLEMENT**: `switching` engine state machine, deterministic colour/shape rule schedule,
+  switch/repeat metrics and switch cost, UI stage, keyboard 1/2, focus-session support, Menu
+  test card, evidence meta, 500-simulation verifier, `NEW_MECHANIC_CANDIDATES.md`, R63 and
+  ADR-045. Standard lineup remains four core mechanics.
+- **VERIFICATION**: see commands below; engine/UI/session tests cover correctness, timeout,
+  switch/repeat metrics, focus lineup and the UI stage; `ai:verify` now runs 500/500.
+
 ## Commands run
 
 ```text
@@ -743,5 +761,16 @@ npx vitest run tests/ui/practice-menu.test.tsx
 npm run test:all                 29 Python + 328 Vitest passed
 $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
   menu-history audited with adherence card; consoleErrors []; no horizontal scroll/tiny text
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/engine/switching.test.ts tests/engine/session.test.ts tests/ui/mechanic-stage.test.tsx tests/ui/home.test.tsx tests/ui/practice-menu.test.tsx
+  before fix: switching module/UI missing, 4-mechanic assumptions
+  after fix:  all switching, focus-lineup and UI tests passed
+npm run test:all                 29 Python + 335 Vitest passed
+npm run ai:verify                500/500 deterministic simulations passed (5 mechanics)
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/switching-proof.mjs
+  cue shape, options Circle/Square, correct answer feedback, briefing carries the EF claim, consoleErrors []
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
+  citationReport count 15, allAtLeast44High true; consoleErrors []; no horizontal scroll/tiny text
 python aikit.py check noesis     6/6 gates passed
 ```

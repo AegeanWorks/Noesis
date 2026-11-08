@@ -107,9 +107,17 @@ export function SessionScreen({
         if (view.mechanic.canRespond) onRespond();
         return;
       }
-      if (view.mechanic.mechanic === "reasoning" && /^[1-4]$/.test(event.key)) {
-        event.preventDefault();
-        if (view.mechanic.canRespond) onAnswer(Number(event.key) - 1);
+      if (
+        (view.mechanic.mechanic === "reasoning" ||
+          view.mechanic.mechanic === "switching") &&
+        /^[1-4]$/.test(event.key)
+      ) {
+        const option = Number(event.key) - 1;
+        const max = view.mechanic.mechanic === "switching" ? 2 : 4;
+        if (option < max) {
+          event.preventDefault();
+          if (view.mechanic.canRespond) onAnswer(option);
+        }
       }
     };
     window.addEventListener("keydown", handler);

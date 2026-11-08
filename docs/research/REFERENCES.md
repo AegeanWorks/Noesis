@@ -41,6 +41,9 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 - The effect of testing versus restudy on retention: a meta-analytic review of the testing effect. *Psychological Bulletin*. 2014. PMID: [25150680](https://pubmed.ncbi.nlm.nih.gov/25150680/). DOI: [10.1037/a0037559](https://doi.org/10.1037/a0037559).
 - Distributed practice in verbal recall tasks: A review and quantitative synthesis. *Psychological Bulletin*. 2006. PMID: [16719566](https://pubmed.ncbi.nlm.nih.gov/16719566/). DOI: [10.1037/0033-2909.132.3.354](https://doi.org/10.1037/0033-2909.132.3.354).
 
+- Immediate and long-term efficacy of executive functions cognitive training in older adults: A systematic review and meta-analysis. *Psychological Bulletin*. 2019. PMID: [30998045](https://pubmed.ncbi.nlm.nih.gov/30998045/). DOI: [10.1037/bul0000196](https://doi.org/10.1037/bul0000196).
+- Differential effects of cognitive training modules in healthy aging and mild cognitive impairment: A comprehensive meta-analysis of randomized controlled trials. *Psychology and Aging*. 2020. PMID: [32011155](https://pubmed.ncbi.nlm.nih.gov/32011155/). DOI: [10.1037/pag0000442](https://doi.org/10.1037/pag0000442).
+
 ## Neurofeedback
 
 - Modulating complex brain states using MVPA-based neurofeedback: A systematic review. *NeuroImage*. 2026. PMID: [41702476](https://pubmed.ncbi.nlm.nih.gov/41702476/). DOI: [10.1016/j.neuroimage.2026.121814](https://doi.org/10.1016/j.neuroimage.2026.121814).

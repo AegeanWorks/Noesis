@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 116 |
-| Outcomes | 277 |
+| Records | 118 |
+| Outcomes | 280 |
 | Primary outcomes | 222 |
-| Systematic reviews/meta-analyses | 67 |
+| Systematic reviews/meta-analyses | 69 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 23 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 105 |
+| DOI verified | 107 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 37 |
+| cct | 39 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 105 |
+| DOI verified | 107 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **116** |
+| **Total** | **118** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -183,6 +183,8 @@ A 2026-11-08 targeted UX update added two self-determination-theory meta-analyse
 A 2026-11-08 data-collection update added two e-consent systematic reviews as context records: Cohen et al. 2023 (PMID 37656499; 35 studies, 13,281 participants; eConsent was better or not worse than paper for comprehension, acceptability and usability, no study favoured paper, cycle time increased) and Mazzochi et al. 2023 (PMID 36810093; 12 studies, 8,864 participants; enrolment effects mixed, comprehension/recall may improve, high heterogeneity). Both DOIs were checked against Crossref. The 2026 perspective on digital-phenotyping data banking (PMID 42443473) and the data-sharing measurement review (PMID 41813053) stayed narrative-only in [DATA_COLLECTION_AND_CONSENT.md](DATA_COLLECTION_AND_CONSENT.md): the first is a Perspective and the second found low-certainty survey measurement. These sources ground R57-R59.
 
 The FAIR Guiding Principles (PMID 26978244; DOI 10.1038/sdata.2016.18) stayed narrative-only in [DATA_EXPORT_AND_REUSE.md](DATA_EXPORT_AND_REUSE.md): it is a principles paper, not an eligible systematic review, RCT or umbrella review. It grounds R61 (analysis-ready CSV companions) and R62 (self-describing manifest and data dictionary).
+
+A 2026-11-08 new-game search added two executive-function context records: Nguyen et al. 2019 (PMID 30998045; 64 studies, 3,594 older adults; small near- and far-transfer effects, maintained at follow-up) and Basak et al. 2020 (PMID 32011155; 215 training studies; overall g=0.28, near g=0.37, far g=0.22; single-component executive-function training most effective on near and far transfer). They ground the experimental Task Switch focus test. Action-game and commercial brain-training meta-analyses (PMIDs 29172564, 37531408, 34251578) stayed narrative-only in [NEW_MECHANIC_CANDIDATES.md](NEW_MECHANIC_CANDIDATES.md): action-game genres conflict with the no-flashing safety posture, and the commercial-program review is not specific to a single task paradigm.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
