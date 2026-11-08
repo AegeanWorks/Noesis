@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-rotation-result-delta",
+    "task_id": "noesis-ufov-scope",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794143613.7567296,
-    "owner": "opencode:rotationdelta",
-    "started_by": "opencode:rotationdelta",
+    "updated_at": 1794143853.4112003,
+    "owner": "opencode:ufovscope",
+    "started_by": "opencode:ufovscope",
     "continuations": [],
-    "completed_at": 1794143619.7088714
+    "completed_at": 1794143859.2805622
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-spatial-resume",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: prove a Spatial Span focus session survives reload and resumes with the same seed, block, level and trial",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794141833.7810583,
-      "timestamp_str": "2026-11-08 15:43:53",
-      "agent": "opencode:spatialresume",
-      "impact_assessment": {
-        "why": "Spatial Span had only a storage round-trip test; no browser-level recovery proof existed for the new mechanic",
-        "benefits": "Verified save/resume for Spatial Span; screenshots and console-error evidence analogous to Task Switch and Flanker",
-        "risks": "contract: proof script only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "fixed-clock Playwright run with mid/stored/resumed comparison, completed three blocks, full gates"
-      },
-      "plan_digest": "cab8ba728830dbaddf7a955aeca7283351bce943cc923fd9de1a9f291001219e"
-    },
-    {
-      "task_id": "noesis-spatial-resume",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: scripts/spatial-resume-proof.mjs with three trials before reload, Resume session, re-shown briefing dismissal, three-block completion and screenshots",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794141834.448641,
-      "timestamp_str": "2026-11-08 15:43:54",
-      "agent": "opencode:spatialresume"
-    },
-    {
-      "task_id": "noesis-spatial-resume",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seed 2721744568, block 0/3, spatial, level 2, trial 3 show identical mid/stored/resumed; Resume session label; 3 blocks 8/8 mean 6.8 longest 8; consoleErrors []; 29 Python + 374 Vitest, 700 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794141835.1559644,
-      "timestamp_str": "2026-11-08 15:43:55",
-      "agent": "opencode:spatialresume"
-    },
-    {
-      "task_id": "noesis-spatial-resume",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-spatial-resume' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794141841.239388,
-      "timestamp_str": "2026-11-08 15:44:01",
-      "agent": "opencode:spatialresume"
-    },
     {
       "task_id": "noesis-rotation",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794143619.7088728,
       "timestamp_str": "2026-11-08 16:13:39",
       "agent": "opencode:rotationdelta"
+    },
+    {
+      "task_id": "noesis-ufov-scope",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: verify UFOV/visual-search and stop-signal evidence, then record an explicit scope decision",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794143852.193413,
+      "timestamp_str": "2026-11-08 16:17:32",
+      "agent": "opencode:ufovscope",
+      "impact_assessment": {
+        "why": "The candidate matrix still listed both tasks; the next step allowed either implementation or a documented out-of-scope decision",
+        "benefits": "A verified, claim-bounded scope decision; no unnecessary mechanic; safety posture preserved",
+        "risks": "contract: research docs/ADR only; dependency: none; concurrency: none; state: none",
+        "mitigation": "PubMed metadata/abstract verification for each PMID, full tests and aikit check"
+      },
+      "plan_digest": "223c4873602d1f8f7a4e4a492120f1cddfd79b4d3fa43f50c3b801487925a628"
+    },
+    {
+      "task_id": "noesis-ufov-scope",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: matrix rows updated; section 6 rationale and revisit conditions; ADR-049; search log note; improvement record",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794143852.8222182,
+      "timestamp_str": "2026-11-08 16:17:32",
+      "agent": "opencode:ufovscope"
+    },
+    {
+      "task_id": "noesis-ufov-scope",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: PMIDs 29175362, 29270605, 38309625 metadata/abstracts checked; review 120/282 unchanged; 29 Python + 388 Vitest, 800 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794143853.4112003,
+      "timestamp_str": "2026-11-08 16:17:33",
+      "agent": "opencode:ufovscope"
+    },
+    {
+      "task_id": "noesis-ufov-scope",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-ufov-scope' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794143859.2805648,
+      "timestamp_str": "2026-11-08 16:17:39",
+      "agent": "opencode:ufovscope"
     }
   ]
 }

@@ -1362,3 +1362,27 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 388 Vitest; `npm run ai:verify` — 800/800;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's result deltas, tests, proof and record.
+
+## Cycle 29 — UFOV-like visual search and stop-signal: explicit out-of-scope decision
+
+- **Area**: literature research / candidate triage, no product mechanic added.
+- **FIND**: A 2026-11-08 targeted PubMed search evaluated the remaining candidate matrix
+  entries. Edwards et al. 2018 (PMID 29175362) reviewed 44 UFOV-training studies from 17 RCTs:
+  speed/attention and everyday-function gains, durable across ten years, adaptive better than
+  non-adaptive, but no transfer to other neuropsychological outcomes. Woutersen et al. 2017
+  (PMID 29270605) found the three UFOV subtests are not construct-pure. McGreen et al. 2024
+  (PMID 38309625) meta-analysed 32 Go/No-Go and Stop-Signal studies and found a small
+  appetitive-behaviour effect (g=-0.21), not cognitive-training transfer.
+- **DECISION**: Do not implement a UFOV-like visual-search task or a separate stop-signal task.
+  UFOV is a proprietary multi-subtest protocol; a simplified central/peripheral task would not
+  be the validated intervention, and its brief adaptive presentation conflicts with the app's
+  static no-flashing safety posture. Stop-signal duplicates the Go/No-Go inhibition construct
+  and its training evidence is behaviour-change focused. Recorded as ADR-049; the candidate
+  matrix and section 6 document the rationale and revisit conditions.
+- **EVIDENCE**: PubMed esummary/efetch verified the titles, journals, years, authors and DOIs:
+  29175362 (Neurosci Biobehav Rev, 2018, 10.1016/j.neubiorev.2017.11.004), 29270605 (J Vis,
+  2017, 10.1167/17.14.11) and 38309625 (Appetite, 2024, 10.1016/j.appet.2024.107215).
+  No evidence-table record was added; the review remains at 120 records and 282 outcomes.
+- **GATES**: `npm run test:all` — 29 Python + 388 Vitest; `npm run ai:verify` — 800/800;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's scope note, ADR, search log and record.

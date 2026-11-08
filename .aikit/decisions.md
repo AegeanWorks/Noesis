@@ -348,6 +348,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add an experimental **Mental Rotation** focus test: two static block figures are shown, and the user decides whether the right figure is the same shape rotated or a mirror image. It reports accuracy, same/mirror accuracy, mean response time, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims spatial-task practice only; mathematics, academic, general-intelligence and everyday-function gains are explicitly not claimed, especially for computerized training.
 - **Consequences**: The app gains an eighth mechanic and `npm run ai:verify` grows to 800 simulations (8 × 50 × 2). The evidence table gains one context record (22663761), taking the review to 120 records and 282 outcomes and revision v1.4. The claim boundary is recorded in R66 and the candidate note.
 
+### ADR-049: UFOV-like visual search and stop-signal remain out of scope
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The candidate matrix's remaining entries were a UFOV/visual-search task and a stop-signal task. A targeted PubMed search verified Edwards et al. 2018 (PMID 29175362; 44 UFOV studies from 17 RCTs; speed/attention and everyday-function gains, durable, adaptive better than non-adaptive, but no transfer to other neuropsychological outcomes) and Woutersen et al. 2017 (PMID 29270605; UFOV subtests are not construct-pure). McGreen et al. 2024 (PMID 38309625) meta-analysed 32 Go/No-Go and Stop-Signal studies and found a small appetitive-behaviour effect (g=-0.21), not cognitive-training transfer.
+- **Decision**: Do not implement a UFOV-like visual-search mechanic or a separate stop-signal mechanic. UFOV is a proprietary multi-subtest protocol; a simplified task would not be the validated intervention, and its brief adaptive visual presentation conflicts with the app's static no-flashing safety posture. Stop-signal duplicates the Go/No-Go inhibition construct, and its training evidence is behaviour-change focused. Speed Tap remains explicitly not UFOV.
+- **Consequences**: The review stays at 120 records and 282 outcomes; no new mechanic or evidence-table record is added. The rationale and revisit conditions are documented in section 6 of `NEW_MECHANIC_CANDIDATES.md`. Revisit UFOV only with a non-proprietary, separately validated paradigm and a photosensitivity/protocol review.
+
 
 
 

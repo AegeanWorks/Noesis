@@ -53,10 +53,10 @@ The following sources stayed narrative-only:
 |---|---|---|---|---|
 | **Task Switch** | Set-shifting / cognitive flexibility | Core-EF meta-analyses show small near and far transfer; single-component EF training was most effective in one analysis, while multicomponent training also transferred and improved everyday functioning (30998045, 32011155) | Static coloured shapes; no flashing; easy deterministic state machine | **Implement as experimental focus test** |
 | Flanker | Interference control | No eligible Flanker-specific training meta-analysis in this search; the standard interference-control paradigm is covered by broader EF training evidence with small near transfer (30998045, 32011155) | Static arrows; safe | **Implement as experimental focus test, claim-bounded** |
-| Stop-signal | Response inhibition / cancellation | Strong paradigm, but Go/No-Go already covers inhibition in the core lineup | Static go/stop cues; safe | Candidate, not implemented |
+| Stop-signal | Response inhibition / cancellation | Inhibitory-control training meta-analyses target appetitive behaviour (38309625, g=-0.21) rather than cognitive-training transfer; Go/No-Go already covers inhibition in the core lineup | Static go/stop cues; safe | Do not implement (duplicate construct; behaviour-change evidence) |
 | Spatial span / Corsi | Visuospatial working memory | A 2025 meta-analysis found a small Corsi Block effect (d=0.16) in healthy older adults; broader working-memory reviews show short-term near transfer but no convincing far transfer (37822255, 22612437, 27474138) | Grid sequence; safe | **Implement as experimental focus test, claim-bounded** |
 | Mental rotation | Spatial ability | Training improved spatial skills (217 studies, g=0.47) and transferred to untrained spatial tasks (22663761); spatial training also improved mathematics (g=0.28), but concrete materials beat computerized training and near outcomes transferred more than distal ones (35073120) | Static block figures; safe | **Implement as experimental focus test, claim-bounded** |
-| Visual search / UFOV-like | Processing speed / attention | ACTIVE supports speed training, but this app's Speed Tap is not UFOV and a simple search task would not be the validated protocol | Static search array; safe | Candidate, not implemented |
+| Visual search / UFOV-like | Processing speed / attention | UFOV training shows speed/attention and everyday-function gains (44 studies/17 RCTs; 29175362), but UFOV is a proprietary multi-subtest protocol and its subtests are not construct-pure (29270605); a simple search task is not the validated protocol | Brief adaptive presentation conflicts with the static no-flashing safety posture; Speed Tap is explicitly not UFOV | Out of scope for now (reason in section 6) |
 | Action video game | Attention / spatial cognition | g=0.34 intervention (29172564), but genre is broad and often fast/flashing | Conflicts with the no-flashing safety posture | Do not build a flashing action game |
 | Commercial brain-training suite | Mixed | Small near transfer; no robust objective far transfer (34251578) | Program-specific, not a task | Do not copy a commercial suite |
 
@@ -178,3 +178,43 @@ moderate spatial-training evidence but the mathematics effect favours concrete m
 academic gain is claimed. The tasks are practice and measurement instruments, not diagnostic
 tests. Future candidates should be selected by task-specific evidence and safety, not by genre
 labels.
+
+---
+
+## 6. Out-of-scope candidates from the 2026-11-08 targeted search
+
+Two remaining matrix candidates were researched and deliberately **not** implemented.
+
+### 6.1 UFOV / visual search
+
+- Edwards et al. 2018 (PMID 29175362; *Neuroscience & Biobehavioral Reviews*) systematically
+  reviewed 44 UFOV-training studies from 17 randomized trials. UFOV training improved neural
+  outcomes, speed of processing and attention; showed far transfer to everyday function;
+  endured across ten years; and adaptive training outperformed non-adaptive. It did not transfer
+  to other neuropsychological outcomes.
+- Woutersen et al. 2017 (PMID 29270605; *Journal of Vision*) meta-analysed 116 correlations
+  across 18 articles and found that none of the three UFOV subtests measures one clear
+  construct; visual and cognitive functions are all involved.
+- **Decision:** no UFOV-like mechanic. UFOV is a proprietary multi-subtest protocol, so a
+  simplified central/peripheral search task would not be the validated intervention even if it
+  shared stimuli. The paradigm also relies on brief, adaptively speeding visual presentation,
+  which conflicts with this app's static, no-flashing safety posture and would require a
+  separate photosensitivity and protocol review. The existing Speed Tap is explicitly labelled
+  as not UFOV. Revisit only with a non-proprietary paradigm that has published task validation,
+  a safety review for brief/adaptive visual presentation, and copy that does not claim to be
+  UFOV.
+
+### 6.2 Stop-signal
+
+- McGreen et al. 2024 (PMID 38309625; *Appetite*) meta-analysed 32 studies of Go/No-Go and
+  Stop-Signal training for food consumption or choice. The overall effect was small
+  (g=-0.21, 95% CI [-0.31, -0.11]), and the individual effect held only for a single session of
+  Go/No-Go training. The evidence concerns appetitive behaviour change, not cognitive-training
+  transfer.
+- **Decision:** no separate stop-signal mechanic. Go/No-Go already covers response inhibition in
+  the core lineup, and adding a near-duplicate construct would not add a distinct measured
+  outcome. The behaviour-change literature also does not support a cognitive or everyday-function
+  claim for this app.
+
+These decisions are recorded in ADR-049. They are scope decisions, not evidence that UFOV or
+stop-signal training is ineffective.
