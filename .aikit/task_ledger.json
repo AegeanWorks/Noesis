@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-spatial-result-delta",
+    "task_id": "noesis-spatial-resume",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794141538.5413733,
-    "owner": "opencode:spatialdelta",
-    "started_by": "opencode:spatialdelta",
+    "updated_at": 1794141835.1559644,
+    "owner": "opencode:spatialresume",
+    "started_by": "opencode:spatialresume",
     "continuations": [],
-    "completed_at": 1794141543.7221594
+    "completed_at": 1794141841.239386
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-flanker-cost-trend",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add a level-aware Flanker interference-cost trend to the Choose-a-test card and Menu History, with same-level change",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794138682.2639663,
-      "timestamp_str": "2026-11-08 14:51:22",
-      "agent": "opencode:flankercost",
-      "impact_assessment": {
-        "why": "Flanker history had only per-block summaries; neither Choose nor History aggregated interference cost, and averaging across levels would be invalid",
-        "benefits": "Users see the Flanker outcome where they choose and review the test; one shared level grouping for both cost metrics",
-        "risks": "contract: Menu UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "three failing-first tests (ordering/values/change, exact card line, empty case), seeded before/after screenshots, real level-2 Flanker playthrough, full gates"
-      },
-      "plan_digest": "02de072569d929e8c51b83f7e55c72c091fb946519c27dc5702ce390180d4d87"
-    },
-    {
-      "task_id": "noesis-flanker-cost-trend",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: costLevelsFor/costLine/changeCopy shared helpers; Flanker Choose line and History card with metricLabel; tests; flanker-cost-trend-proof.mjs; docs/record",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794138682.74943,
-      "timestamp_str": "2026-11-08 14:51:22",
-      "agent": "opencode:flankercost"
-    },
-    {
-      "task_id": "noesis-flanker-cost-trend",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seeded L3 last90 120->90 improved30, L2 last80 60->80 worsened20, L1 first; real level-2 run costs 17/0/300 updated L2 to 5 blocks last300 mean91 worsened+300; consoleErrors []; 29 Python + 355 Vitest, 600 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794138683.2174342,
-      "timestamp_str": "2026-11-08 14:51:23",
-      "agent": "opencode:flankercost"
-    },
-    {
-      "task_id": "noesis-flanker-cost-trend",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-flanker-cost-trend' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794138686.7376046,
-      "timestamp_str": "2026-11-08 14:51:26",
-      "agent": "opencode:flankercost"
-    },
     {
       "task_id": "noesis-flanker-result-delta",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794141543.7221613,
       "timestamp_str": "2026-11-08 15:39:03",
       "agent": "opencode:spatialdelta"
+    },
+    {
+      "task_id": "noesis-spatial-resume",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: prove a Spatial Span focus session survives reload and resumes with the same seed, block, level and trial",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794141833.7810583,
+      "timestamp_str": "2026-11-08 15:43:53",
+      "agent": "opencode:spatialresume",
+      "impact_assessment": {
+        "why": "Spatial Span had only a storage round-trip test; no browser-level recovery proof existed for the new mechanic",
+        "benefits": "Verified save/resume for Spatial Span; screenshots and console-error evidence analogous to Task Switch and Flanker",
+        "risks": "contract: proof script only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "fixed-clock Playwright run with mid/stored/resumed comparison, completed three blocks, full gates"
+      },
+      "plan_digest": "cab8ba728830dbaddf7a955aeca7283351bce943cc923fd9de1a9f291001219e"
+    },
+    {
+      "task_id": "noesis-spatial-resume",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: scripts/spatial-resume-proof.mjs with three trials before reload, Resume session, re-shown briefing dismissal, three-block completion and screenshots",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794141834.448641,
+      "timestamp_str": "2026-11-08 15:43:54",
+      "agent": "opencode:spatialresume"
+    },
+    {
+      "task_id": "noesis-spatial-resume",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seed 2721744568, block 0/3, spatial, level 2, trial 3 show identical mid/stored/resumed; Resume session label; 3 blocks 8/8 mean 6.8 longest 8; consoleErrors []; 29 Python + 374 Vitest, 700 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794141835.1559644,
+      "timestamp_str": "2026-11-08 15:43:55",
+      "agent": "opencode:spatialresume"
+    },
+    {
+      "task_id": "noesis-spatial-resume",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-spatial-resume' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794141841.239388,
+      "timestamp_str": "2026-11-08 15:44:01",
+      "agent": "opencode:spatialresume"
     }
   ]
 }

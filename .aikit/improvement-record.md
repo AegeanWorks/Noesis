@@ -1192,3 +1192,33 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 374 Vitest; `npm run ai:verify` — 700/700;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's result delta, tests, proof and record.
+
+## Cycle 24 — Spatial Span mid-session reload and resume proof
+
+- **Area**: Spatial Span persistence and recovery, alongside the storage round-trip test.
+- **FIND**: Spatial Span had a snapshot unit test but no browser-level proof that a real focus
+  session survives reload and resumes with the same seed, block, level and trial.
+- **IMPLEMENT**: `scripts/spatial-resume-proof.mjs` starts a level-2 Spatial Span focus session
+  from the Menu, answers three trials, waits for the 1.5 s snapshot, reloads, presses
+  **Resume session**, dismisses the re-shown briefing, verifies the restored state, completes all
+  three blocks and captures mid/resumed/results screenshots and console errors.
+- **PROOF**: fixed seed `2721744568`, adaptive spatial level 2:
+  - mid: `block 0/3 · spatial · difficulty [2,2,2] · trial 3 · show`
+    (`Block 1 of 3 · Level 2`)
+  - stored snapshot: identical seed, block, mechanic, difficulty 2, trial 3, show
+  - after reload: CTA `Resume session`
+  - resumed: identical to mid, including `trial 3 · show`
+  - completed: three level-2 blocks, 100% accuracy, 8/8 correct each, mean span 6.8,
+    longest span 8; `consoleErrors []`
+  - screenshots:
+    `%TEMP%\opencode\noesis-spatial-resume\01-spatial-mid-session.png` SHA-256
+    `FB94DD1BBF85A37518EABB7B9A2100D9A0BA40710BECE1D72CD10818A1E7742C`;
+    `02-home-after-reload.png` SHA-256
+    `7284965D2505877B139F859096D2C18A665C27166CE6497EED690F1137D6E3A8`;
+    `03-spatial-resumed.png` SHA-256
+    `968DE25ED97901D58B109D691CEACA65A1C608DEC7830684157D65DD32D99349`;
+    `04-spatial-results.png` SHA-256
+    `039057D5C561CABA2C0A8687327B22472BF03269F27F40B94DF10114118C99A3`.
+- **GATES**: `npm run test:all` — 29 Python + 374 Vitest; `npm run ai:verify` — 700/700;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's resume proof and record.
