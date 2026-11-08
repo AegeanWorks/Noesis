@@ -18,6 +18,7 @@ Covered so far:
 9. Results copy — 2026-11-07 — cycle 9
 10. Level-aware bests — 2026-11-07 — cycle 10
 11. Final audit — 2026-11-07 — zero verified findings (stop)
+12. Task Switch resume and switch-cost interpretation — 2026-11-08 — cycle 12
 
 Audio cues — dead end (2026-11-07): the README states no audio, EEG or biometric modules
 ship; adding sound would change the stated product scope and safety posture, so no cycle.
@@ -774,3 +775,40 @@ $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
   citationReport count 15, allAtLeast44High true; consoleErrors []; no horizontal scroll/tiny text
 python aikit.py check noesis     6/6 gates passed
 ```
+
+## Cycle 12 — Task Switch resume and switch-cost interpretation
+
+- **Area**: progression/saves plus Task Switch result readability.
+- **FIND**: The new Task Switch had no end-to-end resume proof, and its result card showed a
+  switch-cost number without explaining what it compares or that a negative value is possible.
+- **ANALYZE**: `sessionSnapshot` had a hardcoded four-mechanic allow-list (fixed in the prior
+  commit with `MECHANIC_IDS`); the adaptive loader now migrates old four-level states; the
+  switching advance loop now crosses timeout, feedback and next-trial in one step. The result
+  card needed one neutral explanatory line, not a new claim.
+- **IMPLEMENT**: `scripts/switching-resume-proof.mjs` starts a Task Switch focus session from
+  the Menu, drives trials, waits for the 1.5 s snapshot, reloads, resumes and completes all three
+  blocks. `ResultsScreen` now prints the switch-cost definition and the negative-value case for
+  switching results; CSS adds a subtle left rule. The candidate note records the same
+  definition.
+- **PROOF (resume)**: fixed clock seed 2721744568, adaptive switching level 3:
+  mid-session `{phase running, block 0/3, mechanic switching, difficulty [3,3,3], trial 8,
+  header "Block 1 of 3 · Level 3"}`; stored snapshot identical; after reload the button read
+  `Resume session`; resumed state identical; completed 3/3 switching blocks at level 3 with
+  24/24 correct each. Screenshots:
+  `%TEMP%\opencode\noesis-switching-resume\01-task-switch-mid-session.png` (SHA-256
+  `AD9166A561A2C383AD2AF0481CA34111E4EFD6C93427CE49977ADC92C6B4243F`) and
+  `%TEMP%\opencode\noesis-switching-resume-after\03-task-switch-resumed.png` (SHA-256
+  `ECB52910D2EB3E3ECBB05BFC5E0B03D134334371B0C50B9E8BD77CD160E688E1`).
+  `consoleErrors []`.
+- **PROOF (result note)**: same three-block Task Switch results screen before/after the copy
+  change, viewport 390x844@2x:
+  before `%TEMP%\opencode\noesis-switching-resume\04-task-switch-results.png` SHA-256
+  `1A60FB81090CF27CBD35BAFEA026FC6D91CD6CF5B9B0314871DD2D2C78AA09BB`;
+  after `%TEMP%\opencode\noesis-switching-resume-after\04-task-switch-results.png` SHA-256
+  `73E83BDE0E235FA3E2F9998B2FDF8D4836A1FDA1159E0967EECC461CF285BFF9`.
+  The after card explains switch cost and negative values; results otherwise show the same
+  3 blocks, level 3, 24/24 correct. New test `tests/ui/switch-cost-note.test.tsx`.
+- **GATES**: `npm run test:all` — 29 Python + 339 Vitest; `npm run ai:verify` — 500/500;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMITS**: `2631d33` (persistence/migration/timing), `374aad1` (literature nuance), this
+  commit (resume proof and switch-cost note).

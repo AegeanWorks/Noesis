@@ -73,7 +73,9 @@ immediate feedback, which is the feature-level rationale for choosing it first.
   after a switch.
 - Two answer buttons show only the current rule (Red/Blue or Circle/Square); keys 1 and 2 work.
 - Metrics: accuracy, switch/repeat accuracy, mean response time, switch cost, timeouts and
-  streaks.
+  streaks. The result card explains switch cost as the switch-trial mean minus the repeat-trial
+  mean; a negative value means switching was faster in that block and is descriptive, not a
+  diagnosis.
 - It is available from the Menu as a three-block focus test. The default standard session stays
   the validated four-core lineup; Task Switch is not silently mixed in.
 - No general-intelligence, academic, dementia-prevention or everyday-function claim.

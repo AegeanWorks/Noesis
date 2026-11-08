@@ -1,57 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-switching-completion",
+    "task_id": "noesis-switch-resume-proof",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1794129027.4256942,
-    "owner": "opencode:switch",
-    "started_by": "opencode:switch",
-    "continuations": [],
-    "completed_at": 1794129036.4016309
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1794130801.8305507,
+    "owner": "opencode:switchproof",
+    "started_by": "opencode:switchproof",
+    "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-csv-export",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/5] Plan: add analysis-ready CSV exports for session blocks and adherence events, grounded in FAIR/data-reuse guidance",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794107542.3136868,
-      "timestamp_str": "2026-11-08 06:12:22",
-      "agent": "opencode:csv",
-      "impact_assessment": {
-        "why": "The JSON export is complete but not directly analysis-ready in R/SPSS; researchers must flatten nested results and adherence events by hand, which invites transcription errors and weakens reuse. FAIR data guidance calls for interoperable, reusable formats and metadata.",
-        "benefits": "Stable CSV headers, one row per block/event, escaped cells, complete metrics JSON, local download; no server or PII change",
-        "risks": "contract: new export builders and Settings buttons; dependency: none; concurrency: none; state: no storage change",
-        "mitigation": "failing-first CSV/UI tests, a browser download proof, FAIR note and full gates"
-      },
-      "plan_digest": "f8a612634a138ee5e928d6b29fb13373fa910b6220f4597c704ede82fbd365df"
-    },
-    {
-      "task_id": "noesis-csv-export",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/5] Impl: sessions CSV one row per block with metrics_json/motivation_json; adherence CSV one row per event; RFC 4180 quoting; date-stamped local downloads; Settings buttons; R61 and ADR-043; DATA_EXPORT_AND_REUSE.md",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794108536.1266503,
-      "timestamp_str": "2026-11-08 06:28:56",
-      "agent": "opencode:csv"
-    },
-    {
-      "task_id": "noesis-csv-export",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/5] Verified: 29 Python + 325 Vitest; typecheck/build clean; ai:verify 400/400; review 116/277 valid; browser proof sessions CSV header + 1 row, adherence CSV header + 1 row, consoleErrors []; UI audit no horizontal scroll/tiny text; aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794108548.5268455,
-      "timestamp_str": "2026-11-08 06:29:08",
-      "agent": "opencode:csv"
-    },
     {
       "task_id": "noesis-csv-export",
       "phase": "completed",
@@ -261,6 +220,46 @@
       "timestamp": 1794129036.4016333,
       "timestamp_str": "2026-11-08 12:10:36",
       "agent": "opencode:switch"
+    },
+    {
+      "task_id": "noesis-switch-resume-proof",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: prove an end-to-end Task Switch focus session resumes after reload with adaptive level persistence, and explain the switch-cost result metric",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794130799.3918967,
+      "timestamp_str": "2026-11-08 12:39:59",
+      "agent": "opencode:switchproof",
+      "impact_assessment": {
+        "why": "The new Task Switch had no browser reload/resume proof, and the result card exposed switch cost without a definition or negative-value caveat",
+        "benefits": "Verified save/resume for the new mechanic; readable, non-diagnostic switch-cost reporting",
+        "risks": "contract: proof script, copy and one CSS note; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "fixed-clock Playwright resume proof, new component test, full aikit check and 500-simulation verify"
+      },
+      "plan_digest": "6f969995921ee36ee0fb3543db436b5ef5460005c2ba9a47a7fcd3b0a2e0836b"
+    },
+    {
+      "task_id": "noesis-switch-resume-proof",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: switching-resume-proof.mjs; switch-cost note and test; candidate-note definition; record entry",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794130800.4765115,
+      "timestamp_str": "2026-11-08 12:40:00",
+      "agent": "opencode:switchproof"
+    },
+    {
+      "task_id": "noesis-switch-resume-proof",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: mid/stored/resumed identical at seed 2721744568, block 0/3, trial 8, level 3; 3 blocks completed 24/24; consoleErrors []; before/after results frames; 29 Python + 339 Vitest, 500 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794130801.8305507,
+      "timestamp_str": "2026-11-08 12:40:01",
+      "agent": "opencode:switchproof"
     }
   ]
 }

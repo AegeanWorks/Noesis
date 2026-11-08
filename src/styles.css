@@ -349,6 +349,12 @@ p {
   white-space: nowrap;
 }
 
+.switch-cost-note {
+  margin: 4px 0 8px;
+  padding-left: 10px;
+  border-left: 3px solid rgba(139, 233, 253, 0.4);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

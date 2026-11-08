@@ -111,6 +111,13 @@ function ResultCard({
         ) : null}
       </div>
       <p className="result-summary">{result.summary}</p>
+      {result.mechanic === "switching" ? (
+        <p className="fine switch-cost-note" data-testid="switch-cost-note">
+          Switch cost = mean reaction on switch trials minus repeat trials. A negative value
+          means switching was faster than repeating in this block; it is a descriptive
+          within-session measure, not a diagnosis.
+        </p>
+      ) : null}
       {isNewBest ? (
         <p className="best-badge" data-testid={`new-best-${result.mechanic}`}>
           New personal best
