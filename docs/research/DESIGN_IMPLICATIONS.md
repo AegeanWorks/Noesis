@@ -19,6 +19,7 @@ The first vertical slice implements:
 - an optional bilingual research consent flow with a random participant code and versioned consent record;
 - a local email hand-off that downloads the JSON export and prepares a mailto draft for the study team;
 - a session adherence log that records starts, completions and early endings for dropout analysis;
+- analysis-ready CSV exports for session blocks and adherence events, alongside the JSON record;
 - resumable sessions: a validated local snapshot survives reloads and Android WebView restarts;
 - an optional when/where practice plan, user-selected session length and difficulty, and a non-punitive weekly summary;
 - a bounded Motivation mode: cosmetic variable bonuses, streak multipliers, a real near-best cue, optional bonus-only risk and a target time;
@@ -140,6 +141,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R58 | Informed consent is a separate, bilingual (English/Turkish), versioned document covering purpose, data, hand-off, voluntariness, risks, benefits, confidentiality, retention, withdrawal and contact. Consent is blocked when the study contact is missing; withdrawal is available in Settings and stops future emails. | eConsent is better or not worse than paper for comprehension, acceptability and usability; a contact and a withdrawal path are part of an informed process. | 37656499; 36810093; ADR-041 |
 | R59 | The email hand-off is user-triggered and local: the app downloads the JSON file and prepares a recipient/subject/body draft with attachment instructions. It never sends automatically, never stores an SMTP credential, and never uploads data to a Noesis server. | A server-backed upload would add a new controller and security surface; local-first portability is already required. | R49; 37656499; ADR-041 |
 | R60 | Every session start is logged with its seed, block count, study arm and timestamp. Completion and early ending update the same event with the ending timestamp and the number of blocks completed. The log is shown in Settings and included in JSON exports; it contains no name, email address or account identifier, and Delete local data clears it. | Adherence is a primary outcome; a completed-session-only history cannot estimate dropout, and high dropout is documented in computerized training. | 40779747; 35612886; 30881315; ADR-042 |
+| R61 | Settings offers local CSV exports for session blocks and adherence events. The sessions CSV has one row per block with stable headers and preserves the full metric and motivation objects as JSON strings; the adherence CSV has one row per event. Both are generated from the same local stores as the JSON export, use no server, and contain no name, email address or account identifier. | FAIR data stewardship calls for interoperable, reusable formats and machine-readable metadata; a nested JSON alone shifts flattening work and transcription risk to the study team. | 26978244; 41813053; R49; ADR-043 |
 
 ---
 

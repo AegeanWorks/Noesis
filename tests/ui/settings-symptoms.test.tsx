@@ -24,6 +24,8 @@ const BASE = {
   onHideClock: () => {},
   onResetSafety: () => {},
   onExportHistory: () => {},
+  onExportSessionsCsv: () => {},
+  onExportAdherenceCsv: () => {},
   onClearHistory: () => {},
   onClearData: () => {},
   onHome: () => {},
@@ -95,6 +97,48 @@ describe("SettingsScreen adherence summary", () => {
     expect(screen.getByTestId("adherence-summary").textContent).toMatch(
       /3 started, 2 completed, 1 ended early/i,
     );
+  });
+});
+
+describe("SettingsScreen CSV exports", () => {
+  it("downloads sessions and adherence CSV files when data exists", () => {
+    const onExportSessionsCsv = vi.fn();
+    const onExportAdherenceCsv = vi.fn();
+    render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        historyCount={1}
+        adherenceCounts={{ started: 1, completed: 1, aborted: 0 }}
+        onExportSessionsCsv={onExportSessionsCsv}
+        onExportAdherenceCsv={onExportAdherenceCsv}
+      />,
+    );
+    fireEvent.click(screen.getByRole("button", { name: "Download sessions CSV" }));
+    fireEvent.click(screen.getByRole("button", { name: "Download adherence CSV" }));
+    expect(onExportSessionsCsv).toHaveBeenCalledTimes(1);
+    expect(onExportAdherenceCsv).toHaveBeenCalledTimes(1);
+  });
+
+  it("disables the CSV exports when there is nothing to export", () => {
+    render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+        historyCount={0}
+        adherenceCounts={{ started: 0, completed: 0, aborted: 0 }}
+      />,
+    );
+    expect(
+      (screen.getByRole("button", { name: "Download sessions CSV" }) as HTMLButtonElement)
+        .disabled,
+    ).toBe(true);
+    expect(
+      (screen.getByRole("button", { name: "Download adherence CSV" }) as HTMLButtonElement)
+        .disabled,
+    ).toBe(true);
   });
 });
 

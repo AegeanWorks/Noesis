@@ -306,6 +306,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add `noesis.adherence.v1` with one event per session: `id`, `seed`, `startedAt`, `endedAt`, `status` (`started`/`completed`/`aborted`), `blocksCompleted`, `blockCount` and `arm`. Log a start when a session begins; update the matching start on completion or an explicit early ending. Mark any still-open start as aborted when a new session begins, so closing the app does not leave an open event forever. Include the log in every JSON export and show a local summary in Settings. **Delete local data** clears it. No engine, scoring or timing change.
 - **Consequences**: Dropout and dose are measurable without a server or a new prompt. A force-closed session is recorded as aborted when the next session starts, with zero completed blocks; the exact close time is unknown, which the research note records as a limitation. Direct engine-level aborts (used only in tests/simulators) do not update the log; the production end-session path does. Old exports remain valid because `adherence` defaults to `[]`.
 
+### ADR-043: Analysis-ready CSV companions
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The JSON export is the complete record, but nested `results[]` and `adherence[]` arrays force the study team to flatten the data by hand before analysis in R, SPSS, Stata or a spreadsheet. FAIR data stewardship calls for interoperable, reusable formats and machine-readable metadata (PMID 26978244), and the review already requires a portable export (R49). A flat CSV must not replace the complete JSON or drop mechanic-specific metrics.
+- **Decision**: Add two local CSV exports in Settings. The sessions CSV has one row per mechanic result with stable headers and preserves the full metric and motivation objects as escaped JSON strings. The adherence CSV has one row per start/completion/aborted event. Both are generated from the same local stores as the JSON export, use RFC 4180-style quoting, are date-stamped, and contain no name, email address or account identifier. Buttons are disabled when the relevant store is empty.
+- **Consequences**: Researchers can open the main analysis tables directly while the JSON remains the source of truth for nested fields, consent and future schema additions. The CSV is a flat view; a metric that exists only in `metrics_json` must be parsed in the analysis tool. No server, storage format or scoring change.
+
 
 
 

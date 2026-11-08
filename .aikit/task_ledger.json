@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-adherence-log",
+    "task_id": "noesis-csv-export",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794107217.0250933,
-    "owner": "opencode:adherence",
-    "started_by": "opencode:adherence",
+    "updated_at": 1794108548.5268455,
+    "owner": "opencode:csv",
+    "started_by": "opencode:csv",
     "continuations": [],
-    "completed_at": 1794107236.532621
+    "completed_at": 1794108644.7465882
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-one-click-start",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Impl: scripts/start.mjs (Node gate, dependency install, Vite spawn, --open default), start.cmd/start.sh wrappers, npm start, README quick-start and tree; 4 launcher tests",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794084557.9622457,
-      "timestamp_str": "2026-11-07 23:49:17",
-      "agent": "opencode:oneclick"
-    },
-    {
-      "task_id": "noesis-one-click-start",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: --help/--check pass, start.cmd --check passes, real launcher served HTTP 200 on :5183 with Noesis content; 29 Python + 266 Vitest, ai:verify 400/400, aikit check 6/6; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794084558.7719157,
-      "timestamp_str": "2026-11-07 23:49:18",
-      "agent": "opencode:oneclick"
-    },
-    {
-      "task_id": "noesis-one-click-start",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: add a double-click / npm start launcher that installs deps, starts Vite and opens the app",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794084573.417535,
-      "timestamp_str": "2026-11-07 23:49:33",
-      "agent": "opencode:oneclick",
-      "impact_assessment": {
-        "why": "Noesis has a one-click session CTA but no one-click way to launch the app; the README still requires a terminal, npm install and npm run dev",
-        "benefits": "First-run dependency install, clear Node/port errors, browser opens automatically; Windows double-click and macOS/Linux script",
-        "risks": "contract: new root launchers and start script only; dependency: none beyond existing Vite/npm; concurrency: none; state: none",
-        "mitigation": "unit tests for arg parsing and Node gate, --check/--help runs, real HTTP 200 launch on a free port, full aikit check"
-      },
-      "plan_digest": "d663e878df3b01c4a5f3afb3797f68724998faeb385afb2c6a36511326c9595c"
-    },
-    {
-      "task_id": "noesis-one-click-start",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-one-click-start' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794084592.8780446,
-      "timestamp_str": "2026-11-07 23:49:52",
-      "agent": "opencode:oneclick"
-    },
     {
       "task_id": "noesis-start-hardening",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794107236.5326228,
       "timestamp_str": "2026-11-08 06:07:16",
       "agent": "opencode:adherence"
+    },
+    {
+      "task_id": "noesis-csv-export",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/5] Plan: add analysis-ready CSV exports for session blocks and adherence events, grounded in FAIR/data-reuse guidance",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794107542.3136868,
+      "timestamp_str": "2026-11-08 06:12:22",
+      "agent": "opencode:csv",
+      "impact_assessment": {
+        "why": "The JSON export is complete but not directly analysis-ready in R/SPSS; researchers must flatten nested results and adherence events by hand, which invites transcription errors and weakens reuse. FAIR data guidance calls for interoperable, reusable formats and metadata.",
+        "benefits": "Stable CSV headers, one row per block/event, escaped cells, complete metrics JSON, local download; no server or PII change",
+        "risks": "contract: new export builders and Settings buttons; dependency: none; concurrency: none; state: no storage change",
+        "mitigation": "failing-first CSV/UI tests, a browser download proof, FAIR note and full gates"
+      },
+      "plan_digest": "f8a612634a138ee5e928d6b29fb13373fa910b6220f4597c704ede82fbd365df"
+    },
+    {
+      "task_id": "noesis-csv-export",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/5] Impl: sessions CSV one row per block with metrics_json/motivation_json; adherence CSV one row per event; RFC 4180 quoting; date-stamped local downloads; Settings buttons; R61 and ADR-043; DATA_EXPORT_AND_REUSE.md",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794108536.1266503,
+      "timestamp_str": "2026-11-08 06:28:56",
+      "agent": "opencode:csv"
+    },
+    {
+      "task_id": "noesis-csv-export",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/5] Verified: 29 Python + 325 Vitest; typecheck/build clean; ai:verify 400/400; review 116/277 valid; browser proof sessions CSV header + 1 row, adherence CSV header + 1 row, consoleErrors []; UI audit no horizontal scroll/tiny text; aikit check 6/6; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794108548.5268455,
+      "timestamp_str": "2026-11-08 06:29:08",
+      "agent": "opencode:csv"
+    },
+    {
+      "task_id": "noesis-csv-export",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-csv-export' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794108644.746591,
+      "timestamp_str": "2026-11-08 06:30:44",
+      "agent": "opencode:csv"
     }
   ]
 }

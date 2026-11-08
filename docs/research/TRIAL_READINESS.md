@@ -49,6 +49,11 @@ user; there are no accounts and no servers (R49, R57-R59, ADR-025,
 ADR-041). The email hand-off downloads a JSON file and prepares a mailto
 draft; the user attaches the file and sends it.
 
+Settings also offers two analysis-ready CSV companions generated from the same
+local stores: one row per session block (with `metrics_json` and
+`motivation_json` preserved) and one row per adherence event (R61, ADR-043).
+The CSV files contain no name, email address or account identifier.
+
 ## 3. Safety monitoring (all arms)
 
 - Pre-training photosensitivity screen with hard content limits (R14, R15).

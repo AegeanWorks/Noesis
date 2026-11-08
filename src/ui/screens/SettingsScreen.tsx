@@ -52,6 +52,8 @@ interface SettingsScreenProps {
   onHideClock: (value: boolean) => void;
   onResetSafety: () => void;
   onExportHistory: () => void;
+  onExportSessionsCsv: () => void;
+  onExportAdherenceCsv: () => void;
   onClearHistory: () => void;
   onClearData: () => void;
   onHome: () => void;
@@ -153,6 +155,8 @@ export function SettingsScreen({
   onHideClock,
   onResetSafety,
   onExportHistory,
+  onExportSessionsCsv,
+  onExportAdherenceCsv,
   onClearHistory,
   onClearData,
   onHome,
@@ -432,6 +436,20 @@ export function SettingsScreen({
         <div className="hero-actions">
           <Button variant="ghost" onClick={onExportHistory} disabled={historyCount === 0}>
             Export practice data
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={onExportSessionsCsv}
+            disabled={historyCount === 0}
+          >
+            Download sessions CSV
+          </Button>
+          <Button
+            variant="ghost"
+            onClick={onExportAdherenceCsv}
+            disabled={adherenceCounts.started === 0}
+          >
+            Download adherence CSV
           </Button>
           <Button
             variant="ghost"

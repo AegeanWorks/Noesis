@@ -32,6 +32,7 @@ import {
   toResearchExport,
   type StudyExport,
 } from "./storage/export";
+import { downloadAdherenceCsv, downloadSessionsCsv } from "./storage/csvExport";
 import {
   isActiveResearchConsent,
   loadResearchConsent,
@@ -398,6 +399,14 @@ export function App() {
       research: toResearchExport(researchConsent),
     });
   }, [history, study, researchConsent, adherence]);
+
+  const exportSessionsCsv = useCallback(() => {
+    downloadSessionsCsv(history);
+  }, [history]);
+
+  const exportAdherenceCsv = useCallback(() => {
+    downloadAdherenceCsv(adherence);
+  }, [adherence]);
 
   const clearPracticeHistory = useCallback(() => {
     clearHistory();
@@ -869,6 +878,8 @@ export function App() {
             onHideClock={setHideClock}
             onResetSafety={resetSafety}
             onExportHistory={exportHistory}
+            onExportSessionsCsv={exportSessionsCsv}
+            onExportAdherenceCsv={exportAdherenceCsv}
             onClearHistory={clearPracticeHistory}
             onClearData={clearData}
             onHome={() => setScreen("home")}

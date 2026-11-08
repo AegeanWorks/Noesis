@@ -550,6 +550,23 @@ Open candidates (not yet cycles): none from the current audits.
   tests cover start, completion, early ending, dangling closure, fallback completion and
   corrupted storage.
 
+## Cycle 15 - Analysis-ready CSV companions
+
+- **Area**: research data reuse and Settings export.
+- **FIND**: the JSON record was complete but nested, so the study team had to flatten session
+  results and adherence events by hand before analysis. That is transcription risk and an
+  avoidable barrier to reuse.
+- **ANALYZE**: FAIR data stewardship calls for interoperable, reusable formats and
+  machine-readable metadata (PMID 26978244); the existing review already requires a portable
+  export (R49). The CSV is a flat companion, not a replacement for JSON.
+- **IMPLEMENT**: `buildSessionsCsv` (one row per block, stable headers, full `metrics_json`
+  and `motivation_json`), `buildAdherenceCsv` (one row per event), RFC 4180-style quoting,
+  date-stamped local downloads, Settings buttons disabled when empty, ADR-043, R61 and
+  `DATA_EXPORT_AND_REUSE.md`.
+- **VERIFICATION**: see commands below; the browser proof downloads both CSV files from a
+  seeded session and adherence record, checks the exact headers, row counts and expected
+  values, and reports no console errors.
+
 ## Commands run
 
 ```text
@@ -671,5 +688,15 @@ $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/research-consent-email-pr
   adherence eventCount 1, firstStatus aborted, blocksCompleted 0 in the downloaded JSON; consent/email checks unchanged; consoleErrors []
 $env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
   consoleErrors []; no horizontal scroll; settings summary visible; consent screen unchanged
+python aikit.py check noesis     6/6 gates passed
+
+npx vitest run tests/storage/csvExport.test.ts tests/ui/settings-symptoms.test.tsx
+  before fix: csvExport module missing / CSV buttons absent
+  after fix:  17 passed
+npm run test:all                 29 Python + 325 Vitest passed
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/csv-export-proof.mjs
+  sessions CSV header exact, 1 row, session-1 present; adherence CSV header exact, 1 row, completed present; consoleErrors []
+$env:NOESIS_URL='http://127.0.0.1:5174/'; node scripts/ui-audit.mjs <dir>
+  consoleErrors []; no horizontal scroll; CSV buttons >=44px; settings/consent audit unchanged
 python aikit.py check noesis     6/6 gates passed
 ```
