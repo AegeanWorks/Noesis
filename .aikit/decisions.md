@@ -355,6 +355,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Do not implement a UFOV-like visual-search mechanic or a separate stop-signal mechanic. UFOV is a proprietary multi-subtest protocol; a simplified task would not be the validated intervention, and its brief adaptive visual presentation conflicts with the app's static no-flashing safety posture. Stop-signal duplicates the Go/No-Go inhibition construct, and its training evidence is behaviour-change focused. Speed Tap remains explicitly not UFOV.
 - **Consequences**: The review stays at 120 records and 282 outcomes; no new mechanic or evidence-table record is added. The rationale and revisit conditions are documented in section 6 of `NEW_MECHANIC_CANDIDATES.md`. Revisit UFOV only with a non-proprietary, separately validated paradigm and a photosensitivity/protocol review.
 
+### ADR-050: Experimental Prospective Memory focus test
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: The exhausted candidate matrix prompted a fresh scan outside it. Tse et al. 2023 (PMID 35543836; *Neuropsychology Review*) reviewed 48 prospective-memory training studies and meta-analysed 29 RCTs: immediate effect g=0.54 in older adults, but long-term effect g=0.20 and not significant; methodological quality varied. This is a distinct construct not covered by the existing mechanics.
+- **Decision**: Add an experimental **Prospective Memory** focus test: an ongoing vowel/consonant classification with an event-based Q cue that requires a Remember response. It reports overall accuracy, ongoing accuracy, cue hits/misses, false alarms, mean response time, timeouts and streaks. It is available from the Menu as a three-block focus test, not in the default lineup. Copy claims delayed-intention practice only; no long-term, everyday-function or diagnostic claim.
+- **Consequences**: The app gains a ninth mechanic and `npm run ai:verify` grows to 900 simulations (9 × 50 × 2). The evidence table gains one context record (35543836), taking the review to 121 records, 283 outcomes and revision v1.5. The claim boundary is recorded in R67.
+
 
 
 

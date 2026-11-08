@@ -7,6 +7,7 @@ export const MECHANIC_IDS = [
   "flanker",
   "spatial",
   "rotation",
+  "prospective",
 ] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
@@ -16,7 +17,8 @@ export type Domain =
   | "reasoning"
   | "processing_speed"
   | "cognitive_flexibility"
-  | "executive_function";
+  | "executive_function"
+  | "episodic_memory";
 export type SessionLength = "quick" | "standard";
 export type ClaimLevel = "supported" | "experimental" | "wellness_only";
 export type FeedbackTone = "correct" | "incorrect" | "neutral";
@@ -369,6 +371,45 @@ export interface RotationState {
   completed: boolean;
 }
 
+export interface ProspectiveConfig {
+  trials: number;
+  cueRate: number;
+  timeLimitMs: number;
+  feedbackMs: number;
+}
+
+export interface ProspectiveTrial {
+  letter: string;
+  cue: boolean;
+}
+
+export interface ProspectiveResponse {
+  trial: number;
+  letter: string;
+  cue: boolean;
+  selected: number | null;
+  correct: boolean;
+  reactionMs: number | null;
+  timedOut: boolean;
+}
+
+export interface ProspectiveState {
+  mechanic: "prospective";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: ProspectiveConfig;
+  trials: ProspectiveTrial[];
+  index: number;
+  phase: "question" | "feedback" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  itemStartTick: number;
+  selected: number | null;
+  responses: ProspectiveResponse[];
+  completed: boolean;
+}
+
 export interface ReasoningState {
   mechanic: "reasoning";
   seed: number;
@@ -394,7 +435,8 @@ export type MechanicState =
   | SwitchingState
   | FlankerState
   | SpatialState
-  | RotationState;
+  | RotationState
+  | ProspectiveState;
 
 export type MechanicAction =
   | { type: "respond" }

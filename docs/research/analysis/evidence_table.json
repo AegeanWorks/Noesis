@@ -7273,6 +7273,53 @@
    ],
    "synthesis_role": "context",
    "product_use": "Supports an experimental mental-rotation focus test as spatial-task practice; no academic, general-intelligence or everyday-function claim."
+  },
+  {
+   "pmid": "35543836",
+   "doi": "10.1007/s11065-022-09536-5",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Neuropsychology Review",
+   "title": "Prospective Memory Training in Older Adults: A Systematic Review and Meta-Analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults"
+   ],
+   "k": 29,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "episodic_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.54,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "immediate prospective-memory training effect across 29 RCTs; long-term effect was g=0.20 and not significant"
+    }
+   ],
+   "findings": [
+    "Prospective-memory training produced a moderate immediate effect (Hedges g=0.54) in older adults",
+    "The long-term effect was smaller (g=0.20) and not significant",
+    "Effects were robust across healthy and clinical samples and single-session or programme-based training"
+   ],
+   "limitations": [
+    "Methodological quality varied; many non-randomised studies had serious or critical risk of bias",
+    "Only 29 of 48 studies entered the meta-analysis",
+    "Certainty is source-reported and provisional"
+   ],
+   "flags": [
+    "heterogeneity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Supports an experimental prospective-memory focus test as delayed-intention practice; no long-term, everyday-function or diagnostic claim."
   }
  ]
 }

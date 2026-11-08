@@ -17,7 +17,7 @@ pre-post difference is a hypothesis the trial tests, not a finding.
 Both arms share: the same four core mechanics, fixed session structure, opt-in
 Motivation mode with identical risk rules, adaptive difficulty (opt-in),
 weekly day-goals, far checks, adverse-event capture, heavy-use monitoring
-and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span and Mental Rotation are Menu focus tests
+and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation and Prospective Memory are Menu focus tests
 and is not in the trial lineup unless the protocol adds it explicitly. The engagement arm differs only in incentive
 delivery (R39, R51, ADR-015, ADR-027).
 

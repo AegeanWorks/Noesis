@@ -1,8 +1,8 @@
 # Noesis Evidence Review
 
-**Status:** v1.0 corpus complete; current review revision v1.4 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered
+**Status:** v1.0 corpus complete; current review revision v1.5 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered
 **Search date:** 2026-10-31; targeted update 2026-11-08
-**Records:** 120 included (90 primary, 30 context), 282 outcomes
+**Records:** 121 included (90 primary, 31 context), 283 outcomes
 **Review type:** PRISMA 2020 systematic umbrella review with landmark-RCT update
 
 ---
@@ -49,7 +49,7 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |
 | [REFERENCES.bib](REFERENCES.bib) | BibTeX for the included records |
-| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (120 records, 282 outcomes) |
+| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (121 records, 283 outcomes) |
 | [analysis/screening_reviews.csv](analysis/screening_reviews.csv) | Rule-based screen of the 1,495-review PubMed corpus |
 | [analysis/screening_summary.json](analysis/screening_summary.json) | Screening counts |
 | [records/](records/) | Raw PubMed, OpenAlex, trial-registry and metadata-verification records |

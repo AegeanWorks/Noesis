@@ -45,6 +45,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 - Differential effects of cognitive training modules in healthy aging and mild cognitive impairment: A comprehensive meta-analysis of randomized controlled trials. *Psychology and Aging*. 2020. PMID: [32011155](https://pubmed.ncbi.nlm.nih.gov/32011155/). DOI: [10.1037/pag0000442](https://doi.org/10.1037/pag0000442).
 - Efficacy of cognitive training on executive functions in healthy older adults: a systematic review with meta-analysis of randomized controlled trials. *Psychology & Health*. 2025. PMID: [37822255](https://pubmed.ncbi.nlm.nih.gov/37822255/). DOI: [10.1080/08870446.2023.2267610](https://doi.org/10.1080/08870446.2023.2267610).
 - The malleability of spatial skills: a meta-analysis of training studies. *Psychological Bulletin*. 2013. PMID: [22663761](https://pubmed.ncbi.nlm.nih.gov/22663761/). DOI: [10.1037/a0028446](https://doi.org/10.1037/a0028446).
+- Prospective Memory Training in Older Adults: A Systematic Review and Meta-Analysis. *Neuropsychology Review*. 2023. PMID: [35543836](https://pubmed.ncbi.nlm.nih.gov/35543836/). DOI: [10.1007/s11065-022-09536-5](https://doi.org/10.1007/s11065-022-09536-5).
 
 ## Neurofeedback
 

@@ -71,6 +71,10 @@ const METRIC_LABELS: Record<string, string> = {
   mirror_trials: "Mirror trials",
   same_accuracy: "Same accuracy",
   mirror_accuracy: "Mirror accuracy",
+  ongoing_accuracy: "Ongoing accuracy",
+  cue_accuracy: "Cue accuracy",
+  cue_hits: "Cues remembered",
+  cue_trials: "Cue trials",
 };
 
 const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
@@ -82,6 +86,7 @@ const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
   flanker: ["accuracy", "interference_cost_ms", "incongruent_accuracy"],
   spatial: ["accuracy", "max_span", "mean_span"],
   rotation: ["accuracy", "mean_response_ms", "mirror_accuracy"],
+  prospective: ["accuracy", "cue_accuracy", "false_alarms"],
 };
 
 export function formatMetric(key: string, value: number): string {

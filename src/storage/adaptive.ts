@@ -37,6 +37,7 @@ const DEFAULTS: AdaptiveState = {
     flanker: 2,
     spatial: 2,
     rotation: 2,
+    prospective: 2,
   },
   log: [],
 };

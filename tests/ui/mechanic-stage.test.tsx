@@ -201,4 +201,25 @@ describe("MechanicStage", () => {
     fireEvent.click(screen.getByTestId("option-1"));
     expect(onAnswer).toHaveBeenCalledWith(1);
   });
+
+  it("renders the prospective-memory cue and sends Remember", () => {
+    const onAnswer = vi.fn();
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "prospective",
+          name: "Prospective Memory",
+          phase: "question",
+          prompt: "Sort the letter. If it is Q, choose Remember.",
+          stimulus: "Q",
+          options: ["Vowel", "Consonant", "Remember"],
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(screen.getByTestId("stimulus").textContent).toBe("Q");
+    fireEvent.click(screen.getByTestId("option-2"));
+    expect(onAnswer).toHaveBeenCalledWith(2);
+  });
 });

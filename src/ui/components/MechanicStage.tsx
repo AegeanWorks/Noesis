@@ -276,6 +276,43 @@ function RotationFigure({
   );
 }
 
+function ProspectiveStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  return (
+    <div
+      className="stage stage-prospective"
+      data-mechanic="prospective"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
+      <p className="stage-prompt">{view.prompt}</p>
+      <div className="prospective-letter" role="img" aria-label={`Letter ${view.stimulus ?? "blank"}`} data-testid="stimulus">
+        {view.stimulus ?? "\u00a0"}
+      </div>
+      <div className="options" role="group" aria-label="Answer options">
+        {(view.options ?? []).map((option, index) => (
+          <Button
+            key={`${option}-${index}`}
+            variant="ghost"
+            className="option"
+            disabled={!view.canRespond}
+            onClick={() => onAnswer(index)}
+            data-testid={`option-${index}`}
+          >
+            <span className="option-key">{index + 1}</span>
+            {option}
+          </Button>
+        ))}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function RotationStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   const [shape = 0, rotation = 0, mirrorFlag = 0] = (view.stimulus ?? "0-0-0")
     .split("-")
@@ -393,6 +430,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "rotation") {
     return <RotationStage view={view} onAnswer={props.onAnswer} />;
+  }
+  if (view.mechanic === "prospective") {
+    return <ProspectiveStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

@@ -193,6 +193,32 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Static block figures; no flashing.",
   },
+  prospective: {
+    id: "prospective",
+    name: "Prospective Memory",
+    domain: "episodic_memory",
+    tagline: "Delayed intentions",
+    instructions:
+      "Sort each letter as a vowel or consonant. If the letter is Q, choose Remember instead. Keys 1, 2 and 3 work too.",
+    brief:
+      "Prospective-memory practice: hold a delayed intention while an ongoing letter task continues. A 2023 meta-analysis of 29 randomized trials found a moderate immediate training effect (g=0.54) in older adults, but the long-term effect (g=0.20) was not significant. This is an experimental focus test, not a validated protocol or an everyday-function claim.",
+    claimLevel: "experimental",
+    claim:
+      "Practices remembering to carry out a delayed intention while an ongoing task continues.",
+    qualifier:
+      "Task practice only. Cue hits are a within-session descriptive measure; this is not a diagnostic test and does not claim long-term or everyday-function benefit.",
+    notClaimed: [
+      "General intelligence",
+      "Everyday function",
+      "Dementia prevention",
+      "ADHD treatment",
+      "Long-term memory improvement",
+    ],
+    citations: [
+      { pmid: "35543836", label: "Prospective-memory training meta-analysis (2023)" },
+    ],
+    safety: "Static letters; no flashing.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

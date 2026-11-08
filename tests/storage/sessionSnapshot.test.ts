@@ -153,4 +153,16 @@ describe("session snapshot", () => {
     saveSessionSnapshot(state);
     expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("rotation");
   });
+
+  it("round-trips a running Prospective Memory block", () => {
+    const state = applySessionAction(
+      createSession(defaultSessionConfig(9, 2, "standard", undefined, "prospective")),
+      { type: "begin" },
+    );
+    if (state.current?.mechanic !== "prospective") {
+      throw new Error("expected a Prospective Memory session");
+    }
+    saveSessionSnapshot(state);
+    expect(loadSessionSnapshot()?.state.current?.mechanic).toBe("prospective");
+  });
 });

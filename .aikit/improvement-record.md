@@ -1386,3 +1386,38 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 388 Vitest; `npm run ai:verify` — 800/800;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's scope note, ADR, search log and record.
+
+## Cycle 30 — Experimental Prospective Memory focus test from verified meta-analysis
+
+- **Area**: new approach / literature scan outside the exhausted matrix.
+- **FIND**: A fresh 2026-11-08 scan found Tse et al. 2023 (PMID 35543836; *Neuropsychology
+  Review*): 48 studies reviewed, 29 RCTs meta-analysed; prospective-memory training produced a
+  moderate immediate effect (g=0.54) in older adults, but the long-term effect (g=0.20) was not
+  significant and methodological quality varied. Prospective memory is a distinct construct not
+  covered by the existing mechanics.
+- **DECISION**: Implement a claim-bounded experimental Prospective Memory focus test. It claims
+  delayed-intention practice only; no long-term, everyday-function or diagnostic benefit.
+  Recorded as ADR-050 and R67; the 2023 record was added as context, taking the review to
+  121 records, 283 outcomes and revision v1.5.
+- **IMPLEMENT**: Deterministic `prospective` mechanic: a stream of letters is sorted as
+  Vowel/Consonant, but a Q cue requires Remember instead. Metrics: overall accuracy, ongoing
+  accuracy, cue trials/hits/misses, false alarms, mean response time, timeouts and streaks.
+  Integrated types, schema, simulation, evidence metadata, adaptive defaults, Menu, stage,
+  keyboard, results, AI CLI and tests. `npm run ai:verify` grows to 900 simulations.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before Menu (no Prospective Memory card):
+    `%TEMP%\opencode\noesis-prospective-before\before-01-menu.png` SHA-256
+    `587E5B67E98674F52FD330595200F4727A77CE67F5A20304F800BF13A92E9126`
+  - after Menu: `%TEMP%\opencode\noesis-prospective-after\after-01-menu.png` SHA-256
+    `9F7AA45A80FDB510421800C28165E41A82FBEFF8896B302D8A4500E2CA7CA43A`
+  - stage: `%TEMP%\opencode\noesis-prospective-after\after-02-prospective-stage.png` SHA-256
+    `9115EBF99B8A0EE3386F1EDB666F20C7FCE75A8C947D9F03A02CB61DE45F82A5`
+  - results: `%TEMP%\opencode\noesis-prospective-after\after-03-prospective-results.png` SHA-256
+    `731193D8ACD6BD6D836847D80FB9D3B27A712A21683F7623842C7943CDB3F1EA`
+- **PROOF (played run)**: `scripts/prospective-proof.mjs` opened the Menu, started Prospective
+  Memory, read the briefing, and completed three level-2 blocks: 100% overall and ongoing
+  accuracy, 4/4 cues remembered, 0 false alarms, mean response 430/400/400 ms;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 395 Vitest; `npm run ai:verify` — 900/900;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's prospective engine, UI, evidence table, tests, proof and record.

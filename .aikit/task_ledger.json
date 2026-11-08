@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-ufov-scope",
+    "task_id": "noesis-prospective",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794143853.4112003,
-    "owner": "opencode:ufovscope",
-    "started_by": "opencode:ufovscope",
+    "updated_at": 1794144482.988364,
+    "owner": "opencode:prospective",
+    "started_by": "opencode:prospective",
     "continuations": [],
-    "completed_at": 1794143859.2805622
+    "completed_at": 1794144489.8620262
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-rotation",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: add an experimental Mental Rotation focus test after verifying spatial-training evidence and metadata",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794142705.1541953,
-      "timestamp_str": "2026-11-08 15:58:25",
-      "agent": "opencode:rotation",
-      "impact_assessment": {
-        "why": "Mental rotation was the remaining spatial candidate; Uttal 2013 found g=0.47 across 217 studies with transfer to untrained spatial tasks, while computerized math transfer is weaker",
-        "benefits": "A measured spatial-reasoning task with explicit claim boundaries; one new context record and v1.4 evidence table",
-        "risks": "contract: new mechanic across types/schema/UI/AI; default four-core lineup unchanged; dependency: none; concurrency: none; state: additive adaptive level and snapshot support",
-        "mitigation": "engine/UI tests, fixed-clock before/after Menu/stage/results proof, ADR-048/R66 claim boundary, full gates"
-      },
-      "plan_digest": "d3d2f97e99ffd8936a3fefc2e09f2ffda9d0a995221e636c08a41a38cdc808ed"
-    },
-    {
-      "task_id": "noesis-rotation",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Impl: deterministic rotation/parity engine with two chiral block shapes; stage SVG; results metrics; evidence table 22663761 (120 records, 282 outcomes, v1.4); README/docs/ADR/R66; AI 800 sims",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794142706.028942,
-      "timestamp_str": "2026-11-08 15:58:26",
-      "agent": "opencode:rotation"
-    },
-    {
-      "task_id": "noesis-rotation",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: before Menu no card; after card+briefing+3 level-2 blocks 12/12 each, same/mirror 100%, mean 450/400/400 ms; consoleErrors []; 29 Python + 381 Vitest, 800 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794142706.8020465,
-      "timestamp_str": "2026-11-08 15:58:26",
-      "agent": "opencode:rotation"
-    },
-    {
-      "task_id": "noesis-rotation",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-rotation' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794142714.1061542,
-      "timestamp_str": "2026-11-08 15:58:34",
-      "agent": "opencode:rotation"
-    },
     {
       "task_id": "noesis-rotation-resume",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794143859.2805648,
       "timestamp_str": "2026-11-08 16:17:39",
       "agent": "opencode:ufovscope"
+    },
+    {
+      "task_id": "noesis-prospective",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/3] Plan: add an experimental Prospective Memory focus test after verifying a task-specific meta-analysis",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794144481.9118662,
+      "timestamp_str": "2026-11-08 16:28:01",
+      "agent": "opencode:prospective",
+      "impact_assessment": {
+        "why": "The matrix was exhausted; a fresh scan found a 2023 meta-analysis of 29 RCTs with a moderate immediate PM effect but no significant long-term effect",
+        "benefits": "A distinct delayed-intention task with explicit claim boundaries; one context record and v1.5 evidence table",
+        "risks": "contract: new mechanic across types/schema/UI/AI; default four-core lineup unchanged; dependency: none; concurrency: none; state: additive adaptive level and snapshot support",
+        "mitigation": "engine/UI tests, fixed-clock before/after proof, ADR-050/R67 claim boundary, full gates"
+      },
+      "plan_digest": "02e1f90d26d78be31264d7b40676b1744ae78973e9fbd2bd3ceb6782b6fd9173"
+    },
+    {
+      "task_id": "noesis-prospective",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/3] Impl: deterministic letter stream with Q cue and Remember action; stage/results/keyboard; evidence table 35543836 (121 records, 283 outcomes, v1.5); README/docs/ADR/R67; AI 900 sims",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794144482.388688,
+      "timestamp_str": "2026-11-08 16:28:02",
+      "agent": "opencode:prospective"
+    },
+    {
+      "task_id": "noesis-prospective",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[3/3] Verified: before Menu no card; after card+briefing+3 level-2 blocks 100% ongoing, 4/4 cues, 0 false alarms, mean 430/400/400; consoleErrors []; 29 Python + 395 Vitest, 900 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794144482.988364,
+      "timestamp_str": "2026-11-08 16:28:02",
+      "agent": "opencode:prospective"
+    },
+    {
+      "task_id": "noesis-prospective",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-prospective' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794144489.8620284,
+      "timestamp_str": "2026-11-08 16:28:09",
+      "agent": "opencode:prospective"
     }
   ]
 }

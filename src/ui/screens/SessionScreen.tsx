@@ -112,7 +112,8 @@ export function SessionScreen({
           view.mechanic.mechanic === "switching" ||
           view.mechanic.mechanic === "flanker" ||
           view.mechanic.mechanic === "spatial" ||
-          view.mechanic.mechanic === "rotation") &&
+          view.mechanic.mechanic === "rotation" ||
+          view.mechanic.mechanic === "prospective") &&
         /^[1-9]$/.test(event.key)
       ) {
         const option = Number(event.key) - 1;
@@ -121,7 +122,9 @@ export function SessionScreen({
             ? 4
             : view.mechanic.mechanic === "spatial"
               ? 9
-              : 2;
+              : view.mechanic.mechanic === "prospective"
+                ? 3
+                : 2;
         if (option < max) {
           event.preventDefault();
           if (view.mechanic.canRespond) onAnswer(option);

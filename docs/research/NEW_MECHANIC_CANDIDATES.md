@@ -56,6 +56,7 @@ The following sources stayed narrative-only:
 | Stop-signal | Response inhibition / cancellation | Inhibitory-control training meta-analyses target appetitive behaviour (38309625, g=-0.21) rather than cognitive-training transfer; Go/No-Go already covers inhibition in the core lineup | Static go/stop cues; safe | Do not implement (duplicate construct; behaviour-change evidence) |
 | Spatial span / Corsi | Visuospatial working memory | A 2025 meta-analysis found a small Corsi Block effect (d=0.16) in healthy older adults; broader working-memory reviews show short-term near transfer but no convincing far transfer (37822255, 22612437, 27474138) | Grid sequence; safe | **Implement as experimental focus test, claim-bounded** |
 | Mental rotation | Spatial ability | Training improved spatial skills (217 studies, g=0.47) and transferred to untrained spatial tasks (22663761); spatial training also improved mathematics (g=0.28), but concrete materials beat computerized training and near outcomes transferred more than distal ones (35073120) | Static block figures; safe | **Implement as experimental focus test, claim-bounded** |
+| Prospective memory | Delayed intentions / episodic memory | 2023 meta-analysis of 29 RCTs: immediate prospective-memory training effect g=0.54, but long-term g=0.20 was not significant (35543836) | Static letter stream with one cue; safe | **Implement as experimental focus test, claim-bounded** |
 | Visual search / UFOV-like | Processing speed / attention | UFOV training shows speed/attention and everyday-function gains (44 studies/17 RCTs; 29175362), but UFOV is a proprietary multi-subtest protocol and its subtests are not construct-pure (29270605); a simple search task is not the validated protocol | Brief adaptive presentation conflicts with the static no-flashing safety posture; Speed Tap is explicitly not UFOV | Out of scope for now (reason in section 6) |
 | Action video game | Attention / spatial cognition | g=0.34 intervention (29172564), but genre is broad and often fast/flashing | Conflicts with the no-flashing safety posture | Do not build a flashing action game |
 | Commercial brain-training suite | Mixed | Small near transfer; no robust objective far transfer (34251578) | Program-specific, not a task | Do not copy a commercial suite |
@@ -147,6 +148,22 @@ quantitative basis.
   29276344) found far transfer rarely occurs. The app therefore claims spatial-task practice
   only, not mathematics, academic, general-intelligence or everyday-function benefit.
 
+### 4.4 Prospective Memory implementation and evidence limit
+
+- A stream of letters appears one at a time. Each is sorted as **Vowel** or **Consonant**; when
+  the letter is **Q**, the correct action is **Remember** instead.
+- Keys 1, 2 and 3 work. The cue is event-based and embedded in the ongoing task, not a separate
+  reminder.
+- Metrics: overall accuracy, ongoing accuracy, cue trials, cue hits/misses, false alarms,
+  mean response time, timeouts and streaks.
+- It is available from the Menu as a three-block focus test. It is not in the default lineup.
+- **Evidence:** Tse et al. 2023 (PMID 35543836; *Neuropsychology Review*) reviewed 48 studies
+  and meta-analysed 29 RCTs. Prospective-memory training produced a moderate immediate effect
+  (Hedges g=0.54) in older adults, but the long-term effect (g=0.20) was not significant.
+  Methodological quality varied and many non-randomised studies had serious or critical risk of
+  bias. The app therefore claims delayed-intention practice only, not long-term, everyday-function
+  or diagnostic benefit.
+
 ---
 
 ## 5. Requirement and limits
@@ -165,6 +182,11 @@ quantitative basis.
   rotation-versus-mirror judgement and accuracy/reaction-time metrics. Spatial-training
   meta-analyses support near transfer to spatial tasks; mathematics, academic and
   general-intelligence gains are not claimed, especially for computerized training.
+- **R67:** Prospective Memory is an experimental focus test: an ongoing vowel/consonant
+  classification runs while a Q cue requires a Remember response. It reports ongoing accuracy,
+  cue hits/misses, false alarms and reaction time. A 2023 meta-analysis supports a moderate
+  immediate effect but not a significant long-term effect; no everyday-function or diagnostic
+  claim is made.
 
 Limits: the evidence is for executive-function, working-memory and spatial training broadly,
 not for these exact colour/shape, arrow, grid or block-rotation tasks. The meta-analyses also
