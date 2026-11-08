@@ -108,6 +108,22 @@ describe("pre-test briefing", () => {
     expect(screen.getByTestId("stimulus")).toBeTruthy();
   });
 
+  it("shows the Paired Associates mnemonic hint in its pre-test briefing", () => {
+    const pairedView: SessionView = {
+      ...view(),
+      blockLabel: "Paired Associates",
+      mechanic: {
+        ...MECHANIC,
+        mechanic: "paired",
+        name: "Paired Associates",
+      },
+    };
+    renderSession({ view: pairedView });
+    const hint = screen.getByTestId("briefing-strategy");
+    expect(hint.textContent).toMatch(/vivid image|short sentence/i);
+    expect(hint.textContent).toMatch(/link/i);
+  });
+
   it("does not brief a paused or completed block", () => {
     renderSession({ view: { ...view(), phase: "block_complete" } });
     expect(screen.queryByTestId("test-briefing")).toBeNull();

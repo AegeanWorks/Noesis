@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-dual-task-hint",
+    "task_id": "noesis-fluency-briefing",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794146824.8168092,
-    "owner": "opencode:dualhint",
-    "started_by": "opencode:dualhint",
+    "updated_at": 1794147765.3281302,
+    "owner": "opencode:briefhint",
+    "started_by": "opencode:briefhint",
     "continuations": [],
-    "completed_at": 1794146839.2168179
+    "completed_at": 1794147772.7007236
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-prospective-trend",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add level-aware Prospective Memory ongoing/cue/false-alarm trends and a same-level result delta",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794145111.129157,
-      "timestamp_str": "2026-11-08 16:38:31",
-      "agent": "opencode:prospectivetrend",
-      "impact_assessment": {
-        "why": "Choose, History and Results had only per-block Prospective Memory summaries; the three measures need same-level comparison and lower false alarms are better",
-        "benefits": "Consistent level-aware comparison across all three screens; explicit cue and false-alarm reporting",
-        "risks": "contract: Menu/results UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "three failing-first menu tests and four result tests, seeded before/after screenshots, real level-2 played run, full gates"
-      },
-      "plan_digest": "0f47141de50fb06a98043c7ed637724763599d3aa2bde323aa8b0c699bfc36f2"
-    },
-    {
-      "task_id": "noesis-prospective-trend",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: prospectiveLevels + three-line trend card; Choose line; prospectiveComparisons/result delta; tests; prospective-trend-proof.mjs; record",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794145112.8932018,
-      "timestamp_str": "2026-11-08 16:38:32",
-      "agent": "opencode:prospectivetrend"
-    },
-    {
-      "task_id": "noesis-prospective-trend",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seeded L3 100%/4-4/0, L2 90%/3-4/1, L1 80%/2-4/2; played L2 100%/4-4/0 gave improved +10pp/cue4-4/FA0 then no change; consoleErrors []; 29 Python + 402 Vitest, 900 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794145114.3562114,
-      "timestamp_str": "2026-11-08 16:38:34",
-      "agent": "opencode:prospectivetrend"
-    },
-    {
-      "task_id": "noesis-prospective-trend",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-prospective-trend' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794145122.8910873,
-      "timestamp_str": "2026-11-08 16:38:42",
-      "agent": "opencode:prospectivetrend"
-    },
     {
       "task_id": "noesis-paired",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794146839.21682,
       "timestamp_str": "2026-11-08 17:07:19",
       "agent": "opencode:dualhint"
+    },
+    {
+      "task_id": "noesis-fluency-briefing",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: scan verbal-fluency/face-name evidence, record its scope decision, and surface the Paired Associates mnemonic hint in the pre-test briefing",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794147763.4795916,
+      "timestamp_str": "2026-11-08 17:22:43",
+      "agent": "opencode:briefhint",
+      "impact_assessment": {
+        "why": "The fresh scan found no eligible verbal-fluency training meta-analysis and only no-intervention face-name evidence; the existing mnemonic hint is evidence-backed but only visible after the test starts",
+        "benefits": "A researched scope boundary plus a low-risk briefing aid grounded in the same memory-training evidence",
+        "risks": "contract: content/UI only; scoring unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "failing-first briefing test, before/after briefing proof, full playthrough and gates"
+      },
+      "plan_digest": "9fd95d2fa9d5ef60b7b1ca1860fe43545a5d5f29209f945854bf90885bd01e6b"
+    },
+    {
+      "task_id": "noesis-fluency-briefing",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: optional strategyHint on MechanicMeta; TestBriefing section; paired proof captures briefing; section 6.4/ADR-053/search log",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794147764.548318,
+      "timestamp_str": "2026-11-08 17:22:44",
+      "agent": "opencode:briefhint"
+    },
+    {
+      "task_id": "noesis-fluency-briefing",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: before briefing no hint, after hint present; three level-2 blocks 12/12 mean 1325/1300/1300; consoleErrors []; 29 Python + 418 Vitest, 1000 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794147765.3281302,
+      "timestamp_str": "2026-11-08 17:22:45",
+      "agent": "opencode:briefhint"
+    },
+    {
+      "task_id": "noesis-fluency-briefing",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-fluency-briefing' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794147772.7007267,
+      "timestamp_str": "2026-11-08 17:22:52",
+      "agent": "opencode:briefhint"
     }
   ]
 }

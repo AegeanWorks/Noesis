@@ -32,6 +32,8 @@ export interface MechanicMeta {
   instructions: string;
   /** Brief, literature-grounded explanation shown before every test block. */
   brief: string;
+  /** Optional strategy aid shown in the pre-test briefing. */
+  strategyHint?: string;
   claimLevel: ClaimLevel;
   claim: string;
   qualifier: string;

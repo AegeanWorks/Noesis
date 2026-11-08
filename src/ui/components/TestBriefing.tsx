@@ -50,6 +50,16 @@ export function TestBriefing({
         </p>
       </section>
 
+      {meta.strategyHint ? (
+        <section
+          className="briefing-section briefing-strategy"
+          data-testid="briefing-strategy"
+        >
+          <h3>Strategy tip</h3>
+          <p>{meta.strategyHint}</p>
+        </section>
+      ) : null}
+
       <section className="briefing-section">
         <h3>What the evidence supports</h3>
         <p>{meta.claim}</p>

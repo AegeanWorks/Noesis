@@ -226,6 +226,8 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     tagline: "Verbal episodic memory",
     instructions:
       "Study the word pair, then choose the word that was paired with the cue. Keys 1-4 work too.",
+    strategyHint:
+      "Link the two words in a vivid image or a short sentence. The link can be silly; that is what makes it memorable.",
     brief:
       "Verbal episodic-memory practice: study a word pair, then retrieve its partner. A 2022 meta-analysis of 21 randomized trials found mnemonic training improved episodic memory immediately (g=0.408) and at follow-up (g=0.418) in healthy older adults; the evidence concerns strategy training, not this exact task. This is an experimental focus test with no far-transfer or everyday-function claim.",
     claimLevel: "experimental",

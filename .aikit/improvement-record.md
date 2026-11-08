@@ -1635,3 +1635,32 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 417 Vitest; `npm run ai:verify` — 1,000/1,000;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's hint, tests, scope note, proof and record.
+
+## Cycle 37 — Verbal-fluency/face-name scope decision and Paired Associates briefing hint
+
+- **Area**: fresh candidate scan plus a small UX improvement.
+- **FIND**: No eligible verbal-fluency training meta-analysis was found; fluency is usually an
+  outcome, and open-ended generation cannot be scored deterministically without a validated
+  dictionary and semantic rater. Kelly et al. 2014 (PMID 24607830; 31 RCTs, 1,806
+  cognitive-training participants) reported face-name recall (p=0.02) and paired associates
+  (p=0.001) gains versus no intervention, but this is not an active-control face-name training
+  meta-analysis and a proper face-name task needs a validated face stimulus set with privacy and
+  consent handling. Paired Associates already covers verbal associative memory.
+- **DECISION**: No verbal-fluency or face-name mechanic (ADR-053). Surface the existing Paired
+  Associates mnemonic hint in the pre-test briefing as an optional Strategy tip, in addition to
+  the study screen. No scoring change; no validated-protocol or far-transfer claim.
+- **IMPLEMENT**: optional `strategyHint` on `MechanicMeta`, set for Paired Associates;
+  `TestBriefing` renders `briefing-strategy`; a failing-first briefing test checks the copy.
+  `paired-proof.mjs` captures the briefing and reports the hint.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before briefing (no hint): `%TEMP%\opencode\noesis-paired-briefing-before\before-00-briefing.png`
+    SHA-256 `7EBAE5429F98C40573E6BDC575758F604943BED4175A47B93FBCA64E24C01764`
+  - after briefing (hint present): `%TEMP%\opencode\noesis-paired-briefing-after\after-00-briefing.png`
+    SHA-256 `CCEEABD6D637282A903B11D6A1F119851590F778DF7CDC76C1156DAC340076FE`
+  (the study-screen before/after from cycle 36 remain valid)
+- **PROOF (played run)**: `scripts/paired-proof.mjs` completed three level-2 Paired Associates
+  blocks with 100% accuracy, 12/12 correct each and mean response 1,346/1,300/1,300 ms;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 418 Vitest; `npm run ai:verify` — 1,000/1,000;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's briefing hint, test, scope note, proof and record.

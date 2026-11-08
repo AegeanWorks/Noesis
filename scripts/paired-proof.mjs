@@ -100,6 +100,11 @@ await page.waitForSelector('[data-testid="test-briefing"]');
 const briefing = await page.$eval('[data-testid="test-briefing"]', (node) =>
   (node.textContent ?? "").replace(/\s+/g, " ").trim(),
 );
+const strategyHint = await page.evaluate(() => {
+  const hint = document.querySelector('[data-testid="briefing-strategy"]');
+  return hint ? (hint.textContent ?? "").replace(/\s+/g, " ").trim() : null;
+});
+await page.screenshot({ path: join(OUT, `${LABEL}-00-briefing.png`), fullPage: true });
 await page.getByTestId("begin-test").click();
 await page.waitForSelector(".stage-paired");
 await page.waitForTimeout(300);
@@ -156,6 +161,7 @@ const results = await page.evaluate(() => {
 
 Object.assign(report, {
   briefingHasPaired: /paired|episodic|word pair/i.test(briefing),
+  strategyHint,
   results,
 });
 console.log(JSON.stringify(report, null, 2));

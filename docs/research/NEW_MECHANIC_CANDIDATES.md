@@ -286,3 +286,19 @@ stop-signal training is ineffective.
   Recorded in ADR-052.
 
 These decisions are scope decisions, not evidence that the training modes are ineffective.
+
+### 6.4 Verbal fluency and face-name associative memory
+
+- A targeted verbal-fluency search found no eligible training meta-analysis; fluency is usually
+  an outcome in broader trials, not a trained task. A deterministic text app cannot reliably
+  score open-ended word generation without a validated dictionary and semantic rater.
+- A face-name search found Kelly et al. 2014 (PMID 24607830; 31 RCTs, 1,806 cognitive-training
+  participants), which reported face-name recall (p=0.02) and paired associates (p=0.001) gains
+  versus no intervention in healthy older adults. This is task-relevant but not an active-control
+  face-name training meta-analysis, and a proper face-name task needs a validated face stimulus
+  set with privacy and consent handling. Paired Associates already covers the verbal
+  associative-memory component.
+- **Decision:** no verbal-fluency or face-name mechanic. The mnemonic strategy evidence is applied
+  instead as an optional pre-test briefing tip for Paired Associates. Recorded in ADR-053.
+
+These decisions are scope decisions, not evidence that the training modes are ineffective.

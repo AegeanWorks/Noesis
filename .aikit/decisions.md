@@ -376,6 +376,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Do not add a dual-task mechanic; the app is sedentary and screen-only, and a meaningful protocol would need a motor or continuous tracking component with unresolved safety and measurement issues. Add a collapsed "Strategy tip" to the Paired Associates study screen: link the two words in a vivid image or short sentence. The hint is optional, does not affect scoring, and is not claimed as a validated protocol or a source of far transfer.
 - **Consequences**: No new mechanic or evidence-table record is added for dual-task training; the review remains at 122 records and 284 outcomes. The Paired Associates hint is covered by a UI test and a before/after study-screen proof.
 
+### ADR-053: Verbal fluency and face-name stay out of scope; the mnemonic hint reaches the briefing
+- **Date**: 2026-11-08
+- **Status**: Accepted
+- **Context**: A targeted verbal-fluency search found no eligible training meta-analysis; fluency is generally an outcome measure, and open-ended word generation cannot be scored deterministically without a validated dictionary and semantic rater. Kelly et al. 2014 (PMID 24607830) reported face-name recall (p=0.02) and paired associates (p=0.001) gains versus no intervention in healthy older adults, but this is not an active-control face-name training meta-analysis, and a proper face-name task requires a validated face stimulus set with privacy and consent handling. Paired Associates already covers verbal associative memory.
+- **Decision**: Do not add verbal-fluency or face-name mechanics. Move the existing Paired Associates mnemonic hint into the pre-test briefing as an optional Strategy tip, while keeping it on the study screen. It does not change scoring and is not claimed as a validated protocol or a source of far transfer.
+- **Consequences**: No new mechanic or evidence-table record is added; the review remains at 122 records and 284 outcomes. The briefing hint is covered by a UI test and a before/after briefing proof.
+
 
 
 
