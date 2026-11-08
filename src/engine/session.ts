@@ -108,6 +108,7 @@ export function createSession(config: SessionConfig): SessionState {
     blockIndex: 0,
     current: null,
     results: [],
+    confidenceByBlock: normalized.blocks.map(() => null),
     tick: 0,
     events: [{ at: 0, type: "created", detail: normalized.label }],
     error: null,
@@ -143,9 +144,11 @@ function startBlock(state: SessionState): SessionState {
 function completeBlock(state: SessionState): SessionState {
   if (!state.current) return state;
   const block = state.config.blocks[state.blockIndex];
+  const confidence = state.confidenceByBlock[state.blockIndex] ?? undefined;
   const result = {
     ...mechanicResult(state.current),
     ...(block ? { difficulty: block.difficulty } : {}),
+    ...(confidence ? { confidence } : {}),
   };
   return {
     ...state,
@@ -188,6 +191,18 @@ export function applySessionAction(
       current: null,
       error: null,
       events: event(state, "aborted", "Session aborted"),
+    };
+  }
+  if (action.type === "confidence") {
+    if (state.phase === "complete") {
+      return fail(state, "Session has ended");
+    }
+    const confidenceByBlock = [...state.confidenceByBlock];
+    confidenceByBlock[state.blockIndex] = action.value;
+    return {
+      ...state,
+      confidenceByBlock,
+      events: event(state, "confidence", `Block ${state.blockIndex + 1}: ${action.value}`),
     };
   }
   if (action.type === "next") {

@@ -2020,3 +2020,20 @@ html.high-contrast .speed-ring-active {
   border-left: 3px solid rgba(189, 147, 249, 0.5);
 }
 
+
+.confidence-summary-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.confidence-summary-rows p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.confidence-summary-rows p:first-child {
+  color: var(--text);
+}
+

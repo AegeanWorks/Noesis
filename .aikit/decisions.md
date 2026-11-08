@@ -387,8 +387,8 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Date**: 2026-11-08
 - **Status**: Accepted
 - **Context**: A targeted confidence-calibration search found no training meta-analysis. Sella et al. 2023 (PMID 36218025) meta-analysed 25 studies in 1,768 older adults: metacognitive training improved memory (d=0.52) and strategic metacognitive training improved memory (d=0.44), metacognitive beliefs, strategy use and some well-being outcomes, but methodological quality was limited. A single confidence rating is a monitoring prompt, not the multi-session training those trials evaluated.
-- **Decision**: Add an optional **Confidence check** to the pre-test briefing (Low/Medium/High) and repeat the selected level on the corresponding result card. It is clearly labelled as a reflection, not scored and not a diagnostic calibration. No new mechanic or evidence-table record is added.
-- **Consequences**: The app gains a small metacognitive awareness prompt without a training claim. The prompt is test-covered and has a before/after briefing and results proof; the review remains at 122 records and 284 outcomes.
+- **Decision**: Add an optional **Confidence check** to the pre-test briefing (Low/Medium/High) and repeat the selected level on the corresponding result card. It is clearly labelled as a reflection, not scored and not a diagnostic calibration. No new mechanic or evidence-table record is added. The choice is stored per block in the session state and snapshot so it survives reload, is attached to the completed result, and appears in a same-mechanic, same-level confidence-versus-accuracy summary in Menu History.
+- **Consequences**: The app gains a small metacognitive awareness prompt without a training claim. The prompt is test-covered and has before/after briefing and results proofs; the review remains at 122 records and 284 outcomes. Sessions CSV gains a `confidence` column; JSON exports carry the field on each result.
 
 
 

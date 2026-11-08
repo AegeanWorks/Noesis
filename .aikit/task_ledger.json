@@ -1,67 +1,17 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-confidence-check",
+    "task_id": "noesis-confidence-persist",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1794148488.973935,
-    "owner": "opencode:confidence",
-    "started_by": "opencode:confidence",
+    "updated_at": 1794149465.1765337,
+    "owner": "opencode:confpersist",
+    "started_by": "opencode:confpersist",
     "continuations": [],
-    "completed_at": 1794148502.1910028
+    "completed_at": 1794149474.5368865
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-paired-resume",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: prove a Paired Associates focus session survives reload and resumes with the same seed, block, level and trial",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794145983.8691795,
-      "timestamp_str": "2026-11-08 16:53:03",
-      "agent": "opencode:pairedresume",
-      "impact_assessment": {
-        "why": "Paired Associates had only a storage round-trip test; no browser-level recovery proof existed",
-        "benefits": "Verified save/resume for Paired Associates; screenshots and console-error evidence analogous to the other focus tests",
-        "risks": "contract: proof script only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
-        "mitigation": "fixed-clock Playwright run with mid/stored/resumed comparison, three-block completion, full gates"
-      },
-      "plan_digest": "802f39ddc2a12e1bc0d2be0f01e3ac4926e8d226cc2ebd37be71b7f9b7d897ec"
-    },
-    {
-      "task_id": "noesis-paired-resume",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/2] Impl: scripts/paired-resume-proof.mjs with three study/test trials before reload, Resume session, briefing dismissal, completion and screenshots",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794145984.4789407,
-      "timestamp_str": "2026-11-08 16:53:04",
-      "agent": "opencode:pairedresume"
-    },
-    {
-      "task_id": "noesis-paired-resume",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Verified: seed 2721744568, block 0/3, paired, level 2, trial 3 study identical mid/stored/resumed; Resume session; 3 blocks 12/12 mean 428/400/400; consoleErrors []; 29 Python + 409 Vitest, 1000 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794145984.918769,
-      "timestamp_str": "2026-11-08 16:53:04",
-      "agent": "opencode:pairedresume"
-    },
-    {
-      "task_id": "noesis-paired-resume",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-paired-resume' completed successfully.",
-      "status": "completed",
-      "timestamp": 1794145992.2188346,
-      "timestamp_str": "2026-11-08 16:53:12",
-      "agent": "opencode:pairedresume"
-    },
     {
       "task_id": "noesis-paired-trend",
       "phase": "phase 2",
@@ -261,6 +211,56 @@
       "timestamp": 1794148502.191005,
       "timestamp_str": "2026-11-08 17:35:02",
       "agent": "opencode:confidence"
+    },
+    {
+      "task_id": "noesis-confidence-persist",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: persist per-block confidence in session state/snapshot/result and add a same-level confidence-vs-accuracy summary to Menu History",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794149463.2292364,
+      "timestamp_str": "2026-11-08 17:51:03",
+      "agent": "opencode:confpersist",
+      "impact_assessment": {
+        "why": "The confidence check was React-only, lost on reload, absent from completed results and invisible in history",
+        "benefits": "Survives reload, appears on result cards, feeds a bounded reflection summary, and is exported in JSON/CSV",
+        "risks": "contract: session action/schema/snapshot migration and CSV column; scoring unchanged; dependency: none; concurrency: none; state: old snapshots migrate to null confidence",
+        "mitigation": "failing-first session/snapshot/history tests, migration test, before/after reload proof, full gates"
+      },
+      "plan_digest": "c637a9e8d41a7e9d0fbdb0f53a488645c22e99f689121cde886679493b7f0cba"
+    },
+    {
+      "task_id": "noesis-confidence-persist",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: confidenceByBlock state/action/result field; snapshot migration; results read result.confidence; History confidence-summary; CSV confidence column; docs",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794149464.22166,
+      "timestamp_str": "2026-11-08 17:51:04",
+      "agent": "opencode:confpersist"
+    },
+    {
+      "task_id": "noesis-confidence-persist",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: before reload selection lost, after High persists; 3 results notes; History Paired Associates L2 High 100% (3 blocks); consoleErrors []; 29 Python + 426 Vitest, 1000 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794149465.1765337,
+      "timestamp_str": "2026-11-08 17:51:05",
+      "agent": "opencode:confpersist"
+    },
+    {
+      "task_id": "noesis-confidence-persist",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-confidence-persist' completed successfully.",
+      "status": "completed",
+      "timestamp": 1794149474.5368886,
+      "timestamp_str": "2026-11-08 17:51:14",
+      "agent": "opencode:confpersist"
     }
   ]
 }

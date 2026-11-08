@@ -38,6 +38,29 @@ describe("session snapshot", () => {
     expect(loadSessionSnapshot()?.motivation).toEqual(motivation);
   });
 
+  it("round-trips per-block confidence", () => {
+    const state = applySessionAction(runningSession(), {
+      type: "confidence",
+      value: "high",
+    });
+    saveSessionSnapshot(state);
+    const loaded = loadSessionSnapshot();
+    expect(loaded?.state.confidenceByBlock[0]).toBe("high");
+    expect(loaded?.state.confidenceByBlock[1]).toBeNull();
+  });
+
+  it("migrates a snapshot without confidence to per-block nulls", () => {
+    const state = runningSession();
+    const legacy = { ...state } as Partial<SessionState>;
+    delete legacy.confidenceByBlock;
+    writeLocal(
+      "noesis.session.v1",
+      JSON.stringify({ version: 1, savedAt: "2026-11-01T00:00:00.000Z", state: legacy }),
+    );
+    const loaded = loadSessionSnapshot();
+    expect(loaded?.state.confidenceByBlock).toEqual(state.config.blocks.map(() => null));
+  });
+
   it("migrates a snapshot without motivation to null", () => {
     const state = runningSession();
     writeLocal(

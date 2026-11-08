@@ -46,7 +46,7 @@ same local record: one CSV for session blocks and one for adherence events.
 
 ### 3.1 Sessions CSV columns
 
-`session_id, finished_at, seed, arm, mechanic, domain, difficulty, trials, duration_ms,
+`session_id, finished_at, seed, arm, mechanic, domain, difficulty, confidence, trials, duration_ms,
 accuracy, summary, state_hash, metrics_json, motivation_json`
 
 - One row per mechanic result, so a four-block session produces four rows; a focus session produces one row per completed block (one to three).

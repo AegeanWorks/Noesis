@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MECHANIC_META } from "../../engine/evidence";
-import type { MechanicId, MechanicResult } from "../../engine/types";
+import type { Confidence, MechanicId, MechanicResult } from "../../engine/types";
 import type { AdherenceCounts } from "../../storage/adherence";
 import type { SessionRecord } from "../../storage/history";
 import { bestAccuracyFor } from "../../storage/history";
@@ -860,6 +860,101 @@ function TestCard({
   );
 }
 
+interface ConfidenceRow {
+  mechanic: MechanicId;
+  level: number;
+  buckets: Record<Confidence, { count: number; total: number }>;
+  lastSeen: number;
+}
+
+const CONFIDENCE_LABELS: Record<Confidence, string> = {
+  low: "Low",
+  medium: "Medium",
+  high: "High",
+};
+
+const CONFIDENCE_ORDER: readonly Confidence[] = ["high", "medium", "low"];
+
+function confidenceSummary(history: readonly SessionRecord[]): ConfidenceRow[] {
+  const rows = new Map<string, ConfidenceRow>();
+  let seen = 0;
+  for (const record of [...history].reverse()) {
+    for (const result of record.results) {
+      const confidence = result.confidence;
+      const level = result.difficulty;
+      const accuracy = result.metrics.accuracy;
+      if (
+        typeof level !== "number" ||
+        typeof accuracy !== "number" ||
+        !Number.isFinite(accuracy) ||
+        (confidence !== "low" && confidence !== "medium" && confidence !== "high")
+      ) {
+        continue;
+      }
+      const key = `${result.mechanic}-${level}`;
+      const row =
+        rows.get(key) ??
+        {
+          mechanic: result.mechanic,
+          level,
+          buckets: {
+            low: { count: 0, total: 0 },
+            medium: { count: 0, total: 0 },
+            high: { count: 0, total: 0 },
+          },
+          lastSeen: 0,
+        };
+      row.buckets[confidence].count += 1;
+      row.buckets[confidence].total += accuracy;
+      row.lastSeen = seen;
+      seen += 1;
+      rows.set(key, row);
+    }
+  }
+  return [...rows.values()].sort((a, b) => b.lastSeen - a.lastSeen);
+}
+
+function confidenceRowText(row: ConfidenceRow): string {
+  const parts = CONFIDENCE_ORDER.filter(
+    (confidence) => row.buckets[confidence].count > 0,
+  ).map((confidence) => {
+    const bucket = row.buckets[confidence];
+    return `${CONFIDENCE_LABELS[confidence]} ${percent(
+      bucket.total / bucket.count,
+    )} (${bucket.count} ${bucket.count === 1 ? "block" : "blocks"})`;
+  });
+  return `${MECHANIC_META[row.mechanic]?.name ?? row.mechanic} L${row.level}: ${parts.join(
+    " · ",
+  )}`;
+}
+
+function ConfidenceSummary({ rows }: { rows: readonly ConfidenceRow[] }) {
+  return (
+    <section className="card confidence-summary" data-testid="confidence-summary">
+      <div className="card-top">
+        <div>
+          <p className="eyebrow">Reflection</p>
+          <h2>Confidence vs accuracy</h2>
+        </div>
+      </div>
+      <p className="fine">
+        Same-level blocks only. Confidence is an optional reflection, not a score or a
+        diagnostic calibration.
+      </p>
+      <div className="confidence-summary-rows">
+        {rows.map((row) => (
+          <p
+            key={`${row.mechanic}-${row.level}`}
+            data-testid={`confidence-summary-${row.mechanic}-${row.level}`}
+          >
+            {confidenceRowText(row)}
+          </p>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function HistoryPanel({
   history,
   adherenceCounts,
@@ -878,6 +973,7 @@ function HistoryPanel({
   const spanLevels = spatialSpanLevels(history);
   const rotationTrendLevels = rotationLevels(history);
   const pairedTrendLevels = pairedLevels(history);
+  const confidenceRows = confidenceSummary(history);
   const prospectiveTrendLevels = prospectiveLevels(history);
 
   return (
@@ -961,6 +1057,8 @@ function HistoryPanel({
       ) : null}
 
       {pairedTrendLevels.length > 0 ? <PairedTrendCard levels={pairedTrendLevels} /> : null}
+
+      {confidenceRows.length > 0 ? <ConfidenceSummary rows={confidenceRows} /> : null}
 
       {prospectiveTrendLevels.length > 0 ? (
         <ProspectiveTrendCard levels={prospectiveTrendLevels} />

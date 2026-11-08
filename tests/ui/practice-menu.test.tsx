@@ -193,6 +193,31 @@ function pairedRecord(
   };
 }
 
+function confidenceRecord(
+  mechanic: "nback" | "gonogo",
+  level: number,
+  entries: readonly (readonly ["low" | "medium" | "high", number])[],
+  id: string,
+): SessionRecord {
+  return {
+    id,
+    finishedAt: "2026-11-08T10:00:00.000Z",
+    seed: 42,
+    results: entries.map(([confidence, accuracy], index) => ({
+      mechanic,
+      domain: mechanic === "nback" ? "working_memory" : "inhibition",
+      trials: 18,
+      durationMs: 60_000,
+      metrics: { accuracy },
+      summary: `${mechanic}: ${Math.round(accuracy * 100)}% accuracy.`,
+      seed: 42,
+      stateHash: `0123456789abcde${index}`,
+      difficulty: level,
+      confidence,
+    })),
+  };
+}
+
 function renderMenu(overrides: Partial<ComponentProps<typeof PracticeMenuScreen>> = {}) {
   const props: ComponentProps<typeof PracticeMenuScreen> = {
     history: [],
@@ -595,6 +620,32 @@ describe("PracticeMenuScreen", () => {
     cleanup();
     renderMenu({ history: [record()] });
     expect(screen.queryByTestId("menu-paired-trend")).toBeNull();
+  });
+
+  it("summarizes confidence versus accuracy within each mechanic level", () => {
+    renderMenu({
+      history: [
+        confidenceRecord("nback", 2, [["high", 0.9], ["high", 1], ["medium", 0.8]], "c1"),
+        confidenceRecord("gonogo", 2, [["high", 0.9]], "c2"),
+        confidenceRecord("nback", 1, [["low", 0.6]], "c3"),
+      ],
+      initialTab: "history",
+    });
+    expect(screen.getByTestId("confidence-summary")).toBeTruthy();
+    expect(screen.getByTestId("confidence-summary-nback-2").textContent).toBe(
+      "N-back L2: High 95% (2 blocks) · Medium 80% (1 block)",
+    );
+    expect(screen.getByTestId("confidence-summary-gonogo-2").textContent).toBe(
+      "Go / No-Go L2: High 90% (1 block)",
+    );
+    expect(screen.getByTestId("confidence-summary-nback-1").textContent).toBe(
+      "N-back L1: Low 60% (1 block)",
+    );
+  });
+
+  it("omits the confidence summary when no result has a confidence value", () => {
+    renderMenu({ history: [record()], initialTab: "history" });
+    expect(screen.queryByTestId("confidence-summary")).toBeNull();
   });
 
   it("switches between choosing a test and viewing history", () => {

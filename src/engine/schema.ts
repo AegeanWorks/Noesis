@@ -31,6 +31,7 @@ export const SessionActionSchema = z.discriminatedUnion("type", [
   z.object({ type: z.literal("advance"), ms: z.number().int().min(0).max(10_000) }),
   z.object({ type: z.literal("respond") }),
   z.object({ type: z.literal("answer"), option: z.number().int().min(0).max(8) }),
+  z.object({ type: z.literal("confidence"), value: z.enum(["low", "medium", "high"]) }),
   z.object({ type: z.literal("next") }),
   z.object({ type: z.literal("abort") }),
 ]);

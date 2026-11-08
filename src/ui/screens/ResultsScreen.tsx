@@ -679,7 +679,7 @@ export function ResultsScreen({
               result={result}
               index={index}
               isNewBest={newBests.includes(result.mechanic)}
-              confidence={confidences[index] ?? null}
+              confidence={confidences[index] ?? result.confidence ?? null}
               switchCostComparison={switchComparisons[index] ?? null}
               interferenceCostComparison={interferenceComparisons[index] ?? null}
               spanComparison={spanComparisonsByIndex[index] ?? null}

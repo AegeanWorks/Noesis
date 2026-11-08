@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { cleanup, render, screen } from "@testing-library/react";
-import type { MechanicResult } from "../../src/engine/types";
+import type { Confidence, MechanicResult } from "../../src/engine/types";
 import { ResultsScreen } from "../../src/ui/screens/ResultsScreen";
 
 afterEach(cleanup);
@@ -18,12 +18,11 @@ const RESULT: MechanicResult = {
   difficulty: 2,
 };
 
-function renderResults(confidences: readonly ("low" | "medium" | "high" | null)[]) {
+function renderResults(confidence?: Confidence) {
   render(
     <ResultsScreen
-      results={[RESULT]}
+      results={[confidence ? { ...RESULT, confidence } : RESULT]}
       history={[]}
-      confidences={confidences}
       motivation={null}
       sessionId="session-1"
       newBests={[]}
@@ -37,14 +36,14 @@ function renderResults(confidences: readonly ("low" | "medium" | "high" | null)[
 
 describe("Results confidence note", () => {
   it("shows the selected confidence without presenting it as a score", () => {
-    renderResults(["high"]);
+    renderResults("high");
     const note = screen.getByTestId("confidence-note-0").textContent ?? "";
     expect(note).toMatch(/Confidence: High/i);
     expect(note).toMatch(/not scored|not a diagnostic/i);
   });
 
   it("omits the note when no confidence was selected", () => {
-    renderResults([]);
+    renderResults();
     expect(screen.queryByTestId("confidence-note-0")).toBeNull();
   });
 });

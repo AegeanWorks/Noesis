@@ -43,7 +43,7 @@ const EVENT: AdherenceEvent = {
 describe("analysis CSV exports", () => {
   it("writes a stable sessions header even with no data", () => {
     expect(buildSessionsCsv([])).toBe(
-      "session_id,finished_at,seed,arm,mechanic,domain,difficulty,trials,duration_ms,accuracy,summary,state_hash,metrics_json,motivation_json\n",
+      "session_id,finished_at,seed,arm,mechanic,domain,difficulty,confidence,trials,duration_ms,accuracy,summary,state_hash,metrics_json,motivation_json\n",
     );
   });
 
@@ -51,9 +51,9 @@ describe("analysis CSV exports", () => {
     const csv = buildSessionsCsv([SESSION]);
     const [header, row] = csv.trimEnd().split("\n");
     expect(header).toBe(
-      "session_id,finished_at,seed,arm,mechanic,domain,difficulty,trials,duration_ms,accuracy,summary,state_hash,metrics_json,motivation_json",
+      "session_id,finished_at,seed,arm,mechanic,domain,difficulty,confidence,trials,duration_ms,accuracy,summary,state_hash,metrics_json,motivation_json",
     );
-    expect(row).toContain("session-1,2026-11-08T10:05:00.000Z,42,control,nback,working_memory,2,18,60000,0.8,");
+    expect(row).toContain("session-1,2026-11-08T10:05:00.000Z,42,control,nback,working_memory,2,,18,60000,0.8,");
     expect(row).toContain('"2-back, ""best"""');
     expect(row).toContain('"{""accuracy"":0.8,""d_prime"":2.1}"');
     expect(row).toContain('"{""banked"":40');
@@ -71,7 +71,7 @@ describe("analysis CSV exports", () => {
     ]);
     const row = csv.trimEnd().split("\n")[1] ?? "";
     expect(row).not.toContain("undefined");
-    expect(row).toContain("session-1,2026-11-08T10:05:00.000Z,42,,nback,working_memory,,18,60000,,");
+    expect(row).toContain("session-1,2026-11-08T10:05:00.000Z,42,,nback,working_memory,,,18,60000,,");
   });
 
   it("writes a stable adherence header and one row per event", () => {

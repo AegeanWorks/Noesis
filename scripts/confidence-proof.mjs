@@ -96,7 +96,21 @@ const confidenceSelected = await page.evaluate(() => {
 });
 await page.screenshot({ path: join(OUT, `${LABEL}-01-briefing.png`), fullPage: true });
 
-await page.getByTestId("begin-test").click();
+await page.waitForTimeout(1_800); // let the snapshot include the confidence choice
+await page.reload({ waitUntil: "domcontentloaded", timeout: 60_000 });
+await page.waitForSelector('[data-testid="start-session"]');
+await page.getByTestId("start-session").click();
+await page.waitForSelector('[data-testid="session-root"]');
+await page.waitForTimeout(300);
+const confidencePersisted = await page.evaluate(() => {
+  const button = document.querySelector('[data-testid="confidence-high"]');
+  return button ? button.getAttribute("aria-pressed") : null;
+});
+await page.screenshot({ path: join(OUT, `${LABEL}-02-resumed-briefing.png`), fullPage: true });
+
+if (await page.$('[data-testid="begin-test"]')) {
+  await page.getByTestId("begin-test").click();
+}
 await page.waitForSelector(".stage-paired");
 for (let step = 0; step < 6000; step += 1) {
   const state = await page.evaluate(() => {
@@ -108,6 +122,11 @@ for (let step = 0; step < 6000; step += 1) {
   if (state.phase === "block_complete") {
     const next = await page.$('[data-testid="next-block"]');
     if (next) await next.click();
+    await page.waitForTimeout(120);
+    const confidence = await page.$('[data-testid="confidence-high"]');
+    if (confidence) await confidence.click();
+    const begin = await page.$('[data-testid="begin-test"]');
+    if (begin) await begin.click();
     await page.waitForTimeout(80);
     continue;
   }
@@ -141,7 +160,25 @@ const results = await page.evaluate(() => {
   };
 });
 
-const report = { label: LABEL, confidenceSelected, results, consoleErrors, shots: OUT };
+await page.getByRole("button", { name: "Menu", exact: true }).click();
+await page.getByRole("tab", { name: /history/i }).click();
+await page.waitForSelector('[data-testid="menu-history"]');
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, `${LABEL}-03-history.png`), fullPage: true });
+const historySummary = await page.evaluate(() => {
+  const card = document.querySelector('[data-testid="confidence-summary"]');
+  return card ? (card.textContent ?? "").replace(/\s+/g, " ").trim() : null;
+});
+
+const report = {
+  label: LABEL,
+  confidenceSelected,
+  confidencePersisted,
+  results,
+  historySummary,
+  consoleErrors,
+  shots: OUT,
+};
 await writeFile(join(OUT, `${LABEL}-report.json`), `${JSON.stringify(report, null, 2)}\n`, "utf8");
 console.log(JSON.stringify(report, null, 2));
 await browser.close();

@@ -1697,3 +1697,37 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 421 Vitest; `npm run ai:verify` — 1,000/1,000;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's confidence check, tests, scope note, proof and record.
+
+## Cycle 39 — Persist confidence and summarize it in Menu History
+
+- **Area**: metacognitive check persistence and history readability.
+- **FIND**: The confidence check was held only in React state. It was lost on reload, never
+  attached to the completed block, and Menu History could not compare confidence with accuracy.
+- **IMPLEMENT**: `SessionState` now carries `confidenceByBlock`; a `confidence` session action
+  stores the choice; `completeBlock` attaches it to the `MechanicResult`; the snapshot migration
+  fills missing arrays with nulls; `ResultsScreen` reads `result.confidence`. Menu History adds a
+  `confidence-summary` card grouped by mechanic and level with mean accuracy and block count per
+  Low/Medium/High bucket. Sessions CSV gains a `confidence` column; the data dictionary documents
+  it.
+- **PROOF (screenshots)**: same 390x844@2x viewport and fixed clock:
+  - before resumed briefing loses selection:
+    `%TEMP%\opencode\noesis-confidence-persist-before\before-02-resumed-briefing.png` SHA-256
+    `900A605F230AC600D2317CFA466426D140753377B40B01528A85B3B5144B01A8`
+  - after resumed briefing keeps High:
+    `%TEMP%\opencode\noesis-confidence-persist-after\after-02-resumed-briefing.png` SHA-256
+    `28D62B97EB724C04A88A1B05F8224717B4B75CF46E5838FB22E15D390E3D604B`
+  - before results (no note): `before-02-results.png` SHA-256
+    `54AEC57638B57B9F5D29D39DE5E1E320B2FE9E646D608B46280354E5A206C67F`
+  - after results (three notes): `after-02-results.png` SHA-256
+    `D674DBB438CE157C92BB9B32D071220F711633AFC16DA6E6D7929A573C872043`
+  - before History (no summary): `before-03-history.png` SHA-256
+    `62BD364DE582AD959BF85E9DA7E67B888DB1AA30D0F9E701586F742C53FA5D81`
+  - after History: `after-03-history.png` SHA-256
+    `8E61FE61FBAD445CA624987A88389447A4B897548D167DED70C6A690F084B8C4`
+- **PROOF (played run)**: `scripts/confidence-proof.mjs` selected High, waited for the snapshot,
+  reloaded, verified the selection persisted, completed three level-2 Paired Associates blocks,
+  and read `Confidence: High...` on all three results and
+  `Paired Associates L2: High 100% (3 blocks)` in Menu History; `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 426 Vitest; `npm run ai:verify` — 1,000/1,000;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's persistence, summary, tests, proof and record.

@@ -86,7 +86,17 @@ export function loadSessionSnapshot(): SessionSnapshot | null {
       removeLocal(KEY);
       return null;
     }
-    return { ...parsed, motivation: parsed.motivation ?? null };
+    const state = parsed.state as SessionState;
+    const stored = state.confidenceByBlock;
+    const confidenceByBlock = state.config.blocks.map((_, index) => {
+      const value = Array.isArray(stored) ? stored[index] : null;
+      return value === "low" || value === "medium" || value === "high" ? value : null;
+    });
+    return {
+      ...parsed,
+      state: { ...state, confidenceByBlock },
+      motivation: parsed.motivation ?? null,
+    };
   } catch {
     removeLocal(KEY);
     return null;

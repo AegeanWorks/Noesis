@@ -70,6 +70,7 @@ record, the protocol or the pre-registered analysis plan.
 | `seed` | integer | Block RNG seed |
 | `stateHash` | 16-character string | Deterministic replay hash |
 | `difficulty` | `1`, `2`, `3` or absent | Block level; absent in pre-level records |
+| `confidence` | `"low"`, `"medium"`, `"high"` or absent | Optional pre-test confidence reflection; never a score |
 
 ### 4.1 N-back metrics
 
@@ -128,7 +129,7 @@ time minus the repeat mean reaction time; it can be negative and is 0 when eithe
 ## 7. Sessions CSV
 
 One row per block. Columns:
-`session_id, finished_at, seed, arm, mechanic, domain, difficulty, trials, duration_ms,
+`session_id, finished_at, seed, arm, mechanic, domain, difficulty, confidence, trials, duration_ms,
 accuracy, summary, state_hash, metrics_json, motivation_json`.
 
 - `metrics_json` is the full metric object as a JSON string.

@@ -97,6 +97,19 @@ describe("session", () => {
     }
   });
 
+  it("stores per-block confidence and attaches it to the completed result", () => {
+    const { config, actions } = buildScenario(5);
+    const started = applySessionAction(createSession(config), actions[0]!);
+    const withConfidence = applySessionAction(started, {
+      type: "confidence",
+      value: "high",
+    });
+    const state = applyAll(withConfidence, actions.slice(1));
+    expect(state.confidenceByBlock[0]).toBe("high");
+    expect(state.results[0]?.confidence).toBe("high");
+    expect(state.results[1]?.confidence).toBeUndefined();
+  });
+
   it("is deterministic from the same seed and action stream", () => {
     const first = buildScenario(456);
     const second = buildScenario(456);

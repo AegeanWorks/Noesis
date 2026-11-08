@@ -72,6 +72,8 @@ export interface MechanicResult {
   stateHash: string;
   /** Block level (1-3) recorded at session completion; absent in pre-v0.2 records. */
   difficulty?: number;
+  /** Optional pre-test confidence reflection for this block. */
+  confidence?: Confidence;
 }
 
 export interface NBackConfig {
@@ -520,6 +522,7 @@ export interface SessionState {
   blockIndex: number;
   current: MechanicState | null;
   results: MechanicResult[];
+  confidenceByBlock: (Confidence | null)[];
   tick: number;
   events: SessionEvent[];
   error: string | null;
@@ -530,6 +533,7 @@ export type SessionAction =
   | { type: "advance"; ms: number }
   | { type: "respond" }
   | { type: "answer"; option: number }
+  | { type: "confidence"; value: Confidence }
   | { type: "next" }
   | { type: "abort" };
 

@@ -310,8 +310,9 @@ These decisions are scope decisions, not evidence that the training modes are in
   limited methodological quality.
 - **Applied feature, not a mechanic:** an optional **Confidence check** on the pre-test briefing
   records Low/Medium/High for the block, and the result card repeats the choice with an explicit
-  note that it is a reflection, not scored and not a diagnostic calibration. The app does not
-  claim that this prompt is metacognitive training or that it improves memory. Recorded in
-  ADR-054.
+  note that it is a reflection, not scored and not a diagnostic calibration. The choice persists
+  in the session snapshot, is stored on the completed result, and feeds a same-mechanic,
+  same-level confidence-versus-accuracy summary in Menu History. The app does not claim that this
+  prompt is metacognitive training or that it improves memory. Recorded in ADR-054.
 
 These decisions are scope decisions, not evidence that the training modes are ineffective.
