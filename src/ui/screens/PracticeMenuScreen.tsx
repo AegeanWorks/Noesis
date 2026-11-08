@@ -127,16 +127,18 @@ function SwitchCostTrendLine({
   values,
   level,
   metricLabel = "switch cost",
+  zeroBaseline = true,
 }: {
   values: readonly number[];
   level: number;
   metricLabel?: string;
+  zeroBaseline?: boolean;
 }) {
   const width = 140;
   const height = 34;
   const pad = 4;
-  const min = Math.min(0, ...values);
-  const max = Math.max(0, ...values);
+  const min = zeroBaseline ? Math.min(0, ...values) : Math.min(...values);
+  const max = zeroBaseline ? Math.max(0, ...values) : Math.max(...values);
   const span = Math.max(1, max - min);
   const step = values.length === 1 ? 0 : (width - pad * 2) / (values.length - 1);
   const point = (value: number, index: number) => {
@@ -151,9 +153,11 @@ function SwitchCostTrendLine({
       className="switch-cost-series"
       viewBox={`0 0 ${width} ${height}`}
       role="img"
-      aria-label={`Level ${level} ${metricLabel} trend: ${values.join(" ms, ")} ms`}
+      aria-label={`Level ${level} ${metricLabel} trend: ${values.join(", ")}`}
     >
-      <line x1={pad} y1={zeroY} x2={width - pad} y2={zeroY} className="switch-cost-zero" />
+      {zeroBaseline ? (
+        <line x1={pad} y1={zeroY} x2={width - pad} y2={zeroY} className="switch-cost-zero" />
+      ) : null}
       {values.length === 1 ? (
         <circle cx={width / 2} cy={Number(points[0]?.split(",")[1] ?? height / 2)} r="3" />
       ) : (
@@ -270,6 +274,125 @@ function CostTrendCard({
   );
 }
 
+interface SpatialSpanLevel extends SwitchCostLevel {
+  longest: number;
+}
+
+function formatMeanSpan(value: number): string {
+  return value.toFixed(1);
+}
+
+function spatialSpanLevels(history: readonly SessionRecord[]): SpatialSpanLevel[] {
+  const longestByLevel = new Map<number, number>();
+  for (const record of history) {
+    for (const result of record.results) {
+      if (result.mechanic !== "spatial") continue;
+      const level = result.difficulty;
+      const maxSpan = result.metrics.max_span;
+      if (
+        typeof level === "number" &&
+        typeof maxSpan === "number" &&
+        Number.isFinite(maxSpan)
+      ) {
+        longestByLevel.set(level, Math.max(longestByLevel.get(level) ?? 0, maxSpan));
+      }
+    }
+  }
+  return costLevelsFor(history, "spatial", "mean_span").map((entry) => ({
+    ...entry,
+    delta: entry.delta === null ? null : Math.round(entry.delta * 10) / 10,
+    longest: longestByLevel.get(entry.level) ?? 0,
+  }));
+}
+
+function spanChange(entry: SpatialSpanLevel): { direction: string; copy: string } {
+  if (entry.previous === null) {
+    return { direction: "first", copy: "First block at this level" };
+  }
+  if (entry.delta === 0) {
+    return { direction: "same", copy: "No change vs previous block at this level" };
+  }
+  if (entry.delta !== null && entry.delta > 0) {
+    return {
+      direction: "improved",
+      copy: `Improved +${formatMeanSpan(entry.delta)} mean span vs previous block at this level`,
+    };
+  }
+  return {
+    direction: "worsened",
+    copy: `Worsened ${formatMeanSpan(entry.delta ?? 0)} mean span vs previous block at this level`,
+  };
+}
+
+function spatialSpanLine(entry: SpatialSpanLevel): string {
+  const change =
+    entry.previous === null
+      ? "first block at this level"
+      : entry.delta === 0
+        ? "no change vs previous block"
+        : entry.delta !== null && entry.delta > 0
+          ? `improved +${formatMeanSpan(entry.delta)} vs previous block`
+          : `worsened ${formatMeanSpan(entry.delta ?? 0)} vs previous block`;
+  return `Spatial span L${entry.level}: last mean ${formatMeanSpan(entry.last)} · longest ${Math.round(entry.longest)} · ${change}`;
+}
+
+function SpanTrendCard({ levels }: { levels: readonly SpatialSpanLevel[] }) {
+  return (
+    <section className="card switch-cost-card" data-testid="spatial-span-trend">
+      <div className="card-top">
+        <div>
+          <p className="eyebrow">Spatial Span</p>
+          <h2>Mean span by level</h2>
+        </div>
+      </div>
+      <p className="fine">
+        Mean span = average sequence length attempted in a block. Longest span = longest sequence
+        recalled correctly. Higher is better; compare blocks only within the same level.
+      </p>
+      <div className="switch-cost-levels">
+        {levels.map((entry) => {
+          const change = spanChange(entry);
+          return (
+            <div
+              className="switch-cost-level"
+              data-testid={`spatial-span-level-${entry.level}`}
+              key={entry.level}
+            >
+              <div className="switch-cost-head">
+                <span className="level-badge">Level {entry.level}</span>
+                <span className="fine">
+                  {entry.values.length} {entry.values.length === 1 ? "block" : "blocks"}
+                </span>
+              </div>
+              <SwitchCostTrendLine
+                values={entry.values}
+                level={entry.level}
+                metricLabel="mean span"
+                zeroBaseline={false}
+              />
+              <p className="switch-cost-stats">
+                Last mean <strong>{formatMeanSpan(entry.last)}</strong> · Longest{" "}
+                <strong>{Math.round(entry.longest)}</strong>
+              </p>
+              <p
+                className={`switch-cost-change switch-cost-change-${change.direction}`}
+                data-testid={`spatial-span-change-${entry.level}`}
+                data-direction={change.direction}
+              >
+                {change.copy}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+      <p className="fine">
+        A single block is a baseline, not a trend; these are descriptive practice values, not a
+        diagnosis.
+      </p>
+    </section>
+  );
+}
+
 function TestCard({
   mechanic,
   history,
@@ -295,6 +418,11 @@ function TestCard({
   const interferenceLine = interferenceLevel
     ? costLine(interferenceLevel, "Interference cost")
     : null;
+  const spanLevel =
+    mechanic === "spatial" && level !== null
+      ? (spatialSpanLevels(history).find((entry) => entry.level === level) ?? null)
+      : null;
+  const spanLine = spanLevel ? spatialSpanLine(spanLevel) : null;
 
   return (
     <article className="card menu-test-card" data-testid={`menu-test-${mechanic}`}>
@@ -344,6 +472,11 @@ function TestCard({
           {interferenceLine}
         </p>
       ) : null}
+      {spanLine ? (
+        <p className="fine menu-spatial-span" data-testid="menu-spatial-span">
+          {spanLine}
+        </p>
+      ) : null}
       <div className="hero-actions">
         <Button onClick={() => onStartTest(mechanic)} data-testid={`start-${mechanic}`}>
           Start {meta.name} test
@@ -368,6 +501,7 @@ function HistoryPanel({
       : Math.round((adherenceCounts.completed / adherenceCounts.started) * 100);
   const costLevels = switchCostLevels(history);
   const interferenceLevels = flankerCostLevels(history);
+  const spanLevels = spatialSpanLevels(history);
 
   return (
     <div
@@ -442,6 +576,8 @@ function HistoryPanel({
           levels={interferenceLevels}
         />
       ) : null}
+
+      {spanLevels.length > 0 ? <SpanTrendCard levels={spanLevels} /> : null}
 
       {history.length === 0 ? (
         <section className="card" data-testid="menu-history-empty">

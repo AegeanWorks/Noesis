@@ -90,6 +90,30 @@ function flankerRecord(
   };
 }
 
+function spatialRecord(
+  level: number,
+  spans: readonly (readonly [number, number])[],
+  id: string,
+  finishedAt: string,
+): SessionRecord {
+  return {
+    id,
+    finishedAt,
+    seed: 42,
+    results: spans.map(([meanSpan, longestSpan], index) => ({
+      mechanic: "spatial",
+      domain: "working_memory",
+      trials: 8,
+      durationMs: 70_000,
+      metrics: { accuracy: 1, mean_span: meanSpan, max_span: longestSpan },
+      summary: `Spatial Span: 100% accuracy, 8/8 correct, longest span ${longestSpan}.`,
+      seed: 42,
+      stateHash: `0123456789abcde${index}`,
+      difficulty: level,
+    })),
+  };
+}
+
 function renderMenu(overrides: Partial<ComponentProps<typeof PracticeMenuScreen>> = {}) {
   const props: ComponentProps<typeof PracticeMenuScreen> = {
     history: [],
@@ -283,6 +307,61 @@ describe("PracticeMenuScreen", () => {
     cleanup();
     renderMenu({ history: [record()] });
     expect(screen.queryByTestId("menu-flanker-cost")).toBeNull();
+  });
+
+  it("shows a level-aware Spatial Span mean and longest-span trend", () => {
+    renderMenu({
+      history: [
+        spatialRecord(3, [[6.0, 7], [6.5, 8]], "p3", "2026-11-03T10:00:00.000Z"),
+        spatialRecord(2, [[5.5, 7], [5.0, 7]], "p2", "2026-11-02T10:00:00.000Z"),
+        spatialRecord(1, [[4.0, 5]], "p1", "2026-11-01T10:00:00.000Z"),
+      ],
+      initialTab: "history",
+    });
+    const card = screen.getByTestId("spatial-span-trend");
+    expect(card.textContent).toMatch(/mean span/i);
+    expect(card.textContent).toMatch(/longest/i);
+    const rows = screen.getAllByTestId(/^spatial-span-level-/);
+    expect(rows.map((row) => row.getAttribute("data-testid"))).toEqual([
+      "spatial-span-level-3",
+      "spatial-span-level-2",
+      "spatial-span-level-1",
+    ]);
+    const level3 = screen.getByTestId("spatial-span-level-3");
+    expect(level3.textContent).toMatch(/Last mean 6.5/);
+    expect(level3.textContent).toMatch(/Longest 8/);
+    expect(level3.textContent).not.toMatch(/4\.0/);
+    expect(screen.getByTestId("spatial-span-level-2").textContent).toMatch(/Last mean 5\.0/);
+    expect(screen.getByTestId("spatial-span-level-1").textContent).toMatch(/Longest 5/);
+    expect(screen.getByTestId("spatial-span-change-3").textContent).toBe(
+      "Improved +0.5 mean span vs previous block at this level",
+    );
+    expect(screen.getByTestId("spatial-span-change-2").textContent).toBe(
+      "Worsened -0.5 mean span vs previous block at this level",
+    );
+    expect(screen.getByTestId("spatial-span-change-1").textContent).toBe(
+      "First block at this level",
+    );
+  });
+
+  it("shows the latest same-level spatial span on the Spatial Span card", () => {
+    renderMenu({
+      history: [
+        spatialRecord(2, [[5.5, 7], [5.0, 7]], "p2", "2026-11-08T10:00:00.000Z"),
+        spatialRecord(3, [[6.0, 7], [6.5, 8]], "p3", "2026-11-07T10:00:00.000Z"),
+      ],
+    });
+    expect(screen.getByTestId("menu-spatial-span").textContent).toBe(
+      "Spatial span L2: last mean 5.0 · longest 7 · worsened -0.5 vs previous block",
+    );
+  });
+
+  it("omits the Spatial Span trend when there are no Spatial Span blocks", () => {
+    renderMenu({ history: [record()], initialTab: "history" });
+    expect(screen.queryByTestId("spatial-span-trend")).toBeNull();
+    cleanup();
+    renderMenu({ history: [record()] });
+    expect(screen.queryByTestId("menu-spatial-span")).toBeNull();
   });
 
   it("switches between choosing a test and viewing history", () => {

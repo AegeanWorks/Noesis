@@ -1,0 +1,207 @@
+// Scripted Spatial Span history proof: seeds spans at levels 1-3, captures the Choose card
+// and Menu History, then plays a real level-2 Spatial Span focus session and verifies the
+// level-aware mean/longest-span trend updates from the new history.
+// Usage: node scripts/spatial-trend-proof.mjs <before|after> [shotDir]
+import { chromium } from "playwright-core";
+import { mkdir, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+
+const LABEL = process.argv[2] ?? "run";
+const OUT = process.argv[3] ?? join(tmpdir(), "noesis-spatial-trend");
+const EDGE =
+  process.env.EDGE_PATH ?? "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
+const URL = process.env.NOESIS_URL ?? "http://127.0.0.1:5196/";
+const FIXED_NOW = 1_793_723_107_000;
+
+const spatialRecord = (level, spans, id, finishedAt) => ({
+  id,
+  finishedAt,
+  seed: 42,
+  results: spans.map(([meanSpan, longestSpan], index) => ({
+    mechanic: "spatial",
+    domain: "working_memory",
+    trials: 8,
+    durationMs: 70_000,
+    metrics: { accuracy: 1, mean_span: meanSpan, max_span: longestSpan },
+    summary: `Spatial Span: 100% accuracy, 8/8 correct, longest span ${longestSpan}.`,
+    seed: 42,
+    stateHash: `0123456789abcde${index}`,
+    difficulty: level,
+  })),
+});
+
+const seededHistory = [
+  spatialRecord(3, [[6.0, 7], [6.5, 8]], "p3", "2026-11-08T10:00:00.000Z"),
+  spatialRecord(2, [[5.5, 7], [5.0, 7]], "p2", "2026-11-07T10:00:00.000Z"),
+  spatialRecord(1, [[4.0, 5]], "p1", "2026-11-06T10:00:00.000Z"),
+];
+
+await mkdir(OUT, { recursive: true });
+const browser = await chromium.launch({ executablePath: EDGE, headless: true });
+const context = await browser.newContext({
+  viewport: { width: 390, height: 844 },
+  deviceScaleFactor: 2,
+});
+await context.addInitScript(
+  ({ fixedNow, history }) => {
+    Date.now = () => fixedNow;
+    localStorage.setItem("noesis.history.v1", JSON.stringify(history));
+    localStorage.setItem(
+      "noesis.safety.v1",
+      JSON.stringify({
+        version: 1,
+        acknowledged: true,
+        photosensitive: false,
+        exerciseConcern: false,
+        consent: true,
+        updatedAt: new Date(fixedNow).toISOString(),
+      }),
+    );
+    localStorage.setItem(
+      "noesis.settings.v1",
+      JSON.stringify({
+        reducedMotion: true,
+        difficulty: 1,
+        sessionLength: "quick",
+        motivationMode: false,
+        largeText: false,
+        highContrast: false,
+        hideClock: false,
+        weeklyGoal: 3,
+      }),
+    );
+    localStorage.setItem(
+      "noesis.adaptive.v1",
+      JSON.stringify({
+        enabled: true,
+        levels: {
+          nback: 2,
+          gonogo: 2,
+          reasoning: 2,
+          speed: 2,
+          switching: 2,
+          flanker: 2,
+          spatial: 2,
+        },
+        log: [],
+      }),
+    );
+    localStorage.removeItem("noesis.session.v1");
+  },
+  { fixedNow: FIXED_NOW, history: seededHistory },
+);
+
+const page = await context.newPage();
+const consoleErrors = [];
+page.on("console", (msg) => {
+  if (msg.type() === "error") consoleErrors.push(msg.text());
+});
+page.on("pageerror", (error) => consoleErrors.push(error.message));
+
+const readChoose = () =>
+  page.evaluate(() => {
+    const line = document.querySelector('[data-testid="menu-spatial-span"]');
+    return line ? (line.textContent ?? "").replace(/\s+/g, " ").trim() : null;
+  });
+
+const readPanel = () =>
+  page.evaluate(() => {
+    const panel = document.querySelector('[data-testid="spatial-span-trend"]');
+    if (!panel) return null;
+    const rows = [...document.querySelectorAll('[data-testid^="spatial-span-level-"]')].map(
+      (row) => ({
+        testId: row.getAttribute("data-testid"),
+        text: (row.textContent ?? "").replace(/\s+/g, " ").trim(),
+        direction: row.querySelector('[data-testid^="spatial-span-change-"]')?.getAttribute(
+          "data-direction",
+        ),
+      }),
+    );
+    return { text: (panel.textContent ?? "").replace(/\s+/g, " ").trim(), rows };
+  });
+
+await page.goto(URL, { waitUntil: "domcontentloaded", timeout: 60_000 });
+await page.waitForSelector('[data-testid="start-session"]');
+await page.getByRole("button", { name: "Menu", exact: true }).click();
+await page.waitForSelector('[data-testid="menu-test-spatial"]');
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, `${LABEL}-00-choose-tests.png`), fullPage: true });
+const chooseSeeded = await readChoose();
+
+await page.getByRole("tab", { name: /history/i }).click();
+await page.waitForSelector('[data-testid="menu-history"]');
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, `${LABEL}-01-history-seeded.png`), fullPage: true });
+const seededPanel = await readPanel();
+
+// Play a real level-2 Spatial Span focus session from the Menu.
+await page.getByRole("tab", { name: /choose a test/i }).click();
+await page.getByTestId("start-spatial").click();
+await page.waitForSelector('[data-testid="test-briefing"]');
+await page.getByTestId("begin-test").click();
+await page.waitForSelector(".stage-spatial");
+for (let step = 0; step < 6000; step += 1) {
+  const state = await page.evaluate(() => {
+    const current = window.__NOESIS__.getState();
+    return current ? { phase: current.phase } : null;
+  });
+  if (!state) throw new Error("session disappeared");
+  if (state.phase === "complete") break;
+  if (state.phase === "block_complete") {
+    const next = await page.$('[data-testid="next-block"]');
+    if (next) await next.click();
+    await page.waitForTimeout(80);
+    continue;
+  }
+  if (state.phase !== "running") continue;
+  const answered = await page.evaluate(() => {
+    const current = window.__NOESIS__.getState()?.current;
+    if (!current || current.mechanic !== "spatial" || current.phase !== "recall") {
+      return false;
+    }
+    const trial = current.trials[current.index];
+    const cell = trial?.sequence[current.selected.length];
+    if (cell === undefined) return false;
+    window.__NOESIS__.dispatch({ type: "answer", option: cell });
+    return true;
+  });
+  await page.evaluate(() => window.__NOESIS__.dispatch({ type: "advance", ms: 800 }));
+  if (!answered) await page.waitForTimeout(5);
+}
+await page.waitForSelector("text=Your blocks, separately", { timeout: 15000 });
+const played = await page.evaluate(() => {
+  const state = window.__NOESIS__.getState();
+  return {
+    mechanics: state?.results.map((result) => result.mechanic) ?? [],
+    difficulties: state?.results.map((result) => result.difficulty ?? null) ?? [],
+    means: state?.results.map((result) => result.metrics.mean_span ?? null) ?? [],
+    longest: state?.results.map((result) => result.metrics.max_span ?? null) ?? [],
+  };
+});
+
+await page.getByRole("button", { name: "Menu", exact: true }).click();
+await page.getByRole("tab", { name: /history/i }).click();
+await page.waitForSelector('[data-testid="menu-history"]');
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, `${LABEL}-02-history-after-play.png`), fullPage: true });
+const playedPanel = await readPanel();
+await page.getByRole("tab", { name: /choose a test/i }).click();
+await page.waitForSelector('[data-testid="menu-test-spatial"]');
+await page.waitForTimeout(300);
+await page.screenshot({ path: join(OUT, `${LABEL}-03-choose-tests-after-play.png`), fullPage: true });
+const chooseAfter = await readChoose();
+
+const report = {
+  label: LABEL,
+  chooseSeeded,
+  seededPanel,
+  played,
+  chooseAfter,
+  playedPanel,
+  consoleErrors,
+  shots: OUT,
+};
+await writeFile(join(OUT, `${LABEL}-report.json`), `${JSON.stringify(report, null, 2)}\n`, "utf8");
+console.log(JSON.stringify(report, null, 2));
+await browser.close();

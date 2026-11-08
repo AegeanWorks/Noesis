@@ -1772,6 +1772,12 @@ html.high-contrast .speed-ring-active {
   font-variant-numeric: tabular-nums;
 }
 
+.menu-spatial-span {
+  margin-top: -4px;
+  color: var(--accent-2);
+  font-variant-numeric: tabular-nums;
+}
+
 
 .flanker-interference-note {
   margin: 4px 0 8px;

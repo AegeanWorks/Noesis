@@ -1121,3 +1121,45 @@ python aikit.py check noesis     6/6 gates passed
 - **GATES**: `npm run test:all` — 29 Python + 367 Vitest; `npm run ai:verify` — 700/700;
   `python aikit.py check noesis` — 6/6 gates passed.
 - **COMMIT**: this cycle's Spatial Span engine, UI, evidence table, tests, proof and record.
+
+## Cycle 22 — Level-aware Spatial Span mean/longest-span trend in Choose and History
+
+- **Area**: Spatial Span history readability, using the mean and longest span already reported
+  by the mechanic.
+- **FIND**: Spatial Span results appeared only as per-block summaries. The Choose card and
+  History panel had no aggregated span view, and averaging across levels would mix incomparable
+  blocks. Span also needs the opposite direction from cost: higher is better.
+- **IMPLEMENT**: Reused `costLevelsFor` for `mean_span` and added `spatialSpanLevels`, which also
+  tracks the longest correctly recalled span per level. `SpanTrendCard` shows one row per level
+  with a mean-span trend (`zeroBaseline={false}`), last mean, longest span and a same-level
+  improved/worsened/no-change/first label. The Choose card shows
+  `Spatial span L{level}: last mean N · longest N · improved/worsened/no change vs previous
+  block`. Three failing-first tests cover level ordering/values/change, the exact Choose line and
+  the no-Spatial empty case.
+- **PROOF (screenshots)**: seeded spans at levels 1-3, 390x844@2x:
+  - before Choose: `%TEMP%\opencode\noesis-spatial-trend-before\before-00-choose-tests.png`
+    SHA-256 `794118659DEEE9F602D9A62DF4389B57CB7117687487944C0D712F36354601E7`
+    (no span line)
+  - before History: `%TEMP%\opencode\noesis-spatial-trend-before\before-01-history-seeded.png`
+    SHA-256 `AC88850CCF1CC4AE753D7E80404A36F6ABCB9A1EDB16FF8DB43305AFAAA4B59F`
+    (no span card)
+  - after Choose: `%TEMP%\opencode\noesis-spatial-trend-after\after-00-choose-tests.png`
+    SHA-256 `4C35784B0ABA89B0476572F906F148B3F61D348A543EB7692D3CBD743CF9481A`
+    (`Spatial span L3: last mean 6.5 · longest 8 · improved +0.5 vs previous block`)
+  - after History: `%TEMP%\opencode\noesis-spatial-trend-after\after-01-history-seeded.png`
+    SHA-256 `635A46F61D527D5FC892B54C762B067A7181ABE49E17DA0F89E57B24F852DFA5`
+    (Level 3 improved +0.5, Level 2 worsened -0.5, Level 1 first block)
+- **PROOF (played run)**: `scripts/spatial-trend-proof.mjs` played a real level-2 Spatial Span
+  focus session: three blocks, mean span `[6.8, 6.8, 6.8]`, longest span `[8, 8, 8]`. Level 2
+  updated to 5 blocks with last mean 6.8 and longest 8, moved to the top as the most recently
+  practised level, and reported `No change vs previous block` because the preceding block also
+  averaged 6.8. Level 3 and Level 1 stayed unchanged. The Choose card then read
+  `Spatial span L2: last mean 6.8 · longest 8 · no change vs previous block`.
+  Screenshots: `after-02-history-after-play.png` SHA-256
+  `EB87006F0EDE4D49022537D1BC302898D2E4242FD3D232F3B9C7EA3EA1B2762E` and
+  `after-03-choose-tests-after-play.png` SHA-256
+  `EC2BD53B243CB5C5E240491152D178F3A2844431BB6E1F56A875DC2F9BECB1DD`;
+  `consoleErrors []`.
+- **GATES**: `npm run test:all` — 29 Python + 370 Vitest; `npm run ai:verify` — 700/700;
+  `python aikit.py check noesis` — 6/6 gates passed.
+- **COMMIT**: this cycle's span trend, tests, proof script and record.

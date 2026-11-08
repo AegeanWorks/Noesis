@@ -1,57 +1,16 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-spatial-span",
+    "task_id": "noesis-spatial-trend",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1794140378.7079883,
-    "owner": "opencode:spatial",
-    "started_by": "opencode:spatial",
-    "continuations": [],
-    "completed_at": 1794140391.6925476
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1794141114.240715,
+    "owner": "opencode:spatialtrend",
+    "started_by": "opencode:spatialtrend",
+    "continuations": []
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-flanker-mechanic",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/3] Plan: add an experimental Flanker focus test after verifying that no task-specific meta-analysis is eligible",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794135828.6206083,
-      "timestamp_str": "2026-11-08 14:03:48",
-      "agent": "opencode:flanker",
-      "impact_assessment": {
-        "why": "The literature matrix listed Flanker as a standard interference-control candidate; searches found no Flanker-specific training meta-analysis, but broader EF training evidence supports small near transfer",
-        "benefits": "A new measured interference-control task, focus-only and claim-bounded; 600 deterministic simulations",
-        "risks": "contract: sixth mechanic adds types/API/UI; default four-core lineup unchanged; dependency: none; concurrency: none; state: additive adaptive level",
-        "mitigation": "failing-first engine/UI tests, fixed-clock Menu/stage/results proof, explicit ADR/R64 evidence limit, full gates"
-      },
-      "plan_digest": "bb8e13b20ca4fb025b5fad843d55ce652e1d9b80e48bfa6104ff143d5fb42378"
-    },
-    {
-      "task_id": "noesis-flanker-mechanic",
-      "phase": "phase 3",
-      "phase_num": 3,
-      "description": "[2/3] Impl: deterministic arrows engine, interference metrics, UI stage, schema/sim/adaptive/results/AI integration, README/docs/ADR-046, proof script",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794135830.370507,
-      "timestamp_str": "2026-11-08 14:03:50",
-      "agent": "opencode:flanker"
-    },
-    {
-      "task_id": "noesis-flanker-mechanic",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: before Menu no card; after card + briefing + 3 level-2 blocks 20/20 each, interference -71/0/0, consoleErrors []; 29 Python + 350 Vitest, 600 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794135832.1077816,
-      "timestamp_str": "2026-11-08 14:03:52",
-      "agent": "opencode:flanker"
-    },
     {
       "task_id": "noesis-flanker-mechanic",
       "phase": "completed",
@@ -261,6 +220,46 @@
       "timestamp": 1794140391.6925495,
       "timestamp_str": "2026-11-08 15:19:51",
       "agent": "opencode:spatial"
+    },
+    {
+      "task_id": "noesis-spatial-trend",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add a level-aware Spatial Span mean/longest-span trend to Choose and Menu History",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794141112.735969,
+      "timestamp_str": "2026-11-08 15:31:52",
+      "agent": "opencode:spatialtrend",
+      "impact_assessment": {
+        "why": "Spatial Span had only per-block summaries; Choose and History lacked an aggregated span view, and span direction is opposite to cost (higher is better)",
+        "benefits": "Users see the Spatial Span outcome where they choose and review it, with same-level comparison and no level mixing",
+        "risks": "contract: Menu UI and proof only; engine/storage unchanged; dependency: none; concurrency: none; state: none",
+        "mitigation": "three failing-first tests (ordering/values/direction, exact Choose line, empty case), seeded before/after screenshots, real level-2 played run, full gates"
+      },
+      "plan_digest": "fa908a64e353d420e841c9b1652b558e33409160772a393188dabe885fcab70b"
+    },
+    {
+      "task_id": "noesis-spatial-trend",
+      "phase": "phase 3",
+      "phase_num": 3,
+      "description": "[2/2] Impl: spatialSpanLevels + SpanTrendCard; zeroBaseline trend option; Choose line; tests; spatial-trend-proof.mjs; record",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794141113.5093505,
+      "timestamp_str": "2026-11-08 15:31:53",
+      "agent": "opencode:spatialtrend"
+    },
+    {
+      "task_id": "noesis-spatial-trend",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Verified: seeded L3 6.5/8 improved+0.5, L2 5.0/7 worsened-0.5, L1 4.0/5 first; real level-2 run means 6.8/6.8/6.8 longest 8 updated L2 to 5 blocks no-change; consoleErrors []; 29 Python + 370 Vitest, 700 sims, 6/6 gates; checklists: passed",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1794141114.240715,
+      "timestamp_str": "2026-11-08 15:31:54",
+      "agent": "opencode:spatialtrend"
     }
   ]
 }
