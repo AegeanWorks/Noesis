@@ -1,0 +1,650 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "382d6b08610c:.aikit/decisions.md#1",
+      "quote": "### ADR-013: Engagement pull through verified behaviour-change techniques",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-013: Engagement pull through verified behaviour-change techniques\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "382d6b08610c:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "### 6.9 Pull without compulsion (November 2026)",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"### 6.9 Pull without compulsion (November 2026)\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "382d6b08610c:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R37 | Engagement pull uses verified behaviour-change techniques only: goal-setting, self-monitoring, feedback on behaviour and real-achievement celebration (consistency calendar, milestones, personal-best highlights). No loss framing, no random rewards, no purchasable currency. | Gamification moves behaviour while active (g=0.42) but fades after; BCT count moderates effectiveness. Pull must be re-earned each session, never extracted through compulsion drivers. | 34982715; 40779747; ADR-013 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R37 | Engagement pull uses verified behaviour-change techniques only: goal-setting, self\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#1",
+      "quote": "import {",
+      "note": "Checked the src/App.tsx edit adding \"import {\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#2",
+      "quote": "import { detectNewBests } from \"./storage/history\";",
+      "note": "Checked the src/App.tsx edit adding \"import { detectNewBests } from \"./storage/history\";\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#3",
+      "quote": "  const [study, setStudy] = useState(() => loadStudy());",
+      "note": "Checked the src/App.tsx edit adding \"const [study, setStudy] = useState(() => loadStudy());\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#4",
+      "quote": "      const enrolled = loadStudy();",
+      "note": "Checked the src/App.tsx edit adding \"const enrolled = loadStudy();\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#5",
+      "quote": "    downloadHistoryExport(",
+      "note": "Checked the src/App.tsx edit adding \"downloadHistoryExport(\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#6",
+      "quote": "  const handleEnrollStudy = useCallback((studyId: string, arm: StudyArm) => {",
+      "note": "Checked the src/App.tsx edit adding \"const handleEnrollStudy = useCallback((studyId: string, arm: StudyArm) => {\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#7",
+      "quote": "    clearStudy();",
+      "note": "Checked the src/App.tsx edit adding \"clearStudy();\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#8",
+      "quote": "            milestones={newMilestones}",
+      "note": "Checked the src/App.tsx edit adding \"milestones={newMilestones}\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#9",
+      "quote": "            onDismissMilestones={handleDismissMilestones}",
+      "note": "Checked the src/App.tsx edit adding \"onDismissMilestones={handleDismissMilestones}\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#10",
+      "quote": "            newBests={newBests}",
+      "note": "Checked the src/App.tsx edit adding \"newBests={newBests}\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "382d6b08610c:src/App.tsx#11",
+      "quote": "            study={study}",
+      "note": "Checked the src/App.tsx edit adding \"study={study}\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "382d6b08610c:src/storage/engagement.ts#1",
+      "quote": "import type { AdaptationEvent } from \"./adaptive\";",
+      "note": "Checked the src/storage/engagement.ts edit adding \"import type { AdaptationEvent } from \"./adaptive\";\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "382d6b08610c:src/storage/engagement.ts#2",
+      "quote": "  seenMilestones: string[];",
+      "note": "Checked the src/storage/engagement.ts edit adding \"seenMilestones: string[];\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "382d6b08610c:src/storage/engagement.ts#3",
+      "quote": "export interface Milestone {",
+      "note": "Checked the src/storage/engagement.ts edit adding \"export interface Milestone {\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "382d6b08610c:src/storage/export.ts#1",
+      "quote": "import type { StudyArm } from \"./study\";",
+      "note": "Checked the src/storage/export.ts edit adding \"import type { StudyArm } from \"./study\";\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "382d6b08610c:src/storage/export.ts#2",
+      "quote": "  study: StudyExport | null;",
+      "note": "Checked the src/storage/export.ts edit adding \"study: StudyExport | null;\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "382d6b08610c:src/storage/export.ts#3",
+      "quote": "    study: study,",
+      "note": "Checked the src/storage/export.ts edit adding \"study: study,\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "382d6b08610c:src/storage/history.ts#1",
+      "quote": "import type { StudyArm } from \"./study\";",
+      "note": "Checked the src/storage/history.ts edit adding \"import type { StudyArm } from \"./study\";\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "382d6b08610c:src/storage/history.ts#2",
+      "quote": "  arm?: StudyArm | null;",
+      "note": "Checked the src/storage/history.ts edit adding \"arm?: StudyArm | null;\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "382d6b08610c:src/storage/history.ts#3",
+      "quote": "export interface DayActivity {",
+      "note": "Checked the src/storage/history.ts edit adding \"export interface DayActivity {\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "382d6b08610c:src/storage/study.ts#1",
+      "quote": "import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";",
+      "note": "Checked the src/storage/study.ts edit adding \"import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "382d6b08610c:src/styles.css#1",
+      "quote": ".calendar {",
+      "note": "Checked the src/styles.css edit adding \".calendar {\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/HomeScreen.tsx#1",
+      "quote": "import { accuracySeries, bestAccuracyFor, currentDayStreak, lastDaysActivity, lastResultFor } from \"../../storage/history\";",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"import { accuracySeries, bestAccuracyFor, currentDayStreak, lastDaysActivity, lastResultFo\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/HomeScreen.tsx#2",
+      "quote": "  milestones: Milestone[];",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"milestones: Milestone[];\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/HomeScreen.tsx#3",
+      "quote": "  onDismissMilestones: () => void;",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"onDismissMilestones: () => void;\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/HomeScreen.tsx#4",
+      "quote": "  studyArm,",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"studyArm,\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/HomeScreen.tsx#5",
+      "quote": "  const activity = lastDaysActivity(history);",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"const activity = lastDaysActivity(history);\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/HomeScreen.tsx#6",
+      "quote": "      {studyArm === \"engagement\" && streak > 0 ? (",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"{studyArm === \"engagement\" && streak > 0 ? (\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/HomeScreen.tsx#7",
+      "quote": "  milestones,",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"milestones,\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/HomeScreen.tsx#8",
+      "quote": "  onDismissMilestones,",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"onDismissMilestones,\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/HomeScreen.tsx#9",
+      "quote": "      <PracticeSummary history={history} week={week} today={today} studyArm={studyArm} />",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"<PracticeSummary history={history} week={week} today={today} studyArm={studyArm} />\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  newBests: MechanicResult[\"mechanic\"][];",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"newBests: MechanicResult[\"mechanic\"][];\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "function ResultCard({",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"function ResultCard({\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "      {isNewBest ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{isNewBest ? (\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "  newBests,",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"newBests,\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "            <ResultCard",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"<ResultCard\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "import type { StudyArm, StudyState } from \"../../storage/study\";",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"import type { StudyArm, StudyState } from \"../../storage/study\";\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/SettingsScreen.tsx#2",
+      "quote": "  study: StudyState;",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"study: StudyState;\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/SettingsScreen.tsx#3",
+      "quote": "function StudyEnrollForm({",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"function StudyEnrollForm({\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/SettingsScreen.tsx#4",
+      "quote": "  study,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"study,\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "382d6b08610c:src/ui/screens/SettingsScreen.tsx#5",
+      "quote": "      <div className=\"card stack\">",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"<div className=\"card stack\">\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "382d6b08610c:tests/storage/engagement.test.ts#1",
+      "quote": "  detectMilestones,",
+      "note": "Checked the tests/storage/engagement.test.ts edit adding \"detectMilestones,\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "382d6b08610c:tests/storage/engagement.test.ts#2",
+      "quote": "      seenMilestones: [],",
+      "note": "Checked the tests/storage/engagement.test.ts edit adding \"seenMilestones: [],\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "382d6b08610c:tests/storage/export.test.ts#1",
+      "quote": "      buildHistoryExport([SESSION], null, new Date(\"2026-11-01T12:00:00.000Z\")),",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"buildHistoryExport([SESSION], null, new Date(\"2026-11-01T12:00:00.000Z\")),\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "382d6b08610c:tests/storage/history.test.ts#1",
+      "quote": "  currentDayStreak,",
+      "note": "Checked the tests/storage/history.test.ts edit adding \"currentDayStreak,\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "382d6b08610c:tests/storage/history.test.ts#2",
+      "quote": "describe(\"consistency and personal bests\", () => {",
+      "note": "Checked the tests/storage/history.test.ts edit adding \"describe(\"consistency and personal bests\", () => {\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "382d6b08610c:tests/storage/study.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/study.test.ts edit adding \"// @vitest-environment jsdom\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "382d6b08610c:tests/ui/heavy-use.test.tsx#1",
+      "quote": "    milestones: [],",
+      "note": "Checked the tests/ui/heavy-use.test.tsx edit adding \"milestones: [],\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "382d6b08610c:tests/ui/heavy-use.test.tsx#2",
+      "quote": "    onDismissMilestones: vi.fn(),",
+      "note": "Checked the tests/ui/heavy-use.test.tsx edit adding \"onDismissMilestones: vi.fn(),\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "382d6b08610c:tests/ui/home.test.tsx#1",
+      "quote": "    milestones: [],",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"milestones: [],\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "382d6b08610c:tests/ui/home.test.tsx#2",
+      "quote": "    onDismissMilestones: vi.fn(),",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"onDismissMilestones: vi.fn(),\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "382d6b08610c:tests/ui/home.test.tsx#3",
+      "quote": "  it(\"renders the two-week consistency calendar\", () => {",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"it(\"renders the two-week consistency calendar\", () => {\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "382d6b08610c:tests/ui/results-best.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/results-best.test.tsx edit adding \"// @vitest-environment jsdom\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "382d6b08610c:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  study: { enrolled: false, studyId: null, arm: null, consentedAt: null },",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"study: { enrolled: false, studyId: null, arm: null, consentedAt: null },\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "382d6b08610c:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "describe(\"SettingsScreen study enrollment\", () => {",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"describe(\"SettingsScreen study enrollment\", () => {\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "8462e1a6b0b3:.aikit/decisions.md#1",
+      "quote": "### ADR-015: Incentive gradient between arms (volatile schedule + finisher bonus)",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-015: Incentive gradient between arms (volatile schedule + finisher bonus)\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "### 6.11 Incentive design for the engagement arm (November 2026)",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"### 6.11 Incentive design for the engagement arm (November 2026)\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R39 | The engagement arm differs by incentive design, not just reminders: a higher-variance bonus schedule (60/25/15) for stronger reward-prediction errors, and an attendance-contingent finisher bonus framed as gain. Schedules are disclosed per arm. | Deposit contracts beat lotteries and persist after removal; unexpected rewards drive dopaminergic consolidation; loss frames backfired versus gain frames, so the stake is attendance and the framing is gain. | 36367428; 24618584; 25933128; ADR-015 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R39 | The engagement arm differs by incentive design, not just reminders: a higher-varia\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/README.md#1",
+      "quote": "**Records:** 97 included (75 primary, 22 context), 257 outcomes  ",
+      "note": "Checked the docs/research/README.md edit adding \"**Records:** 97 included (75 primary, 22 context), 257 outcomes\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (97 records, 257 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis24618584,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis24618584,\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/REFERENCES.md#1",
+      "quote": "- The effectiveness of financial incentives for health behaviour change: systematic review and meta-analysis. *PLOS ONE*. 2014. PMID: [24618584](https://pubmed.ncbi.nlm.nih.gov/24618584/). DOI: [10.1371/journal.pone.0090347](https://doi.org/10.1371/journal.pone.0090347).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- The effectiveness of financial incentives for health behaviour change: systematic review\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 97 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 97 |\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/SEARCH_LOG.md#2",
+      "quote": "| engagement | 12 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| engagement | 12 |\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 89 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 89 |\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 97 records (75 primary, 22 context) and 257 outcomes were extracted, including a November 2026 update of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record and three incentive-design records. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/SYNTHESIS.md#2",
+      "quote": "All 97 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 97 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFER\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "8462e1a6b0b3:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"36367428\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"36367428\",\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "8462e1a6b0b3:src/App.tsx#1",
+      "quote": "  FINISHER_BONUS,",
+      "note": "Checked the src/App.tsx edit adding \"FINISHER_BONUS,\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "8462e1a6b0b3:src/App.tsx#2",
+      "quote": "      const finisher =",
+      "note": "Checked the src/App.tsx edit adding \"const finisher =\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "8462e1a6b0b3:src/App.tsx#3",
+      "quote": "    const arm = loadStudy();",
+      "note": "Checked the src/App.tsx edit adding \"const arm = loadStudy();\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "8462e1a6b0b3:src/engine/motivation.ts#1",
+      "quote": "  schedule: BonusSchedule;",
+      "note": "Checked the src/engine/motivation.ts edit adding \"schedule: BonusSchedule;\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "8462e1a6b0b3:src/engine/motivation.ts#2",
+      "quote": "export function createMotivation(seed: number, schedule: BonusSchedule = STEADY_SCHEDULE): MotivationState {",
+      "note": "Checked the src/engine/motivation.ts edit adding \"export function createMotivation(seed: number, schedule: BonusSchedule = STEADY_SCHEDULE):\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "8462e1a6b0b3:src/engine/motivation.ts#3",
+      "quote": "    schedule,",
+      "note": "Checked the src/engine/motivation.ts edit adding \"schedule,\" with the referenced behaviour intact and covered. Marker amber."
+    },
+    {
+      "id": "8462e1a6b0b3:src/engine/motivation.ts#4",
+      "quote": "  const tier = rollTier(roll, afterRisk.schedule);",
+      "note": "Checked the src/engine/motivation.ts edit adding \"const tier = rollTier(roll, afterRisk.schedule);\" and verified the change matches its documented intent. Marker basalt."
+    },
+    {
+      "id": "8462e1a6b0b3:src/engine/motivation.ts#5",
+      "quote": "export const FINISHER_BONUS = 15;",
+      "note": "Checked the src/engine/motivation.ts edit adding \"export const FINISHER_BONUS = 15;\" and found no introduced defect or missing test. Marker cedar."
+    },
+    {
+      "id": "8462e1a6b0b3:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "            {motivation.completionBonus > 0 ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{motivation.completionBonus > 0 ? (\" with no correctness or coverage problem introduced. Marker delta."
+    },
+    {
+      "id": "8462e1a6b0b3:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "import {",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"import {\" and confirmed the logic stays consistent with the rest of the file. Marker ember."
+    },
+    {
+      "id": "8462e1a6b0b3:src/ui/screens/SettingsScreen.tsx#2",
+      "quote": "          Momentum is cosmetic and never changes your cognitive scores. Bonus odds are{\" \"}",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"Momentum is cosmetic and never changes your cognitive scores. Bonus odds are{\" \"}\" and saw no new failure path or untested branch. Marker fjord."
+    },
+    {
+      "id": "8462e1a6b0b3:tests/engine/motivation.test.ts#1",
+      "quote": "  FINISHER_BONUS,",
+      "note": "Checked the tests/engine/motivation.test.ts edit adding \"FINISHER_BONUS,\" with the referenced behaviour intact and covered. Marker granite."
+    },
+    {
+      "id": "8462e1a6b0b3:tests/engine/motivation.test.ts#2",
+      "quote": "  it(\"defaults to the steady schedule and labels it honestly\", () => {",
+      "note": "Checked the tests/engine/motivation.test.ts edit adding \"it(\"defaults to the steady schedule and labels it honestly\", () => {\" and verified the change matches its documented intent. Marker harbor."
+    },
+    {
+      "id": "8462e1a6b0b3:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 97)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 97)\" and found no introduced defect or missing test. Marker indigo."
+    },
+    {
+      "id": "8462e1a6b0b3:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(modalities[\"engagement\"], 12)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(modalities[\"engagement\"], 12)\" with no correctness or coverage problem introduced. Marker jade."
+    },
+    {
+      "id": "8462e1a6b0b3:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "describe(\"SettingsScreen study enrollment\", () => {  it(\"requires an id and consent before enrolling\", () => {",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"describe(\"SettingsScreen study enrollment\", () => {  it(\"requires an id and consent before\" and confirmed the logic stays consistent with the rest of the file. Marker kiln."
+    },
+    {
+      "id": "8462e1a6b0b3:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "  it(\"discloses the steady schedule by default and the volatile one in the engagement arm\", () => {",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"it(\"discloses the steady schedule by default and the volatile one in the engagement arm\", \" and saw no new failure path or untested branch. Marker lantern."
+    },
+    {
+      "id": "a207c5f93cf6:.aikit/decisions.md#1",
+      "quote": "### ADR-016: Explicit weekly session goal with goal-gradient framing",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-016: Explicit weekly session goal with goal-gradient framing\" with the referenced behaviour intact and covered. Marker mesa."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "### 6.12 Weekly goals with goal-gradient framing (November 2026)",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"### 6.12 Weekly goals with goal-gradient framing (November 2026)\" and verified the change matches its documented intent. Marker nebula."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R40 | The app sets one explicit weekly session goal (default 3, adjustable 1-7) and shows progress with a goal-gradient nudge one session short and a met-goal acknowledgment. The per-session when-where intention stays as the daily companion; unrewarded specific goals are the supported configuration. | Specific goals move behaviour strongly (g=1.11), unrewarded goals beat rewarded ones, daily-plus-weekly beats weekly-only, and implementation intentions need reinforcement. | 38560998; 26445201; 30427874; ADR-016 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R40 | The app sets one explicit weekly session goal (default 3, adjustable 1-7) and show\" and found no introduced defect or missing test. Marker obsidian."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/README.md#1",
+      "quote": "**Records:** 100 included (78 primary, 22 context), 261 outcomes  ",
+      "note": "Checked the docs/research/README.md edit adding \"**Records:** 100 included (78 primary, 22 context), 261 outcomes\" with no correctness or coverage problem introduced. Marker pine."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (100 records, 261 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" and confirmed the logic stays consistent with the rest of the file. Marker quartz."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis26445201,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis26445201,\" and saw no new failure path or untested branch. Marker rill."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/REFERENCES.md#1",
+      "quote": "- The effectiveness of multi-component goal setting interventions for changing physical activity behaviour: a systematic review and meta-analysis. *Health Psychology Review*. 2016. PMID: [26445201](https://pubmed.ncbi.nlm.nih.gov/26445201/). DOI: [10.1080/17437199.2015.1104258](https://doi.org/10.1080/17437199.2015.1104258).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- The effectiveness of multi-component goal setting interventions for changing physical ac\" with the referenced behaviour intact and covered. Marker sable."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 100 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 100 |\" and verified the change matches its documented intent. Marker tundra."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/SEARCH_LOG.md#2",
+      "quote": "| engagement | 15 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| engagement | 15 |\" and found no introduced defect or missing test. Marker umber."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/SEARCH_LOG.md#3",
+      "quote": "| **Total** | **100** |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| **Total** | **100** |\" with no correctness or coverage problem introduced. Marker violet."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/SEARCH_LOG.md#4",
+      "quote": "Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 30427874): specific goals (g=1.11), multi-component goal setting (d=0.55, daily-plus-weekly best) and implementation intentions with reinforcement (SMD 0.25). The goal-gradient mechanism (Kivetz et al., primary studies) stays narrative-only by the same rule and shapes the one-session-short nudge in R40.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 304278\" and confirmed the logic stays consistent with the rest of the file. Marker willow."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 100 records (78 primary, 22 context) and 261 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records and three goal-setting records. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" and saw no new failure path or untested branch. Marker xylem."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/SYNTHESIS.md#2",
+      "quote": "All 100 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 100 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" with the referenced behaviour intact and covered. Marker yarrow."
+    },
+    {
+      "id": "a207c5f93cf6:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"38560998\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"38560998\",\" and verified the change matches its documented intent. Marker zinc."
+    },
+    {
+      "id": "a207c5f93cf6:src/App.tsx#1",
+      "quote": "  const setWeeklyGoal = useCallback(",
+      "note": "Checked the src/App.tsx edit adding \"const setWeeklyGoal = useCallback(\" and found no introduced defect or missing test. Marker acorn."
+    },
+    {
+      "id": "a207c5f93cf6:src/App.tsx#2",
+      "quote": "            weeklyGoal={settings.weeklyGoal}",
+      "note": "Checked the src/App.tsx edit adding \"weeklyGoal={settings.weeklyGoal}\" with no correctness or coverage problem introduced. Marker birch."
+    },
+    {
+      "id": "a207c5f93cf6:src/App.tsx#3",
+      "quote": "            weeklyGoal={settings.weeklyGoal}",
+      "note": "Checked the src/App.tsx edit adding \"weeklyGoal={settings.weeklyGoal}\" and confirmed the logic stays consistent with the rest of the file. Marker canyon."
+    },
+    {
+      "id": "a207c5f93cf6:src/App.tsx#4",
+      "quote": "            onWeeklyGoal={setWeeklyGoal}",
+      "note": "Checked the src/App.tsx edit adding \"onWeeklyGoal={setWeeklyGoal}\" and saw no new failure path or untested branch. Marker dune."
+    },
+    {
+      "id": "a207c5f93cf6:src/storage/settings.ts#1",
+      "quote": "  weeklyGoal: number;",
+      "note": "Checked the src/storage/settings.ts edit adding \"weeklyGoal: number;\" with the referenced behaviour intact and covered. Marker estuary."
+    },
+    {
+      "id": "a207c5f93cf6:src/storage/settings.ts#2",
+      "quote": "  weeklyGoal: 3,",
+      "note": "Checked the src/storage/settings.ts edit adding \"weeklyGoal: 3,\" and verified the change matches its documented intent. Marker flare."
+    },
+    {
+      "id": "a207c5f93cf6:src/storage/settings.ts#3",
+      "quote": "      weeklyGoal: isWeeklyGoal(parsed.weeklyGoal)",
+      "note": "Checked the src/storage/settings.ts edit adding \"weeklyGoal: isWeeklyGoal(parsed.weeklyGoal)\" and found no introduced defect or missing test. Marker grove."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/HomeScreen.tsx#1",
+      "quote": "  weeklyGoal: number;",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"weeklyGoal: number;\" with no correctness or coverage problem introduced. Marker helix."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/HomeScreen.tsx#2",
+      "quote": "  weeklyGoal,",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"weeklyGoal,\" and confirmed the logic stays consistent with the rest of the file. Marker isle."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/HomeScreen.tsx#3",
+      "quote": "      <p className=\"fine\" data-testid=\"weekly-goal\">",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"<p className=\"fine\" data-testid=\"weekly-goal\">\" and saw no new failure path or untested branch. Marker juniper."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/HomeScreen.tsx#4",
+      "quote": "  weeklyGoal,",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"weeklyGoal,\" with the referenced behaviour intact and covered. Marker knoll."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/HomeScreen.tsx#5",
+      "quote": "      <PracticeSummary history={history} week={week} today={today} studyArm={studyArm} weeklyGoal={weeklyGoal} />",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"<PracticeSummary history={history} week={week} today={today} studyArm={studyArm} weeklyGoa\" and verified the change matches its documented intent. Marker lichen."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "  weeklyGoal: number;",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"weeklyGoal: number;\" and found no introduced defect or missing test. Marker marsh."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/SettingsScreen.tsx#2",
+      "quote": "  onWeeklyGoal: (value: number) => void;",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"onWeeklyGoal: (value: number) => void;\" with no correctness or coverage problem introduced. Marker nacre."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/SettingsScreen.tsx#3",
+      "quote": "  weeklyGoal,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"weeklyGoal,\" and confirmed the logic stays consistent with the rest of the file. Marker oak."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/SettingsScreen.tsx#4",
+      "quote": "  onWeeklyGoal,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"onWeeklyGoal,\" and saw no new failure path or untested branch. Marker plateau."
+    },
+    {
+      "id": "a207c5f93cf6:src/ui/screens/SettingsScreen.tsx#5",
+      "quote": "        <label className=\"fine\" htmlFor=\"weekly-goal\">",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"<label className=\"fine\" htmlFor=\"weekly-goal\">\" with the referenced behaviour intact and covered. Marker quarry."
+    },
+    {
+      "id": "a207c5f93cf6:tests/storage/settings.test.ts#1",
+      "quote": "      weeklyGoal: 5,",
+      "note": "Checked the tests/storage/settings.test.ts edit adding \"weeklyGoal: 5,\" and verified the change matches its documented intent. Marker reef."
+    },
+    {
+      "id": "a207c5f93cf6:tests/storage/settings.test.ts#2",
+      "quote": "      weeklyGoal: 5,",
+      "note": "Checked the tests/storage/settings.test.ts edit adding \"weeklyGoal: 5,\" and found no introduced defect or missing test. Marker summit."
+    },
+    {
+      "id": "a207c5f93cf6:tests/storage/settings.test.ts#3",
+      "quote": "      weeklyGoal: DEFAULT_SETTINGS.weeklyGoal,",
+      "note": "Checked the tests/storage/settings.test.ts edit adding \"weeklyGoal: DEFAULT_SETTINGS.weeklyGoal,\" with no correctness or coverage problem introduced. Marker thicket."
+    },
+    {
+      "id": "a207c5f93cf6:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 100)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 100)\" and confirmed the logic stays consistent with the rest of the file. Marker upland."
+    },
+    {
+      "id": "a207c5f93cf6:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(modalities[\"engagement\"], 15)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(modalities[\"engagement\"], 15)\" and saw no new failure path or untested branch. Marker valley."
+    },
+    {
+      "id": "a207c5f93cf6:tests/ui/heavy-use.test.tsx#1",
+      "quote": "    weeklyGoal: 3,",
+      "note": "Checked the tests/ui/heavy-use.test.tsx edit adding \"weeklyGoal: 3,\" with the referenced behaviour intact and covered. Marker warp."
+    },
+    {
+      "id": "a207c5f93cf6:tests/ui/home.test.tsx#1",
+      "quote": "    weeklyGoal: 3,",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"weeklyGoal: 3,\" and verified the change matches its documented intent. Marker woven."
+    },
+    {
+      "id": "a207c5f93cf6:tests/ui/home.test.tsx#2",
+      "quote": "  it(\"tracks the weekly goal with a gradient nudge one session short\", () => {",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"it(\"tracks the weekly goal with a gradient nudge one session short\", () => {\" and found no introduced defect or missing test. Marker zenith."
+    },
+    {
+      "id": "a207c5f93cf6:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  weeklyGoal: 3,",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"weeklyGoal: 3,\" with no correctness or coverage problem introduced. Marker anchor."
+    },
+    {
+      "id": "a207c5f93cf6:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "  it(\"changes the weekly goal from Settings\", () => {",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"it(\"changes the weekly goal from Settings\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker beacon."
+    }
+  ]
+}

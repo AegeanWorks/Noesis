@@ -180,7 +180,37 @@ export function SettingsScreen({
       <p className="eyebrow">Settings</p>
       <h1>Local control</h1>
 
-      <div className="card stack">
+      <nav className="settings-jump" aria-label="Jump to a settings section">
+        <span className="settings-jump-label">Jump to</span>
+        {[
+          ["display", "Display"],
+          ["session", "Session"],
+          ["adaptive", "Adaptive"],
+          ["study", "Study"],
+          ["research", "Research"],
+          ["ai", "AI mode"],
+          ["symptoms", "Symptoms"],
+          ["data", "Your data"],
+        ].map(([id, label]) => (
+          <button
+            type="button"
+            className="settings-jump-chip"
+            aria-label={`Jump to ${label}`}
+            onClick={() => {
+              const reduced = document.documentElement.classList.contains("reduced-motion");
+              document
+                .getElementById(`settings-${id}`)
+                ?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+              window.history.replaceState(null, "", `#settings-${id}`);
+            }}
+            key={id}
+          >
+            {label}
+          </button>
+        ))}
+      </nav>
+
+      <div className="card stack" id="settings-display">
         <h2>Display</h2>
         <label className="check">
           <input
@@ -221,7 +251,7 @@ export function SettingsScreen({
         </p>
       </div>
 
-      <div className="card stack">
+      <div className="card stack" id="settings-session">
         <h2>Session defaults</h2>
         <p className="fine">
           The one-click start uses these choices. Harder is not automatically better; choose the
@@ -325,7 +355,7 @@ export function SettingsScreen({
         ) : null}
       </div>
 
-      <div className="card stack">
+      <div className="card stack" id="settings-adaptive">
         <h2>Adaptive difficulty</h2>
         <label className="check">
           <input
@@ -352,7 +382,7 @@ export function SettingsScreen({
         ) : null}
       </div>
 
-      <div className="card stack">
+      <div className="card stack" id="settings-study">
         <h2>Research study</h2>
         {study.enrolled && study.studyId && study.arm ? (
           <>
@@ -371,9 +401,11 @@ export function SettingsScreen({
         )}
       </div>
 
-      <ResearchDataPanel {...research} />
+      <div id="settings-research">
+        <ResearchDataPanel {...research} />
+      </div>
 
-      <div className="card stack">
+      <div className="card stack" id="settings-ai">
         <h2>AI test mode</h2>
         <p>
           Every mechanic is a deterministic state machine. Open the app with{" "}
@@ -392,7 +424,7 @@ export function SettingsScreen({
         </p>
       </div>
 
-      <div className="card stack">
+      <div className="card stack" id="settings-symptoms">
         <h2>Symptom reports</h2>
         <p className="fine">
           {adverseEvents.length === 0
@@ -421,7 +453,7 @@ export function SettingsScreen({
         </div>
       </div>
 
-      <div className="card stack">
+      <div className="card stack" id="settings-data">
         <h2>Your data</h2>
         <p className="fine">
           {historyCount === 0

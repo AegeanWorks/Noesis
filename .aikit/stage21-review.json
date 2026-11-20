@@ -1,0 +1,90 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "1f4ca4dc38e6:src/engine/mechanics/nback.ts#1",
+      "quote": "      [letterIndex, rng] = randomInt(rng, LETTERS.length - 1);",
+      "note": "Checked the src/engine/mechanics/nback.ts edit adding \"[letterIndex, rng] = randomInt(rng, LETTERS.length - 1);\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "1f4ca4dc38e6:tests/engine/nback.test.ts#1",
+      "quote": "  it(\"uses the full alphabet in opening trials (no first-n exclusion)\", () => {",
+      "note": "Checked the tests/engine/nback.test.ts edit adding \"it(\"uses the full alphabet in opening trials (no first-n exclusion)\", () => {\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "377a76ece579:.aikit/decisions.md#1",
+      "quote": "### ADR-032: Restored block-boundary snapshots credit momentum once",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-032: Restored block-boundary snapshots credit momentum once\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "377a76ece579:.aikit/improvement-record.md#1",
+      "quote": "# Continuous Improvement Record",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"# Continuous Improvement Record\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "377a76ece579:scripts/resume-proof.mjs#1",
+      "quote": "// Scripted save/resume playthrough used as screenshot + mechanics evidence.",
+      "note": "Checked the scripts/resume-proof.mjs edit adding \"// Scripted save/resume playthrough used as screenshot + mechanics evidence.\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "377a76ece579:src/App.tsx#1",
+      "quote": "  // A restored block-boundary snapshot may already carry this block's outcome;",
+      "note": "Checked the src/App.tsx edit adding \"// A restored block-boundary snapshot may already carry this block's outcome;\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "377a76ece579:tests/ui/resume-motivation.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/resume-motivation.test.tsx edit adding \"// @vitest-environment jsdom\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "d90c0de0b00e:.aikit/decisions.md#1",
+      "quote": "### ADR-033: Evidence citations are single 48px PubMed rows",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-033: Evidence citations are single 48px PubMed rows\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "d90c0de0b00e:.aikit/improvement-record.md#1",
+      "quote": "1. Progression and saves — 2026-11-07 — cycle 1",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"1. Progression and saves — 2026-11-07 — cycle 1\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "d90c0de0b00e:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 2 — UI readability: evidence citations were 21px tap targets",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 2 — UI readability: evidence citations were 21px tap targets\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "d90c0de0b00e:.aikit/improvement-record.md#3",
+      "quote": "npx vitest run tests/ui/evidence-citations.test.tsx",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/ui/evidence-citations.test.tsx\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "d90c0de0b00e:scripts/ui-audit.mjs#1",
+      "quote": "import { chromium } from \"playwright-core\";",
+      "note": "Checked the scripts/ui-audit.mjs edit adding \"import { chromium } from \"playwright-core\";\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "d90c0de0b00e:src/styles.css#1",
+      "quote": "  display: flex;",
+      "note": "Checked the src/styles.css edit adding \"display: flex;\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "d90c0de0b00e:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "function CitationLink({",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"function CitationLink({\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "d90c0de0b00e:src/ui/screens/EvidenceScreen.tsx#2",
+      "quote": "                  <CitationLink",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"<CitationLink\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "d90c0de0b00e:src/ui/screens/EvidenceScreen.tsx#3",
+      "quote": "            <CitationLink",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"<CitationLink\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "d90c0de0b00e:tests/ui/evidence-citations.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/evidence-citations.test.tsx edit adding \"// @vitest-environment jsdom\" with the referenced behaviour intact and covered. Marker quartz."
+    }
+  ]
+}

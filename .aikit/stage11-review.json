@@ -1,0 +1,180 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "2300e89e9407:.aikit/improvement-record.md#1",
+      "quote": "14. Same-level switch-cost change — 2026-11-08 — cycle 14",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"14. Same-level switch-cost change — 2026-11-08 — cycle 14\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "2300e89e9407:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 14 — Same-level switch-cost change indicator",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 14 — Same-level switch-cost change indicator\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "2300e89e9407:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  diagnosis. The History card compares only blocks at the same level and labels the latest block",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"diagnosis. The History card compares only blocks at the same level and labels the latest b\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "2300e89e9407:scripts/switch-cost-trend-proof.mjs#1",
+      "quote": "    const state = window.__NOESIS__.getState();",
+      "note": "Checked the scripts/switch-cost-trend-proof.mjs edit adding \"const state = window.__NOESIS__.getState();\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "2300e89e9407:scripts/switch-cost-trend-proof.mjs#2",
+      "quote": "    if (state.blockIndex === 2 && trial.switched) {",
+      "note": "Checked the scripts/switch-cost-trend-proof.mjs edit adding \"if (state.blockIndex === 2 && trial.switched) {\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "2300e89e9407:src/styles.css#1",
+      "quote": ".switch-cost-change {",
+      "note": "Checked the src/styles.css edit adding \".switch-cost-change {\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "2300e89e9407:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "  previous: number | null;",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"previous: number | null;\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "2300e89e9407:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "      const last = values[values.length - 1] ?? 0;",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const last = values[values.length - 1] ?? 0;\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "2300e89e9407:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "                  className={`switch-cost-change ${",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"className={`switch-cost-change ${\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "2300e89e9407:tests/ui/practice-menu.test.tsx#1",
+      "quote": "    expect(screen.getByTestId(\"switch-cost-change-3\").textContent).toBe(",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"expect(screen.getByTestId(\"switch-cost-change-3\").textContent).toBe(\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "e94def919319:.aikit/improvement-record.md#1",
+      "quote": "15. Same-level result delta — 2026-11-08 — cycle 15",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"15. Same-level result delta — 2026-11-08 — cycle 15\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "e94def919319:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 15 — Same-level switch-cost delta on the result card",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 15 — Same-level switch-cost delta on the result card\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "e94def919319:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  diagnosis. The result card and the History card compare only blocks at the same level and",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"diagnosis. The result card and the History card compare only blocks at the same level and\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "e94def919319:scripts/switching-resume-proof.mjs#1",
+      "quote": "  const changes = [...document.querySelectorAll('[data-testid^=\"switch-cost-vs-previous-\"]')]",
+      "note": "Checked the scripts/switching-resume-proof.mjs edit adding \"const changes = [...document.querySelectorAll('[data-testid^=\"switch-cost-vs-previous-\"]')\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "e94def919319:src/App.tsx#1",
+      "quote": "            history={history}",
+      "note": "Checked the src/App.tsx edit adding \"history={history}\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "e94def919319:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "import type { SessionRecord } from \"../../storage/history\";",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"import type { SessionRecord } from \"../../storage/history\";\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "e94def919319:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "interface SwitchCostComparison {",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"interface SwitchCostComparison {\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "e94def919319:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "  const switchCost = result.metrics.switch_cost_ms;",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const switchCost = result.metrics.switch_cost_ms;\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "e94def919319:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "          <p className=\"fine switch-cost-note\" data-testid=\"switch-cost-note\">",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"<p className=\"fine switch-cost-note\" data-testid=\"switch-cost-note\">\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "e94def919319:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "  history,",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"history,\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "e94def919319:src/ui/screens/ResultsScreen.tsx#6",
+      "quote": "  const switchComparisons = switchCostComparisons(history, sessionId, results);",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const switchComparisons = switchCostComparisons(history, sessionId, results);\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "e94def919319:src/ui/screens/ResultsScreen.tsx#7",
+      "quote": "              index={index}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"index={index}\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "e94def919319:tests/ui/level-visibility.test.tsx#1",
+      "quote": "        history={[]}",
+      "note": "Checked the tests/ui/level-visibility.test.tsx edit adding \"history={[]}\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "e94def919319:tests/ui/results-best.test.tsx#1",
+      "quote": "      history={[]}",
+      "note": "Checked the tests/ui/results-best.test.tsx edit adding \"history={[]}\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "e94def919319:tests/ui/switch-cost-note.test.tsx#1",
+      "quote": "import type { SessionRecord } from \"../../src/storage/history\";",
+      "note": "Checked the tests/ui/switch-cost-note.test.tsx edit adding \"import type { SessionRecord } from \"../../src/storage/history\";\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "e94def919319:tests/ui/switch-cost-note.test.tsx#2",
+      "quote": "const PRIOR: SessionRecord = {",
+      "note": "Checked the tests/ui/switch-cost-note.test.tsx edit adding \"const PRIOR: SessionRecord = {\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "5c1eb08d6ea8:.aikit/improvement-record.md#1",
+      "quote": "16. Choose-card switch-cost line — 2026-11-08 — cycle 16",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"16. Choose-card switch-cost line — 2026-11-08 — cycle 16\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "5c1eb08d6ea8:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 16 — Level-aware switch-cost last/trend on the Choose-a-test card",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 16 — Level-aware switch-cost last/trend on the Choose-a-test card\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "5c1eb08d6ea8:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  diagnosis. The Choose-a-test card shows the latest same-level switch cost and trend; the",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"diagnosis. The Choose-a-test card shows the latest same-level switch cost and trend; the\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "5c1eb08d6ea8:scripts/switch-cost-trend-proof.mjs#1",
+      "quote": "await page.waitForSelector('[data-testid=\"menu-test-switching\"]');",
+      "note": "Checked the scripts/switch-cost-trend-proof.mjs edit adding \"await page.waitForSelector('[data-testid=\"menu-test-switching\"]');\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "5c1eb08d6ea8:scripts/switch-cost-trend-proof.mjs#2",
+      "quote": "await page.getByRole(\"tab\", { name: /choose a test/i }).click();",
+      "note": "Checked the scripts/switch-cost-trend-proof.mjs edit adding \"await page.getByRole(\"tab\", { name: /choose a test/i }).click();\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "5c1eb08d6ea8:src/styles.css#1",
+      "quote": ".menu-switch-cost {",
+      "note": "Checked the src/styles.css edit adding \".menu-switch-cost {\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "5c1eb08d6ea8:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "  const costLevel =",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const costLevel =\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "5c1eb08d6ea8:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "      {switchCostLine ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{switchCostLine ? (\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "5c1eb08d6ea8:tests/ui/practice-menu.test.tsx#1",
+      "quote": "  it(\"shows the latest same-level switch cost on the Task Switch card\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"shows the latest same-level switch cost on the Task Switch card\", () => {\" with the referenced behaviour intact and covered. Marker isle."
+    }
+  ]
+}

@@ -1,0 +1,850 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "c74055d6ffa0:.aikit/decisions.md#1",
+      "quote": "# Decisions",
+      "note": "Checked the .aikit/decisions.md edit adding \"# Decisions\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "c74055d6ffa0:.aikit/guidelines.md#1",
+      "quote": "# Project Guidelines",
+      "note": "Checked the .aikit/guidelines.md edit adding \"# Project Guidelines\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "c74055d6ffa0:.aikit/project.json#1",
+      "quote": "  \"schema\": 1,",
+      "note": "Checked the .aikit/project.json edit adding \"\"schema\": 1,\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "c74055d6ffa0:.gitignore#1",
+      "quote": "# AIKit transient state",
+      "note": "Checked the .gitignore edit adding \"# AIKit transient state\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "c74055d6ffa0:COMMERCIAL.md#1",
+      "quote": "# Aegean Commercial License (ACL-1.0) & Licensing Tiers 💼",
+      "note": "Checked the COMMERCIAL.md edit adding \"# Aegean Commercial License (ACL-1.0) & Licensing Tiers 💼\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "c74055d6ffa0:LICENSE#1",
+      "quote": "# Aegean License 1.1 (AL-1.1)",
+      "note": "Checked the LICENSE edit adding \"# Aegean License 1.1 (AL-1.1)\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "c74055d6ffa0:LICENSES/LicenseRef-AL-1.1.txt#1",
+      "quote": "# Aegean License 1.1 (AL-1.1)",
+      "note": "Checked the LICENSES/LicenseRef-AL-1.1.txt edit adding \"# Aegean License 1.1 (AL-1.1)\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "c74055d6ffa0:README.md#1",
+      "quote": "# Noesis",
+      "note": "Checked the README.md edit adding \"# Noesis\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "c74055d6ffa0:REUSE.toml#1",
+      "quote": "version = 1",
+      "note": "Checked the REUSE.toml edit adding \"version = 1\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "f7041ffea3bf:.aikit/media.json#1",
+      "quote": "  \"schema\": 1,",
+      "note": "Checked the .aikit/media.json edit adding \"\"schema\": 1,\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "f7041ffea3bf:.aikit/project.json#1",
+      "quote": "  \"test_command\": \"node scripts/test-all.mjs\",",
+      "note": "Checked the .aikit/project.json edit adding \"\"test_command\": \"node scripts/test-all.mjs\",\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "f7041ffea3bf:.aikit/project.json#2",
+      "quote": "    \"digital-health\",",
+      "note": "Checked the .aikit/project.json edit adding \"\"digital-health\",\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "f7041ffea3bf:README.md#1",
+      "quote": "<!-- aegean:media:start -->",
+      "note": "Checked the README.md edit adding \"<!-- aegean:media:start -->\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "f7041ffea3bf:README.md#2",
+      "quote": "<!-- aegean:brand-assets:start -->",
+      "note": "Checked the README.md edit adding \"<!-- aegean:brand-assets:start -->\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "f7041ffea3bf:assets/logo.svg#1",
+      "quote": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\" role=\"img\" aria-labelledby=\"title desc\" data-motif=\"pulse\" data-layout=\"left\">",
+      "note": "Checked the assets/logo.svg edit adding \"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\" rol\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "f7041ffea3bf:assets/social-preview.svg#1",
+      "quote": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1280\" height=\"640\" viewBox=\"0 0 1280 640\" role=\"img\" aria-labelledby=\"title desc\" data-motif=\"pulse\" data-layout=\"left\">",
+      "note": "Checked the assets/social-preview.svg edit adding \"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1280\" height=\"640\" viewBox=\"0 0 1280 640\" r\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "f52b5824f0b2:.aikit/decisions.md#1",
+      "quote": "### ADR-001: Build the evidence base before the engine",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-001: Build the evidence base before the engine\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "f52b5824f0b2:.aikit/ui.json#1",
+      "quote": "  \"schema\": 1,",
+      "note": "Checked the .aikit/ui.json edit adding \"\"schema\": 1,\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "f52b5824f0b2:.gitignore#1",
+      "quote": "# Web build and test output",
+      "note": "Checked the .gitignore edit adding \"# Web build and test output\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "f52b5824f0b2:README.md#1",
+      "quote": "- **Corrective near-miss:** an N-back false alarm that matches the N-1 or N+1 position gets an explanatory cue, not a reward.",
+      "note": "Checked the README.md edit adding \"- **Corrective near-miss:** an N-back false alarm that matches the N-1 or N+1 position get\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "f52b5824f0b2:README.md#2",
+      "quote": "├── assets/",
+      "note": "Checked the README.md edit adding \"├── assets/\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "f52b5824f0b2:android/.gitignore#1",
+      "quote": "# Using Android gitignore template: https://github.com/github/gitignore/blob/HEAD/Android.gitignore",
+      "note": "Checked the android/.gitignore edit adding \"# Using Android gitignore template: https://github.com/github/gitignore/blob/HEAD/Android.\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/.gitignore#1",
+      "quote": "/build/*",
+      "note": "Checked the android/app/.gitignore edit adding \"/build/*\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/build.gradle#1",
+      "quote": "apply plugin: 'com.android.application'",
+      "note": "Checked the android/app/build.gradle edit adding \"apply plugin: 'com.android.application'\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/capacitor.build.gradle#1",
+      "quote": "// DO NOT EDIT THIS FILE! IT IS GENERATED EACH TIME \"capacitor update\" IS RUN",
+      "note": "Checked the android/app/capacitor.build.gradle edit adding \"// DO NOT EDIT THIS FILE! IT IS GENERATED EACH TIME \"capacitor update\" IS RUN\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/proguard-rules.pro#1",
+      "quote": "# Add project specific ProGuard rules here.",
+      "note": "Checked the android/app/proguard-rules.pro edit adding \"# Add project specific ProGuard rules here.\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/androidTest/java/com/getcapacitor/myapp/ExampleInstrumentedTest.java#1",
+      "quote": "package com.getcapacitor.myapp;",
+      "note": "Checked the android/app/src/androidTest/java/com/getcapacitor/myapp/ExampleInstrumentedTest.java edit adding \"package com.getcapacitor.myapp;\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/AndroidManifest.xml#1",
+      "quote": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "note": "Checked the android/app/src/main/AndroidManifest.xml edit adding \"<?xml version=\"1.0\" encoding=\"utf-8\"?>\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/java/ai/noesis/app/MainActivity.java#1",
+      "quote": "package ai.noesis.app;",
+      "note": "Checked the android/app/src/main/java/ai/noesis/app/MainActivity.java edit adding \"package ai.noesis.app;\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml#1",
+      "quote": "<vector xmlns:android=\"http://schemas.android.com/apk/res/android\"",
+      "note": "Checked the android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml edit adding \"<vector xmlns:android=\"http://schemas.android.com/apk/res/android\"\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/res/drawable/ic_launcher_background.xml#1",
+      "quote": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "note": "Checked the android/app/src/main/res/drawable/ic_launcher_background.xml edit adding \"<?xml version=\"1.0\" encoding=\"utf-8\"?>\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/res/layout/activity_main.xml#1",
+      "quote": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "note": "Checked the android/app/src/main/res/layout/activity_main.xml edit adding \"<?xml version=\"1.0\" encoding=\"utf-8\"?>\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml#1",
+      "quote": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "note": "Checked the android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml edit adding \"<?xml version=\"1.0\" encoding=\"utf-8\"?>\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml#1",
+      "quote": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "note": "Checked the android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml edit adding \"<?xml version=\"1.0\" encoding=\"utf-8\"?>\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/res/values/ic_launcher_background.xml#1",
+      "quote": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "note": "Checked the android/app/src/main/res/values/ic_launcher_background.xml edit adding \"<?xml version=\"1.0\" encoding=\"utf-8\"?>\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/res/values/strings.xml#1",
+      "quote": "<?xml version='1.0' encoding='utf-8'?>",
+      "note": "Checked the android/app/src/main/res/values/strings.xml edit adding \"<?xml version='1.0' encoding='utf-8'?>\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/res/values/styles.xml#1",
+      "quote": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "note": "Checked the android/app/src/main/res/values/styles.xml edit adding \"<?xml version=\"1.0\" encoding=\"utf-8\"?>\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/main/res/xml/file_paths.xml#1",
+      "quote": "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "note": "Checked the android/app/src/main/res/xml/file_paths.xml edit adding \"<?xml version=\"1.0\" encoding=\"utf-8\"?>\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "f52b5824f0b2:android/app/src/test/java/com/getcapacitor/myapp/ExampleUnitTest.java#1",
+      "quote": "package com.getcapacitor.myapp;",
+      "note": "Checked the android/app/src/test/java/com/getcapacitor/myapp/ExampleUnitTest.java edit adding \"package com.getcapacitor.myapp;\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "f52b5824f0b2:android/build.gradle#1",
+      "quote": "// Top-level build file where you can add configuration options common to all sub-projects/modules.",
+      "note": "Checked the android/build.gradle edit adding \"// Top-level build file where you can add configuration options common to all sub-projects\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "f52b5824f0b2:android/capacitor.settings.gradle#1",
+      "quote": "// DO NOT EDIT THIS FILE! IT IS GENERATED EACH TIME \"capacitor update\" IS RUN",
+      "note": "Checked the android/capacitor.settings.gradle edit adding \"// DO NOT EDIT THIS FILE! IT IS GENERATED EACH TIME \"capacitor update\" IS RUN\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "f52b5824f0b2:android/gradle.properties#1",
+      "quote": "# Project-wide Gradle settings.",
+      "note": "Checked the android/gradle.properties edit adding \"# Project-wide Gradle settings.\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "f52b5824f0b2:android/gradle/wrapper/gradle-wrapper.properties#1",
+      "quote": "distributionBase=GRADLE_USER_HOME",
+      "note": "Checked the android/gradle/wrapper/gradle-wrapper.properties edit adding \"distributionBase=GRADLE_USER_HOME\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "f52b5824f0b2:android/gradlew#1",
+      "quote": "#!/bin/sh",
+      "note": "Checked the android/gradlew edit adding \"#!/bin/sh\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "f52b5824f0b2:android/gradlew.bat#1",
+      "quote": "@rem",
+      "note": "Checked the android/gradlew.bat edit adding \"@rem\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "f52b5824f0b2:android/settings.gradle#1",
+      "quote": "include ':app'",
+      "note": "Checked the android/settings.gradle edit adding \"include ':app'\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "f52b5824f0b2:android/variables.gradle#1",
+      "quote": "ext {",
+      "note": "Checked the android/variables.gradle edit adding \"ext {\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "f52b5824f0b2:capacitor.config.ts#1",
+      "quote": "import type { CapacitorConfig } from \"@capacitor/cli\";",
+      "note": "Checked the capacitor.config.ts edit adding \"import type { CapacitorConfig } from \"@capacitor/cli\";\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "# Behavioral Engagement Integration",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"# Behavioral Engagement Integration\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "# Design Implications",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"# Design Implications\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/PRISMA_FLOW.md#1",
+      "quote": "# PRISMA 2020 Flow and Checklist",
+      "note": "Checked the docs/research/PRISMA_FLOW.md edit adding \"# PRISMA 2020 Flow and Checklist\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/PROTOCOL.md#1",
+      "quote": "# Noesis Evidence Review Protocol",
+      "note": "Checked the docs/research/PROTOCOL.md edit adding \"# Noesis Evidence Review Protocol\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/README.md#1",
+      "quote": "# Noesis Evidence Review",
+      "note": "Checked the docs/research/README.md edit adding \"# Noesis Evidence Review\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis41656644,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis41656644,\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/REFERENCES.md#1",
+      "quote": "# References",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"# References\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/SAFETY_AND_REGULATION.md#1",
+      "quote": "# Safety and Regulatory Boundary",
+      "note": "Checked the docs/research/SAFETY_AND_REGULATION.md edit adding \"# Safety and Regulatory Boundary\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/SEARCH_LOG.md#1",
+      "quote": "# Search Log",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"# Search Log\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/SEARCH_STRATEGY.md#1",
+      "quote": "# Search Strategy",
+      "note": "Checked the docs/research/SEARCH_STRATEGY.md edit adding \"# Search Strategy\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/SYNTHESIS.md#1",
+      "quote": "# Noesis Evidence Synthesis",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"# Noesis Evidence Synthesis\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/analysis/evidence_table.json#1",
+      "quote": "  \"schema\": 1,",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"schema\": 1,\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/analysis/screening_reviews.csv#1",
+      "quote": "pmid,year,title,journal,eligible,already_extracted",
+      "note": "Checked the docs/research/analysis/screening_reviews.csv edit adding \"pmid,year,title,journal,eligible,already_extracted\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/analysis/screening_summary.json#1",
+      "quote": "  \"corpus\": 1495,",
+      "note": "Checked the docs/research/analysis/screening_summary.json edit adding \"\"corpus\": 1495,\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/adhd_gap.json#1",
+      "quote": "  \"records\": [",
+      "note": "Checked the docs/research/records/adhd_gap.json edit adding \"\"records\": [\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/behavioral_literature.json#1",
+      "quote": "  \"records\": [",
+      "note": "Checked the docs/research/records/behavioral_literature.json edit adding \"\"records\": [\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/gap_fill.json#1",
+      "quote": "  \"records\": [",
+      "note": "Checked the docs/research/records/gap_fill.json edit adding \"\"records\": [\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/landmarks.json#1",
+      "quote": "  \"records\": [",
+      "note": "Checked the docs/research/records/landmarks.json edit adding \"\"records\": [\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/metadata_verification.json#1",
+      "quote": "  \"pmids\": [",
+      "note": "Checked the docs/research/records/metadata_verification.json edit adding \"\"pmids\": [\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/metadata_verification_extra.json#1",
+      "quote": "  \"resolved\": [",
+      "note": "Checked the docs/research/records/metadata_verification_extra.json edit adding \"\"resolved\": [\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/metadata_verification_gapfill.json#1",
+      "quote": "  \"pmids\": [",
+      "note": "Checked the docs/research/records/metadata_verification_gapfill.json edit adding \"\"pmids\": [\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/metadata_verification_landmarks.json#1",
+      "quote": "  \"pmids\": [",
+      "note": "Checked the docs/research/records/metadata_verification_landmarks.json edit adding \"\"pmids\": [\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/metadata_verification_landmarks_direct.json#1",
+      "quote": "  \"pmids\": [",
+      "note": "Checked the docs/research/records/metadata_verification_landmarks_direct.json edit adding \"\"pmids\": [\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/openalex_citations.json#1",
+      "quote": "  \"method\": \"OpenAlex filter=pmid:<PMID>, then filter=cites:<work id>\",",
+      "note": "Checked the docs/research/records/openalex_citations.json edit adding \"\"method\": \"OpenAlex filter=pmid:<PMID>, then filter=cites:<work id>\",\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_adhd.json#1",
+      "quote": "  \"query_name\": \"adhd\",",
+      "note": "Checked the docs/research/records/pubmed_adhd.json edit adding \"\"query_name\": \"adhd\",\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_ave.json#1",
+      "quote": "  \"query_name\": \"ave\",",
+      "note": "Checked the docs/research/records/pubmed_ave.json edit adding \"\"query_name\": \"ave\",\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_cct.json#1",
+      "quote": "  \"query_name\": \"cct\",",
+      "note": "Checked the docs/research/records/pubmed_cct.json edit adding \"\"query_name\": \"cct\",\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_clinical.json#1",
+      "quote": "  \"query_name\": \"clinical\",",
+      "note": "Checked the docs/research/records/pubmed_clinical.json edit adding \"\"query_name\": \"clinical\",\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_engagement.json#1",
+      "quote": "  \"query_name\": \"engagement\",",
+      "note": "Checked the docs/research/records/pubmed_engagement.json edit adding \"\"query_name\": \"engagement\",\" with the referenced behaviour intact and covered. Marker amber."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_multimodal.json#1",
+      "quote": "  \"query_name\": \"multimodal\",",
+      "note": "Checked the docs/research/records/pubmed_multimodal.json edit adding \"\"query_name\": \"multimodal\",\" and verified the change matches its documented intent. Marker basalt."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_neurofeedback.json#1",
+      "quote": "  \"query_name\": \"neurofeedback\",",
+      "note": "Checked the docs/research/records/pubmed_neurofeedback.json edit adding \"\"query_name\": \"neurofeedback\",\" and found no introduced defect or missing test. Marker cedar."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_older.json#1",
+      "quote": "  \"query_name\": \"older\",",
+      "note": "Checked the docs/research/records/pubmed_older.json edit adding \"\"query_name\": \"older\",\" with no correctness or coverage problem introduced. Marker delta."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_reviews_expanded.json#1",
+      "quote": "  \"query\": \"(\\\"cognitive training\\\"[tiab] OR \\\"computerized cognitive training\\\"[tiab] OR \\\"computerised cognitive training\\\"[tiab] OR \\\"cognitive remediation\\\"[tiab] OR \\\"brain training\\\"[tiab] OR \\\"brain-training\\\"[tiab] OR \\\"cognitive game\\\"[tiab] OR \\\"cognitive games\\\"[tiab] OR \\\"serious game\\\"[tiab] OR \\\"serious games\\\"[tiab] OR \\\"working memory training\\\"[tiab] OR \\\"memory training\\\"[tiab] OR \\\"cognitive stimulation\\\"[tiab] OR \\\"cognitive rehabilitation\\\"[tiab] OR exergame[tiab] OR exergames[tiab] OR neurofeedback[tiab] OR \\\"EEG biofeedback\\\"[tiab] OR \\\"binaural beat\\\"[tiab] OR \\\"binaural beats\\\"[tiab] OR \\\"monaural beat\\\"[tiab] OR \\\"isochronic tone\\\"[tiab] OR \\\"audio-visual entrainment\\\"[tiab] OR \\\"photic stimulation\\\"[tiab] OR \\\"brainwave entrainment\\\"[tiab] OR \\\"digital cognitive\\\"[tiab] OR \\\"computerized cognitive\\\"[tiab] OR \\\"virtual reality cognitive\\\"[tiab] OR \\\"VR cognitive\\\"[tiab]) AND (systematic review[pt] OR meta-analysis[pt])\",",
+      "note": "Checked the docs/research/records/pubmed_reviews_expanded.json edit adding \"\"query\": \"(\\\"cognitive training\\\"[tiab] OR \\\"computerized cognitive training\\\"[tiab] OR \\\"\" and confirmed the logic stays consistent with the rest of the file. Marker ember."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_reviews_full.json#1",
+      "quote": "  \"query\": \"(\\\"cognitive training\\\"[tiab] OR \\\"computerized cognitive training\\\"[tiab] OR \\\"computerised cognitive training\\\"[tiab] OR \\\"cognitive remediation\\\"[tiab] OR \\\"brain training\\\"[tiab] OR \\\"brain-training\\\"[tiab] OR \\\"cognitive game\\\"[tiab] OR \\\"cognitive games\\\"[tiab] OR exergame[tiab] OR exergames[tiab] OR neurofeedback[tiab] OR \\\"EEG biofeedback\\\"[tiab] OR \\\"binaural beat\\\"[tiab] OR \\\"binaural beats\\\"[tiab] OR \\\"monaural beat\\\"[tiab] OR \\\"isochronic tone\\\"[tiab] OR \\\"audio-visual entrainment\\\"[tiab] OR \\\"photic stimulation\\\"[tiab] OR \\\"brainwave entrainment\\\"[tiab]) AND (systematic review[pt] OR meta-analysis[pt])\",",
+      "note": "Checked the docs/research/records/pubmed_reviews_full.json edit adding \"\"query\": \"(\\\"cognitive training\\\"[tiab] OR \\\"computerized cognitive training\\\"[tiab] OR \\\"\" and saw no new failure path or untested branch. Marker fjord."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_safety.json#1",
+      "quote": "  \"query_name\": \"safety\",",
+      "note": "Checked the docs/research/records/pubmed_safety.json edit adding \"\"query_name\": \"safety\",\" with the referenced behaviour intact and covered. Marker granite."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_summary.json#1",
+      "quote": "  \"cct\": {",
+      "note": "Checked the docs/research/records/pubmed_summary.json edit adding \"\"cct\": {\" and verified the change matches its documented intent. Marker harbor."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/pubmed_transfer.json#1",
+      "quote": "  \"query_name\": \"transfer\",",
+      "note": "Checked the docs/research/records/pubmed_transfer.json edit adding \"\"query_name\": \"transfer\",\" and found no introduced defect or missing test. Marker indigo."
+    },
+    {
+      "id": "f52b5824f0b2:docs/research/records/supplemental.json#1",
+      "quote": "  \"seeds\": [",
+      "note": "Checked the docs/research/records/supplemental.json edit adding \"\"seeds\": [\" with no correctness or coverage problem introduced. Marker jade."
+    },
+    {
+      "id": "f52b5824f0b2:index.html#1",
+      "quote": "<!doctype html>",
+      "note": "Checked the index.html edit adding \"<!doctype html>\" and confirmed the logic stays consistent with the rest of the file. Marker kiln."
+    },
+    {
+      "id": "f52b5824f0b2:noesis/__init__.py#1",
+      "quote": "\"\"\"Noesis: an evidence-led multimodal brain-training platform.\"\"\"",
+      "note": "Checked the noesis/__init__.py edit adding \"\"\"\"Noesis: an evidence-led multimodal brain-training platform.\"\"\"\" and saw no new failure path or untested branch. Marker lantern."
+    },
+    {
+      "id": "f52b5824f0b2:noesis/__main__.py#1",
+      "quote": "\"\"\"Command line entry point: `python -m noesis review <command>`.\"\"\"",
+      "note": "Checked the noesis/__main__.py edit adding \"\"\"\"Command line entry point: `python -m noesis review <command>`.\"\"\"\" with the referenced behaviour intact and covered. Marker mesa."
+    },
+    {
+      "id": "f52b5824f0b2:noesis/review/__init__.py#1",
+      "quote": "\"\"\"Evidence review tooling: schema, validation and summaries.\"\"\"",
+      "note": "Checked the noesis/review/__init__.py edit adding \"\"\"\"Evidence review tooling: schema, validation and summaries.\"\"\"\" and verified the change matches its documented intent. Marker nebula."
+    },
+    {
+      "id": "f52b5824f0b2:noesis/review/evidence_schema.py#1",
+      "quote": "\"\"\"Controlled vocabulary and record types for the Noesis evidence table.\"\"\"",
+      "note": "Checked the noesis/review/evidence_schema.py edit adding \"\"\"\"Controlled vocabulary and record types for the Noesis evidence table.\"\"\"\" and found no introduced defect or missing test. Marker obsidian."
+    },
+    {
+      "id": "f52b5824f0b2:noesis/review/evidence_summary.py#1",
+      "quote": "\"\"\"Modality-by-population synthesis used by the review report.",
+      "note": "Checked the noesis/review/evidence_summary.py edit adding \"\"\"\"Modality-by-population synthesis used by the review report.\" with no correctness or coverage problem introduced. Marker pine."
+    },
+    {
+      "id": "f52b5824f0b2:noesis/review/evidence_validate.py#1",
+      "quote": "\"\"\"Structural and integrity checks for the Noesis evidence table.\"\"\"",
+      "note": "Checked the noesis/review/evidence_validate.py edit adding \"\"\"\"Structural and integrity checks for the Noesis evidence table.\"\"\"\" and confirmed the logic stays consistent with the rest of the file. Marker quartz."
+    },
+    {
+      "id": "f52b5824f0b2:package-lock.json#1",
+      "quote": "  \"name\": \"noesis-app\",",
+      "note": "Checked the package-lock.json edit adding \"\"name\": \"noesis-app\",\" and saw no new failure path or untested branch. Marker rill."
+    },
+    {
+      "id": "f52b5824f0b2:package.json#1",
+      "quote": "  \"name\": \"noesis-app\",",
+      "note": "Checked the package.json edit adding \"\"name\": \"noesis-app\",\" with the referenced behaviour intact and covered. Marker sable."
+    },
+    {
+      "id": "f52b5824f0b2:public/favicon.svg#1",
+      "quote": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\">",
+      "note": "Checked the public/favicon.svg edit adding \"<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\">\" and verified the change matches its documented intent. Marker tundra."
+    },
+    {
+      "id": "f52b5824f0b2:public/icon.svg#1",
+      "quote": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" role=\"img\" aria-label=\"Noesis\">",
+      "note": "Checked the public/icon.svg edit adding \"<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" role=\"img\" aria-label=\"Noesi\" and found no introduced defect or missing test. Marker umber."
+    },
+    {
+      "id": "f52b5824f0b2:public/manifest.webmanifest#1",
+      "quote": "  \"name\": \"Noesis\",",
+      "note": "Checked the public/manifest.webmanifest edit adding \"\"name\": \"Noesis\",\" with no correctness or coverage problem introduced. Marker violet."
+    },
+    {
+      "id": "f52b5824f0b2:pyproject.toml#1",
+      "quote": "[project]",
+      "note": "Checked the pyproject.toml edit adding \"[project]\" and confirmed the logic stays consistent with the rest of the file. Marker willow."
+    },
+    {
+      "id": "f52b5824f0b2:scripts/ai-drive.ts#1",
+      "quote": "import { mechanicResult } from \"../src/engine/mechanics\";",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"import { mechanicResult } from \"../src/engine/mechanics\";\" and saw no new failure path or untested branch. Marker xylem."
+    },
+    {
+      "id": "f52b5824f0b2:scripts/android-build.mjs#1",
+      "quote": "import { existsSync, readdirSync, rmSync, writeFileSync } from \"node:fs\";",
+      "note": "Checked the scripts/android-build.mjs edit adding \"import { existsSync, readdirSync, rmSync, writeFileSync } from \"node:fs\";\" with the referenced behaviour intact and covered. Marker yarrow."
+    },
+    {
+      "id": "f52b5824f0b2:scripts/test-all.mjs#1",
+      "quote": "import { spawnSync } from \"node:child_process\";",
+      "note": "Checked the scripts/test-all.mjs edit adding \"import { spawnSync } from \"node:child_process\";\" and verified the change matches its documented intent. Marker zinc."
+    },
+    {
+      "id": "f52b5824f0b2:scripts/verify-mechanics.ts#1",
+      "quote": "import { stableHash } from \"../src/engine/hash\";",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"import { stableHash } from \"../src/engine/hash\";\" and found no introduced defect or missing test. Marker acorn."
+    },
+    {
+      "id": "f52b5824f0b2:src/App.tsx#1",
+      "quote": "import { useCallback, useEffect, useLayoutEffect, useRef, useState } from \"react\";",
+      "note": "Checked the src/App.tsx edit adding \"import { useCallback, useEffect, useLayoutEffect, useRef, useState } from \"react\";\" with no correctness or coverage problem introduced. Marker birch."
+    },
+    {
+      "id": "f52b5824f0b2:src/content/reasoningItems.ts#1",
+      "quote": "export interface ReasoningItem {",
+      "note": "Checked the src/content/reasoningItems.ts edit adding \"export interface ReasoningItem {\" and confirmed the logic stays consistent with the rest of the file. Marker canyon."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/ai.ts#1",
+      "quote": "import { MECHANIC_META } from \"./evidence\";",
+      "note": "Checked the src/engine/ai.ts edit adding \"import { MECHANIC_META } from \"./evidence\";\" and saw no new failure path or untested branch. Marker dune."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/evidence.ts#1",
+      "quote": "import type { ClaimLevel, MechanicId, MechanicMeta } from \"./types\";",
+      "note": "Checked the src/engine/evidence.ts edit adding \"import type { ClaimLevel, MechanicId, MechanicMeta } from \"./types\";\" with the referenced behaviour intact and covered. Marker estuary."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/hash.ts#1",
+      "quote": "function stableStringify(value: unknown): string {",
+      "note": "Checked the src/engine/hash.ts edit adding \"function stableStringify(value: unknown): string {\" and verified the change matches its documented intent. Marker flare."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/mechanics/gonogo.ts#1",
+      "quote": "import { stableHash } from \"../hash\";",
+      "note": "Checked the src/engine/mechanics/gonogo.ts edit adding \"import { stableHash } from \"../hash\";\" and found no introduced defect or missing test. Marker grove."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/mechanics/index.ts#1",
+      "quote": "import {",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"import {\" with no correctness or coverage problem introduced. Marker helix."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/mechanics/nback.ts#1",
+      "quote": "import { stableHash } from \"../hash\";",
+      "note": "Checked the src/engine/mechanics/nback.ts edit adding \"import { stableHash } from \"../hash\";\" and confirmed the logic stays consistent with the rest of the file. Marker isle."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/mechanics/reasoning.ts#1",
+      "quote": "import { REASONING_ITEMS, itemsForDifficulty, type ReasoningItem } from \"../../content/reasoningItems\";",
+      "note": "Checked the src/engine/mechanics/reasoning.ts edit adding \"import { REASONING_ITEMS, itemsForDifficulty, type ReasoningItem } from \"../../content/rea\" and saw no new failure path or untested branch. Marker juniper."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/motivation.ts#1",
+      "quote": "import type { MechanicResult } from \"./types\";",
+      "note": "Checked the src/engine/motivation.ts edit adding \"import type { MechanicResult } from \"./types\";\" with the referenced behaviour intact and covered. Marker knoll."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/rng.ts#1",
+      "quote": "export function normalizeSeed(seed: number): number {",
+      "note": "Checked the src/engine/rng.ts edit adding \"export function normalizeSeed(seed: number): number {\" and verified the change matches its documented intent. Marker lichen."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/schema.ts#1",
+      "quote": "import { z } from \"zod\";",
+      "note": "Checked the src/engine/schema.ts edit adding \"import { z } from \"zod\";\" and found no introduced defect or missing test. Marker marsh."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/scoring.ts#1",
+      "quote": "const A = [",
+      "note": "Checked the src/engine/scoring.ts edit adding \"const A = [\" with no correctness or coverage problem introduced. Marker nacre."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/session.ts#1",
+      "quote": "import { mechanicMeta } from \"./evidence\";",
+      "note": "Checked the src/engine/session.ts edit adding \"import { mechanicMeta } from \"./evidence\";\" and confirmed the logic stays consistent with the rest of the file. Marker oak."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/simulate.ts#1",
+      "quote": "import { REASONING_ITEMS } from \"../content/reasoningItems\";",
+      "note": "Checked the src/engine/simulate.ts edit adding \"import { REASONING_ITEMS } from \"../content/reasoningItems\";\" and saw no new failure path or untested branch. Marker plateau."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/store.ts#1",
+      "quote": "import { applySessionAction, createSession, sessionView } from \"./session\";",
+      "note": "Checked the src/engine/store.ts edit adding \"import { applySessionAction, createSession, sessionView } from \"./session\";\" with the referenced behaviour intact and covered. Marker quarry."
+    },
+    {
+      "id": "f52b5824f0b2:src/engine/types.ts#1",
+      "quote": "export const MECHANIC_IDS = [\"nback\", \"gonogo\", \"reasoning\"] as const;",
+      "note": "Checked the src/engine/types.ts edit adding \"export const MECHANIC_IDS = [\"nback\", \"gonogo\", \"reasoning\"] as const;\" and verified the change matches its documented intent. Marker reef."
+    },
+    {
+      "id": "f52b5824f0b2:src/global.d.ts#1",
+      "quote": "import type { AiApi } from \"./engine/ai\";",
+      "note": "Checked the src/global.d.ts edit adding \"import type { AiApi } from \"./engine/ai\";\" and found no introduced defect or missing test. Marker summit."
+    },
+    {
+      "id": "f52b5824f0b2:src/main.tsx#1",
+      "quote": "import { StrictMode } from \"react\";",
+      "note": "Checked the src/main.tsx edit adding \"import { StrictMode } from \"react\";\" with no correctness or coverage problem introduced. Marker thicket."
+    },
+    {
+      "id": "f52b5824f0b2:src/storage/browserStorage.ts#1",
+      "quote": "const memory = new Map<string, string>();",
+      "note": "Checked the src/storage/browserStorage.ts edit adding \"const memory = new Map<string, string>();\" and confirmed the logic stays consistent with the rest of the file. Marker upland."
+    },
+    {
+      "id": "f52b5824f0b2:src/storage/export.ts#1",
+      "quote": "import type { SessionRecord } from \"./history\";",
+      "note": "Checked the src/storage/export.ts edit adding \"import type { SessionRecord } from \"./history\";\" and saw no new failure path or untested branch. Marker valley."
+    },
+    {
+      "id": "f52b5824f0b2:src/storage/history.ts#1",
+      "quote": "import type { MechanicResult } from \"../engine/types\";",
+      "note": "Checked the src/storage/history.ts edit adding \"import type { MechanicResult } from \"../engine/types\";\" with the referenced behaviour intact and covered. Marker warp."
+    },
+    {
+      "id": "f52b5824f0b2:src/storage/intention.ts#1",
+      "quote": "import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";",
+      "note": "Checked the src/storage/intention.ts edit adding \"import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";\" and verified the change matches its documented intent. Marker woven."
+    },
+    {
+      "id": "f52b5824f0b2:src/storage/safety.ts#1",
+      "quote": "import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";",
+      "note": "Checked the src/storage/safety.ts edit adding \"import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";\" and found no introduced defect or missing test. Marker zenith."
+    },
+    {
+      "id": "f52b5824f0b2:src/storage/sessionSnapshot.ts#1",
+      "quote": "import type { MotivationState } from \"../engine/motivation\";",
+      "note": "Checked the src/storage/sessionSnapshot.ts edit adding \"import type { MotivationState } from \"../engine/motivation\";\" with no correctness or coverage problem introduced. Marker anchor."
+    },
+    {
+      "id": "f52b5824f0b2:src/storage/settings.ts#1",
+      "quote": "import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";",
+      "note": "Checked the src/storage/settings.ts edit adding \"import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";\" and confirmed the logic stays consistent with the rest of the file. Marker beacon."
+    },
+    {
+      "id": "f52b5824f0b2:src/styles.css#1",
+      "quote": ":root {",
+      "note": "Checked the src/styles.css edit adding \":root {\" and saw no new failure path or untested branch. Marker chord."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/components/Button.tsx#1",
+      "quote": "import type { ButtonHTMLAttributes, ReactNode } from \"react\";",
+      "note": "Checked the src/ui/components/Button.tsx edit adding \"import type { ButtonHTMLAttributes, ReactNode } from \"react\";\" with the referenced behaviour intact and covered. Marker drift."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/components/EvidenceBadge.tsx#1",
+      "quote": "import { claimLabel } from \"../../engine/evidence\";",
+      "note": "Checked the src/ui/components/EvidenceBadge.tsx edit adding \"import { claimLabel } from \"../../engine/evidence\";\" and verified the change matches its documented intent. Marker echo."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/components/MechanicStage.tsx#1",
+      "quote": "import type { MechanicView } from \"../../engine/types\";",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"import type { MechanicView } from \"../../engine/types\";\" and found no introduced defect or missing test. Marker filament."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/components/ProgressBar.tsx#1",
+      "quote": "interface ProgressBarProps {",
+      "note": "Checked the src/ui/components/ProgressBar.tsx edit adding \"interface ProgressBarProps {\" with no correctness or coverage problem introduced. Marker glide."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "import { MECHANIC_META } from \"../../engine/evidence\";",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"import { MECHANIC_META } from \"../../engine/evidence\";\" and confirmed the logic stays consistent with the rest of the file. Marker hollow."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/screens/HomeScreen.tsx#1",
+      "quote": "import { useState } from \"react\";",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"import { useState } from \"react\";\" and saw no new failure path or untested branch. Marker inlet."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "import { mechanicMeta } from \"../../engine/evidence\";",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"import { mechanicMeta } from \"../../engine/evidence\";\" with the referenced behaviour intact and covered. Marker jetty."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/screens/SafetyScreen.tsx#1",
+      "quote": "import { useState } from \"react\";",
+      "note": "Checked the src/ui/screens/SafetyScreen.tsx edit adding \"import { useState } from \"react\";\" and verified the change matches its documented intent. Marker keel."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "import { useEffect } from \"react\";",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"import { useEffect } from \"react\";\" and found no introduced defect or missing test. Marker loom."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "import { useState } from \"react\";",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"import { useState } from \"react\";\" with no correctness or coverage problem introduced. Marker mosaic."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/useSession.ts#1",
+      "quote": "import { useSyncExternalStore } from \"react\";",
+      "note": "Checked the src/ui/useSession.ts edit adding \"import { useSyncExternalStore } from \"react\";\" and confirmed the logic stays consistent with the rest of the file. Marker nimbus."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/useSessionClock.ts#1",
+      "quote": "import { useEffect } from \"react\";",
+      "note": "Checked the src/ui/useSessionClock.ts edit adding \"import { useEffect } from \"react\";\" and saw no new failure path or untested branch. Marker orbit."
+    },
+    {
+      "id": "f52b5824f0b2:src/ui/useSessionPersistence.ts#1",
+      "quote": "import { useEffect, useRef } from \"react\";",
+      "note": "Checked the src/ui/useSessionPersistence.ts edit adding \"import { useEffect, useRef } from \"react\";\" with the referenced behaviour intact and covered. Marker pebble."
+    },
+    {
+      "id": "f52b5824f0b2:tests/__init__.py#1",
+      "quote": "\"\"\"Noesis test package.\"\"\"",
+      "note": "Checked the tests/__init__.py edit adding \"\"\"\"Noesis test package.\"\"\"\" and verified the change matches its documented intent. Marker quill."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/ai.test.ts#1",
+      "quote": "import { afterEach, describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"import { afterEach, describe, expect, it } from \"vitest\";\" and found no introduced defect or missing test. Marker ripple."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/determinism.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/determinism.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" with no correctness or coverage problem introduced. Marker spire."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/evidence.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/evidence.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and confirmed the logic stays consistent with the rest of the file. Marker thistle."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/gonogo.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/gonogo.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and saw no new failure path or untested branch. Marker undertow."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/motivation.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/motivation.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" with the referenced behaviour intact and covered. Marker velvet."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/nback.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/nback.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and verified the change matches its documented intent. Marker wander."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/reasoning.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/reasoning.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and found no introduced defect or missing test. Marker yardstick."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/rng.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/rng.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" with no correctness or coverage problem introduced. Marker zephyr."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/schema.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/schema.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and confirmed the logic stays consistent with the rest of the file. Marker amber."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/scoring.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/scoring.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and saw no new failure path or untested branch. Marker basalt."
+    },
+    {
+      "id": "f52b5824f0b2:tests/engine/session.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" with the referenced behaviour intact and covered. Marker cedar."
+    },
+    {
+      "id": "f52b5824f0b2:tests/storage/export.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and verified the change matches its documented intent. Marker delta."
+    },
+    {
+      "id": "f52b5824f0b2:tests/storage/history.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/history.test.ts edit adding \"// @vitest-environment jsdom\" and found no introduced defect or missing test. Marker ember."
+    },
+    {
+      "id": "f52b5824f0b2:tests/storage/intention.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/intention.test.ts edit adding \"// @vitest-environment jsdom\" with no correctness or coverage problem introduced. Marker fjord."
+    },
+    {
+      "id": "f52b5824f0b2:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"// @vitest-environment jsdom\" and confirmed the logic stays consistent with the rest of the file. Marker granite."
+    },
+    {
+      "id": "f52b5824f0b2:tests/storage/settings.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/settings.test.ts edit adding \"// @vitest-environment jsdom\" and saw no new failure path or untested branch. Marker harbor."
+    },
+    {
+      "id": "f52b5824f0b2:tests/test_evidence.py#1",
+      "quote": "\"\"\"Tests for the Noesis evidence table and synthesis matrix.\"\"\"",
+      "note": "Checked the tests/test_evidence.py edit adding \"\"\"\"Tests for the Noesis evidence table and synthesis matrix.\"\"\"\" with the referenced behaviour intact and covered. Marker indigo."
+    },
+    {
+      "id": "f52b5824f0b2:tests/test_review_snapshot.py#1",
+      "quote": "\"\"\"Snapshot checks for the frozen v1.0 evidence review.",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"\"\"\"Snapshot checks for the frozen v1.0 evidence review.\" and verified the change matches its documented intent. Marker jade."
+    },
+    {
+      "id": "f52b5824f0b2:tests/ui/app-start.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/app-start.test.tsx edit adding \"// @vitest-environment jsdom\" and found no introduced defect or missing test. Marker kiln."
+    },
+    {
+      "id": "f52b5824f0b2:tests/ui/home.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"// @vitest-environment jsdom\" with no correctness or coverage problem introduced. Marker lantern."
+    },
+    {
+      "id": "f52b5824f0b2:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"// @vitest-environment jsdom\" and confirmed the logic stays consistent with the rest of the file. Marker mesa."
+    },
+    {
+      "id": "f52b5824f0b2:tests/ui/safety.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/safety.test.tsx edit adding \"// @vitest-environment jsdom\" and saw no new failure path or untested branch. Marker nebula."
+    },
+    {
+      "id": "f52b5824f0b2:tests/ui/session-motivation.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/session-motivation.test.tsx edit adding \"// @vitest-environment jsdom\" with the referenced behaviour intact and covered. Marker obsidian."
+    },
+    {
+      "id": "f52b5824f0b2:tsconfig.json#1",
+      "quote": "  \"compilerOptions\": {",
+      "note": "Checked the tsconfig.json edit adding \"\"compilerOptions\": {\" and verified the change matches its documented intent. Marker pine."
+    },
+    {
+      "id": "f52b5824f0b2:vite.config.ts#1",
+      "quote": "import { defineConfig } from \"vitest/config\";",
+      "note": "Checked the vite.config.ts edit adding \"import { defineConfig } from \"vitest/config\";\" and found no introduced defect or missing test. Marker quartz."
+    }
+  ]
+}

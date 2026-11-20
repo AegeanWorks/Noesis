@@ -1,0 +1,155 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "2631d33726b4:README.md#1",
+      "quote": "The **Menu** tab is the explicit choice point. It lists every test — four core mechanics plus the experimental Task Switch — with a short,",
+      "note": "Checked the README.md edit adding \"The **Menu** tab is the explicit choice point. It lists every test — four core mechanics p\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "2631d33726b4:docs/research/DATA_EXPORT_AND_REUSE.md#1",
+      "quote": "- One row per mechanic result, so a four-block session produces four rows; a focus session produces one row per completed block (one to three).",
+      "note": "Checked the docs/research/DATA_EXPORT_AND_REUSE.md edit adding \"- One row per mechanic result, so a four-block session produces four rows; a focus session\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "2631d33726b4:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R63 | Task Switch is an experimental focus test: a static coloured shape is answered under an alternating colour or shape rule, and the block reports accuracy, switch/repeat accuracy and switch cost. It is not in the default four-block lineup, makes no general-intelligence or everyday-function claim, and uses no flashing. | Executive-function training meta-analyses show small near- and far-transfer effects; single-component EF training was most effective in one analysis, while multicomponent training also transferred; the app adds one task without changing the validated core lineup. | 30998045; 32011155; ADR-045 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R63 | Task Switch is an experimental focus test: a static coloured shape is answered und\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "2631d33726b4:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "| 32011155 | Basak et al. (2020), *Psychol Aging* | 215 training studies; overall g=0.28, near g=0.37, far g=0.22; single-component EF training was most effective on near/far transfer, while multicomponent training also transferred and improved everyday functioning |",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"| 32011155 | Basak et al. (2020), *Psychol Aging* | 215 training studies; overall g=0.28, \" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "2631d33726b4:docs/research/NEW_MECHANIC_CANDIDATES.md#2",
+      "quote": "| **Task Switch** | Set-shifting / cognitive flexibility | Core-EF meta-analyses show small near and far transfer; single-component EF training was most effective in one analysis, while multicomponent training also transferred and improved everyday functioning (30998045, 32011155) | Static coloured shapes; no flashing; easy deterministic state machine | **Implement as experimental focus test** |",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"| **Task Switch** | Set-shifting / cognitive flexibility | Core-EF meta-analyses show smal\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "2631d33726b4:docs/research/README.md#1",
+      "quote": "**Status:** v1.0 corpus complete; current review revision v1.2 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered",
+      "note": "Checked the docs/research/README.md edit adding \"**Status:** v1.0 corpus complete; current review revision v1.2 (2026-11-08) with targeted \" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "2631d33726b4:docs/research/SEARCH_LOG.md#1",
+      "quote": "A 2026-11-08 new-game search added two executive-function context records: Nguyen et al. 2019 (PMID 30998045; 64 studies, 3,594 older adults; small near- and far-transfer effects, maintained at follow-up) and Basak et al. 2020 (PMID 32011155; 215 training studies; overall g=0.28, near g=0.37, far g=0.22; single-component EF training was most effective on near/far transfer, while multicomponent training also transferred and improved everyday functioning). They ground the experimental Task Switch focus test. Action-game and commercial brain-training meta-analyses (PMIDs 29172564, 37531408, 34251578) stayed narrative-only in [NEW_MECHANIC_CANDIDATES.md](NEW_MECHANIC_CANDIDATES.md): action-game genres conflict with the no-flashing safety posture, and the commercial-program review is not specific to a single task paradigm.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 new-game search added two executive-function context records: Nguyen et al. 2\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "2631d33726b4:src/content/appMeta.ts#1",
+      "quote": "export const EVIDENCE_REVIEW_VERSION = \"v1.2 (2026-11-08)\";",
+      "note": "Checked the src/content/appMeta.ts edit adding \"export const EVIDENCE_REVIEW_VERSION = \"v1.2 (2026-11-08)\";\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "2631d33726b4:src/engine/mechanics/switching.ts#1",
+      "quote": "  let next: SwitchingState = { ...state, tick: state.tick + ms };",
+      "note": "Checked the src/engine/mechanics/switching.ts edit adding \"let next: SwitchingState = { ...state, tick: state.tick + ms };\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "2631d33726b4:src/storage/adaptive.ts#1",
+      "quote": "import { MECHANIC_IDS } from \"../engine/types\";",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"import { MECHANIC_IDS } from \"../engine/types\";\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "2631d33726b4:src/storage/adaptive.ts#2",
+      "quote": "const MECHANICS: readonly MechanicId[] = MECHANIC_IDS;",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"const MECHANICS: readonly MechanicId[] = MECHANIC_IDS;\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "2631d33726b4:src/storage/adaptive.ts#3",
+      "quote": "  for (const mechanic of MECHANICS) {",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"for (const mechanic of MECHANICS) {\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "2631d33726b4:src/storage/adaptive.ts#4",
+      "quote": "    return {",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"return {\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "2631d33726b4:src/storage/sessionSnapshot.ts#1",
+      "quote": "import { MECHANIC_IDS } from \"../engine/types\";",
+      "note": "Checked the src/storage/sessionSnapshot.ts edit adding \"import { MECHANIC_IDS } from \"../engine/types\";\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "2631d33726b4:src/storage/sessionSnapshot.ts#2",
+      "quote": "const MECHANICS = new Set<string>(MECHANIC_IDS);",
+      "note": "Checked the src/storage/sessionSnapshot.ts edit adding \"const MECHANICS = new Set<string>(MECHANIC_IDS);\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "2631d33726b4:tests/engine/switching.test.ts#1",
+      "quote": "  it(\"carries a coarse advance through feedback into the next trial\", () => {",
+      "note": "Checked the tests/engine/switching.test.ts edit adding \"it(\"carries a coarse advance through feedback into the next trial\", () => {\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "2631d33726b4:tests/storage/adaptive.test.ts#1",
+      "quote": "import { writeLocal } from \"../../src/storage/browserStorage\";",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"import { writeLocal } from \"../../src/storage/browserStorage\";\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "2631d33726b4:tests/storage/adaptive.test.ts#2",
+      "quote": "  it(\"migrates a pre-Task-Switch state without losing settings\", () => {",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"it(\"migrates a pre-Task-Switch state without losing settings\", () => {\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "2631d33726b4:tests/storage/export.test.ts#1",
+      "quote": "      evidenceReview: expect.stringMatching(/v1\\.2/),",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"evidenceReview: expect.stringMatching(/v1\\.2/),\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "2631d33726b4:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "  it(\"round-trips a running Task Switch block\", () => {",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"it(\"round-trips a running Task Switch block\", () => {\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "2631d33726b4:tests/test_review_snapshot.py#1",
+      "quote": "\"\"\"Snapshot checks for the current evidence review.",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"\"\"\"Snapshot checks for the current evidence review.\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "374aad179cf6:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R63 | Task Switch is an experimental focus test: a static coloured shape is answered under an alternating colour or shape rule, and the block reports accuracy, switch/repeat accuracy and switch cost. It is not in the default four-block lineup, makes no general-intelligence or everyday-function claim, and uses no flashing. | Executive-function training meta-analyses show small near- and far-transfer effects; single-component EF training was most effective in one analysis, while multicomponent training also transferred; the app adds one task without claiming superiority over multicomponent training or changing the validated core lineup. | 30998045; 32011155; ADR-045 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R63 | Task Switch is an experimental focus test: a static coloured shape is answered und\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "374aad179cf6:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "colour/shape task. Both meta-analyses also report benefits from multicomponent training,",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"colour/shape task. Both meta-analyses also report benefits from multicomponent training,\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "e9ff04c88495:.aikit/improvement-record.md#1",
+      "quote": "12. Task Switch resume and switch-cost interpretation — 2026-11-08 — cycle 12",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"12. Task Switch resume and switch-cost interpretation — 2026-11-08 — cycle 12\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "e9ff04c88495:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 12 — Task Switch resume and switch-cost interpretation",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 12 — Task Switch resume and switch-cost interpretation\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "e9ff04c88495:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  streaks. The result card explains switch cost as the switch-trial mean minus the repeat-trial",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"streaks. The result card explains switch cost as the switch-trial mean minus the repeat-tr\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "e9ff04c88495:scripts/switching-resume-proof.mjs#1",
+      "quote": "// Scripted Task Switch focus playthrough with a mid-session reload.",
+      "note": "Checked the scripts/switching-resume-proof.mjs edit adding \"// Scripted Task Switch focus playthrough with a mid-session reload.\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "e9ff04c88495:src/styles.css#1",
+      "quote": ".switch-cost-note {",
+      "note": "Checked the src/styles.css edit adding \".switch-cost-note {\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "e9ff04c88495:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "      {result.mechanic === \"switching\" ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{result.mechanic === \"switching\" ? (\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "e9ff04c88495:tests/ui/switch-cost-note.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/switch-cost-note.test.tsx edit adding \"// @vitest-environment jsdom\" and verified the change matches its documented intent. Marker dune."
+    }
+  ]
+}

@@ -1,0 +1,700 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "a6c35bb2bb41:.aikit/decisions.md#1",
+      "quote": "### ADR-041: Research consent and local email data return",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-041: Research consent and local email data return\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "a6c35bb2bb41:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 13 - Research consent and local email data return",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 13 - Research consent and local email data return\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "a6c35bb2bb41:.aikit/improvement-record.md#2",
+      "quote": "npx vitest run tests/storage/researchConsent.test.ts tests/storage/researchSettings.test.ts tests/storage/researchEmail.test.ts tests/storage/export.test.ts tests/ui/research-consent.test.tsx tests/ui/research-data.test.tsx",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/storage/researchConsent.test.ts tests/storage/researchSettings.test.t\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "a6c35bb2bb41:README.md#1",
+      "quote": "**Current phase: first working vertical slice.** One-click sessions, four mechanics, a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).",
+      "note": "Checked the README.md edit adding \"**Current phase: first working vertical slice.** One-click sessions, four mechanics, a tes\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "a6c35bb2bb41:README.md#2",
+      "quote": "## Research Data Sharing and Informed Consent",
+      "note": "Checked the README.md edit adding \"## Research Data Sharing and Informed Consent\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "a6c35bb2bb41:README.md#3",
+      "quote": "The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 116 records with 277 outcomes (90 primary, 26 context).",
+      "note": "Checked the README.md edit adding \"The review screened 2,360 unique bibliographic records and 363 trial records, and extracte\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "a6c35bb2bb41:README.md#4",
+      "quote": "│   ├── DATA_COLLECTION_AND_CONSENT.md <- e-consent and email data-return note",
+      "note": "Checked the README.md edit adding \"│   ├── DATA_COLLECTION_AND_CONSENT.md <- e-consent and email data-return note\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "a6c35bb2bb41:README.md#5",
+      "quote": "2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, research consent and email-draft storage, and the React safety/mechanic/settings screens.",
+      "note": "Checked the README.md edit adding \"2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequen\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "a6c35bb2bb41:README.md#6",
+      "quote": "- [Data collection and consent](docs/research/DATA_COLLECTION_AND_CONSENT.md)",
+      "note": "Checked the README.md edit adding \"- [Data collection and consent](docs/research/DATA_COLLECTION_AND_CONSENT.md)\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/DATA_COLLECTION_AND_CONSENT.md#1",
+      "quote": "# Research Data Collection and Informed Consent",
+      "note": "Checked the docs/research/DATA_COLLECTION_AND_CONSENT.md edit adding \"# Research Data Collection and Informed Consent\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- an optional bilingual research consent flow with a random participant code and versioned consent record;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- an optional bilingual research consent flow with a random participant code and versioned\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "| R57 | Research data sharing is opt-in, consent-gated and pseudonymous. The export carries a random participant code and a versioned consent record, but no name, email address or account identifier. The study contact email is never written into the data file. | eConsent improves comprehension and auditability; data banking needs participant control and data minimisation. | 37656499; 36810093; 42443473; ADR-041 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R57 | Research data sharing is opt-in, consent-gated and pseudonymous. The export carrie\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/README.md#1",
+      "quote": "**Status:** v1.0 complete plus the 2026-11-08 targeted UX and data-collection updates, AI-assisted, internally pre-registered",
+      "note": "Checked the docs/research/README.md edit adding \"**Status:** v1.0 complete plus the 2026-11-08 targeted UX and data-collection updates, AI-\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/README.md#2",
+      "quote": "| [DATA_COLLECTION_AND_CONSENT.md](DATA_COLLECTION_AND_CONSENT.md) | Literature basis for e-consent, local research data sharing and the email return path |",
+      "note": "Checked the docs/research/README.md edit adding \"| [DATA_COLLECTION_AND_CONSENT.md](DATA_COLLECTION_AND_CONSENT.md) | Literature basis for \" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/README.md#3",
+      "quote": "8. If the research-consent text changes, increment `RESEARCH_CONSENT_VERSION` in",
+      "note": "Checked the docs/research/README.md edit adding \"8. If the research-consent text changes, increment `RESEARCH_CONSENT_VERSION` in\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis37656499,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis37656499,\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/REFERENCES.md#1",
+      "quote": "- Comparative Effectiveness of eConsent: Systematic Review. *Journal of Medical Internet Research*. 2023. PMID: [37656499](https://pubmed.ncbi.nlm.nih.gov/37656499/). DOI: [10.2196/43883](https://doi.org/10.2196/43883).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Comparative Effectiveness of eConsent: Systematic Review. *Journal of Medical Internet R\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 116 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 116 |\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/SEARCH_LOG.md#2",
+      "quote": "| cct | 37 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| cct | 37 |\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 105 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 105 |\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/SEARCH_LOG.md#4",
+      "quote": "A 2026-11-08 data-collection update added two e-consent systematic reviews as context records: Cohen et al. 2023 (PMID 37656499; 35 studies, 13,281 participants; eConsent was better or not worse than paper for comprehension, acceptability and usability, no study favoured paper, cycle time increased) and Mazzochi et al. 2023 (PMID 36810093; 12 studies, 8,864 participants; enrolment effects mixed, comprehension/recall may improve, high heterogeneity). Both DOIs were checked against Crossref. The 2026 perspective on digital-phenotyping data banking (PMID 42443473) and the data-sharing measurement review (PMID 41813053) stayed narrative-only in [DATA_COLLECTION_AND_CONSENT.md](DATA_COLLECTION_AND_CONSENT.md): the first is a Perspective and the second found low-certainty survey measurement. These sources ground R57-R59.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 data-collection update added two e-consent systematic reviews as context reco\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/SYNTHESIS.md#1",
+      "quote": "**Search date:** 2026-10-31; targeted updates 2026-11-08",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Search date:** 2026-10-31; targeted updates 2026-11-08\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/SYNTHESIS.md#2",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 116 records (90 primary, 26 context) and 277 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records, one test-anxiety record, one interleaving record, one engagement-prompts record, one adherence record, two self-determination-theory meta-analyses and two e-consent systematic reviews. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/SYNTHESIS.md#3",
+      "quote": "All 116 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 116 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/TRIAL_READINESS.md#1",
+      "quote": "# Noesis Investigational Use: Trial Dossier (v1.0, 2026-11-02; data-sharing update 2026-11-08)",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"# Noesis Investigational Use: Trial Dossier (v1.0, 2026-11-02; data-sharing update 2026-11\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/TRIAL_READINESS.md#2",
+      "quote": "- `research`: `{ participantCode, consentVersion, consentedAt, withdrawnAt,",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"- `research`: `{ participantCode, consentVersion, consentedAt, withdrawnAt,\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/TRIAL_READINESS.md#3",
+      "quote": "Research data sharing has a second, separate consent: the bilingual",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"Research data sharing has a second, separate consent: the bilingual\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "a6c35bb2bb41:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"37656499\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"37656499\",\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "a6c35bb2bb41:scripts/research-consent-email-proof.mjs#1",
+      "quote": "import { chromium } from \"playwright-core\";",
+      "note": "Checked the scripts/research-consent-email-proof.mjs edit adding \"import { chromium } from \"playwright-core\";\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "a6c35bb2bb41:scripts/ui-audit.mjs#1",
+      "quote": "  localStorage.setItem(",
+      "note": "Checked the scripts/ui-audit.mjs edit adding \"localStorage.setItem(\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "a6c35bb2bb41:scripts/ui-audit.mjs#2",
+      "quote": "await page.getByTestId(\"open-research-consent\").click();",
+      "note": "Checked the scripts/ui-audit.mjs edit adding \"await page.getByTestId(\"open-research-consent\").click();\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "a6c35bb2bb41:scripts/ui-shots.mjs#1",
+      "quote": "      localStorage.setItem(",
+      "note": "Checked the scripts/ui-shots.mjs edit adding \"localStorage.setItem(\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "a6c35bb2bb41:scripts/ui-shots.mjs#2",
+      "quote": "await mobile.page.getByTestId(\"open-research-consent\").click();",
+      "note": "Checked the scripts/ui-shots.mjs edit adding \"await mobile.page.getByTestId(\"open-research-consent\").click();\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#1",
+      "quote": "import {",
+      "note": "Checked the src/App.tsx edit adding \"import {\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#2",
+      "quote": "  type StudyState,",
+      "note": "Checked the src/App.tsx edit adding \"type StudyState,\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#3",
+      "quote": "import { ResearchConsentScreen } from \"./ui/screens/ResearchConsentScreen\";",
+      "note": "Checked the src/App.tsx edit adding \"import { ResearchConsentScreen } from \"./ui/screens/ResearchConsentScreen\";\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#4",
+      "quote": "  | \"menu\"",
+      "note": "Checked the src/App.tsx edit adding \"| \"menu\"\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#5",
+      "quote": "  const [researchSettings, setResearchSettings] = useState(() => loadResearchSettings());",
+      "note": "Checked the src/App.tsx edit adding \"const [researchSettings, setResearchSettings] = useState(() => loadResearchSettings());\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#6",
+      "quote": "    downloadHistoryExport(history, studyForExport(study), {",
+      "note": "Checked the src/App.tsx edit adding \"downloadHistoryExport(history, studyForExport(study), {\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#7",
+      "quote": "  const handleStudyContactEmail = useCallback((value: string) => {",
+      "note": "Checked the src/App.tsx edit adding \"const handleStudyContactEmail = useCallback((value: string) => {\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#8",
+      "quote": "    clearResearchConsent();",
+      "note": "Checked the src/App.tsx edit adding \"clearResearchConsent();\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#9",
+      "quote": "        {screen === \"consent\" ? (",
+      "note": "Checked the src/App.tsx edit adding \"{screen === \"consent\" ? (\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "a6c35bb2bb41:src/App.tsx#10",
+      "quote": "            research={{",
+      "note": "Checked the src/App.tsx edit adding \"research={{\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "a6c35bb2bb41:src/content/researchConsentText.ts#1",
+      "quote": "import type { ConsentLanguage } from \"../storage/researchConsent\";",
+      "note": "Checked the src/content/researchConsentText.ts edit adding \"import type { ConsentLanguage } from \"../storage/researchConsent\";\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "a6c35bb2bb41:src/storage/export.ts#1",
+      "quote": "import type { ConsentLanguage, ResearchConsent } from \"./researchConsent\";",
+      "note": "Checked the src/storage/export.ts edit adding \"import type { ConsentLanguage, ResearchConsent } from \"./researchConsent\";\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "a6c35bb2bb41:src/storage/export.ts#2",
+      "quote": "export interface ResearchExport {",
+      "note": "Checked the src/storage/export.ts edit adding \"export interface ResearchExport {\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "a6c35bb2bb41:src/storage/export.ts#3",
+      "quote": "  research: ResearchExport | null;",
+      "note": "Checked the src/storage/export.ts edit adding \"research: ResearchExport | null;\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "a6c35bb2bb41:src/storage/export.ts#4",
+      "quote": "    research: extras.research ?? null,",
+      "note": "Checked the src/storage/export.ts edit adding \"research: extras.research ?? null,\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "a6c35bb2bb41:src/storage/export.ts#5",
+      "quote": "export function downloadTextFile(",
+      "note": "Checked the src/storage/export.ts edit adding \"export function downloadTextFile(\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "a6c35bb2bb41:src/storage/researchConsent.ts#1",
+      "quote": "import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";",
+      "note": "Checked the src/storage/researchConsent.ts edit adding \"import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "a6c35bb2bb41:src/storage/researchEmail.ts#1",
+      "quote": "import type { HistoryExport } from \"./export\";",
+      "note": "Checked the src/storage/researchEmail.ts edit adding \"import type { HistoryExport } from \"./export\";\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "a6c35bb2bb41:src/storage/researchSettings.ts#1",
+      "quote": "import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";",
+      "note": "Checked the src/storage/researchSettings.ts edit adding \"import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "a6c35bb2bb41:src/styles.css#1",
+      "quote": ".settings-screen input[type=\"email\"],",
+      "note": "Checked the src/styles.css edit adding \".settings-screen input[type=\"email\"],\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "a6c35bb2bb41:src/styles.css#2",
+      "quote": "/* Research consent and email data return */",
+      "note": "Checked the src/styles.css edit adding \"/* Research consent and email data return */\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "a6c35bb2bb41:src/ui/components/ResearchDataPanel.tsx#1",
+      "quote": "import { useState } from \"react\";",
+      "note": "Checked the src/ui/components/ResearchDataPanel.tsx edit adding \"import { useState } from \"react\";\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "a6c35bb2bb41:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 116 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 116 reviews and trials. Each\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "a6c35bb2bb41:src/ui/screens/ResearchConsentScreen.tsx#1",
+      "quote": "import { useState } from \"react\";",
+      "note": "Checked the src/ui/screens/ResearchConsentScreen.tsx edit adding \"import { useState } from \"react\";\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "a6c35bb2bb41:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "import {",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"import {\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "a6c35bb2bb41:src/ui/screens/SettingsScreen.tsx#2",
+      "quote": "  research: ResearchPanelState;",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"research: ResearchPanelState;\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "a6c35bb2bb41:src/ui/screens/SettingsScreen.tsx#3",
+      "quote": "  research,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"research,\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "a6c35bb2bb41:src/ui/screens/SettingsScreen.tsx#4",
+      "quote": "      <ResearchDataPanel {...research} />",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"<ResearchDataPanel {...research} />\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/storage/export.test.ts#1",
+      "quote": "    expect(parsed.research).toBeNull();",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"expect(parsed.research).toBeNull();\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/storage/researchConsent.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/researchConsent.test.ts edit adding \"// @vitest-environment jsdom\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/storage/researchEmail.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/storage/researchEmail.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/storage/researchSettings.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/researchSettings.test.ts edit adding \"// @vitest-environment jsdom\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 116)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 116)\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(modalities[\"safety\"], 8)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(modalities[\"safety\"], 8)\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/ui/research-consent.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/research-consent.test.tsx edit adding \"// @vitest-environment jsdom\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/ui/research-data.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/research-data.test.tsx edit adding \"// @vitest-environment jsdom\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/ui/research-flow.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/research-flow.test.tsx edit adding \"// @vitest-environment jsdom\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "a6c35bb2bb41:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  research: {",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"research: {\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "97ef07d0daad:.aikit/decisions.md#1",
+      "quote": "### ADR-042: Session adherence log",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-042: Session adherence log\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "97ef07d0daad:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 14 - Session adherence log for dropout analysis",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 14 - Session adherence log for dropout analysis\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "97ef07d0daad:.aikit/improvement-record.md#2",
+      "quote": "npx vitest run tests/storage/adherence.test.ts tests/storage/export.test.ts tests/ui/settings-symptoms.test.tsx tests/ui/adherence-flow.test.tsx tests/ui/study-journey.test.tsx",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/storage/adherence.test.ts tests/storage/export.test.ts tests/ui/setti\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "97ef07d0daad:README.md#1",
+      "quote": "The export also carries a session-level **adherence log**: every start, completion and early",
+      "note": "Checked the README.md edit adding \"The export also carries a session-level **adherence log**: every start, completion and ear\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "97ef07d0daad:README.md#2",
+      "quote": "│   ├── ADHERENCE_LOGGING.md      <- session start/completion/early-ending note",
+      "note": "Checked the README.md edit adding \"│   ├── ADHERENCE_LOGGING.md      <- session start/completion/early-ending note\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "97ef07d0daad:README.md#3",
+      "quote": "2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, research consent and email-draft storage, session adherence logging, and the React safety/mechanic/settings screens.",
+      "note": "Checked the README.md edit adding \"2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequen\" with the referenced behaviour intact and covered. Marker amber."
+    },
+    {
+      "id": "97ef07d0daad:README.md#4",
+      "quote": "- [Adherence logging](docs/research/ADHERENCE_LOGGING.md)",
+      "note": "Checked the README.md edit adding \"- [Adherence logging](docs/research/ADHERENCE_LOGGING.md)\" and verified the change matches its documented intent. Marker basalt."
+    },
+    {
+      "id": "97ef07d0daad:docs/research/ADHERENCE_LOGGING.md#1",
+      "quote": "# Session Adherence Logging",
+      "note": "Checked the docs/research/ADHERENCE_LOGGING.md edit adding \"# Session Adherence Logging\" and found no introduced defect or missing test. Marker cedar."
+    },
+    {
+      "id": "97ef07d0daad:docs/research/DATA_COLLECTION_AND_CONSENT.md#1",
+      "quote": "**Scope:** consent, adherence logging, local data return and email hand-off; not a new efficacy claim",
+      "note": "Checked the docs/research/DATA_COLLECTION_AND_CONSENT.md edit adding \"**Scope:** consent, adherence logging, local data return and email hand-off; not a new eff\" with no correctness or coverage problem introduced. Marker delta."
+    },
+    {
+      "id": "97ef07d0daad:docs/research/DATA_COLLECTION_AND_CONSENT.md#2",
+      "quote": "### 3.4 Adherence is measured from starts, not completions",
+      "note": "Checked the docs/research/DATA_COLLECTION_AND_CONSENT.md edit adding \"### 3.4 Adherence is measured from starts, not completions\" and confirmed the logic stays consistent with the rest of the file. Marker ember."
+    },
+    {
+      "id": "97ef07d0daad:docs/research/DATA_COLLECTION_AND_CONSENT.md#3",
+      "quote": "| Include the session **adherence log** in every export | Adherence is a primary outcome (R22/R60); a completed-only history hides dropout | Starts, completions and early endings with blocks completed; no reason text and no account identifier |",
+      "note": "Checked the docs/research/DATA_COLLECTION_AND_CONSENT.md edit adding \"| Include the session **adherence log** in every export | Adherence is a primary outcome (\" and saw no new failure path or untested branch. Marker fjord."
+    },
+    {
+      "id": "97ef07d0daad:docs/research/DATA_COLLECTION_AND_CONSENT.md#4",
+      "quote": "- **R60:** Every session start is logged with its seed, block count, study arm and timestamp.",
+      "note": "Checked the docs/research/DATA_COLLECTION_AND_CONSENT.md edit adding \"- **R60:** Every session start is logged with its seed, block count, study arm and timesta\" with the referenced behaviour intact and covered. Marker granite."
+    },
+    {
+      "id": "97ef07d0daad:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- a session adherence log that records starts, completions and early endings for dropout analysis;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- a session adherence log that records starts, completions and early endings for dropout a\" and verified the change matches its documented intent. Marker harbor."
+    },
+    {
+      "id": "97ef07d0daad:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "| R60 | Every session start is logged with its seed, block count, study arm and timestamp. Completion and early ending update the same event with the ending timestamp and the number of blocks completed. The log is shown in Settings and included in JSON exports; it contains no name, email address or account identifier, and Delete local data clears it. | Adherence is a primary outcome; a completed-session-only history cannot estimate dropout, and high dropout is documented in computerized training. | 40779747; 35612886; 30881315; ADR-042 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R60 | Every session start is logged with its seed, block count, study arm and timestamp.\" and found no introduced defect or missing test. Marker indigo."
+    },
+    {
+      "id": "97ef07d0daad:docs/research/README.md#1",
+      "quote": "| [ADHERENCE_LOGGING.md](ADHERENCE_LOGGING.md) | Literature basis for session starts, completions and early-ending logging |",
+      "note": "Checked the docs/research/README.md edit adding \"| [ADHERENCE_LOGGING.md](ADHERENCE_LOGGING.md) | Literature basis for session starts, comp\" with no correctness or coverage problem introduced. Marker jade."
+    },
+    {
+      "id": "97ef07d0daad:docs/research/TRIAL_READINESS.md#1",
+      "quote": "- `adherence[]`: `{ id, seed, startedAt, endedAt, status, blocksCompleted,",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"- `adherence[]`: `{ id, seed, startedAt, endedAt, status, blocksCompleted,\" and confirmed the logic stays consistent with the rest of the file. Marker kiln."
+    },
+    {
+      "id": "97ef07d0daad:scripts/research-consent-email-proof.mjs#1",
+      "quote": "await page.getByTestId(\"start-session\").click();",
+      "note": "Checked the scripts/research-consent-email-proof.mjs edit adding \"await page.getByTestId(\"start-session\").click();\" and saw no new failure path or untested branch. Marker lantern."
+    },
+    {
+      "id": "97ef07d0daad:scripts/research-consent-email-proof.mjs#2",
+      "quote": "      adherence: {",
+      "note": "Checked the scripts/research-consent-email-proof.mjs edit adding \"adherence: {\" with the referenced behaviour intact and covered. Marker mesa."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#1",
+      "quote": "import {",
+      "note": "Checked the src/App.tsx edit adding \"import {\" and verified the change matches its documented intent. Marker nebula."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#2",
+      "quote": "  const [adherence, setAdherence] = useState<AdherenceEvent[]>(() => loadAdherence());",
+      "note": "Checked the src/App.tsx edit adding \"const [adherence, setAdherence] = useState<AdherenceEvent[]>(() => loadAdherence());\" and found no introduced defect or missing test. Marker obsidian."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#3",
+      "quote": "      setAdherence(",
+      "note": "Checked the src/App.tsx edit adding \"setAdherence(\" with no correctness or coverage problem introduced. Marker pine."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#4",
+      "quote": "      const config = defaultSessionConfig(",
+      "note": "Checked the src/App.tsx edit adding \"const config = defaultSessionConfig(\" and confirmed the logic stays consistent with the rest of the file. Marker quartz."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#5",
+      "quote": "    const current = sessionStore.getSnapshot();",
+      "note": "Checked the src/App.tsx edit adding \"const current = sessionStore.getSnapshot();\" and saw no new failure path or untested branch. Marker rill."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#6",
+      "quote": "      adherence,",
+      "note": "Checked the src/App.tsx edit adding \"adherence,\" with the referenced behaviour intact and covered. Marker sable."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#7",
+      "quote": "        adherence,",
+      "note": "Checked the src/App.tsx edit adding \"adherence,\" and verified the change matches its documented intent. Marker tundra."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#8",
+      "quote": "  }, [history, adherence, researchConsent, researchSettings.studyContactEmail]);",
+      "note": "Checked the src/App.tsx edit adding \"}, [history, adherence, researchConsent, researchSettings.studyContactEmail]);\" and found no introduced defect or missing test. Marker umber."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#9",
+      "quote": "    clearAdherence();",
+      "note": "Checked the src/App.tsx edit adding \"clearAdherence();\" with no correctness or coverage problem introduced. Marker violet."
+    },
+    {
+      "id": "97ef07d0daad:src/App.tsx#10",
+      "quote": "            adherenceCounts={adherenceCounts(adherence)}",
+      "note": "Checked the src/App.tsx edit adding \"adherenceCounts={adherenceCounts(adherence)}\" and confirmed the logic stays consistent with the rest of the file. Marker willow."
+    },
+    {
+      "id": "97ef07d0daad:src/storage/adherence.ts#1",
+      "quote": "import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";",
+      "note": "Checked the src/storage/adherence.ts edit adding \"import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";\" and saw no new failure path or untested branch. Marker xylem."
+    },
+    {
+      "id": "97ef07d0daad:src/storage/export.ts#1",
+      "quote": "import type { AdherenceEvent } from \"./adherence\";",
+      "note": "Checked the src/storage/export.ts edit adding \"import type { AdherenceEvent } from \"./adherence\";\" with the referenced behaviour intact and covered. Marker yarrow."
+    },
+    {
+      "id": "97ef07d0daad:src/storage/export.ts#2",
+      "quote": "  adherence: AdherenceEvent[];",
+      "note": "Checked the src/storage/export.ts edit adding \"adherence: AdherenceEvent[];\" and verified the change matches its documented intent. Marker zinc."
+    },
+    {
+      "id": "97ef07d0daad:src/storage/export.ts#3",
+      "quote": "  adherence?: readonly AdherenceEvent[];",
+      "note": "Checked the src/storage/export.ts edit adding \"adherence?: readonly AdherenceEvent[];\" and found no introduced defect or missing test. Marker acorn."
+    },
+    {
+      "id": "97ef07d0daad:src/storage/export.ts#4",
+      "quote": "    adherence: [...(extras.adherence ?? [])],",
+      "note": "Checked the src/storage/export.ts edit adding \"adherence: [...(extras.adherence ?? [])],\" with no correctness or coverage problem introduced. Marker birch."
+    },
+    {
+      "id": "97ef07d0daad:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "import type { AdherenceCounts } from \"../../storage/adherence\";",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"import type { AdherenceCounts } from \"../../storage/adherence\";\" and confirmed the logic stays consistent with the rest of the file. Marker canyon."
+    },
+    {
+      "id": "97ef07d0daad:src/ui/screens/SettingsScreen.tsx#2",
+      "quote": "  adherenceCounts: AdherenceCounts;",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"adherenceCounts: AdherenceCounts;\" and saw no new failure path or untested branch. Marker dune."
+    },
+    {
+      "id": "97ef07d0daad:src/ui/screens/SettingsScreen.tsx#3",
+      "quote": "  adherenceCounts,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"adherenceCounts,\" with the referenced behaviour intact and covered. Marker estuary."
+    },
+    {
+      "id": "97ef07d0daad:src/ui/screens/SettingsScreen.tsx#4",
+      "quote": "        <p className=\"fine\" data-testid=\"adherence-summary\">",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"<p className=\"fine\" data-testid=\"adherence-summary\">\" and verified the change matches its documented intent. Marker flare."
+    },
+    {
+      "id": "97ef07d0daad:tests/storage/adherence.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/adherence.test.ts edit adding \"// @vitest-environment jsdom\" and found no introduced defect or missing test. Marker grove."
+    },
+    {
+      "id": "97ef07d0daad:tests/storage/export.test.ts#1",
+      "quote": "    expect(parsed.adherence).toEqual([]);",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"expect(parsed.adherence).toEqual([]);\" with no correctness or coverage problem introduced. Marker helix."
+    },
+    {
+      "id": "97ef07d0daad:tests/ui/adherence-flow.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/adherence-flow.test.tsx edit adding \"// @vitest-environment jsdom\" and confirmed the logic stays consistent with the rest of the file. Marker isle."
+    },
+    {
+      "id": "97ef07d0daad:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  adherenceCounts: { started: 0, completed: 0, aborted: 0 },",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"adherenceCounts: { started: 0, completed: 0, aborted: 0 },\" and saw no new failure path or untested branch. Marker juniper."
+    },
+    {
+      "id": "97ef07d0daad:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "describe(\"SettingsScreen adherence summary\", () => {",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"describe(\"SettingsScreen adherence summary\", () => {\" with the referenced behaviour intact and covered. Marker knoll."
+    },
+    {
+      "id": "97ef07d0daad:tests/ui/study-journey.test.tsx#1",
+      "quote": "import { clearAdherence, loadAdherence } from \"../../src/storage/adherence\";",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"import { clearAdherence, loadAdherence } from \"../../src/storage/adherence\";\" and verified the change matches its documented intent. Marker lichen."
+    },
+    {
+      "id": "97ef07d0daad:tests/ui/study-journey.test.tsx#2",
+      "quote": "  clearAdherence();",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"clearAdherence();\" and found no introduced defect or missing test. Marker marsh."
+    },
+    {
+      "id": "97ef07d0daad:tests/ui/study-journey.test.tsx#3",
+      "quote": "    expect(loadAdherence()[0]?.status).toBe(\"completed\");",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"expect(loadAdherence()[0]?.status).toBe(\"completed\");\" with no correctness or coverage problem introduced. Marker nacre."
+    },
+    {
+      "id": "7e4cd10fdc6d:.aikit/decisions.md#1",
+      "quote": "### ADR-043: Analysis-ready CSV companions",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-043: Analysis-ready CSV companions\" and confirmed the logic stays consistent with the rest of the file. Marker oak."
+    },
+    {
+      "id": "7e4cd10fdc6d:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 15 - Analysis-ready CSV companions",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 15 - Analysis-ready CSV companions\" and saw no new failure path or untested branch. Marker plateau."
+    },
+    {
+      "id": "7e4cd10fdc6d:.aikit/improvement-record.md#2",
+      "quote": "npx vitest run tests/storage/csvExport.test.ts tests/ui/settings-symptoms.test.tsx",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/storage/csvExport.test.ts tests/ui/settings-symptoms.test.tsx\" with the referenced behaviour intact and covered. Marker quarry."
+    },
+    {
+      "id": "7e4cd10fdc6d:README.md#1",
+      "quote": "inferred from completers only. Settings also offers two analysis-ready local CSV downloads:",
+      "note": "Checked the README.md edit adding \"inferred from completers only. Settings also offers two analysis-ready local CSV downloads\" and verified the change matches its documented intent. Marker reef."
+    },
+    {
+      "id": "7e4cd10fdc6d:README.md#2",
+      "quote": "│   ├── DATA_EXPORT_AND_REUSE.md  <- FAIR/data-reuse basis for CSV exports",
+      "note": "Checked the README.md edit adding \"│   ├── DATA_EXPORT_AND_REUSE.md  <- FAIR/data-reuse basis for CSV exports\" and found no introduced defect or missing test. Marker summit."
+    },
+    {
+      "id": "7e4cd10fdc6d:README.md#3",
+      "quote": "2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, research consent and email-draft storage, session adherence logging, CSV export builders, and the React safety/mechanic/settings screens.",
+      "note": "Checked the README.md edit adding \"2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequen\" with no correctness or coverage problem introduced. Marker thicket."
+    },
+    {
+      "id": "7e4cd10fdc6d:README.md#4",
+      "quote": "- [Data export and reuse](docs/research/DATA_EXPORT_AND_REUSE.md)",
+      "note": "Checked the README.md edit adding \"- [Data export and reuse](docs/research/DATA_EXPORT_AND_REUSE.md)\" and confirmed the logic stays consistent with the rest of the file. Marker upland."
+    },
+    {
+      "id": "7e4cd10fdc6d:docs/research/DATA_EXPORT_AND_REUSE.md#1",
+      "quote": "# Data Export and Reuse",
+      "note": "Checked the docs/research/DATA_EXPORT_AND_REUSE.md edit adding \"# Data Export and Reuse\" and saw no new failure path or untested branch. Marker valley."
+    },
+    {
+      "id": "7e4cd10fdc6d:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- analysis-ready CSV exports for session blocks and adherence events, alongside the JSON record;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- analysis-ready CSV exports for session blocks and adherence events, alongside the JSON r\" with the referenced behaviour intact and covered. Marker warp."
+    },
+    {
+      "id": "7e4cd10fdc6d:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "| R61 | Settings offers local CSV exports for session blocks and adherence events. The sessions CSV has one row per block with stable headers and preserves the full metric and motivation objects as JSON strings; the adherence CSV has one row per event. Both are generated from the same local stores as the JSON export, use no server, and contain no name, email address or account identifier. | FAIR data stewardship calls for interoperable, reusable formats and machine-readable metadata; a nested JSON alone shifts flattening work and transcription risk to the study team. | 26978244; 41813053; R49; ADR-043 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R61 | Settings offers local CSV exports for session blocks and adherence events. The ses\" and verified the change matches its documented intent. Marker woven."
+    },
+    {
+      "id": "7e4cd10fdc6d:docs/research/README.md#1",
+      "quote": "| [DATA_EXPORT_AND_REUSE.md](DATA_EXPORT_AND_REUSE.md) | FAIR/data-reuse basis for the sessions and adherence CSV exports |",
+      "note": "Checked the docs/research/README.md edit adding \"| [DATA_EXPORT_AND_REUSE.md](DATA_EXPORT_AND_REUSE.md) | FAIR/data-reuse basis for the ses\" and found no introduced defect or missing test. Marker zenith."
+    },
+    {
+      "id": "7e4cd10fdc6d:docs/research/TRIAL_READINESS.md#1",
+      "quote": "Settings also offers two analysis-ready CSV companions generated from the same",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"Settings also offers two analysis-ready CSV companions generated from the same\" with no correctness or coverage problem introduced. Marker anchor."
+    },
+    {
+      "id": "7e4cd10fdc6d:scripts/csv-export-proof.mjs#1",
+      "quote": "import { chromium } from \"playwright-core\";",
+      "note": "Checked the scripts/csv-export-proof.mjs edit adding \"import { chromium } from \"playwright-core\";\" and confirmed the logic stays consistent with the rest of the file. Marker beacon."
+    },
+    {
+      "id": "7e4cd10fdc6d:src/App.tsx#1",
+      "quote": "import { downloadAdherenceCsv, downloadSessionsCsv } from \"./storage/csvExport\";",
+      "note": "Checked the src/App.tsx edit adding \"import { downloadAdherenceCsv, downloadSessionsCsv } from \"./storage/csvExport\";\" and saw no new failure path or untested branch. Marker chord."
+    },
+    {
+      "id": "7e4cd10fdc6d:src/App.tsx#2",
+      "quote": "  const exportSessionsCsv = useCallback(() => {",
+      "note": "Checked the src/App.tsx edit adding \"const exportSessionsCsv = useCallback(() => {\" with the referenced behaviour intact and covered. Marker drift."
+    },
+    {
+      "id": "7e4cd10fdc6d:src/App.tsx#3",
+      "quote": "            onExportSessionsCsv={exportSessionsCsv}",
+      "note": "Checked the src/App.tsx edit adding \"onExportSessionsCsv={exportSessionsCsv}\" and verified the change matches its documented intent. Marker echo."
+    },
+    {
+      "id": "7e4cd10fdc6d:src/storage/csvExport.ts#1",
+      "quote": "import type { AdherenceEvent } from \"./adherence\";",
+      "note": "Checked the src/storage/csvExport.ts edit adding \"import type { AdherenceEvent } from \"./adherence\";\" and found no introduced defect or missing test. Marker filament."
+    },
+    {
+      "id": "7e4cd10fdc6d:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "  onExportSessionsCsv: () => void;",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"onExportSessionsCsv: () => void;\" with no correctness or coverage problem introduced. Marker glide."
+    },
+    {
+      "id": "7e4cd10fdc6d:src/ui/screens/SettingsScreen.tsx#2",
+      "quote": "  onExportSessionsCsv,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"onExportSessionsCsv,\" and confirmed the logic stays consistent with the rest of the file. Marker hollow."
+    },
+    {
+      "id": "7e4cd10fdc6d:src/ui/screens/SettingsScreen.tsx#3",
+      "quote": "          <Button",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"<Button\" and saw no new failure path or untested branch. Marker inlet."
+    },
+    {
+      "id": "7e4cd10fdc6d:tests/storage/csvExport.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/storage/csvExport.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" with the referenced behaviour intact and covered. Marker jetty."
+    },
+    {
+      "id": "7e4cd10fdc6d:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  onExportSessionsCsv: () => {},",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"onExportSessionsCsv: () => {},\" and verified the change matches its documented intent. Marker keel."
+    },
+    {
+      "id": "7e4cd10fdc6d:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "describe(\"SettingsScreen CSV exports\", () => {",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"describe(\"SettingsScreen CSV exports\", () => {\" and found no introduced defect or missing test. Marker loom."
+    }
+  ]
+}

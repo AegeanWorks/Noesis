@@ -1,0 +1,110 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "8afc4e7c97de:.aikit/decisions.md#1",
+      "quote": "### ADR-022: Copyable week summary for accountability without accounts",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-022: Copyable week summary for accountability without accounts\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "8afc4e7c97de:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "### 6.18 Shareable accountability without accounts (November 2026)",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"### 6.18 Shareable accountability without accounts (November 2026)\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "8afc4e7c97de:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R46 | Settings offers a copyable one-line weekly summary (days, sessions, minutes, goal progress) for accountability reporting to a coach, clinician or investigator. Social support aids adherence; accounts do not exist, so the user pastes it themselves. | Self-monitoring plus social accountability support adherence; no new data leaves the device except by user action. | ADR-022 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R46 | Settings offers a copyable one-line weekly summary (days, sessions, minutes, goal \" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "8afc4e7c97de:docs/research/SEARCH_LOG.md#1",
+      "quote": "Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 30427874): specific goals (g=1.11), multi-component goal setting (d=0.55, daily-plus-weekly best) and implementation intentions with reinforcement (SMD 0.25). The goal-gradient mechanism (Kivetz et al., primary studies) stays narrative-only by the same rule and shapes the one-session-short nudge in R40. One planning-interventions record joined the table the same day (PMID 35742582, 41 RCTs, SMD 0.35): identifier confirmed via esummary, DOI matched.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 304278\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "8afc4e7c97de:src/App.tsx#1",
+      "quote": "            history={history}",
+      "note": "Checked the src/App.tsx edit adding \"history={history}\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "8afc4e7c97de:src/storage/export.ts#1",
+      "quote": "import { startOfWeek, weekStats } from \"./history\";",
+      "note": "Checked the src/storage/export.ts edit adding \"import { startOfWeek, weekStats } from \"./history\";\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "8afc4e7c97de:src/storage/export.ts#2",
+      "quote": "const MONTHS = [",
+      "note": "Checked the src/storage/export.ts edit adding \"const MONTHS = [\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "8afc4e7c97de:src/storage/history.ts#1",
+      "quote": "export function startOfWeek(now: Date): Date {",
+      "note": "Checked the src/storage/history.ts edit adding \"export function startOfWeek(now: Date): Date {\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "8afc4e7c97de:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "import { buildWeekSummaryText } from \"../../storage/export\";",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"import { buildWeekSummaryText } from \"../../storage/export\";\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "8afc4e7c97de:src/ui/screens/SettingsScreen.tsx#2",
+      "quote": "  history: readonly SessionRecord[];",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"history: readonly SessionRecord[];\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "8afc4e7c97de:src/ui/screens/SettingsScreen.tsx#3",
+      "quote": "  history,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"history,\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "8afc4e7c97de:src/ui/screens/SettingsScreen.tsx#4",
+      "quote": "  const [copiedSummary, setCopiedSummary] = useState(false);",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"const [copiedSummary, setCopiedSummary] = useState(false);\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "8afc4e7c97de:src/ui/screens/SettingsScreen.tsx#5",
+      "quote": "          <Button",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"<Button\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "8afc4e7c97de:tests/storage/export.test.ts#1",
+      "quote": "import { buildHistoryExport, buildWeekSummaryText } from \"../../src/storage/export\";",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"import { buildHistoryExport, buildWeekSummaryText } from \"../../src/storage/export\";\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "8afc4e7c97de:tests/storage/export.test.ts#2",
+      "quote": "  it(\"summarises the calendar week for sharing\", () => {",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"it(\"summarises the calendar week for sharing\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "8afc4e7c97de:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  history: [],",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"history: [],\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "8afc4e7c97de:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "  it(\"copies a human-readable week summary for accountability\", async () => {",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"it(\"copies a human-readable week summary for accountability\", async () => {\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "e24e6edf1b9f:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "11. **Marketing copy is an active ingredient.** Expectation alone moves training scores (Foroughi et al. 2016, PMID 27325761, primary study, narrative-only), so honest claims are not just ethics — they keep the measured effect attributable to practice.",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"11. **Marketing copy is an active ingredient.** Expectation alone moves training scores (F\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "e24e6edf1b9f:src/ui/screens/HomeScreen.tsx#1",
+      "quote": "      {heavyUse && !heavyUseDismissed ? (",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"{heavyUse && !heavyUseDismissed ? (\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "e24e6edf1b9f:src/ui/screens/HomeScreen.tsx#2",
+      "quote": "      {heavyUse && !heavyUseDismissed ? (",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"{heavyUse && !heavyUseDismissed ? (\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "e24e6edf1b9f:tests/ui/heavy-use.test.tsx#1",
+      "quote": "  it(\"shows safety before celebration when both trigger\", () => {",
+      "note": "Checked the tests/ui/heavy-use.test.tsx edit adding \"it(\"shows safety before celebration when both trigger\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    }
+  ]
+}

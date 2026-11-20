@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "surface": "app",
+  "mode": "visual",
+  "baseline_commit": "6ce187388da879161ed9c1db3f34b7c22f17d393",
+  "baseline_digest": "2d6be5e17527075e593e17960eed988d281f6807f136e9fe41bd05f1a2c39dc1",
+  "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+  "started_at": 1795191715.8289962,
+  "strikes": 1,
+  "baseline_snapshot": [],
+  "allowed_removals": [],
+  "retroactive_since": "6ce187388da879161ed9c1db3f34b7c22f17d393"
+}

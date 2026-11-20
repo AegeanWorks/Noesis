@@ -1,0 +1,35 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "dc68f7061292:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "Technology-based prompts raise engagement versus nothing (RR 1.27, 14 trials, PMID 26747176), best when they announce new content early — but the effect is borderline and heterogeneous, and unsolicited push would trade against the autonomy the whole design protects. So the in-app notices are the whole prompt layer: milestones, far-check due cards, weekly-goal nudges. No push channel, no inbox, no badge. A companion review of mHealth adherence drivers (99 studies, PMID 35612886) adds personalization, reminders and usable stable design on the plus side — and names technical difficulties the top barrier, which makes stability itself an adherence intervention. See R22, R53.",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"Technology-based prompts raise engagement versus nothing (RR 1.27, 14 trials, PMID 2674717\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "dc68f7061292:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R53 | In-app notices are the only engagement prompts: milestones, far-check due, weekly-goal nudges. No push channel is built or planned; unsolicited push would trade against autonomy, and adherence evidence names personalization, reminders and stable usable design as the drivers with technical difficulties the top barrier. See ADR-029. | Technology prompts beat no strategy (RR 1.27) with high heterogeneity; new-content prompts sent early work best. | 26747176; 35612886; ADR-029 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R53 | In-app notices are the only engagement prompts: milestones, far-check due, weekly-\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "c953a877277d:tests/ui/study-journey.test.tsx#1",
+      "quote": "import { clearFarChecks, loadFarChecks } from \"../../src/storage/farChecks\";",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"import { clearFarChecks, loadFarChecks } from \"../../src/storage/farChecks\";\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "c953a877277d:tests/ui/study-journey.test.tsx#2",
+      "quote": "  clearFarChecks();",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"clearFarChecks();\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "c953a877277d:tests/ui/study-journey.test.tsx#3",
+      "quote": "    expect(loadHistory()[0]?.arm).toBe(\"engagement\");",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"expect(loadHistory()[0]?.arm).toBe(\"engagement\");\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "c953a877277d:tests/ui/study-journey.test.tsx#4",
+      "quote": "    expect(loadHistory()[0]?.arm).toBe(\"control\");",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"expect(loadHistory()[0]?.arm).toBe(\"control\");\" and verified the change matches its documented intent. Marker fjord."
+    }
+  ]
+}

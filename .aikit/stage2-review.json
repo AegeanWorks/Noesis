@@ -1,0 +1,525 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "1d249fe96ed0:.aikit/decisions.md#1",
+      "quote": "### ADR-055: Experimental Change Detection focus test",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-055: Experimental Change Detection focus test\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 40 — Experimental Change Detection focus test",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 40 — Experimental Change Detection focus test\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:README.md#1",
+      "quote": "**Current phase: first working vertical slice.** One-click sessions, four core mechanics plus seven experimental focus tests (Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection), a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).",
+      "note": "Checked the README.md edit adding \"**Current phase: first working vertical slice.** One-click sessions, f\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1d249fe96ed0:README.md#2",
+      "quote": "Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four core mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection are available as single-test focus sessions from the Menu and are not in the default lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.",
+      "note": "Checked the README.md edit adding \"Session length (quick or standard) and difficulty (gentle, standard or\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1d249fe96ed0:README.md#3",
+      "quote": "The **Menu** tab is the explicit choice point. It lists every test - four core mechanics plus the experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection - with a short,",
+      "note": "Checked the README.md edit adding \"The **Menu** tab is the explicit choice point. It lists every test - f\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1d249fe96ed0:README.md#4",
+      "quote": "| Change Detection | Visual working memory | Experimental (focus test) | Hold a brief coloured array and tap the square that changed; reports accuracy, set size and reaction time. |",
+      "note": "Checked the README.md edit adding \"| Change Detection | Visual working memory | Experimental (focus test)\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1d249fe96ed0:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state machines, plus experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection focus tests;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as dete\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "- an experimental Change Detection focus test for visual working-memory practice;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- an experimental Change Detection focus test for visual working-memor\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:docs/research/DESIGN_IMPLICATIONS.md#3",
+      "quote": "| R52 | Default sessions interleave the four core mechanics; focus sessions are the deliberate blocked exception. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection are focus-only until the default lineup is revalidated. Interleaving beats blocking for inductive learning (g=0.42, strongest for complex similar material); word lists reverse it (blocking wins, g=-0.39), which the far checks blocked word-study respects. | Scheduling shapes inductive learning; material determines the direction. | 31556629; ADR-028; ADR-045; ADR-046; ADR-047; ADR-048; ADR-050; ADR-051; ADR-055 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R52 | Default sessions interleave the four core mechanics; focus ses\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1d249fe96ed0:docs/research/DESIGN_IMPLICATIONS.md#4",
+      "quote": "| R69 | Change Detection is an experimental focus test: a brief coloured array is held across a delay, then the changed square is selected, with accuracy, set-size and reaction-time metrics. It is not in the default lineup and makes no general-memory, academic, everyday-function or diagnostic claim. | No task-specific change-detection training meta-analysis was found; broader working-memory/executive-function training meta-analyses show short-term near transfer, so the claim is task practice only. | 30998045; 32011155; ADR-055 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R69 | Change Detection is an experimental focus test: a brief colour\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1d249fe96ed0:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "| Change detection | Visual working memory | No task-specific change-detection training meta-analysis; working-memory/executive-function training meta-analyses show short-term near transfer (30998045, 32011155) | Static coloured grid, one brief change; safe | **Implement as experimental focus test, claim-bounded exception** |",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"| Change detection | Visual working memory | No task-specific change-d\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1d249fe96ed0:docs/research/NEW_MECHANIC_CANDIDATES.md#2",
+      "quote": "### 4.6 Change Detection implementation and evidence limit",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"### 4.6 Change Detection implementation and evidence limit\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1d249fe96ed0:docs/research/NEW_MECHANIC_CANDIDATES.md#3",
+      "quote": "- **R69:** Change Detection is an experimental focus test: a brief coloured array is held across",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- **R69:** Change Detection is an experimental focus test: a brief col\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:docs/research/SEARCH_LOG.md#1",
+      "quote": "A 2026-11-08 visual working-memory search found no eligible change-detection training meta-analysis. The broader working-memory/executive-function training records (PMIDs 30998045, 32011155) already in the corpus stayed the quantitative basis. Change Detection was added as an experimental focus test with an explicit task-specific evidence exception (R69, ADR-055), using a static coloured grid and one brief change; no evidence-table record was added.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 visual working-memory search found no eligible change-det\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:docs/research/TRIAL_READINESS.md#1",
+      "quote": "and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection are Menu focus tests",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"and the Motivation pause. The experimental Task Switch, Flanker, Spati\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1d249fe96ed0:scripts/ai-drive.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\", \"spatial\", \"rotation\", \"prospective\", \"paired\", \"change\"];",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasonin\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1d249fe96ed0:scripts/ai-drive.ts#2",
+      "quote": "        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switching, flanker, spatial, rotation, prospective, paired or change.`);",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reason\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1d249fe96ed0:scripts/ai-drive.ts#3",
+      "quote": "  --mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective|paired|change>   default: nback",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"--mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rot\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1d249fe96ed0:scripts/change-proof.mjs#1",
+      "quote": "// Scripted Change Detection focus proof: Menu card, briefing, played three-block session,",
+      "note": "Checked the scripts/change-proof.mjs edit adding \"// Scripted Change Detection focus proof: Menu card, briefing, played \" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:scripts/verify-mechanics.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\", \"spatial\", \"rotation\", \"prospective\", \"paired\", \"change\"];",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasonin\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/evidence.ts#1",
+      "quote": "  change: {",
+      "note": "Checked the src/engine/evidence.ts edit adding \"change: {\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/mechanics/change.ts#1",
+      "quote": "import { stableHash } from \"../hash\";",
+      "note": "Checked the src/engine/mechanics/change.ts edit adding \"import { stableHash } from \"../hash\";\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/mechanics/index.ts#1",
+      "quote": "import {",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"import {\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/mechanics/index.ts#2",
+      "quote": "  if (id === \"change\") return 12;",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"change\") return 12;\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/mechanics/index.ts#3",
+      "quote": "  if (id === \"change\") return createChange(seed, changeConfig(difficulty, trials));",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"change\") return createChange(seed, changeConfig(difficulty\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/mechanics/index.ts#4",
+      "quote": "  if (state.mechanic === \"change\") return applyChangeAction(state, action);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"change\") return applyChangeAction(state, actio\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/mechanics/index.ts#5",
+      "quote": "  if (state.mechanic === \"change\") return changeView(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"change\") return changeView(state);\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/mechanics/index.ts#6",
+      "quote": "  if (state.mechanic === \"change\") return changeResult(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"change\") return changeResult(state);\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/mechanics/index.ts#7",
+      "quote": "  if (state.mechanic === \"change\") return changeComplete(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"change\") return changeComplete(state);\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/schema.ts#1",
+      "quote": "  \"change\",",
+      "note": "Checked the src/engine/schema.ts edit adding \"\"change\",\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/simulate.ts#1",
+      "quote": "  ChangeState,",
+      "note": "Checked the src/engine/simulate.ts edit adding \"ChangeState,\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/simulate.ts#2",
+      "quote": "  if (state.mechanic === \"change\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"change\") {\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/simulate.ts#3",
+      "quote": "  if (state.mechanic === \"change\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"change\") {\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/simulate.ts#4",
+      "quote": "    if (state.mechanic === \"change\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"change\") {\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/simulate.ts#5",
+      "quote": "export function runMechanic(",
+      "note": "Checked the src/engine/simulate.ts edit adding \"export function runMechanic(\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/types.ts#1",
+      "quote": "  \"change\",",
+      "note": "Checked the src/engine/types.ts edit adding \"\"change\",\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/types.ts#2",
+      "quote": "export interface ChangeConfig {",
+      "note": "Checked the src/engine/types.ts edit adding \"export interface ChangeConfig {\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:src/engine/types.ts#3",
+      "quote": "  | PairedState",
+      "note": "Checked the src/engine/types.ts edit adding \"| PairedState\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:src/storage/adaptive.ts#1",
+      "quote": "    change: 2,",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"change: 2,\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1d249fe96ed0:src/styles.css#1",
+      "quote": ".stage-change {",
+      "note": "Checked the src/styles.css edit adding \".stage-change {\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1d249fe96ed0:src/ui/components/MechanicStage.tsx#1",
+      "quote": "function ChangeStage({ view, onAnswer }: Omit<MechanicStageProps, \"onRespond\">) {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"function ChangeStage({ view, onAnswer }: Omit<MechanicStageProps, \"onR\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1d249fe96ed0:src/ui/components/MechanicStage.tsx#2",
+      "quote": "  if (view.mechanic === \"change\") {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"if (view.mechanic === \"change\") {\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1d249fe96ed0:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  set_size: \"Set size\",",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"set_size: \"Set size\",\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  change: [\"accuracy\", \"set_size\", \"mean_response_ms\"],",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"change: [\"accuracy\", \"set_size\", \"mean_response_ms\"],\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "          view.mechanic.mechanic === \"paired\" ||",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"view.mechanic.mechanic === \"paired\" ||\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1d249fe96ed0:tests/engine/ai.test.ts#1",
+      "quote": "    expect(api.listMechanics()).toHaveLength(11);",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"expect(api.listMechanics()).toHaveLength(11);\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1d249fe96ed0:tests/engine/change.test.ts#1",
+      "quote": "﻿import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/change.test.ts edit adding \"﻿import { describe, expect, it } from \"vitest\";\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1d249fe96ed0:tests/scripts/ai-drive-flags.test.ts#1",
+      "quote": "    expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective|paired|change\");",
+      "note": "Checked the tests/scripts/ai-drive-flags.test.ts edit adding \"expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flank\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1d249fe96ed0:tests/storage/adaptive.test.ts#1",
+      "quote": "    expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2, change: 2 });",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:tests/storage/adaptive.test.ts#2",
+      "quote": "      change: 2,",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"change: 2,\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:tests/storage/adaptive.test.ts#3",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2, change: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: \" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1d249fe96ed0:tests/storage/adaptive.test.ts#4",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2, change: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: \" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1d249fe96ed0:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "  it(\"round-trips a running Change Detection block\", () => {",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"it(\"round-trips a running Change Detection block\", () => {\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1d249fe96ed0:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "  it(\"renders the change-detection grid and sends the tapped square\", () => {",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"it(\"renders the change-detection grid and sends the tapped square\", ()\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1d249fe96ed0:tests/ui/practice-menu.test.tsx#1",
+      "quote": "    for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flanker\", \"Spatial Span\", \"Mental Rotation\", \"Prospective Memory\", \"Paired Associates\", \"Change Detection\"]) {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1d249fe96ed0:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2, change: 2 } as const,",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switchi\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1d249fe96ed0:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "    expect(screen.getAllByText(\"Level 2\")).toHaveLength(11);",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"expect(screen.getAllByText(\"Level 2\")).toHaveLength(11);\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "e39492d59f27:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 41 — Change Detection resume proof and level-aware trends",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 41 — Change Detection resume proof and level-aware trends\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "e39492d59f27:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "- Metrics: accuracy, set size, mean response time, timeouts and streaks. The Choose-a-test card",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- Metrics: accuracy, set size, mean response time, timeouts and streak\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "e39492d59f27:scripts/change-resume-proof.mjs#1",
+      "quote": "// Scripted Change Detection focus playthrough with a mid-session reload.",
+      "note": "Checked the scripts/change-resume-proof.mjs edit adding \"// Scripted Change Detection focus playthrough with a mid-session relo\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "e39492d59f27:scripts/change-trend-proof.mjs#1",
+      "quote": "// Scripted Change Detection history proof: seeds accuracy/set-size/RT at levels 1-3,",
+      "note": "Checked the scripts/change-trend-proof.mjs edit adding \"// Scripted Change Detection history proof: seeds accuracy/set-size/RT\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "e39492d59f27:src/styles.css#1",
+      "quote": ".menu-change-trend {",
+      "note": "Checked the src/styles.css edit adding \".menu-change-trend {\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "  mechanic: \"rotation\" | \"paired\" | \"change\",",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"mechanic: \"rotation\" | \"paired\" | \"change\",\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "interface ChangeLevel extends DualMetricLevel {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"interface ChangeLevel extends DualMetricLevel {\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "  const changeLevel =",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const changeLevel =\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/PracticeMenuScreen.tsx#4",
+      "quote": "      {changeTrendLine ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{changeTrendLine ? (\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/PracticeMenuScreen.tsx#5",
+      "quote": "  const changeTrendLevels = changeLevels(history);",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const changeTrendLevels = changeLevels(history);\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/PracticeMenuScreen.tsx#6",
+      "quote": "      {changeTrendLevels.length > 0 ? <ChangeTrendCard levels={changeTrendLevels} /> : null}",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{changeTrendLevels.length > 0 ? <ChangeTrendCard levels={changeTrendLe\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  changeAccuracyComparison,",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"changeAccuracyComparison,\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  changeAccuracyComparison: SwitchCostComparison | null;",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"changeAccuracyComparison: SwitchCostComparison | null;\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "  const changeAccuracy = accuracyChange(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const changeAccuracy = accuracyChange(\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "      {result.mechanic === \"change\" ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{result.mechanic === \"change\" ? (\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "  const changeAccuracyComparisons = costComparisons(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const changeAccuracyComparisons = costComparisons(\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "e39492d59f27:src/ui/screens/ResultsScreen.tsx#6",
+      "quote": "              changeAccuracyComparison={changeAccuracyComparisons[index] ?? null}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"changeAccuracyComparison={changeAccuracyComparisons[index] ?? null}\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "e39492d59f27:tests/ui/change-result-delta.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/change-result-delta.test.tsx edit adding \"// @vitest-environment jsdom\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "e39492d59f27:tests/ui/practice-menu.test.tsx#1",
+      "quote": "function changeRecord(",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"function changeRecord(\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "e39492d59f27:tests/ui/practice-menu.test.tsx#2",
+      "quote": "  it(\"shows a level-aware Change Detection accuracy, set-size and response-time trend\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"shows a level-aware Change Detection accuracy, set-size and respon\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1b5badc5cab9:.aikit/decisions.md#1",
+      "quote": "### ADR-056: Judgments-of-learning evidence bounds the confidence check",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-056: Judgments-of-learning evidence bounds the confidence chec\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1b5badc5cab9:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 42 — Judgments-of-learning evidence bounds the confidence check",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 42 — Judgments-of-learning evidence bounds the confidence che\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1b5badc5cab9:README.md#1",
+      "quote": "The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 123 records with 285 outcomes (90 primary, 33 context).",
+      "note": "Checked the README.md edit adding \"The review screened 2,360 unique bibliographic records and 363 trial r\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "- **Judgments-of-learning boundary:** Ingendahl et al. 2025 (PMID 40875340; *Psychological",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- **Judgments-of-learning boundary:** Ingendahl et al. 2025 (PMID 4087\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/README.md#1",
+      "quote": "**Status:** v1.0 corpus complete; current review revision v1.7 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered",
+      "note": "Checked the docs/research/README.md edit adding \"**Status:** v1.0 corpus complete; current review revision v1.7 (2026-1\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (123 records, 285 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machi\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis40875340,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis40875340,\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/REFERENCES.md#1",
+      "quote": "- Do immediate judgments of learning alter memory performance? A meta-analytical review. *Psychological Bulletin*. 2025. PMID: [40875340](https://pubmed.ncbi.nlm.nih.gov/40875340/). DOI: [10.1037/bul0000487](https://doi.org/10.1037/bul0000487).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Do immediate judgments of learning alter memory performance? A meta-\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 123 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 123 |\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/SEARCH_LOG.md#2",
+      "quote": "| cct | 44 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| cct | 44 |\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 112 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 112 |\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/SEARCH_LOG.md#4",
+      "quote": "A 2026-11-08 judgments-of-learning search added one context record: Ingendahl et al. 2025 (PMID 40875340; *Psychological Bulletin*; 344 effect sizes from 175 experiments, N=15,079; immediate JOL reactivity g=0.22, 95% CI [0.17, 0.27]; related pairs g=0.44, unrelated pairs g=-0.09; publication bias indicated). The DOI and metadata were verified via PubMed esummary/efetch. It bounds the optional confidence check: the app now states in the briefing that item-level confidence judgments can subtly change memory and that confidence is often a weak predictor, and it labels the block-level prompt as a reflection rather than a validated memory intervention (ADR-056). Double et al. 2018 (PMID 29161973) and Hu et al. 2025 (PMID 40845062) stayed narrative-only. The review is now 123 records and 285 outcomes, revision v1.7.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 judgments-of-learning search added one context record: In\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 123 records (90 primary, 33 context) and 285 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records, one test-anxiety record, one interleaving record, one engagement-prompts record, one adherence record, two self-determination-theory meta-analyses, two e-consent systematic reviews, two executive-function training meta-analyses, one Corsi/spatial-span meta-analysis, one spatial-training meta-analysis, one prospective-memory meta-analysis, one mnemonic-training meta-analysis and one judgments-of-learning reactivity meta-analysis. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic revi\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/SYNTHESIS.md#2",
+      "quote": "All 123 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 123 included records, with PMIDs and verified DOIs, are listed in \" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1b5badc5cab9:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"40875340\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"40875340\",\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1b5badc5cab9:src/content/appMeta.ts#1",
+      "quote": "export const EVIDENCE_REVIEW_VERSION = \"v1.7 (2026-11-08)\";",
+      "note": "Checked the src/content/appMeta.ts edit adding \"export const EVIDENCE_REVIEW_VERSION = \"v1.7 (2026-11-08)\";\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1b5badc5cab9:src/ui/components/TestBriefing.tsx#1",
+      "quote": "          <p className=\"fine confidence-evidence\" data-testid=\"confidence-evidence\">",
+      "note": "Checked the src/ui/components/TestBriefing.tsx edit adding \"<p className=\"fine confidence-evidence\" data-testid=\"confidence-eviden\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1b5badc5cab9:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 123 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 123 reviews an\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1b5badc5cab9:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "        diagnostic calibration. Confidence is often only a weak predictor of actual accuracy.",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"diagnostic calibration. Confidence is often only a weak predictor of a\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1b5badc5cab9:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "          calibration. Confidence is often only a weak predictor of accuracy.",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"calibration. Confidence is often only a weak predictor of accuracy.\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1b5badc5cab9:tests/storage/export.test.ts#1",
+      "quote": "      evidenceReview: expect.stringMatching(/v1\\.7/),",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"evidenceReview: expect.stringMatching(/v1\\.7/),\" with no correctness or coverage problem introduced."
+    },
+    {
+      "id": "1b5badc5cab9:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 123)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 123)\" and confirmed the logic stays consistent with the rest of the file."
+    },
+    {
+      "id": "1b5badc5cab9:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(status[\"verified\"], 112)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(status[\"verified\"], 112)\" and saw no new failure path or untested branch."
+    },
+    {
+      "id": "1b5badc5cab9:tests/test_review_snapshot.py#3",
+      "quote": "<blank line>",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"<blank line>\" with the referenced behaviour intact and covered."
+    },
+    {
+      "id": "1b5badc5cab9:tests/ui/confidence-note.test.tsx#1",
+      "quote": "    expect(note).toMatch(/weak predictor/i);",
+      "note": "Checked the tests/ui/confidence-note.test.tsx edit adding \"expect(note).toMatch(/weak predictor/i);\" and verified the change matches its documented intent."
+    },
+    {
+      "id": "1b5badc5cab9:tests/ui/practice-menu.test.tsx#1",
+      "quote": "  it(\"cautions that confidence is a weak predictor in the summary\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"cautions that confidence is a weak predictor in the summary\", () =\" and found no introduced defect or missing test."
+    },
+    {
+      "id": "1b5badc5cab9:tests/ui/test-briefing.test.tsx#1",
+      "quote": "  it(\"bounds the confidence check with judgments-of-learning evidence\", () => {",
+      "note": "Checked the tests/ui/test-briefing.test.tsx edit adding \"it(\"bounds the confidence check with judgments-of-learning evidence\", \" with no correctness or coverage problem introduced."
+    }
+  ]
+}

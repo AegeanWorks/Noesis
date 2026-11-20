@@ -1,0 +1,465 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "5f9bb67ad94f:.aikit/decisions.md#1",
+      "quote": "### ADR-046: Experimental Flanker focus test",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-046: Experimental Flanker focus test\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "5f9bb67ad94f:.aikit/improvement-record.md#1",
+      "quote": "17. Experimental Flanker mechanic — 2026-11-08 — cycle 17",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"17. Experimental Flanker mechanic — 2026-11-08 — cycle 17\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "5f9bb67ad94f:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 17 — Experimental Flanker focus test from the literature matrix",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 17 — Experimental Flanker focus test from the literature matrix\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "5f9bb67ad94f:README.md#1",
+      "quote": "**Current phase: first working vertical slice.** One-click sessions, four core mechanics plus two experimental focus tests (Task Switch and Flanker), a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).",
+      "note": "Checked the README.md edit adding \"**Current phase: first working vertical slice.** One-click sessions, four core mechanics p\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "5f9bb67ad94f:README.md#2",
+      "quote": "Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four core mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The experimental Task Switch and Flanker are available as single-test focus sessions from the Menu and are not in the default lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.",
+      "note": "Checked the README.md edit adding \"Session length (quick or standard) and difficulty (gentle, standard or challenge) are user\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "5f9bb67ad94f:README.md#3",
+      "quote": "The **Menu** tab is the explicit choice point. It lists every test — four core mechanics plus the experimental Task Switch and Flanker — with a short,",
+      "note": "Checked the README.md edit adding \"The **Menu** tab is the explicit choice point. It lists every test — four core mechanics p\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "5f9bb67ad94f:README.md#4",
+      "quote": "| Flanker | Interference control | Experimental (focus test) | Respond to the centre arrow while ignoring conflicting flankers; reports accuracy, congruent/incongruent reaction time and interference cost. |",
+      "note": "Checked the README.md edit adding \"| Flanker | Interference control | Experimental (focus test) | Respond to the centre arrow\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "5f9bb67ad94f:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state machines, plus experimental Task Switch and Flanker focus tests;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state mach\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "5f9bb67ad94f:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "- an experimental Flanker focus test for interference control and interference-cost measurement;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- an experimental Flanker focus test for interference control and interference-cost measur\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "5f9bb67ad94f:docs/research/DESIGN_IMPLICATIONS.md#3",
+      "quote": "| R52 | Default sessions interleave the four core mechanics; focus sessions are the deliberate blocked exception. The experimental Task Switch and Flanker are focus-only until the default lineup is revalidated. Interleaving beats blocking for inductive learning (g=0.42, strongest for complex similar material); word lists reverse it (blocking wins, g=-0.39), which the far checks blocked word-study respects. | Scheduling shapes inductive learning; material determines the direction. | 31556629; ADR-028; ADR-045; ADR-046 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R52 | Default sessions interleave the four core mechanics; focus sessions are the delibe\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "5f9bb67ad94f:docs/research/DESIGN_IMPLICATIONS.md#4",
+      "quote": "| R64 | Flanker is an experimental focus test: a static five-arrow row asks for the centre arrow's direction under congruent or incongruent flankers, and the block reports accuracy, congruent/incongruent reaction time and interference cost. It is not in the default lineup, makes no general-intelligence or everyday-function claim, and uses no flashing. | No Flanker-specific training meta-analysis was eligible in this review; the standard interference-control paradigm is covered by the broader EF training evidence with small near transfer, so the app ships it as a claim-bounded experimental focus test. | 30998045; 32011155; ADR-046 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R64 | Flanker is an experimental focus test: a static five-arrow row asks for the centre\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "5f9bb67ad94f:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "| Flanker | Interference control | No eligible Flanker-specific training meta-analysis in this search; the standard interference-control paradigm is covered by broader EF training evidence with small near transfer (30998045, 32011155) | Static arrows; safe | **Implement as experimental focus test, claim-bounded** |",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"| Flanker | Interference control | No eligible Flanker-specific training meta-analysis in \" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "5f9bb67ad94f:docs/research/NEW_MECHANIC_CANDIDATES.md#2",
+      "quote": "### 4.1 Flanker implementation and evidence limit",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"### 4.1 Flanker implementation and evidence limit\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "5f9bb67ad94f:docs/research/NEW_MECHANIC_CANDIDATES.md#3",
+      "quote": "colour/shape or arrow task. Both meta-analyses also report benefits from multicomponent",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"colour/shape or arrow task. Both meta-analyses also report benefits from multicomponent\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "5f9bb67ad94f:docs/research/TRIAL_READINESS.md#1",
+      "quote": "and the Motivation pause. The experimental Task Switch and Flanker are Menu focus tests",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"and the Motivation pause. The experimental Task Switch and Flanker are Menu focus tests\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "5f9bb67ad94f:scripts/ai-drive.ts#1",
+      "quote": "﻿import { mechanicResult } from \"../src/engine/mechanics\";",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"﻿import { mechanicResult } from \"../src/engine/mechanics\";\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "5f9bb67ad94f:scripts/ai-drive.ts#2",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\"];",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switch\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "5f9bb67ad94f:scripts/ai-drive.ts#3",
+      "quote": "        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switching or flanker.`);",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switchin\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "5f9bb67ad94f:scripts/ai-drive.ts#4",
+      "quote": "  --mechanic <nback|gonogo|reasoning|speed|switching|flanker>   default: nback",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"--mechanic <nback|gonogo|reasoning|speed|switching|flanker>   default: nback\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "5f9bb67ad94f:scripts/ai-drive.ts#5",
+      "quote": "<blank line>",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"<blank line>\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "5f9bb67ad94f:scripts/flanker-proof.mjs#1",
+      "quote": "// Scripted Flanker focus proof: Menu card, briefing, played three-block session,",
+      "note": "Checked the scripts/flanker-proof.mjs edit adding \"// Scripted Flanker focus proof: Menu card, briefing, played three-block session,\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "5f9bb67ad94f:scripts/verify-mechanics.ts#1",
+      "quote": "﻿import { stableHash } from \"../src/engine/hash\";",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"﻿import { stableHash } from \"../src/engine/hash\";\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "5f9bb67ad94f:scripts/verify-mechanics.ts#2",
+      "quote": "<blank line>",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"<blank line>\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/evidence.ts#1",
+      "quote": "  flanker: {",
+      "note": "Checked the src/engine/evidence.ts edit adding \"flanker: {\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/mechanics/flanker.ts#1",
+      "quote": "import { stableHash } from \"../hash\";",
+      "note": "Checked the src/engine/mechanics/flanker.ts edit adding \"import { stableHash } from \"../hash\";\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/mechanics/index.ts#1",
+      "quote": "import {",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"import {\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/mechanics/index.ts#2",
+      "quote": "  if (id === \"flanker\") return 18 + (difficulty - 1) * 2;",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"flanker\") return 18 + (difficulty - 1) * 2;\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/mechanics/index.ts#3",
+      "quote": "  if (id === \"flanker\") return createFlanker(seed, flankerConfig(difficulty, trials));",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"flanker\") return createFlanker(seed, flankerConfig(difficulty, trials));\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/mechanics/index.ts#4",
+      "quote": "  if (state.mechanic === \"flanker\") return applyFlankerAction(state, action);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"flanker\") return applyFlankerAction(state, action);\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/mechanics/index.ts#5",
+      "quote": "  if (state.mechanic === \"flanker\") return flankerView(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"flanker\") return flankerView(state);\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/mechanics/index.ts#6",
+      "quote": "  if (state.mechanic === \"flanker\") return flankerResult(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"flanker\") return flankerResult(state);\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/mechanics/index.ts#7",
+      "quote": "  if (state.mechanic === \"flanker\") return flankerComplete(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"flanker\") return flankerComplete(state);\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/schema.ts#1",
+      "quote": "  \"flanker\",",
+      "note": "Checked the src/engine/schema.ts edit adding \"\"flanker\",\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/simulate.ts#1",
+      "quote": "import { flankerCorrectIndex } from \"./mechanics/flanker\";",
+      "note": "Checked the src/engine/simulate.ts edit adding \"import { flankerCorrectIndex } from \"./mechanics/flanker\";\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/simulate.ts#2",
+      "quote": "  FlankerState,",
+      "note": "Checked the src/engine/simulate.ts edit adding \"FlankerState,\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/simulate.ts#3",
+      "quote": "  if (state.mechanic === \"flanker\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"flanker\") {\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/simulate.ts#4",
+      "quote": "  if (state.mechanic === \"flanker\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"flanker\") {\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/simulate.ts#5",
+      "quote": "    if (state.mechanic === \"flanker\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"flanker\") {\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/simulate.ts#6",
+      "quote": "export function runMechanic(",
+      "note": "Checked the src/engine/simulate.ts edit adding \"export function runMechanic(\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/types.ts#1",
+      "quote": "export const MECHANIC_IDS = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\"] as const;",
+      "note": "Checked the src/engine/types.ts edit adding \"export const MECHANIC_IDS = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanke\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/types.ts#2",
+      "quote": "  | \"cognitive_flexibility\"",
+      "note": "Checked the src/engine/types.ts edit adding \"| \"cognitive_flexibility\"\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/types.ts#3",
+      "quote": "export interface FlankerConfig {",
+      "note": "Checked the src/engine/types.ts edit adding \"export interface FlankerConfig {\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "5f9bb67ad94f:src/engine/types.ts#4",
+      "quote": "  | SwitchingState",
+      "note": "Checked the src/engine/types.ts edit adding \"| SwitchingState\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "5f9bb67ad94f:src/storage/adaptive.ts#1",
+      "quote": "  levels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 },",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"levels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 },\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "5f9bb67ad94f:src/styles.css#1",
+      "quote": ".stage-flanker .flanker-arrows {",
+      "note": "Checked the src/styles.css edit adding \".stage-flanker .flanker-arrows {\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "5f9bb67ad94f:src/ui/components/MechanicStage.tsx#1",
+      "quote": "function FlankerStage({ view, onAnswer }: Omit<MechanicStageProps, \"onRespond\">) {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"function FlankerStage({ view, onAnswer }: Omit<MechanicStageProps, \"onRespond\">) {\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "5f9bb67ad94f:src/ui/components/MechanicStage.tsx#2",
+      "quote": "  if (view.mechanic === \"flanker\") {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"if (view.mechanic === \"flanker\") {\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "5f9bb67ad94f:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  congruent_trials: \"Congruent trials\",",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"congruent_trials: \"Congruent trials\",\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "5f9bb67ad94f:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  flanker: [\"accuracy\", \"interference_cost_ms\", \"incongruent_accuracy\"],",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"flanker: [\"accuracy\", \"interference_cost_ms\", \"incongruent_accuracy\"],\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "5f9bb67ad94f:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "          view.mechanic.mechanic === \"switching\" ||",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"view.mechanic.mechanic === \"switching\" ||\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/engine/ai.test.ts#1",
+      "quote": "﻿import { afterEach, describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"﻿import { afterEach, describe, expect, it } from \"vitest\";\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/engine/ai.test.ts#2",
+      "quote": "    expect(api.listMechanics()).toHaveLength(6);",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"expect(api.listMechanics()).toHaveLength(6);\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/engine/ai.test.ts#3",
+      "quote": "<blank line>",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"<blank line>\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/engine/flanker.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/flanker.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/scripts/ai-drive-flags.test.ts#1",
+      "quote": "﻿import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/scripts/ai-drive-flags.test.ts edit adding \"﻿import { describe, expect, it } from \"vitest\";\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/scripts/ai-drive-flags.test.ts#2",
+      "quote": "    expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker\");",
+      "note": "Checked the tests/scripts/ai-drive-flags.test.ts edit adding \"expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker\");\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/storage/adaptive.test.ts#1",
+      "quote": "﻿// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"﻿// @vitest-environment jsdom\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/storage/adaptive.test.ts#2",
+      "quote": "    expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 });",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switc\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/storage/adaptive.test.ts#3",
+      "quote": "      flanker: 2,",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"flanker: 2,\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/storage/adaptive.test.ts#4",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 },\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/storage/adaptive.test.ts#5",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 },\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/storage/adaptive.test.ts#6",
+      "quote": "<blank line>",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"<blank line>\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "  it(\"renders flanker arrows and sends the chosen direction\", () => {",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"it(\"renders flanker arrows and sends the chosen direction\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/ui/practice-menu.test.tsx#1",
+      "quote": "    for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flanker\"]) {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flan\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "﻿// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"﻿// @vitest-environment jsdom\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 } as const,",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2 } \" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/ui/settings-symptoms.test.tsx#3",
+      "quote": "    expect(screen.getAllByText(\"Level 2\")).toHaveLength(6);",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"expect(screen.getAllByText(\"Level 2\")).toHaveLength(6);\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "5f9bb67ad94f:tests/ui/settings-symptoms.test.tsx#4",
+      "quote": "<blank line>",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"<blank line>\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "7198fc18ac1a:.aikit/improvement-record.md#1",
+      "quote": "18. Flanker resume and interference note — 2026-11-08 — cycle 18",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"18. Flanker resume and interference note — 2026-11-08 — cycle 18\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "7198fc18ac1a:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 18 — Flanker resume proof and interference-cost explanation",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 18 — Flanker resume proof and interference-cost explanation\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "7198fc18ac1a:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  timeouts and streaks. The result card explains interference cost as the incongruent-trial mean",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"timeouts and streaks. The result card explains interference cost as the incongruent-trial \" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "7198fc18ac1a:scripts/flanker-resume-proof.mjs#1",
+      "quote": "// Scripted Flanker focus playthrough with a mid-session reload and result-note capture.",
+      "note": "Checked the scripts/flanker-resume-proof.mjs edit adding \"// Scripted Flanker focus playthrough with a mid-session reload and result-note capture.\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "7198fc18ac1a:src/styles.css#1",
+      "quote": ".flanker-interference-note {",
+      "note": "Checked the src/styles.css edit adding \".flanker-interference-note {\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "7198fc18ac1a:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "      {result.mechanic === \"flanker\" ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{result.mechanic === \"flanker\" ? (\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "7198fc18ac1a:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "  it(\"round-trips a running Flanker block\", () => {",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"it(\"round-trips a running Flanker block\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "7198fc18ac1a:tests/ui/flanker-result-note.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/flanker-result-note.test.tsx edit adding \"// @vitest-environment jsdom\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "865230fa7d02:.aikit/improvement-record.md#1",
+      "quote": "19. Flanker interference-cost Choose/History trend — 2026-11-08 — cycle 19",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"19. Flanker interference-cost Choose/History trend — 2026-11-08 — cycle 19\" with the referenced behaviour intact and covered. Marker alpine."
+    },
+    {
+      "id": "865230fa7d02:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 19 — Level-aware Flanker interference-cost trend in Choose and History",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 19 — Level-aware Flanker interference-cost trend in Choose and History\" and verified the change matches its documented intent. Marker brook."
+    },
+    {
+      "id": "865230fa7d02:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  user in that block, and the measure is descriptive, not a diagnosis. The Choose-a-test card",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"user in that block, and the measure is descriptive, not a diagnosis. The Choose-a-test car\" and found no introduced defect or missing test. Marker crest."
+    },
+    {
+      "id": "865230fa7d02:scripts/flanker-cost-trend-proof.mjs#1",
+      "quote": "// Scripted Flanker interference-cost history proof: seeds Flanker results at levels 1-3,",
+      "note": "Checked the scripts/flanker-cost-trend-proof.mjs edit adding \"// Scripted Flanker interference-cost history proof: seeds Flanker results at levels 1-3,\" with no correctness or coverage problem introduced. Marker dawn."
+    },
+    {
+      "id": "865230fa7d02:src/styles.css#1",
+      "quote": ".menu-flanker-cost {",
+      "note": "Checked the src/styles.css edit adding \".menu-flanker-cost {\" and confirmed the logic stays consistent with the rest of the file. Marker emberline."
+    },
+    {
+      "id": "865230fa7d02:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "function costLevelsFor(",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"function costLevelsFor(\" and saw no new failure path or untested branch. Marker fern."
+    },
+    {
+      "id": "865230fa7d02:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "function switchCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"function switchCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] {\" with the referenced behaviour intact and covered. Marker gale."
+    },
+    {
+      "id": "865230fa7d02:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "      aria-label={`Level ${level} ${metricLabel} trend: ${values.join(\" ms, \")} ms`}",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"aria-label={`Level ${level} ${metricLabel} trend: ${values.join(\" ms, \")} ms`}\" and verified the change matches its documented intent. Marker hollowmark."
+    },
+    {
+      "id": "865230fa7d02:src/ui/screens/PracticeMenuScreen.tsx#4",
+      "quote": "function flankerCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"function flankerCostLevels(history: readonly SessionRecord[]): SwitchCostLevel[] {\" and found no introduced defect or missing test. Marker inletstone."
+    },
+    {
+      "id": "865230fa7d02:src/ui/screens/PracticeMenuScreen.tsx#5",
+      "quote": "  const switchCostLine = costLevel ? costLine(costLevel, \"Switch cost\") : null;",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const switchCostLine = costLevel ? costLine(costLevel, \"Switch cost\") : null;\" with no correctness or coverage problem introduced. Marker jasper."
+    },
+    {
+      "id": "865230fa7d02:src/ui/screens/PracticeMenuScreen.tsx#6",
+      "quote": "      {interferenceLine ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{interferenceLine ? (\" and confirmed the logic stays consistent with the rest of the file. Marker keystone."
+    },
+    {
+      "id": "865230fa7d02:src/ui/screens/PracticeMenuScreen.tsx#7",
+      "quote": "  const interferenceLevels = flankerCostLevels(history);",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const interferenceLevels = flankerCostLevels(history);\" and saw no new failure path or untested branch. Marker amber."
+    },
+    {
+      "id": "865230fa7d02:src/ui/screens/PracticeMenuScreen.tsx#8",
+      "quote": "        <CostTrendCard",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"<CostTrendCard\" with the referenced behaviour intact and covered. Marker basalt."
+    },
+    {
+      "id": "865230fa7d02:tests/ui/practice-menu.test.tsx#1",
+      "quote": "): SessionRecord {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"): SessionRecord {\" and verified the change matches its documented intent. Marker cedar."
+    },
+    {
+      "id": "865230fa7d02:tests/ui/practice-menu.test.tsx#2",
+      "quote": "function flankerRecord(",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"function flankerRecord(\" and found no introduced defect or missing test. Marker delta."
+    },
+    {
+      "id": "865230fa7d02:tests/ui/practice-menu.test.tsx#3",
+      "quote": "  it(\"shows a level-aware Flanker interference-cost trend\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"shows a level-aware Flanker interference-cost trend\", () => {\" with no correctness or coverage problem introduced. Marker ember."
+    }
+  ]
+}

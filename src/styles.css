@@ -33,8 +33,7 @@ body,
 body {
   margin: 0;
   background:
-    radial-gradient(1100px 700px at 15% -10%, rgba(139, 233, 253, 0.12), transparent 60%),
-    radial-gradient(900px 700px at 100% 0%, rgba(189, 147, 249, 0.14), transparent 55%),
+    radial-gradient(900px 460px at 50% -8%, rgba(139, 233, 253, 0.08), transparent 65%),
     var(--bg);
   color: var(--text);
   font-family: var(--font);
@@ -109,6 +108,7 @@ a {
   border-radius: 10px;
   color: #061018;
   background: linear-gradient(135deg, var(--accent), #d7f8ff);
+  box-shadow: 0 0 0 1px rgba(139, 233, 253, 0.35), 0 6px 18px rgba(139, 233, 253, 0.25);
   font-weight: 900;
 }
 
@@ -147,8 +147,22 @@ a {
 }
 
 .nav button.nav-active {
+  position: relative;
   color: var(--text);
   background: rgba(139, 233, 253, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(139, 233, 253, 0.16);
+}
+
+.nav button.nav-active::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+  transform: translateX(-50%);
 }
 
 .session-tag {
@@ -184,12 +198,24 @@ a {
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin: 0;
   color: var(--accent);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 3px;
+  height: 1em;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 10px rgba(139, 233, 253, 0.45);
 }
 
 h1,
@@ -232,17 +258,72 @@ p {
 }
 
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow: hidden;
   padding: 26px clamp(18px, 4vw, 38px);
   border: 1px solid var(--border);
   border-radius: calc(var(--radius) + 8px);
   background:
-    linear-gradient(145deg, rgba(139, 233, 253, 0.1), transparent 45%),
-    linear-gradient(320deg, rgba(189, 147, 249, 0.12), transparent 55%),
+    linear-gradient(145deg, rgba(139, 233, 253, 0.07), transparent 55%),
     var(--panel);
   box-shadow: var(--shadow);
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* Minimal focus mark: one fine ring and the monogram, no motion or ornament. */
+.hero-visual {
+  display: block;
+  position: absolute;
+  top: -64px;
+  right: -56px;
+  width: 230px;
+  height: 230px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* On narrow screens the mark becomes a faint outline behind the heading. */
+@media (max-width: 899px) {
+  .hero-visual .orb-core {
+    display: none;
+  }
+}
+
+.focus-orb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.orb-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(139, 233, 253, 0.32);
+  border-radius: 50%;
+}
+
+.orb-core {
+  display: grid;
+  place-items: center;
+  width: 38%;
+  aspect-ratio: 1;
+  border-radius: 28%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #061018;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 900;
+  box-shadow: 0 0 40px rgba(139, 233, 253, 0.3);
 }
 
 .hero-actions {
@@ -258,6 +339,26 @@ p {
   gap: 14px;
 }
 
+/* Experimental mechanic cards keep their heading and focus action visible,
+   with the longer evidence text available on demand. */
+.mechanic-details {
+  margin-top: 2px;
+}
+
+.mechanic-details summary {
+  display: flex;
+  align-items: center;
+  min-height: 34px;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.mechanic-details p {
+  margin-top: 8px;
+}
+
 .stack {
   display: flex;
   flex-direction: column;
@@ -265,11 +366,21 @@ p {
 }
 
 .card {
+  position: relative;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--panel);
   padding: 18px;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 36px rgba(0, 0, 0, 0.18);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    border-color: rgba(139, 233, 253, 0.34);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 18px 44px rgba(0, 0, 0, 0.28);
+    transform: translateY(-2px);
+  }
 }
 
 .card-top {
@@ -286,6 +397,7 @@ p {
 
 .notice {
   border: 1px solid rgba(255, 196, 107, 0.35);
+  border-left: 3px solid rgba(255, 196, 107, 0.75);
   border-radius: var(--radius);
   background: rgba(255, 196, 107, 0.08);
   padding: 16px 18px;
@@ -303,6 +415,7 @@ p {
 
 .notice-warn {
   border-color: rgba(255, 123, 133, 0.4);
+  border-left-color: rgba(255, 123, 133, 0.8);
   background: rgba(255, 123, 133, 0.09);
   color: #ffd9dc;
 }
@@ -321,18 +434,21 @@ p {
 }
 
 .badge-supported {
-  color: #0c2a1e;
-  background: var(--ok);
+  color: var(--ok);
+  border-color: rgba(99, 242, 162, 0.4);
+  background: rgba(99, 242, 162, 0.1);
 }
 
 .badge-experimental {
-  color: #2b1a04;
-  background: var(--warn);
+  color: var(--warn);
+  border-color: rgba(255, 196, 107, 0.4);
+  background: rgba(255, 196, 107, 0.1);
 }
 
 .badge-wellness_only {
-  color: #17203a;
-  background: #c7d2fe;
+  color: #c7d2fe;
+  border-color: rgba(199, 210, 254, 0.4);
+  background: rgba(199, 210, 254, 0.1);
 }
 
 .level-badge {
@@ -375,6 +491,12 @@ p {
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), #c9f6ff);
   color: #061018;
+  box-shadow: 0 10px 24px rgba(139, 233, 253, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary:hover:not(:disabled) {
+  box-shadow: 0 14px 30px rgba(139, 233, 253, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  filter: brightness(1.03);
 }
 
 .btn-ghost {
@@ -685,10 +807,20 @@ legend {
 }
 
 .metric {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 9px 11px;
-  background: rgba(255, 255, 255, 0.025);
+  background: linear-gradient(160deg, rgba(139, 233, 253, 0.06), rgba(255, 255, 255, 0.015) 60%);
+}
+
+.metric::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), transparent);
 }
 
 .metric dt {
@@ -799,6 +931,19 @@ code {
     flex: 1 1 100%;
   }
 
+  /* The secondary links are navigation, not primary actions: compact pills
+     keep the hero short enough that the practice cards stay in view. */
+  .hero-actions-secondary {
+    gap: 8px;
+  }
+
+  .hero-actions-secondary .btn {
+    flex: 0 1 auto;
+    min-height: 40px;
+    padding: 8px 14px;
+    font-size: 0.86rem;
+  }
+
   .nav button {
     padding: 8px 8px;
     font-size: 0.86rem;
@@ -838,19 +983,25 @@ code {
   background: linear-gradient(135deg, #8be9fd 0%, #c9f6ff 55%, #bd93f9 140%);
   color: #061018;
   text-align: left;
-  box-shadow: 0 18px 44px rgba(139, 233, 253, 0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 18px 44px rgba(139, 233, 253, 0.22);
   transition: transform 120ms ease, box-shadow 160ms ease, filter 160ms ease;
 }
 
 .start-cta::after {
   content: "→";
   position: absolute;
-  right: 22px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.7rem;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(6, 16, 24, 0.1);
+  font-size: 1.4rem;
   font-weight: 800;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .start-cta:hover {
@@ -1364,6 +1515,30 @@ html.high-contrast .speed-ring-active {
 
 /* Desktop composition */
 @media (min-width: 900px) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(230px, 0.55fr);
+    align-items: center;
+    gap: 32px;
+    padding: 34px clamp(24px, 4vw, 44px);
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 4.4vw, 3rem);
+  }
+
+  .hero .lede {
+    max-width: 56ch;
+  }
+
+  .hero-visual {
+    position: static;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    opacity: 1;
+  }
+
   .home-screen {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -1472,6 +1647,34 @@ html.high-contrast .speed-ring-active {
 
 .menu-test-card p {
   margin: 0;
+}
+
+.menu-evidence summary {
+  display: flex;
+  align-items: center;
+  min-height: 34px;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.menu-evidence[open] summary {
+  margin-bottom: 4px;
+}
+
+.briefing-more summary {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.briefing-more[open] summary {
+  margin-bottom: 4px;
 }
 
 .menu-stats {
@@ -2132,5 +2335,178 @@ html.high-contrast .speed-ring-active {
   margin: 4px 0 8px;
   padding-left: 10px;
   border-left: 3px solid rgba(139, 233, 253, 0.45);
+}
+
+/* Onboarding & consent: numbered steps turn text walls into scannable sequences */
+.privacy-chip {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid rgba(99, 242, 162, 0.35);
+  border-radius: 999px;
+  background: rgba(99, 242, 162, 0.08);
+  color: var(--ok);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.privacy-chip span {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ok);
+  color: #08231a;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.safety-screen .form {
+  counter-reset: safety-q;
+}
+
+.safety-screen .field-group {
+  counter-increment: safety-q;
+}
+
+.safety-screen .field-label::before {
+  content: "0" counter(safety-q);
+  margin-right: 10px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+.consent-sections {
+  counter-reset: consent-s;
+}
+
+.consent-section {
+  counter-increment: consent-s;
+}
+
+.consent-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.consent-section h2::before {
+  content: counter(consent-s, decimal-leading-zero);
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Results: factual at-a-glance totals, never a composite score */
+.session-snapshot {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  gap: 4px;
+  padding: 14px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.snapshot-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 6px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+
+.snapshot-item:last-child {
+  border-right: 0;
+}
+
+.snapshot-value {
+  color: var(--text);
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.snapshot-label {
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.2;
+}
+
+/* Evidence: jump navigation for the long list of mechanic cards */
+.evidence-jump,
+.settings-jump {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 16px;
+  padding: 2px 2px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.evidence-jump-label,
+.settings-jump-label {
+  margin-right: 2px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.evidence-jump-chip,
+.settings-jump-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 2px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 140ms ease;
+}
+
+.evidence-jump-chip:hover,
+.settings-jump-chip:hover {
+  color: var(--accent);
+}
+
+.evidence-card,
+[id^="settings-"] {
+  scroll-margin-top: 88px;
+}
+
+@media (max-width: 560px) {
+  .evidence-jump,
+  .settings-jump {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .evidence-jump::-webkit-scrollbar,
+  .settings-jump::-webkit-scrollbar {
+    display: none;
+  }
+
+  .evidence-jump-chip,
+  .settings-jump-chip {
+    flex: 0 0 auto;
+  }
 }
 

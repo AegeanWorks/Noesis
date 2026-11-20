@@ -1,7 +1,7 @@
 # Codebase Map & Symbol Catalog 🗺️
 
 > **AUTO-GENERATED & VERIFIED BY `scripts/update_knowledge_base.py`**
-> This document provides an automated, up-to-date registry of all modules, classes, and exported functions across this repository.
+> This document catalogues Python modules, classes, and exported functions. See Map Coverage for any stack it does not index.
 
 ---
 
@@ -12,6 +12,12 @@
 - **Total Class Methods**: `31`
 - **Total Source Lines**: `744`
 
+## 🧭 Map Coverage
+- **Indexed**: python (`9` module(s))
+- **Not indexed by this map**: java (`3` file(s)), typescript (`143` file(s))
+
+> Only Python symbols are catalogued. A language above is reported as not indexed, never as verified by this map.
+
 ---
 
 ## 📦 Modules & Exported Symbols
@@ -19,14 +25,14 @@
 ### [`noesis/__init__.py`](noesis/__init__.py)
 > *Noesis: an evidence-led multimodal brain-training platform.*
 
-**Size**: `3` lines (`89` bytes)
+**Size**: `3` lines
 
 ---
 
 ### [`noesis/__main__.py`](noesis/__main__.py)
 > *Command line entry point: `python -m noesis review <command>`.*
 
-**Size**: `87` lines (`3196` bytes)
+**Size**: `87` lines
 
 **Functions:**
 - `def _build_parser()`
@@ -40,14 +46,14 @@
 ### [`noesis/review/__init__.py`](noesis/review/__init__.py)
 > *Evidence review tooling: schema, validation and summaries.*
 
-**Size**: `1` lines (`65` bytes)
+**Size**: `1` lines
 
 ---
 
 ### [`noesis/review/evidence_schema.py`](noesis/review/evidence_schema.py)
 > *Controlled vocabulary and record types for the Noesis evidence table.*
 
-**Size**: `152` lines (`5239` bytes)
+**Size**: `152` lines
 
 **Classes:**
 - `class EvidenceError` - *Raised when the evidence table cannot be read or breaks the schema.*
@@ -65,7 +71,7 @@
 ### [`noesis/review/evidence_summary.py`](noesis/review/evidence_summary.py)
 > *Modality-by-population synthesis used by the review report.*
 
-**Size**: `116` lines (`4342` bytes)
+**Size**: `116` lines
 
 **Classes:**
 - `class SummaryRow`
@@ -83,7 +89,7 @@
 ### [`noesis/review/evidence_validate.py`](noesis/review/evidence_validate.py)
 > *Structural and integrity checks for the Noesis evidence table.*
 
-**Size**: `104` lines (`4462` bytes)
+**Size**: `104` lines
 
 **Functions:**
 - `def _check_vocab(entry, problems)`
@@ -97,14 +103,14 @@
 ### [`tests/__init__.py`](tests/__init__.py)
 > *Noesis test package.*
 
-**Size**: `1` lines (`27` bytes)
+**Size**: `1` lines
 
 ---
 
 ### [`tests/test_evidence.py`](tests/test_evidence.py)
 > *Tests for the Noesis evidence table and synthesis matrix.*
 
-**Size**: `210` lines (`7840` bytes)
+**Size**: `210` lines
 
 **Classes:**
 - `class RealTableTest`
@@ -142,7 +148,7 @@
 ### [`tests/test_review_snapshot.py`](tests/test_review_snapshot.py)
 > *Snapshot checks for the current evidence review.*
 
-**Size**: `70` lines (`2508` bytes)
+**Size**: `70` lines
 
 **Classes:**
 - `class ReviewSnapshotTest`

@@ -1,0 +1,290 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "8b0145c8aec3:.aikit/decisions.md#1",
+      "quote": "### ADR-026: Optional clock hiding for anxious trainers",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-026: Optional clock hiding for anxious trainers\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "### 6.22 Calm timing for anxious trainers (November 2026)",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"### 6.22 Calm timing for anxious trainers (November 2026)\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R50 | Sessions offer a hide-the-clock option for anxious trainers, default off with the clock shown. Anxiety impairs performance and perceived pressure raises anxiety; untimed beats timed, most for the anxious. | Test anxiety is small-to-moderate and negatively related to performance; self-esteem protects. | 29156362; ADR-026 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R50 | Sessions offer a hide-the-clock option for anxious trainers, default off with the \" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/README.md#1",
+      "quote": "**Records:** 109 included (87 primary, 22 context), 270 outcomes  ",
+      "note": "Checked the docs/research/README.md edit adding \"**Records:** 109 included (87 primary, 22 context), 270 outcomes\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (109 records, 270 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis29156362,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis29156362,\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/REFERENCES.md#1",
+      "quote": "- Test anxiety effects, predictors, and correlates: A 30-year meta-analytic review. *Journal of Affective Disorders*. 2018. PMID: [29156362](https://pubmed.ncbi.nlm.nih.gov/29156362/). DOI: [10.1016/j.jad.2017.11.048](https://doi.org/10.1016/j.jad.2017.11.048).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Test anxiety effects, predictors, and correlates: A 30-year meta-analytic review. *Journ\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 109 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 109 |\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/SEARCH_LOG.md#2",
+      "quote": "| engagement | 22 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| engagement | 22 |\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/SEARCH_LOG.md#3",
+      "quote": "| **Total** | **109** |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| **Total** | **109** |\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 109 records (87 primary, 22 context) and 270 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records and one test-anxiety record. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/SYNTHESIS.md#2",
+      "quote": "All 109 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 109 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "8b0145c8aec3:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"29156362\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"29156362\",\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "8b0145c8aec3:src/App.tsx#1",
+      "quote": "  const setHideClock = useCallback(",
+      "note": "Checked the src/App.tsx edit adding \"const setHideClock = useCallback(\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "8b0145c8aec3:src/App.tsx#2",
+      "quote": "              showClock={!settings.hideClock}",
+      "note": "Checked the src/App.tsx edit adding \"showClock={!settings.hideClock}\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "8b0145c8aec3:src/App.tsx#3",
+      "quote": "            hideClock={settings.hideClock}",
+      "note": "Checked the src/App.tsx edit adding \"hideClock={settings.hideClock}\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "8b0145c8aec3:src/App.tsx#4",
+      "quote": "            onHideClock={setHideClock}",
+      "note": "Checked the src/App.tsx edit adding \"onHideClock={setHideClock}\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "8b0145c8aec3:src/storage/settings.ts#1",
+      "quote": "  hideClock: boolean;",
+      "note": "Checked the src/storage/settings.ts edit adding \"hideClock: boolean;\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "8b0145c8aec3:src/storage/settings.ts#2",
+      "quote": "  hideClock: false,",
+      "note": "Checked the src/storage/settings.ts edit adding \"hideClock: false,\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "8b0145c8aec3:src/storage/settings.ts#3",
+      "quote": "      hideClock:",
+      "note": "Checked the src/storage/settings.ts edit adding \"hideClock:\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "8b0145c8aec3:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 109 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 109 reviews and trials. Each\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "8b0145c8aec3:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "  showClock: boolean;",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"showClock: boolean;\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "8b0145c8aec3:src/ui/screens/SessionScreen.tsx#2",
+      "quote": "  showClock,",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"showClock,\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "8b0145c8aec3:src/ui/screens/SessionScreen.tsx#3",
+      "quote": "        <h1>{view.blockLabel}</h1>",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"<h1>{view.blockLabel}</h1>\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "8b0145c8aec3:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "  hideClock: boolean;",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"hideClock: boolean;\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "8b0145c8aec3:src/ui/screens/SettingsScreen.tsx#2",
+      "quote": "  onHideClock: (value: boolean) => void;",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"onHideClock: (value: boolean) => void;\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "8b0145c8aec3:src/ui/screens/SettingsScreen.tsx#3",
+      "quote": "  hideClock,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"hideClock,\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "8b0145c8aec3:src/ui/screens/SettingsScreen.tsx#4",
+      "quote": "  onHideClock,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"onHideClock,\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "8b0145c8aec3:src/ui/screens/SettingsScreen.tsx#5",
+      "quote": "        <label className=\"check\">",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"<label className=\"check\">\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "8b0145c8aec3:tests/storage/settings.test.ts#1",
+      "quote": "      hideClock: false,",
+      "note": "Checked the tests/storage/settings.test.ts edit adding \"hideClock: false,\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "8b0145c8aec3:tests/storage/settings.test.ts#2",
+      "quote": "      hideClock: false,",
+      "note": "Checked the tests/storage/settings.test.ts edit adding \"hideClock: false,\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "8b0145c8aec3:tests/storage/settings.test.ts#3",
+      "quote": "      hideClock: DEFAULT_SETTINGS.hideClock,",
+      "note": "Checked the tests/storage/settings.test.ts edit adding \"hideClock: DEFAULT_SETTINGS.hideClock,\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "8b0145c8aec3:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 109)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 109)\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "8b0145c8aec3:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(modalities[\"engagement\"], 22)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(modalities[\"engagement\"], 22)\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "8b0145c8aec3:tests/ui/session-motivation.test.tsx#1",
+      "quote": "    showClock: true,",
+      "note": "Checked the tests/ui/session-motivation.test.tsx edit adding \"showClock: true,\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "8b0145c8aec3:tests/ui/session-motivation.test.tsx#2",
+      "quote": "  it(\"shows the clock by default and hides it on request\", () => {",
+      "note": "Checked the tests/ui/session-motivation.test.tsx edit adding \"it(\"shows the clock by default and hides it on request\", () => {\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "8b0145c8aec3:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  hideClock: false,",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"hideClock: false,\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "8b0145c8aec3:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "  onHideClock: () => {},",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"onHideClock: () => {},\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "8b0145c8aec3:tests/ui/settings-symptoms.test.tsx#3",
+      "quote": "  it(\"toggles hiding the session clock\", () => {",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"it(\"toggles hiding the session clock\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "6ba3029f9d87:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "Two habit records joined the table: habit strength improves with intervention (SMD 0.69) but takes about two months to start forming, with morning and self-selected practice strongest (PMID 39685110); and habit correlates with behavioural frequency at r=0.46 through context-dependent repetition (PMID 21626256). Two mechanism sources stayed narrative-only: Lally et al. 2009, whose 84-day study showed a single missed day does not materially affect formation, and the 2021 habit-tracking guidelines. Implemented as R42: when yesterday slipped but the week shows prior practice, home says so plainly — one session today keeps it forming, nothing resets. The ~2-month horizon sets honest expectations; the calendar accumulates and never subtracts. A fortnight-plus absence gets the same treatment with lapse-not-relapse framing: a welcome-back notice instead of a blank slate.",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"Two habit records joined the table: habit strength improves with intervention (SMD 0.69) b\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "6ba3029f9d87:src/ui/screens/HomeScreen.tsx#1",
+      "quote": "  const lapsed =",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"const lapsed =\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "6ba3029f9d87:src/ui/screens/HomeScreen.tsx#2",
+      "quote": "      {lapsed ? (",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"{lapsed ? (\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "6ba3029f9d87:tests/ui/home.test.tsx#1",
+      "quote": "  it(\"welcomes back lapsers without shaming fresh or active users\", () => {",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"it(\"welcomes back lapsers without shaming fresh or active users\", () => {\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "2dd5299eeb22:docs/research/SEARCH_LOG.md#1",
+      "quote": "One test-anxiety record joined the table the same day (PMID 29156362, 238 studies): anxiety is negatively related to performance and perceived pressure raises it; untimed beats timed, most for anxious test-takers. It grounds R50 (hide the clock) and the low-stakes framing throughout.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"One test-anxiety record joined the table the same day (PMID 29156362, 238 studies): anxiet\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "2dd5299eeb22:src/App.tsx#1",
+      "quote": "  isFarCheckDue,",
+      "note": "Checked the src/App.tsx edit adding \"isFarCheckDue,\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "2dd5299eeb22:src/App.tsx#2",
+      "quote": "  const [farChecks, setFarChecks] = useState(() => loadFarChecks());",
+      "note": "Checked the src/App.tsx edit adding \"const [farChecks, setFarChecks] = useState(() => loadFarChecks());\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "2dd5299eeb22:src/App.tsx#3",
+      "quote": "      setFarChecks(",
+      "note": "Checked the src/App.tsx edit adding \"setFarChecks(\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "2dd5299eeb22:src/App.tsx#4",
+      "quote": "    setFarChecks([]);",
+      "note": "Checked the src/App.tsx edit adding \"setFarChecks([]);\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "2dd5299eeb22:src/App.tsx#5",
+      "quote": "            farChecks={farChecks}",
+      "note": "Checked the src/App.tsx edit adding \"farChecks={farChecks}\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "2dd5299eeb22:src/ui/screens/HomeScreen.tsx#1",
+      "quote": "import type { FarCheck } from \"../../storage/farChecks\";",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"import type { FarCheck } from \"../../storage/farChecks\";\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "2dd5299eeb22:src/ui/screens/HomeScreen.tsx#2",
+      "quote": "  farChecks: readonly FarCheck[];",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"farChecks: readonly FarCheck[];\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "2dd5299eeb22:src/ui/screens/HomeScreen.tsx#3",
+      "quote": "  farChecks,",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"farChecks,\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "2dd5299eeb22:src/ui/screens/HomeScreen.tsx#4",
+      "quote": "  const farCheckDue = isFarCheckDue(farChecks);",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"const farCheckDue = isFarCheckDue(farChecks);\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "2dd5299eeb22:src/ui/screens/HomeScreen.tsx#5",
+      "quote": "      ) : lastFarCheck ? (",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \") : lastFarCheck ? (\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "2dd5299eeb22:tests/ui/heavy-use.test.tsx#1",
+      "quote": "    farChecks: [],",
+      "note": "Checked the tests/ui/heavy-use.test.tsx edit adding \"farChecks: [],\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "2dd5299eeb22:tests/ui/home.test.tsx#1",
+      "quote": "    farChecks: [],",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"farChecks: [],\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "2dd5299eeb22:tests/ui/home.test.tsx#2",
+      "quote": "    renderHome({ farChecks: [], onStartFarCheck });",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"renderHome({ farChecks: [], onStartFarCheck });\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    }
+  ]
+}

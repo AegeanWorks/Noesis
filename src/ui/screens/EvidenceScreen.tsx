@@ -34,9 +34,30 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
         claim.
       </p>
 
+      <nav className="evidence-jump" aria-label="Jump to a mechanic">
+        <span className="evidence-jump-label">Jump to</span>
+        {Object.values(MECHANIC_META).map((meta) => (
+          <button
+            type="button"
+            className="evidence-jump-chip"
+            aria-label={`Jump to ${meta.name}`}
+            onClick={() => {
+              const reduced = document.documentElement.classList.contains("reduced-motion");
+              document
+                .getElementById(`evidence-${meta.id}`)
+                ?.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+              window.history.replaceState(null, "", `#evidence-${meta.id}`);
+            }}
+            key={meta.id}
+          >
+            {meta.name}
+          </button>
+        ))}
+      </nav>
+
       <div className="stack">
         {Object.values(MECHANIC_META).map((meta) => (
-          <article className="card evidence-card" key={meta.id}>
+          <article className="card evidence-card" id={`evidence-${meta.id}`} key={meta.id}>
             <div className="card-top">
               <div>
                 <p className="eyebrow">{meta.tagline}</p>

@@ -1,0 +1,200 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "b4bb40f1e4aa:.aikit/improvement-record.md#1",
+      "quote": "8. UI readability (second pass) — 2026-11-07 — cycle 8",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"8. UI readability (second pass) — 2026-11-07 — cycle 8\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "b4bb40f1e4aa:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 8 — UI readability: claim badges and the session date were below 12px",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 8 — UI readability: claim badges and the session date were below 12px\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "b4bb40f1e4aa:.aikit/improvement-record.md#3",
+      "quote": "node scripts/ui-audit.mjs <dir>",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"node scripts/ui-audit.mjs <dir>\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "b4bb40f1e4aa:src/styles.css#1",
+      "quote": "  font-size: 0.78rem;",
+      "note": "Checked the src/styles.css edit adding \"font-size: 0.78rem;\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "b4bb40f1e4aa:src/styles.css#2",
+      "quote": "  font-size: 0.8rem;",
+      "note": "Checked the src/styles.css edit adding \"font-size: 0.8rem;\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "40f8c167b719:.aikit/improvement-record.md#1",
+      "quote": "9. Results copy — 2026-11-07 — cycle 9",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"9. Results copy — 2026-11-07 — cycle 9\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "40f8c167b719:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 9 — Results copy: singular impulse error and exact reaction time",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 9 — Results copy: singular impulse error and exact reaction time\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "40f8c167b719:.aikit/improvement-record.md#3",
+      "quote": "npx vitest run tests/engine/scoring.test.ts tests/engine/gonogo.test.ts tests/ui/results-copy.test.tsx",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/engine/scoring.test.ts tests/engine/gonogo.test.ts tests/ui/results-c\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "40f8c167b719:scripts/results-copy-proof.mjs#1",
+      "quote": "// Scripted results-copy playthrough: completes a quick N-back + Go/No-Go session with",
+      "note": "Checked the scripts/results-copy-proof.mjs edit adding \"// Scripted results-copy playthrough: completes a quick N-back + Go/No-Go session with\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "40f8c167b719:src/engine/mechanics/gonogo.ts#1",
+      "quote": "import { clamp, countLabel, currentStreak, longestStreak, mean, rate, round } from \"../scoring\";",
+      "note": "Checked the src/engine/mechanics/gonogo.ts edit adding \"import { clamp, countLabel, currentStreak, longestStreak, mean, rate, round } from \"../sco\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "40f8c167b719:src/engine/mechanics/gonogo.ts#2",
+      "quote": "    summary: `Go/No-Go: ${Math.round(accuracy * 100)}% accuracy, ${countLabel(commissions, \"impulse error\")}, ${metrics.mean_go_reaction_ms ?? 0} ms mean go reaction.`,",
+      "note": "Checked the src/engine/mechanics/gonogo.ts edit adding \"summary: `Go/No-Go: ${Math.round(accuracy * 100)}% accuracy, ${countLabel(commissions, \"im\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "40f8c167b719:src/engine/mechanics/nback.ts#1",
+      "quote": "import { clamp, countLabel, currentStreak, dPrime, longestStreak, mean, rate, round } from \"../scoring\";",
+      "note": "Checked the src/engine/mechanics/nback.ts edit adding \"import { clamp, countLabel, currentStreak, dPrime, longestStreak, mean, rate, round } from\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "40f8c167b719:src/engine/mechanics/nback.ts#2",
+      "quote": "    summary: `${state.config.n}-back: ${Math.round(accuracy * 100)}% accuracy, ${hits}/${targets} targets, ${countLabel(falseAlarms, \"false alarm\")}.`,",
+      "note": "Checked the src/engine/mechanics/nback.ts edit adding \"summary: `${state.config.n}-back: ${Math.round(accuracy * 100)}% accuracy, ${hits}/${targe\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "40f8c167b719:src/engine/mechanics/speed.ts#1",
+      "quote": "  countLabel,",
+      "note": "Checked the src/engine/mechanics/speed.ts edit adding \"countLabel,\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "40f8c167b719:src/engine/mechanics/speed.ts#2",
+      "quote": "    summary: `Speed Tap: ${metrics.hits}/${state.foreperiods.length} responses, ${metrics.median_reaction_ms ?? 0} ms median reaction, ${countLabel(metrics.lapses ?? 0, \"lapse\")}.`,",
+      "note": "Checked the src/engine/mechanics/speed.ts edit adding \"summary: `Speed Tap: ${metrics.hits}/${state.foreperiods.length} responses, ${metrics.medi\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "40f8c167b719:src/engine/scoring.ts#1",
+      "quote": "export function countLabel(count: number, singular: string, plural = `${singular}s`): string {",
+      "note": "Checked the src/engine/scoring.ts edit adding \"export function countLabel(count: number, singular: string, plural = `${singular}s`): stri\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "40f8c167b719:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "export function formatMetric(key: string, value: number): string {",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"export function formatMetric(key: string, value: number): string {\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "40f8c167b719:tests/engine/gonogo.test.ts#1",
+      "quote": "import { optimalPolicy, policyFor, replayMechanic, runMechanic } from \"../../src/engine/simulate\";",
+      "note": "Checked the tests/engine/gonogo.test.ts edit adding \"import { optimalPolicy, policyFor, replayMechanic, runMechanic } from \"../../src/engine/si\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "40f8c167b719:tests/engine/gonogo.test.ts#2",
+      "quote": "  it(\"uses singular impulse-error copy for exactly one commission\", () => {",
+      "note": "Checked the tests/engine/gonogo.test.ts edit adding \"it(\"uses singular impulse-error copy for exactly one commission\", () => {\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "40f8c167b719:tests/engine/scoring.test.ts#1",
+      "quote": "import { clamp, countLabel, dPrime, probit, rate, round } from \"../../src/engine/scoring\";",
+      "note": "Checked the tests/engine/scoring.test.ts edit adding \"import { clamp, countLabel, dPrime, probit, rate, round } from \"../../src/engine/scoring\";\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "40f8c167b719:tests/ui/results-copy.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/results-copy.test.tsx edit adding \"// @vitest-environment jsdom\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "c6c205e7eb68:.aikit/decisions.md#1",
+      "quote": "### ADR-039: Personal bests and near-best cues compare within a level",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-039: Personal bests and near-best cues compare within a level\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "c6c205e7eb68:.aikit/improvement-record.md#1",
+      "quote": "10. Level-aware bests — 2026-11-07 — cycle 10",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"10. Level-aware bests — 2026-11-07 — cycle 10\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "c6c205e7eb68:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 10 — Levels: bests and the near-best cue ignored the block level",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 10 — Levels: bests and the near-best cue ignored the block level\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "c6c205e7eb68:.aikit/improvement-record.md#3",
+      "quote": "npx vitest run tests/storage/history.test.ts tests/ui/home.test.tsx",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/storage/history.test.ts tests/ui/home.test.tsx\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "c6c205e7eb68:README.md#1",
+      "quote": "The home screen also shows a per-mechanic accuracy sparkline for recent sessions with last and best accuracy labeled by level, a 14-day practice calendar, and caring check-ins: heavy-use patterns trigger a rest suggestion with a one-tap Motivation pause, a missed yesterday gets a no-shame nudge, and a long absence gets a welcome-back. Settings offers larger text, high contrast, reduced motion and a hideable session clock.",
+      "note": "Checked the README.md edit adding \"The home screen also shows a per-mechanic accuracy sparkline for recent sessions with last\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "c6c205e7eb68:README.md#2",
+      "quote": "- **Near-best cue:** a real +10 bonus when a block comes within 5% of your personal best at the same level.",
+      "note": "Checked the README.md edit adding \"- **Near-best cue:** a real +10 bonus when a block comes within 5% of your personal best a\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "c6c205e7eb68:scripts/level-best-proof.mjs#1",
+      "quote": "﻿// Scripted level-aware best/near-best playthrough: seeds a level-1 and a level-3 best,",
+      "note": "Checked the scripts/level-best-proof.mjs edit adding \"﻿// Scripted level-aware best/near-best playthrough: seeds a level-1 and a level-3 best,\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "c6c205e7eb68:src/App.tsx#1",
+      "quote": "        bestAccuracyFor(history, result.mechanic, result.difficulty),",
+      "note": "Checked the src/App.tsx edit adding \"bestAccuracyFor(history, result.mechanic, result.difficulty),\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "c6c205e7eb68:src/storage/history.ts#1",
+      "quote": "  difficulty?: number,",
+      "note": "Checked the src/storage/history.ts edit adding \"difficulty?: number,\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "c6c205e7eb68:src/storage/history.ts#2",
+      "quote": "    const before = bestAccuracyFor(prior, result.mechanic, result.difficulty);",
+      "note": "Checked the src/storage/history.ts edit adding \"const before = bestAccuracyFor(prior, result.mechanic, result.difficulty);\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "c6c205e7eb68:src/ui/screens/HomeScreen.tsx#1",
+      "quote": "          const level = typeof last?.difficulty === \"number\" ? last.difficulty : null;",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"const level = typeof last?.difficulty === \"number\" ? last.difficulty : null;\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "c6c205e7eb68:src/ui/screens/HomeScreen.tsx#2",
+      "quote": "                <span className=\"practice-last\">",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"<span className=\"practice-last\">\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "c6c205e7eb68:tests/storage/history.test.ts#1",
+      "quote": "function leveled(id: string, accuracy: number, difficulty: number): SessionRecord {",
+      "note": "Checked the tests/storage/history.test.ts edit adding \"function leveled(id: string, accuracy: number, difficulty: number): SessionRecord {\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "c6c205e7eb68:tests/storage/history.test.ts#2",
+      "quote": "  it(\"filters the best accuracy by block level\", () => {",
+      "note": "Checked the tests/storage/history.test.ts edit adding \"it(\"filters the best accuracy by block level\", () => {\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "c6c205e7eb68:tests/storage/history.test.ts#3",
+      "quote": "  it(\"flags a new best within the current level, not across levels\", () => {",
+      "note": "Checked the tests/storage/history.test.ts edit adding \"it(\"flags a new best within the current level, not across levels\", () => {\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "c6c205e7eb68:tests/ui/home.test.tsx#1",
+      "quote": "function record(accuracy: number, finishedAt = \"2026-10-31T10:00:00.000Z\", difficulty?: number): SessionRecord {",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"function record(accuracy: number, finishedAt = \"2026-10-31T10:00:00.000Z\", difficulty?: nu\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "c6c205e7eb68:tests/ui/home.test.tsx#2",
+      "quote": "        ...(difficulty === undefined ? {} : { difficulty }),",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"...(difficulty === undefined ? {} : { difficulty }),\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "c6c205e7eb68:tests/ui/home.test.tsx#3",
+      "quote": "  it(\"shows last and best within the last block's level\", () => {",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"it(\"shows last and best within the last block's level\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    }
+  ]
+}

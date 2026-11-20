@@ -1,0 +1,240 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "5d9b6c0d5257:README.md#1",
+      "quote": "│   ├── SYNTHESIS.md              <- main evidence synthesis",
+      "note": "Checked the README.md edit adding \"│   ├── SYNTHESIS.md              <- main evidence synthesis\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "### 6.24 Prompts work, push stays out (November 2026)",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"### 6.24 Prompts work, push stays out (November 2026)\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/README.md#1",
+      "quote": "**Records:** 110 included (88 primary, 22 context), 271 outcomes  ",
+      "note": "Checked the docs/research/README.md edit adding \"**Records:** 110 included (88 primary, 22 context), 271 outcomes\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (110 records, 271 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis26747176,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis26747176,\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/REFERENCES.md#1",
+      "quote": "- The Effectiveness of Prompts to Promote Engagement With Digital Interventions: A Systematic Review. *Journal of Medical Internet Research*. 2016. PMID: [26747176](https://pubmed.ncbi.nlm.nih.gov/26747176/). DOI: [10.2196/jmir.4790](https://doi.org/10.2196/jmir.4790).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- The Effectiveness of Prompts to Promote Engagement With Digital Interventions: A Systema\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 110 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 110 |\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/SEARCH_LOG.md#2",
+      "quote": "| engagement | 23 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| engagement | 23 |\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 99 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 99 |\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/SEARCH_LOG.md#4",
+      "quote": "Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 30427874): specific goals (g=1.11), multi-component goal setting (d=0.55, daily-plus-weekly best) and implementation intentions with reinforcement (SMD 0.25). The goal-gradient mechanism (Kivetz et al., primary studies) stays narrative-only by the same rule and shapes the one-session-short nudge in R40.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"Three goal-setting records joined the table the same day (PMIDs 38560998, 26445201, 304278\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/SEARCH_LOG.md#5",
+      "quote": "One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR \" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 110 records (88 primary, 22 context) and 271 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records and one test-anxiety record. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/SYNTHESIS.md#2",
+      "quote": "All 110 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 110 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "5d9b6c0d5257:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"26747176\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"26747176\",\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "5d9b6c0d5257:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 110 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 110 reviews and trials. Each\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "5d9b6c0d5257:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 110)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 110)\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "5d9b6c0d5257:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(modalities[\"engagement\"], 23)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(modalities[\"engagement\"], 23)\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "3cc7af6ceb43:.aikit/decisions.md#1",
+      "quote": "### ADR-028: Interleaved default lineup, blocked focus sessions",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-028: Interleaved default lineup, blocked focus sessions\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "### 6.25 Interleaving by default, blocking by choice (November 2026)",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"### 6.25 Interleaving by default, blocking by choice (November 2026)\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R52 | Default sessions interleave the four mechanics; focus sessions are the deliberate blocked exception. Interleaving beats blocking for inductive learning (g=0.42, strongest for complex similar material); word lists reverse it (blocking wins, g=-0.39), which the far checks blocked word-study respects. | Scheduling shapes inductive learning; material determines the direction. | 31556629; ADR-028 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R52 | Default sessions interleave the four mechanics; focus sessions are the deliberate \" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/README.md#1",
+      "quote": "**Records:** 111 included (89 primary, 22 context), 272 outcomes  ",
+      "note": "Checked the docs/research/README.md edit adding \"**Records:** 111 included (89 primary, 22 context), 272 outcomes\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (111 records, 272 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis31556629,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis31556629,\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/REFERENCES.md#1",
+      "quote": "- Similarity matters: A meta-analysis of interleaved learning and its moderators. *Psychological Bulletin*. 2019. PMID: [31556629](https://pubmed.ncbi.nlm.nih.gov/31556629/). DOI: [10.1037/bul0000209](https://doi.org/10.1037/bul0000209).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Similarity matters: A meta-analysis of interleaved learning and its moderators. *Psychol\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 111 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 111 |\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/SEARCH_LOG.md#2",
+      "quote": "One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR \" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/SYNTHESIS.md#1",
+      "quote": "All 111 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 111 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "3cc7af6ceb43:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"31556629\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"31556629\",\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "3cc7af6ceb43:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 111 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 111 reviews and trials. Each\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "3cc7af6ceb43:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 111)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 111)\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "3cc7af6ceb43:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(status[\"verified\"], 100)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(status[\"verified\"], 100)\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "8441ce063732:.aikit/decisions.md#1",
+      "quote": "### ADR-029: In-app notices are the whole prompt layer",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-029: In-app notices are the whole prompt layer\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "8441ce063732:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "### 6.26 Prompts stay in-app (November 2026)",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"### 6.26 Prompts stay in-app (November 2026)\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "8441ce063732:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R53 | In-app notices are the only engagement prompts: milestones, far-check due, weekly-goal nudges. No push channel is built or planned; unsolicited push would trade against the autonomy the whole design protects. | Technology prompts beat no strategy (RR 1.27) with high heterogeneity; new-content prompts sent early work best. | 26747176; ADR-029 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R53 | In-app notices are the only engagement prompts: milestones, far-check due, weekly-\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "8441ce063732:docs/research/README.md#1",
+      "quote": "**Records:** 112 included (90 primary, 22 context), 273 outcomes  ",
+      "note": "Checked the docs/research/README.md edit adding \"**Records:** 112 included (90 primary, 22 context), 273 outcomes\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "8441ce063732:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (112 records, 273 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "8441ce063732:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis35612886,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis35612886,\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "8441ce063732:docs/research/REFERENCES.md#1",
+      "quote": "- Factors Influencing Adherence to mHealth Apps for Prevention or Management of Noncommunicable Diseases: Systematic Review. *Journal of Medical Internet Research*. 2022. PMID: [35612886](https://pubmed.ncbi.nlm.nih.gov/35612886/). DOI: [10.2196/35371](https://doi.org/10.2196/35371).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Factors Influencing Adherence to mHealth Apps for Prevention or Management of Noncommuni\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "8441ce063732:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 112 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 112 |\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "8441ce063732:docs/research/SEARCH_LOG.md#2",
+      "quote": "| engagement | 24 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| engagement | 24 |\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "8441ce063732:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 101 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 101 |\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "8441ce063732:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 112 records (90 primary, 22 context) and 273 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records, one test-anxiety record, one interleaving record and one engagement-prompts record. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "8441ce063732:docs/research/SYNTHESIS.md#2",
+      "quote": "All 112 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 112 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "8441ce063732:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"35612886\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"35612886\",\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "8441ce063732:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 112 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 112 reviews and trials. Each\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "8441ce063732:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 112)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 112)\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "8441ce063732:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(modalities[\"engagement\"], 24)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(modalities[\"engagement\"], 24)\" with the referenced behaviour intact and covered. Marker upland."
+    }
+  ]
+}

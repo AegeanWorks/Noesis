@@ -46,20 +46,32 @@ interface HomeScreenProps {
 
 function MechanicCard({
   meta,
+  compact,
   onFocus,
 }: {
   meta: MechanicMeta;
+  compact: boolean;
   onFocus: (mechanic: MechanicId) => void;
 }) {
   return (
-    <article className="card mechanic-card">
+    <article className={`card mechanic-card${compact ? " mechanic-card-compact" : ""}`}>
       <div className="card-top">
         <h3>{meta.name}</h3>
         <EvidenceBadge level={meta.claimLevel} />
       </div>
       <p className="muted">{meta.tagline}</p>
-      <p>{meta.claim}</p>
-      <p className="fine">{meta.qualifier}</p>
+      {compact ? (
+        <details className="mechanic-details">
+          <summary>Why this task</summary>
+          <p>{meta.claim}</p>
+          <p className="fine">{meta.qualifier}</p>
+        </details>
+      ) : (
+        <>
+          <p>{meta.claim}</p>
+          <p className="fine">{meta.qualifier}</p>
+        </>
+      )}
       <div className="hero-actions">
         <Button variant="ghost" onClick={() => onFocus(meta.id)}>
           Focus {meta.name}
@@ -68,6 +80,8 @@ function MechanicCard({
     </article>
   );
 }
+
+const CORE_MECHANICS = new Set<MechanicId>(["nback", "gonogo", "reasoning", "speed"]);
 
 function formatDate(iso: string): string {
   const date = new Date(iso);
@@ -379,6 +393,7 @@ export function HomeScreen({
   onDismissHeavyUse,
   onDismissMilestones,
 }: HomeScreenProps) {
+  const allMechanics = Object.values(MECHANIC_META);
   const lapsed =
     history.length > 0 && !lastDaysActivity(history).some((day) => day.active);
   const farCheckDue = isFarCheckDue(farChecks);
@@ -386,38 +401,46 @@ export function HomeScreen({
   return (
     <section className="screen home-screen">
       <div className="hero">
-        <p className="eyebrow">Evidence-led practice</p>
-        <h1>Short sessions. Specific skills. Honest claims.</h1>
-        <p className="lede">
-          Noesis trains working memory, response inhibition, reasoning and processing speed,
-          and measures each separately. There is no single brain score.
-        </p>
-        <button
-          type="button"
-          className="start-cta"
-          onClick={hasSession ? onContinue : onStart}
-          data-testid="start-session"
-        >
-          <span className="start-cta-label">{hasSession ? "Resume session" : "Start session"}</span>
-          <span className="start-cta-meta">
-            One click · about {sessionLength === "quick" ? "5" : "8"} minutes · no flashing
-          </span>
-        </button>
-        <div className="hero-actions hero-actions-secondary">
-          {hasSession ? (
-            <Button variant="subtle" onClick={onStart}>
-              Start a new session
+        <div className="hero-copy">
+          <p className="eyebrow">Evidence-led practice</p>
+          <h1>Short sessions. Specific skills. Honest claims.</h1>
+          <p className="lede">
+            Noesis trains working memory, response inhibition, reasoning and processing speed,
+            and measures each separately. There is no single brain score.
+          </p>
+          <button
+            type="button"
+            className="start-cta"
+            onClick={hasSession ? onContinue : onStart}
+            data-testid="start-session"
+          >
+            <span className="start-cta-label">{hasSession ? "Resume session" : "Start session"}</span>
+            <span className="start-cta-meta">
+              One click · about {sessionLength === "quick" ? "5" : "8"} minutes · no flashing
+            </span>
+          </button>
+          <div className="hero-actions hero-actions-secondary">
+            {hasSession ? (
+              <Button variant="subtle" onClick={onStart}>
+                Start a new session
+              </Button>
+            ) : null}
+            <Button variant="subtle" onClick={onMenu}>
+              Browse tests
             </Button>
-          ) : null}
-          <Button variant="subtle" onClick={onMenu}>
-            Browse tests
-          </Button>
-          <Button variant="subtle" onClick={onHistory}>
-            View history
-          </Button>
-          <Button variant="subtle" onClick={onEvidence}>
-            Read the evidence
-          </Button>
+            <Button variant="subtle" onClick={onHistory}>
+              View history
+            </Button>
+            <Button variant="subtle" onClick={onEvidence}>
+              Read the evidence
+            </Button>
+          </div>
+        </div>
+        <div className="hero-visual" aria-hidden="true">
+          <div className="focus-orb">
+            <span className="orb-ring" />
+            <span className="orb-core">N</span>
+          </div>
         </div>
       </div>
 
@@ -480,8 +503,13 @@ export function HomeScreen({
       ) : null}
 
       <div className="grid">
-        {Object.values(MECHANIC_META).map((meta) => (
-          <MechanicCard key={meta.id} meta={meta} onFocus={onFocusMechanic} />
+        {allMechanics.map((meta) => (
+          <MechanicCard
+            key={meta.id}
+            meta={meta}
+            compact={!CORE_MECHANICS.has(meta.id)}
+            onFocus={onFocusMechanic}
+          />
         ))}
       </div>
 

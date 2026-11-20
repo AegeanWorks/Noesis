@@ -1,0 +1,185 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "db290ad738b9:.aikit/decisions.md#1",
+      "quote": "### ADR-036: Quick sessions rotate the two-mechanic window",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-036: Quick sessions rotate the two-mechanic window\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "db290ad738b9:.aikit/improvement-record.md#1",
+      "quote": "5. Session structure — 2026-11-07 — cycle 5",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"5. Session structure — 2026-11-07 — cycle 5\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "db290ad738b9:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 5 — Session structure: quick sessions always used the same two mechanics",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 5 — Session structure: quick sessions always used the same two mechanics\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "db290ad738b9:.aikit/improvement-record.md#3",
+      "quote": "npx vitest run tests/engine/session.test.ts",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/engine/session.test.ts\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "db290ad738b9:README.md#1",
+      "quote": "Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.",
+      "note": "Checked the README.md edit adding \"Session length (quick or standard) and difficulty (gentle, standard or challenge) are user\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "db290ad738b9:scripts/quick-lineup-proof.mjs#1",
+      "quote": "// Scripted quick-session lineup playthrough: starts quick sessions under four fixed",
+      "note": "Checked the scripts/quick-lineup-proof.mjs edit adding \"// Scripted quick-session lineup playthrough: starts quick sessions under four fixed\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "db290ad738b9:src/engine/session.ts#1",
+      "quote": "  rotation = 0,",
+      "note": "Checked the src/engine/session.ts edit adding \"rotation = 0,\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "db290ad738b9:src/engine/session.ts#2",
+      "quote": "    blocks: sessionBlocks(",
+      "note": "Checked the src/engine/session.ts edit adding \"blocks: sessionBlocks(\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "db290ad738b9:tests/engine/session.test.ts#1",
+      "quote": "  it(\"rotates the quick lineup so every mechanic appears across seeds\", () => {",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"it(\"rotates the quick lineup so every mechanic appears across seeds\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "037acc3acf60:.aikit/decisions.md#1",
+      "quote": "### ADR-037: Results and sessions carry the block level",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-037: Results and sessions carry the block level\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "037acc3acf60:.aikit/improvement-record.md#1",
+      "quote": "6. Levels — 2026-11-07 — cycle 6",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"6. Levels — 2026-11-07 — cycle 6\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "037acc3acf60:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 6 — Levels: block level was invisible in sessions and results",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 6 — Levels: block level was invisible in sessions and results\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "037acc3acf60:.aikit/improvement-record.md#3",
+      "quote": "npx vitest run tests/engine/session.test.ts",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/engine/session.test.ts\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "037acc3acf60:README.md#1",
+      "quote": "Beyond Motivation mode the product stays deliberately quieter: an **opt-in adaptive difficulty** experiment (adjusts per-task level from recent accuracy, never marketed as superior), a **monthly word-recognition far check** on its own schedule and store (the app states up front that reviews usually find no transfer), and an **opt-in research-study enrollment** that tags sessions with the assigned trial arm. The session header shows the current block's level, and every result keeps that level so blocks can be compared within the same level; adaptive changes are visible in the session rather than silent. A copyable weekly summary and a JSON export cover accountability and portability without accounts.",
+      "note": "Checked the README.md edit adding \"Beyond Motivation mode the product stays deliberately quieter: an **opt-in adaptive diffic\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "037acc3acf60:scripts/level-visibility-proof.mjs#1",
+      "quote": "// Scripted level-visibility playthrough: starts a quick session with adaptive levels",
+      "note": "Checked the scripts/level-visibility-proof.mjs edit adding \"// Scripted level-visibility playthrough: starts a quick session with adaptive levels\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "037acc3acf60:src/engine/session.ts#1",
+      "quote": "  const block = state.config.blocks[state.blockIndex];",
+      "note": "Checked the src/engine/session.ts edit adding \"const block = state.config.blocks[state.blockIndex];\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "037acc3acf60:src/engine/session.ts#2",
+      "quote": "    blockDifficulty: block?.difficulty ?? null,",
+      "note": "Checked the src/engine/session.ts edit adding \"blockDifficulty: block?.difficulty ?? null,\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "037acc3acf60:src/engine/types.ts#1",
+      "quote": "  /** Block level (1-3) recorded at session completion; absent in pre-v0.2 records. */",
+      "note": "Checked the src/engine/types.ts edit adding \"/** Block level (1-3) recorded at session completion; absent in pre-v0.2 records. */\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "037acc3acf60:src/engine/types.ts#2",
+      "quote": "  blockDifficulty: number | null;",
+      "note": "Checked the src/engine/types.ts edit adding \"blockDifficulty: number | null;\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "037acc3acf60:src/styles.css#1",
+      "quote": ".level-badge {",
+      "note": "Checked the src/styles.css edit adding \".level-badge {\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "037acc3acf60:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "        {typeof result.difficulty === \"number\" ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{typeof result.difficulty === \"number\" ? (\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "037acc3acf60:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "            {view.blockDifficulty !== null ? ` · Level ${view.blockDifficulty}` : \"\"}",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"{view.blockDifficulty !== null ? ` · Level ${view.blockDifficulty}` : \"\"}\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "037acc3acf60:tests/engine/session.test.ts#1",
+      "quote": "    expect(state.results.map((result) => result.difficulty)).toEqual(",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"expect(state.results.map((result) => result.difficulty)).toEqual(\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "037acc3acf60:tests/engine/session.test.ts#2",
+      "quote": "    expect(view.blockDifficulty).toBe(2);",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"expect(view.blockDifficulty).toBe(2);\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "037acc3acf60:tests/ui/level-visibility.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/level-visibility.test.tsx edit adding \"// @vitest-environment jsdom\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "037acc3acf60:tests/ui/session-motivation.test.tsx#1",
+      "quote": "    blockDifficulty: 2,",
+      "note": "Checked the tests/ui/session-motivation.test.tsx edit adding \"blockDifficulty: 2,\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "94bdc61621c9:.aikit/decisions.md#1",
+      "quote": "### ADR-038: Ending a paused session asks for confirmation",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-038: Ending a paused session asks for confirmation\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "94bdc61621c9:.aikit/improvement-record.md#1",
+      "quote": "7. Session safety — 2026-11-07 — cycle 7",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"7. Session safety — 2026-11-07 — cycle 7\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "94bdc61621c9:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 7 — Session safety: End session discarded progress without confirmation",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 7 — Session safety: End session discarded progress without confirmation\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "94bdc61621c9:.aikit/improvement-record.md#3",
+      "quote": "npx vitest run tests/ui/end-confirmation.test.tsx",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/ui/end-confirmation.test.tsx\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "94bdc61621c9:README.md#1",
+      "quote": "An active session is snapshotted locally while it runs. After a browser reload or an Android WebView restart, the home screen offers **Resume session** instead of losing progress. Pausing then choosing **End session** asks for confirmation first, so an accidental tap can return to the paused session instead of discarding it.",
+      "note": "Checked the README.md edit adding \"An active session is snapshotted locally while it runs. After a browser reload or an Andro\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "94bdc61621c9:scripts/end-guard-proof.mjs#1",
+      "quote": "// Scripted pause/end playthrough: pauses a running quick session, clicks End session,",
+      "note": "Checked the scripts/end-guard-proof.mjs edit adding \"// Scripted pause/end playthrough: pauses a running quick session, clicks End session,\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "94bdc61621c9:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "import { useEffect, useState } from \"react\";",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"import { useEffect, useState } from \"react\";\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "94bdc61621c9:src/ui/screens/SessionScreen.tsx#2",
+      "quote": "  const [confirmEnd, setConfirmEnd] = useState(false);",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"const [confirmEnd, setConfirmEnd] = useState(false);\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "94bdc61621c9:src/ui/screens/SessionScreen.tsx#3",
+      "quote": "        <div",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"<div\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "94bdc61621c9:tests/ui/end-confirmation.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/end-confirmation.test.tsx edit adding \"// @vitest-environment jsdom\" and verified the change matches its documented intent. Marker juniper."
+    }
+  ]
+}

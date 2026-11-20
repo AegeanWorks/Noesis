@@ -7,6 +7,9 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
+    // Screenshot evidence is generated output, not source: watching it can
+    // crash the dev server on Windows when files are copied/written in place.
+    watch: { ignored: ["**/ui-review/**"] },
   },
   build: {
     outDir: "dist",

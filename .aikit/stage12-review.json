@@ -1,0 +1,60 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "0327990a06b9:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "A task-specific training study stayed narrative-only: Karbach and Kray (2009, PMID 19840052)",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"A task-specific training study stayed narrative-only: Karbach and Kray (2009, PMID 1984005\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "7105088c51ef:.aikit/improvement-record.md#1",
+      "quote": "13. Level-aware switch-cost history — 2026-11-08 — cycle 13",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"13. Level-aware switch-cost history — 2026-11-08 — cycle 13\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "7105088c51ef:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 13 — Level-aware Task Switch switch-cost trend in Menu History",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 13 — Level-aware Task Switch switch-cost trend in Menu History\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "7105088c51ef:scripts/switch-cost-trend-proof.mjs#1",
+      "quote": "// Scripted switch-cost history proof: seeds Task Switch results at levels 1-3,",
+      "note": "Checked the scripts/switch-cost-trend-proof.mjs edit adding \"// Scripted switch-cost history proof: seeds Task Switch results at levels 1-3,\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "7105088c51ef:src/styles.css#1",
+      "quote": ".switch-cost-levels {",
+      "note": "Checked the src/styles.css edit adding \".switch-cost-levels {\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "7105088c51ef:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "interface SwitchCostLevel {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"interface SwitchCostLevel {\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "7105088c51ef:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "  const costLevels = switchCostLevels(history);",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const costLevels = switchCostLevels(history);\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "7105088c51ef:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "      {costLevels.length > 0 ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{costLevels.length > 0 ? (\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "7105088c51ef:tests/ui/practice-menu.test.tsx#1",
+      "quote": "): SessionRecord {  return {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"): SessionRecord {  return {\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "7105088c51ef:tests/ui/practice-menu.test.tsx#2",
+      "quote": "function switchingRecord(",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"function switchingRecord(\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "7105088c51ef:tests/ui/practice-menu.test.tsx#3",
+      "quote": "  it(\"shows a level-aware Task Switch switch-cost trend\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"shows a level-aware Task Switch switch-cost trend\", () => {\" with the referenced behaviour intact and covered. Marker kiln."
+    }
+  ]
+}

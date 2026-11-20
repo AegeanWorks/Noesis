@@ -1,0 +1,105 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "a14b9222901f:README.md#1",
+      "quote": "Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.",
+      "note": "Checked the README.md edit adding \"Session length (quick or standard) and difficulty (gentle, standard or challenge) are user\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "a14b9222901f:README.md#2",
+      "quote": "- **Adopted supports:** when-where-plus-pairing-and-obstacle practice plan (all four inputs optional), adjustable weekly practice-day goal with a visual progress bar, user-selected session length and difficulty, per-mechanic practice, focus sessions and a weakest-link suggestion, per-mechanic last/best accuracy, non-punitive weekly summary, consistency calendar, milestone celebrations and personal-best highlights.",
+      "note": "Checked the README.md edit adding \"- **Adopted supports:** when-where-plus-pairing-and-obstacle practice plan (all four input\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "a14b9222901f:README.md#3",
+      "quote": "│   ├── storage/                  <- safety, settings, history, intention, engagement, study, adaptive, far checks and export",
+      "note": "Checked the README.md edit adding \"│   ├── storage/                  <- safety, settings, history, intention, engagement, stu\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "bbe8d3d3557e:.aikit/decisions.md#1",
+      "quote": "### ADR-027: Per-session engagement exposure and adaptation-log export",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-027: Per-session engagement exposure and adaptation-log export\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "bbe8d3d3557e:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "A 238-study meta-analysis finds test anxiety negatively related to performance, with self-esteem protective and perceived difficulty and stakes raising anxiety (PMID 29156362); untimed conditions beat timed ones, most for high-anxious test-takers. Implemented as R50: an opt-in hide-the-clock setting, default off. The timer still paces sessions underneath; only the display is suppressed. Low stakes stay structural: practice framing, no diagnosis, no composite score.",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"A 238-study meta-analysis finds test anxiety negatively related to performance, with self-\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "bbe8d3d3557e:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "| R51 | Every completed session records its engagement exposure (bonus schedule, banked total, finisher, per-block tiers) and the export carries the adaptation log, so the schedule manipulation is verifiable per participant. | A trial arm difference that cannot be audited in the data does not exist for analysis. | ADR-027 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R51 | Every completed session records its engagement exposure (bonus schedule, banked to\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "bbe8d3d3557e:src/App.tsx#1",
+      "quote": "    setMotivation((current) => (current ? bankMotivation(current) : current));",
+      "note": "Checked the src/App.tsx edit adding \"setMotivation((current) => (current ? bankMotivation(current) : current));\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "bbe8d3d3557e:src/App.tsx#2",
+      "quote": "      const finished = motivation ? finishSessionMotivation(motivation, finisher) : null;",
+      "note": "Checked the src/App.tsx edit adding \"const finished = motivation ? finishSessionMotivation(motivation, finisher) : null;\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "bbe8d3d3557e:src/App.tsx#3",
+      "quote": "          motivation: finished",
+      "note": "Checked the src/App.tsx edit adding \"motivation: finished\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "bbe8d3d3557e:src/App.tsx#4",
+      "quote": "        farChecks: loadFarChecks(),",
+      "note": "Checked the src/App.tsx edit adding \"farChecks: loadFarChecks(),\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "bbe8d3d3557e:src/storage/export.ts#1",
+      "quote": "import type { AdaptationEvent } from \"./adaptive\";",
+      "note": "Checked the src/storage/export.ts edit adding \"import type { AdaptationEvent } from \"./adaptive\";\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "bbe8d3d3557e:src/storage/export.ts#2",
+      "quote": "  adaptationLog: AdaptationEvent[];",
+      "note": "Checked the src/storage/export.ts edit adding \"adaptationLog: AdaptationEvent[];\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "bbe8d3d3557e:src/storage/export.ts#3",
+      "quote": "    adaptationLog: [...(extras.adaptationLog ?? [])],",
+      "note": "Checked the src/storage/export.ts edit adding \"adaptationLog: [...(extras.adaptationLog ?? [])],\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "bbe8d3d3557e:src/storage/history.ts#1",
+      "quote": "import type { BonusSchedule, BonusTier } from \"../engine/motivation\";",
+      "note": "Checked the src/storage/history.ts edit adding \"import type { BonusSchedule, BonusTier } from \"../engine/motivation\";\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "bbe8d3d3557e:tests/storage/export.test.ts#1",
+      "quote": "  it(\"defaults far checks, symptom reports and the adaptation log to empty\", () => {",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"it(\"defaults far checks, symptom reports and the adaptation log to empty\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "bbe8d3d3557e:tests/ui/study-journey.test.tsx#1",
+      "quote": "    const exposure = history[0]?.motivation;",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"const exposure = history[0]?.motivation;\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "bbe8d3d3557e:tests/ui/study-journey.test.tsx#2",
+      "quote": "    expect(loadHistory()[0]?.motivation).toMatchObject({",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"expect(loadHistory()[0]?.motivation).toMatchObject({\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "bbe8d3d3557e:tests/ui/study-journey.test.tsx#3",
+      "quote": "    expect(loadHistory()[0]?.motivation).toMatchObject({",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"expect(loadHistory()[0]?.motivation).toMatchObject({\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "fb1b252b2975:docs/research/README.md#1",
+      "quote": "| [BEHAVIORAL_ENGAGEMENT.md](BEHAVIORAL_ENGAGEMENT.md) | Bounded Motivation mode integration of Noesis behavioral mechanics, with evidence caveats and safeguards |",
+      "note": "Checked the docs/research/README.md edit adding \"| [BEHAVIORAL_ENGAGEMENT.md](BEHAVIORAL_ENGAGEMENT.md) | Bounded Motivation mode integrati\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "fb1b252b2975:docs/research/TRIAL_READINESS.md#1",
+      "quote": "# Noesis Investigational Use: Trial Dossier (v1.0, 2026-11-02)",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"# Noesis Investigational Use: Trial Dossier (v1.0, 2026-11-02)\" with no correctness or coverage problem introduced. Marker tundra."
+    }
+  ]
+}

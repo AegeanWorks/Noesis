@@ -108,38 +108,41 @@ export function TestBriefing({
         </section>
       ) : null}
 
-      <section className="briefing-section">
-        <h3>What the evidence supports</h3>
-        <p>{meta.claim}</p>
-        <p className="fine">{meta.qualifier}</p>
-      </section>
+      <details className="briefing-more">
+        <summary>Evidence, claim limits &amp; safety</summary>
+        <section className="briefing-section">
+          <h3>What the evidence supports</h3>
+          <p>{meta.claim}</p>
+          <p className="fine">{meta.qualifier}</p>
+        </section>
 
-      <section className="briefing-section">
-        <h3>Not claimed</h3>
-        <ul className="briefing-list">
-          {meta.notClaimed.map((claim) => (
-            <li key={claim}>{claim}</li>
-          ))}
-        </ul>
-      </section>
+        <section className="briefing-section">
+          <h3>Not claimed</h3>
+          <ul className="briefing-list">
+            {meta.notClaimed.map((claim) => (
+              <li key={claim}>{claim}</li>
+            ))}
+          </ul>
+        </section>
 
-      {source ? (
+        {source ? (
+          <p className="fine">
+            <strong>Primary source:</strong>{" "}
+            <a
+              href={`https://pubmed.ncbi.nlm.nih.gov/${source.pmid}/`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {source.label}
+            </a>{" "}
+            <span className="pmid">PMID {source.pmid}</span>
+          </p>
+        ) : null}
+
         <p className="fine">
-          <strong>Primary source:</strong>{" "}
-          <a
-            href={`https://pubmed.ncbi.nlm.nih.gov/${source.pmid}/`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {source.label}
-          </a>{" "}
-          <span className="pmid">PMID {source.pmid}</span>
+          <strong>Safety:</strong> {meta.safety} This explanation does not change your score.
         </p>
-      ) : null}
-
-      <p className="fine">
-        <strong>Safety:</strong> {meta.safety} This explanation does not change your score.
-      </p>
+      </details>
 
       <Button onClick={onBegin} className="wide" data-testid="begin-test">
         Begin test

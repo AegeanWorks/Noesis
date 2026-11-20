@@ -1,0 +1,395 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "c24dfb0204a7:.aikit/decisions.md#1",
+      "quote": "### ADR-053: Verbal fluency and face-name stay out of scope; the mnemonic hint reaches the briefing",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-053: Verbal fluency and face-name stay out of scope; the mnemonic hint reaches the\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "c24dfb0204a7:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 37 — Verbal-fluency/face-name scope decision and Paired Associates briefing hint",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 37 — Verbal-fluency/face-name scope decision and Paired Associates briefing hint\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "c24dfb0204a7:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "### 6.4 Verbal fluency and face-name associative memory",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"### 6.4 Verbal fluency and face-name associative memory\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "c24dfb0204a7:docs/research/SEARCH_LOG.md#1",
+      "quote": "A 2026-11-08 verbal-fluency and face-name search kept both candidates out of scope (ADR-053). No eligible verbal-fluency training meta-analysis was found, and open-ended generation cannot be scored deterministically. Kelly et al. 2014 (PMID 24607830; 31 RCTs, 1,806 cognitive-training participants) reported face-name recall (p=0.02) and paired associates (p=0.001) gains versus no intervention, but it is not an active-control face-name meta-analysis and a validated face stimulus set would need privacy and consent handling. The Paired Associates mnemonic hint was also surfaced in the pre-test briefing as an optional Strategy tip.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 verbal-fluency and face-name search kept both candidates out of scope (ADR-05\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "c24dfb0204a7:scripts/paired-proof.mjs#1",
+      "quote": "const strategyHint = await page.evaluate(() => {",
+      "note": "Checked the scripts/paired-proof.mjs edit adding \"const strategyHint = await page.evaluate(() => {\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "c24dfb0204a7:scripts/paired-proof.mjs#2",
+      "quote": "  strategyHint,",
+      "note": "Checked the scripts/paired-proof.mjs edit adding \"strategyHint,\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "c24dfb0204a7:src/engine/evidence.ts#1",
+      "quote": "    strategyHint:",
+      "note": "Checked the src/engine/evidence.ts edit adding \"strategyHint:\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "c24dfb0204a7:src/engine/types.ts#1",
+      "quote": "  /** Optional strategy aid shown in the pre-test briefing. */",
+      "note": "Checked the src/engine/types.ts edit adding \"/** Optional strategy aid shown in the pre-test briefing. */\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "c24dfb0204a7:src/ui/components/TestBriefing.tsx#1",
+      "quote": "      {meta.strategyHint ? (",
+      "note": "Checked the src/ui/components/TestBriefing.tsx edit adding \"{meta.strategyHint ? (\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "c24dfb0204a7:tests/ui/test-briefing.test.tsx#1",
+      "quote": "  it(\"shows the Paired Associates mnemonic hint in its pre-test briefing\", () => {",
+      "note": "Checked the tests/ui/test-briefing.test.tsx edit adding \"it(\"shows the Paired Associates mnemonic hint in its pre-test briefing\", () => {\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "ea65739d1daa:.aikit/decisions.md#1",
+      "quote": "### ADR-054: Optional confidence check, not metacognitive training",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-054: Optional confidence check, not metacognitive training\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "ea65739d1daa:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 38 — Metacognition scan and optional confidence check",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 38 — Metacognition scan and optional confidence check\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "ea65739d1daa:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "### 6.5 Metacognitive/confidence-calibration training",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"### 6.5 Metacognitive/confidence-calibration training\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "ea65739d1daa:docs/research/SEARCH_LOG.md#1",
+      "quote": "A 2026-11-08 metacognition search found no confidence-calibration training meta-analysis. Sella et al. 2023 (PMID 36218025; 25 studies, 1,768 older adults; metacognitive training memory d=0.52, strategic training d=0.44, limited methodological quality) stayed narrative-only. An optional Low/Medium/High confidence check was added to the pre-test briefing and echoed on the result card with an explicit \"not scored, not diagnostic\" note (ADR-054); it is a reflection prompt, not metacognitive training.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 metacognition search found no confidence-calibration training meta-analysis. \" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "ea65739d1daa:scripts/confidence-proof.mjs#1",
+      "quote": "// Scripted confidence-check proof: start a Paired Associates focus session, select a",
+      "note": "Checked the scripts/confidence-proof.mjs edit adding \"// Scripted confidence-check proof: start a Paired Associates focus session, select a\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "ea65739d1daa:src/App.tsx#1",
+      "quote": "import type { Confidence, MechanicId } from \"./engine/types\";",
+      "note": "Checked the src/App.tsx edit adding \"import type { Confidence, MechanicId } from \"./engine/types\";\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "ea65739d1daa:src/App.tsx#2",
+      "quote": "  const [confidenceByBlock, setConfidenceByBlock] = useState<Record<number, Confidence>>({});",
+      "note": "Checked the src/App.tsx edit adding \"const [confidenceByBlock, setConfidenceByBlock] = useState<Record<number, Confidence>>({})\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "ea65739d1daa:src/App.tsx#3",
+      "quote": "      setConfidenceByBlock({});",
+      "note": "Checked the src/App.tsx edit adding \"setConfidenceByBlock({});\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "ea65739d1daa:src/App.tsx#4",
+      "quote": "              confidence={confidenceByBlock[view.blockIndex] ?? null}",
+      "note": "Checked the src/App.tsx edit adding \"confidence={confidenceByBlock[view.blockIndex] ?? null}\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "ea65739d1daa:src/App.tsx#5",
+      "quote": "            confidences={state?.results.map(",
+      "note": "Checked the src/App.tsx edit adding \"confidences={state?.results.map(\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "ea65739d1daa:src/engine/types.ts#1",
+      "quote": "export type Confidence = \"low\" | \"medium\" | \"high\";",
+      "note": "Checked the src/engine/types.ts edit adding \"export type Confidence = \"low\" | \"medium\" | \"high\";\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "ea65739d1daa:src/styles.css#1",
+      "quote": ".confidence-options {",
+      "note": "Checked the src/styles.css edit adding \".confidence-options {\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/components/TestBriefing.tsx#1",
+      "quote": "import type { Confidence, MechanicMeta } from \"../../engine/types\";",
+      "note": "Checked the src/ui/components/TestBriefing.tsx edit adding \"import type { Confidence, MechanicMeta } from \"../../engine/types\";\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/components/TestBriefing.tsx#2",
+      "quote": "  confidence?: Confidence | null | undefined;",
+      "note": "Checked the src/ui/components/TestBriefing.tsx edit adding \"confidence?: Confidence | null | undefined;\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/components/TestBriefing.tsx#3",
+      "quote": "      {onConfidence ? (",
+      "note": "Checked the src/ui/components/TestBriefing.tsx edit adding \"{onConfidence ? (\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "import type { MechanicResult, Confidence } from \"../../engine/types\";",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"import type { MechanicResult, Confidence } from \"../../engine/types\";\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  confidence,",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"confidence,\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "  confidence: Confidence | null;",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"confidence: Confidence | null;\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "      {confidence ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{confidence ? (\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "  confidences = [],",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"confidences = [],\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/ResultsScreen.tsx#6",
+      "quote": "              confidence={confidences[index] ?? null}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"confidence={confidences[index] ?? null}\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "import type { Confidence, SessionView } from \"../../engine/types\";",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"import type { Confidence, SessionView } from \"../../engine/types\";\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/SessionScreen.tsx#2",
+      "quote": "  confidence?: Confidence | null | undefined;",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"confidence?: Confidence | null | undefined;\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/SessionScreen.tsx#3",
+      "quote": "  confidence = null,",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"confidence = null,\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "ea65739d1daa:src/ui/screens/SessionScreen.tsx#4",
+      "quote": "              confidence={confidence}",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"confidence={confidence}\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "ea65739d1daa:tests/ui/confidence-note.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/confidence-note.test.tsx edit adding \"// @vitest-environment jsdom\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "ea65739d1daa:tests/ui/test-briefing.test.tsx#1",
+      "quote": "  it(\"offers an optional confidence check and reports the choice\", () => {",
+      "note": "Checked the tests/ui/test-briefing.test.tsx edit adding \"it(\"offers an optional confidence check and reports the choice\", () => {\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "395997cc9e06:.aikit/decisions.md#1",
+      "quote": "- **Decision**: Add an optional **Confidence check** to the pre-test briefing (Low/Medium/High) and repeat the selected level on the corresponding result card. It is clearly labelled as a reflection, not scored and not a diagnostic calibration. No new mechanic or evidence-table record is added. The choice is stored per block in the session state and snapshot so it survives reload, is attached to the completed result, and appears in a same-mechanic, same-level confidence-versus-accuracy summary in Menu History.",
+      "note": "Checked the .aikit/decisions.md edit adding \"- **Decision**: Add an optional **Confidence check** to the pre-test briefing (Low/Medium/\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "395997cc9e06:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 39 — Persist confidence and summarize it in Menu History",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 39 — Persist confidence and summarize it in Menu History\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "395997cc9e06:docs/research/DATA_DICTIONARY.md#1",
+      "quote": "| `confidence` | `\"low\"`, `\"medium\"`, `\"high\"` or absent | Optional pre-test confidence reflection; never a score |",
+      "note": "Checked the docs/research/DATA_DICTIONARY.md edit adding \"| `confidence` | `\"low\"`, `\"medium\"`, `\"high\"` or absent | Optional pre-test confidence re\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "395997cc9e06:docs/research/DATA_DICTIONARY.md#2",
+      "quote": "`session_id, finished_at, seed, arm, mechanic, domain, difficulty, confidence, trials, duration_ms,",
+      "note": "Checked the docs/research/DATA_DICTIONARY.md edit adding \"`session_id, finished_at, seed, arm, mechanic, domain, difficulty, confidence, trials, dur\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "395997cc9e06:docs/research/DATA_EXPORT_AND_REUSE.md#1",
+      "quote": "`session_id, finished_at, seed, arm, mechanic, domain, difficulty, confidence, trials, duration_ms,",
+      "note": "Checked the docs/research/DATA_EXPORT_AND_REUSE.md edit adding \"`session_id, finished_at, seed, arm, mechanic, domain, difficulty, confidence, trials, dur\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "395997cc9e06:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  note that it is a reflection, not scored and not a diagnostic calibration. The choice persists",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"note that it is a reflection, not scored and not a diagnostic calibration. The choice pers\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "395997cc9e06:docs/research/SEARCH_LOG.md#1",
+      "quote": "A 2026-11-08 metacognition search found no confidence-calibration training meta-analysis. Sella et al. 2023 (PMID 36218025; 25 studies, 1,768 older adults; metacognitive training memory d=0.52, strategic training d=0.44, limited methodological quality) stayed narrative-only. An optional Low/Medium/High confidence check was added to the pre-test briefing and echoed on the result card with an explicit \"not scored, not diagnostic\" note (ADR-054); it is a reflection prompt, not metacognitive training. The check is now persisted per block in the session snapshot and completed result, and Menu History summarizes confidence versus accuracy within each mechanic level. Sessions CSV gains a `confidence` column.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 metacognition search found no confidence-calibration training meta-analysis. \" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "395997cc9e06:scripts/confidence-proof.mjs#1",
+      "quote": "await page.waitForTimeout(1_800); // let the snapshot include the confidence choice",
+      "note": "Checked the scripts/confidence-proof.mjs edit adding \"await page.waitForTimeout(1_800); // let the snapshot include the confidence choice\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "395997cc9e06:scripts/confidence-proof.mjs#2",
+      "quote": "    await page.waitForTimeout(120);",
+      "note": "Checked the scripts/confidence-proof.mjs edit adding \"await page.waitForTimeout(120);\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "395997cc9e06:scripts/confidence-proof.mjs#3",
+      "quote": "await page.getByRole(\"button\", { name: \"Menu\", exact: true }).click();",
+      "note": "Checked the scripts/confidence-proof.mjs edit adding \"await page.getByRole(\"button\", { name: \"Menu\", exact: true }).click();\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "395997cc9e06:src/App.tsx#1",
+      "quote": "import type { MechanicId } from \"./engine/types\";",
+      "note": "Checked the src/App.tsx edit adding \"import type { MechanicId } from \"./engine/types\";\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "395997cc9e06:src/App.tsx#2",
+      "quote": "  const [confidenceByBlock, setConfidenceByBlock] = useState<Record<number, Confidence>>({});",
+      "note": "Checked the src/App.tsx edit adding \"const [confidenceByBlock, setConfidenceByBlock] = useState<Record<number, Confidence>>({})\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "395997cc9e06:src/App.tsx#3",
+      "quote": "      setConfidenceByBlock({});",
+      "note": "Checked the src/App.tsx edit adding \"setConfidenceByBlock({});\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "395997cc9e06:src/App.tsx#4",
+      "quote": "              confidence={state?.confidenceByBlock?.[view.blockIndex] ?? null}",
+      "note": "Checked the src/App.tsx edit adding \"confidence={state?.confidenceByBlock?.[view.blockIndex] ?? null}\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "395997cc9e06:src/App.tsx#5",
+      "quote": "            confidences={state?.results.map(",
+      "note": "Checked the src/App.tsx edit adding \"confidences={state?.results.map(\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "395997cc9e06:src/engine/schema.ts#1",
+      "quote": "  z.object({ type: z.literal(\"confidence\"), value: z.enum([\"low\", \"medium\", \"high\"]) }),",
+      "note": "Checked the src/engine/schema.ts edit adding \"z.object({ type: z.literal(\"confidence\"), value: z.enum([\"low\", \"medium\", \"high\"]) }),\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "395997cc9e06:src/engine/session.ts#1",
+      "quote": "    confidenceByBlock: normalized.blocks.map(() => null),",
+      "note": "Checked the src/engine/session.ts edit adding \"confidenceByBlock: normalized.blocks.map(() => null),\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "395997cc9e06:src/engine/session.ts#2",
+      "quote": "  const confidence = state.confidenceByBlock[state.blockIndex] ?? undefined;",
+      "note": "Checked the src/engine/session.ts edit adding \"const confidence = state.confidenceByBlock[state.blockIndex] ?? undefined;\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "395997cc9e06:src/engine/session.ts#3",
+      "quote": "  if (action.type === \"confidence\") {",
+      "note": "Checked the src/engine/session.ts edit adding \"if (action.type === \"confidence\") {\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "395997cc9e06:src/engine/types.ts#1",
+      "quote": "  /** Optional pre-test confidence reflection for this block. */",
+      "note": "Checked the src/engine/types.ts edit adding \"/** Optional pre-test confidence reflection for this block. */\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "395997cc9e06:src/engine/types.ts#2",
+      "quote": "  confidenceByBlock: (Confidence | null)[];",
+      "note": "Checked the src/engine/types.ts edit adding \"confidenceByBlock: (Confidence | null)[];\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "395997cc9e06:src/engine/types.ts#3",
+      "quote": "  | { type: \"confidence\"; value: Confidence }",
+      "note": "Checked the src/engine/types.ts edit adding \"| { type: \"confidence\"; value: Confidence }\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "395997cc9e06:src/storage/csvExport.ts#1",
+      "quote": "  \"confidence\",",
+      "note": "Checked the src/storage/csvExport.ts edit adding \"\"confidence\",\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "395997cc9e06:src/storage/csvExport.ts#2",
+      "quote": "          result.confidence ?? \"\",",
+      "note": "Checked the src/storage/csvExport.ts edit adding \"result.confidence ?? \"\",\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "395997cc9e06:src/storage/sessionSnapshot.ts#1",
+      "quote": "    const state = parsed.state as SessionState;",
+      "note": "Checked the src/storage/sessionSnapshot.ts edit adding \"const state = parsed.state as SessionState;\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "395997cc9e06:src/styles.css#1",
+      "quote": ".confidence-summary-rows {",
+      "note": "Checked the src/styles.css edit adding \".confidence-summary-rows {\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "395997cc9e06:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "import type { Confidence, MechanicId, MechanicResult } from \"../../engine/types\";",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"import type { Confidence, MechanicId, MechanicResult } from \"../../engine/types\";\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "395997cc9e06:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "interface ConfidenceRow {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"interface ConfidenceRow {\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "395997cc9e06:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "  const confidenceRows = confidenceSummary(history);",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const confidenceRows = confidenceSummary(history);\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "395997cc9e06:src/ui/screens/PracticeMenuScreen.tsx#4",
+      "quote": "      {confidenceRows.length > 0 ? <ConfidenceSummary rows={confidenceRows} /> : null}",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{confidenceRows.length > 0 ? <ConfidenceSummary rows={confidenceRows} /> : null}\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "395997cc9e06:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "              confidence={confidences[index] ?? result.confidence ?? null}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"confidence={confidences[index] ?? result.confidence ?? null}\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "395997cc9e06:tests/engine/session.test.ts#1",
+      "quote": "  it(\"stores per-block confidence and attaches it to the completed result\", () => {",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"it(\"stores per-block confidence and attaches it to the completed result\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "395997cc9e06:tests/storage/csvExport.test.ts#1",
+      "quote": "      \"session_id,finished_at,seed,arm,mechanic,domain,difficulty,confidence,trials,duration_ms,accuracy,summary,state_hash,metrics_json,motivation_json\\n\",",
+      "note": "Checked the tests/storage/csvExport.test.ts edit adding \"\"session_id,finished_at,seed,arm,mechanic,domain,difficulty,confidence,trials,duration_ms,\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "395997cc9e06:tests/storage/csvExport.test.ts#2",
+      "quote": "      \"session_id,finished_at,seed,arm,mechanic,domain,difficulty,confidence,trials,duration_ms,accuracy,summary,state_hash,metrics_json,motivation_json\",",
+      "note": "Checked the tests/storage/csvExport.test.ts edit adding \"\"session_id,finished_at,seed,arm,mechanic,domain,difficulty,confidence,trials,duration_ms,\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "395997cc9e06:tests/storage/csvExport.test.ts#3",
+      "quote": "    expect(row).toContain(\"session-1,2026-11-08T10:05:00.000Z,42,,nback,working_memory,,,18,60000,,\");",
+      "note": "Checked the tests/storage/csvExport.test.ts edit adding \"expect(row).toContain(\"session-1,2026-11-08T10:05:00.000Z,42,,nback,working_memory,,,18,60\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "395997cc9e06:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "  it(\"round-trips per-block confidence\", () => {",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"it(\"round-trips per-block confidence\", () => {\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "395997cc9e06:tests/ui/confidence-note.test.tsx#1",
+      "quote": "import type { Confidence, MechanicResult } from \"../../src/engine/types\";",
+      "note": "Checked the tests/ui/confidence-note.test.tsx edit adding \"import type { Confidence, MechanicResult } from \"../../src/engine/types\";\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "395997cc9e06:tests/ui/confidence-note.test.tsx#2",
+      "quote": "function renderResults(confidence?: Confidence) {",
+      "note": "Checked the tests/ui/confidence-note.test.tsx edit adding \"function renderResults(confidence?: Confidence) {\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "395997cc9e06:tests/ui/confidence-note.test.tsx#3",
+      "quote": "    renderResults(\"high\");",
+      "note": "Checked the tests/ui/confidence-note.test.tsx edit adding \"renderResults(\"high\");\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "395997cc9e06:tests/ui/practice-menu.test.tsx#1",
+      "quote": "function confidenceRecord(",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"function confidenceRecord(\" with the referenced behaviour intact and covered. Marker alpine."
+    },
+    {
+      "id": "395997cc9e06:tests/ui/practice-menu.test.tsx#2",
+      "quote": "  it(\"summarizes confidence versus accuracy within each mechanic level\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"summarizes confidence versus accuracy within each mechanic level\", () => {\" and verified the change matches its documented intent. Marker brook."
+    }
+  ]
+}

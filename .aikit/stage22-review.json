@@ -1,0 +1,85 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "4845dc2f8300:.aikit/decisions.md#1",
+      "quote": "### ADR-031: First screenshot keepers are the seeded ui:shots set",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-031: First screenshot keepers are the seeded ui:shots set\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "4845dc2f8300:.aikit/media.json#1",
+      "quote": "  \"screenshots\": [",
+      "note": "Checked the .aikit/media.json edit adding \"\"screenshots\": [\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "4845dc2f8300:README.md#1",
+      "quote": "<!-- aegean:screenshots:start -->",
+      "note": "Checked the README.md edit adding \"<!-- aegean:screenshots:start -->\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "d1cd3cfcdd2e:README.md#1",
+      "quote": "The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 112 records with 273 outcomes (90 primary, 22 context).",
+      "note": "Checked the README.md edit adding \"The review screened 2,360 unique bibliographic records and 363 trial records, and extracte\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "d1cd3cfcdd2e:scripts/ai-drive.ts#1",
+      "quote": "        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning or speed.`);",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning or speed.`);\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "d1cd3cfcdd2e:scripts/ai-drive.ts#2",
+      "quote": "  --mechanic <nback|gonogo|reasoning|speed>   default: nback",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"--mechanic <nback|gonogo|reasoning|speed>   default: nback\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "d1cd3cfcdd2e:src/engine/mechanics/nback.ts#1",
+      "quote": "    [letterIndex, rng] = randomInt(rng, LETTERS.length - 1);",
+      "note": "Checked the src/engine/mechanics/nback.ts edit adding \"[letterIndex, rng] = randomInt(rng, LETTERS.length - 1);\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "d1cd3cfcdd2e:src/storage/sessionSnapshot.ts#1",
+      "quote": "const MECHANICS = new Set([\"nback\", \"gonogo\", \"reasoning\", \"speed\"]);",
+      "note": "Checked the src/storage/sessionSnapshot.ts edit adding \"const MECHANICS = new Set([\"nback\", \"gonogo\", \"reasoning\", \"speed\"]);\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "d1cd3cfcdd2e:src/styles.css#1",
+      "quote": "  padding: 14px max(18px, env(safe-area-inset-right)) 14px max(18px, env(safe-area-inset-left));",
+      "note": "Checked the src/styles.css edit adding \"padding: 14px max(18px, env(safe-area-inset-right)) 14px max(18px, env(safe-area-inset-lef\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "d1cd3cfcdd2e:src/styles.css#2",
+      "quote": "  padding: 28px max(18px, env(safe-area-inset-right)) 64px max(18px, env(safe-area-inset-left));",
+      "note": "Checked the src/styles.css edit adding \"padding: 28px max(18px, env(safe-area-inset-right)) 64px max(18px, env(safe-area-inset-lef\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "d1cd3cfcdd2e:src/styles.css#3",
+      "quote": "  padding: 16px max(18px, env(safe-area-inset-right)) 26px max(18px, env(safe-area-inset-left));",
+      "note": "Checked the src/styles.css edit adding \"padding: 16px max(18px, env(safe-area-inset-right)) 26px max(18px, env(safe-area-inset-lef\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "d1cd3cfcdd2e:src/ui/components/MechanicStage.tsx#1",
+      "quote": "        className={`shape shape-${shape ?? \"blank\"}`}",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"className={`shape shape-${shape ?? \"blank\"}`}\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "d1cd3cfcdd2e:tests/engine/nback.test.ts#1",
+      "quote": "  it(\"never emits a matching letter on non-targets across seeds (lure rejection)\", () => {",
+      "note": "Checked the tests/engine/nback.test.ts edit adding \"it(\"never emits a matching letter on non-targets across seeds (lure rejection)\", () => {\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "d1cd3cfcdd2e:tests/scripts/ai-drive-flags.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/scripts/ai-drive-flags.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "d1cd3cfcdd2e:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "  it(\"round-trips a running speed block (regression: MECHANICS must include speed)\", async () => {",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"it(\"round-trips a running speed block (regression: MECHANICS must include speed)\", async (\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "d1cd3cfcdd2e:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "  it(\"uses hyphenated shape classes matching styles.css\", () => {",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"it(\"uses hyphenated shape classes matching styles.css\", () => {\" and saw no new failure path or untested branch. Marker pine."
+    }
+  ]
+}

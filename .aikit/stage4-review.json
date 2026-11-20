@@ -1,0 +1,180 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "15cd30eb35f2:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 34 — Paired Associates mid-session reload and resume proof",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 34 — Paired Associates mid-session reload and resume proof\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "15cd30eb35f2:scripts/paired-resume-proof.mjs#1",
+      "quote": "// Scripted Paired Associates focus playthrough with a mid-session reload.",
+      "note": "Checked the scripts/paired-resume-proof.mjs edit adding \"// Scripted Paired Associates focus playthrough with a mid-session reload.\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "73fbbb822693:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 35 — Level-aware Paired Associates trends and same-level result delta",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 35 — Level-aware Paired Associates trends and same-level result delta\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "73fbbb822693:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "- Metrics: accuracy, mean response time, timeouts and streaks. The Choose-a-test card shows the",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- Metrics: accuracy, mean response time, timeouts and streaks. The Choose-a-test card show\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "73fbbb822693:scripts/paired-trend-proof.mjs#1",
+      "quote": "// Scripted Paired Associates history proof: seeds accuracy/RT at levels 1-3, captures",
+      "note": "Checked the scripts/paired-trend-proof.mjs edit adding \"// Scripted Paired Associates history proof: seeds accuracy/RT at levels 1-3, captures\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "73fbbb822693:src/styles.css#1",
+      "quote": ".menu-paired-trend {",
+      "note": "Checked the src/styles.css edit adding \".menu-paired-trend {\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "interface DualMetricLevel {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"interface DualMetricLevel {\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "function dualMetricLevels(",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"function dualMetricLevels(\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "      if (result.mechanic !== mechanic) continue;",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"if (result.mechanic !== mechanic) continue;\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#4",
+      "quote": "function dualMetricLine(entry: DualMetricLevel, label: string): string {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"function dualMetricLine(entry: DualMetricLevel, label: string): string {\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#5",
+      "quote": "            <p className=\"switch-cost-stats\" data-testid={`${prefix}-accuracy-${entry.level}`}>",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"<p className=\"switch-cost-stats\" data-testid={`${prefix}-accuracy-${entry.level}`}>\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#6",
+      "quote": "            <p className=\"switch-cost-stats\" data-testid={`${prefix}-rt-${entry.level}`}>",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"<p className=\"switch-cost-stats\" data-testid={`${prefix}-rt-${entry.level}`}>\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#7",
+      "quote": "function rotationLevels(history: readonly SessionRecord[]): DualMetricLevel[] {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"function rotationLevels(history: readonly SessionRecord[]): DualMetricLevel[] {\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#8",
+      "quote": "  const pairedLevel =",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const pairedLevel =\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#9",
+      "quote": "      {pairedTrendLine ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{pairedTrendLine ? (\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#10",
+      "quote": "  const pairedTrendLevels = pairedLevels(history);",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const pairedTrendLevels = pairedLevels(history);\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/PracticeMenuScreen.tsx#11",
+      "quote": "      {pairedTrendLevels.length > 0 ? <PairedTrendCard levels={pairedTrendLevels} /> : null}",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{pairedTrendLevels.length > 0 ? <PairedTrendCard levels={pairedTrendLevels} /> : null}\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  pairedAccuracyComparison,",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"pairedAccuracyComparison,\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  pairedAccuracyComparison: SwitchCostComparison | null;",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"pairedAccuracyComparison: SwitchCostComparison | null;\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "  const pairedAccuracy = accuracyChange(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const pairedAccuracy = accuracyChange(\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "      {result.mechanic === \"paired\" ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{result.mechanic === \"paired\" ? (\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "  const pairedAccuracyComparisons = costComparisons(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const pairedAccuracyComparisons = costComparisons(\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "73fbbb822693:src/ui/screens/ResultsScreen.tsx#6",
+      "quote": "              pairedAccuracyComparison={pairedAccuracyComparisons[index] ?? null}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"pairedAccuracyComparison={pairedAccuracyComparisons[index] ?? null}\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "73fbbb822693:tests/ui/paired-result-delta.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/paired-result-delta.test.tsx edit adding \"// @vitest-environment jsdom\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "73fbbb822693:tests/ui/practice-menu.test.tsx#1",
+      "quote": "function pairedRecord(",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"function pairedRecord(\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "73fbbb822693:tests/ui/practice-menu.test.tsx#2",
+      "quote": "  it(\"shows a level-aware Paired Associates accuracy and response-time trend\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"shows a level-aware Paired Associates accuracy and response-time trend\", () => {\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "ba00db251952:.aikit/decisions.md#1",
+      "quote": "### ADR-052: Dual-task training stays out of scope; Paired Associates adds an optional mnemonic hint",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-052: Dual-task training stays out of scope; Paired Associates adds an optional mne\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "ba00db251952:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 36 — Dual-task scope decision and Paired Associates strategy hint",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 36 — Dual-task scope decision and Paired Associates strategy hint\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "ba00db251952:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "- **Strategy hint:** the study screen offers a collapsed tip to link the two words in a vivid",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- **Strategy hint:** the study screen offers a collapsed tip to link the two words in a vi\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "ba00db251952:docs/research/NEW_MECHANIC_CANDIDATES.md#2",
+      "quote": "### 6.3 Cognitive-motor dual-task training",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"### 6.3 Cognitive-motor dual-task training\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "ba00db251952:docs/research/SEARCH_LOG.md#1",
+      "quote": "A 2026-11-08 dual-task scope search kept cognitive-motor dual-task training narrative-only (ADR-052). Gao and Liu 2025 (PMID 40410069) found gait, balance, executive-function and fall-risk gains in community older adults; Hao et al. 2025 (PMID 40304821) network meta-analysed 32 RCTs in MCI/dementia and found dual cognitive-task training best for global cognition. Both are clinical or motor-cognitive populations, so no dual-task mechanic was added. The same update added an optional mnemonic strategy hint to Paired Associates, based on the Chen 2022 strategy-training evidence; it does not change scoring.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 dual-task scope search kept cognitive-motor dual-task training narrative-only\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "ba00db251952:scripts/paired-proof.mjs#1",
+      "quote": "const hint = await page.$('[data-testid=\"paired-strategy-hint\"] summary');",
+      "note": "Checked the scripts/paired-proof.mjs edit adding \"const hint = await page.$('[data-testid=\"paired-strategy-hint\"] summary');\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "ba00db251952:src/styles.css#1",
+      "quote": ".paired-strategy-hint {",
+      "note": "Checked the src/styles.css edit adding \".paired-strategy-hint {\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "ba00db251952:src/ui/components/MechanicStage.tsx#1",
+      "quote": "      {view.phase === \"study\" ? (",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"{view.phase === \"study\" ? (\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "ba00db251952:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "  it(\"offers a mnemonic strategy hint during paired study\", () => {",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"it(\"offers a mnemonic strategy hint during paired study\", () => {\" with the referenced behaviour intact and covered. Marker isle."
+    }
+  ]
+}

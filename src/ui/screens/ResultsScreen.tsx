@@ -724,6 +724,27 @@ export function ResultsScreen({
         Compare a block only with your own earlier performance on the same task.
       </p>
 
+      {results.length > 0 ? (
+        <div className="session-snapshot" aria-label="Session at a glance">
+          <div className="snapshot-item">
+            <span className="snapshot-value">{results.length}</span>
+            <span className="snapshot-label">blocks completed</span>
+          </div>
+          <div className="snapshot-item">
+            <span className="snapshot-value">
+              {new Set(results.map((result) => result.mechanic)).size}
+            </span>
+            <span className="snapshot-label">skills practised</span>
+          </div>
+          {motivation ? (
+            <div className="snapshot-item">
+              <span className="snapshot-value">+{motivation.banked}</span>
+              <span className="snapshot-label">cosmetic momentum</span>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
+
       {results.length === 0 ? (
         <p className="notice">No results yet. Start a session to measure a block.</p>
       ) : (

@@ -1,0 +1,65 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "f9d90a4a66f0:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 23 — Same-level mean-span delta on the Spatial Span result card",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 23 — Same-level mean-span delta on the Spatial Span result card\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "f9d90a4a66f0:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  Choose-a-test card shows the latest same-level mean and longest span; the result and History",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"Choose-a-test card shows the latest same-level mean and longest span; the result and Histo\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "f9d90a4a66f0:scripts/spatial-trend-proof.mjs#1",
+      "quote": "await page.waitForTimeout(300);",
+      "note": "Checked the scripts/spatial-trend-proof.mjs edit adding \"await page.waitForTimeout(300);\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "f9d90a4a66f0:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "function spanComparisons(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"function spanComparisons(\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "f9d90a4a66f0:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "function spanChange(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"function spanChange(\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "f9d90a4a66f0:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "  const span = spanChange(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const span = spanChange(\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "f9d90a4a66f0:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "      {result.mechanic === \"spatial\" ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{result.mechanic === \"spatial\" ? (\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "f9d90a4a66f0:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "  const spanComparisonsByIndex = spanComparisons(history, sessionId, results);",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const spanComparisonsByIndex = spanComparisons(history, sessionId, results);\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "f9d90a4a66f0:src/ui/screens/ResultsScreen.tsx#6",
+      "quote": "              spanComparison={spanComparisonsByIndex[index] ?? null}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"spanComparison={spanComparisonsByIndex[index] ?? null}\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "f9d90a4a66f0:tests/ui/spatial-result-delta.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/spatial-result-delta.test.tsx edit adding \"// @vitest-environment jsdom\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "981ea5c7e9bf:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 24 — Spatial Span mid-session reload and resume proof",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 24 — Spatial Span mid-session reload and resume proof\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "981ea5c7e9bf:scripts/spatial-resume-proof.mjs#1",
+      "quote": "// Scripted Spatial Span focus playthrough with a mid-session reload.",
+      "note": "Checked the scripts/spatial-resume-proof.mjs edit adding \"// Scripted Spatial Span focus playthrough with a mid-session reload.\" and verified the change matches its documented intent. Marker lantern."
+    }
+  ]
+}

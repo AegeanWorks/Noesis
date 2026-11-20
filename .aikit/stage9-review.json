@@ -1,0 +1,555 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "1c57fbceae4b:.aikit/improvement-record.md#1",
+      "quote": "20. Flanker same-level result delta — 2026-11-08 — cycle 20",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"20. Flanker same-level result delta — 2026-11-08 — cycle 20\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "1c57fbceae4b:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 20 — Same-level interference-cost delta on the Flanker result card",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 20 — Same-level interference-cost delta on the Flanker result card\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "1c57fbceae4b:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  shows the latest same-level interference cost and trend; the result and History cards compare",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"shows the latest same-level interference cost and trend; the result and History cards comp\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "1c57fbceae4b:scripts/flanker-resume-proof.mjs#1",
+      "quote": "    const session = window.__NOESIS__.getState();",
+      "note": "Checked the scripts/flanker-resume-proof.mjs edit adding \"const session = window.__NOESIS__.getState();\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "1c57fbceae4b:scripts/flanker-resume-proof.mjs#2",
+      "quote": "  const changes = [...document.querySelectorAll('[data-testid^=\"flanker-cost-vs-previous-\"]')].map(",
+      "note": "Checked the scripts/flanker-resume-proof.mjs edit adding \"const changes = [...document.querySelectorAll('[data-testid^=\"flanker-cost-vs-previous-\"]'\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "1c57fbceae4b:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "function costComparisons(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"function costComparisons(\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "1c57fbceae4b:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "function switchCostComparisons(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"function switchCostComparisons(\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "1c57fbceae4b:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "  const switchChange = costChange(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const switchChange = costChange(\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "1c57fbceae4b:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "            className={`fine switch-cost-change switch-cost-change-${switchChange.direction}`}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"className={`fine switch-cost-change switch-cost-change-${switchChange.direction}`}\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "1c57fbceae4b:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "  const interferenceComparisons = interferenceCostComparisons(history, sessionId, results);",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const interferenceComparisons = interferenceCostComparisons(history, sessionId, results);\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "1c57fbceae4b:src/ui/screens/ResultsScreen.tsx#6",
+      "quote": "              interferenceCostComparison={interferenceComparisons[index] ?? null}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"interferenceCostComparison={interferenceComparisons[index] ?? null}\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "1c57fbceae4b:tests/ui/flanker-result-note.test.tsx#1",
+      "quote": "import type { SessionRecord } from \"../../src/storage/history\";",
+      "note": "Checked the tests/ui/flanker-result-note.test.tsx edit adding \"import type { SessionRecord } from \"../../src/storage/history\";\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "1c57fbceae4b:tests/ui/flanker-result-note.test.tsx#2",
+      "quote": "function prior(cost: number, level = 2): SessionRecord {",
+      "note": "Checked the tests/ui/flanker-result-note.test.tsx edit adding \"function prior(cost: number, level = 2): SessionRecord {\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "5d0eb704c0a7:.aikit/decisions.md#1",
+      "quote": "### ADR-047: Experimental Spatial Span focus test",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-047: Experimental Spatial Span focus test\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "5d0eb704c0a7:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 21 — Experimental Spatial Span focus test from verified Corsi evidence",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 21 — Experimental Spatial Span focus test from verified Corsi evidence\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "5d0eb704c0a7:README.md#1",
+      "quote": "**Current phase: first working vertical slice.** One-click sessions, four core mechanics plus three experimental focus tests (Task Switch, Flanker and Spatial Span), a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).",
+      "note": "Checked the README.md edit adding \"**Current phase: first working vertical slice.** One-click sessions, four core mechanics p\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "5d0eb704c0a7:README.md#2",
+      "quote": "Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four core mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The experimental Task Switch, Flanker and Spatial Span are available as single-test focus sessions from the Menu and are not in the default lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.",
+      "note": "Checked the README.md edit adding \"Session length (quick or standard) and difficulty (gentle, standard or challenge) are user\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "5d0eb704c0a7:README.md#3",
+      "quote": "The **Menu** tab is the explicit choice point. It lists every test - four core mechanics plus the experimental Task Switch, Flanker and Spatial Span - with a short,",
+      "note": "Checked the README.md edit adding \"The **Menu** tab is the explicit choice point. It lists every test - four core mechanics p\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "5d0eb704c0a7:README.md#4",
+      "quote": "The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 119 records with 281 outcomes (90 primary, 29 context).",
+      "note": "Checked the README.md edit adding \"The review screened 2,360 unique bibliographic records and 363 trial records, and extracte\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "5d0eb704c0a7:README.md#5",
+      "quote": "| Spatial Span | Visuospatial working memory | Experimental (focus test) | Reproduce a slow sequence of highlighted grid blocks in order; reports accuracy, mean span and longest span. |",
+      "note": "Checked the README.md edit adding \"| Spatial Span | Visuospatial working memory | Experimental (focus test) | Reproduce a slo\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state machines, plus experimental Task Switch, Flanker and Spatial Span focus tests;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state mach\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "- an experimental Spatial Span focus test for visuospatial working-memory span measurement;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- an experimental Spatial Span focus test for visuospatial working-memory span measurement\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/DESIGN_IMPLICATIONS.md#3",
+      "quote": "| R52 | Default sessions interleave the four core mechanics; focus sessions are the deliberate blocked exception. The experimental Task Switch, Flanker and Spatial Span are focus-only until the default lineup is revalidated. Interleaving beats blocking for inductive learning (g=0.42, strongest for complex similar material); word lists reverse it (blocking wins, g=-0.39), which the far checks blocked word-study respects. | Scheduling shapes inductive learning; material determines the direction. | 31556629; ADR-028; ADR-045; ADR-046; ADR-047 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R52 | Default sessions interleave the four core mechanics; focus sessions are the delibe\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/DESIGN_IMPLICATIONS.md#4",
+      "quote": "| R65 | Spatial Span is an experimental focus test: a slow 3x3 grid sequence is reproduced by tapping, with an adaptive span and accuracy/mean-span/longest-span metrics. It is not in the default lineup, makes no general-intelligence, academic or everyday-function claim, and uses no flashing. | A 2025 meta-analysis found a small Corsi Block effect in healthy older adults (d=0.16); working-memory training reviews show short-term visuospatial near transfer but no convincing far transfer, so the app ships it as claim-bounded task practice. | 37822255; 22612437; 27474138; ADR-047 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R65 | Spatial Span is an experimental focus test: a slow 3x3 grid sequence is reproduced\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "| Spatial span / Corsi | Visuospatial working memory | A 2025 meta-analysis found a small Corsi Block effect (d=0.16) in healthy older adults; broader working-memory reviews show short-term near transfer but no convincing far transfer (37822255, 22612437, 27474138) | Grid sequence; safe | **Implement as experimental focus test, claim-bounded** |",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"| Spatial span / Corsi | Visuospatial working memory | A 2025 meta-analysis found a small \" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/NEW_MECHANIC_CANDIDATES.md#2",
+      "quote": "### 4.2 Spatial Span implementation and evidence limit",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"### 4.2 Spatial Span implementation and evidence limit\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/NEW_MECHANIC_CANDIDATES.md#3",
+      "quote": "- **R64:** Flanker is an experimental focus test with static arrows, congruent/incongruent",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- **R64:** Flanker is an experimental focus test with static arrows, congruent/incongruent\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/README.md#1",
+      "quote": "**Status:** v1.0 corpus complete; current review revision v1.3 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered",
+      "note": "Checked the docs/research/README.md edit adding \"**Status:** v1.0 corpus complete; current review revision v1.3 (2026-11-08) with targeted \" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (119 records, 281 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis37822255,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis37822255,\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/REFERENCES.md#1",
+      "quote": "- Efficacy of cognitive training on executive functions in healthy older adults: a systematic review with meta-analysis of randomized controlled trials. *Psychology & Health*. 2025. PMID: [37822255](https://pubmed.ncbi.nlm.nih.gov/37822255/). DOI: [10.1080/08870446.2023.2267610](https://doi.org/10.1080/08870446.2023.2267610).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Efficacy of cognitive training on executive functions in healthy older adults: a systema\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 119 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 119 |\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/SEARCH_LOG.md#2",
+      "quote": "| cct | 40 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| cct | 40 |\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 108 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 108 |\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/SEARCH_LOG.md#4",
+      "quote": "A 2026-11-08 spatial-span search added one context record: Olegário et al. 2025 (PMID 37822255; 31 trials in the systematic review, 13 in the meta-analysis; cognitive training improved Corsi Block working memory in healthy older adults, d=0.16, p=.002, while Digit Span backward and N-back were not significant). The DOI and metadata were verified via PubMed esummary. It grounds the experimental Spatial Span focus test (R65, ADR-047). Two task-specific working-memory reviews stayed narrative-only in [NEW_MECHANIC_CANDIDATES.md](NEW_MECHANIC_CANDIDATES.md): Melby-Lervåg and Hulme 2013 (PMID 22612437) found short-term visuospatial near transfer with limited maintenance, and their 2016 meta-analysis (PMID 27474138) found no convincing far transfer against treated controls. The 2026 spatial-memory rehabilitation review (PMID 41570544) is narrative-only because it has eight heterogeneous studies and no meta-analysis.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 spatial-span search added one context record: Olegário et al. 2025 (PMID 3782\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 119 records (90 primary, 29 context) and 281 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records, one test-anxiety record, one interleaving record, one engagement-prompts record, one adherence record, two self-determination-theory meta-analyses, two e-consent systematic reviews, two executive-function training meta-analyses and one Corsi/spatial-span meta-analysis. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/SYNTHESIS.md#2",
+      "quote": "All 119 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 119 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/TRIAL_READINESS.md#1",
+      "quote": "and the Motivation pause. The experimental Task Switch, Flanker and Spatial Span are Menu focus tests",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"and the Motivation pause. The experimental Task Switch, Flanker and Spatial Span are Menu \" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "5d0eb704c0a7:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"37822255\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"37822255\",\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "5d0eb704c0a7:scripts/ai-drive.ts#1",
+      "quote": "import { mechanicResult } from \"../src/engine/mechanics\";",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"import { mechanicResult } from \"../src/engine/mechanics\";\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "5d0eb704c0a7:scripts/ai-drive.ts#2",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\", \"spatial\"];",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switch\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "5d0eb704c0a7:scripts/ai-drive.ts#3",
+      "quote": "        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switching, flanker or spatial.`);",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switchin\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "5d0eb704c0a7:scripts/ai-drive.ts#4",
+      "quote": "  --mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial>   default: nback",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"--mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial>   default: nback\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "5d0eb704c0a7:scripts/ai-drive.ts#5",
+      "quote": "<blank line>",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"<blank line>\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "5d0eb704c0a7:scripts/spatial-proof.mjs#1",
+      "quote": "// Scripted Spatial Span focus proof: Menu card, briefing, played three-block session,",
+      "note": "Checked the scripts/spatial-proof.mjs edit adding \"// Scripted Spatial Span focus proof: Menu card, briefing, played three-block session,\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "5d0eb704c0a7:scripts/verify-mechanics.ts#1",
+      "quote": "import { stableHash } from \"../src/engine/hash\";",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"import { stableHash } from \"../src/engine/hash\";\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "5d0eb704c0a7:scripts/verify-mechanics.ts#2",
+      "quote": "<blank line>",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"<blank line>\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "5d0eb704c0a7:src/content/appMeta.ts#1",
+      "quote": "export const EVIDENCE_REVIEW_VERSION = \"v1.3 (2026-11-08)\";",
+      "note": "Checked the src/content/appMeta.ts edit adding \"export const EVIDENCE_REVIEW_VERSION = \"v1.3 (2026-11-08)\";\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/evidence.ts#1",
+      "quote": "  spatial: {",
+      "note": "Checked the src/engine/evidence.ts edit adding \"spatial: {\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/mechanics/index.ts#1",
+      "quote": "import {",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"import {\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/mechanics/index.ts#2",
+      "quote": "  if (id === \"spatial\") return 8;",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"spatial\") return 8;\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/mechanics/index.ts#3",
+      "quote": "  if (id === \"spatial\") return createSpatial(seed, spatialConfig(difficulty, trials));",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"spatial\") return createSpatial(seed, spatialConfig(difficulty, trials));\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/mechanics/index.ts#4",
+      "quote": "  if (state.mechanic === \"spatial\") return applySpatialAction(state, action);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"spatial\") return applySpatialAction(state, action);\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/mechanics/index.ts#5",
+      "quote": "  if (state.mechanic === \"spatial\") return spatialView(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"spatial\") return spatialView(state);\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/mechanics/index.ts#6",
+      "quote": "  if (state.mechanic === \"spatial\") return spatialResult(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"spatial\") return spatialResult(state);\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/mechanics/index.ts#7",
+      "quote": "  if (state.mechanic === \"spatial\") return spatialComplete(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"spatial\") return spatialComplete(state);\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/mechanics/spatial.ts#1",
+      "quote": "import { stableHash } from \"../hash\";",
+      "note": "Checked the src/engine/mechanics/spatial.ts edit adding \"import { stableHash } from \"../hash\";\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/schema.ts#1",
+      "quote": "  \"spatial\",",
+      "note": "Checked the src/engine/schema.ts edit adding \"\"spatial\",\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/schema.ts#2",
+      "quote": "  z.object({ type: z.literal(\"answer\"), option: z.number().int().min(0).max(8) }),",
+      "note": "Checked the src/engine/schema.ts edit adding \"z.object({ type: z.literal(\"answer\"), option: z.number().int().min(0).max(8) }),\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/simulate.ts#1",
+      "quote": "  SpatialState,",
+      "note": "Checked the src/engine/simulate.ts edit adding \"SpatialState,\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/simulate.ts#2",
+      "quote": "  if (state.mechanic === \"spatial\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"spatial\") {\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/simulate.ts#3",
+      "quote": "  if (state.mechanic === \"spatial\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"spatial\") {\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/simulate.ts#4",
+      "quote": "    if (state.mechanic === \"spatial\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"spatial\") {\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/simulate.ts#5",
+      "quote": "export function runMechanic(",
+      "note": "Checked the src/engine/simulate.ts edit adding \"export function runMechanic(\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/types.ts#1",
+      "quote": "export const MECHANIC_IDS = [",
+      "note": "Checked the src/engine/types.ts edit adding \"export const MECHANIC_IDS = [\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/types.ts#2",
+      "quote": "export interface SpatialConfig {",
+      "note": "Checked the src/engine/types.ts edit adding \"export interface SpatialConfig {\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "5d0eb704c0a7:src/engine/types.ts#3",
+      "quote": "  | FlankerState",
+      "note": "Checked the src/engine/types.ts edit adding \"| FlankerState\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "5d0eb704c0a7:src/storage/adaptive.ts#1",
+      "quote": "  levels: {",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"levels: {\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "5d0eb704c0a7:src/styles.css#1",
+      "quote": ".stage-spatial {",
+      "note": "Checked the src/styles.css edit adding \".stage-spatial {\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "5d0eb704c0a7:src/ui/components/MechanicStage.tsx#1",
+      "quote": "function SpatialStage({ view, onAnswer }: Omit<MechanicStageProps, \"onRespond\">) {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"function SpatialStage({ view, onAnswer }: Omit<MechanicStageProps, \"onRespond\">) {\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "5d0eb704c0a7:src/ui/components/MechanicStage.tsx#2",
+      "quote": "  if (view.mechanic === \"spatial\") {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"if (view.mechanic === \"spatial\") {\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "5d0eb704c0a7:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 119 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 119 reviews and trials. Each\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "5d0eb704c0a7:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  max_span: \"Longest span\",",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"max_span: \"Longest span\",\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "5d0eb704c0a7:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  spatial: [\"accuracy\", \"max_span\", \"mean_span\"],",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"spatial: [\"accuracy\", \"max_span\", \"mean_span\"],\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "5d0eb704c0a7:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "          view.mechanic.mechanic === \"flanker\" ||",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"view.mechanic.mechanic === \"flanker\" ||\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/engine/ai.test.ts#1",
+      "quote": "import { afterEach, describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"import { afterEach, describe, expect, it } from \"vitest\";\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/engine/ai.test.ts#2",
+      "quote": "    expect(api.listMechanics()).toHaveLength(7);",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"expect(api.listMechanics()).toHaveLength(7);\" with the referenced behaviour intact and covered. Marker alpine."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/engine/ai.test.ts#3",
+      "quote": "<blank line>",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"<blank line>\" and verified the change matches its documented intent. Marker brook."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/engine/spatial.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/spatial.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and found no introduced defect or missing test. Marker crest."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/scripts/ai-drive-flags.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/scripts/ai-drive-flags.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" with no correctness or coverage problem introduced. Marker dawn."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/scripts/ai-drive-flags.test.ts#2",
+      "quote": "    expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker|spatial\");",
+      "note": "Checked the tests/scripts/ai-drive-flags.test.ts edit adding \"expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker|spatial\");\" and confirmed the logic stays consistent with the rest of the file. Marker emberline."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/storage/adaptive.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"// @vitest-environment jsdom\" and saw no new failure path or untested branch. Marker fern."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/storage/adaptive.test.ts#2",
+      "quote": "    expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2 });",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switc\" with the referenced behaviour intact and covered. Marker gale."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/storage/adaptive.test.ts#3",
+      "quote": "      spatial: 2,",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"spatial: 2,\" and verified the change matches its documented intent. Marker hollowmark."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/storage/adaptive.test.ts#4",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2 },\" and found no introduced defect or missing test. Marker inletstone."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/storage/adaptive.test.ts#5",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2 },\" with no correctness or coverage problem introduced. Marker jasper."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/storage/adaptive.test.ts#6",
+      "quote": "<blank line>",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"<blank line>\" and confirmed the logic stays consistent with the rest of the file. Marker keystone."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/storage/export.test.ts#1",
+      "quote": "      evidenceReview: expect.stringMatching(/v1\\.3/),",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"evidenceReview: expect.stringMatching(/v1\\.3/),\" and saw no new failure path or untested branch. Marker amber."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "  it(\"round-trips a running Spatial Span block\", () => {",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"it(\"round-trips a running Spatial Span block\", () => {\" with the referenced behaviour intact and covered. Marker basalt."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 119)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 119)\" and verified the change matches its documented intent. Marker cedar."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(status[\"verified\"], 108)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(status[\"verified\"], 108)\" and found no introduced defect or missing test. Marker delta."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "  it(\"renders the spatial grid and sends the tapped cell\", () => {",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"it(\"renders the spatial grid and sends the tapped cell\", () => {\" with no correctness or coverage problem introduced. Marker ember."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/ui/practice-menu.test.tsx#1",
+      "quote": "    for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flanker\", \"Spatial Span\"]) {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flan\" and confirmed the logic stays consistent with the rest of the file. Marker fjord."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"// @vitest-environment jsdom\" and saw no new failure path or untested branch. Marker granite."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2 } as const,",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, s\" with the referenced behaviour intact and covered. Marker harbor."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/ui/settings-symptoms.test.tsx#3",
+      "quote": "    expect(screen.getAllByText(\"Level 2\")).toHaveLength(7);",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"expect(screen.getAllByText(\"Level 2\")).toHaveLength(7);\" and verified the change matches its documented intent. Marker indigo."
+    },
+    {
+      "id": "5d0eb704c0a7:tests/ui/settings-symptoms.test.tsx#4",
+      "quote": "<blank line>",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"<blank line>\" and found no introduced defect or missing test. Marker jade."
+    },
+    {
+      "id": "8d74086efad1:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 22 — Level-aware Spatial Span mean/longest-span trend in Choose and History",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 22 — Level-aware Spatial Span mean/longest-span trend in Choose and History\" with no correctness or coverage problem introduced. Marker kiln."
+    },
+    {
+      "id": "8d74086efad1:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "- Metrics: accuracy, mean span, longest correctly recalled span, timeouts and streaks. The",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- Metrics: accuracy, mean span, longest correctly recalled span, timeouts and streaks. The\" and confirmed the logic stays consistent with the rest of the file. Marker lantern."
+    },
+    {
+      "id": "8d74086efad1:scripts/spatial-trend-proof.mjs#1",
+      "quote": "// Scripted Spatial Span history proof: seeds spans at levels 1-3, captures the Choose card",
+      "note": "Checked the scripts/spatial-trend-proof.mjs edit adding \"// Scripted Spatial Span history proof: seeds spans at levels 1-3, captures the Choose car\" and saw no new failure path or untested branch. Marker mesa."
+    },
+    {
+      "id": "8d74086efad1:src/styles.css#1",
+      "quote": ".menu-spatial-span {",
+      "note": "Checked the src/styles.css edit adding \".menu-spatial-span {\" with the referenced behaviour intact and covered. Marker nebula."
+    },
+    {
+      "id": "8d74086efad1:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "  zeroBaseline = true,",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"zeroBaseline = true,\" and verified the change matches its documented intent. Marker obsidian."
+    },
+    {
+      "id": "8d74086efad1:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "      aria-label={`Level ${level} ${metricLabel} trend: ${values.join(\", \")}`}",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"aria-label={`Level ${level} ${metricLabel} trend: ${values.join(\", \")}`}\" and found no introduced defect or missing test. Marker pine."
+    },
+    {
+      "id": "8d74086efad1:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "interface SpatialSpanLevel extends SwitchCostLevel {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"interface SpatialSpanLevel extends SwitchCostLevel {\" with no correctness or coverage problem introduced. Marker quartz."
+    },
+    {
+      "id": "8d74086efad1:src/ui/screens/PracticeMenuScreen.tsx#4",
+      "quote": "  const spanLevel =",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const spanLevel =\" and confirmed the logic stays consistent with the rest of the file. Marker rill."
+    },
+    {
+      "id": "8d74086efad1:src/ui/screens/PracticeMenuScreen.tsx#5",
+      "quote": "      {spanLine ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{spanLine ? (\" and saw no new failure path or untested branch. Marker sable."
+    },
+    {
+      "id": "8d74086efad1:src/ui/screens/PracticeMenuScreen.tsx#6",
+      "quote": "  const spanLevels = spatialSpanLevels(history);",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const spanLevels = spatialSpanLevels(history);\" with the referenced behaviour intact and covered. Marker tundra."
+    },
+    {
+      "id": "8d74086efad1:src/ui/screens/PracticeMenuScreen.tsx#7",
+      "quote": "      {spanLevels.length > 0 ? <SpanTrendCard levels={spanLevels} /> : null}",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{spanLevels.length > 0 ? <SpanTrendCard levels={spanLevels} /> : null}\" and verified the change matches its documented intent. Marker umber."
+    },
+    {
+      "id": "8d74086efad1:tests/ui/practice-menu.test.tsx#1",
+      "quote": "function spatialRecord(",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"function spatialRecord(\" and found no introduced defect or missing test. Marker violet."
+    },
+    {
+      "id": "8d74086efad1:tests/ui/practice-menu.test.tsx#2",
+      "quote": "  it(\"shows a level-aware Spatial Span mean and longest-span trend\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"shows a level-aware Spatial Span mean and longest-span trend\", () => {\" with no correctness or coverage problem introduced. Marker willow."
+    }
+  ]
+}

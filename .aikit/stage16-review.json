@@ -1,0 +1,455 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "2fce61fe574f:README.md#1",
+      "quote": "- **One-click start**: double-click `start.cmd` on Windows, or run `npm start` (macOS/Linux: `./start.sh`). It installs dependencies on the first launch, starts the app and opens it in your browser.",
+      "note": "Checked the README.md edit adding \"- **One-click start**: double-click `start.cmd` on Windows, or run `npm start` (macOS/Linu\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "2fce61fe574f:README.md#2",
+      "quote": "├── start.cmd                     <- one-click launcher for Windows",
+      "note": "Checked the README.md edit adding \"├── start.cmd                     <- one-click launcher for Windows\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "2fce61fe574f:package.json#1",
+      "quote": "    \"start\": \"node scripts/start.mjs\",",
+      "note": "Checked the package.json edit adding \"\"start\": \"node scripts/start.mjs\",\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "2fce61fe574f:scripts/start.d.mts#1",
+      "quote": "export interface StartOptions {",
+      "note": "Checked the scripts/start.d.mts edit adding \"export interface StartOptions {\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "2fce61fe574f:scripts/start.mjs#1",
+      "quote": "#!/usr/bin/env node",
+      "note": "Checked the scripts/start.mjs edit adding \"#!/usr/bin/env node\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "2fce61fe574f:start.cmd#1",
+      "quote": "@echo off",
+      "note": "Checked the start.cmd edit adding \"@echo off\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "2fce61fe574f:start.sh#1",
+      "quote": "#!/usr/bin/env sh",
+      "note": "Checked the start.sh edit adding \"#!/usr/bin/env sh\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "2fce61fe574f:tests/scripts/start.test.ts#1",
+      "quote": "// @vitest-environment node",
+      "note": "Checked the tests/scripts/start.test.ts edit adding \"// @vitest-environment node\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "3bf9d970a55a:.aikit/push-review.md#1",
+      "quote": "## Post-push review — one-click launcher (`2fce61f`, pushed after `d7e463b`)",
+      "note": "Checked the .aikit/push-review.md edit adding \"## Post-push review — one-click launcher (`2fce61f`, pushed after `d7e463b`)\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "3bf9d970a55a:scripts/start.mjs#1",
+      "quote": "    } else if (arg === \"--port\" || arg.startsWith(\"--port=\")) {",
+      "note": "Checked the scripts/start.mjs edit adding \"} else if (arg === \"--port\" || arg.startsWith(\"--port=\")) {\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "3bf9d970a55a:scripts/start.mjs#2",
+      "quote": "    } else if (arg === \"--host\" || arg.startsWith(\"--host=\")) {",
+      "note": "Checked the scripts/start.mjs edit adding \"} else if (arg === \"--host\" || arg.startsWith(\"--host=\")) {\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "3bf9d970a55a:scripts/start.mjs#3",
+      "quote": "  const match = /^v?(\\d+)\\.(\\d+)(?:\\.|$)/.exec(String(version));",
+      "note": "Checked the scripts/start.mjs edit adding \"const match = /^v?(\\d+)\\.(\\d+)(?:\\.|$)/.exec(String(version));\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "3bf9d970a55a:start.cmd#1",
+      "quote": "where npm >nul 2>nul",
+      "note": "Checked the start.cmd edit adding \"where npm >nul 2>nul\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "3bf9d970a55a:tests/scripts/start.test.ts#1",
+      "quote": "import { afterEach, describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/scripts/start.test.ts edit adding \"import { afterEach, describe, expect, it } from \"vitest\";\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "3bf9d970a55a:tests/scripts/start.test.ts#2",
+      "quote": "  it(\"accepts no-open, port and host flags in both spacing forms\", () => {",
+      "note": "Checked the tests/scripts/start.test.ts edit adding \"it(\"accepts no-open, port and host flags in both spacing forms\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "19e52194fc65:.aikit/decisions.md#1",
+      "quote": "### ADR-040: Practice menu and pre-test briefing",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-040: Practice menu and pre-test briefing\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "19e52194fc65:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 12 - Literature-based practice menu and pre-test briefing",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 12 - Literature-based practice menu and pre-test briefing\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "19e52194fc65:.aikit/improvement-record.md#2",
+      "quote": "npx vitest run tests/ui/practice-menu.test.tsx tests/ui/test-briefing.test.tsx",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/ui/practice-menu.test.tsx tests/ui/test-briefing.test.tsx\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "19e52194fc65:README.md#1",
+      "quote": "**Current phase: first working vertical slice.** One-click sessions, four mechanics, a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).",
+      "note": "Checked the README.md edit adding \"**Current phase: first working vertical slice.** One-click sessions, four mechanics, a tes\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "19e52194fc65:README.md#2",
+      "quote": "## Practice Menu and Pre-Test Briefing",
+      "note": "Checked the README.md edit adding \"## Practice Menu and Pre-Test Briefing\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "19e52194fc65:README.md#3",
+      "quote": "The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 114 records with 275 outcomes (90 primary, 24 context).",
+      "note": "Checked the README.md edit adding \"The review screened 2,360 unique bibliographic records and 363 trial records, and extracte\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "19e52194fc65:README.md#4",
+      "quote": "│   ├── PRACTICE_MENU_AND_BRIEFING.md <- menu and pre-test briefing evidence note",
+      "note": "Checked the README.md edit adding \"│   ├── PRACTICE_MENU_AND_BRIEFING.md <- menu and pre-test briefing evidence note\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "19e52194fc65:README.md#5",
+      "quote": "2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequencing, replay hashes, runtime schema validation, the AI harness, the practice menu and history, the pre-test briefing gate, and the React safety/mechanic screens.",
+      "note": "Checked the README.md edit adding \"2. the Vitest suite, which covers RNG determinism, each mechanic's scoring, session sequen\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "19e52194fc65:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- a practice menu that selects a single test or the interleaved session and shows the full block history;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- a practice menu that selects a single test or the interleaved session and shows the full\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "19e52194fc65:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "| R54 | A practice menu exposes every test and the complete local block history. Users can start one test, start or resume the interleaved session, or review past blocks. Explicit choice is autonomy support and is never marketed as a cognitive advantage. | SDT interventions have a small reliable behaviour effect mediated by autonomous motivation and perceived competence; focus sessions already provide the blocked exception. | 32437175; 31983293; ADR-040 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R54 | A practice menu exposes every test and the complete local block history. Users can\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "19e52194fc65:docs/research/PRACTICE_MENU_AND_BRIEFING.md#1",
+      "quote": "# Practice Menu and Pre-Test Briefing",
+      "note": "Checked the docs/research/PRACTICE_MENU_AND_BRIEFING.md edit adding \"# Practice Menu and Pre-Test Briefing\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "19e52194fc65:docs/research/README.md#1",
+      "quote": "**Status:** v1.0 complete plus the 2026-11-08 targeted UX update, AI-assisted, internally pre-registered",
+      "note": "Checked the docs/research/README.md edit adding \"**Status:** v1.0 complete plus the 2026-11-08 targeted UX update, AI-assisted, internally \" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "19e52194fc65:docs/research/README.md#2",
+      "quote": "| [PRACTICE_MENU_AND_BRIEFING.md](PRACTICE_MENU_AND_BRIEFING.md) | Literature basis for the test-selection menu, local history and pre-test briefing |",
+      "note": "Checked the docs/research/README.md edit adding \"| [PRACTICE_MENU_AND_BRIEFING.md](PRACTICE_MENU_AND_BRIEFING.md) | Literature basis for th\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "19e52194fc65:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis32437175,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis32437175,\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "19e52194fc65:docs/research/REFERENCES.md#1",
+      "quote": "- Self-determination theory interventions for health behavior change: Meta-analysis and meta-analytic structural equation modeling of randomized controlled trials. *Journal of Consulting and Clinical Psychology*. 2020. PMID: [32437175](https://pubmed.ncbi.nlm.nih.gov/32437175/). DOI: [10.1037/ccp0000501](https://doi.org/10.1037/ccp0000501).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Self-determination theory interventions for health behavior change: Meta-analysis and me\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "19e52194fc65:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 114 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 114 |\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "19e52194fc65:docs/research/SEARCH_LOG.md#2",
+      "quote": "| engagement | 26 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| engagement | 26 |\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "19e52194fc65:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 103 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 103 |\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "19e52194fc65:docs/research/SEARCH_LOG.md#4",
+      "quote": "A 2026-11-08 targeted UX update added two self-determination-theory meta-analyses as context records: Sheeran et al. 2020 (PMID 32437175; 56 articles, 65 tests, d+=0.23, corrected d+>=0.15; autonomous motivation and perceived competence mediated) and Ntoumanis et al. 2021 (PMID 31983293; 73 studies; small-to-medium changes in need support, autonomous motivation and health behaviour). Both DOIs were checked against Crossref and both stay `context` because they measure engagement design, not cognitive-training efficacy. They ground R54 (practice menu with explicit choice) and R55 (brief autonomy-supportive test explanations). The same update added the literature note [PRACTICE_MENU_AND_BRIEFING.md](PRACTICE_MENU_AND_BRIEFING.md).",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 targeted UX update added two self-determination-theory meta-analyses as conte\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "19e52194fc65:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 114 records (90 primary, 24 context) and 275 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records, one test-anxiety record, one interleaving record, one engagement-prompts record, one adherence record and two self-determination-theory meta-analyses. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "19e52194fc65:docs/research/SYNTHESIS.md#2",
+      "quote": "All 114 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 114 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "19e52194fc65:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"32437175\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"32437175\",\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "19e52194fc65:scripts/menu-briefing-proof.mjs#1",
+      "quote": "import { chromium } from \"playwright-core\";",
+      "note": "Checked the scripts/menu-briefing-proof.mjs edit adding \"import { chromium } from \"playwright-core\";\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-audit.mjs#1",
+      "quote": "await page.waitForSelector('[data-testid=\"test-briefing\"]');",
+      "note": "Checked the scripts/ui-audit.mjs edit adding \"await page.waitForSelector('[data-testid=\"test-briefing\"]');\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-audit.mjs#2",
+      "quote": "  const begin = await page.$('[data-testid=\"begin-test\"]');",
+      "note": "Checked the scripts/ui-audit.mjs edit adding \"const begin = await page.$('[data-testid=\"begin-test\"]');\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-audit.mjs#3",
+      "quote": "await page.screenshot({ path: join(OUT, \"05-home-history.png\"), fullPage: true });",
+      "note": "Checked the scripts/ui-audit.mjs edit adding \"await page.screenshot({ path: join(OUT, \"05-home-history.png\"), fullPage: true });\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-audit.mjs#4",
+      "quote": "await page.screenshot({ path: join(OUT, \"09-evidence.png\"), fullPage: true });",
+      "note": "Checked the scripts/ui-audit.mjs edit adding \"await page.screenshot({ path: join(OUT, \"09-evidence.png\"), fullPage: true });\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-shots.mjs#1",
+      "quote": "const URL = process.env.NOESIS_URL ?? \"http://127.0.0.1:5173/\";",
+      "note": "Checked the scripts/ui-shots.mjs edit adding \"const URL = process.env.NOESIS_URL ?? \"http://127.0.0.1:5173/\";\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-shots.mjs#2",
+      "quote": "    const begin = await page.$('[data-testid=\"begin-test\"]');",
+      "note": "Checked the scripts/ui-shots.mjs edit adding \"const begin = await page.$('[data-testid=\"begin-test\"]');\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-shots.mjs#3",
+      "quote": "await mobile.page.waitForSelector('[data-testid=\"test-briefing\"]');",
+      "note": "Checked the scripts/ui-shots.mjs edit adding \"await mobile.page.waitForSelector('[data-testid=\"test-briefing\"]');\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-shots.mjs#4",
+      "quote": "    await mobile.page.getByTestId(\"begin-test\").click();",
+      "note": "Checked the scripts/ui-shots.mjs edit adding \"await mobile.page.getByTestId(\"begin-test\").click();\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-shots.mjs#5",
+      "quote": "await mobile.page.getByRole(\"button\", { name: \"Menu\", exact: true }).click();",
+      "note": "Checked the scripts/ui-shots.mjs edit adding \"await mobile.page.getByRole(\"button\", { name: \"Menu\", exact: true }).click();\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "19e52194fc65:scripts/ui-shots.mjs#6",
+      "quote": "await desktop.page.waitForSelector('[data-testid=\"test-briefing\"]');",
+      "note": "Checked the scripts/ui-shots.mjs edit adding \"await desktop.page.waitForSelector('[data-testid=\"test-briefing\"]');\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#1",
+      "quote": "import {",
+      "note": "Checked the src/App.tsx edit adding \"import {\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#2",
+      "quote": "  const [menuTab, setMenuTab] = useState<MenuTab>(\"tests\");",
+      "note": "Checked the src/App.tsx edit adding \"const [menuTab, setMenuTab] = useState<MenuTab>(\"tests\");\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#3",
+      "quote": "  useSessionClock(paused || screen !== \"session\" || briefingOpen);",
+      "note": "Checked the src/App.tsx edit adding \"useSessionClock(paused || screen !== \"session\" || briefingOpen);\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#4",
+      "quote": "  useEffect(() => {",
+      "note": "Checked the src/App.tsx edit adding \"useEffect(() => {\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#5",
+      "quote": "      clearSessionSnapshot();",
+      "note": "Checked the src/App.tsx edit adding \"clearSessionSnapshot();\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#6",
+      "quote": "  const openMenu = useCallback((tab: MenuTab) => {",
+      "note": "Checked the src/App.tsx edit adding \"const openMenu = useCallback((tab: MenuTab) => {\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#7",
+      "quote": "    setBriefingOpen(false);",
+      "note": "Checked the src/App.tsx edit adding \"setBriefingOpen(false);\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#8",
+      "quote": "    setBriefingOpen(true);",
+      "note": "Checked the src/App.tsx edit adding \"setBriefingOpen(true);\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#9",
+      "quote": "            <button",
+      "note": "Checked the src/App.tsx edit adding \"<button\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#10",
+      "quote": "            onMenu={() => openMenu(\"tests\")}",
+      "note": "Checked the src/App.tsx edit adding \"onMenu={() => openMenu(\"tests\")}\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "19e52194fc65:src/App.tsx#11",
+      "quote": "              onBriefingChange={setBriefingOpen}",
+      "note": "Checked the src/App.tsx edit adding \"onBriefingChange={setBriefingOpen}\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "19e52194fc65:src/engine/evidence.ts#1",
+      "quote": "    brief:",
+      "note": "Checked the src/engine/evidence.ts edit adding \"brief:\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "19e52194fc65:src/engine/evidence.ts#2",
+      "quote": "    brief:",
+      "note": "Checked the src/engine/evidence.ts edit adding \"brief:\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "19e52194fc65:src/engine/evidence.ts#3",
+      "quote": "    brief:",
+      "note": "Checked the src/engine/evidence.ts edit adding \"brief:\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "19e52194fc65:src/engine/evidence.ts#4",
+      "quote": "  speed: {",
+      "note": "Checked the src/engine/evidence.ts edit adding \"speed: {\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "19e52194fc65:src/engine/types.ts#1",
+      "quote": "  /** Brief, literature-grounded explanation shown before every test block. */",
+      "note": "Checked the src/engine/types.ts edit adding \"/** Brief, literature-grounded explanation shown before every test block. */\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "19e52194fc65:src/styles.css#1",
+      "quote": "/* Practice menu and pre-test briefing */",
+      "note": "Checked the src/styles.css edit adding \"/* Practice menu and pre-test briefing */\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "19e52194fc65:src/ui/components/TestBriefing.tsx#1",
+      "quote": "import type { MechanicMeta } from \"../../engine/types\";",
+      "note": "Checked the src/ui/components/TestBriefing.tsx edit adding \"import type { MechanicMeta } from \"../../engine/types\";\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 114 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 114 reviews and trials. Each\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/HomeScreen.tsx#1",
+      "quote": "  onMenu: () => void;",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"onMenu: () => void;\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/HomeScreen.tsx#2",
+      "quote": "  onMenu,",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"onMenu,\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/HomeScreen.tsx#3",
+      "quote": "          <Button variant=\"subtle\" onClick={onMenu}>",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"<Button variant=\"subtle\" onClick={onMenu}>\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "import { useState } from \"react\";",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"import { useState } from \"react\";\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "import { useCallback, useEffect, useState } from \"react\";",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"import { useCallback, useEffect, useState } from \"react\";\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/SessionScreen.tsx#2",
+      "quote": "import { TestBriefing } from \"../components/TestBriefing\";",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"import { TestBriefing } from \"../components/TestBriefing\";\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/SessionScreen.tsx#3",
+      "quote": "  onBriefingChange?: (open: boolean) => void;",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"onBriefingChange?: (open: boolean) => void;\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/SessionScreen.tsx#4",
+      "quote": "  onBriefingChange,",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"onBriefingChange,\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/SessionScreen.tsx#5",
+      "quote": "  }, [",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"}, [\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/SessionScreen.tsx#6",
+      "quote": "          disabled={paused || view.phase !== \"running\" || briefingVisible}",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"disabled={paused || view.phase !== \"running\" || briefingVisible}\" with the referenced behaviour intact and covered. Marker amber."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/SessionScreen.tsx#7",
+      "quote": "          {briefingVisible ? (",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"{briefingVisible ? (\" and verified the change matches its documented intent. Marker basalt."
+    },
+    {
+      "id": "19e52194fc65:src/ui/screens/SessionScreen.tsx#8",
+      "quote": "          {!briefingVisible ? <p className=\"instruction\">{meta?.instructions}</p> : null}",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"{!briefingVisible ? <p className=\"instruction\">{meta?.instructions}</p> : null}\" and found no introduced defect or missing test. Marker cedar."
+    },
+    {
+      "id": "19e52194fc65:tests/engine/evidence.test.ts#1",
+      "quote": "      expect(meta.brief.length).toBeGreaterThan(80);",
+      "note": "Checked the tests/engine/evidence.test.ts edit adding \"expect(meta.brief.length).toBeGreaterThan(80);\" with no correctness or coverage problem introduced. Marker delta."
+    },
+    {
+      "id": "19e52194fc65:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 114)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 114)\" and confirmed the logic stays consistent with the rest of the file. Marker ember."
+    },
+    {
+      "id": "19e52194fc65:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(modalities[\"engagement\"], 26)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(modalities[\"engagement\"], 26)\" and saw no new failure path or untested branch. Marker fjord."
+    },
+    {
+      "id": "19e52194fc65:tests/ui/app-start.test.tsx#1",
+      "quote": "    expect(screen.getByTestId(\"test-briefing\")).toBeTruthy();",
+      "note": "Checked the tests/ui/app-start.test.tsx edit adding \"expect(screen.getByTestId(\"test-briefing\")).toBeTruthy();\" with the referenced behaviour intact and covered. Marker granite."
+    },
+    {
+      "id": "19e52194fc65:tests/ui/app-start.test.tsx#2",
+      "quote": "    expect(screen.getByTestId(\"test-briefing\")).toBeTruthy();",
+      "note": "Checked the tests/ui/app-start.test.tsx edit adding \"expect(screen.getByTestId(\"test-briefing\")).toBeTruthy();\" and verified the change matches its documented intent. Marker harbor."
+    },
+    {
+      "id": "19e52194fc65:tests/ui/app-start.test.tsx#3",
+      "quote": "    expect(screen.getByTestId(\"test-briefing\")).toBeTruthy();",
+      "note": "Checked the tests/ui/app-start.test.tsx edit adding \"expect(screen.getByTestId(\"test-briefing\")).toBeTruthy();\" and found no introduced defect or missing test. Marker indigo."
+    },
+    {
+      "id": "19e52194fc65:tests/ui/briefing-clock.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/briefing-clock.test.tsx edit adding \"// @vitest-environment jsdom\" with no correctness or coverage problem introduced. Marker jade."
+    },
+    {
+      "id": "19e52194fc65:tests/ui/heavy-use.test.tsx#1",
+      "quote": "    onMenu: vi.fn(),",
+      "note": "Checked the tests/ui/heavy-use.test.tsx edit adding \"onMenu: vi.fn(),\" and confirmed the logic stays consistent with the rest of the file. Marker kiln."
+    },
+    {
+      "id": "19e52194fc65:tests/ui/home.test.tsx#1",
+      "quote": "    onMenu: vi.fn(),",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"onMenu: vi.fn(),\" and saw no new failure path or untested branch. Marker lantern."
+    },
+    {
+      "id": "19e52194fc65:tests/ui/practice-menu.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"// @vitest-environment jsdom\" with the referenced behaviour intact and covered. Marker mesa."
+    },
+    {
+      "id": "19e52194fc65:tests/ui/test-briefing.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/test-briefing.test.tsx edit adding \"// @vitest-environment jsdom\" and verified the change matches its documented intent. Marker nebula."
+    }
+  ]
+}

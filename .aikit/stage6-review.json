@@ -1,0 +1,465 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "d2a1ecd2bb84:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 28 — Same-level accuracy and response-time deltas on the Mental Rotation result card",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 28 — Same-level accuracy and response-time deltas on the Mental Rotation result c\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "d2a1ecd2bb84:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  Choose-a-test card shows the latest same-level accuracy and response time; the result and",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"Choose-a-test card shows the latest same-level accuracy and response time; the result and\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "d2a1ecd2bb84:scripts/rotation-trend-proof.mjs#1",
+      "quote": "await page.waitForTimeout(300);",
+      "note": "Checked the scripts/rotation-trend-proof.mjs edit adding \"await page.waitForTimeout(300);\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "d2a1ecd2bb84:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "function accuracyChange(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"function accuracyChange(\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "d2a1ecd2bb84:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  rotationAccuracyComparison,",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"rotationAccuracyComparison,\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "d2a1ecd2bb84:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "  rotationAccuracyComparison: SwitchCostComparison | null;",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"rotationAccuracyComparison: SwitchCostComparison | null;\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "d2a1ecd2bb84:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "  const rotationAccuracy = accuracyChange(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const rotationAccuracy = accuracyChange(\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "d2a1ecd2bb84:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "      {result.mechanic === \"rotation\" ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{result.mechanic === \"rotation\" ? (\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "d2a1ecd2bb84:src/ui/screens/ResultsScreen.tsx#6",
+      "quote": "  const rotationAccuracyComparisons = costComparisons(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const rotationAccuracyComparisons = costComparisons(\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "d2a1ecd2bb84:src/ui/screens/ResultsScreen.tsx#7",
+      "quote": "              rotationAccuracyComparison={rotationAccuracyComparisons[index] ?? null}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"rotationAccuracyComparison={rotationAccuracyComparisons[index] ?? null}\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "d2a1ecd2bb84:tests/ui/rotation-result-delta.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/rotation-result-delta.test.tsx edit adding \"// @vitest-environment jsdom\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "3af7b82ece68:.aikit/decisions.md#1",
+      "quote": "### ADR-049: UFOV-like visual search and stop-signal remain out of scope",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-049: UFOV-like visual search and stop-signal remain out of scope\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "3af7b82ece68:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 29 — UFOV-like visual search and stop-signal: explicit out-of-scope decision",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 29 — UFOV-like visual search and stop-signal: explicit out-of-scope decision\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "3af7b82ece68:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "| Stop-signal | Response inhibition / cancellation | Inhibitory-control training meta-analyses target appetitive behaviour (38309625, g=-0.21) rather than cognitive-training transfer; Go/No-Go already covers inhibition in the core lineup | Static go/stop cues; safe | Do not implement (duplicate construct; behaviour-change evidence) |",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"| Stop-signal | Response inhibition / cancellation | Inhibitory-control training meta-anal\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "3af7b82ece68:docs/research/NEW_MECHANIC_CANDIDATES.md#2",
+      "quote": "## 6. Out-of-scope candidates from the 2026-11-08 targeted search",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"## 6. Out-of-scope candidates from the 2026-11-08 targeted search\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "3af7b82ece68:docs/research/SEARCH_LOG.md#1",
+      "quote": "A 2026-11-08 scope search evaluated the remaining UFOV/visual-search and stop-signal candidates; both stayed out of scope and narrative-only (ADR-049). Edwards et al. 2018 (PMID 29175362) reviewed 44 UFOV-training studies from 17 RCTs: speed/attention and everyday-function gains, durable across ten years, adaptive better than non-adaptive, but no transfer to other neuropsychological outcomes. Woutersen et al. 2017 (PMID 29270605) found the UFOV subtests are not construct-pure, and UFOV remains a proprietary protocol with brief adaptive presentation. McGreen et al. 2024 (PMID 38309625) meta-analysed 32 Go/No-Go and Stop-Signal studies for appetitive behaviour (g=-0.21), not cognitive-training transfer; Go/No-Go already covers inhibition. No evidence-table record was added, so the review remains at 120 records and 282 outcomes.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 scope search evaluated the remaining UFOV/visual-search and stop-signal candi\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "501c17a35ebd:.aikit/decisions.md#1",
+      "quote": "### ADR-050: Experimental Prospective Memory focus test",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-050: Experimental Prospective Memory focus test\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "501c17a35ebd:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 30 — Experimental Prospective Memory focus test from verified meta-analysis",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 30 — Experimental Prospective Memory focus test from verified meta-analysis\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "501c17a35ebd:README.md#1",
+      "quote": "**Current phase: first working vertical slice.** One-click sessions, four core mechanics plus five experimental focus tests (Task Switch, Flanker, Spatial Span, Mental Rotation and Prospective Memory), a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).",
+      "note": "Checked the README.md edit adding \"**Current phase: first working vertical slice.** One-click sessions, four core mechanics p\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "501c17a35ebd:README.md#2",
+      "quote": "Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four core mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation and Prospective Memory are available as single-test focus sessions from the Menu and are not in the default lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.",
+      "note": "Checked the README.md edit adding \"Session length (quick or standard) and difficulty (gentle, standard or challenge) are user\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "501c17a35ebd:README.md#3",
+      "quote": "The **Menu** tab is the explicit choice point. It lists every test - four core mechanics plus the experimental Task Switch, Flanker, Spatial Span, Mental Rotation and Prospective Memory - with a short,",
+      "note": "Checked the README.md edit adding \"The **Menu** tab is the explicit choice point. It lists every test - four core mechanics p\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "501c17a35ebd:README.md#4",
+      "quote": "The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 121 records with 283 outcomes (90 primary, 31 context).",
+      "note": "Checked the README.md edit adding \"The review screened 2,360 unique bibliographic records and 363 trial records, and extracte\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "501c17a35ebd:README.md#5",
+      "quote": "| Prospective Memory | Delayed intentions | Experimental (focus test) | Sort letters as vowel/consonant, but choose Remember when the cue letter Q appears; reports ongoing accuracy, cue hits, false alarms and reaction time. |",
+      "note": "Checked the README.md edit adding \"| Prospective Memory | Delayed intentions | Experimental (focus test) | Sort letters as vo\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state machines, plus experimental Task Switch, Flanker, Spatial Span, Mental Rotation and Prospective Memory focus tests;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state mach\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "- an experimental Prospective Memory focus test for delayed-intention practice;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- an experimental Prospective Memory focus test for delayed-intention practice;\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/DESIGN_IMPLICATIONS.md#3",
+      "quote": "| R52 | Default sessions interleave the four core mechanics; focus sessions are the deliberate blocked exception. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation and Prospective Memory are focus-only until the default lineup is revalidated. Interleaving beats blocking for inductive learning (g=0.42, strongest for complex similar material); word lists reverse it (blocking wins, g=-0.39), which the far checks blocked word-study respects. | Scheduling shapes inductive learning; material determines the direction. | 31556629; ADR-028; ADR-045; ADR-046; ADR-047; ADR-048; ADR-050 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R52 | Default sessions interleave the four core mechanics; focus sessions are the delibe\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/DESIGN_IMPLICATIONS.md#4",
+      "quote": "| R67 | Prospective Memory is an experimental focus test: an ongoing vowel/consonant classification runs while a Q cue requires a Remember response. It reports ongoing accuracy, cue hits/misses, false alarms and reaction time. It is not in the default lineup and makes no long-term, everyday-function or diagnostic claim. | A 2023 meta-analysis of 29 RCTs found a moderate immediate effect (g=0.54) but a non-significant long-term effect (g=0.20); methodological quality varied. | 35543836; ADR-050 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R67 | Prospective Memory is an experimental focus test: an ongoing vowel/consonant class\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "| Prospective memory | Delayed intentions / episodic memory | 2023 meta-analysis of 29 RCTs: immediate prospective-memory training effect g=0.54, but long-term g=0.20 was not significant (35543836) | Static letter stream with one cue; safe | **Implement as experimental focus test, claim-bounded** |",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"| Prospective memory | Delayed intentions / episodic memory | 2023 meta-analysis of 29 RCT\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/NEW_MECHANIC_CANDIDATES.md#2",
+      "quote": "### 4.4 Prospective Memory implementation and evidence limit",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"### 4.4 Prospective Memory implementation and evidence limit\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/NEW_MECHANIC_CANDIDATES.md#3",
+      "quote": "- **R67:** Prospective Memory is an experimental focus test: an ongoing vowel/consonant",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- **R67:** Prospective Memory is an experimental focus test: an ongoing vowel/consonant\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/README.md#1",
+      "quote": "**Status:** v1.0 corpus complete; current review revision v1.5 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered",
+      "note": "Checked the docs/research/README.md edit adding \"**Status:** v1.0 corpus complete; current review revision v1.5 (2026-11-08) with targeted \" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (121 records, 283 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis35543836,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis35543836,\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/REFERENCES.md#1",
+      "quote": "- Prospective Memory Training in Older Adults: A Systematic Review and Meta-Analysis. *Neuropsychology Review*. 2023. PMID: [35543836](https://pubmed.ncbi.nlm.nih.gov/35543836/). DOI: [10.1007/s11065-022-09536-5](https://doi.org/10.1007/s11065-022-09536-5).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Prospective Memory Training in Older Adults: A Systematic Review and Meta-Analysis. *Neu\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 121 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 121 |\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/SEARCH_LOG.md#2",
+      "quote": "| cct | 42 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| cct | 42 |\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 110 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 110 |\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/SEARCH_LOG.md#4",
+      "quote": "A 2026-11-08 scope search evaluated the remaining UFOV/visual-search and stop-signal candidates; both stayed out of scope and narrative-only (ADR-049). Edwards et al. 2018 (PMID 29175362) reviewed 44 UFOV-training studies from 17 RCTs: speed/attention and everyday-function gains, durable across ten years, adaptive better than non-adaptive, but no transfer to other neuropsychological outcomes. Woutersen et al. 2017 (PMID 29270605) found the UFOV subtests are not construct-pure, and UFOV remains a proprietary protocol with brief adaptive presentation. McGreen et al. 2024 (PMID 38309625) meta-analysed 32 Go/No-Go and Stop-Signal studies for appetitive behaviour (g=-0.21), not cognitive-training transfer; Go/No-Go already covers inhibition. No evidence-table record was added, so the review remained at 120 records and 282 outcomes.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 scope search evaluated the remaining UFOV/visual-search and stop-signal candi\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 121 records (90 primary, 31 context) and 283 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records, one test-anxiety record, one interleaving record, one engagement-prompts record, one adherence record, two self-determination-theory meta-analyses, two e-consent systematic reviews, two executive-function training meta-analyses, one Corsi/spatial-span meta-analysis, one spatial-training meta-analysis and one prospective-memory meta-analysis. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/SYNTHESIS.md#2",
+      "quote": "All 121 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 121 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/TRIAL_READINESS.md#1",
+      "quote": "and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation and Prospective Memory are Menu focus tests",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span, Mental Rota\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "501c17a35ebd:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"35543836\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"35543836\",\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "501c17a35ebd:scripts/ai-drive.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\", \"spatial\", \"rotation\", \"prospective\"];",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switch\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "501c17a35ebd:scripts/ai-drive.ts#2",
+      "quote": "        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switching, flanker, spatial, rotation or prospective.`);",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switchin\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "501c17a35ebd:scripts/ai-drive.ts#3",
+      "quote": "  --mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective>   default: nback",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"--mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective>  \" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "501c17a35ebd:scripts/prospective-proof.mjs#1",
+      "quote": "// Scripted Prospective Memory focus proof: Menu card, briefing, played three-block",
+      "note": "Checked the scripts/prospective-proof.mjs edit adding \"// Scripted Prospective Memory focus proof: Menu card, briefing, played three-block\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "501c17a35ebd:scripts/verify-mechanics.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\", \"spatial\", \"rotation\", \"prospective\"];",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switch\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "501c17a35ebd:src/content/appMeta.ts#1",
+      "quote": "export const EVIDENCE_REVIEW_VERSION = \"v1.5 (2026-11-08)\";",
+      "note": "Checked the src/content/appMeta.ts edit adding \"export const EVIDENCE_REVIEW_VERSION = \"v1.5 (2026-11-08)\";\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/evidence.ts#1",
+      "quote": "  prospective: {",
+      "note": "Checked the src/engine/evidence.ts edit adding \"prospective: {\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/mechanics/index.ts#1",
+      "quote": "import {",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"import {\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/mechanics/index.ts#2",
+      "quote": "  if (id === \"prospective\") return 24;",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"prospective\") return 24;\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/mechanics/index.ts#3",
+      "quote": "  if (id === \"prospective\") return createProspective(seed, prospectiveConfig(difficulty, trials));",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"prospective\") return createProspective(seed, prospectiveConfig(difficulty, tri\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/mechanics/index.ts#4",
+      "quote": "  if (state.mechanic === \"prospective\") return applyProspectiveAction(state, action);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"prospective\") return applyProspectiveAction(state, action);\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/mechanics/index.ts#5",
+      "quote": "  if (state.mechanic === \"prospective\") return prospectiveView(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"prospective\") return prospectiveView(state);\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/mechanics/index.ts#6",
+      "quote": "  if (state.mechanic === \"prospective\") return prospectiveResult(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"prospective\") return prospectiveResult(state);\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/mechanics/index.ts#7",
+      "quote": "  if (state.mechanic === \"prospective\") return prospectiveComplete(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"prospective\") return prospectiveComplete(state);\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/mechanics/prospective.ts#1",
+      "quote": "import { stableHash } from \"../hash\";",
+      "note": "Checked the src/engine/mechanics/prospective.ts edit adding \"import { stableHash } from \"../hash\";\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/schema.ts#1",
+      "quote": "  \"prospective\",",
+      "note": "Checked the src/engine/schema.ts edit adding \"\"prospective\",\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/simulate.ts#1",
+      "quote": "import { prospectiveCorrectIndex } from \"./mechanics/prospective\";",
+      "note": "Checked the src/engine/simulate.ts edit adding \"import { prospectiveCorrectIndex } from \"./mechanics/prospective\";\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/simulate.ts#2",
+      "quote": "  ProspectiveState,",
+      "note": "Checked the src/engine/simulate.ts edit adding \"ProspectiveState,\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/simulate.ts#3",
+      "quote": "  if (state.mechanic === \"prospective\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"prospective\") {\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/simulate.ts#4",
+      "quote": "  if (state.mechanic === \"prospective\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"prospective\") {\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/simulate.ts#5",
+      "quote": "    if (state.mechanic === \"prospective\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"prospective\") {\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/simulate.ts#6",
+      "quote": "export function runMechanic(",
+      "note": "Checked the src/engine/simulate.ts edit adding \"export function runMechanic(\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/types.ts#1",
+      "quote": "  \"prospective\",",
+      "note": "Checked the src/engine/types.ts edit adding \"\"prospective\",\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/types.ts#2",
+      "quote": "  | \"executive_function\"",
+      "note": "Checked the src/engine/types.ts edit adding \"| \"executive_function\"\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/types.ts#3",
+      "quote": "export interface ProspectiveConfig {",
+      "note": "Checked the src/engine/types.ts edit adding \"export interface ProspectiveConfig {\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "501c17a35ebd:src/engine/types.ts#4",
+      "quote": "  | RotationState",
+      "note": "Checked the src/engine/types.ts edit adding \"| RotationState\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "501c17a35ebd:src/storage/adaptive.ts#1",
+      "quote": "    prospective: 2,",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"prospective: 2,\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "501c17a35ebd:src/styles.css#1",
+      "quote": ".stage-prospective {",
+      "note": "Checked the src/styles.css edit adding \".stage-prospective {\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "501c17a35ebd:src/ui/components/MechanicStage.tsx#1",
+      "quote": "function ProspectiveStage({ view, onAnswer }: Omit<MechanicStageProps, \"onRespond\">) {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"function ProspectiveStage({ view, onAnswer }: Omit<MechanicStageProps, \"onRespond\">) {\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "501c17a35ebd:src/ui/components/MechanicStage.tsx#2",
+      "quote": "  if (view.mechanic === \"prospective\") {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"if (view.mechanic === \"prospective\") {\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "501c17a35ebd:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 121 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 121 reviews and trials. Each\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "501c17a35ebd:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  ongoing_accuracy: \"Ongoing accuracy\",",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"ongoing_accuracy: \"Ongoing accuracy\",\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "501c17a35ebd:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  prospective: [\"accuracy\", \"cue_accuracy\", \"false_alarms\"],",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"prospective: [\"accuracy\", \"cue_accuracy\", \"false_alarms\"],\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "501c17a35ebd:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "          view.mechanic.mechanic === \"rotation\" ||",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"view.mechanic.mechanic === \"rotation\" ||\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "501c17a35ebd:src/ui/screens/SessionScreen.tsx#2",
+      "quote": "              : view.mechanic.mechanic === \"prospective\"",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \": view.mechanic.mechanic === \"prospective\"\" with the referenced behaviour intact and covered. Marker alpine."
+    },
+    {
+      "id": "501c17a35ebd:tests/engine/ai.test.ts#1",
+      "quote": "    expect(api.listMechanics()).toHaveLength(9);",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"expect(api.listMechanics()).toHaveLength(9);\" and verified the change matches its documented intent. Marker brook."
+    },
+    {
+      "id": "501c17a35ebd:tests/engine/prospective.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/prospective.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and found no introduced defect or missing test. Marker crest."
+    },
+    {
+      "id": "501c17a35ebd:tests/scripts/ai-drive-flags.test.ts#1",
+      "quote": "    expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective\");",
+      "note": "Checked the tests/scripts/ai-drive-flags.test.ts edit adding \"expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|\" with no correctness or coverage problem introduced. Marker dawn."
+    },
+    {
+      "id": "501c17a35ebd:tests/storage/adaptive.test.ts#1",
+      "quote": "    expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2 });",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switc\" and confirmed the logic stays consistent with the rest of the file. Marker emberline."
+    },
+    {
+      "id": "501c17a35ebd:tests/storage/adaptive.test.ts#2",
+      "quote": "      prospective: 2,",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"prospective: 2,\" and saw no new failure path or untested branch. Marker fern."
+    },
+    {
+      "id": "501c17a35ebd:tests/storage/adaptive.test.ts#3",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotat\" with the referenced behaviour intact and covered. Marker gale."
+    },
+    {
+      "id": "501c17a35ebd:tests/storage/adaptive.test.ts#4",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotat\" and verified the change matches its documented intent. Marker hollowmark."
+    },
+    {
+      "id": "501c17a35ebd:tests/storage/export.test.ts#1",
+      "quote": "      evidenceReview: expect.stringMatching(/v1\\.5/),",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"evidenceReview: expect.stringMatching(/v1\\.5/),\" and found no introduced defect or missing test. Marker inletstone."
+    },
+    {
+      "id": "501c17a35ebd:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "  it(\"round-trips a running Prospective Memory block\", () => {",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"it(\"round-trips a running Prospective Memory block\", () => {\" with no correctness or coverage problem introduced. Marker jasper."
+    },
+    {
+      "id": "501c17a35ebd:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 121)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 121)\" and confirmed the logic stays consistent with the rest of the file. Marker keystone."
+    },
+    {
+      "id": "501c17a35ebd:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(status[\"verified\"], 110)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(status[\"verified\"], 110)\" and saw no new failure path or untested branch. Marker amber."
+    },
+    {
+      "id": "501c17a35ebd:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "  it(\"renders the prospective-memory cue and sends Remember\", () => {",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"it(\"renders the prospective-memory cue and sends Remember\", () => {\" with the referenced behaviour intact and covered. Marker basalt."
+    },
+    {
+      "id": "501c17a35ebd:tests/ui/practice-menu.test.tsx#1",
+      "quote": "    for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flanker\", \"Spatial Span\", \"Mental Rotation\", \"Prospective Memory\"]) {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flan\" and verified the change matches its documented intent. Marker cedar."
+    },
+    {
+      "id": "501c17a35ebd:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2 } as const,",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, s\" and found no introduced defect or missing test. Marker delta."
+    },
+    {
+      "id": "501c17a35ebd:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "    expect(screen.getAllByText(\"Level 2\")).toHaveLength(9);",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"expect(screen.getAllByText(\"Level 2\")).toHaveLength(9);\" with no correctness or coverage problem introduced. Marker ember."
+    }
+  ]
+}

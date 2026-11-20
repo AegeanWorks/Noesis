@@ -911,25 +911,28 @@ function TestCard({
         <EvidenceBadge level={meta.claimLevel} />
       </div>
       <p>{meta.brief}</p>
-      <p className="fine">
-        <strong>What the evidence supports:</strong> {meta.claim}
-      </p>
-      <p className="fine">
-        <strong>What it does not claim:</strong> {meta.notClaimed.join(", ")}.
-      </p>
-      {source ? (
+      <details className="menu-evidence">
+        <summary>Evidence &amp; claim</summary>
         <p className="fine">
-          <strong>Primary source:</strong>{" "}
-          <a
-            href={`https://pubmed.ncbi.nlm.nih.gov/${source.pmid}/`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {source.label}
-          </a>{" "}
-          <span className="pmid">PMID {source.pmid}</span>
+          <strong>What the evidence supports:</strong> {meta.claim}
         </p>
-      ) : null}
+        <p className="fine">
+          <strong>What it does not claim:</strong> {meta.notClaimed.join(", ")}.
+        </p>
+        {source ? (
+          <p className="fine">
+            <strong>Primary source:</strong>{" "}
+            <a
+              href={`https://pubmed.ncbi.nlm.nih.gov/${source.pmid}/`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {source.label}
+            </a>{" "}
+            <span className="pmid">PMID {source.pmid}</span>
+          </p>
+        ) : null}
+      </details>
       <p className="menu-stats">
         {stats.last
           ? `Last ${level !== null ? `L${level} ` : ""}${percent(

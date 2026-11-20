@@ -158,6 +158,7 @@ The app reports each block separately, avoids a composite "brain score", and sta
 ```text
 noesis/
 ├── .aikit/                       <- project memory: record, ledger, decisions, codebase map
+├── .gitattributes                <- LF line endings for text files (ADR-454)
 ├── .gitignore                    <- transient and generated artifacts excluded
 ├── assets/                       <- project logo and social preview
 ├── android/                      <- Capacitor 7 Android project
@@ -208,6 +209,7 @@ noesis/
 ├── start.cmd                     <- one-click launcher for Windows
 ├── start.sh                      <- one-click launcher for macOS/Linux
 ├── tsconfig.json                 <- TypeScript compiler settings
+├── ui-review/                    <- before/after screenshots and UI analysis
 ├── vite.config.ts                <- Vite and Vitest configuration
 └── README.md
 ```

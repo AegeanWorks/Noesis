@@ -1,0 +1,145 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "6e3cedbd1596:.aikit/decisions.md#1",
+      "quote": "### ADR-034: Feedback keeps the trial stimulus and tints the stage",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-034: Feedback keeps the trial stimulus and tints the stage\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "6e3cedbd1596:.aikit/improvement-record.md#1",
+      "quote": "3. Graphics and effects — 2026-11-07 — cycle 3",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"3. Graphics and effects — 2026-11-07 — cycle 3\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "6e3cedbd1596:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 3 — Graphics and effects: feedback now keeps the trial stimulus",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 3 — Graphics and effects: feedback now keeps the trial stimulus\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "6e3cedbd1596:.aikit/improvement-record.md#3",
+      "quote": "npx vitest run tests/engine/nback.test.ts tests/engine/gonogo.test.ts tests/engine/speed.test.ts tests/ui/mechanic-stage.test.tsx",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/engine/nback.test.ts tests/engine/gonogo.test.ts tests/engine/speed.t\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "6e3cedbd1596:scripts/feedback-proof.mjs#1",
+      "quote": "// Scripted feedback-state playthrough: drives a focus session to a target/no-go trial,",
+      "note": "Checked the scripts/feedback-proof.mjs edit adding \"// Scripted feedback-state playthrough: drives a focus session to a target/no-go trial,\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "6e3cedbd1596:src/engine/mechanics/gonogo.ts#1",
+      "quote": "    stimulus:",
+      "note": "Checked the src/engine/mechanics/gonogo.ts edit adding \"stimulus:\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "6e3cedbd1596:src/engine/mechanics/nback.ts#1",
+      "quote": "    stimulus: state.phase === \"trial\" || state.phase === \"feedback\" ? trial?.letter ?? null : null,",
+      "note": "Checked the src/engine/mechanics/nback.ts edit adding \"stimulus: state.phase === \"trial\" || state.phase === \"feedback\" ? trial?.letter ?? null : \" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "6e3cedbd1596:src/engine/mechanics/speed.ts#1",
+      "quote": "    stimulus: state.phase === \"stimulus\" || state.phase === \"feedback\" ? \"circle\" : null,",
+      "note": "Checked the src/engine/mechanics/speed.ts edit adding \"stimulus: state.phase === \"stimulus\" || state.phase === \"feedback\" ? \"circle\" : null,\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "6e3cedbd1596:src/styles.css#1",
+      "quote": "  transition: border-color 140ms ease, box-shadow 160ms ease;",
+      "note": "Checked the src/styles.css edit adding \"transition: border-color 140ms ease, box-shadow 160ms ease;\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "6e3cedbd1596:src/styles.css#2",
+      "quote": "  transition: opacity 120ms ease;",
+      "note": "Checked the src/styles.css edit adding \"transition: opacity 120ms ease;\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "6e3cedbd1596:src/styles.css#3",
+      "quote": "  transition: opacity 120ms ease;",
+      "note": "Checked the src/styles.css edit adding \"transition: opacity 120ms ease;\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "6e3cedbd1596:src/styles.css#4",
+      "quote": "  transition: background 120ms ease, box-shadow 160ms ease, opacity 120ms ease;",
+      "note": "Checked the src/styles.css edit adding \"transition: background 120ms ease, box-shadow 160ms ease, opacity 120ms ease;\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "6e3cedbd1596:src/ui/components/MechanicStage.tsx#1",
+      "quote": "    <div",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"<div\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "6e3cedbd1596:src/ui/components/MechanicStage.tsx#2",
+      "quote": "    <div",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"<div\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "6e3cedbd1596:src/ui/components/MechanicStage.tsx#3",
+      "quote": "    <div",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"<div\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "6e3cedbd1596:src/ui/components/MechanicStage.tsx#4",
+      "quote": "    <div",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"<div\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "6e3cedbd1596:tests/engine/gonogo.test.ts#1",
+      "quote": "    const feedback = gonogoView(responded);",
+      "note": "Checked the tests/engine/gonogo.test.ts edit adding \"const feedback = gonogoView(responded);\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "6e3cedbd1596:tests/engine/nback.test.ts#1",
+      "quote": "    const feedback = nbackView(responded);",
+      "note": "Checked the tests/engine/nback.test.ts edit adding \"const feedback = nbackView(responded);\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "6e3cedbd1596:tests/engine/speed.test.ts#1",
+      "quote": "    expect(speedView(responded).stimulus).toBe(\"circle\");",
+      "note": "Checked the tests/engine/speed.test.ts edit adding \"expect(speedView(responded).stimulus).toBe(\"circle\");\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "6e3cedbd1596:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "    expect(screen.getByTestId(\"stimulus\").textContent).toBe(\"A\");",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"expect(screen.getByTestId(\"stimulus\").textContent).toBe(\"A\");\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "86df129c1d46:tests/ui/study-journey.test.tsx#1",
+      "quote": "    const actions: SessionAction[] = runMechanic(",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"const actions: SessionAction[] = runMechanic(\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "5f8667805115:.aikit/decisions.md#1",
+      "quote": "### ADR-035: Go/No-Go prompts never name the current trial",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-035: Go/No-Go prompts never name the current trial\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "5f8667805115:.aikit/improvement-record.md#1",
+      "quote": "4. Mechanic feel — 2026-11-07 — cycle 4",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"4. Mechanic feel — 2026-11-07 — cycle 4\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "5f8667805115:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 4 — Mechanic feel: Go/No-Go prompt leaked the trial shape",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 4 — Mechanic feel: Go/No-Go prompt leaked the trial shape\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "5f8667805115:.aikit/improvement-record.md#3",
+      "quote": "npx vitest run tests/engine/gonogo.test.ts",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"npx vitest run tests/engine/gonogo.test.ts\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "5f8667805115:scripts/gonogo-prompt-proof.mjs#1",
+      "quote": "// Scripted Go/No-Go response-window playthrough: reaches the blank response phase of a",
+      "note": "Checked the scripts/gonogo-prompt-proof.mjs edit adding \"// Scripted Go/No-Go response-window playthrough: reaches the blank response phase of a\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "5f8667805115:src/engine/mechanics/gonogo.ts#1",
+      "quote": "        : state.phase === \"iti\"",
+      "note": "Checked the src/engine/mechanics/gonogo.ts edit adding \": state.phase === \"iti\"\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "5f8667805115:tests/engine/gonogo.test.ts#1",
+      "quote": "  it(\"does not leak the trial shape once the stimulus is gone\", () => {",
+      "note": "Checked the tests/engine/gonogo.test.ts edit adding \"it(\"does not leak the trial shape once the stimulus is gone\", () => {\" and saw no new failure path or untested branch. Marker birch."
+    }
+  ]
+}

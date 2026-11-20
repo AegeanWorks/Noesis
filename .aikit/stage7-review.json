@@ -1,0 +1,440 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "13eceb5c92ae:.aikit/decisions.md#1",
+      "quote": "### ADR-048: Experimental Mental Rotation focus test",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-048: Experimental Mental Rotation focus test\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "13eceb5c92ae:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 25 — Experimental Mental Rotation focus test from verified spatial-training evidence",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 25 — Experimental Mental Rotation focus test from verified spatial-training evide\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "13eceb5c92ae:README.md#1",
+      "quote": "**Current phase: first working vertical slice.** One-click sessions, four core mechanics plus four experimental focus tests (Task Switch, Flanker, Spatial Span and Mental Rotation), a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).",
+      "note": "Checked the README.md edit adding \"**Current phase: first working vertical slice.** One-click sessions, four core mechanics p\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "13eceb5c92ae:README.md#2",
+      "quote": "Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four core mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The experimental Task Switch, Flanker, Spatial Span and Mental Rotation are available as single-test focus sessions from the Menu and are not in the default lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.",
+      "note": "Checked the README.md edit adding \"Session length (quick or standard) and difficulty (gentle, standard or challenge) are user\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "13eceb5c92ae:README.md#3",
+      "quote": "The **Menu** tab is the explicit choice point. It lists every test - four core mechanics plus the experimental Task Switch, Flanker, Spatial Span and Mental Rotation - with a short,",
+      "note": "Checked the README.md edit adding \"The **Menu** tab is the explicit choice point. It lists every test - four core mechanics p\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "13eceb5c92ae:README.md#4",
+      "quote": "The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 120 records with 282 outcomes (90 primary, 30 context).",
+      "note": "Checked the README.md edit adding \"The review screened 2,360 unique bibliographic records and 363 trial records, and extracte\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "13eceb5c92ae:README.md#5",
+      "quote": "| Mental Rotation | Spatial reasoning | Experimental (focus test) | Decide whether a block figure is the same shape rotated or a mirror image; reports accuracy, same/mirror accuracy and reaction time. |",
+      "note": "Checked the README.md edit adding \"| Mental Rotation | Spatial reasoning | Experimental (focus test) | Decide whether a block\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state machines, plus experimental Task Switch, Flanker, Spatial Span and Mental Rotation focus tests;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state mach\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "- an experimental Mental Rotation focus test for spatial-reasoning practice;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- an experimental Mental Rotation focus test for spatial-reasoning practice;\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/DESIGN_IMPLICATIONS.md#3",
+      "quote": "| R52 | Default sessions interleave the four core mechanics; focus sessions are the deliberate blocked exception. The experimental Task Switch, Flanker, Spatial Span and Mental Rotation are focus-only until the default lineup is revalidated. Interleaving beats blocking for inductive learning (g=0.42, strongest for complex similar material); word lists reverse it (blocking wins, g=-0.39), which the far checks blocked word-study respects. | Scheduling shapes inductive learning; material determines the direction. | 31556629; ADR-028; ADR-045; ADR-046; ADR-047; ADR-048 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R52 | Default sessions interleave the four core mechanics; focus sessions are the delibe\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/DESIGN_IMPLICATIONS.md#4",
+      "quote": "| R66 | Mental Rotation is an experimental focus test: two static block figures are compared as a rotation or a mirror image, with accuracy, same/mirror accuracy and reaction time. It is not in the default lineup, makes no mathematics, academic, general-intelligence or everyday-function claim, and uses no flashing. | A 2013 meta-analysis of 217 training studies found g=0.47 with stable transfer to untrained spatial tasks; a 2022 meta-analysis found a smaller mathematics effect that favoured concrete materials over computerized training, so only spatial-task practice is claimed. | 22663761; 35073120; 29276344; ADR-048 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R66 | Mental Rotation is an experimental focus test: two static block figures are compar\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "| Mental rotation | Spatial ability | Training improved spatial skills (217 studies, g=0.47) and transferred to untrained spatial tasks (22663761); spatial training also improved mathematics (g=0.28), but concrete materials beat computerized training and near outcomes transferred more than distal ones (35073120) | Static block figures; safe | **Implement as experimental focus test, claim-bounded** |",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"| Mental rotation | Spatial ability | Training improved spatial skills (217 studies, g=0.4\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/NEW_MECHANIC_CANDIDATES.md#2",
+      "quote": "### 4.3 Mental Rotation implementation and evidence limit",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"### 4.3 Mental Rotation implementation and evidence limit\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/NEW_MECHANIC_CANDIDATES.md#3",
+      "quote": "- **R66:** Mental Rotation is an experimental focus test with static block figures, a",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- **R66:** Mental Rotation is an experimental focus test with static block figures, a\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/README.md#1",
+      "quote": "**Status:** v1.0 corpus complete; current review revision v1.4 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered",
+      "note": "Checked the docs/research/README.md edit adding \"**Status:** v1.0 corpus complete; current review revision v1.4 (2026-11-08) with targeted \" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (120 records, 282 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis22663761,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis22663761,\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/REFERENCES.md#1",
+      "quote": "- The malleability of spatial skills: a meta-analysis of training studies. *Psychological Bulletin*. 2013. PMID: [22663761](https://pubmed.ncbi.nlm.nih.gov/22663761/). DOI: [10.1037/a0028446](https://doi.org/10.1037/a0028446).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- The malleability of spatial skills: a meta-analysis of training studies. *Psychological \" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 120 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 120 |\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/SEARCH_LOG.md#2",
+      "quote": "| cct | 41 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| cct | 41 |\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 109 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 109 |\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/SEARCH_LOG.md#4",
+      "quote": "A 2026-11-08 mental-rotation search added one context record: Uttal et al. 2013 (PMID 22663761; 217 training studies; average spatial-training effect g=0.47, stable over delays and transferred to untrained spatial tasks). The DOI and metadata were verified via PubMed esummary. It grounds the experimental Mental Rotation focus test (R66, ADR-048). Hawes et al. 2022 (PMID 35073120; 29 studies, N=3,765, k=89; spatial thinking g=0.49, mathematics g=0.28) stayed narrative-only in the candidate note because its mathematics effect favoured concrete materials over computerized training; Sala and Gobet 2017 (PMID 29276344) also stayed narrative-only as a general far-transfer caution.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 mental-rotation search added one context record: Uttal et al. 2013 (PMID 2266\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 120 records (90 primary, 30 context) and 282 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records, one test-anxiety record, one interleaving record, one engagement-prompts record, one adherence record, two self-determination-theory meta-analyses, two e-consent systematic reviews, two executive-function training meta-analyses, one Corsi/spatial-span meta-analysis and one spatial-training meta-analysis. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/SYNTHESIS.md#2",
+      "quote": "All 120 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 120 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/TRIAL_READINESS.md#1",
+      "quote": "and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span and Mental Rotation are Menu focus tests",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span and Mental R\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "13eceb5c92ae:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"22663761\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"22663761\",\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "13eceb5c92ae:scripts/ai-drive.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\", \"spatial\", \"rotation\"];",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switch\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "13eceb5c92ae:scripts/ai-drive.ts#2",
+      "quote": "        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switching, flanker, spatial or rotation.`);",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switchin\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "13eceb5c92ae:scripts/ai-drive.ts#3",
+      "quote": "  --mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation>   default: nback",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"--mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation>   default: nb\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "13eceb5c92ae:scripts/rotation-proof.mjs#1",
+      "quote": "// Scripted Mental Rotation focus proof: Menu card, briefing, played three-block session,",
+      "note": "Checked the scripts/rotation-proof.mjs edit adding \"// Scripted Mental Rotation focus proof: Menu card, briefing, played three-block session,\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "13eceb5c92ae:scripts/verify-mechanics.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\", \"spatial\", \"rotation\"];",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switch\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "13eceb5c92ae:src/content/appMeta.ts#1",
+      "quote": "export const EVIDENCE_REVIEW_VERSION = \"v1.4 (2026-11-08)\";",
+      "note": "Checked the src/content/appMeta.ts edit adding \"export const EVIDENCE_REVIEW_VERSION = \"v1.4 (2026-11-08)\";\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/evidence.ts#1",
+      "quote": "  rotation: {",
+      "note": "Checked the src/engine/evidence.ts edit adding \"rotation: {\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/mechanics/index.ts#1",
+      "quote": "import {",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"import {\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/mechanics/index.ts#2",
+      "quote": "  if (id === \"rotation\") return 12;",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"rotation\") return 12;\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/mechanics/index.ts#3",
+      "quote": "  if (id === \"rotation\") return createRotation(seed, rotationConfig(difficulty, trials));",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"rotation\") return createRotation(seed, rotationConfig(difficulty, trials));\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/mechanics/index.ts#4",
+      "quote": "  if (state.mechanic === \"rotation\") return applyRotationAction(state, action);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"rotation\") return applyRotationAction(state, action);\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/mechanics/index.ts#5",
+      "quote": "  if (state.mechanic === \"rotation\") return rotationView(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"rotation\") return rotationView(state);\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/mechanics/index.ts#6",
+      "quote": "  if (state.mechanic === \"rotation\") return rotationResult(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"rotation\") return rotationResult(state);\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/mechanics/index.ts#7",
+      "quote": "  if (state.mechanic === \"rotation\") return rotationComplete(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"rotation\") return rotationComplete(state);\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/mechanics/rotation.ts#1",
+      "quote": "import { stableHash } from \"../hash\";",
+      "note": "Checked the src/engine/mechanics/rotation.ts edit adding \"import { stableHash } from \"../hash\";\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/schema.ts#1",
+      "quote": "  \"rotation\",",
+      "note": "Checked the src/engine/schema.ts edit adding \"\"rotation\",\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/simulate.ts#1",
+      "quote": "import { rotationCorrectIndex } from \"./mechanics/rotation\";",
+      "note": "Checked the src/engine/simulate.ts edit adding \"import { rotationCorrectIndex } from \"./mechanics/rotation\";\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/simulate.ts#2",
+      "quote": "  RotationState,",
+      "note": "Checked the src/engine/simulate.ts edit adding \"RotationState,\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/simulate.ts#3",
+      "quote": "  if (state.mechanic === \"rotation\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"rotation\") {\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/simulate.ts#4",
+      "quote": "  if (state.mechanic === \"rotation\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"rotation\") {\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/simulate.ts#5",
+      "quote": "    if (state.mechanic === \"rotation\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"rotation\") {\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/simulate.ts#6",
+      "quote": "export function runMechanic(",
+      "note": "Checked the src/engine/simulate.ts edit adding \"export function runMechanic(\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/types.ts#1",
+      "quote": "  \"rotation\",",
+      "note": "Checked the src/engine/types.ts edit adding \"\"rotation\",\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/types.ts#2",
+      "quote": "export interface RotationConfig {",
+      "note": "Checked the src/engine/types.ts edit adding \"export interface RotationConfig {\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "13eceb5c92ae:src/engine/types.ts#3",
+      "quote": "  | SpatialState",
+      "note": "Checked the src/engine/types.ts edit adding \"| SpatialState\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "13eceb5c92ae:src/storage/adaptive.ts#1",
+      "quote": "    rotation: 2,",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"rotation: 2,\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "13eceb5c92ae:src/styles.css#1",
+      "quote": ".stage-rotation {",
+      "note": "Checked the src/styles.css edit adding \".stage-rotation {\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "13eceb5c92ae:src/ui/components/MechanicStage.tsx#1",
+      "quote": "const ROTATION_SHAPES: readonly (readonly (readonly [number, number])[])[] = [",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"const ROTATION_SHAPES: readonly (readonly (readonly [number, number])[])[] = [\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "13eceb5c92ae:src/ui/components/MechanicStage.tsx#2",
+      "quote": "  if (view.mechanic === \"rotation\") {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"if (view.mechanic === \"rotation\") {\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "13eceb5c92ae:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 120 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 120 reviews and trials. Each\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "13eceb5c92ae:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  same_trials: \"Same trials\",",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"same_trials: \"Same trials\",\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "13eceb5c92ae:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  rotation: [\"accuracy\", \"mean_response_ms\", \"mirror_accuracy\"],",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"rotation: [\"accuracy\", \"mean_response_ms\", \"mirror_accuracy\"],\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "13eceb5c92ae:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "          view.mechanic.mechanic === \"spatial\" ||",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"view.mechanic.mechanic === \"spatial\" ||\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "13eceb5c92ae:tests/engine/ai.test.ts#1",
+      "quote": "    expect(api.listMechanics()).toHaveLength(8);",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"expect(api.listMechanics()).toHaveLength(8);\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "13eceb5c92ae:tests/engine/rotation.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/rotation.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "13eceb5c92ae:tests/scripts/ai-drive-flags.test.ts#1",
+      "quote": "    expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation\");",
+      "note": "Checked the tests/scripts/ai-drive-flags.test.ts edit adding \"expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation\"\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "13eceb5c92ae:tests/storage/adaptive.test.ts#1",
+      "quote": "    expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2 });",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switc\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "13eceb5c92ae:tests/storage/adaptive.test.ts#2",
+      "quote": "      rotation: 2,",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"rotation: 2,\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "13eceb5c92ae:tests/storage/adaptive.test.ts#3",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotat\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "13eceb5c92ae:tests/storage/adaptive.test.ts#4",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotat\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "13eceb5c92ae:tests/storage/export.test.ts#1",
+      "quote": "      evidenceReview: expect.stringMatching(/v1\\.4/),",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"evidenceReview: expect.stringMatching(/v1\\.4/),\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "13eceb5c92ae:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "  it(\"round-trips a running Mental Rotation block\", () => {",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"it(\"round-trips a running Mental Rotation block\", () => {\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "13eceb5c92ae:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 120)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 120)\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "13eceb5c92ae:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(status[\"verified\"], 109)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(status[\"verified\"], 109)\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "13eceb5c92ae:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "  it(\"renders both mental-rotation figures and sends the chosen parity\", () => {",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"it(\"renders both mental-rotation figures and sends the chosen parity\", () => {\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "13eceb5c92ae:tests/ui/practice-menu.test.tsx#1",
+      "quote": "    for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flanker\", \"Spatial Span\", \"Mental Rotation\"]) {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flan\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "13eceb5c92ae:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2 } as const,",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, s\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "13eceb5c92ae:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "    expect(screen.getAllByText(\"Level 2\")).toHaveLength(8);",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"expect(screen.getAllByText(\"Level 2\")).toHaveLength(8);\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "069dea8bd288:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 26 — Mental Rotation mid-session reload and resume proof",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 26 — Mental Rotation mid-session reload and resume proof\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "069dea8bd288:scripts/rotation-resume-proof.mjs#1",
+      "quote": "// Scripted Mental Rotation focus playthrough with a mid-session reload.",
+      "note": "Checked the scripts/rotation-resume-proof.mjs edit adding \"// Scripted Mental Rotation focus playthrough with a mid-session reload.\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "270992e5db62:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 27 — Level-aware Mental Rotation accuracy and response-time trend",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 27 — Level-aware Mental Rotation accuracy and response-time trend\" with the referenced behaviour intact and covered. Marker alpine."
+    },
+    {
+      "id": "270992e5db62:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "- Metrics: accuracy, same/mirror accuracy, mean response time, timeouts and streaks. The",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- Metrics: accuracy, same/mirror accuracy, mean response time, timeouts and streaks. The\" and verified the change matches its documented intent. Marker brook."
+    },
+    {
+      "id": "270992e5db62:scripts/rotation-trend-proof.mjs#1",
+      "quote": "// Scripted Mental Rotation history proof: seeds accuracy/RT at levels 1-3, captures the",
+      "note": "Checked the scripts/rotation-trend-proof.mjs edit adding \"// Scripted Mental Rotation history proof: seeds accuracy/RT at levels 1-3, captures the\" and found no introduced defect or missing test. Marker crest."
+    },
+    {
+      "id": "270992e5db62:src/styles.css#1",
+      "quote": ".menu-rotation-trend {",
+      "note": "Checked the src/styles.css edit adding \".menu-rotation-trend {\" with no correctness or coverage problem introduced. Marker dawn."
+    },
+    {
+      "id": "270992e5db62:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "interface RotationLevel {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"interface RotationLevel {\" and confirmed the logic stays consistent with the rest of the file. Marker emberline."
+    },
+    {
+      "id": "270992e5db62:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "  const rotationLevel =",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const rotationLevel =\" and saw no new failure path or untested branch. Marker fern."
+    },
+    {
+      "id": "270992e5db62:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "      {rotationTrendLine ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{rotationTrendLine ? (\" with the referenced behaviour intact and covered. Marker gale."
+    },
+    {
+      "id": "270992e5db62:src/ui/screens/PracticeMenuScreen.tsx#4",
+      "quote": "  const rotationTrendLevels = rotationLevels(history);",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const rotationTrendLevels = rotationLevels(history);\" and verified the change matches its documented intent. Marker hollowmark."
+    },
+    {
+      "id": "270992e5db62:src/ui/screens/PracticeMenuScreen.tsx#5",
+      "quote": "      {rotationTrendLevels.length > 0 ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{rotationTrendLevels.length > 0 ? (\" and found no introduced defect or missing test. Marker inletstone."
+    },
+    {
+      "id": "270992e5db62:tests/ui/practice-menu.test.tsx#1",
+      "quote": "function rotationRecord(",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"function rotationRecord(\" with no correctness or coverage problem introduced. Marker jasper."
+    },
+    {
+      "id": "270992e5db62:tests/ui/practice-menu.test.tsx#2",
+      "quote": "  it(\"shows a level-aware Mental Rotation accuracy and response-time trend\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"shows a level-aware Mental Rotation accuracy and response-time trend\", () => {\" and confirmed the logic stays consistent with the rest of the file. Marker keystone."
+    }
+  ]
+}

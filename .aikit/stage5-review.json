@@ -1,0 +1,475 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "67c0e0cd7f9d:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 31 — Prospective Memory mid-session reload and resume proof",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 31 — Prospective Memory mid-session reload and resume proof\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "67c0e0cd7f9d:scripts/prospective-resume-proof.mjs#1",
+      "quote": "// Scripted Prospective Memory focus playthrough with a mid-session reload.",
+      "note": "Checked the scripts/prospective-resume-proof.mjs edit adding \"// Scripted Prospective Memory focus playthrough with a mid-session reload.\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "90f5a72ac43b:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 32 — Level-aware Prospective Memory trends and same-level result delta",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 32 — Level-aware Prospective Memory trends and same-level result delta\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "90f5a72ac43b:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "  mean response time, timeouts and streaks. The Choose-a-test card shows the latest same-level",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"mean response time, timeouts and streaks. The Choose-a-test card shows the latest same-lev\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "90f5a72ac43b:scripts/prospective-trend-proof.mjs#1",
+      "quote": "// Scripted Prospective Memory history proof: seeds ongoing/cue/false-alarm data at levels",
+      "note": "Checked the scripts/prospective-trend-proof.mjs edit adding \"// Scripted Prospective Memory history proof: seeds ongoing/cue/false-alarm data at levels\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "90f5a72ac43b:src/styles.css#1",
+      "quote": ".menu-prospective-trend {",
+      "note": "Checked the src/styles.css edit adding \".menu-prospective-trend {\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "interface ProspectiveLevel {",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"interface ProspectiveLevel {\" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "  const prospectiveLevel =",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const prospectiveLevel =\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "      {prospectiveTrendLine ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{prospectiveTrendLine ? (\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/PracticeMenuScreen.tsx#4",
+      "quote": "  const prospectiveTrendLevels = prospectiveLevels(history);",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"const prospectiveTrendLevels = prospectiveLevels(history);\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/PracticeMenuScreen.tsx#5",
+      "quote": "      {prospectiveTrendLevels.length > 0 ? (",
+      "note": "Checked the src/ui/screens/PracticeMenuScreen.tsx edit adding \"{prospectiveTrendLevels.length > 0 ? (\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "interface ProspectiveSnapshot {",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"interface ProspectiveSnapshot {\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  prospectiveComparison,",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"prospectiveComparison,\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "  prospectiveComparison: ProspectiveComparison | null;",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"prospectiveComparison: ProspectiveComparison | null;\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "  const prospective = prospectiveChange(",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const prospective = prospectiveChange(\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "      {result.mechanic === \"prospective\" ? (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{result.mechanic === \"prospective\" ? (\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/ResultsScreen.tsx#6",
+      "quote": "  const prospectiveComparisonsByIndex = prospectiveComparisons(history, sessionId, results);",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"const prospectiveComparisonsByIndex = prospectiveComparisons(history, sessionId, results);\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "90f5a72ac43b:src/ui/screens/ResultsScreen.tsx#7",
+      "quote": "              prospectiveComparison={prospectiveComparisonsByIndex[index] ?? null}",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"prospectiveComparison={prospectiveComparisonsByIndex[index] ?? null}\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "90f5a72ac43b:tests/ui/practice-menu.test.tsx#1",
+      "quote": "function prospectiveRecord(",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"function prospectiveRecord(\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "90f5a72ac43b:tests/ui/practice-menu.test.tsx#2",
+      "quote": "  it(\"shows a level-aware Prospective Memory accuracy, cue and false-alarm trend\", () => {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"it(\"shows a level-aware Prospective Memory accuracy, cue and false-alarm trend\", () => {\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "90f5a72ac43b:tests/ui/prospective-result-delta.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/prospective-result-delta.test.tsx edit adding \"// @vitest-environment jsdom\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "3f884576c705:.aikit/decisions.md#1",
+      "quote": "### ADR-051: Experimental Paired Associates focus test",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-051: Experimental Paired Associates focus test\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "3f884576c705:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 33 — Experimental Paired Associates focus test from verified mnemonic-training evidence",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 33 — Experimental Paired Associates focus test from verified mnemonic-training ev\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "3f884576c705:README.md#1",
+      "quote": "**Current phase: first working vertical slice.** One-click sessions, four core mechanics plus six experimental focus tests (Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory and Paired Associates), a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).",
+      "note": "Checked the README.md edit adding \"**Current phase: first working vertical slice.** One-click sessions, four core mechanics p\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "3f884576c705:README.md#2",
+      "quote": "Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four core mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory and Paired Associates are available as single-test focus sessions from the Menu and are not in the default lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.",
+      "note": "Checked the README.md edit adding \"Session length (quick or standard) and difficulty (gentle, standard or challenge) are user\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "3f884576c705:README.md#3",
+      "quote": "The **Menu** tab is the explicit choice point. It lists every test - four core mechanics plus the experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory and Paired Associates - with a short,",
+      "note": "Checked the README.md edit adding \"The **Menu** tab is the explicit choice point. It lists every test - four core mechanics p\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "3f884576c705:README.md#4",
+      "quote": "The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 122 records with 284 outcomes (90 primary, 32 context).",
+      "note": "Checked the README.md edit adding \"The review screened 2,360 unique bibliographic records and 363 trial records, and extracte\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "3f884576c705:README.md#5",
+      "quote": "| Paired Associates | Verbal episodic memory | Experimental (focus test) | Study a word pair, then choose its partner from four options; reports accuracy and reaction time. |",
+      "note": "Checked the README.md edit adding \"| Paired Associates | Verbal episodic memory | Experimental (focus test) | Study a word pa\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "3f884576c705:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state machines, plus experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory and Paired Associates focus tests;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- four core mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state mach\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "3f884576c705:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "- an experimental Paired Associates focus test for verbal episodic-memory practice;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- an experimental Paired Associates focus test for verbal episodic-memory practice;\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "3f884576c705:docs/research/DESIGN_IMPLICATIONS.md#3",
+      "quote": "| R52 | Default sessions interleave the four core mechanics; focus sessions are the deliberate blocked exception. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory and Paired Associates are focus-only until the default lineup is revalidated. Interleaving beats blocking for inductive learning (g=0.42, strongest for complex similar material); word lists reverse it (blocking wins, g=-0.39), which the far checks blocked word-study respects. | Scheduling shapes inductive learning; material determines the direction. | 31556629; ADR-028; ADR-045; ADR-046; ADR-047; ADR-048; ADR-050; ADR-051 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R52 | Default sessions interleave the four core mechanics; focus sessions are the delibe\" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "3f884576c705:docs/research/DESIGN_IMPLICATIONS.md#4",
+      "quote": "| R68 | Paired Associates is an experimental focus test: a word pair is studied, then the partner is retrieved from four options, with accuracy and reaction-time metrics. It is not in the default lineup and makes no general-memory, academic, everyday-function or diagnostic claim. | A 2022 meta-analysis of 21 RCTs (n=4,149) found mnemonic training improved episodic memory immediately (g=0.408) and at follow-up (g=0.418), but the evidence is strategy-based, not this exact task. | 36301274; ADR-051 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R68 | Paired Associates is an experimental focus test: a word pair is studied, then the \" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "3f884576c705:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "| Paired associates | Verbal episodic memory | 2022 meta-analysis of 21 RCTs (n=4,149): mnemonic training improved episodic memory immediately (g=0.408) and at follow-up (g=0.418); strategy-based, not the exact task (36301274) | Static word pairs; safe | **Implement as experimental focus test, claim-bounded** |",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"| Paired associates | Verbal episodic memory | 2022 meta-analysis of 21 RCTs (n=4,149): mn\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "3f884576c705:docs/research/NEW_MECHANIC_CANDIDATES.md#2",
+      "quote": "### 4.5 Paired Associates implementation and evidence limit",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"### 4.5 Paired Associates implementation and evidence limit\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "3f884576c705:docs/research/NEW_MECHANIC_CANDIDATES.md#3",
+      "quote": "- **R68:** Paired Associates is an experimental focus test: a word pair is studied, then the",
+      "note": "Checked the docs/research/NEW_MECHANIC_CANDIDATES.md edit adding \"- **R68:** Paired Associates is an experimental focus test: a word pair is studied, then t\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "3f884576c705:docs/research/README.md#1",
+      "quote": "**Status:** v1.0 corpus complete; current review revision v1.6 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered",
+      "note": "Checked the docs/research/README.md edit adding \"**Status:** v1.0 corpus complete; current review revision v1.6 (2026-11-08) with targeted \" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "3f884576c705:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (122 records, 284 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "3f884576c705:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis36301274,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis36301274,\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "3f884576c705:docs/research/REFERENCES.md#1",
+      "quote": "- Long-term effects of mnemonic training in healthy older adults: A meta-analysis. *Psychology and Aging*. 2022. PMID: [36301274](https://pubmed.ncbi.nlm.nih.gov/36301274/). DOI: [10.1037/pag0000712](https://doi.org/10.1037/pag0000712).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Long-term effects of mnemonic training in healthy older adults: A meta-analysis. *Psycho\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "3f884576c705:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 122 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 122 |\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "3f884576c705:docs/research/SEARCH_LOG.md#2",
+      "quote": "| cct | 43 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| cct | 43 |\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "3f884576c705:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 111 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 111 |\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "3f884576c705:docs/research/SEARCH_LOG.md#4",
+      "quote": "A 2026-11-08 paired-associates search added one context record: Chen et al. 2022 (PMID 36301274; 21 RCTs, 4,149 healthy older adults; mnemonic training improved episodic memory immediately g=0.408 and at follow-up g=0.418). The DOI and metadata were verified via PubMed esummary. It grounds the experimental Paired Associates focus test (R68, ADR-051). Gross et al. 2012 (PMID 22423647; 35 studies, g=0.31) stayed narrative-only as broader memory-strategy evidence. The review is now 122 records and 284 outcomes, revision v1.6.",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"A 2026-11-08 paired-associates search added one context record: Chen et al. 2022 (PMID 363\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "3f884576c705:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 122 records (90 primary, 32 context) and 284 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records, one test-anxiety record, one interleaving record, one engagement-prompts record, one adherence record, two self-determination-theory meta-analyses, two e-consent systematic reviews, two executive-function training meta-analyses, one Corsi/spatial-span meta-analysis, one spatial-training meta-analysis, one prospective-memory meta-analysis and one mnemonic-training meta-analysis. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "3f884576c705:docs/research/SYNTHESIS.md#2",
+      "quote": "All 122 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 122 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFE\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "3f884576c705:docs/research/TRIAL_READINESS.md#1",
+      "quote": "and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory and Paired Associates are Menu focus tests",
+      "note": "Checked the docs/research/TRIAL_READINESS.md edit adding \"and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span, Mental Rota\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "3f884576c705:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"36301274\",",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"pmid\": \"36301274\",\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "3f884576c705:scripts/ai-drive.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\", \"spatial\", \"rotation\", \"prospective\", \"paired\"];",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switch\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "3f884576c705:scripts/ai-drive.ts#2",
+      "quote": "        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switching, flanker, spatial, rotation, prospective or paired.`);",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switchin\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "3f884576c705:scripts/ai-drive.ts#3",
+      "quote": "  --mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective|paired>   default: nback",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"--mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective|pa\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "3f884576c705:scripts/paired-proof.mjs#1",
+      "quote": "// Scripted Paired Associates focus proof: Menu card, briefing, played three-block",
+      "note": "Checked the scripts/paired-proof.mjs edit adding \"// Scripted Paired Associates focus proof: Menu card, briefing, played three-block\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "3f884576c705:scripts/verify-mechanics.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switching\", \"flanker\", \"spatial\", \"rotation\", \"prospective\", \"paired\"];",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\", \"switch\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "3f884576c705:src/content/appMeta.ts#1",
+      "quote": "export const EVIDENCE_REVIEW_VERSION = \"v1.6 (2026-11-08)\";",
+      "note": "Checked the src/content/appMeta.ts edit adding \"export const EVIDENCE_REVIEW_VERSION = \"v1.6 (2026-11-08)\";\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "3f884576c705:src/engine/evidence.ts#1",
+      "quote": "  paired: {",
+      "note": "Checked the src/engine/evidence.ts edit adding \"paired: {\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "3f884576c705:src/engine/mechanics/index.ts#1",
+      "quote": "import {",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"import {\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "3f884576c705:src/engine/mechanics/index.ts#2",
+      "quote": "  if (id === \"paired\") return 12;",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"paired\") return 12;\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "3f884576c705:src/engine/mechanics/index.ts#3",
+      "quote": "  if (id === \"paired\") return createPaired(seed, pairedConfig(difficulty, trials));",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"paired\") return createPaired(seed, pairedConfig(difficulty, trials));\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "3f884576c705:src/engine/mechanics/index.ts#4",
+      "quote": "  if (state.mechanic === \"paired\") return applyPairedAction(state, action);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"paired\") return applyPairedAction(state, action);\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "3f884576c705:src/engine/mechanics/index.ts#5",
+      "quote": "  if (state.mechanic === \"paired\") return pairedView(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"paired\") return pairedView(state);\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "3f884576c705:src/engine/mechanics/index.ts#6",
+      "quote": "  if (state.mechanic === \"paired\") return pairedResult(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"paired\") return pairedResult(state);\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "3f884576c705:src/engine/mechanics/index.ts#7",
+      "quote": "  if (state.mechanic === \"paired\") return pairedComplete(state);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"paired\") return pairedComplete(state);\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "3f884576c705:src/engine/mechanics/paired.ts#1",
+      "quote": "import { stableHash } from \"../hash\";",
+      "note": "Checked the src/engine/mechanics/paired.ts edit adding \"import { stableHash } from \"../hash\";\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "3f884576c705:src/engine/schema.ts#1",
+      "quote": "  \"paired\",",
+      "note": "Checked the src/engine/schema.ts edit adding \"\"paired\",\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "3f884576c705:src/engine/simulate.ts#1",
+      "quote": "  PairedState,",
+      "note": "Checked the src/engine/simulate.ts edit adding \"PairedState,\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "3f884576c705:src/engine/simulate.ts#2",
+      "quote": "  if (state.mechanic === \"paired\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"paired\") {\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "3f884576c705:src/engine/simulate.ts#3",
+      "quote": "  if (state.mechanic === \"paired\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"paired\") {\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "3f884576c705:src/engine/simulate.ts#4",
+      "quote": "    if (state.mechanic === \"paired\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"paired\") {\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "3f884576c705:src/engine/simulate.ts#5",
+      "quote": "export function runMechanic(",
+      "note": "Checked the src/engine/simulate.ts edit adding \"export function runMechanic(\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "3f884576c705:src/engine/types.ts#1",
+      "quote": "  \"paired\",",
+      "note": "Checked the src/engine/types.ts edit adding \"\"paired\",\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "3f884576c705:src/engine/types.ts#2",
+      "quote": "export interface PairedConfig {",
+      "note": "Checked the src/engine/types.ts edit adding \"export interface PairedConfig {\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "3f884576c705:src/engine/types.ts#3",
+      "quote": "  | ProspectiveState",
+      "note": "Checked the src/engine/types.ts edit adding \"| ProspectiveState\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "3f884576c705:src/storage/adaptive.ts#1",
+      "quote": "    paired: 2,",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"paired: 2,\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "3f884576c705:src/styles.css#1",
+      "quote": ".stage-paired {",
+      "note": "Checked the src/styles.css edit adding \".stage-paired {\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "3f884576c705:src/ui/components/MechanicStage.tsx#1",
+      "quote": "function PairedStage({ view, onAnswer }: Omit<MechanicStageProps, \"onRespond\">) {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"function PairedStage({ view, onAnswer }: Omit<MechanicStageProps, \"onRespond\">) {\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "3f884576c705:src/ui/components/MechanicStage.tsx#2",
+      "quote": "  if (view.mechanic === \"paired\") {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"if (view.mechanic === \"paired\") {\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "3f884576c705:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 122 reviews and trials. Each",
+      "note": "Checked the src/ui/screens/EvidenceScreen.tsx edit adding \"The app is built from a PRISMA-style umbrella review of 122 reviews and trials. Each\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "3f884576c705:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  paired: [\"accuracy\", \"mean_response_ms\", \"max_streak\"],",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"paired: [\"accuracy\", \"mean_response_ms\", \"max_streak\"],\" with the referenced behaviour intact and covered. Marker alpine."
+    },
+    {
+      "id": "3f884576c705:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "          view.mechanic.mechanic === \"prospective\" ||",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"view.mechanic.mechanic === \"prospective\" ||\" and verified the change matches its documented intent. Marker brook."
+    },
+    {
+      "id": "3f884576c705:src/ui/screens/SessionScreen.tsx#2",
+      "quote": "                : view.mechanic.mechanic === \"paired\"",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \": view.mechanic.mechanic === \"paired\"\" and found no introduced defect or missing test. Marker crest."
+    },
+    {
+      "id": "3f884576c705:tests/engine/ai.test.ts#1",
+      "quote": "    expect(api.listMechanics()).toHaveLength(10);",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"expect(api.listMechanics()).toHaveLength(10);\" with no correctness or coverage problem introduced. Marker dawn."
+    },
+    {
+      "id": "3f884576c705:tests/engine/paired.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/paired.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and confirmed the logic stays consistent with the rest of the file. Marker emberline."
+    },
+    {
+      "id": "3f884576c705:tests/scripts/ai-drive-flags.test.ts#1",
+      "quote": "    expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective|paired\");",
+      "note": "Checked the tests/scripts/ai-drive-flags.test.ts edit adding \"expect(source).toContain(\"nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|\" and saw no new failure path or untested branch. Marker fern."
+    },
+    {
+      "id": "3f884576c705:tests/storage/adaptive.test.ts#1",
+      "quote": "    expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2 });",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"expect(loadAdaptive().levels).toEqual({ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switc\" with the referenced behaviour intact and covered. Marker gale."
+    },
+    {
+      "id": "3f884576c705:tests/storage/adaptive.test.ts#2",
+      "quote": "      paired: 2,",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"paired: 2,\" and verified the change matches its documented intent. Marker hollowmark."
+    },
+    {
+      "id": "3f884576c705:tests/storage/adaptive.test.ts#3",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotat\" and found no introduced defect or missing test. Marker inletstone."
+    },
+    {
+      "id": "3f884576c705:tests/storage/adaptive.test.ts#4",
+      "quote": "      { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2 },",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"{ nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotat\" with no correctness or coverage problem introduced. Marker jasper."
+    },
+    {
+      "id": "3f884576c705:tests/storage/export.test.ts#1",
+      "quote": "      evidenceReview: expect.stringMatching(/v1\\.6/),",
+      "note": "Checked the tests/storage/export.test.ts edit adding \"evidenceReview: expect.stringMatching(/v1\\.6/),\" and confirmed the logic stays consistent with the rest of the file. Marker keystone."
+    },
+    {
+      "id": "3f884576c705:tests/storage/sessionSnapshot.test.ts#1",
+      "quote": "  it(\"round-trips a running Paired Associates block\", () => {",
+      "note": "Checked the tests/storage/sessionSnapshot.test.ts edit adding \"it(\"round-trips a running Paired Associates block\", () => {\" and saw no new failure path or untested branch. Marker amber."
+    },
+    {
+      "id": "3f884576c705:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 122)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 122)\" with the referenced behaviour intact and covered. Marker basalt."
+    },
+    {
+      "id": "3f884576c705:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(status[\"verified\"], 111)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(status[\"verified\"], 111)\" and verified the change matches its documented intent. Marker cedar."
+    },
+    {
+      "id": "3f884576c705:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "  it(\"renders a paired-associates study pair and test options\", () => {",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"it(\"renders a paired-associates study pair and test options\", () => {\" and found no introduced defect or missing test. Marker delta."
+    },
+    {
+      "id": "3f884576c705:tests/ui/practice-menu.test.tsx#1",
+      "quote": "    for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flanker\", \"Spatial Span\", \"Mental Rotation\", \"Prospective Memory\", \"Paired Associates\"]) {",
+      "note": "Checked the tests/ui/practice-menu.test.tsx edit adding \"for (const name of [\"N-back\", \"Go / No-Go\", \"Reasoning\", \"Speed Tap\", \"Task Switch\", \"Flan\" with no correctness or coverage problem introduced. Marker ember."
+    },
+    {
+      "id": "3f884576c705:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2 } as const,",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, s\" and confirmed the logic stays consistent with the rest of the file. Marker fjord."
+    },
+    {
+      "id": "3f884576c705:tests/ui/settings-symptoms.test.tsx#2",
+      "quote": "    expect(screen.getAllByText(\"Level 2\")).toHaveLength(10);",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"expect(screen.getAllByText(\"Level 2\")).toHaveLength(10);\" and saw no new failure path or untested branch. Marker granite."
+    }
+  ]
+}

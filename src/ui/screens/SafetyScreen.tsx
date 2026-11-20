@@ -39,6 +39,9 @@ export function SafetyScreen({ onComplete }: SafetyScreenProps) {
         Noesis is a practice tool, not medical care. These questions decide which exercises
         are appropriate and what warnings the app shows.
       </p>
+      <p className="privacy-chip">
+        <span aria-hidden="true">✓</span> Answers stay on this device
+      </p>
 
       <form
         className="card form"

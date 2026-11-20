@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // One-click launcher for Noesis: installs dependencies when missing, starts the Vite
 // dev server and opens the app in the default browser. Node standard library only.
 import { spawn, spawnSync } from "node:child_process";

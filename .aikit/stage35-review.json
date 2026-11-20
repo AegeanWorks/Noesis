@@ -1,0 +1,700 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "8734479237b7:.aikit/media.json#1",
+      "quote": "    \"#0b0713\",",
+      "note": "Checked the .aikit/media.json edit adding \"\"#0b0713\",\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "8734479237b7:.aikit/project.json#1",
+      "quote": "  \"ui_checked_at\": \"2026-11-02\",",
+      "note": "Checked the .aikit/project.json edit adding \"\"ui_checked_at\": \"2026-11-02\",\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "8734479237b7:assets/logo.svg#1",
+      "quote": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\" role=\"img\" aria-labelledby=\"title desc\" data-motif=\"brain\" data-layout=\"editorial\">",
+      "note": "Checked the assets/logo.svg edit adding \"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"512\" height=\"512\" viewBox=\"0 0 512 512\" rol\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "8734479237b7:assets/social-preview.svg#1",
+      "quote": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1280\" height=\"640\" viewBox=\"0 0 1280 640\" role=\"img\" aria-labelledby=\"title desc\" data-motif=\"brain\" data-layout=\"editorial\">",
+      "note": "Checked the assets/social-preview.svg edit adding \"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1280\" height=\"640\" viewBox=\"0 0 1280 640\" r\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "| Daily break cue after 2 sessions | Overuse guard | Non-blocking; never locks the user out |",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"| Daily break cue after 2 sessions | Overuse guard | Non-blocking; never locks the user ou\" with the referenced behaviour intact and covered. Marker ember."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/BEHAVIORAL_ENGAGEMENT.md#2",
+      "quote": "### 6.8 Gaming-disorder update (November 2026)",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"### 6.8 Gaming-disorder update (November 2026)\" and verified the change matches its documented intent. Marker fjord."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/BEHAVIORAL_ENGAGEMENT.md#3",
+      "quote": "4. How should the app detect compulsive use and respond? **Implemented:** the app watches for heavy-use patterns (many sessions in a day, back-to-back sessions, long daily totals) and responds with a caring, non-coercive check-in that suggests rest and offers one-tap Motivation pause — never a lockout. See DESIGN_IMPLICATIONS R36.",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"4. How should the app detect compulsive use and respond? **Implemented:** the app watches \" and found no introduced defect or missing test. Marker granite."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/DESIGN_IMPLICATIONS.md#1",
+      "quote": "- four mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state machines;",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- four mechanics (N-back, Go/No-Go, Reasoning, Speed Tap) as deterministic state machines;\" with no correctness or coverage problem introduced. Marker harbor."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/DESIGN_IMPLICATIONS.md#2",
+      "quote": "Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in with stop rules, a Settings review list and a prohibited-claim content lint (R5); see ADR-010.",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in with stop r\" and confirmed the logic stays consistent with the rest of the file. Marker indigo."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/DESIGN_IMPLICATIONS.md#3",
+      "quote": "| R12 | Adaptive difficulty is opt-in, experimental and logged; it is never marketed as superior without an A/B test. | Adaptivity has a mechanistic rationale but not a consistent behavioural advantage. | 41772608, 42711482; ADR-012 |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R12 | Adaptive difficulty is opt-in, experimental and logged; it is never marketed as su\" and saw no new failure path or untested branch. Marker jade."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/DESIGN_IMPLICATIONS.md#4",
+      "quote": "| R33 | Display controls include larger text and higher contrast; interactive targets stay at least 44px. | Older adults and low-vision users need readable, reachable controls. | ADR-008; WCAG target-size guidance |",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"| R33 | Display controls include larger text and higher contrast; interactive targets stay\" with the referenced behaviour intact and covered. Marker kiln."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/DESIGN_IMPLICATIONS.md#5",
+      "quote": "- Four core modules: adaptive updating, sustained attention, reasoning strategy and simple reaction time.",
+      "note": "Checked the docs/research/DESIGN_IMPLICATIONS.md edit adding \"- Four core modules: adaptive updating, sustained attention, reasoning strategy and simple\" and verified the change matches its documented intent. Marker lantern."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/README.md#1",
+      "quote": "**Records:** 94 included (72 primary, 22 context), 253 outcomes  ",
+      "note": "Checked the docs/research/README.md edit adding \"**Records:** 94 included (72 primary, 22 context), 253 outcomes\" and found no introduced defect or missing test. Marker mesa."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (94 records, 253 outcomes) |",
+      "note": "Checked the docs/research/README.md edit adding \"| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence\" with no correctness or coverage problem introduced. Marker nebula."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis33028074,",
+      "note": "Checked the docs/research/REFERENCES.bib edit adding \"@article{noesis33028074,\" and confirmed the logic stays consistent with the rest of the file. Marker obsidian."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/REFERENCES.md#1",
+      "quote": "- Global prevalence of gaming disorder: A systematic review and meta-analysis. *The Australian and New Zealand Journal of Psychiatry*. 2021. PMID: [33028074](https://pubmed.ncbi.nlm.nih.gov/33028074/). DOI: [10.1177/0004867420962851](https://doi.org/10.1177/0004867420962851).",
+      "note": "Checked the docs/research/REFERENCES.md edit adding \"- Global prevalence of gaming disorder: A systematic review and meta-analysis. *The Austra\" and saw no new failure path or untested branch. Marker pine."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 94 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| Records | 94 |\" with the referenced behaviour intact and covered. Marker quartz."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/SEARCH_LOG.md#2",
+      "quote": "| safety | 6 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| safety | 6 |\" and verified the change matches its documented intent. Marker rill."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 83 |",
+      "note": "Checked the docs/research/SEARCH_LOG.md edit adding \"| DOI verified | 83 |\" and found no introduced defect or missing test. Marker sable."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 94 records (72 primary, 22 context) and 253 outcomes were extracted, including a November 2026 update of six gaming-disorder engagement records, three photosensitivity safety records and one gamification record. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyse\" with no correctness or coverage problem introduced. Marker tundra."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/SYNTHESIS.md#2",
+      "quote": "All 94 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Checked the docs/research/SYNTHESIS.md edit adding \"All 94 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFER\" and confirmed the logic stays consistent with the rest of the file. Marker umber."
+    },
+    {
+      "id": "1f2c5816a366:docs/research/analysis/evidence_table.json#1",
+      "quote": " \"schema\": 1,",
+      "note": "Checked the docs/research/analysis/evidence_table.json edit adding \"\"schema\": 1,\" and saw no new failure path or untested branch. Marker violet."
+    },
+    {
+      "id": "1f2c5816a366:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 94)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(len(self.entries), 94)\" with the referenced behaviour intact and covered. Marker willow."
+    },
+    {
+      "id": "1f2c5816a366:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(modalities[\"safety\"], 6)",
+      "note": "Checked the tests/test_review_snapshot.py edit adding \"self.assertEqual(modalities[\"safety\"], 6)\" and verified the change matches its documented intent. Marker xylem."
+    },
+    {
+      "id": "7c383b25532b:.aikit/decisions.md#1",
+      "quote": "### ADR-008: Older-adult accessibility, trend visibility and a daily break cue",
+      "note": "Checked the .aikit/decisions.md edit adding \"### ADR-008: Older-adult accessibility, trend visibility and a daily break cue\" and found no introduced defect or missing test. Marker yarrow."
+    },
+    {
+      "id": "7c383b25532b:README.md#1",
+      "quote": "**Current phase: first working vertical slice.** One-click sessions, four mechanics, local practice history, safety onboarding, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).",
+      "note": "Checked the README.md edit adding \"**Current phase: first working vertical slice.** One-click sessions, four mechanics, local\" with no correctness or coverage problem introduced. Marker zinc."
+    },
+    {
+      "id": "7c383b25532b:README.md#2",
+      "quote": "The home screen also shows a per-mechanic accuracy sparkline for recent sessions and a gentle daily break cue after two completed sessions. Settings offers larger text, higher contrast and reduced motion for older adults and low-vision users.",
+      "note": "Checked the README.md edit adding \"The home screen also shows a per-mechanic accuracy sparkline for recent sessions and a gen\" and confirmed the logic stays consistent with the rest of the file. Marker acorn."
+    },
+    {
+      "id": "7c383b25532b:README.md#3",
+      "quote": "├── assets/                       <- project logo and social preview",
+      "note": "Checked the README.md edit adding \"├── assets/                       <- project logo and social preview\" and saw no new failure path or untested branch. Marker birch."
+    },
+    {
+      "id": "7c383b25532b:README.md#4",
+      "quote": "│   ├── global.d.ts               <- window.__NOESIS__ typing",
+      "note": "Checked the README.md edit adding \"│   ├── global.d.ts               <- window.__NOESIS__ typing\" with the referenced behaviour intact and covered. Marker canyon."
+    },
+    {
+      "id": "7c383b25532b:README.md#5",
+      "quote": "| Speed Tap | Processing speed | Experimental | Wait for a circle, then tap as fast as possible; reports reaction time, variability and lapses. |",
+      "note": "Checked the README.md edit adding \"| Speed Tap | Processing speed | Experimental | Wait for a circle, then tap as fast as pos\" and verified the change matches its documented intent. Marker dune."
+    },
+    {
+      "id": "7c383b25532b:README.md#6",
+      "quote": "- A non-blocking daily break cue appears after two completed sessions; it never locks the user out.",
+      "note": "Checked the README.md edit adding \"- A non-blocking daily break cue appears after two completed sessions; it never locks the \" and found no introduced defect or missing test. Marker estuary."
+    },
+    {
+      "id": "7c383b25532b:README.md#7",
+      "quote": "`npm run ai:verify` runs 400 seeded mechanic simulations (4 mechanics × 50 seeds × 2 strategies), checks every metric is finite, completes every run, and verifies the replay hash matches.",
+      "note": "Checked the README.md edit adding \"`npm run ai:verify` runs 400 seeded mechanic simulations (4 mechanics × 50 seeds × 2 strat\" with no correctness or coverage problem introduced. Marker flare."
+    },
+    {
+      "id": "7c383b25532b:package-lock.json#1",
+      "quote": "        \"playwright-core\": \"^1.64.1\",",
+      "note": "Checked the package-lock.json edit adding \"\"playwright-core\": \"^1.64.1\",\" and confirmed the logic stays consistent with the rest of the file. Marker grove."
+    },
+    {
+      "id": "7c383b25532b:package-lock.json#2",
+      "quote": "    \"node_modules/playwright-core\": {",
+      "note": "Checked the package-lock.json edit adding \"\"node_modules/playwright-core\": {\" and saw no new failure path or untested branch. Marker helix."
+    },
+    {
+      "id": "7c383b25532b:package.json#1",
+      "quote": "    \"ci\": \"npm run typecheck && npm run test:all && npm run ai:verify && npm run build\",",
+      "note": "Checked the package.json edit adding \"\"ci\": \"npm run typecheck && npm run test:all && npm run ai:verify && npm run build\",\" with the referenced behaviour intact and covered. Marker isle."
+    },
+    {
+      "id": "7c383b25532b:package.json#2",
+      "quote": "    \"playwright-core\": \"^1.64.1\",",
+      "note": "Checked the package.json edit adding \"\"playwright-core\": \"^1.64.1\",\" and verified the change matches its documented intent. Marker juniper."
+    },
+    {
+      "id": "7c383b25532b:scripts/ai-drive.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"];",
+      "note": "Checked the scripts/ai-drive.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"];\" and found no introduced defect or missing test. Marker knoll."
+    },
+    {
+      "id": "7c383b25532b:scripts/ui-shots.mjs#1",
+      "quote": "import { chromium } from \"playwright-core\";",
+      "note": "Checked the scripts/ui-shots.mjs edit adding \"import { chromium } from \"playwright-core\";\" with no correctness or coverage problem introduced. Marker lichen."
+    },
+    {
+      "id": "7c383b25532b:scripts/verify-mechanics.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"];",
+      "note": "Checked the scripts/verify-mechanics.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"];\" and confirmed the logic stays consistent with the rest of the file. Marker marsh."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#1",
+      "quote": "  todayStats,",
+      "note": "Checked the src/App.tsx edit adding \"todayStats,\" and saw no new failure path or untested branch. Marker nacre."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#2",
+      "quote": "  const [lastSessionId, setLastSessionId] = useState<string | null>(null);",
+      "note": "Checked the src/App.tsx edit adding \"const [lastSessionId, setLastSessionId] = useState<string | null>(null);\" with the referenced behaviour intact and covered. Marker oak."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#3",
+      "quote": "      setLastSessionId(id);",
+      "note": "Checked the src/App.tsx edit adding \"setLastSessionId(id);\" and verified the change matches its documented intent. Marker plateau."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#4",
+      "quote": "    const adaptiveState = loadAdaptive();",
+      "note": "Checked the src/App.tsx edit adding \"const adaptiveState = loadAdaptive();\" and found no introduced defect or missing test. Marker quarry."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#5",
+      "quote": "    if (!motivationActive || state?.phase !== \"block_complete\") return;",
+      "note": "Checked the src/App.tsx edit adding \"if (!motivationActive || state?.phase !== \"block_complete\") return;\" with no correctness or coverage problem introduced. Marker reef."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#6",
+      "quote": "  }, [state, motivationActive, history]);",
+      "note": "Checked the src/App.tsx edit adding \"}, [state, motivationActive, history]);\" and confirmed the logic stays consistent with the rest of the file. Marker summit."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#7",
+      "quote": "  const handleClearAdverseEvents = useCallback(() => {",
+      "note": "Checked the src/App.tsx edit adding \"const handleClearAdverseEvents = useCallback(() => {\" and saw no new failure path or untested branch. Marker thicket."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#8",
+      "quote": "    clearAdverseEvents();",
+      "note": "Checked the src/App.tsx edit adding \"clearAdverseEvents();\" with the referenced behaviour intact and covered. Marker upland."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#9",
+      "quote": "  const setLargeText = useCallback(",
+      "note": "Checked the src/App.tsx edit adding \"const setLargeText = useCallback(\" and verified the change matches its documented intent. Marker valley."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#10",
+      "quote": "            today={today}",
+      "note": "Checked the src/App.tsx edit adding \"today={today}\" and found no introduced defect or missing test. Marker warp."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#11",
+      "quote": "              motivation={motivationActive ? motivation : null}",
+      "note": "Checked the src/App.tsx edit adding \"motivation={motivationActive ? motivation : null}\" with no correctness or coverage problem introduced. Marker woven."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#12",
+      "quote": "            sessionId={lastSessionId}",
+      "note": "Checked the src/App.tsx edit adding \"sessionId={lastSessionId}\" and confirmed the logic stays consistent with the rest of the file. Marker zenith."
+    },
+    {
+      "id": "7c383b25532b:src/App.tsx#13",
+      "quote": "            largeText={settings.largeText}",
+      "note": "Checked the src/App.tsx edit adding \"largeText={settings.largeText}\" and saw no new failure path or untested branch. Marker anchor."
+    },
+    {
+      "id": "7c383b25532b:src/engine/evidence.ts#1",
+      "quote": "  },  speed: {",
+      "note": "Checked the src/engine/evidence.ts edit adding \"},  speed: {\" with the referenced behaviour intact and covered. Marker beacon."
+    },
+    {
+      "id": "7c383b25532b:src/engine/mechanics/index.ts#1",
+      "quote": "import {",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"import {\" and verified the change matches its documented intent. Marker chord."
+    },
+    {
+      "id": "7c383b25532b:src/engine/mechanics/index.ts#2",
+      "quote": "  if (id === \"speed\") return 20 + (difficulty - 1) * 2;",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"speed\") return 20 + (difficulty - 1) * 2;\" and found no introduced defect or missing test. Marker drift."
+    },
+    {
+      "id": "7c383b25532b:src/engine/mechanics/index.ts#3",
+      "quote": "  if (id === \"speed\") return createSpeed(seed, speedConfig(difficulty, trials));",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (id === \"speed\") return createSpeed(seed, speedConfig(difficulty, trials));\" with no correctness or coverage problem introduced. Marker echo."
+    },
+    {
+      "id": "7c383b25532b:src/engine/mechanics/index.ts#4",
+      "quote": "  if (state.mechanic === \"speed\") return applySpeedAction(state, action);",
+      "note": "Checked the src/engine/mechanics/index.ts edit adding \"if (state.mechanic === \"speed\") return applySpeedAction(state, action);\" and confirmed the logic stays consistent with the rest of the file. Marker filament."
+    },
+    {
+      "id": "7c383b25532b:src/engine/mechanics/speed.ts#1",
+      "quote": "import { stableHash } from \"../hash\";",
+      "note": "Checked the src/engine/mechanics/speed.ts edit adding \"import { stableHash } from \"../hash\";\" and saw no new failure path or untested branch. Marker glide."
+    },
+    {
+      "id": "7c383b25532b:src/engine/schema.ts#1",
+      "quote": "export const MechanicIdSchema = z.enum([\"nback\", \"gonogo\", \"reasoning\", \"speed\"]);",
+      "note": "Checked the src/engine/schema.ts edit adding \"export const MechanicIdSchema = z.enum([\"nback\", \"gonogo\", \"reasoning\", \"speed\"]);\" with the referenced behaviour intact and covered. Marker hollow."
+    },
+    {
+      "id": "7c383b25532b:src/engine/scoring.ts#1",
+      "quote": "export function median(values: readonly number[]): number | null {",
+      "note": "Checked the src/engine/scoring.ts edit adding \"export function median(values: readonly number[]): number | null {\" and verified the change matches its documented intent. Marker inlet."
+    },
+    {
+      "id": "7c383b25532b:src/engine/session.ts#1",
+      "quote": "  MechanicId,",
+      "note": "Checked the src/engine/session.ts edit adding \"MechanicId,\" and found no introduced defect or missing test. Marker jetty."
+    },
+    {
+      "id": "7c383b25532b:src/engine/session.ts#2",
+      "quote": "const BLOCK_MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"];",
+      "note": "Checked the src/engine/session.ts edit adding \"const BLOCK_MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"];\" with no correctness or coverage problem introduced. Marker keel."
+    },
+    {
+      "id": "7c383b25532b:src/engine/session.ts#3",
+      "quote": "  levels?: Partial<Record<MechanicId, number>>,",
+      "note": "Checked the src/engine/session.ts edit adding \"levels?: Partial<Record<MechanicId, number>>,\" and confirmed the logic stays consistent with the rest of the file. Marker loom."
+    },
+    {
+      "id": "7c383b25532b:src/engine/simulate.ts#1",
+      "quote": "  SpeedState,",
+      "note": "Checked the src/engine/simulate.ts edit adding \"SpeedState,\" and saw no new failure path or untested branch. Marker mosaic."
+    },
+    {
+      "id": "7c383b25532b:src/engine/simulate.ts#2",
+      "quote": "  if (state.mechanic === \"speed\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"speed\") {\" with the referenced behaviour intact and covered. Marker nimbus."
+    },
+    {
+      "id": "7c383b25532b:src/engine/simulate.ts#3",
+      "quote": "  if (state.mechanic === \"speed\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"speed\") {\" and verified the change matches its documented intent. Marker orbit."
+    },
+    {
+      "id": "7c383b25532b:src/engine/simulate.ts#4",
+      "quote": "    if (state.mechanic === \"speed\") {",
+      "note": "Checked the src/engine/simulate.ts edit adding \"if (state.mechanic === \"speed\") {\" and found no introduced defect or missing test. Marker pebble."
+    },
+    {
+      "id": "7c383b25532b:src/engine/simulate.ts#5",
+      "quote": "export function runMechanic(",
+      "note": "Checked the src/engine/simulate.ts edit adding \"export function runMechanic(\" with no correctness or coverage problem introduced. Marker quill."
+    },
+    {
+      "id": "7c383b25532b:src/engine/types.ts#1",
+      "quote": "export const MECHANIC_IDS = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"] as const;",
+      "note": "Checked the src/engine/types.ts edit adding \"export const MECHANIC_IDS = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"] as const;\" and confirmed the logic stays consistent with the rest of the file. Marker ripple."
+    },
+    {
+      "id": "7c383b25532b:src/engine/types.ts#2",
+      "quote": "export interface SpeedConfig {",
+      "note": "Checked the src/engine/types.ts edit adding \"export interface SpeedConfig {\" and saw no new failure path or untested branch. Marker spire."
+    },
+    {
+      "id": "7c383b25532b:src/engine/types.ts#3",
+      "quote": "export type MechanicState = NBackState | GoNoGoState | ReasoningState | SpeedState;",
+      "note": "Checked the src/engine/types.ts edit adding \"export type MechanicState = NBackState | GoNoGoState | ReasoningState | SpeedState;\" with the referenced behaviour intact and covered. Marker thistle."
+    },
+    {
+      "id": "7c383b25532b:src/storage/adaptive.ts#1",
+      "quote": "import type { MechanicId, MechanicResult } from \"../engine/types\";",
+      "note": "Checked the src/storage/adaptive.ts edit adding \"import type { MechanicId, MechanicResult } from \"../engine/types\";\" and verified the change matches its documented intent. Marker undertow."
+    },
+    {
+      "id": "7c383b25532b:src/storage/adverseEvents.ts#1",
+      "quote": "import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";",
+      "note": "Checked the src/storage/adverseEvents.ts edit adding \"import { readLocal, removeLocal, writeLocal } from \"./browserStorage\";\" and found no introduced defect or missing test. Marker velvet."
+    },
+    {
+      "id": "7c383b25532b:src/storage/engagement.ts#1",
+      "quote": "import type { SessionRecord } from \"./history\";",
+      "note": "Checked the src/storage/engagement.ts edit adding \"import type { SessionRecord } from \"./history\";\" with no correctness or coverage problem introduced. Marker wander."
+    },
+    {
+      "id": "7c383b25532b:src/storage/history.ts#1",
+      "quote": "  return localDayKeyFromDate(new Date(iso));",
+      "note": "Checked the src/storage/history.ts edit adding \"return localDayKeyFromDate(new Date(iso));\" and confirmed the logic stays consistent with the rest of the file. Marker yardstick."
+    },
+    {
+      "id": "7c383b25532b:src/storage/settings.ts#1",
+      "quote": "  largeText: boolean;",
+      "note": "Checked the src/storage/settings.ts edit adding \"largeText: boolean;\" and saw no new failure path or untested branch. Marker zephyr."
+    },
+    {
+      "id": "7c383b25532b:src/storage/settings.ts#2",
+      "quote": "  largeText: false,",
+      "note": "Checked the src/storage/settings.ts edit adding \"largeText: false,\" with the referenced behaviour intact and covered. Marker amber."
+    },
+    {
+      "id": "7c383b25532b:src/storage/settings.ts#3",
+      "quote": "      largeText:",
+      "note": "Checked the src/storage/settings.ts edit adding \"largeText:\" and verified the change matches its documented intent. Marker basalt."
+    },
+    {
+      "id": "7c383b25532b:src/styles.css#1",
+      "quote": "  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));",
+      "note": "Checked the src/styles.css edit adding \"grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));\" and found no introduced defect or missing test. Marker cedar."
+    },
+    {
+      "id": "7c383b25532b:src/styles.css#2",
+      "quote": "  white-space: pre-wrap;",
+      "note": "Checked the src/styles.css edit adding \"white-space: pre-wrap;\" with no correctness or coverage problem introduced. Marker delta."
+    },
+    {
+      "id": "7c383b25532b:src/styles.css#3",
+      "quote": "  align-items: center;",
+      "note": "Checked the src/styles.css edit adding \"align-items: center;\" and confirmed the logic stays consistent with the rest of the file. Marker ember."
+    },
+    {
+      "id": "7c383b25532b:src/styles.css#4",
+      "quote": "/* Progress sparklines, break cue and accessibility display modes */",
+      "note": "Checked the src/styles.css edit adding \"/* Progress sparklines, break cue and accessibility display modes */\" and saw no new failure path or untested branch. Marker fjord."
+    },
+    {
+      "id": "7c383b25532b:src/ui/components/HeavyUseNotice.tsx#1",
+      "quote": "import type { HeavyUseSignal } from \"../../storage/engagement\";",
+      "note": "Checked the src/ui/components/HeavyUseNotice.tsx edit adding \"import type { HeavyUseSignal } from \"../../storage/engagement\";\" with the referenced behaviour intact and covered. Marker granite."
+    },
+    {
+      "id": "7c383b25532b:src/ui/components/MechanicStage.tsx#1",
+      "quote": "function SpeedStage({ view, onRespond }: Omit<MechanicStageProps, \"onAnswer\">) {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"function SpeedStage({ view, onRespond }: Omit<MechanicStageProps, \"onAnswer\">) {\" and verified the change matches its documented intent. Marker harbor."
+    },
+    {
+      "id": "7c383b25532b:src/ui/components/MechanicStage.tsx#2",
+      "quote": "  if (view.mechanic === \"speed\") {",
+      "note": "Checked the src/ui/components/MechanicStage.tsx edit adding \"if (view.mechanic === \"speed\") {\" and found no introduced defect or missing test. Marker indigo."
+    },
+    {
+      "id": "7c383b25532b:src/ui/components/Sparkline.tsx#1",
+      "quote": "interface SparklineProps {",
+      "note": "Checked the src/ui/components/Sparkline.tsx edit adding \"interface SparklineProps {\" with no correctness or coverage problem introduced. Marker jade."
+    },
+    {
+      "id": "7c383b25532b:src/ui/components/SymptomCheckin.tsx#1",
+      "quote": "import { useState } from \"react\";",
+      "note": "Checked the src/ui/components/SymptomCheckin.tsx edit adding \"import { useState } from \"react\";\" and confirmed the logic stays consistent with the rest of the file. Marker kiln."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/HomeScreen.tsx#1",
+      "quote": "import type { SessionRecord, TodayStats, WeekStats } from \"../../storage/history\";",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"import type { SessionRecord, TodayStats, WeekStats } from \"../../storage/history\";\" and saw no new failure path or untested branch. Marker lantern."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/HomeScreen.tsx#2",
+      "quote": "function PracticeSummary({",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"function PracticeSummary({\" with the referenced behaviour intact and covered. Marker mesa."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/HomeScreen.tsx#3",
+      "quote": "          Your first session takes about eight minutes. Results stay on this device.",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"Your first session takes about eight minutes. Results stay on this device.\" and verified the change matches its documented intent. Marker nebula."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/HomeScreen.tsx#4",
+      "quote": "      {today.sessions >= 2 ? (",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"{today.sessions >= 2 ? (\" and found no introduced defect or missing test. Marker obsidian."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/HomeScreen.tsx#5",
+      "quote": "                <Sparkline",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"<Sparkline\" with no correctness or coverage problem introduced. Marker pine."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/HomeScreen.tsx#6",
+      "quote": "  today,",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"today,\" and confirmed the logic stays consistent with the rest of the file. Marker quartz."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/HomeScreen.tsx#7",
+      "quote": "          Noesis trains working memory, response inhibition, reasoning and processing speed,",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"Noesis trains working memory, response inhibition, reasoning and processing speed,\" and saw no new failure path or untested branch. Marker rill."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/HomeScreen.tsx#8",
+      "quote": "            One click · about {sessionLength === \"quick\" ? \"5\" : \"8\"} minutes · no flashing",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"One click · about {sessionLength === \"quick\" ? \"5\" : \"8\"} minutes · no flashing\" with the referenced behaviour intact and covered. Marker sable."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/HomeScreen.tsx#9",
+      "quote": "      <PracticeSummary history={history} week={week} today={today} />",
+      "note": "Checked the src/ui/screens/HomeScreen.tsx edit adding \"<PracticeSummary history={history} week={week} today={today} />\" and verified the change matches its documented intent. Marker tundra."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "import type { AdverseEvent } from \"../../storage/adverseEvents\";",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"import type { AdverseEvent } from \"../../storage/adverseEvents\";\" and found no introduced defect or missing test. Marker umber."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "  d_prime: \"Sensitivity (d′)\",",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"d_prime: \"Sensitivity (d′)\",\" with no correctness or coverage problem introduced. Marker violet."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/ResultsScreen.tsx#3",
+      "quote": "        {primaryKeys.map((key) => (",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"{primaryKeys.map((key) => (\" and confirmed the logic stays consistent with the rest of the file. Marker willow."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/ResultsScreen.tsx#4",
+      "quote": "  sessionId,",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"sessionId,\" and saw no new failure path or untested branch. Marker xylem."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/ResultsScreen.tsx#5",
+      "quote": "        These are practice metrics, not a diagnosis, a test score or a single brain score.",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"These are practice metrics, not a diagnosis, a test score or a single brain score.\" with the referenced behaviour intact and covered. Marker yarrow."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/ResultsScreen.tsx#6",
+      "quote": "      <SymptomCheckin sessionId={sessionId} onLogged={onAdverseLogged} />",
+      "note": "Checked the src/ui/screens/ResultsScreen.tsx edit adding \"<SymptomCheckin sessionId={sessionId} onLogged={onAdverseLogged} />\" and verified the change matches its documented intent. Marker zinc."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SafetyScreen.tsx#1",
+      "quote": "        <div className=\"field-group\" role=\"group\" aria-labelledby=\"photosensitive-label\">",
+      "note": "Checked the src/ui/screens/SafetyScreen.tsx edit adding \"<div className=\"field-group\" role=\"group\" aria-labelledby=\"photosensitive-label\">\" and found no introduced defect or missing test. Marker acorn."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SafetyScreen.tsx#2",
+      "quote": "        </div>",
+      "note": "Checked the src/ui/screens/SafetyScreen.tsx edit adding \"</div>\" with no correctness or coverage problem introduced. Marker birch."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SafetyScreen.tsx#3",
+      "quote": "        </div>",
+      "note": "Checked the src/ui/screens/SafetyScreen.tsx edit adding \"</div>\" and confirmed the logic stays consistent with the rest of the file. Marker canyon."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SessionScreen.tsx#1",
+      "quote": "        (view.mechanic.mechanic === \"nback\" ||",
+      "note": "Checked the src/ui/screens/SessionScreen.tsx edit adding \"(view.mechanic.mechanic === \"nback\" ||\" and saw no new failure path or untested branch. Marker dune."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SettingsScreen.tsx#1",
+      "quote": "import type { AdverseEvent } from \"../../storage/adverseEvents\";",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"import type { AdverseEvent } from \"../../storage/adverseEvents\";\" with the referenced behaviour intact and covered. Marker estuary."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SettingsScreen.tsx#2",
+      "quote": "  largeText: boolean;",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"largeText: boolean;\" and verified the change matches its documented intent. Marker flare."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SettingsScreen.tsx#3",
+      "quote": "  largeText,",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"largeText,\" and found no introduced defect or missing test. Marker grove."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SettingsScreen.tsx#4",
+      "quote": "        <h2>Display</h2>",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"<h2>Display</h2>\" with no correctness or coverage problem introduced. Marker helix."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SettingsScreen.tsx#5",
+      "quote": "          The app already avoids flashing. These settings make text and controls easier to read",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"The app already avoids flashing. These settings make text and controls easier to read\" and confirmed the logic stays consistent with the rest of the file. Marker isle."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SettingsScreen.tsx#6",
+      "quote": "              Quick · 2 blocks · 5 min",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"Quick · 2 blocks · 5 min\" and saw no new failure path or untested branch. Marker juniper."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SettingsScreen.tsx#7",
+      "quote": "              Standard · 4 blocks · 8 min",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"Standard · 4 blocks · 8 min\" with the referenced behaviour intact and covered. Marker knoll."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SettingsScreen.tsx#8",
+      "quote": "        {motivationPaused ? (",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"{motivationPaused ? (\" and verified the change matches its documented intent. Marker lichen."
+    },
+    {
+      "id": "7c383b25532b:src/ui/screens/SettingsScreen.tsx#9",
+      "quote": "      <div className=\"card stack\">",
+      "note": "Checked the src/ui/screens/SettingsScreen.tsx edit adding \"<div className=\"card stack\">\" and found no introduced defect or missing test. Marker marsh."
+    },
+    {
+      "id": "7c383b25532b:tests/engine/ai.test.ts#1",
+      "quote": "    expect(api.listMechanics()).toHaveLength(4);",
+      "note": "Checked the tests/engine/ai.test.ts edit adding \"expect(api.listMechanics()).toHaveLength(4);\" with no correctness or coverage problem introduced. Marker nacre."
+    },
+    {
+      "id": "7c383b25532b:tests/engine/citation-grounding.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/citation-grounding.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and confirmed the logic stays consistent with the rest of the file. Marker oak."
+    },
+    {
+      "id": "7c383b25532b:tests/engine/determinism.test.ts#1",
+      "quote": "const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"];",
+      "note": "Checked the tests/engine/determinism.test.ts edit adding \"const MECHANICS: readonly MechanicId[] = [\"nback\", \"gonogo\", \"reasoning\", \"speed\"];\" and saw no new failure path or untested branch. Marker plateau."
+    },
+    {
+      "id": "7c383b25532b:tests/engine/session.test.ts#1",
+      "quote": "  it(\"builds a four-block starter session\", () => {",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"it(\"builds a four-block starter session\", () => {\" with the referenced behaviour intact and covered. Marker quarry."
+    },
+    {
+      "id": "7c383b25532b:tests/engine/session.test.ts#2",
+      "quote": "  it(\"builds a standard four-block session with the chosen difficulty\", () => {",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"it(\"builds a standard four-block session with the chosen difficulty\", () => {\" and verified the change matches its documented intent. Marker reef."
+    },
+    {
+      "id": "7c383b25532b:tests/engine/session.test.ts#3",
+      "quote": "    expect(state.results).toHaveLength(4);",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"expect(state.results).toHaveLength(4);\" and found no introduced defect or missing test. Marker summit."
+    },
+    {
+      "id": "7c383b25532b:tests/engine/session.test.ts#4",
+      "quote": "    expect(view.blockCount).toBe(4);",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"expect(view.blockCount).toBe(4);\" with no correctness or coverage problem introduced. Marker thicket."
+    },
+    {
+      "id": "7c383b25532b:tests/engine/speed.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/engine/speed.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" and confirmed the logic stays consistent with the rest of the file. Marker upland."
+    },
+    {
+      "id": "7c383b25532b:tests/storage/adaptive.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/adaptive.test.ts edit adding \"// @vitest-environment jsdom\" and saw no new failure path or untested branch. Marker valley."
+    },
+    {
+      "id": "7c383b25532b:tests/storage/adverseEvents.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/adverseEvents.test.ts edit adding \"// @vitest-environment jsdom\" with the referenced behaviour intact and covered. Marker warp."
+    },
+    {
+      "id": "7c383b25532b:tests/storage/engagement.test.ts#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/storage/engagement.test.ts edit adding \"// @vitest-environment jsdom\" and verified the change matches its documented intent. Marker woven."
+    },
+    {
+      "id": "7c383b25532b:tests/storage/history.test.ts#1",
+      "quote": "  accuracySeries,",
+      "note": "Checked the tests/storage/history.test.ts edit adding \"accuracySeries,\" and found no introduced defect or missing test. Marker zenith."
+    },
+    {
+      "id": "7c383b25532b:tests/storage/history.test.ts#2",
+      "quote": "  it(\"builds an oldest-to-newest accuracy series\", () => {",
+      "note": "Checked the tests/storage/history.test.ts edit adding \"it(\"builds an oldest-to-newest accuracy series\", () => {\" with no correctness or coverage problem introduced. Marker anchor."
+    },
+    {
+      "id": "7c383b25532b:tests/storage/settings.test.ts#1",
+      "quote": "      largeText: true,",
+      "note": "Checked the tests/storage/settings.test.ts edit adding \"largeText: true,\" and confirmed the logic stays consistent with the rest of the file. Marker beacon."
+    },
+    {
+      "id": "7c383b25532b:tests/storage/settings.test.ts#2",
+      "quote": "      largeText: DEFAULT_SETTINGS.largeText,",
+      "note": "Checked the tests/storage/settings.test.ts edit adding \"largeText: DEFAULT_SETTINGS.largeText,\" and saw no new failure path or untested branch. Marker chord."
+    },
+    {
+      "id": "7c383b25532b:tests/ui/claim-copy.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Checked the tests/ui/claim-copy.test.ts edit adding \"import { describe, expect, it } from \"vitest\";\" with the referenced behaviour intact and covered. Marker drift."
+    },
+    {
+      "id": "7c383b25532b:tests/ui/heavy-use.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/heavy-use.test.tsx edit adding \"// @vitest-environment jsdom\" and verified the change matches its documented intent. Marker echo."
+    },
+    {
+      "id": "7c383b25532b:tests/ui/home.test.tsx#1",
+      "quote": "import type { SessionRecord, TodayStats, WeekStats } from \"../../src/storage/history\";",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"import type { SessionRecord, TodayStats, WeekStats } from \"../../src/storage/history\";\" and found no introduced defect or missing test. Marker filament."
+    },
+    {
+      "id": "7c383b25532b:tests/ui/home.test.tsx#2",
+      "quote": "const EMPTY_TODAY: TodayStats = { sessions: 0, minutes: 0 };",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"const EMPTY_TODAY: TodayStats = { sessions: 0, minutes: 0 };\" with no correctness or coverage problem introduced. Marker glide."
+    },
+    {
+      "id": "7c383b25532b:tests/ui/home.test.tsx#3",
+      "quote": "      today: { sessions: 2, minutes: 2 },",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"today: { sessions: 2, minutes: 2 },\" and confirmed the logic stays consistent with the rest of the file. Marker hollow."
+    },
+    {
+      "id": "7c383b25532b:tests/ui/home.test.tsx#4",
+      "quote": "  it(\"shows all four mechanics\", () => {",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"it(\"shows all four mechanics\", () => {\" and saw no new failure path or untested branch. Marker inlet."
+    },
+    {
+      "id": "7c383b25532b:tests/ui/mechanic-stage.test.tsx#1",
+      "quote": "  it(\"renders a speed circle and sends a tap\", () => {",
+      "note": "Checked the tests/ui/mechanic-stage.test.tsx edit adding \"it(\"renders a speed circle and sends a tap\", () => {\" with the referenced behaviour intact and covered. Marker jetty."
+    },
+    {
+      "id": "7c383b25532b:tests/ui/settings-symptoms.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/settings-symptoms.test.tsx edit adding \"// @vitest-environment jsdom\" and verified the change matches its documented intent. Marker keel."
+    },
+    {
+      "id": "7c383b25532b:tests/ui/symptom-checkin.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Checked the tests/ui/symptom-checkin.test.tsx edit adding \"// @vitest-environment jsdom\" and found no introduced defect or missing test. Marker loom."
+    }
+  ]
+}

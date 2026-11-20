@@ -1,0 +1,255 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "897e59e7a706:.aikit/decisions.md#1",
+      "quote": "### ADR-057: N-back brief grounded in task-specific training meta-analysis",
+      "note": "Recorded the ADR that switches N-back evidence to the 2017 task-specific meta-analysis and raises the review totals."
+    },
+    {
+      "id": "897e59e7a706:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 43 — Task-specific N-back evidence tightens the core claim",
+      "note": "Logged cycle 43 with the Soveri finding, before/after screenshot hashes and the updated gate counts."
+    },
+    {
+      "id": "897e59e7a706:README.md#1",
+      "quote": "The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 124 records with 286 outcomes (90 primary, 34 context).",
+      "note": "Updated the README evidence summary from 123/285 to 124/286, including the 90 primary and 34 context split."
+    },
+    {
+      "id": "897e59e7a706:docs/research/README.md#1",
+      "quote": "**Status:** v1.0 corpus complete; current review revision v1.8 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered",
+      "note": "Bumped the review revision to v1.8 and the included-record totals on the research index page."
+    },
+    {
+      "id": "897e59e7a706:docs/research/README.md#2",
+      "quote": "| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (124 records, 286 outcomes) |",
+      "note": "Changed the evidence-table link caption to reflect 124 records and 286 outcomes."
+    },
+    {
+      "id": "897e59e7a706:docs/research/REFERENCES.bib#1",
+      "quote": "@article{noesis28116702,",
+      "note": "Added the BibTeX entry for the Soveri 2017 n-back meta-analysis with PMID 28116702."
+    },
+    {
+      "id": "897e59e7a706:docs/research/REFERENCES.md#1",
+      "quote": "- Working memory training revisited: A multi-level meta-analysis of n-back training studies. *Psychonomic Bulletin & Review*. 2017. PMID: [28116702](https://pubmed.ncbi.nlm.nih.gov/28116702/). DOI: [10.3758/s13423-016-1217-0](https://doi.org/10.3758/s13423-016-1217-0).",
+      "note": "Listed the 2017 n-back training meta-analysis among included records with its PMID and DOI."
+    },
+    {
+      "id": "897e59e7a706:docs/research/SEARCH_LOG.md#1",
+      "quote": "| Records | 124 |",
+      "note": "Adjusted the included-records count in the search-log summary table to 124."
+    },
+    {
+      "id": "897e59e7a706:docs/research/SEARCH_LOG.md#2",
+      "quote": "| cct | 45 |",
+      "note": "Raised the cognitive-training-therapy modality count to 45 after adding the new record."
+    },
+    {
+      "id": "897e59e7a706:docs/research/SEARCH_LOG.md#3",
+      "quote": "| DOI verified | 113 |",
+      "note": "Raised the verified-DOI count to 113 for the added context record."
+    },
+    {
+      "id": "897e59e7a706:docs/research/SEARCH_LOG.md#4",
+      "quote": "A 2026-11-08 targeted n-back search added one task-specific context record: Soveri et al. 2017 (PMID 28116702; *Psychonomic Bulletin & Review*; 203 effect sizes from 33 published randomized controlled n-back training trials in healthy adults; medium transfer to untrained n-back tasks, but very small effects on other working-memory tasks, fluid intelligence and cognitive control; no moderation by age, dose, single versus dual training, or verbal versus visuospatial content). The DOI and metadata were verified via PubMed esummary/efetch. It becomes the first N-back citation and tightens the core mechanic's brief, claim and qualifier from \"closely related working-memory tasks\" to \"untrained n-back tasks, with little transfer beyond the task\". The 2026 asymmetry meta-analysis (PMID 42711482) remains a supporting citation. The review is now 124 records and 286 outcomes, revision v1.8.",
+      "note": "Documented the targeted n-back search that surfaced the 2017 meta-analysis and its effect sizes."
+    },
+    {
+      "id": "897e59e7a706:docs/research/SYNTHESIS.md#1",
+      "quote": "**Methods.** PRISMA 2020 systematic umbrella review of systematic reviews and meta-analyses, supplemented by landmark RCTs. PubMed (1,495-review corpus plus ten scoping searches), OpenAlex citation chasing, ClinicalTrials.gov, and Crossref metadata verification. 2,360 unique bibliographic records and 363 trial records were screened; 124 records (90 primary, 34 context) and 286 outcomes were extracted, including November 2026 updates of six gaming-disorder engagement records, three photosensitivity safety records, one gamification record, three incentive-design records, three goal-setting records, two retrieval-practice records, two habit records, one gamification-caution record, one planning-interventions record, two mental-contrasting records, one test-anxiety record, one interleaving record, one engagement-prompts record, one adherence record, two self-determination-theory meta-analyses, two e-consent systematic reviews, two executive-function training meta-analyses, one Corsi/spatial-span meta-analysis, one spatial-training meta-analysis, one prospective-memory meta-analysis, one mnemonic-training meta-analysis, one judgments-of-learning reactivity meta-analysis and one n-back training meta-analysis. Certainty is recorded as reported by the source review; independent GRADE was not performed.",
+      "note": "Updated the synthesis methods paragraph with the new corpus totals and targeted search date."
+    },
+    {
+      "id": "897e59e7a706:docs/research/SYNTHESIS.md#2",
+      "quote": "All 124 included records, with PMIDs and verified DOIs, are listed in [REFERENCES.md](REFERENCES.md). The machine-readable version with outcomes, certainty, flags and product use is [analysis/evidence_table.json](analysis/evidence_table.json).",
+      "note": "Changed the included-record count in the synthesis references paragraph to 124."
+    },
+    {
+      "id": "897e59e7a706:docs/research/analysis/evidence_table.json#1",
+      "quote": "   \"pmid\": \"28116702\",",
+      "note": "Inserted the new context record keyed by PMID 28116702 into the machine-readable evidence table."
+    },
+    {
+      "id": "897e59e7a706:scripts/nback-evidence-proof.mjs#1",
+      "quote": "// Scripted N-back evidence proof: captures the pre-test briefing and its primary source,",
+      "note": "Added the scripted browser proof capturing the N-back briefing and its primary source before and after."
+    },
+    {
+      "id": "897e59e7a706:src/content/appMeta.ts#1",
+      "quote": "export const EVIDENCE_REVIEW_VERSION = \"v1.8 (2026-11-08)\";",
+      "note": "Bumped EVIDENCE_REVIEW_VERSION to v1.8 so exported manifests carry the new review revision."
+    },
+    {
+      "id": "897e59e7a706:src/engine/evidence.ts#1",
+      "quote": "      \"Working-memory updating: you keep a stream of letters in mind and decide whether the current one matches the one N positions back. A 2017 multi-level meta-analysis of 33 randomized n-back training trials in healthy adults found medium transfer to untrained n-back tasks, but only very small effects on other working-memory tasks and cognitive control, with no evidence of a general-intelligence gain.\",",
+      "note": "Rewrote the N-back brief, claim and qualifier to the 33-trial meta-analysis and put its PMID first."
+    },
+    {
+      "id": "897e59e7a706:src/ui/screens/EvidenceScreen.tsx#1",
+      "quote": "        The app is built from a PRISMA-style umbrella review of 124 reviews and trials. Each",
+      "note": "Changed the evidence intro count from 123 to 124 reviews and trials on the Evidence screen."
+    },
+    {
+      "id": "897e59e7a706:tests/engine/nback-evidence.test.ts#1",
+      "quote": "import { describe, expect, it } from \"vitest\";",
+      "note": "Added a dedicated test locking the first N-back citation and the untrained n-back claim wording."
+    },
+    {
+      "id": "897e59e7a706:tests/storage/export.test.ts#1",
+      "quote": "      evidenceReview: expect.stringMatching(/v1\\.8/),",
+      "note": "Updated the export manifest expectation to match the v1.8 evidence review version."
+    },
+    {
+      "id": "897e59e7a706:tests/test_review_snapshot.py#1",
+      "quote": "        self.assertEqual(len(self.entries), 124)",
+      "note": "Raised the Python snapshot assertions for record and outcome totals to 124 and 286."
+    },
+    {
+      "id": "897e59e7a706:tests/test_review_snapshot.py#2",
+      "quote": "        self.assertEqual(status[\"verified\"], 113)",
+      "note": "Raised the verified DOI status assertion to 113 in the review snapshot test."
+    },
+    {
+      "id": "897e59e7a706:tests/test_review_snapshot.py#3",
+      "quote": "<blank line>",
+      "note": "Confirmed the trailing blank line added after unittest.main() in the snapshot test file."
+    },
+    {
+      "id": "897e59e7a706:tests/ui/practice-menu.test.tsx#1",
+      "quote": "    expect(nback.textContent).toMatch(/untrained n-back/i);",
+      "note": "Changed the menu assertion to require untrained n-back copy and the 28116702 PMID."
+    },
+    {
+      "id": "897e59e7a706:tests/ui/test-briefing.test.tsx#1",
+      "quote": "    expect(briefing.textContent).toMatch(/untrained n-back/i);",
+      "note": "Changed the briefing assertion to require untrained n-back copy and the new primary source."
+    },
+    {
+      "id": "677c3a6fd6af:.aikit/decisions.md#1",
+      "quote": "### ADR-058: Complex-span and vigilance stay out of scope; the Choose page gains a domain filter",
+      "note": "Recorded the decision to keep complex-span and vigilance out of scope while adding a menu domain filter."
+    },
+    {
+      "id": "677c3a6fd6af:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 44 — Complex-span/vigilance scope decision and Choose-page domain filter",
+      "note": "Logged cycle 44 covering the scope decision and the Choose-page domain filter with proof hashes."
+    },
+    {
+      "id": "677c3a6fd6af:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "### 6.6 Complex-span and sustained-attention training",
+      "note": "Added section 6.6 evaluating complex-span and sustained-attention training candidates."
+    },
+    {
+      "id": "677c3a6fd6af:docs/research/PRACTICE_MENU_AND_BRIEFING.md#1",
+      "quote": "As the menu grew to eleven tests, a domain filter was added above the test grid. It preserves",
+      "note": "Documented why the eleven-test menu gained a domain filter and that only presentation changed."
+    },
+    {
+      "id": "677c3a6fd6af:docs/research/SEARCH_LOG.md#1",
+      "quote": "A 2026-11-08 complex-span and sustained-attention scan found no eligible training meta-analysis for either candidate. Complex span is normally an outcome measure, and the app already has three working-memory tasks; sustained attention is already embedded in Go/No-Go and Speed Tap. Both candidates stayed out of scope (ADR-058). The same update added a domain filter to the Choose-a-test page so the eleven-test list can be narrowed by construct; it changes presentation only and supports the existing explicit-choice design (R54). No evidence-table record was added, so the review remains at 124 records and 286 outcomes, revision v1.8.",
+      "note": "Logged the complex-span and sustained-attention literature scan that found no eligible meta-analysis."
+    },
+    {
+      "id": "677c3a6fd6af:scripts/menu-filter-proof.mjs#1",
+      "quote": "// Scripted Choose-a-test domain-filter proof: captures the unfiltered menu, then (after the",
+      "note": "Added the scripted proof that captures the unfiltered and filtered menu states."
+    },
+    {
+      "id": "677c3a6fd6af:src/styles.css#1",
+      "quote": ".menu-filter {",
+      "note": "Added the menu-filter layout rules for the label, select and result count on small screens."
+    },
+    {
+      "id": "677c3a6fd6af:src/ui/screens/PracticeMenuScreen.tsx#1",
+      "quote": "import type { Confidence, Domain, MechanicId, MechanicResult } from \"../../engine/types\";",
+      "note": "Added the Domain type import needed by the new filter state and domain tables."
+    },
+    {
+      "id": "677c3a6fd6af:src/ui/screens/PracticeMenuScreen.tsx#2",
+      "quote": "const DOMAIN_ORDER: readonly Domain[] = [",
+      "note": "Defined the ordered domain list and human-readable labels for the filter options."
+    },
+    {
+      "id": "677c3a6fd6af:src/ui/screens/PracticeMenuScreen.tsx#3",
+      "quote": "  const [domain, setDomain] = useState<Domain | \"all\">(\"all\");",
+      "note": "Introduced the domain filter state and derived visibleMechanics from MECHANIC_META domains."
+    },
+    {
+      "id": "677c3a6fd6af:src/ui/screens/PracticeMenuScreen.tsx#4",
+      "quote": "          <div className=\"menu-filter\" data-testid=\"menu-filter\">",
+      "note": "Added the labelled select, count readout and empty-state branch above the test grid."
+    },
+    {
+      "id": "677c3a6fd6af:tests/ui/menu-filter.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Added tests for filtering by domain, restoring All tests and starting a filtered test."
+    },
+    {
+      "id": "6ce187388da8:.aikit/decisions.md#1",
+      "quote": "### ADR-059: Go/No-Go reports d′; no new Go/No-Go or processing-speed mechanic",
+      "note": "Recorded the d-prime decision and the rejection of new Go/No-Go and speed mechanics."
+    },
+    {
+      "id": "6ce187388da8:.aikit/improvement-record.md#1",
+      "quote": "## Cycle 45 — Go/No-Go d′ measurement and training-evidence scope decision",
+      "note": "Logged cycle 45 for the Go/No-Go d-prime metric with screenshots, played run and gates."
+    },
+    {
+      "id": "6ce187388da8:README.md#1",
+      "quote": "| Go / No-Go | Response inhibition | Experimental | Respond to circles, withhold responses to squares; reports accuracy, sensitivity (d′), impulse errors and reaction time. |",
+      "note": "Updated the Go/No-Go table row to mention sensitivity alongside accuracy and impulse errors."
+    },
+    {
+      "id": "6ce187388da8:docs/research/NEW_MECHANIC_CANDIDATES.md#1",
+      "quote": "### 6.7 Go/No-Go and processing-speed training",
+      "note": "Added section 6.7 evaluating Go/No-Go and processing-speed training evidence."
+    },
+    {
+      "id": "6ce187388da8:docs/research/SEARCH_LOG.md#1",
+      "quote": "A 2026-11-08 Go/No-Go and processing-speed scan found no eligible task-specific cognitive-training meta-analysis. Go/No-Go training records concern appetitive behaviour change rather than cognitive transfer; the existing inhibitory-control network meta-analysis (PMID 40398202) remains the basis. Processing-speed evidence is covered by the broad cognitive-training meta-analysis (PMID 32011155), and Speed Tap is not UFOV. Both candidates stayed out of scope (ADR-059). The same update adds signal-detection sensitivity (d′) to Go/No-Go results and a response-bias note; no evidence-table record was added, so the review remains at 124 records and 286 outcomes, revision v1.8.",
+      "note": "Logged the Go/No-Go and processing-speed scan that found no eligible training meta-analysis."
+    },
+    {
+      "id": "6ce187388da8:scripts/gonogo-dprime-proof.mjs#1",
+      "quote": "// Scripted Go/No-Go sensitivity proof: plays a real three-block focus session with a few",
+      "note": "Added the scripted three-block Go/No-Go proof capturing the sensitivity note and metrics."
+    },
+    {
+      "id": "6ce187388da8:src/engine/mechanics/gonogo.ts#1",
+      "quote": "import { clamp, countLabel, currentStreak, dPrime, longestStreak, mean, rate, round } from \"../scoring\";",
+      "note": "Imported the dPrime helper from scoring for the Go/No-Go metric computation."
+    },
+    {
+      "id": "6ce187388da8:src/engine/mechanics/gonogo.ts#2",
+      "quote": "    d_prime: dPrime(hits, goTrials, commissions, noGoTrials),",
+      "note": "Computed and exposed d_prime from hits, go trials, commissions and no-go trials."
+    },
+    {
+      "id": "6ce187388da8:src/styles.css#1",
+      "quote": ".gonogo-dprime-note {",
+      "note": "Added styling for the Go/No-Go sensitivity explanation with a cyan left border."
+    },
+    {
+      "id": "6ce187388da8:src/ui/screens/ResultsScreen.tsx#1",
+      "quote": "  gonogo: [\"accuracy\", \"d_prime\", \"commissions\"],",
+      "note": "Promoted d_prime into the Go/No-Go primary metric tiles, replacing mean reaction time."
+    },
+    {
+      "id": "6ce187388da8:src/ui/screens/ResultsScreen.tsx#2",
+      "quote": "      {result.mechanic === \"gonogo\" ? (",
+      "note": "Rendered the explanatory d-prime note only for Go/No-Go result cards."
+    },
+    {
+      "id": "6ce187388da8:tests/engine/gonogo.test.ts#1",
+      "quote": "  it(\"reports signal-detection sensitivity for Go / No-Go\", () => {",
+      "note": "Added an engine test checking d-prime separates optimal from never-respond runs."
+    },
+    {
+      "id": "6ce187388da8:tests/ui/gonogo-dprime-note.test.tsx#1",
+      "quote": "// @vitest-environment jsdom",
+      "note": "Added UI tests for the d-prime note text and its omission for other mechanics."
+    }
+  ]
+}

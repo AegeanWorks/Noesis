@@ -1,0 +1,30 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "24c37f5ceb4a:docs/research/BEHAVIORAL_ENGAGEMENT.md#1",
+      "quote": "5. Does a target time create helpful pacing or unwanted pressure? **Implemented as choice:** pacing stays default-on (the clock still paces the session) and users who feel pressured can hide it in Settings (R50). The question of which is better for whom stays open for the trial.",
+      "note": "Checked the docs/research/BEHAVIORAL_ENGAGEMENT.md edit adding \"5. Does a target time create helpful pacing or unwanted pressure? **Implemented as choice:\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "24c37f5ceb4a:tests/engine/session.test.ts#1",
+      "quote": "  it(\"applies adaptive levels inside focus sessions\", () => {",
+      "note": "Checked the tests/engine/session.test.ts edit adding \"it(\"applies adaptive levels inside focus sessions\", () => {\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "fbeb9489f8ef:tests/ui/study-journey.test.tsx#1",
+      "quote": "  vi.restoreAllMocks();",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"vi.restoreAllMocks();\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "fbeb9489f8ef:tests/ui/study-journey.test.tsx#2",
+      "quote": "  it(\"deals volatile bonuses in the engagement arm and steady ones in control\", () => {",
+      "note": "Checked the tests/ui/study-journey.test.tsx edit adding \"it(\"deals volatile bonuses in the engagement arm and steady ones in control\", () => {\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "8832eb9b2adf:tests/ui/home.test.tsx#1",
+      "quote": "    expect(form.textContent).toMatch(/morning sessions form stronger habits/i);",
+      "note": "Checked the tests/ui/home.test.tsx edit adding \"expect(form.textContent).toMatch(/morning sessions form stronger habits/i);\" with the referenced behaviour intact and covered. Marker ember."
+    }
+  ]
+}

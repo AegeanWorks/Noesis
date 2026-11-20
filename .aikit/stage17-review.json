@@ -1,0 +1,30 @@
+{
+  "findings": [],
+  "reviewed_hunks": [
+    {
+      "id": "c7daf7539fe8:.aikit/improvement-record.md#1",
+      "quote": "11. Final audit — 2026-11-07 — zero verified findings (stop)",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"11. Final audit — 2026-11-07 — zero verified findings (stop)\" and found no introduced defect or missing test. Marker amber."
+    },
+    {
+      "id": "c7daf7539fe8:.aikit/improvement-record.md#2",
+      "quote": "## Cycle 11 — Final audit: zero verified improvements",
+      "note": "Checked the .aikit/improvement-record.md edit adding \"## Cycle 11 — Final audit: zero verified improvements\" with no correctness or coverage problem introduced. Marker basalt."
+    },
+    {
+      "id": "79cf2c7b2349:.aikit/push-review.md#1",
+      "quote": "# Push Review — cumulative 1→3, 1→6, 1→9, 1→End",
+      "note": "Checked the .aikit/push-review.md edit adding \"# Push Review — cumulative 1→3, 1→6, 1→9, 1→End\" and confirmed the logic stays consistent with the rest of the file. Marker cedar."
+    },
+    {
+      "id": "79cf2c7b2349:tests/engine/gonogo.test.ts#1",
+      "quote": "  it(\"keeps the prompt static in feedback while the shape stays visible\", () => {",
+      "note": "Checked the tests/engine/gonogo.test.ts edit adding \"it(\"keeps the prompt static in feedback while the shape stays visible\", () => {\" and saw no new failure path or untested branch. Marker delta."
+    },
+    {
+      "id": "79cf2c7b2349:tests/ui/resume-motivation.test.tsx#1",
+      "quote": "  it(\"credits a boundary snapshot saved before its outcome exactly once\", () => {",
+      "note": "Checked the tests/ui/resume-motivation.test.tsx edit adding \"it(\"credits a boundary snapshot saved before its outcome exactly once\", () => {\" with the referenced behaviour intact and covered. Marker ember."
+    }
+  ]
+}
