@@ -1,0 +1,32 @@
+[
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the committed UI in ui-review/ANALYSIS.md with before/after screenshots",
+    "baseline_commit": "9f7919f815cfd8e871b58e2345b3cda0ef401e55",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795192532.4472973,
+    "finished_at": 1795192611.731745,
+    "strikes": 0,
+    "reviewer": "opencode-agent (before/after screenshot review)",
+    "review": {
+      "reviewer": "opencode-agent (before/after screenshot review)",
+      "surface": "app",
+      "surface_digest": "2d6be5e17527075e593e17960eed988d281f6807f136e9fe41bd05f1a2c39dc1",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795192611.7317479
+    },
+    "allowed_removals": [],
+    "allowed_tests": [],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "2d6be5e17527075e593e17960eed988d281f6807f136e9fe41bd05f1a2c39dc1",
+    "baseline_digest": "2d6be5e17527075e593e17960eed988d281f6807f136e9fe41bd05f1a2c39dc1"
+  }
+]
