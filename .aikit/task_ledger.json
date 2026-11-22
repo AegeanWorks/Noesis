@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-expectancy-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795391804.4279318,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795399004.4279318,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795391902.2309835,
+    "completed_head": "069b3a9cea0bec8178fed07542588aa5ea2c2c32",
+    "completed_tree": "652e8d5128e7e6fd60b7bff01177e3de657d5d72"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-visual-search-game",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add an experimental conjunction visual-search focus test grounded in task-specific training literature",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795382823.8696191,
-      "timestamp_str": "2026-11-23 00:27:03",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The practice menu needs another claim-bounded mechanic; conjunction visual-search training has task-specific evidence (PMIDs 35838486, 36922549, 30859709) and can be implemented as a static, non-flashing grid.",
-        "benefits": "New game with literature-grounded brief, set-size cost metric, and explicit near-transfer-only claim; no new evidence-table record needed.",
-        "risks": "contract: new MechanicId in engine/UI/tests; dependency: none; concurrency: none; state: snapshots and counts must move with the new id",
-        "mitigation": "Copy the Change Detection integration pattern, add failing-first engine and UI tests, run all suites and gates, review the running UI."
-      },
-      "plan_digest": "0d8d9181d2ffdb631f116fe676acc8acbc9d3803830712db6ce75cdd85cbe068",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-visual-search-game",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-expectancy-evidence",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-expectancy-evidence' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795391902.3151245,
+      "timestamp_str": "2026-11-23 02:58:22",
+      "agent": "opencode:hy4-flash-free",
+      "head": "069b3a9cea0bec8178fed07542588aa5ea2c2c32",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }

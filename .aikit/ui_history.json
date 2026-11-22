@@ -317,5 +317,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "d364431e62ba04755b0677cfd792015dec04ca4c66b9b7eb996f81113678d04d",
     "baseline_digest": "d364431e62ba04755b0677cfd792015dec04ca4c66b9b7eb996f81113678d04d"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Evidence screen in Edge: fifth linked boundary (expectancy not a responder predictor) renders with PMID 38230719, no console errors; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795391865.8167298,
+    "finished_at": 1795391901.5757005,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "2446d5aa1a49284c927b087e1b94fd1f9ce01ce1e6f2f0501a039270fb1066fd",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795391901.5757039
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Fifth claim boundary test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Fifth claim boundary test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "2446d5aa1a49284c927b087e1b94fd1f9ce01ce1e6f2f0501a039270fb1066fd",
+    "baseline_digest": "2446d5aa1a49284c927b087e1b94fd1f9ce01ce1e6f2f0501a039270fb1066fd"
   }
 ]
