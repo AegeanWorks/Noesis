@@ -122,5 +122,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "c9ec1e4e0d0158bb4f5334f2dad56cf3387ef9816940d92b38230d75d076d885",
     "baseline_digest": "c9ec1e4e0d0158bb4f5334f2dad56cf3387ef9816940d92b38230d75d076d885"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the adherence card in Edge: 55-trial note with 60/80% thresholds, explicit not-a-target caveat and working PMID 38266127 link; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795386498.5736012,
+    "finished_at": 1795386550.0428517,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "ede0cb5482221e4c09e94fcb04b79f125e2ce2e6a9689f1e608e3bf10ff8d645",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795386550.0428538
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Adherence evidence note and snapshot counts"
+      },
+      {
+        "path": "tests/ui/practice-menu.test.tsx",
+        "reason": "Adherence evidence note and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "ede0cb5482221e4c09e94fcb04b79f125e2ce2e6a9689f1e608e3bf10ff8d645",
+    "baseline_digest": "ede0cb5482221e4c09e94fcb04b79f125e2ce2e6a9689f1e608e3bf10ff8d645"
   }
 ]

@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-adherence-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795386437.0587468,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795393637.0587468,
@@ -15,21 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795386550.704904,
+    "completed_head": "a0f27d979271af6fd12928d89c2592c11fdce7f6",
+    "completed_tree": "7b38f3f3a69f5b20ccc82474584941b999a7640c"
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 31",
-      "phase_num": 3,
-      "description": "Reforge stage 31: window 93, 3 commit(s), 18 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, empty \u2014 nothing to commit",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188045.8636339,
-      "timestamp_str": "2026-11-20 18:20:45",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 31",
@@ -342,6 +333,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-adherence-evidence",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-adherence-evidence' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795386550.9079108,
+      "timestamp_str": "2026-11-23 01:29:10",
+      "agent": "opencode:hy4-flash-free",
+      "head": "a0f27d979271af6fd12928d89c2592c11fdce7f6",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
