@@ -34,7 +34,7 @@ function parse(argv: string[]): Options {
     else if (arg === "--json") options.json = true;
     else if (arg === "--mechanic" && next) {
       if (!MECHANICS.includes(next as MechanicId)) {
-        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switching, flanker, spatial, rotation, prospective, paired or change.`);
+        throw new Error(`Unknown mechanic '${next}'. Use nback, gonogo, reasoning, speed, switching, flanker, spatial, rotation, prospective, paired, change or search.`);
       }
       options.mechanic = next as MechanicId;
       index += 1;
@@ -70,7 +70,7 @@ function parse(argv: string[]): Options {
 function help(): void {
   console.log(`Usage: npm run ai:simulate -- [options]
 
-  --mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective|paired|change>   default: nback
+  --mechanic <nback|gonogo|reasoning|speed|switching|flanker|spatial|rotation|prospective|paired|change|search>   default: nback
   --seed <integer>                      default: 42
   --difficulty <1|2|3>                  default: 2
   --trials <integer>                    default: mechanic default
