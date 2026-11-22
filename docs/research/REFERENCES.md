@@ -175,3 +175,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Clinical claim boundary (2026-11-23 targeted update)
 
 - Computerized cognitive training in attention-deficit/hyperactivity disorder (ADHD): a meta-analysis of randomized controlled trials with blinded and objective outcomes *Molecular Psychiatry*. 2023. PMID: [36977764](https://pubmed.ncbi.nlm.nih.gov/36977764/). DOI: [10.1038/s41380-023-02000-7](https://doi.org/10.1038/s41380-023-02000-7).
+
+## Game design and pacing (2026-11-23 targeted update)
+
+- Game-based brain training for improving cognitive function in community-dwelling older adults: A systematic review and meta-regression *Archives of Gerontology and Geriatrics*. 2021. PMID: [32980574](https://pubmed.ncbi.nlm.nih.gov/32980574/). DOI: [10.1016/j.archger.2020.104260](https://doi.org/10.1016/j.archger.2020.104260).

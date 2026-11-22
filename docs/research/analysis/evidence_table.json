@@ -8341,6 +8341,86 @@
    ],
    "synthesis_role": "primary",
    "product_use": "Grounds the app's no-ADHD-treatment claim: blinded outcomes show no clinical symptom effect, only task-near working-memory gains."
+  },
+  {
+   "pmid": "32980574",
+   "doi": "10.1016/j.archger.2020.104260",
+   "doi_status": "verified",
+   "year": 2021,
+   "journal": "Archives of Gerontology and Geriatrics",
+   "title": "Game-based brain training for improving cognitive function in community-dwelling older adults: A systematic review and meta-regression",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 15,
+   "n": 759,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "processing_speed",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.23,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Game-based training versus control, 15 RCTs, 759 community-dwelling older adults"
+    },
+    {
+     "domain": "attention",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.4,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Selective attention"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.35,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Short-term memory"
+    },
+    {
+     "domain": "adherence",
+     "transfer": "na",
+     "measure": "subgroup_design",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Preferable design features: non-time-pressure games, multiplayer, computer platform, provider support, sessions <=3/week and <=60 min; game design moderated processing speed (beta=0.211, p=0.008)"
+    }
+   ],
+   "findings": [
+    "Small near-domain gains in processing speed, selective attention and short-term memory",
+    "Meta-regression linked game design to processing-speed effects; no publication bias detected"
+   ],
+   "limitations": [
+    "Subgroup design preferences are observational, not a dose prescription",
+    "Confidence intervals not printed in the abstract"
+   ],
+   "flags": [
+    "subgroup_dependent",
+    "reporting_gap"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Grounds the clock-option note: non-time-pressure formats were among preferable features in the older-adult game-training literature, as group-level context rather than a personal rule."
   }
  ]
 }

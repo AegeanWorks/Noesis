@@ -249,6 +249,20 @@ export function SettingsScreen({
           and reduce non-essential motion. Hiding the clock removes time pressure; untimed
           practice favours anxious trainers most.
         </p>
+        <p className="fine" data-testid="clock-evidence">
+          <strong>What the literature says:</strong> a meta-analysis of 15 trials (759 older
+          adults) reported small gains in processing speed (g=0.23), selective attention (g=0.40)
+          and short-term memory (g=0.35); non-time-pressure formats were among the preferable
+          design features. That is group-level context, not a personal prescription.{" "}
+          <a
+            href="https://pubmed.ncbi.nlm.nih.gov/32980574/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Wang et al. 2021
+          </a>{" "}
+          <span className="pmid">PMID 32980574</span>
+        </p>
       </div>
 
       <div className="card stack" id="settings-session">

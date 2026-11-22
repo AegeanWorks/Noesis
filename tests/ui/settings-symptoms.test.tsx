@@ -290,4 +290,21 @@ describe("SettingsScreen study enrollment", () => {  it("requires an id and cons
     expect(written).toHaveLength(1);
     expect(written[0]).toMatch(/noesis practice week of/i);
   });
+
+  it("shows an evidence-linked note beside the clock option", () => {
+    render(
+      <SettingsScreen
+        {...BASE}
+        adverseEvents={[]}
+        onClearAdverseEvents={() => {}}
+      />,
+    );
+    const note = screen.getByTestId("clock-evidence");
+    expect(note.textContent).toMatch(/15 trials/i);
+    expect(note.textContent).toMatch(/non-time-pressure/i);
+    expect(note.textContent).toMatch(/not a personal prescription/i);
+    expect(note.querySelector("a")?.getAttribute("href")).toBe(
+      "https://pubmed.ncbi.nlm.nih.gov/32980574/",
+    );
+  });
 });

@@ -460,6 +460,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Westwood 2023 as a primary evidence-table record (entering magnitude only where the abstract's confidence bounds are internally reversed, with the inconsistency flagged), and add a short "What the review does not support" list on the Evidence screen linking the general-intelligence, ADHD-treatment and everyday-function boundaries. Add R73 and extend the citation test to cover the new links.
 - **Consequences**: The review moves to 137 records and 324 outcomes (revision v2.3), D7 residuals fall to 961, and the app's three claim boundaries are visible together with PubMed links rather than implied by separate mechanic notes.
 
+### ADR-065: Evidence-Linked Clock Option Note
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Settings already lets users hide the clock, but the rationale was local and unsourced. Wang et al. 2021 (PMID 32980574) meta-analysed 15 game-based training RCTs (759 older adults), reporting small near-domain gains and listing non-time-pressure formats among preferable design features, with game design moderating processing-speed effects.
+- **Decision**: Add Wang 2021 as a primary evidence-table record with its three reported g values and a null subgroup outcome, and add a short PubMed-linked note beside the clock option stating those findings as group-level context with an explicit no-personal-prescription caveat. Add R75 and a UI test.
+- **Consequences**: The review moves to 138 records and 328 outcomes (revision v2.4), D7 residuals fall to 960, and the pacing choice is traceable to evidence without turning a subgroup preference into a rule for every user.
+
 
 
 

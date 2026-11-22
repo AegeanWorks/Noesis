@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 137 |
-| Outcomes | 324 |
-| Primary outcomes | 253 |
-| Systematic reviews/meta-analyses | 86 |
+| Records | 138 |
+| Outcomes | 328 |
+| Primary outcomes | 256 |
+| Systematic reviews/meta-analyses | 87 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 24 |
 | RCTs | 7 |
 | Umbrella reviews | 2 |
-| DOI verified | 126 |
+| DOI verified | 127 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -143,7 +143,7 @@ By modality:
 | ave | 6 |
 | multi_intervention | 5 |
 | safety | 8 |
-| engagement | 26 |
+| engagement | 27 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 126 |
+| DOI verified | 127 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **137** |
+| **Total** | **138** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -222,6 +222,8 @@ A 2026-11-23 everyday-function update added two primary records from the residua
 
 A 2026-11-23 clinical-boundary update added one primary record from the residual eligible pool: Westwood et al. 2023 (PMID 36977764, *Molecular Psychiatry*; DOI 10.1038/s41380-023-02000-7), verified from the PubMed MEDLINE record. Thirty-six RCTs (17 working-memory training) found no probably-blinded effect on ADHD total or hyperactivity/impulsivity symptoms; inattention showed a small SMD 0.17 (0.02-0.31) that doubled in the delivery setting, while verbal and visuospatial working memory improved (SMD 0.38, 0.24-0.53 and SMD 0.49, 0.31-0.67) and reading/arithmetic did not. The abstract prints reversed confidence bounds for the null symptom outcomes, so only the magnitude was entered and the inconsistency flagged. This record anchors a linked "what the review does not support" list on the Evidence screen (R73, ADR-064). The review is now 137 records and 324 outcomes, revision v2.3.
 
+A 2026-11-23 game-design update added one primary record from the residual eligible pool: Wang et al. 2021 (PMID 32980574, *Archives of Gerontology and Geriatrics*; DOI 10.1016/j.archger.2020.104260), verified via E-utilities `efetch`. Fifteen RCTs with 759 community-dwelling older adults found small gains in processing speed (g=0.23), selective attention (g=0.40) and short-term memory (g=0.35); subgroup analyses favoured non-time-pressure games, multiplayer, computer platform, provider support, and sessions at most three times a week for at most 60 minutes, and game design moderated processing speed (beta=0.211, p=0.008). These are group-level design observations, not a dose prescription, so the Settings clock note presents them as context (R75, ADR-065). The review is now 138 records and 328 outcomes, revision v2.4.
+
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
 One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
@@ -247,7 +249,7 @@ One adherence record joined the table the same day (PMID 35612886, 99 studies, e
 | D4 | Independent GRADE not performed | Certainty would require full-text appraisal of every review | Certainty is recorded **as reported by the source** and is provisional |
 | D5 | PsycINFO, Embase, CINAHL and ERIC not searched directly | No institutional access in this environment | OpenAlex and PubMed citation coverage mitigate but do not close the gap |
 | D6 | English-language restriction | Feasibility | Language bias cannot be excluded |
-| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 12 eligible reviews extracted 2026-11-22/23 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD) | Prioritisation by modality × population × outcome cell | 961 eligible reviews remain logged but not synthesised; partially closed |
+| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 13 eligible reviews extracted 2026-11-22/23 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design) | Prioritisation by modality × population × outcome cell | 960 eligible reviews remain logged but not synthesised; partially closed |
 | D8 | PubMed DOI fields unreliable | XML metadata inconsistency | Crossref verification used; 7 records are PMID-only and 4 carry preprint DOIs |
 | D9 | Preprint identifiers retained for four records | Crossref matched a preprint version | Flagged `preprint`; conclusions do not rely solely on them |
 | D10 | Initial 997-review corpus query omitted working-memory training, cognitive stimulation/rehabilitation, serious-game and VR-cognitive terms | Gap detected during screening | Query expanded to 1,495 reviews; final denominator and screening counts use the expanded corpus |

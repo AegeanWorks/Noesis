@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-adhd-claim-boundary",
+    "task_id": "noesis-game-design-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795388157.9187274,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795389313.256398,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795395357.9187274,
+    "lease_until": 1795396513.256398,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,36 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795388283.1190493,
-    "completed_head": "885c90ddc5af0dc2c4fbe96756f2df628648644a",
-    "completed_tree": "3fd4268e244ccd03527c27ca9c231e8c260ac056"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 34",
-      "phase_num": 3,
-      "description": "Reforge stage 34: stage 34 host review reviewed; run active; coverage 129/129",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188133.3459742,
-      "timestamp_str": "2026-11-20 18:22:13",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 35",
-      "phase_num": 3,
-      "description": "Reforge stage 35: window 105, 3 commit(s), 60 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, empty \u2014 nothing to commit",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188154.5641956,
-      "timestamp_str": "2026-11-20 18:22:34",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 35",
@@ -396,6 +369,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-game-design-evidence",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: extract Wang 2021 game-based training meta-analysis and ground the Settings clock option in its non-time-pressure finding",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795388785.8739724,
+      "timestamp_str": "2026-11-23 02:06:25",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The app makes the session clock optional but gives no evidence context; Wang 2021 (15 RCTs) found game-based training gains and that non-time-pressure formats were preferable.",
+        "benefits": "Adds three pooled effects and links the pacing choice to the literature without claiming a personal target.",
+        "risks": "contract: one evidence record + settings note + test; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add a linked note with a UI test, run all suites and review the UI."
+      },
+      "plan_digest": "be5332f0e0cedf385bbad82af87c6e4e305961fb4eb9387319369a654051a2d7",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-game-design-evidence",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 138/328 records, 458 node + 29 python tests, clock note reviewed in Edge, ADR-065",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795389313.256398,
+      "timestamp_str": "2026-11-23 02:15:13",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
