@@ -301,6 +301,12 @@ describe("PracticeMenuScreen", () => {
     expect(summary.textContent).toMatch(/1 ended early/i);
     expect(summary.textContent).toMatch(/75%/);
     expect(summary.textContent).toMatch(/not a failure/i);
+    const evidence = screen.getByTestId("adherence-evidence");
+    expect(evidence.textContent).toMatch(/55 randomised trials/i);
+    expect(evidence.textContent).toMatch(/not\s+a personal target/i);
+    expect(evidence.querySelector("a")?.getAttribute("href")).toBe(
+      "https://pubmed.ncbi.nlm.nih.gov/38266127/",
+    );
   });
 
   it("shows an empty history state before the first session", () => {

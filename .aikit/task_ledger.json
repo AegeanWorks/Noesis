@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-visual-search-game",
+    "task_id": "noesis-adherence-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795385396.1483297,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795386437.0587468,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795392596.1483297,
+    "lease_until": 1795393637.0587468,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,36 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795385592.2628543,
-    "completed_head": "1e0b64ba1b703e7914d68a62d8ac5338a8a159b5",
-    "completed_tree": "4116738c29ef54373fb407bb9e2e1bd985934aad"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 30",
-      "phase_num": 3,
-      "description": "Reforge stage 30: window 90, 3 commit(s), 12 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, empty \u2014 nothing to commit",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188029.5748014,
-      "timestamp_str": "2026-11-20 18:20:29",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 30",
-      "phase_num": 3,
-      "description": "Reforge stage 30: stage 30 host review reviewed; run active; coverage 21/21",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188035.1201236,
-      "timestamp_str": "2026-11-20 18:20:35",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 31",
@@ -327,6 +300,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-adherence-evidence",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: extract Li 2024 adherence/engagement meta-analysis and ground a literature note in the app's adherence card",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795385788.8516932,
+      "timestamp_str": "2026-11-23 01:16:28",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The app logs session completion but gives no evidence context; Li 2024 (55 RCTs, n=4,455) reports significant training effects above 60% engagement/persistence or 80% adherence.",
+        "benefits": "Turns the adherence card into an evidence-linked, honestly framed interpretation instead of a bare percentage.",
+        "risks": "contract: evidence record + UI note + test; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Add one primary record with reported estimates, update counts and references, add the note with an explicit not-a-target caveat, run all suites and review the UI."
+      },
+      "plan_digest": "5420f2e7301e377133aed9157ff72587ac93cf0c32f81bbf52f450fa6c5cfceb",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-adherence-evidence",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 134/312 records, 456 node + 29 python tests, evidence-linked adherence note reviewed in Edge, ADR-062",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795386437.0587468,
+      "timestamp_str": "2026-11-23 01:27:17",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

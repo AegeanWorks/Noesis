@@ -1151,6 +1151,20 @@ function HistoryPanel({
           Stopping early is not a failure; it is recorded so the study team can understand
           real-world use. This summary stays on this device.
         </p>
+        <p className="fine" data-testid="adherence-evidence">
+          <strong>What the literature says:</strong> in a meta-analysis of 55 randomised trials
+          (4,455 older adults), training effects were significant when engagement or persistence
+          exceeded 60% or adherence exceeded 80%. Those are study-level subgroup observations, not
+          a personal target or a promise of benefit.{" "}
+          <a
+            href="https://pubmed.ncbi.nlm.nih.gov/38266127/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Li et al. 2024
+          </a>{" "}
+          <span className="pmid">PMID 38266127</span>
+        </p>
       </section>
 
       {costLevels.length > 0 ? (

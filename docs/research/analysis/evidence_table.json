@@ -8041,6 +8041,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Grounds the experimental conjunction-search focus test and its task-practice-only claim; no general attention benefit is claimed."
+  },
+  {
+   "pmid": "38266127",
+   "doi": "10.1093/ageing/afad247",
+   "doi_status": "verified",
+   "year": 2024,
+   "journal": "Age and Ageing",
+   "title": "Effects of engagement, persistence and adherence on cognitive training outcomes in older adults with and without cognitive impairment: a systematic review and meta-analysis of randomised controlled trials",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "mci",
+    "dementia"
+   ],
+   "k": 55,
+   "n": 4455,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.286,
+     "ci_low": 0.224,
+     "ci_high": 0.348,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Cross-domain effect over 55 RCTs; mean age 73.9 years; normal cognition, MCI and dementia pooled"
+    },
+    {
+     "domain": "adherence",
+     "transfer": "na",
+     "measure": "subgroup_threshold",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Effects significant when engagement or persistence exceeded 60% or adherence exceeded 80%; subgroup moderator, not a causal threshold"
+    }
+   ],
+   "findings": [
+    "Higher persistence was needed for memory, visuospatial and reasoning gains than for executive function, attention and language",
+    "Older adults with normal cognition required higher persistence for gains than those with impairment"
+   ],
+   "limitations": [
+    "Subgroup thresholds are observational moderators, not dose targets",
+    "Heterogeneous cognitive conditions pooled across normal cognition, MCI and dementia"
+   ],
+   "flags": [
+    "subgroup_dependent",
+    "certainty_collapse"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Grounds an evidence-linked adherence note: trial benefits appeared above study-level engagement/adherence thresholds, which are context and not a personal target or guarantee."
   }
  ]
 }

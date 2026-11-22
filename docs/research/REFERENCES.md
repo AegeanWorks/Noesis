@@ -162,3 +162,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Visual-search task evidence (2026-11-23 targeted update)
 
 - Visual search training benefits from the integrative effect of enhanced covert attention and optimized overt eye movements *Journal of Vision*. 2022. PMID: [35838486](https://pubmed.ncbi.nlm.nih.gov/35838486/). DOI: [10.1167/jov.22.8.7](https://doi.org/10.1167/jov.22.8.7).
+
+## Adherence and engagement (2026-11-23 targeted update)
+
+- Effects of engagement, persistence and adherence on cognitive training outcomes in older adults with and without cognitive impairment: a systematic review and meta-analysis of randomised controlled trials *Age and Ageing*. 2024. PMID: [38266127](https://pubmed.ncbi.nlm.nih.gov/38266127/). DOI: [10.1093/ageing/afad247](https://doi.org/10.1093/ageing/afad247).

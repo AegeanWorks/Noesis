@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 133 |
-| Outcomes | 310 |
-| Primary outcomes | 243 |
-| Systematic reviews/meta-analyses | 82 |
+| Records | 134 |
+| Outcomes | 312 |
+| Primary outcomes | 245 |
+| Systematic reviews/meta-analyses | 83 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 24 |
 | RCTs | 7 |
 | Umbrella reviews | 2 |
-| DOI verified | 122 |
+| DOI verified | 123 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 54 |
+| cct | 55 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 122 |
+| DOI verified | 123 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **133** |
+| **Total** | **134** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -216,6 +216,8 @@ A 2026-11-22 targeted extraction took eight reviews from the 973 rule-eligible b
 
 A 2026-11-23 targeted visual-search update added one context record: Zhang et al. 2022 (PMID 35838486, *Journal of Vision*; DOI 10.1167/jov.22.8.7), read from the PubMed MEDLINE record with E-utilities `efetch`. Five controlled experiments trained healthy adults on a conjunction search; training improved search behaviour, reduced saccade count and total scan time, and increased the target-locked N2pc. No pooled effect size is printed in the abstract, so the two outcomes keep null values with narrative notes and the record is `context`, not a source for a product claim. Two further sources stayed narrative-only in [NEW_MECHANIC_CANDIDATES.md](NEW_MECHANIC_CANDIDATES.md): Vialatte et al. 2023 (PMID 36922549) found a reading-accuracy gain from a symbol-search serious game in 21 children with reading disorders, and Bueichekú et al. 2019 (PMID 30859709) found resting-state connectivity change after 30 minutes of search training in 42 adults. This record grounds the experimental Visual Search focus test; D7 is unchanged. The review is now 133 records and 310 outcomes, revision v2.0.
 
+A 2026-11-23 adherence update added one primary record from the residual eligible pool: Li et al. 2024 (PMID 38266127, *Age and Ageing*; DOI 10.1093/ageing/afad247), read from the PubMed MEDLINE record with E-utilities `efetch`. Fifty-five RCTs with 4,455 participants (mean age 73.9) gave a cross-domain training effect of Hedges g=0.286 (95% CI 0.224-0.348); subgroup analyses found significant effects when engagement or persistence exceeded 60% or adherence exceeded 80%, with higher persistence needed for memory, visuospatial and reasoning outcomes than for executive function, attention and language. The thresholds are observational moderators, not dose targets, so the app's adherence card presents them as study-level context with an explicit not-a-target caveat (R71, ADR-062). Buyle et al. 2022 (PMID 35989930) stayed narrative-only: its motivation findings concern exergame fall-prevention programmes, not cognitive-training adherence. The review is now 134 records and 312 outcomes, revision v2.1.
+
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
 One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
@@ -241,7 +243,7 @@ One adherence record joined the table the same day (PMID 35612886, 99 studies, e
 | D4 | Independent GRADE not performed | Certainty would require full-text appraisal of every review | Certainty is recorded **as reported by the source** and is provisional |
 | D5 | PsycINFO, Embase, CINAHL and ERIC not searched directly | No institutional access in this environment | OpenAlex and PubMed citation coverage mitigate but do not close the gap |
 | D6 | English-language restriction | Feasibility | Language bias cannot be excluded |
-| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 8 eligible WM reviews extracted 2026-11-22 | Prioritisation by modality × population × outcome cell | 965 eligible reviews remain logged but not synthesised; partially closed |
+| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 9 eligible reviews extracted 2026-11-22/23 (8 WM, 1 adherence) | Prioritisation by modality × population × outcome cell | 964 eligible reviews remain logged but not synthesised; partially closed |
 | D8 | PubMed DOI fields unreliable | XML metadata inconsistency | Crossref verification used; 7 records are PMID-only and 4 carry preprint DOIs |
 | D9 | Preprint identifiers retained for four records | Crossref matched a preprint version | Flagged `preprint`; conclusions do not rely solely on them |
 | D10 | Initial 997-review corpus query omitted working-memory training, cognitive stimulation/rehabilitation, serious-game and VR-cognitive terms | Gap detected during screening | Query expanded to 1,495 reviews; final denominator and screening counts use the expanded corpus |

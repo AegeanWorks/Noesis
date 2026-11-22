@@ -439,6 +439,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add `search` as an experimental focus test: a static red-circle target among red-square and blue-circle distractors, with small and large grids alternating so a within-session set-size cost can be reported. Add one context evidence-table record (Zhang 2022) so the in-app citation resolves to the corpus; the other two sources stay narrative-only. No general-attention, reading or everyday-function claim; no flashing or rapid presentation.
 - **Consequences**: The review moves to 133 records and 310 outcomes (revision v2.0). The practice menu grows to twelve tests, adaptive levels and snapshot counts gain the new id, and the Evidence screen lists the citation. The new game is claim-bounded task practice with a task-specific set-size metric.
 
+### ADR-062: Evidence-Linked Adherence Note
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The Menu History card already shows a local session-completion percentage, but gave no interpretation and no source. Li et al. 2024 (PMID 38266127) meta-analysed 55 RCTs (n=4,455) and found a cross-domain training effect of g=0.286 (95% CI 0.224-0.348), with significant effects above 60% engagement/persistence or 80% adherence; these are subgroup moderators, not dose targets.
+- **Decision**: Add Li 2024 as a primary evidence-table record, extract the two reported estimates, and extend the adherence card with a short, evidence-linked note that states the thresholds as study-level observations with an explicit "not a personal target or a promise of benefit" caveat and a PubMed link. Add requirement R71 and a UI test pinning the wording and link.
+- **Consequences**: The review moves to 134 records and 312 outcomes (revision v2.1) and D7 residuals fall to 964. The app's adherence feedback becomes traceable to evidence without turning a subgroup threshold into a user target.
+
 
 
 
