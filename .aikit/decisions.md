@@ -467,6 +467,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Wang 2021 as a primary evidence-table record with its three reported g values and a null subgroup outcome, and add a short PubMed-linked note beside the clock option stating those findings as group-level context with an explicit no-personal-prescription caveat. Add R75 and a UI test.
 - **Consequences**: The review moves to 138 records and 328 outcomes (revision v2.4), D7 residuals fall to 960, and the pacing choice is traceable to evidence without turning a subgroup preference into a rule for every user.
 
+### ADR-066: Multimodal Synergy Claim Boundary
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The synthesis already cautioned that combination is not synergy, citing an earlier review. Wu et al. 2023 (PMID 37065695) provides a direct 21-RCT pooled test: combined training beat no intervention (SMD 0.29, 0.14-0.44) but not exercise alone (0.16, -0.04-0.35) or cognitive training alone (0.08, -0.13-0.30).
+- **Decision**: Add Wu 2023 as a primary multimodal record with the three head-to-head estimates, extend the Evidence screen's claim-boundary list with a fourth linked bullet, update R74 and the citation test, and note the finding in the older-adult synthesis.
+- **Consequences**: The review moves to 139 records and 331 outcomes (revision v2.5), D7 residuals fall to 959, and the app explicitly refuses the "combination is better" claim while still acknowledging the small effect versus no intervention.
+
 
 
 

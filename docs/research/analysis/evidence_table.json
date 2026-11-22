@@ -8421,6 +8421,75 @@
    ],
    "synthesis_role": "primary",
    "product_use": "Grounds the clock-option note: non-time-pressure formats were among preferable features in the older-adult game-training literature, as group-level context rather than a personal rule."
+  },
+  {
+   "pmid": "37065695",
+   "doi": "10.7717/peerj.15108",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "PeerJ",
+   "title": "Does the combination of exercise and cognitive training improve working memory in older adults? A systematic review and meta-analysis",
+   "modality": "multi_intervention",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 21,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.29,
+     "ci_low": 0.14,
+     "ci_high": 0.44,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Combined exercise and cognitive training versus no intervention, 21 RCTs"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.16,
+     "ci_low": -0.04,
+     "ci_high": 0.35,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Combined training versus exercise alone; not significant"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.08,
+     "ci_low": -0.13,
+     "ci_high": 0.3,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Combined training versus cognitive training alone; not significant"
+    }
+   ],
+   "findings": [
+    "Combined training beats no intervention on working memory but not either component alone",
+    "Effects were moderated by intervention frequency and baseline cognitive state"
+   ],
+   "limitations": [
+    "No evidence of synergy over single components",
+    "Comparison estimates imprecise"
+   ],
+   "flags": [
+    "synergy_unproven",
+    "small_effect"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Grounds the no-synergy claim boundary: combined programmes can help versus no intervention, but adding exercise to cognitive training has not shown a reliable extra working-memory benefit."
   }
  ]
 }

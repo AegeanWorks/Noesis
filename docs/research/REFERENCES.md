@@ -179,3 +179,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Game design and pacing (2026-11-23 targeted update)
 
 - Game-based brain training for improving cognitive function in community-dwelling older adults: A systematic review and meta-regression *Archives of Gerontology and Geriatrics*. 2021. PMID: [32980574](https://pubmed.ncbi.nlm.nih.gov/32980574/). DOI: [10.1016/j.archger.2020.104260](https://doi.org/10.1016/j.archger.2020.104260).
+
+## Multimodal evidence (2026-11-23 targeted update)
+
+- Does the combination of exercise and cognitive training improve working memory in older adults? A systematic review and meta-analysis *PeerJ*. 2023. PMID: [37065695](https://pubmed.ncbi.nlm.nih.gov/37065695/). DOI: [10.7717/peerj.15108](https://doi.org/10.7717/peerj.15108).
