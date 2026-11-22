@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-everyday-function-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795387518.4198265,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795394718.4198265,
@@ -15,21 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795387634.3441901,
+    "completed_head": "aa2458dc5fb6665ff06fcbcd3455e8ffb96dd9ab",
+    "completed_tree": "c9eb66af579cb829471e4f55102cd45848b40c93"
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 32",
-      "phase_num": 3,
-      "description": "Reforge stage 32: stage 32 host review reviewed; run active; coverage 32/32",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188072.7005277,
-      "timestamp_str": "2026-11-20 18:21:12",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 33",
@@ -365,6 +356,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-everyday-function-evidence",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-everyday-function-evidence' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795387634.431576,
+      "timestamp_str": "2026-11-23 01:47:14",
+      "agent": "opencode:hy4-flash-free",
+      "head": "aa2458dc5fb6665ff06fcbcd3455e8ffb96dd9ab",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }

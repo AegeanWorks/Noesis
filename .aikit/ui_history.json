@@ -161,5 +161,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "ede0cb5482221e4c09e94fcb04b79f125e2ce2e6a9689f1e608e3bf10ff8d645",
     "baseline_digest": "ede0cb5482221e4c09e94fcb04b79f125e2ce2e6a9689f1e608e3bf10ff8d645"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Played a quick session in Edge and reviewed the Results aside: everyday-function caveat with Kelly et al. 2014 link is visible, no console errors; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795387573.5562408,
+    "finished_at": 1795387633.824713,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "95ea80be5ac4a5248c4728ec275c626cd3739cd3e66c5c83cd6ee1c10d329003",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795387633.8247154
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Everyday-function caveat test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/results-best.test.tsx",
+        "reason": "Everyday-function caveat test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "95ea80be5ac4a5248c4728ec275c626cd3739cd3e66c5c83cd6ee1c10d329003",
+    "baseline_digest": "95ea80be5ac4a5248c4728ec275c626cd3739cd3e66c5c83cd6ee1c10d329003"
   }
 ]
