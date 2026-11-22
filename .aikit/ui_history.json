@@ -278,5 +278,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "e40baa452af3b2ee438a172ff1ff3535f2f6cc982722df96d85988959396ebca",
     "baseline_digest": "e40baa452af3b2ee438a172ff1ff3535f2f6cc982722df96d85988959396ebca"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Evidence screen in Edge: fourth linked boundary (no synergy from combining exercise) renders with PMID 37065695, no console errors; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795390819.9904797,
+    "finished_at": 1795390871.9043064,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "d364431e62ba04755b0677cfd792015dec04ca4c66b9b7eb996f81113678d04d",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795390871.9043093
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Fourth claim boundary test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Fourth claim boundary test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "d364431e62ba04755b0677cfd792015dec04ca4c66b9b7eb996f81113678d04d",
+    "baseline_digest": "d364431e62ba04755b0677cfd792015dec04ca4c66b9b7eb996f81113678d04d"
   }
 ]

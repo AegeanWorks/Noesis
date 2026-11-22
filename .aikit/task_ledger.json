@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-multimodal-synergy",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795390774.04848,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795397974.04848,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795390872.63365,
+    "completed_head": "c9ced09cf64d4eac1804905ca01b527ca5e61dd8",
+    "completed_tree": "b6bb90f66bf243450d9f74311979ac33ef6316e5"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-wm-residual-extraction",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: extract 8 residual eligible working-memory reviews (D7 gap) into the evidence table with verified PMIDs/DOIs",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795379564.9482088,
-      "timestamp_str": "2026-11-22 23:32:44",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The review logs 973 rule-eligible reviews as not extracted (deviation D7); working-memory transfer/durability is a core Noesis evidence cell with documented gaps.",
-        "benefits": "Closes part of D7, adds 8 verifiable effect-bearing records, strengthens near-vs-far transfer and durability claims, keeps counts traceable.",
-        "risks": "contract: evidence-table schema and snapshot counts; dependency: PubMed metadata only; concurrency: none; state: references and prose counts must move with the table",
-        "mitigation": "Fetch each abstract from NCBI eutils, use only reported estimates, update references/prose/tests in the same change, run review check and the full suite."
-      },
-      "plan_digest": "4d15ecb86cc385eba8289d18c865717e8182eb11ac62f60199b11d31b1ebf98d",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-wm-residual-extraction",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-multimodal-synergy",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-multimodal-synergy' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795390873.9665236,
+      "timestamp_str": "2026-11-23 02:41:13",
+      "agent": "opencode:hy4-flash-free",
+      "head": "c9ced09cf64d4eac1804905ca01b527ca5e61dd8",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
