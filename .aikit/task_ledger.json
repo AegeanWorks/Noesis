@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-wm-residual-extraction",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795380735.838027,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795387935.838027,
@@ -15,20 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795381334.6354094,
+    "completed_head": "2867f4ee28983e96ff4475bb822f4bd3e2e9a363",
+    "completed_tree": "d2028a8a665a787e058a9f40c631c4f552792443"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-gonogo-dprime",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[3/3] Verified: before no tile/note d_prime null; after Sensitivity 3.744/3.151/3.744 with commissions 0/1/0; note on every card; consoleErrors []; 29 Python + 449 Vitest, 1100 sims, 6/6 gates; checklists: passed",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1794152798.664439,
-      "timestamp_str": "2026-11-08 18:46:38",
-      "agent": "opencode:gonogodprime"
-    },
     {
       "task_id": "noesis-gonogo-dprime",
       "phase": "completed",
@@ -293,6 +285,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-wm-residual-extraction",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-wm-residual-extraction' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795381334.7292945,
+      "timestamp_str": "2026-11-23 00:02:14",
+      "agent": "opencode:hy4-flash-free",
+      "head": "2867f4ee28983e96ff4475bb822f4bd3e2e9a363",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
