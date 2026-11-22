@@ -76,7 +76,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 |---|---|---|---|
 | R1 | Every activity declares one primary cognitive domain and one near-transfer task. | Prevents a composite "brain score" from hiding domain-specific effects. | 27697851, 42959097, 40640327 |
 | R2 | The product reports domain scores separately; no single composite score is the primary outcome. | Composite improvements can occur while domain tests do not. | 40640327 |
-| R3 | A far-transfer claim is allowed only after a pre-registered, actively controlled, blinded trial. | Far transfer is absent or fragile in the best-controlled reviews. | 22612437, 27474138, 27697851 |
+| R3 | A far-transfer claim is allowed only after a pre-registered, actively controlled, blinded trial. | Far transfer is absent or fragile in the best-controlled reviews. | 22612437, 27474138, 27697851, 31939109, 30652908, 32738262 |
 | R4 | The evidence registry tags each activity with modality, domain, evidence level, allowed claim and safety flags. | Makes claim drift a build error, not a marketing decision. | Review-wide |
 | R5 | Prohibited claims are blocked at content authoring: IQ, intelligence, academic gain, dementia prevention, ADHD treatment, "brain age" reversal. | These claims are not supported and create regulatory risk. | 27474138, 39661381, 41016407 |
 | R6 | Every claim shown to a user links to its evidence record and date. | The evidence is provisional and dated. | Protocol §15 |
@@ -85,12 +85,12 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 
 | ID | Requirement | Rationale | Evidence |
 |---|---|---|---|
-| R7 | Near transfer, far transfer, everyday function, adherence and safety are measured on separate schedules. | The transfer gradient is the central finding. | 22612437, 27697851 |
+| R7 | Near transfer, far transfer, everyday function, adherence and safety are measured on separate schedules. | The transfer gradient is the central finding. | 22612437, 27697851, 32507890, 25793607 |
 | R8 | Any internal efficacy trial includes an active control and measures expectancy. | Passive controls inflate effects; expectancy can mimic neurofeedback. | 23360949, 40246295 |
 | R9 | Outcome assessment is blinded or fully automated. | Blinding changes the ADHD and psychological-treatment results. | 39661381, 27238063 |
-| R10 | A 3-month follow-up is mandatory for any durability claim. | Most effects fade; ACTIVE is the exception. | 42959097, 24417410 |
+| R10 | A 3-month follow-up is mandatory for any durability claim. | Most effects fade; ACTIVE is the exception; WM subdomain effects can persist beyond six months. | 42959097, 24417410, 32507890, 25793607 |
 | R11 | Dose (sessions, minutes, weeks) is recorded and dose-response is modelled, not assumed. | Dose is not linear or universal. | 42711482, 41772608, 36853526 |
-| R12 | Adaptive difficulty is opt-in, experimental and logged; it is never marketed as superior without an A/B test. | Adaptivity has a mechanistic rationale but not a consistent behavioural advantage. | 41772608, 42711482; ADR-012 |
+| R12 | Adaptive difficulty is opt-in, experimental and logged; it is never marketed as superior without an A/B test. | Adaptivity has a mechanistic rationale but not a consistent behavioural advantage. | 41772608, 42711482, 25298292; ADR-012 |
 | R13 | Trial protocols and analysis plans are pre-registered internally before data collection. | Protects against post-hoc claim construction. | Protocol §18 |
 
 ### 3.3 Safety

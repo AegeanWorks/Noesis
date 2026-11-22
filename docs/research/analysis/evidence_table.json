@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "review_id": "noesis-evidence-2026-10",
- "search_date": "2026-10-31",
+ "search_date": "2026-11-22",
  "pmid_is_canonical": true,
  "doi_status_legend": {
   "verified": "Crossref title match >= 0.90 and container consistent",
@@ -7462,6 +7462,528 @@
    ],
    "synthesis_role": "context",
    "product_use": "Grounds the core N-back mechanic: near transfer to untrained n-back tasks is medium-sized, but transfer to other working-memory tasks, fluid intelligence and cognitive control is very small."
+  },
+  {
+   "pmid": "32507890",
+   "doi": "10.1093/geronb/gbaa077",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Journals of Gerontology: Series B",
+   "title": "The Long-Term Efficacy of Working Memory Training in Healthy Older Adults: A Systematic Review and Meta-Analysis of 22 Randomized Controlled Trials",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 22,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "effect size",
+     "value": 0.45,
+     "ci_low": 0.253,
+     "ci_high": 0.648,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Long-term updating; >=6 months 0.641 (0.223-1.058)"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "effect size",
+     "value": 0.447,
+     "ci_low": 0.246,
+     "ci_high": 0.648,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Shifting; >=6 months 0.446 (0.176-0.716)"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "effect size",
+     "value": 0.387,
+     "ci_low": 0.228,
+     "ci_high": 0.547,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Inhibition; >=6 months 0.504 (0.288-0.712)"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "effect size",
+     "value": 0.486,
+     "ci_low": 0.352,
+     "ci_high": 0.62,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Maintenance; >=6 months 0.471 (0.310-0.630)"
+    },
+    {
+     "domain": "processing_speed",
+     "transfer": "far",
+     "measure": "effect size",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Discussion reports improved processing speed; no effect size in abstract"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "far",
+     "measure": "effect size",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Discussion reports improved reasoning; no effect size in abstract"
+    }
+   ],
+   "findings": [
+    "WM training produced robust long-term gains on all four WM subdomains in adults aged 63.8-80.1",
+    "Effects persisted at >=6 months for updating, shifting, inhibition and maintenance",
+    "Authors note the need for ecological daily-life tasks to improve external validity"
+   ],
+   "limitations": [
+    "Older-adult sample only",
+    "No effect size reported for the outside-WM domains in the abstract"
+   ],
+   "flags": [
+    "maintenance_gap"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Supports a durable near-transfer claim for WM subdomains in older adults; never extend it to reasoning without a measured estimate."
+  },
+  {
+   "pmid": "25298292",
+   "doi": "10.1177/0956797614548725",
+   "doi_status": "verified",
+   "year": 2014,
+   "journal": "Psychological Science",
+   "title": "Making working memory work: a meta-analysis of executive-control and working memory training in older adults",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults"
+   ],
+   "k": 49,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "effect size",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Significant trained-task and near-transfer net gains versus active and passive controls; 49 articles, 61 samples"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "far",
+     "measure": "effect size",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Far transfer smaller than near; significant for net pretest-posttest gain vs passive and net posttest vs active and passive"
+    }
+   ],
+   "findings": [
+    "No difference between adaptive and nonadaptive training",
+    "Gains did not vary with total training time",
+    "Training effects in older adults did not differ from younger adults"
+   ],
+   "limitations": [
+    "Effect magnitudes not given in the abstract",
+    "Executive-control and WM training pooled"
+   ],
+   "flags": [
+    "intervention_mixing",
+    "dose_null"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Backs near-transfer-first claims and the choice not to market adaptivity as a superior mechanism in older adults."
+  },
+  {
+   "pmid": "31939109",
+   "doi": "10.3758/s13423-019-01681-y",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Psychonomic Bulletin & Review",
+   "title": "Working memory training in typically developing children: A multilevel meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children"
+   ],
+   "k": 41,
+   "n": 2375,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Small-to-medium memory-task effects, proportional to training-outcome similarity; k=393 effect sizes"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.001,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "moderate",
+     "note": "Active-control far-transfer subgroup: g=0.001, SE=0.055, p=.982, tau2=0.000"
+    },
+    {
+     "domain": "academic",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "moderate",
+     "note": "Mathematics and language achievement essentially unaffected"
+    }
+   ],
+   "findings": [
+    "Near transfer scales with task similarity, not with general capacity",
+    "Null or low true heterogeneity once control type and artifacts are modelled"
+   ],
+   "limitations": [
+    "Effect magnitudes for near transfer given qualitatively in the abstract",
+    "Typically developing children only"
+   ],
+   "flags": [
+    "far_transfer_null",
+    "null_meta",
+    "domain_null"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Do not claim intelligence or school-attainment gains from WM training in children; near-transfer wording only."
+  },
+  {
+   "pmid": "36958492",
+   "doi": "10.1016/j.jad.2023.03.045",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Journal of Affective Disorders",
+   "title": "Anxiety-reducing effects of working memory training: A systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "mixed_adults"
+   ],
+   "k": 19,
+   "n": 1051,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "anxiety",
+     "transfer": "na",
+     "measure": "Hedges g",
+     "value": -0.392,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Post-training anxiety reduced, p=.009; negative value = symptom reduction; no CI in abstract"
+    }
+   ],
+   "findings": [
+    "Subgroup effects of anxiety type, anxiety measure and training environment were significant",
+    "19 randomised trials from 477 records; low-to-moderate risk of bias"
+   ],
+   "limitations": [
+    "Heterogeneous training paradigms and anxiety measures",
+    "Comparator type not specified beyond 'control condition' in the abstract"
+   ],
+   "flags": [
+    "heterogeneity",
+    "subjective_outcomes"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Context only: a small anxiety signal exists but Noesis makes no treatment claim; route distress to support resources."
+  },
+  {
+   "pmid": "33173503",
+   "doi": "10.3389/fnagi.2020.575804",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Frontiers in Aging Neuroscience",
+   "title": "A Systematic Review on Predictors of Working Memory Training Responsiveness in Healthy Older Adults: Methodological Challenges and Future Directions",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 16,
+   "n": 675,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "prognostic_factor_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "mixed",
+     "certainty": "very_low",
+     "note": "16 studies, 675 adults aged 55+; age, education, intelligence and baseline WM most studied; no clear conclusions"
+    }
+   ],
+   "findings": [
+    "Five prognostic-model and 18 single-factor approaches reported, often with conflicting results",
+    "Attrition, confounding and statistical reporting information missing in many studies"
+   ],
+   "limitations": [
+    "QUIPS risk-of-bias concerns",
+    "No validated responder profile"
+   ],
+   "flags": [
+    "reporting_gap",
+    "risk_of_bias",
+    "contradictory_findings"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Do not personalise training dose or task assignment by baseline profile; no validated predictor exists."
+  },
+  {
+   "pmid": "32738262",
+   "doi": "10.1016/j.neubiorev.2020.07.027",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Neuroscience & Biobehavioral Reviews",
+   "title": "Working memory updating training promotes plasticity & behavioural gains: A systematic review & meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "effect size",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Large training effect and moderate same-domain near transfer; magnitudes not in abstract"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "effect size",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Far transfer to other cognitive domains non-significant"
+    },
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "mixed",
+     "certainty": "very_low",
+     "note": "Consistent frontoparietal activity decreases; subcortical changes both up and down"
+    }
+   ],
+   "findings": [
+    "Behavioural gains and frontoparietal plasticity co-occur after updating training",
+    "Generalisation beyond the trained domain remains unsupported"
+   ],
+   "limitations": [
+    "Imaging studies only",
+    "No pooled numeric estimates in the abstract"
+   ],
+   "flags": [
+    "mechanism_gap",
+    "neural_behaviour_gap"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Supports mechanism-and-measurement framing; do not show neural change as proof of everyday benefit."
+  },
+  {
+   "pmid": "25793607",
+   "doi": "10.1371/journal.pone.0119522",
+   "doi_status": "verified",
+   "year": 2015,
+   "journal": "PLOS ONE",
+   "title": "Benefits of a working memory training program for inattention in daily life: a systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children",
+    "adults",
+    "clinical:adhd"
+   ],
+   "k": 12,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": -0.47,
+     "ci_low": -0.65,
+     "ci_high": -0.29,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Inattention in daily life; 13 comparisons; negative = fewer symptoms"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": -0.33,
+     "ci_low": -0.57,
+     "ci_high": -0.09,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Follow-up in 7 studies"
+    },
+    {
+     "domain": "visuospatial_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.66,
+     "ci_low": 0.43,
+     "ci_high": 0.89,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Visuospatial WM"
+    },
+    {
+     "domain": "verbal_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.4,
+     "ci_low": 0.18,
+     "ci_high": 0.62,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Verbal WM"
+    }
+   ],
+   "findings": [
+    "Effect present in children and adults, with and without ADHD, and against active and passive controls",
+    "One author had previously consulted for Cogmed (declared)"
+   ],
+   "limitations": [
+    "Single commercial programme (Cogmed) only",
+    "2 of 7 follow-up studies drive the persistence estimate"
+   ],
+   "flags": [
+    "commercial_program",
+    "small_trials"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Supports a narrow daily-inattention near-transfer statement for one named programme, not a general Noesis claim."
+  },
+  {
+   "pmid": "30652908",
+   "doi": "10.1037/bul0000180",
+   "doi_status": "verified",
+   "year": 2019,
+   "journal": "Psychological Bulletin",
+   "title": "A meta-analysis of the experimental evidence on the near- and far-transfer effects among children's executive function skills",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children"
+   ],
+   "k": 43,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.44,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "moderate",
+     "note": "Near transfer to the trained component, k=43, p<.001"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.11,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "moderate",
+     "note": "Far transfer to untrained components, k=17, p=.11; not convincing"
+    }
+   ],
+   "findings": [
+    "Training a component does not significantly improve untrained executive components",
+    "Helps explain absent WM-training transfer to academic skills"
+   ],
+   "limitations": [
+    "Comparator detail not reported in the abstract",
+    "Children only"
+   ],
+   "flags": [
+    "far_transfer_null",
+    "domain_null"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Reinforces training-the-component, measure-the-component product rule and forbids cross-component transfer claims."
   }
  ]
 }

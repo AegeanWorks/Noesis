@@ -1,8 +1,8 @@
 # Noesis Evidence Review
 
-**Status:** v1.0 corpus complete; current review revision v1.8 (2026-11-08) with targeted UX, data-collection, export and new-game updates, AI-assisted, internally pre-registered
-**Search date:** 2026-10-31; targeted update 2026-11-08
-**Records:** 124 included (90 primary, 34 context), 286 outcomes
+**Status:** v1.0 corpus complete; current review revision v1.9 (2026-11-22) with targeted UX, data-collection, export, new-game and working-memory residual-extraction updates, AI-assisted, internally pre-registered
+**Search date:** 2026-10-31; targeted updates 2026-11-08 and 2026-11-22
+**Records:** 132 included (97 primary, 35 context), 308 outcomes
 **Review type:** PRISMA 2020 systematic umbrella review with landmark-RCT update
 
 ---
@@ -49,7 +49,7 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |
 | [REFERENCES.bib](REFERENCES.bib) | BibTeX for the included records |
-| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (124 records, 286 outcomes) |
+| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (132 records, 308 outcomes) |
 | [analysis/screening_reviews.csv](analysis/screening_reviews.csv) | Rule-based screen of the 1,495-review PubMed corpus |
 | [analysis/screening_summary.json](analysis/screening_summary.json) | Screening counts |
 | [records/](records/) | Raw PubMed, OpenAlex, trial-registry and metadata-verification records |
@@ -92,7 +92,7 @@ A quarterly update is planned. Each update must record the new search date, new 
 ## Scope and limitations
 
 - AI-assisted: no independent human dual screening, no independent GRADE, no full-text appraisal of all records.
-- The 1,495-review PubMed corpus is screened by rule; 973 rule-eligible and 446 rule-excluded reviews were not extracted (logged, prioritised for the next update).
+- The 1,495-review PubMed corpus is screened by rule; 973 rule-eligible and 446 rule-excluded reviews were not extracted (logged, prioritised for the next update). The 2026-11-22 targeted update extracted eight working-memory reviews from that residual pool; 965 eligible reviews remain unextracted (deviation D7, partially closed).
 - English-language only; no direct PsycINFO, Embase, CINAHL or ERIC search.
 - Certainty is source-reported and provisional.
 - Several included reviews report implausible effect sizes; they are flagged and excluded from planning.

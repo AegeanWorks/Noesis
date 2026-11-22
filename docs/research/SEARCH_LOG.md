@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 124 |
-| Outcomes | 286 |
-| Primary outcomes | 226 |
-| Systematic reviews/meta-analyses | 75 |
+| Records | 132 |
+| Outcomes | 308 |
+| Primary outcomes | 243 |
+| Systematic reviews/meta-analyses | 82 |
 | Network meta-analyses | 18 |
-| Other systematic reviews | 23 |
+| Other systematic reviews | 24 |
 | RCTs | 6 |
 | Umbrella reviews | 2 |
-| DOI verified | 113 |
+| DOI verified | 121 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 45 |
+| cct | 53 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 113 |
+| DOI verified | 121 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **124** |
+| **Total** | **132** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -212,6 +212,8 @@ A 2026-11-08 complex-span and sustained-attention scan found no eligible trainin
 
 A 2026-11-08 Go/No-Go and processing-speed scan found no eligible task-specific cognitive-training meta-analysis. Go/No-Go training records concern appetitive behaviour change rather than cognitive transfer; the existing inhibitory-control network meta-analysis (PMID 40398202) remains the basis. Processing-speed evidence is covered by the broad cognitive-training meta-analysis (PMID 32011155), and Speed Tap is not UFOV. Both candidates stayed out of scope (ADR-059). The same update adds signal-detection sensitivity (d′) to Go/No-Go results and a response-bias note; no evidence-table record was added, so the review remains at 124 records and 286 outcomes, revision v1.8.
 
+A 2026-11-22 targeted extraction took eight reviews from the 973 rule-eligible but not previously extracted PubMed records (deviation D7), chosen to fill the working-memory transfer and durability cells: Hou et al. 2020 (PMID 32507890; 22 RCTs in adults 63.8-80.1; long-term updating g=0.45 [0.253-0.648], shifting 0.447 [0.246-0.648], inhibition 0.387 [0.228-0.547], maintenance 0.486 [0.352-0.620]), Karbach & Verhaeghen 2014 (PMID 25298292; 49 articles/61 samples, adults over 60; significant near transfer and smaller but significant far transfer, no adaptivity or dose moderation), Sala & Gobet 2020 (PMID 31939109; 41 studies, k=393, N=2,375; small-to-medium near transfer, far transfer to intelligence and attainment null, active-control g=0.001, SE=0.055), Wang et al. 2023 (PMID 36958492; 19 trials, n=1,051; anxiety Hedges g=-0.392, p=.009), Ophey et al. 2020 (PMID 33173503; 16 studies, n=675; no validated responder profile, context role), Pappa et al. 2020 (PMID 32738262; large training effect, moderate near transfer, non-significant far transfer, frontoparietal decreases), Spencer-Smith & Klingberg 2015 (PMID 25793607; 12 Cogmed studies; daily inattention SMD=-0.47 [-0.65,-0.29], follow-up -0.33 [-0.57,-0.09], visuospatial WM 0.66 [0.43,0.89], verbal WM 0.40 [0.18,0.62]), and Kassai et al. 2019 (PMID 30652908; children; near g=0.44, k=43, far g=0.11, k=17, p=.11). Each PMID, title, journal, year and DOI was re-read from the PubMed MEDLINE record with NCBI E-utilities `efetch`; all eight DOIs were already Crossref-verified in the table vocabulary and remain `verified`. Only estimates printed in the abstract were entered; where the abstract gave no magnitude the outcome keeps a null value with a narrative note. The 2026-11-08 Soveri n-back record (PMID 28116702) was already extracted and was not re-added. Seven records are primary and the methodological predictor review is context. The review is now 132 records and 308 outcomes, revision v1.9; 965 eligible residual reviews remain unextracted, so D7 is partially closed rather than resolved.
+
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
 One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
@@ -237,7 +239,7 @@ One adherence record joined the table the same day (PMID 35612886, 99 studies, e
 | D4 | Independent GRADE not performed | Certainty would require full-text appraisal of every review | Certainty is recorded **as reported by the source** and is provisional |
 | D5 | PsycINFO, Embase, CINAHL and ERIC not searched directly | No institutional access in this environment | OpenAlex and PubMed citation coverage mitigate but do not close the gap |
 | D6 | English-language restriction | Feasibility | Language bias cannot be excluded |
-| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted | Prioritisation by modality × population × outcome cell | Residual evidence is logged, not synthesised |
+| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 8 eligible WM reviews extracted 2026-11-22 | Prioritisation by modality × population × outcome cell | 965 eligible reviews remain logged but not synthesised; partially closed |
 | D8 | PubMed DOI fields unreliable | XML metadata inconsistency | Crossref verification used; 7 records are PMID-only and 4 carry preprint DOIs |
 | D9 | Preprint identifiers retained for four records | Crossref matched a preprint version | Flagged `preprint`; conclusions do not rely solely on them |
 | D10 | Initial 997-review corpus query omitted working-memory training, cognitive stimulation/rehabilitation, serious-game and VR-cognitive terms | Gap detected during screening | Query expanded to 1,495 reviews; final denominator and screening counts use the expanded corpus |

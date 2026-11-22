@@ -375,7 +375,7 @@ PRISMA-P contains 26 items. AI assistance is disclosed separately in Section 14 
 | D4 | 2026-10-31 | Independent GRADE not performed | Full-text appraisal of every review was not feasible in this pass | Certainty is recorded as reported by the source and is provisional |
 | D5 | 2026-10-31 | PsycINFO, Embase, CINAHL and ERIC not searched directly | No institutional access in this environment | Coverage gap partly mitigated by OpenAlex and PubMed citation chasing |
 | D6 | 2026-10-31 | English-language restriction | Feasibility | Language bias cannot be excluded |
-| D7 | 2026-10-31 | 973 rule-eligible and 446 rule-excluded reviews not extracted | Prioritisation by modality × population × outcome cell | Residual evidence is logged, not synthesised |
+| D7 | 2026-10-31; partial extraction 2026-11-22 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 8 eligible working-memory reviews added in the targeted update | Prioritisation by modality × population × outcome cell | 965 eligible reviews remain logged but not synthesised; partially closed |
 | D8 | 2026-10-31 | PubMed DOI fields were unreliable | XML metadata inconsistency | Crossref verification used; 7 records are PMID-only and 4 carry preprint DOIs |
 | D9 | 2026-10-31 | Four records retain preprint identifiers | Crossref matched a preprint version | Flagged `preprint`; conclusions do not rely solely on them |
 | D10 | 2026-10-31 | Initial 997-review corpus query omitted working-memory training, cognitive stimulation/rehabilitation, serious-game and VR-cognitive terms | Gap detected during screening | Query expanded to 1,495 reviews; final denominator and screening counts use the expanded corpus |

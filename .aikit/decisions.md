@@ -425,6 +425,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add d′ (log-linear-corrected hit rate minus false-alarm rate) to Go/No-Go metrics and show it as a primary result metric alongside accuracy and impulse errors. Add a result note explaining that d′ corrects for the tendency to respond or withhold, that higher is better, and that it is descriptive rather than diagnostic. No new mechanic and no processing-speed claim.
 - **Consequences**: The Go/No-Go result card gains a bias-corrected sensitivity tile and note. No evidence-table record or review count changes; engine and UI tests cover the metric and the note.
 
+### ADR-060: Working-Memory Residual Extraction (D7 Partial Closure)
+- **Date**: 2026-11-22
+- **Status**: Accepted
+- **Context**: The review logs 973 rule-eligible PubMed reviews as not extracted (deviation D7). Working-memory transfer and durability are core Noesis cells whose strongest records were narrative-only or single-review citations, so near-versus-far transfer and six-month durability were quoted without a consolidated quantitative basis.
+- **Decision**: Extract eight residual eligible working-memory reviews (PMIDs 32507890, 25298292, 31939109, 36958492, 33173503, 32738262, 25793607, 30652908) using PubMed MEDLINE abstracts for every field, entering only estimates printed in the abstract and leaving null where magnitude was not reported. Seven are primary and the predictor-methodology review is context. Update the composition counts in the evidence table, snapshot test, references, README, SEARCH_LOG, PROTOCOL and SYNTHESIS, and add their PMIDs to requirements R3, R7, R10 and R12.
+- **Consequences**: The table moves from 124/286 to 132/308 records/outcomes and revision v1.9. The train-the-component/measure-the-component rule and near-transfer-only claim now have multi-review support; durability beyond six months becomes a measured question, not an assumed benefit. D7 is partially closed with 965 eligible residuals still unextracted, and the snapshot test pins every quoted count.
+
 
 
 
