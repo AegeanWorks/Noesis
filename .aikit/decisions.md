@@ -474,6 +474,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Wu 2023 as a primary multimodal record with the three head-to-head estimates, extend the Evidence screen's claim-boundary list with a fourth linked bullet, update R74 and the citation test, and note the finding in the older-adult synthesis.
 - **Consequences**: The review moves to 139 records and 331 outcomes (revision v2.5), D7 residuals fall to 959, and the app explicitly refuses the "combination is better" claim while still acknowledging the small effect versus no intervention.
 
+### ADR-067: Expectancy Is Not a Responder Predictor
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The review's measurement plan asks trials to measure expectancy, but the corpus had no record testing whether baseline expectancy predicts response. Motter et al. 2024 (PMID 38230719) followed 107 MCI patients for 78 weeks after computerized or crossword training and found no association between expectancy and cognitive, everyday or neural outcomes, and no treatment interaction.
+- **Decision**: Add Motter 2024 as a context record with its null associations, extend the Evidence screen's claim-boundary list with a fifth linked bullet, add R76, and update the synthesis measurement plan to say expectancy should be measured but not used for responder selection.
+- **Consequences**: The review moves to 140 records and 333 outcomes (revision v2.6), D7 is unchanged because the record came from a targeted search, and the app states that it does not personalise assignment by self-expectancy.
+
 
 
 

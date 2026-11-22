@@ -183,3 +183,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Multimodal evidence (2026-11-23 targeted update)
 
 - Does the combination of exercise and cognitive training improve working memory in older adults? A systematic review and meta-analysis *PeerJ*. 2023. PMID: [37065695](https://pubmed.ncbi.nlm.nih.gov/37065695/). DOI: [10.7717/peerj.15108](https://doi.org/10.7717/peerj.15108).
+
+## Expectancy and response prediction (2026-11-23 targeted update)
+
+- Expectancy Does Not Predict 18-month Treatment Outcomes with Cognitive Training in Mild Cognitive Impairment *Journal of Prevention of Alzheimer's Disease*. 2024. PMID: [38230719](https://pubmed.ncbi.nlm.nih.gov/38230719/). DOI: [10.14283/jpad.2023.62](https://doi.org/10.14283/jpad.2023.62).

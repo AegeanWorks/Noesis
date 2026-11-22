@@ -143,7 +143,7 @@ window.__NOESIS__.getState()
 
 ## What the Evidence Says
 
-The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 139 records with 331 outcomes (103 primary, 36 context).
+The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 140 records with 333 outcomes (103 primary, 37 context).
 
 - Cognitive training reliably improves trained tasks and short-term near transfer; broad far transfer is not established.
 - Neurofeedback for ADHD shows no significant probably blinded effect; consumer-grade neurofeedback shows no cognitive benefit.
