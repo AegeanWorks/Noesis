@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-everyday-function-evidence",
+    "task_id": "noesis-adhd-claim-boundary",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795387518.4198265,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795388157.9187274,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795394718.4198265,
+    "lease_until": 1795395357.9187274,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,36 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795387634.3441901,
-    "completed_head": "aa2458dc5fb6665ff06fcbcd3455e8ffb96dd9ab",
-    "completed_tree": "c9eb66af579cb829471e4f55102cd45848b40c93"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 33",
-      "phase_num": 3,
-      "description": "Reforge stage 33: window 99, 3 commit(s), 20 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, empty \u2014 nothing to commit",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188087.6852767,
-      "timestamp_str": "2026-11-20 18:21:27",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 33",
-      "phase_num": 3,
-      "description": "Reforge stage 33: stage 33 host review reviewed; run active; coverage 63/63",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188098.992213,
-      "timestamp_str": "2026-11-20 18:21:38",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 34",
@@ -373,6 +346,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-adhd-claim-boundary",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: extract Westwood 2023 ADHD CCT meta-analysis and add a linked 'not supported' list to the Evidence screen",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795387724.3547347,
+      "timestamp_str": "2026-11-23 01:48:44",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The Evidence screen explains near vs far transfer but does not link the field's clearest null result for a clinical claim the app already forbids (ADHD treatment).",
+        "benefits": "Adds a 36-RCT blinded-outcome meta-analysis and consolidates three claim-boundary citations in one visible place.",
+        "risks": "contract: one evidence record + Evidence screen list + test; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add the list with a UI test, run all suites and review the UI."
+      },
+      "plan_digest": "eec99f0ebe8cae80cec78dbd9a32ad2f83d19ef8e03c1f489f7b158b0438ddbf",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-adhd-claim-boundary",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 137/324 records, 457 node + 29 python tests, claim-boundary list reviewed in Edge, ADR-064",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795388157.9187274,
+      "timestamp_str": "2026-11-23 01:55:57",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

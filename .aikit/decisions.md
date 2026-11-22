@@ -453,6 +453,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add both as primary evidence-table records with only the estimates printed in their abstracts, and extend the Results aside with one short, PubMed-linked caveat that everyday-function transfer is under-investigated and that a single block's gain is not an established daily-life benefit. Add requirement R72 and a UI test pinning the wording and link.
 - **Consequences**: The review moves to 136 records and 319 outcomes (revision v2.2), D7 residuals fall to 962, and every result view now states the transfer gradient's evidentiary limit next to its own numbers.
 
+### ADR-064: Linked Claim-Boundary List on the Evidence Screen
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The Evidence screen already explains the transfer gradient and carries a Motivation-mode citation list, but the three claims Noesis refuses were scattered across mechanic qualifiers. Westwood et al. 2023 (PMID 36977764) supplies a strong blinded-outcome test of the clinical claim: 36 RCTs, no effect on ADHD total or hyperactivity symptoms, small setting-sensitive inattention effect, near-transfer working-memory gains only.
+- **Decision**: Add Westwood 2023 as a primary evidence-table record (entering magnitude only where the abstract's confidence bounds are internally reversed, with the inconsistency flagged), and add a short "What the review does not support" list on the Evidence screen linking the general-intelligence, ADHD-treatment and everyday-function boundaries. Add R73 and extend the citation test to cover the new links.
+- **Consequences**: The review moves to 137 records and 324 outcomes (revision v2.3), D7 residuals fall to 961, and the app's three claim boundaries are visible together with PubMed links rather than implied by separate mechanic notes.
+
 
 
 

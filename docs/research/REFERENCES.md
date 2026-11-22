@@ -171,3 +171,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 
 - The impact of cognitive training and mental stimulation on cognitive and everyday functioning of healthy older adults: a systematic review and meta-analysis *Ageing Research Reviews*. 2014. PMID: [24607830](https://pubmed.ncbi.nlm.nih.gov/24607830/). DOI: [10.1016/j.arr.2014.02.004](https://doi.org/10.1016/j.arr.2014.02.004).
 - Everyday Impact of Cognitive Interventions in Mild Cognitive Impairment: a Systematic Review and Meta-Analysis *Neuropsychology Review*. 2016. PMID: [27632385](https://pubmed.ncbi.nlm.nih.gov/27632385/). DOI: [10.1007/s11065-016-9330-4](https://doi.org/10.1007/s11065-016-9330-4).
+
+## Clinical claim boundary (2026-11-23 targeted update)
+
+- Computerized cognitive training in attention-deficit/hyperactivity disorder (ADHD): a meta-analysis of randomized controlled trials with blinded and objective outcomes *Molecular Psychiatry*. 2023. PMID: [36977764](https://pubmed.ncbi.nlm.nih.gov/36977764/). DOI: [10.1038/s41380-023-02000-7](https://doi.org/10.1038/s41380-023-02000-7).

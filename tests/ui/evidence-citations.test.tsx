@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 3);
+    expect(links).toHaveLength(mechanicCitations + 6);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -23,5 +23,9 @@ describe("evidence citation rows", () => {
       expect(link.getAttribute("target")).toBe("_blank");
       expect(link.getAttribute("rel")).toContain("noreferrer");
     }
+    const notSupported = screen.getByTestId("not-supported-list");
+    expect(notSupported.textContent).toMatch(/ADHD symptom treatment/i);
+    expect(notSupported.textContent).toMatch(/Everyday-function benefit/i);
+    expect(notSupported.querySelectorAll("a")).toHaveLength(3);
   });
 });

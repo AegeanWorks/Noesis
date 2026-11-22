@@ -8248,6 +8248,99 @@
    ],
    "synthesis_role": "primary",
    "product_use": "Context for the claim boundary: small everyday effects appear in MCI interventions, but they are not a basis for an app claim in healthy users."
+  },
+  {
+   "pmid": "36977764",
+   "doi": "10.1038/s41380-023-02000-7",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Molecular Psychiatry",
+   "title": "Computerized cognitive training in attention-deficit/hyperactivity disorder (ADHD): a meta-analysis of randomized controlled trials with blinded and objective outcomes",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "clinical:adhd",
+    "children",
+    "adults"
+   ],
+   "k": 36,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "adhd_symptoms",
+     "transfer": "na",
+     "measure": "SMD",
+     "value": 0.12,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "moderate",
+     "note": "Probably-blinded ADHD total and hyperactivity/impulsivity post-treatment; abstract prints intervals with reversed signs, so CI omitted and magnitude retained"
+    },
+    {
+     "domain": "adhd_symptoms",
+     "transfer": "na",
+     "measure": "SMD",
+     "value": 0.17,
+     "ci_low": 0.02,
+     "ci_high": 0.31,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Small inattention effect; doubled in the intervention delivery setting (SMD 0.40, 0.09-0.71), suggesting setting specificity"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.38,
+     "ci_low": 0.24,
+     "ci_high": 0.53,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Verbal working memory, 15 trials"
+    },
+    {
+     "domain": "visuospatial_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.49,
+     "ci_low": 0.31,
+     "ci_high": 0.67,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Visuospatial working memory, 9 trials"
+    },
+    {
+     "domain": "academic",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "No effect on reading or arithmetic outcomes"
+    }
+   ],
+   "findings": [
+    "36 RCTs, 17 on working-memory training; no probably-blinded effect on total or hyperactivity symptoms",
+    "Working-memory gains were short-term; longer-term verbal WM, reading comprehension and executive-function ratings rest on 5-7 trials"
+   ],
+   "limitations": [
+    "Setting-specific inattention effect",
+    "Clinical ADHD population, not the app's audience"
+   ],
+   "flags": [
+    "attenuation_with_blinding",
+    "clinical_specific",
+    "source_sign_inconsistency"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Grounds the app's no-ADHD-treatment claim: blinded outcomes show no clinical symptom effect, only task-near working-memory gains."
   }
  ]
 }

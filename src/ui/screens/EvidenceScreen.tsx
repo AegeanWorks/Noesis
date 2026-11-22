@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 136 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 137 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -132,6 +132,30 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
           transfer far more reliably than far transfer, which is why this app reports blocks
           separately and makes no intelligence claim.
         </p>
+        <h3 data-testid="not-supported-heading">What the review does not support</h3>
+        <ul className="citations" data-testid="not-supported-list">
+          <li>
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/22612437/"
+              label="No general-intelligence or academic gain from working-memory training"
+              pmid="22612437"
+            />
+          </li>
+          <li>
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/36977764/"
+              label="No ADHD symptom treatment from computerized training (blinded outcomes)"
+              pmid="36977764"
+            />
+          </li>
+          <li>
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/24607830/"
+              label="No established everyday-function benefit in healthy adults"
+              pmid="24607830"
+            />
+          </li>
+        </ul>
       </aside>
 
       <Button variant="ghost" onClick={onHome}>
