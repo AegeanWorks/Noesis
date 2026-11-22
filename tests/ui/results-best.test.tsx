@@ -45,4 +45,14 @@ describe("ResultsScreen personal bests", () => {
     renderResults([]);
     expect(screen.queryByTestId("new-best-nback")).toBeNull();
   });
+
+  it("shows an evidence-linked everyday-function caveat", () => {
+    renderResults([]);
+    const note = screen.getByTestId("everyday-function-evidence");
+    expect(note.textContent).toMatch(/under-investigated/i);
+    expect(note.textContent).toMatch(/not an established everyday benefit/i);
+    expect(note.querySelector("a")?.getAttribute("href")).toBe(
+      "https://pubmed.ncbi.nlm.nih.gov/24607830/",
+    );
+  });
 });

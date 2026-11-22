@@ -446,6 +446,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Li 2024 as a primary evidence-table record, extract the two reported estimates, and extend the adherence card with a short, evidence-linked note that states the thresholds as study-level observations with an explicit "not a personal target or a promise of benefit" caveat and a PubMed link. Add requirement R71 and a UI test pinning the wording and link.
 - **Consequences**: The review moves to 134 records and 312 outcomes (revision v2.1) and D7 residuals fall to 964. The app's adherence feedback becomes traceable to evidence without turning a subgroup threshold into a user target.
 
+### ADR-063: Everyday-Function Caveat on Result Cards
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The Results screen's "What this does not mean" list is claim hygiene without a source. Two residual eligible reviews directly address the right-hand end of the transfer gradient: Kelly 2014 (31 RCTs, healthy older adults) found trained-task and near-transfer gains but reported everyday function as largely under-investigated; Chandler 2016 (30 controlled studies, MCI) found small ADL, mood and metacognition effects and no quality-of-life effect.
+- **Decision**: Add both as primary evidence-table records with only the estimates printed in their abstracts, and extend the Results aside with one short, PubMed-linked caveat that everyday-function transfer is under-investigated and that a single block's gain is not an established daily-life benefit. Add requirement R72 and a UI test pinning the wording and link.
+- **Consequences**: The review moves to 136 records and 319 outcomes (revision v2.2), D7 residuals fall to 962, and every result view now states the transfer gradient's evidentiary limit next to its own numbers.
+
 
 
 

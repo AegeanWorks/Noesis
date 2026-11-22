@@ -8100,6 +8100,154 @@
    ],
    "synthesis_role": "primary",
    "product_use": "Grounds an evidence-linked adherence note: trial benefits appeared above study-level engagement/adherence thresholds, which are context and not a personal target or guarantee."
+  },
+  {
+   "pmid": "24607830",
+   "doi": "10.1016/j.arr.2014.02.004",
+   "doi_status": "verified",
+   "year": 2014,
+   "journal": "Ageing Research Reviews",
+   "title": "The impact of cognitive training and mental stimulation on cognitive and everyday functioning of healthy older adults: a systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 31,
+   "n": 2192,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "p value",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Versus active controls: working memory p=0.04, processing speed p<0.0001, composite cognition p=0.001; 31 RCTs, 1806 training plus 386 mental-stimulation participants"
+    },
+    {
+     "domain": "episodic_memory",
+     "transfer": "near",
+     "measure": "p value",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Versus no intervention: face-name recall p=0.02, immediate recall p=0.02, paired associates p=0.001"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Impact on everyday functioning largely under-investigated; no pooled estimate reported"
+    }
+   ],
+   "findings": [
+    "Transfer and maintenance were most commonly reported with adaptive training, at least ten sessions and long-term follow-up",
+    "Everyday-function effects remain under-studied in cognitively healthy older adults"
+   ],
+   "limitations": [
+    "P values reported instead of effect sizes in the abstract",
+    "General mental stimulation evidence remains limited"
+   ],
+   "flags": [
+    "maintenance_gap",
+    "reporting_gap"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Grounds the result-view note that everyday-function transfer is not established; trained-task and near-transfer gains are the defensible claim."
+  },
+  {
+   "pmid": "27632385",
+   "doi": "10.1007/s11065-016-9330-4",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Neuropsychology Review",
+   "title": "Everyday Impact of Cognitive Interventions in Mild Cognitive Impairment: a Systematic Review and Meta-Analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "mci"
+   ],
+   "k": 30,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "Cohen d",
+     "value": 0.23,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Small significant median effect on activities of daily living; 30 controlled studies in MCI"
+    },
+    {
+     "domain": "depression",
+     "transfer": "far",
+     "measure": "Cohen d",
+     "value": 0.16,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Mood median effect; computerized studies benefited mood most"
+    },
+    {
+     "domain": "mindfulness",
+     "transfer": "na",
+     "measure": "Cohen d",
+     "value": 0.3,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Metacognitive outcomes median effect"
+    },
+    {
+     "domain": "quality_of_life",
+     "transfer": "far",
+     "measure": "Cohen d",
+     "value": 0.1,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Quality of life not significant"
+    }
+   ],
+   "findings": [
+    "Therapist-based and multimodal interventions affected ADLs and metacognition more than controls; computerized studies mainly helped mood",
+    "Everyday generalization in MCI is encouraging but small and limited by database and language restrictions"
+   ],
+   "limitations": [
+    "MCI population, not healthy adults",
+    "Only MEDLINE and PsycINFO searched; published data only"
+   ],
+   "flags": [
+    "small_effect",
+    "clinical_specific"
+   ],
+   "synthesis_role": "primary",
+   "product_use": "Context for the claim boundary: small everyday effects appear in MCI interventions, but they are not a basis for an app claim in healthy users."
   }
  ]
 }

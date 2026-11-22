@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-adherence-evidence",
+    "task_id": "noesis-everyday-function-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795386437.0587468,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795387518.4198265,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795393637.0587468,
+    "lease_until": 1795394718.4198265,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,36 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795386550.704904,
-    "completed_head": "a0f27d979271af6fd12928d89c2592c11fdce7f6",
-    "completed_tree": "7b38f3f3a69f5b20ccc82474584941b999a7640c"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 31",
-      "phase_num": 3,
-      "description": "Reforge stage 31: stage 31 host review reviewed; run active; coverage 32/32",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188053.3383367,
-      "timestamp_str": "2026-11-20 18:20:53",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 32",
-      "phase_num": 3,
-      "description": "Reforge stage 32: window 96, 3 commit(s), 16 file(s) reviewed (unreviewed), 0 finding(s), 0 repaired, empty \u2014 nothing to commit",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188065.1214905,
-      "timestamp_str": "2026-11-20 18:21:05",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 32",
@@ -350,6 +323,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-everyday-function-evidence",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: extract Kelly 2014 and Chandler 2016 everyday-function reviews and ground the Results claim-boundary note",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795387004.1527312,
+      "timestamp_str": "2026-11-23 01:36:44",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The Results screen lists what a block does not mean but cites no source; two residual eligible reviews directly address everyday-function transfer in healthy older adults and MCI.",
+        "benefits": "Adds pooled near-transfer evidence and explicit everyday-function uncertainty with a verifiable PubMed link in the result view.",
+        "risks": "contract: two evidence records + results note + test; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Verify both records via PubMed efetch, update counts/references/prose, add one linked note with a test, run all suites and review the UI."
+      },
+      "plan_digest": "4d06cde38f62c5bac5607b2dac1726560180a0bcec0afebd5fa645a979fd92e1",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-everyday-function-evidence",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 136/319 records, 457 node + 29 python tests, result caveat reviewed in Edge, ADR-063",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795387518.4198265,
+      "timestamp_str": "2026-11-23 01:45:18",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

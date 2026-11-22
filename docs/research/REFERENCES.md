@@ -166,3 +166,8 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Adherence and engagement (2026-11-23 targeted update)
 
 - Effects of engagement, persistence and adherence on cognitive training outcomes in older adults with and without cognitive impairment: a systematic review and meta-analysis of randomised controlled trials *Age and Ageing*. 2024. PMID: [38266127](https://pubmed.ncbi.nlm.nih.gov/38266127/). DOI: [10.1093/ageing/afad247](https://doi.org/10.1093/ageing/afad247).
+
+## Everyday function and transfer (2026-11-23 targeted update)
+
+- The impact of cognitive training and mental stimulation on cognitive and everyday functioning of healthy older adults: a systematic review and meta-analysis *Ageing Research Reviews*. 2014. PMID: [24607830](https://pubmed.ncbi.nlm.nih.gov/24607830/). DOI: [10.1016/j.arr.2014.02.004](https://doi.org/10.1016/j.arr.2014.02.004).
+- Everyday Impact of Cognitive Interventions in Mild Cognitive Impairment: a Systematic Review and Meta-Analysis *Neuropsychology Review*. 2016. PMID: [27632385](https://pubmed.ncbi.nlm.nih.gov/27632385/). DOI: [10.1007/s11065-016-9330-4](https://doi.org/10.1007/s11065-016-9330-4).

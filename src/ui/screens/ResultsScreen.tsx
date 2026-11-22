@@ -815,6 +815,18 @@ export function ResultsScreen({
           ))}
           <li>A change in one session is not evidence of durable improvement.</li>
         </ul>
+        <p className="fine" data-testid="everyday-function-evidence">
+          Everyday-function transfer is under-investigated in healthy adults. The largest reviews
+          find trained-task and near-transfer gains, not an established everyday benefit.{" "}
+          <a
+            href="https://pubmed.ncbi.nlm.nih.gov/24607830/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Kelly et al. 2014
+          </a>{" "}
+          <span className="pmid">PMID 24607830</span>
+        </p>
       </aside>
 
       <SymptomCheckin sessionId={sessionId} onLogged={onAdverseLogged} />
