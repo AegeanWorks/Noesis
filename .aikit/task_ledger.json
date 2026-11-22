@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-game-design-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795389313.256398,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795396513.256398,
@@ -15,21 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795389469.5828066,
+    "completed_head": "43f529d4d346492ab73bd6ad6366d98829fd6da8",
+    "completed_tree": "d890fe2082e2446980fb672b4ec29aae767246d5"
   },
   "checkpoints": [
-    {
-      "task_id": "reforge:run-1",
-      "phase": "reforge stage 35",
-      "phase_num": 3,
-      "description": "Reforge stage 35: stage 35 host review reviewed; run active; coverage 139/139",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795188179.6594574,
-      "timestamp_str": "2026-11-20 18:22:59",
-      "agent": "opencode",
-      "operator_task": "noesis-gonogo-dprime"
-    },
     {
       "task_id": "reforge:run-1",
       "phase": "reforge stage 36",
@@ -411,6 +402,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-game-design-evidence",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-game-design-evidence' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795389469.6465216,
+      "timestamp_str": "2026-11-23 02:17:49",
+      "agent": "opencode:hy4-flash-free",
+      "head": "43f529d4d346492ab73bd6ad6366d98829fd6da8",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }

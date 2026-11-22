@@ -239,5 +239,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "5f2df39069f7c1d7bf7e2b1faa85ccf968d5fd7f6efa3a6e8d3b96d410525b8a",
     "baseline_digest": "5f2df39069f7c1d7bf7e2b1faa85ccf968d5fd7f6efa3a6e8d3b96d410525b8a"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Settings screen in Edge: clock note with effect sizes and PMID 32980574 link renders, no console errors; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795389428.6131563,
+    "finished_at": 1795389469.088921,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "e40baa452af3b2ee438a172ff1ff3535f2f6cc982722df96d85988959396ebca",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795389469.088923
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Clock note test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/settings-symptoms.test.tsx",
+        "reason": "Clock note test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "e40baa452af3b2ee438a172ff1ff3535f2f6cc982722df96d85988959396ebca",
+    "baseline_digest": "e40baa452af3b2ee438a172ff1ff3535f2f6cc982722df96d85988959396ebca"
   }
 ]
