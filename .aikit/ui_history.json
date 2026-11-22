@@ -63,5 +63,64 @@
     "final_snapshot_entries": 0,
     "surface_digest": "f84cc9ef17696d7085e2d011d051fa6551224f5a9f394cc45c1c7cb3b4bd1fc4",
     "baseline_digest": "f84cc9ef17696d7085e2d011d051fa6551224f5a9f394cc45c1c7cb3b4bd1fc4"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Played Visual Search in Edge: briefing, 9-cell conjunction grid, single red-circle target, tap feedback Correct, no console errors; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795385523.8436382,
+    "finished_at": 1795385591.7803895,
+    "strikes": 1,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "c9ec1e4e0d0158bb4f5334f2dad56cf3387ef9816940d92b38230d75d076d885",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795385591.7803917
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/engine/ai.test.ts",
+        "reason": "Visual-search mechanic and count updates"
+      },
+      {
+        "path": "tests/engine/search.test.ts",
+        "reason": "Visual-search mechanic and count updates"
+      },
+      {
+        "path": "tests/storage/adaptive.test.ts",
+        "reason": "Visual-search mechanic and count updates"
+      },
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Visual-search mechanic and count updates"
+      },
+      {
+        "path": "tests/ui/mechanic-stage.test.tsx",
+        "reason": "Visual-search mechanic and count updates"
+      },
+      {
+        "path": "tests/ui/menu-filter.test.tsx",
+        "reason": "Visual-search mechanic and count updates"
+      },
+      {
+        "path": "tests/ui/settings-symptoms.test.tsx",
+        "reason": "Visual-search mechanic and count updates"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "c9ec1e4e0d0158bb4f5334f2dad56cf3387ef9816940d92b38230d75d076d885",
+    "baseline_digest": "c9ec1e4e0d0158bb4f5334f2dad56cf3387ef9816940d92b38230d75d076d885"
   }
 ]
