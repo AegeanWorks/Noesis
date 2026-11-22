@@ -11,7 +11,7 @@
 
 An evidence-led cognitive training app. Every mechanic is a deterministic, headlessly drivable state machine, so the web app, the Android WebView build, the test suite and AI simulators run the same logic.
 
-**Current phase: first working vertical slice.** One-click sessions, four core mechanics plus seven experimental focus tests (Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection), a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
+**Current phase: first working vertical slice.** One-click sessions, four core mechanics plus eight experimental focus tests (Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates, Change Detection and Visual Search), a test-selection menu with per-block history, a pre-test evidence briefing, safety onboarding, optional research consent with local email data return, per-block measurement, an evidence registry, and a debug APK build path. The evidence review that defines the claim boundaries is complete in [`docs/research/`](docs/research/).
 
 ## 30-Second Cold-Start Quick Reference
 
@@ -43,7 +43,7 @@ An evidence-led cognitive training app. Every mechanic is a deterministic, headl
 
 The home screen has one primary action: **Start session**. It creates and begins the first block in the same click. If a session is already active, the same button resumes it. First-time users answer the safety screen once; its final button also starts the session immediately.
 
-Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four core mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection are available as single-test focus sessions from the Menu and are not in the default lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.
+Session length (quick or standard) and difficulty (gentle, standard or challenge) are user-selected in Settings and applied to the one-click start. Quick sessions rotate which two of the four core mechanics appear, so repeated short sessions still cover all four; standard sessions keep the full interleaved lineup. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates, Change Detection and Visual Search are available as single-test focus sessions from the Menu and are not in the default lineup. The optional practice plan asks when and where the next session will happen, what to pair it with, and what to do if stuck; it is stored locally and never blocks starting.
 
 An active session is snapshotted locally while it runs. After a browser reload or an Android WebView restart, the home screen offers **Resume session** instead of losing progress. Pausing then choosing **End session** asks for confirmation first, so an accidental tap can return to the paused session instead of discarding it.
 
@@ -53,7 +53,7 @@ Completed sessions are stored locally and summarized per mechanic. Monthly word-
 
 ## Practice Menu and Pre-Test Briefing
 
-The **Menu** tab is the explicit choice point. It lists every test - four core mechanics plus the experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection - with a short,
+The **Menu** tab is the explicit choice point. It lists every test - four core mechanics plus the experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates, Change Detection and Visual Search - with a short,
 literature-grounded explanation, the claim boundary, a primary PMID link, and the user's
 last/best accuracy and block count for that test. From there a user can start a single-test
 session or start/resume the interleaved session. The same screen has a **History** tab that
@@ -143,7 +143,7 @@ window.__NOESIS__.getState()
 
 ## What the Evidence Says
 
-The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 132 records with 308 outcomes (97 primary, 35 context).
+The review screened 2,360 unique bibliographic records and 363 trial records, and extracted 133 records with 310 outcomes (97 primary, 36 context).
 
 - Cognitive training reliably improves trained tasks and short-term near transfer; broad far transfer is not established.
 - Neurofeedback for ADHD shows no significant probably blinded effect; consumer-grade neurofeedback shows no cognitive benefit.
@@ -229,8 +229,9 @@ noesis/
 | Prospective Memory | Delayed intentions | Experimental (focus test) | Sort letters as vowel/consonant, but choose Remember when the cue letter Q appears; reports ongoing accuracy, cue hits, false alarms and reaction time. |
 | Paired Associates | Verbal episodic memory | Experimental (focus test) | Study a word pair, then choose its partner from four options; reports accuracy and reaction time. |
 | Change Detection | Visual working memory | Experimental (focus test) | Hold a brief coloured array and tap the square that changed; reports accuracy, set size and reaction time. |
+| Visual Search | Conjunction attention | Experimental (focus test) | Tap a red-circle target among red squares and blue circles in a static grid; reports accuracy, reaction time and the within-session set-size cost. |
 
-The four core mechanics are in the standard starter session: 2-back, go/no-go, reasoning and Speed Tap. Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection are experimental focus tests from the Menu; they are not in the default lineup and make no general-intelligence or everyday-function claim.
+The four core mechanics are in the standard starter session: 2-back, go/no-go, reasoning and Speed Tap. Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates, Change Detection and Visual Search are experimental focus tests from the Menu; they are not in the default lineup and make no general-intelligence or everyday-function claim.
 
 ## Safety
 

@@ -86,6 +86,14 @@ import {
   changeView,
   createChange,
 } from "./change";
+import {
+  applySearchAction,
+  createSearch,
+  searchComplete,
+  searchConfig,
+  searchResult,
+  searchView,
+} from "./search";
 import type {
   MechanicAction,
   MechanicId,
@@ -105,6 +113,7 @@ export function defaultTrials(id: MechanicId, difficulty: number): number {
   if (id === "prospective") return 24;
   if (id === "paired") return 12;
   if (id === "change") return 12;
+  if (id === "search") return 16 + (difficulty - 1) * 2;
   return 8;
 }
 
@@ -124,6 +133,7 @@ export function createMechanic(
   if (id === "prospective") return createProspective(seed, prospectiveConfig(difficulty, trials));
   if (id === "paired") return createPaired(seed, pairedConfig(difficulty, trials));
   if (id === "change") return createChange(seed, changeConfig(difficulty, trials));
+  if (id === "search") return createSearch(seed, searchConfig(difficulty, trials));
   return createReasoning(seed, reasoningConfig(difficulty, trials));
 }
 
@@ -141,6 +151,7 @@ export function applyMechanicAction(
   if (state.mechanic === "prospective") return applyProspectiveAction(state, action);
   if (state.mechanic === "paired") return applyPairedAction(state, action);
   if (state.mechanic === "change") return applyChangeAction(state, action);
+  if (state.mechanic === "search") return applySearchAction(state, action);
   return applyReasoningAction(state, action);
 }
 
@@ -155,6 +166,7 @@ export function mechanicView(state: MechanicState): MechanicView {
   if (state.mechanic === "prospective") return prospectiveView(state);
   if (state.mechanic === "paired") return pairedView(state);
   if (state.mechanic === "change") return changeView(state);
+  if (state.mechanic === "search") return searchView(state);
   return reasoningView(state);
 }
 
@@ -169,6 +181,7 @@ export function mechanicResult(state: MechanicState): MechanicResult {
   if (state.mechanic === "prospective") return prospectiveResult(state);
   if (state.mechanic === "paired") return pairedResult(state);
   if (state.mechanic === "change") return changeResult(state);
+  if (state.mechanic === "search") return searchResult(state);
   return reasoningResult(state);
 }
 
@@ -183,5 +196,6 @@ export function mechanicComplete(state: MechanicState): boolean {
   if (state.mechanic === "prospective") return prospectiveComplete(state);
   if (state.mechanic === "paired") return pairedComplete(state);
   if (state.mechanic === "change") return changeComplete(state);
+  if (state.mechanic === "search") return searchComplete(state);
   return reasoningComplete(state);
 }

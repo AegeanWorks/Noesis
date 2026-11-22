@@ -376,3 +376,35 @@ These decisions are scope decisions, not evidence that the training modes are in
   from hits, misses, commissions and correct rejections, alongside impulse errors. d′ corrects
   for the tendency to respond or withhold and is descriptive only. The result card explains this.
   Recorded in ADR-059.
+
+## 7. Conjunction visual search (implemented as an experimental focus test)
+
+A 2026-11-23 targeted PubMed update revisited visual search, which section 6.1 had excluded only
+as the proprietary **UFOV** protocol. Conjunction search itself is not proprietary and can be
+presented as a static grid with no rapid or flashing frames, so it clears the app's safety posture.
+
+- Zhang et al. 2022 (PMID 35838486, *Journal of Vision*; DOI 10.1167/jov.22.8.7) trained healthy
+  adults on a **conjunction** search task (target shares one feature with each distractor class).
+  Training improved search behaviour, reduced saccade count and total scan time, and increased
+  N2pc amplitude, which the authors read as enhanced covert attention to the trained target.
+- Vialatte et al. 2023 (PMID 36922549, *Scientific Reports*; DOI 10.1038/s41598-023-31037-5)
+  introduced a symbol-search serious game for 21 children with reading disorders and found a
+  session-specific reading-accuracy gain without a speed-accuracy trade-off; the gain correlated
+  with time spent training. Clinical and single-group, so it is context, not the product claim.
+- Bueichekú et al. 2019 (PMID 30859709, *Human Brain Mapping*; DOI 10.1002/hbm.24560) found
+  resting-state connectivity changes after 30 minutes of visual-search training in 42 healthy
+  adults versus a no-contact control; neural change is a mechanism, not an everyday benefit.
+
+**Decision:** ship a **conjunction search** grid as an experimental focus test. Each trial shows a
+static grid with one target defined by a combination of colour and shape, embedded among two
+distractor classes that each share one feature with the target. Set size varies within the block
+so a within-session **set-size cost** (response-time difference between small and large grids)
+can be reported; search slope is the standard laboratory index and the set-size effect is the
+closest thing to a task-specific metric the app can measure honestly. The brief states that
+training improves the trained search, that the field has no pooled healthy-adult effect estimate
+suitable for a transfer claim, and that no general-attention or everyday-function benefit is
+claimed. No evidence-table record is added: none of the three sources reports a pooled effect
+size in the abstract, so they stay narrative-only like the other task-specific candidates.
+
+**Safety:** static coloured shapes; no flicker, no rapid serial presentation, no photosensitive
+trigger. Recorded in ADR-061.

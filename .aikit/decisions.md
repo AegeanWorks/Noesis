@@ -432,6 +432,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Extract eight residual eligible working-memory reviews (PMIDs 32507890, 25298292, 31939109, 36958492, 33173503, 32738262, 25793607, 30652908) using PubMed MEDLINE abstracts for every field, entering only estimates printed in the abstract and leaving null where magnitude was not reported. Seven are primary and the predictor-methodology review is context. Update the composition counts in the evidence table, snapshot test, references, README, SEARCH_LOG, PROTOCOL and SYNTHESIS, and add their PMIDs to requirements R3, R7, R10 and R12.
 - **Consequences**: The table moves from 124/286 to 132/308 records/outcomes and revision v1.9. The train-the-component/measure-the-component rule and near-transfer-only claim now have multi-review support; durability beyond six months becomes a measured question, not an assumed benefit. D7 is partially closed with 965 eligible residuals still unextracted, and the snapshot test pins every quoted count.
 
+### ADR-061: Experimental Conjunction Visual Search Focus Test
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Section 6.1 excluded UFOV as proprietary, but ordinary conjunction search is not proprietary and can be shown as a static grid. Section 7 of NEW_MECHANIC_CANDIDATES.md records a targeted PubMed update: Zhang 2022 (PMID 35838486) trained healthy adults on conjunction search with behavioural and N2pc gains; Vialatte 2023 (PMID 36922549) and Bueichekú 2019 (PMID 30859709) are supporting narrative context only.
+- **Decision**: Add `search` as an experimental focus test: a static red-circle target among red-square and blue-circle distractors, with small and large grids alternating so a within-session set-size cost can be reported. Add one context evidence-table record (Zhang 2022) so the in-app citation resolves to the corpus; the other two sources stay narrative-only. No general-attention, reading or everyday-function claim; no flashing or rapid presentation.
+- **Consequences**: The review moves to 133 records and 310 outcomes (revision v2.0). The practice menu grows to twelve tests, adaptive levels and snapshot counts gain the new id, and the Evidence screen lists the citation. The new game is claim-bounded task practice with a task-specific set-size metric.
+
 
 
 

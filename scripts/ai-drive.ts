@@ -14,7 +14,7 @@ interface Options {
   help: boolean;
 }
 
-const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed", "switching", "flanker", "spatial", "rotation", "prospective", "paired", "change"];
+const MECHANICS: readonly MechanicId[] = ["nback", "gonogo", "reasoning", "speed", "switching", "flanker", "spatial", "rotation", "prospective", "paired", "change", "search"];
 
 function parse(argv: string[]): Options {
   const options: Options = {

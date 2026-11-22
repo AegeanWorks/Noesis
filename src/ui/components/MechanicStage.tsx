@@ -310,6 +310,53 @@ function ChangeStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) 
   );
 }
 
+function SearchStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  const cells = view.options ?? [];
+  const setSize = view.stimulus ? Number(view.stimulus.replace("set-", "")) : cells.length;
+  return (
+    <div
+      className="stage stage-search"
+      data-mechanic="search"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+      data-set-size={Number.isFinite(setSize) ? setSize : cells.length}
+    >
+      <p className="stage-prompt">{view.prompt}</p>
+      <p className="search-target">
+        Target:{" "}
+        <span className="search-legend search-circle search-red" aria-hidden="true" /> red circle
+      </p>
+      <div
+        className={`search-grid ${cells.length > 16 ? "search-grid-large" : "search-grid-small"}`}
+        role="group"
+        aria-label="Visual search grid"
+      >
+        {cells.map((token, index) => {
+          const [cellShape = "circle", cellColour = "red"] = token.split("-");
+          return (
+            <button
+              key={index}
+              type="button"
+              className={`search-cell search-${cellShape} search-${cellColour}`}
+              data-testid={`search-cell-${index}`}
+              data-state={token}
+              aria-label={`Shape ${index + 1}: ${cellColour} ${cellShape}`}
+              disabled={!view.canRespond}
+              onClick={() => onAnswer(index)}
+            />
+          );
+        })}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function PairedStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   const [first = "", second = ""] = (view.stimulus ?? "").split("|");
   return (
@@ -528,6 +575,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "change") {
     return <ChangeStage view={view} onAnswer={props.onAnswer} />;
+  }
+  if (view.mechanic === "search") {
+    return <SearchStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

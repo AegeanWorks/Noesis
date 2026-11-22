@@ -27,13 +27,13 @@ function renderMenu(overrides: Partial<ComponentProps<typeof PracticeMenuScreen>
 describe("Practice menu domain filter", () => {
   it("filters the test list by domain and keeps starting tests working", () => {
     const props = renderMenu();
-    expect(screen.getByTestId("menu-filter-count").textContent).toBe("11 of 11 tests");
+    expect(screen.getByTestId("menu-filter-count").textContent).toBe("12 of 12 tests");
 
     fireEvent.change(screen.getByTestId("domain-filter"), {
       target: { value: "working_memory" },
     });
 
-    expect(screen.getByTestId("menu-filter-count").textContent).toBe("3 of 11 tests");
+    expect(screen.getByTestId("menu-filter-count").textContent).toBe("3 of 12 tests");
     for (const name of ["N-back", "Spatial Span", "Change Detection"]) {
       expect(screen.getByRole("heading", { name })).toBeTruthy();
     }
@@ -46,6 +46,7 @@ describe("Practice menu domain filter", () => {
       "Mental Rotation",
       "Prospective Memory",
       "Paired Associates",
+      "Visual Search",
     ]) {
       expect(screen.queryByRole("heading", { name })).toBeNull();
     }
@@ -58,12 +59,12 @@ describe("Practice menu domain filter", () => {
     renderMenu();
     const select = screen.getByTestId("domain-filter");
     fireEvent.change(select, { target: { value: "episodic_memory" } });
-    expect(screen.getByTestId("menu-filter-count").textContent).toBe("2 of 11 tests");
+    expect(screen.getByTestId("menu-filter-count").textContent).toBe("2 of 12 tests");
     expect(screen.getByRole("heading", { name: "Prospective Memory" })).toBeTruthy();
     expect(screen.getByRole("heading", { name: "Paired Associates" })).toBeTruthy();
 
     fireEvent.change(select, { target: { value: "all" } });
-    expect(screen.getByTestId("menu-filter-count").textContent).toBe("11 of 11 tests");
+    expect(screen.getByTestId("menu-filter-count").textContent).toBe("12 of 12 tests");
     expect(screen.getByRole("heading", { name: "N-back" })).toBeTruthy();
   });
 });

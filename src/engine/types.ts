@@ -10,6 +10,7 @@ export const MECHANIC_IDS = [
   "prospective",
   "paired",
   "change",
+  "search",
 ] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
@@ -458,6 +459,49 @@ export interface PairedState {
   completed: boolean;
 }
 
+export interface SearchConfig {
+  trials: number;
+  timeLimitMs: number;
+  feedbackMs: number;
+  smallSetSize: number;
+  largeSetSize: number;
+}
+
+export interface SearchTrial {
+  cells: string[];
+  targetIndex: number;
+  setSize: number;
+  large: boolean;
+}
+
+export interface SearchResponse {
+  trial: number;
+  setSize: number;
+  large: boolean;
+  selected: number | null;
+  targetIndex: number;
+  correct: boolean;
+  reactionMs: number | null;
+  timedOut: boolean;
+}
+
+export interface SearchState {
+  mechanic: "search";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: SearchConfig;
+  trials: SearchTrial[];
+  index: number;
+  phase: "question" | "feedback" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  itemStartTick: number;
+  selected: number | null;
+  responses: SearchResponse[];
+  completed: boolean;
+}
+
 export interface ChangeConfig {
   trials: number;
   setSize: number;
@@ -529,7 +573,8 @@ export type MechanicState =
   | RotationState
   | ProspectiveState
   | PairedState
-  | ChangeState;
+  | ChangeState
+  | SearchState;
 
 export type MechanicAction =
   | { type: "respond" }

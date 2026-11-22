@@ -2330,6 +2330,73 @@ html.high-contrast .speed-ring-active {
   border-color: var(--accent);
 }
 
+/* Conjunction visual search: static shapes, no motion or flashing. */
+.search-target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 4px 0 10px;
+  font-size: 13px;
+  color: var(--text-muted, #94a3b8);
+}
+
+.search-legend {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.search-grid {
+  display: grid;
+  gap: 8px;
+  margin: 8px auto;
+  justify-content: center;
+}
+
+.search-grid-small {
+  grid-template-columns: repeat(3, 56px);
+}
+
+.search-grid-large {
+  grid-template-columns: repeat(5, 46px);
+}
+
+.search-cell {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+}
+
+.search-grid-large .search-cell {
+  width: 46px;
+  height: 46px;
+}
+
+.search-cell:disabled {
+  cursor: default;
+}
+
+.search-circle {
+  border-radius: 50%;
+}
+
+.search-square {
+  border-radius: 8px;
+}
+
+.search-red {
+  background: #ff6b6b;
+}
+
+.search-blue {
+  background: #6ea8fe;
+}
+
 
 .gonogo-dprime-note {
   margin: 4px 0 8px;

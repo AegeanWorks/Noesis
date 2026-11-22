@@ -158,3 +158,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 - Working memory updating training promotes plasticity & behavioural gains: A systematic review & meta-analysis *Neuroscience & Biobehavioral Reviews*. 2020. PMID: [32738262](https://pubmed.ncbi.nlm.nih.gov/32738262/). DOI: [10.1016/j.neubiorev.2020.07.027](https://doi.org/10.1016/j.neubiorev.2020.07.027).
 - Benefits of a working memory training program for inattention in daily life: a systematic review and meta-analysis *PLOS ONE*. 2015. PMID: [25793607](https://pubmed.ncbi.nlm.nih.gov/25793607/). DOI: [10.1371/journal.pone.0119522](https://doi.org/10.1371/journal.pone.0119522).
 - A meta-analysis of the experimental evidence on the near- and far-transfer effects among children's executive function skills *Psychological Bulletin*. 2019. PMID: [30652908](https://pubmed.ncbi.nlm.nih.gov/30652908/). DOI: [10.1037/bul0000180](https://doi.org/10.1037/bul0000180).
+
+## Visual-search task evidence (2026-11-23 targeted update)
+
+- Visual search training benefits from the integrative effect of enhanced covert attention and optimized overt eye movements *Journal of Vision*. 2022. PMID: [35838486](https://pubmed.ncbi.nlm.nih.gov/35838486/). DOI: [10.1167/jov.22.8.7](https://doi.org/10.1167/jov.22.8.7).

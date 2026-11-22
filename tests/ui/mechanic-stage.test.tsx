@@ -304,4 +304,27 @@ describe("MechanicStage", () => {
     fireEvent.click(screen.getByTestId("change-cell-4"));
     expect(onAnswer).toHaveBeenCalledWith(4);
   });
+
+  it("renders a static conjunction-search grid and reports the tapped cell", () => {
+    const onAnswer = vi.fn();
+    const cells = ["circle-blue", "square-red", "circle-red", "circle-blue"];
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "search",
+          name: "Visual Search",
+          phase: "question",
+          prompt: "Tap the red circle among the shapes.",
+          stimulus: "set-4",
+          options: cells,
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(document.querySelector(".stage-search")?.getAttribute("data-set-size")).toBe("4");
+    expect(screen.getByTestId("search-cell-2").getAttribute("data-state")).toBe("circle-red");
+    fireEvent.click(screen.getByTestId("search-cell-2"));
+    expect(onAnswer).toHaveBeenCalledWith(2);
+  });
 });

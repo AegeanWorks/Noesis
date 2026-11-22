@@ -273,6 +273,31 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Static coloured squares; one brief change, no flashing.",
   },
+  search: {
+    id: "search",
+    name: "Visual Search",
+    domain: "executive_function",
+    tagline: "Conjunction attention",
+    instructions:
+      "Find the red circle among the red squares and blue circles. Tap it as quickly as you can. Smaller and larger grids alternate so the app can compare search times.",
+    brief:
+      "Conjunction visual search: the target shares one feature with each distractor, so you must combine colour and shape to find it. Training studies show faster and more efficient search for the trained target, but no pooled healthy-adult effect estimate supports a transfer claim. This is an experimental focus test, not an attention diagnostic or a general-attention claim.",
+    claimLevel: "experimental",
+    claim: "Practices efficient conjunction search within a static grid.",
+    qualifier:
+      "Task practice only. Accuracy and the within-session set-size cost are descriptive measures; this is not a diagnostic test and does not claim improved general attention or everyday function.",
+    notClaimed: [
+      "General attention",
+      "Everyday function",
+      "General intelligence",
+      "ADHD treatment",
+      "Reading improvement",
+    ],
+    citations: [
+      { pmid: "35838486", label: "Conjunction visual-search training study (2022)" },
+    ],
+    safety: "Static coloured shapes; no flicker, no rapid presentation.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

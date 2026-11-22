@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 132 |
-| Outcomes | 308 |
+| Records | 133 |
+| Outcomes | 310 |
 | Primary outcomes | 243 |
 | Systematic reviews/meta-analyses | 82 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 24 |
-| RCTs | 6 |
+| RCTs | 7 |
 | Umbrella reviews | 2 |
-| DOI verified | 121 |
+| DOI verified | 122 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 53 |
+| cct | 54 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 121 |
+| DOI verified | 122 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **132** |
+| **Total** | **133** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -213,6 +213,8 @@ A 2026-11-08 complex-span and sustained-attention scan found no eligible trainin
 A 2026-11-08 Go/No-Go and processing-speed scan found no eligible task-specific cognitive-training meta-analysis. Go/No-Go training records concern appetitive behaviour change rather than cognitive transfer; the existing inhibitory-control network meta-analysis (PMID 40398202) remains the basis. Processing-speed evidence is covered by the broad cognitive-training meta-analysis (PMID 32011155), and Speed Tap is not UFOV. Both candidates stayed out of scope (ADR-059). The same update adds signal-detection sensitivity (d′) to Go/No-Go results and a response-bias note; no evidence-table record was added, so the review remains at 124 records and 286 outcomes, revision v1.8.
 
 A 2026-11-22 targeted extraction took eight reviews from the 973 rule-eligible but not previously extracted PubMed records (deviation D7), chosen to fill the working-memory transfer and durability cells: Hou et al. 2020 (PMID 32507890; 22 RCTs in adults 63.8-80.1; long-term updating g=0.45 [0.253-0.648], shifting 0.447 [0.246-0.648], inhibition 0.387 [0.228-0.547], maintenance 0.486 [0.352-0.620]), Karbach & Verhaeghen 2014 (PMID 25298292; 49 articles/61 samples, adults over 60; significant near transfer and smaller but significant far transfer, no adaptivity or dose moderation), Sala & Gobet 2020 (PMID 31939109; 41 studies, k=393, N=2,375; small-to-medium near transfer, far transfer to intelligence and attainment null, active-control g=0.001, SE=0.055), Wang et al. 2023 (PMID 36958492; 19 trials, n=1,051; anxiety Hedges g=-0.392, p=.009), Ophey et al. 2020 (PMID 33173503; 16 studies, n=675; no validated responder profile, context role), Pappa et al. 2020 (PMID 32738262; large training effect, moderate near transfer, non-significant far transfer, frontoparietal decreases), Spencer-Smith & Klingberg 2015 (PMID 25793607; 12 Cogmed studies; daily inattention SMD=-0.47 [-0.65,-0.29], follow-up -0.33 [-0.57,-0.09], visuospatial WM 0.66 [0.43,0.89], verbal WM 0.40 [0.18,0.62]), and Kassai et al. 2019 (PMID 30652908; children; near g=0.44, k=43, far g=0.11, k=17, p=.11). Each PMID, title, journal, year and DOI was re-read from the PubMed MEDLINE record with NCBI E-utilities `efetch`; all eight DOIs were already Crossref-verified in the table vocabulary and remain `verified`. Only estimates printed in the abstract were entered; where the abstract gave no magnitude the outcome keeps a null value with a narrative note. The 2026-11-08 Soveri n-back record (PMID 28116702) was already extracted and was not re-added. Seven records are primary and the methodological predictor review is context. The review is now 132 records and 308 outcomes, revision v1.9; 965 eligible residual reviews remain unextracted, so D7 is partially closed rather than resolved.
+
+A 2026-11-23 targeted visual-search update added one context record: Zhang et al. 2022 (PMID 35838486, *Journal of Vision*; DOI 10.1167/jov.22.8.7), read from the PubMed MEDLINE record with E-utilities `efetch`. Five controlled experiments trained healthy adults on a conjunction search; training improved search behaviour, reduced saccade count and total scan time, and increased the target-locked N2pc. No pooled effect size is printed in the abstract, so the two outcomes keep null values with narrative notes and the record is `context`, not a source for a product claim. Two further sources stayed narrative-only in [NEW_MECHANIC_CANDIDATES.md](NEW_MECHANIC_CANDIDATES.md): Vialatte et al. 2023 (PMID 36922549) found a reading-accuracy gain from a symbol-search serious game in 21 children with reading disorders, and Bueichekú et al. 2019 (PMID 30859709) found resting-state connectivity change after 30 minutes of search training in 42 adults. This record grounds the experimental Visual Search focus test; D7 is unchanged. The review is now 133 records and 310 outcomes, revision v2.0.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

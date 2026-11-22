@@ -1,7 +1,7 @@
 {
  "schema": 1,
  "review_id": "noesis-evidence-2026-10",
- "search_date": "2026-11-22",
+ "search_date": "2026-11-23",
  "pmid_is_canonical": true,
  "doi_status_legend": {
   "verified": "Crossref title match >= 0.90 and container consistent",
@@ -7984,6 +7984,63 @@
    ],
    "synthesis_role": "primary",
    "product_use": "Reinforces training-the-component, measure-the-component product rule and forbids cross-component transfer claims."
+  },
+  {
+   "pmid": "35838486",
+   "doi": "10.1167/jov.22.8.7",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Journal of Vision",
+   "title": "Visual search training benefits from the integrative effect of enhanced covert attention and optimized overt eye movements",
+   "modality": "cct",
+   "design": "rct",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": 5,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "descriptive",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Conjunction-search training improved search behaviour, reduced saccade count and total scan time; no pooled effect size in abstract"
+    },
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Larger N2pc to the trained target; neural mechanism, not an everyday benefit"
+    }
+   ],
+   "findings": [
+    "Training improved conjunction search and produced larger, more efficient scanning",
+    "N2pc results were read as enhanced covert attention to the trained target"
+   ],
+   "limitations": [
+    "No pooled effect estimate reported in the abstract",
+    "Laboratory conjunction-search protocol, not the shipped app task"
+   ],
+   "flags": [
+    "mechanism_gap",
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the experimental conjunction-search focus test and its task-practice-only claim; no general attention benefit is claimed."
   }
  ]
 }
