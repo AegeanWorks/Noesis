@@ -200,5 +200,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "95ea80be5ac4a5248c4728ec275c626cd3739cd3e66c5c83cd6ee1c10d329003",
     "baseline_digest": "95ea80be5ac4a5248c4728ec275c626cd3739cd3e66c5c83cd6ee1c10d329003"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Evidence screen in Edge: three linked claim-boundary bullets render with PMIDs, no console errors; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795388248.8164499,
+    "finished_at": 1795388282.7294884,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "5f2df39069f7c1d7bf7e2b1faa85ccf968d5fd7f6efa3a6e8d3b96d410525b8a",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795388282.7294905
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Claim-boundary link test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Claim-boundary link test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "5f2df39069f7c1d7bf7e2b1faa85ccf968d5fd7f6efa3a6e8d3b96d410525b8a",
+    "baseline_digest": "5f2df39069f7c1d7bf7e2b1faa85ccf968d5fd7f6efa3a6e8d3b96d410525b8a"
   }
 ]
