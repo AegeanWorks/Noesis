@@ -221,6 +221,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R128 | Visual Search and Digit Symbol have committed gameplay proofs, giving all ten games the same dogfood coverage. | The proofs drive a real three-block session, capture screenshots and report block metrics with no console errors. | ADR-119 |
 | R129 | Reasoning and Speed Tap also have committed gameplay proofs, completing played-session coverage for every mechanic. | The proofs use each mechanic's response action (option selection and Space-style response) and report block metrics without console errors. | ADR-120 |
 | R130 | The transfer-gradient copy cites game-based training evidence showing domain-specific gains and sparse healthy-adult studies. | Ishibashi 2023 found processing-speed and working-memory gains but no executive-function improvement in game training. | 37257469; ADR-121 |
+| R131 | Visual Search and Digit Symbol get within-level accuracy and response-time trend cards and briefing lines, completing per-level comparison for the focus tests. | Both games previously reported only a single block result; the cards reuse the existing dual-metric presentation with descriptive caveats. | ADR-122 |
 
 ---
 

@@ -168,6 +168,31 @@ function rotationRecord(
   };
 }
 
+function dualRecord(
+  mechanic: "symbol" | "search",
+  level: number,
+  blocks: readonly (readonly [number, number])[],
+  id: string,
+  finishedAt: string,
+): SessionRecord {
+  return {
+    id,
+    finishedAt,
+    seed: 42,
+    results: blocks.map(([accuracy, responseMs], index) => ({
+      mechanic,
+      domain: "working_memory",
+      trials: 16,
+      durationMs: 60_000,
+      metrics: { accuracy, mean_response_ms: responseMs },
+      summary: `${mechanic}: ${Math.round(accuracy * 100)}% accuracy.`,
+      seed: 42,
+      stateHash: `abcdef012345678${index}`,
+      difficulty: level,
+    })),
+  };
+}
+
 function prospectiveRecord(
   level: number,
   blocks: readonly (readonly [number, number, number, number])[],
@@ -627,6 +652,42 @@ describe("PracticeMenuScreen", () => {
     cleanup();
     renderMenu({ history: [record()] });
     expect(screen.queryByTestId("menu-rotation-trend")).toBeNull();
+  });
+
+  it.each([
+    ["symbol", "Digit Symbol", "symbol-trend", "menu-symbol-trend"],
+    ["search", "Visual Search", "search-trend", "menu-search-trend"],
+  ] as const)("shows a level-aware %s accuracy and response-time trend", (mechanic, label, trendTestId, menuTestId) => {
+    renderMenu({
+      history: [
+        dualRecord(mechanic, 3, [[0.6, 600], [0.8, 400]], "x3", "2026-11-03T10:00:00.000Z"),
+        dualRecord(mechanic, 2, [[0.5, 700]], "x2", "2026-11-02T10:00:00.000Z"),
+      ],
+      initialTab: "history",
+    });
+    const card = screen.getByTestId(trendTestId);
+    expect(card.textContent).toMatch(new RegExp(label, "i"));
+    expect(card.textContent).toMatch(/response time/i);
+    expect(screen.getAllByTestId(new RegExp(`^${mechanic}-level-`))).toHaveLength(2);
+    expect(screen.getByTestId(`${mechanic}-accuracy-3`).textContent).toMatch(/Last 80%/);
+    expect(screen.getByTestId(`${mechanic}-rt-3`).textContent).toMatch(/Last 400 ms/);
+    cleanup();
+    renderMenu({
+      history: [dualRecord(mechanic, 2, [[0.5, 700], [0.4, 800]], "y2", "2026-11-08T10:00:00.000Z")],
+    });
+    expect(screen.getByTestId(menuTestId).textContent).toBe(
+      `${label} L2: last 40% accuracy · RT 800 ms · best 50%`,
+    );
+  });
+
+  it("omits Search and Symbol trends when there are no such blocks", () => {
+    renderMenu({ history: [record()], initialTab: "history" });
+    expect(screen.queryByTestId("symbol-trend")).toBeNull();
+    expect(screen.queryByTestId("search-trend")).toBeNull();
+    cleanup();
+    renderMenu({ history: [record()] });
+    expect(screen.queryByTestId("menu-symbol-trend")).toBeNull();
+    expect(screen.queryByTestId("menu-search-trend")).toBeNull();
   });
 
   it("shows a level-aware Prospective Memory accuracy, cue and false-alarm trend", () => {

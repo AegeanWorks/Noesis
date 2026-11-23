@@ -859,6 +859,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add the review as a context record, cite it on the transfer-gradient copy with R130, and bump the review version to v2.42.
 - **Consequences**: The review moves to 191 records and 417 outcomes (revision v2.42), D7 residuals fall to 944, and the game-specific evidence caveat becomes visible in the app.
 
+### ADR-122: Trend Cards for Search and Symbol
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Visual Search and Digit Symbol were the only focus tests without per-level trend summaries in the Menu history or Choose-a-test briefing.
+- **Decision**: Extend the dual-metric trend helper to both mechanics, add accuracy/response-time cards and latest-same-level briefing lines, with R131.
+- **Consequences**: All focus tests now support within-level comparison with the same descriptive-only caveats; no claim level or evidence count changes.
+
 
 
 

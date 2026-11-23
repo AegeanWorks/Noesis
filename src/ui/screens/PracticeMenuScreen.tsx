@@ -437,7 +437,7 @@ interface DualMetricLevel {
 
 function dualMetricLevels(
   history: readonly SessionRecord[],
-  mechanic: "rotation" | "paired" | "change",
+  mechanic: "rotation" | "paired" | "change" | "symbol" | "search",
 ): DualMetricLevel[] {
   const levels = new Map<
     number,
@@ -561,6 +561,14 @@ function DualMetricTrendCard({
 
 function rotationLevels(history: readonly SessionRecord[]): DualMetricLevel[] {
   return dualMetricLevels(history, "rotation");
+}
+
+function symbolTrendLevels(history: readonly SessionRecord[]): DualMetricLevel[] {
+  return dualMetricLevels(history, "symbol");
+}
+
+function searchTrendLevels(history: readonly SessionRecord[]): DualMetricLevel[] {
+  return dualMetricLevels(history, "search");
 }
 
 function rotationLine(entry: DualMetricLevel): string {
@@ -907,6 +915,16 @@ function TestCard({
       ? (pairedLevels(history).find((entry) => entry.level === level) ?? null)
       : null;
   const pairedTrendLine = pairedLevel ? pairedLine(pairedLevel) : null;
+  const symbolLevel =
+    mechanic === "symbol" && level !== null
+      ? (symbolTrendLevels(history).find((entry) => entry.level === level) ?? null)
+      : null;
+  const symbolTrendLine = symbolLevel ? dualMetricLine(symbolLevel, "Digit Symbol") : null;
+  const searchLevel =
+    mechanic === "search" && level !== null
+      ? (searchTrendLevels(history).find((entry) => entry.level === level) ?? null)
+      : null;
+  const searchTrendLine = searchLevel ? dualMetricLine(searchLevel, "Visual Search") : null;
   const changeLevel =
     mechanic === "change" && level !== null
       ? (changeLevels(history).find((entry) => entry.level === level) ?? null)
@@ -982,6 +1000,16 @@ function TestCard({
       {rotationTrendLine ? (
         <p className="fine menu-rotation-trend" data-testid="menu-rotation-trend">
           {rotationTrendLine}
+        </p>
+      ) : null}
+      {symbolTrendLine ? (
+        <p className="fine menu-symbol-trend" data-testid="menu-symbol-trend">
+          {symbolTrendLine}
+        </p>
+      ) : null}
+      {searchTrendLine ? (
+        <p className="fine menu-search-trend" data-testid="menu-search-trend">
+          {searchTrendLine}
         </p>
       ) : null}
       {pairedTrendLine ? (
@@ -1120,6 +1148,8 @@ function HistoryPanel({
   const interferenceLevels = flankerCostLevels(history);
   const spanLevels = spatialSpanLevels(history);
   const digitSpanLevels = spanLevelsFor(history, "digit");
+  const symbolTrendLevelsForHistory = symbolTrendLevels(history);
+  const searchTrendLevelsForHistory = searchTrendLevels(history);
   const rotationTrendLevels = rotationLevels(history);
   const pairedTrendLevels = pairedLevels(history);
   const changeTrendLevels = changeLevels(history);
@@ -1234,6 +1264,26 @@ function HistoryPanel({
 
       {spanLevels.length > 0 ? <SpanTrendCard levels={spanLevels} /> : null}
       {digitSpanLevels.length > 0 ? <SpanTrendCard levels={digitSpanLevels} mechanic="digit" /> : null}
+      {symbolTrendLevelsForHistory.length > 0 ? (
+        <DualMetricTrendCard
+          levels={symbolTrendLevelsForHistory}
+          testId="symbol-trend"
+          prefix="symbol"
+          eyebrow="Digit Symbol"
+          title="Accuracy and response time by level"
+          description="Within-level comparison only. Higher accuracy and shorter response time are better; these are descriptive practice values, not a diagnosis."
+        />
+      ) : null}
+      {searchTrendLevelsForHistory.length > 0 ? (
+        <DualMetricTrendCard
+          levels={searchTrendLevelsForHistory}
+          testId="search-trend"
+          prefix="search"
+          eyebrow="Visual Search"
+          title="Accuracy and response time by level"
+          description="Within-level comparison only. Higher accuracy and shorter response time are better; these are descriptive practice values, not a diagnosis."
+        />
+      ) : null}
 
       {rotationTrendLevels.length > 0 ? (
         <RotationTrendCard levels={rotationTrendLevels} />
