@@ -220,3 +220,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Motivation and game format (2026-11-23 targeted update)
 
 - The role of motivation factors in exergame interventions for fall prevention in older adults: A systematic review and meta-analysis *Frontiers in Neurology*. 2022. PMID: [35989930](https://pubmed.ncbi.nlm.nih.gov/35989930/). DOI: [10.3389/fneur.2022.903673](https://doi.org/10.3389/fneur.2022.903673).
+
+## Game factors (2026-11-23 targeted update)
+
+- A game-factors approach to cognitive benefits from video-game training: A meta-analysis *PLOS ONE*. 2023. PMID: [37531408](https://pubmed.ncbi.nlm.nih.gov/37531408/). DOI: [10.1371/journal.pone.0285925](https://doi.org/10.1371/journal.pone.0285925).

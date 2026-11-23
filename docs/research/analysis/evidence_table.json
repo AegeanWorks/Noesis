@@ -9014,6 +9014,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for Motivation mode: motivation supports adherence processes, but a game format alone does not establish cognitive or safety outcomes; rewards stay cosmetic."
+  },
+  {
+   "pmid": "37531408",
+   "doi": "10.1371/journal.pone.0285925",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "PLOS ONE",
+   "title": "A game-factors approach to cognitive benefits from video-game training: A meta-analysis",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "children",
+    "healthy_adults"
+   ],
+   "k": 63,
+   "n": 2079,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.25,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "63 studies, 118 investigations, N=2079; overall cognitive gain g=0.25 (p<.001)"
+    },
+    {
+     "domain": "attention",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Transfer to attention/perception and higher-order cognition; gameplay features, not genre labels ('action', 'strategy', 'casual'), predicted outcomes"
+    }
+   ],
+   "findings": [
+    "Small overall cognitive benefit from video-game training",
+    "Genre labels are not predictive; individual gameplay features are"
+   ],
+   "limitations": [
+    "Heterogeneous games and outcomes",
+    "No confidence interval printed in abstract"
+   ],
+   "flags": [
+    "heterogeneity",
+    "reporting_gap"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the game mechanics: small overall effects and feature-level (not genre-level) prediction justify claim-bounded games rather than genre-based promises."
   }
  ]
 }

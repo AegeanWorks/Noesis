@@ -558,6 +558,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Buyle 2022 as a context record with its caution that a game format alone does not improve outcomes, add it to the safeguards citation list, and record R87. Rewards remain cosmetic and capped.
 - **Consequences**: The review moves to 149 records and 347 outcomes (revision v2.14) and the Motivation rationale now includes both the harm literature and the group-level motivation evidence with its limitation.
 
+### ADR-079: Game-Factor Meta-Analysis on Safeguards
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Smith & Basak 2023 (PMID 37531408) had been narrative-only in NEW_MECHANIC_CANDIDATES.md section 6.4 and is the largest pooled estimate for video-game training (63 studies, N=2,079, g=0.25), with the additional finding that gameplay features rather than genre labels predict transfer.
+- **Decision**: Add it as a context record and a fifth Motivation-safeguards citation, with R88; keep all game claims at task-practice level rather than genre promises.
+- **Consequences**: The review moves to 150 records and 349 outcomes (revision v2.15) and the game-design rationale carries both the pooled effect and its feature-level caveat.
+
 
 
 

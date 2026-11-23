@@ -175,6 +175,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R85 | Visual Search cites both the conjunction-search training study and the clinical symbol-search study, with the latter explicitly framed as context rather than a transfer claim for healthy users. | Zhang 2022 supports task-specific search gains; Vialatte 2023 is a 21-child single-group reading study with limited generalisability. | 35838486; 36922549; ADR-076 |
 | R86 | The pre-test confidence note cites two independent JOL meta-analyses and keeps the prompt framed as reflection rather than a memory intervention. | Double 2018 found no overall reactivity (g=0.054) with material-dependent subgroups; Ingendahl 2025 found small immediate reactivity and publication bias. | 29161973; 40875340; ADR-077 |
 | R87 | The Motivation safeguards cite the exergame motivation review alongside gaming-disorder sources, and rewards remain cosmetic because a game format alone does not establish outcomes. | Buyle 2022 found motivation components shape adherence but no cognitive or fall-risk benefit from the game format itself. | 35989930; ADR-078 |
+| R88 | The Motivation safeguards also cite the game-factor meta-analysis, which reports small overall effects and feature-level rather than genre-level prediction. | Smith & Basak 2023 found g=0.25 across 63 studies and that gameplay features, not genre labels, predicted transfer; the app therefore promises task practice, not genre benefits. | 37531408; ADR-079 |
 
 ---
 

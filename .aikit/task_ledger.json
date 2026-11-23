@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-exergame-motivation",
+    "task_id": "noesis-gamefactors-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795402844.8277915,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795403794.3605523,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795410044.8277915,
+    "lease_until": 1795410994.3605523,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795402888.749933,
-    "completed_head": "723923bcc1637c238dfcd9d443c459c0d8ef3043",
-    "completed_tree": "ab5459f8b566a5f711ba69b97a3f018d51656402"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-safety-citations",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 466 tests, gates 7/7, safety citations reviewed in Edge, ADR-072",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795396831.0321152,
-      "timestamp_str": "2026-11-23 04:20:31",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-safety-citations",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-safety-citations' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795396873.6572876,
-      "timestamp_str": "2026-11-23 04:21:13",
-      "agent": "opencode:hy4-flash-free",
-      "head": "3cb5187bee934cccac65329e059db125ec403ef9",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-data-reuse-citations",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-gamefactors-evidence",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add Smith & Basak 2023 game-factors meta-analysis as context and link it from the Motivation safeguards",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795403432.5363815,
+      "timestamp_str": "2026-11-23 06:10:32",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The app's games and Motivation safeguards lack the largest pooled video-game training estimate, which also shows genre labels are not predictive.",
+        "benefits": "Resolves another narrative-only citation and adds an effect size plus a design-feature caveat to the game rationale.",
+        "risks": "contract: one context record + UI link + test; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Add record, update counts/references/prose, add failing-first test, run suites and review UI."
+      },
+      "plan_digest": "92f7109409382ea37c3f95c6cd094eacc32735eb2a4405b960c9438902b8439d",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-gamefactors-evidence",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 150/349 records, 468 tests, gates 7/7, game-factor citation reviewed in Edge, ADR-079",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795403794.3605523,
+      "timestamp_str": "2026-11-23 06:16:34",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
