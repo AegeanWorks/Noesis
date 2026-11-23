@@ -331,6 +331,36 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Static shapes and digits; no flicker, no audio.",
   },
+  digit: {
+    id: "digit",
+    name: "Digit Span",
+    domain: "working_memory",
+    tagline: "Verbal sequence recall",
+    instructions:
+      "Watch each digit appear one at a time, then tap the digits back in order. Later trials ask you to repeat them backwards. The span grows after a correct trial and shrinks after a miss.",
+    brief:
+      "Digit span: hold a short digit sequence in mind and reproduce it forward or backward. Working-memory training reviews find trained-task and near-transfer gains with much smaller far transfer, and no task-specific digit-span training meta-analysis was located. This is an experimental focus test, not a memory diagnostic or a general-memory claim.",
+    strategyHint:
+      "Group digits into small chunks or rehearse them quietly; both are ordinary memory strategies, not test-specific tricks.",
+    claimLevel: "experimental",
+    claim: "Practices holding and reproducing short digit sequences.",
+    qualifier:
+      "Task practice only. Span, accuracy and the forward/backward split are descriptive measures; this is not a diagnostic test and does not claim better memory, intelligence, academic performance or everyday benefit.",
+    notClaimed: [
+      "General memory improvement",
+      "General intelligence",
+      "Academic achievement",
+      "Everyday function",
+      "Dementia prevention",
+    ],
+    citations: [
+      { pmid: "25793607", label: "Working-memory training transfer meta-analysis (2015)" },
+      { pmid: "32507890", label: "Working-memory durability meta-analysis (2020)" },
+      { pmid: "30998045", label: "Executive-function training meta-analysis (2019)" },
+      { pmid: "35432071", label: "Working-memory training neural meta-analysis (2022)" },
+    ],
+    safety: "Static digits shown one at a time at a slow pace; no flicker, no audio.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

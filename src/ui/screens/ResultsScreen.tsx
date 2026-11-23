@@ -95,6 +95,7 @@ const PRIMARY_METRICS: Record<MechanicResult["mechanic"], readonly string[]> = {
   change: ["accuracy", "set_size", "mean_response_ms"],
   search: ["accuracy", "set_size_cost_ms", "mean_response_ms"],
   symbol: ["accuracy", "mean_response_ms", "within_block_rt_change_ms"],
+  digit: ["accuracy", "max_span", "mean_span", "forward_accuracy", "backward_accuracy"],
 };
 
 export function formatMetric(key: string, value: number): string {

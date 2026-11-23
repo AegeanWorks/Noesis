@@ -42,6 +42,7 @@ const DEFAULTS: AdaptiveState = {
     change: 2,
     search: 2,
     symbol: 2,
+    digit: 2,
   },
   log: [],
 };

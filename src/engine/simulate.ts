@@ -22,6 +22,7 @@ import type {
   ChangeState,
   SearchState,
   SymbolState,
+  DigitState,
 } from "./types";
 
 export type Policy = (state: MechanicState) => MechanicAction | null;
@@ -101,6 +102,14 @@ export function optimalPolicy(state: MechanicState): MechanicAction | null {
     const trial = current(state.trials, state.index);
     return trial ? { type: "answer", option: trial.correctDigit } : null;
   }
+  if (state.mechanic === "digit") {
+    if (state.phase !== "recall") return null;
+    const trial = current(state.trials, state.index);
+    if (!trial) return null;
+    const sequence = trial.direction === "backward" ? [...trial.sequence].reverse() : trial.sequence;
+    const option = sequence[state.selected.length];
+    return option === undefined ? null : { type: "answer", option };
+  }
   if (state.phase !== "question") return null;
   if (state.phaseElapsed < 500) return null;
   const id = state.order[state.index];
@@ -153,6 +162,9 @@ export function alwaysPolicy(state: MechanicState): MechanicAction | null {
   }
   if (state.mechanic === "symbol") {
     return state.phase === "question" ? { type: "answer", option: 0 } : null;
+  }
+  if (state.mechanic === "digit") {
+    return state.phase === "recall" ? { type: "answer", option: 0 } : null;
   }
   return state.phase === "question" ? { type: "answer", option: 0 } : null;
 }
@@ -235,6 +247,12 @@ export function randomPolicy(seed: number): Policy {
     if (state.mechanic === "symbol") {
       if (state.phase !== "question") return null;
       const [option, next] = randomInt(rng, 4);
+      rng = next;
+      return { type: "answer", option };
+    }
+    if (state.mechanic === "digit") {
+      if (state.phase !== "recall") return null;
+      const [option, next] = randomInt(rng, 10);
       rng = next;
       return { type: "answer", option };
     }
@@ -368,6 +386,14 @@ export function runMechanic(
   policy: Policy,
   options?: SimulationOptions,
 ): SimulationResult<SymbolState>;
+export function runMechanic(
+  id: "digit",
+  seed: number,
+  difficulty: number,
+  trials: number,
+  policy: Policy,
+  options?: SimulationOptions,
+): SimulationResult<DigitState>;
 export function runMechanic(
   id: MechanicId,
   seed: number,

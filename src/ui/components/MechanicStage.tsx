@@ -412,6 +412,50 @@ function SymbolStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) 
   );
 }
 
+function DigitStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  return (
+    <div
+      className="stage stage-digit"
+      data-mechanic="digit"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
+      <p className="stage-prompt">{view.prompt}</p>
+      {view.stimulus !== null ? (
+        <div
+          className="digit-stimulus"
+          role="img"
+          aria-label={`Digit ${view.stimulus}`}
+          data-testid="digit-stimulus"
+        >
+          {view.stimulus}
+        </div>
+      ) : null}
+      <div className="options" role="group" aria-label="Digit options">
+        {(view.options ?? []).map((digit, index) => (
+          <Button
+            key={digit}
+            variant="ghost"
+            className="option"
+            disabled={!view.canRespond}
+            onClick={() => onAnswer(index)}
+            data-testid={`digit-option-${index}`}
+          >
+            <span className="option-key">{index}</span>
+            {digit}
+          </Button>
+        ))}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function PairedStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   const [first = "", second = ""] = (view.stimulus ?? "").split("|");
   return (
@@ -636,6 +680,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "symbol") {
     return <SymbolStage view={view} onAnswer={props.onAnswer} />;
+  }
+  if (view.mechanic === "digit") {
+    return <DigitStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }

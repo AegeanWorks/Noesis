@@ -102,6 +102,14 @@ import {
   symbolResult,
   symbolView,
 } from "./symbol";
+import {
+  applyDigitAction,
+  createDigit,
+  digitComplete,
+  digitConfig,
+  digitResult,
+  digitView,
+} from "./digit";
 import type {
   MechanicAction,
   MechanicId,
@@ -123,6 +131,7 @@ export function defaultTrials(id: MechanicId, difficulty: number): number {
   if (id === "change") return 12;
   if (id === "search") return 16 + (difficulty - 1) * 2;
   if (id === "symbol") return 16 + (difficulty - 1) * 2;
+  if (id === "digit") return 8;
   return 8;
 }
 
@@ -144,6 +153,7 @@ export function createMechanic(
   if (id === "change") return createChange(seed, changeConfig(difficulty, trials));
   if (id === "search") return createSearch(seed, searchConfig(difficulty, trials));
   if (id === "symbol") return createSymbol(seed, symbolConfig(difficulty, trials));
+  if (id === "digit") return createDigit(seed, digitConfig(difficulty, trials));
   return createReasoning(seed, reasoningConfig(difficulty, trials));
 }
 
@@ -163,6 +173,7 @@ export function applyMechanicAction(
   if (state.mechanic === "change") return applyChangeAction(state, action);
   if (state.mechanic === "search") return applySearchAction(state, action);
   if (state.mechanic === "symbol") return applySymbolAction(state, action);
+  if (state.mechanic === "digit") return applyDigitAction(state, action);
   return applyReasoningAction(state, action);
 }
 
@@ -179,6 +190,7 @@ export function mechanicView(state: MechanicState): MechanicView {
   if (state.mechanic === "change") return changeView(state);
   if (state.mechanic === "search") return searchView(state);
   if (state.mechanic === "symbol") return symbolView(state);
+  if (state.mechanic === "digit") return digitView(state);
   return reasoningView(state);
 }
 
@@ -195,6 +207,7 @@ export function mechanicResult(state: MechanicState): MechanicResult {
   if (state.mechanic === "change") return changeResult(state);
   if (state.mechanic === "search") return searchResult(state);
   if (state.mechanic === "symbol") return symbolResult(state);
+  if (state.mechanic === "digit") return digitResult(state);
   return reasoningResult(state);
 }
 
@@ -211,5 +224,6 @@ export function mechanicComplete(state: MechanicState): boolean {
   if (state.mechanic === "change") return changeComplete(state);
   if (state.mechanic === "search") return searchComplete(state);
   if (state.mechanic === "symbol") return symbolComplete(state);
+  if (state.mechanic === "digit") return digitComplete(state);
   return reasoningComplete(state);
 }

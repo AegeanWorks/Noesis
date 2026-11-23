@@ -705,6 +705,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add all four as context records; cite them on the Settings clock note, the adherence card and the transfer-gradient copy, with R108; retain the group-level-context caveat.
 - **Consequences**: The review moves to 181 records and 396 outcomes (revision v2.35), D7 residuals fall to 954, and three more UI surfaces become evidence-linked without dose prescriptions.
 
+### ADR-100: Digit Span as a Claim-Bounded Focus Test
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Verbal digit span is a distinct working-memory construct absent from the lineup; no task-specific digit-span training meta-analysis was found, but working-memory reviews (PMIDs 25793607, 32507890, 30998045, 35432071) support trained-task/near-transfer framing with smaller far transfer.
+- **Decision**: Add `digit` as an experimental focus test with static digit presentation, forward/backward recall and adaptive span; cite the four broad reviews in the mechanic meta, add R109, and keep it out of the default lineup.
+- **Consequences**: The app gains a tenth claim-bounded focus test with no new evidence records, no flashing or audio, and a brief that explicitly refuses general-memory, intelligence and everyday-function claims.
+
 
 
 

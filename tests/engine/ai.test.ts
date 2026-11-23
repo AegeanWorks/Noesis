@@ -10,7 +10,7 @@ afterEach(() => {
 describe("AI harness", () => {
   it("lists every mechanic", () => {
     const api = createAiApi();
-    expect(api.listMechanics()).toHaveLength(13);
+    expect(api.listMechanics()).toHaveLength(14);
   });
 
   it("creates a session and dispatches a parsed action", () => {

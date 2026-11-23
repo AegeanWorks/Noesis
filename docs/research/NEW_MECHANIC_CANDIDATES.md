@@ -417,6 +417,14 @@ A 2026-11-23 targeted search found no task-specific training meta-analysis for d
 
 **Safety:** static shapes and digits; no flicker, no time pressure beyond the per-trial limit, no audio.
 
+## 9. Digit span (implemented as an experimental focus test)
+
+A 2026-11-23 targeted PubMed search found no task-specific digit-span **training** meta-analysis in healthy users, so this candidate's rationale stays narrative-only and adds no evidence-table record. The grounding is indirect and explicitly bounded: working-memory training shows trained-task and near-transfer effects with smaller far transfer (PMIDs 25793607, 30998045), durability estimates exist for updating tasks (PMID 32507890), and the neural correlate is reduced frontoparietal activation rather than expanded capacity (PMID 35432071). Digit span is included as a standard *outcome* measure in several of those reviews, not as a validated Noesis protocol.
+
+**Decision:** implement a static verbal sequence-recall task. Digits appear one at a time at a slow fixed pace; the user taps them back in order on even trials and backwards on odd trials. Span starts at 3/4/5 by level, grows after a correct trial and shrinks after a miss, bounded at 2-8. The block reports accuracy, mean and longest correct span, and separate forward/backward accuracy. The brief states that this is task practice with near-transfer evidence only; no general-memory, intelligence, academic or everyday-function claim is made.
+
+**Safety:** static digits shown one at a time at a slow pace; no flicker, no audio, no reward stakes. Recorded in ADR-100.
+
 A 2026-11-23 serious-games update adds a caveat with a verified source: Abd-Alrazaq et al. 2023
 (PMID 37043277) found learning gains from serious games in cognitively impaired older adults but
 explicitly concluded that games should **supplement, not replace**, established interventions, with

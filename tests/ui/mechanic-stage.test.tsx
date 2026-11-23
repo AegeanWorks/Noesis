@@ -350,4 +350,46 @@ describe("MechanicStage", () => {
     fireEvent.click(screen.getByTestId("option-2"));
     expect(onAnswer).toHaveBeenCalledWith(2);
   });
+
+  it("renders a digit stimulus and ten recall buttons", () => {
+    const onAnswer = vi.fn();
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "digit",
+          name: "Digit Span",
+          phase: "show",
+          prompt: "Remember the digit · 1 of 4",
+          stimulus: "7",
+          options: null,
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(document.querySelector(".stage-digit")?.getAttribute("data-mechanic")).toBe("digit");
+    expect(screen.getByTestId("digit-stimulus").textContent).toBe("7");
+  });
+
+  it("reports the tapped digit during recall", () => {
+    const onAnswer = vi.fn();
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "digit",
+          name: "Digit Span",
+          phase: "recall",
+          prompt: "Tap the digits in order (0/4)",
+          stimulus: null,
+          options: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+          canRespond: true,
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(document.querySelectorAll('[data-testid^="digit-option-"]')).toHaveLength(10);
+    fireEvent.click(screen.getByTestId("digit-option-7"));
+    expect(onAnswer).toHaveBeenCalledWith(7);
+  });
 });

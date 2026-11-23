@@ -12,6 +12,7 @@ export const MECHANIC_IDS = [
   "change",
   "search",
   "symbol",
+  "digit",
 ] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
@@ -339,6 +340,48 @@ export interface SpatialState {
   completed: boolean;
 }
 
+export interface DigitConfig {
+  trials: number;
+  startSpan: number;
+  showMs: number;
+  gapMs: number;
+  feedbackMs: number;
+  recallLimitMs: number;
+}
+
+export interface DigitTrial {
+  sequence: number[];
+  span: number;
+  direction: "forward" | "backward";
+}
+
+export interface DigitResponse {
+  trial: number;
+  span: number;
+  direction: "forward" | "backward";
+  selected: number[];
+  correct: boolean;
+  timedOut: boolean;
+}
+
+export interface DigitState {
+  mechanic: "digit";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: DigitConfig;
+  trials: DigitTrial[];
+  index: number;
+  span: number;
+  phase: "show" | "gap" | "recall" | "feedback" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  showIndex: number;
+  selected: number[];
+  responses: DigitResponse[];
+  completed: boolean;
+}
+
 export interface RotationConfig {
   trials: number;
   mirrorRate: number;
@@ -610,6 +653,7 @@ export type MechanicState =
   | SwitchingState
   | FlankerState
   | SpatialState
+  | DigitState
   | RotationState
   | ProspectiveState
   | PairedState
