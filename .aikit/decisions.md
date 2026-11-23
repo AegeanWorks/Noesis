@@ -649,6 +649,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a further Motivation-safeguards citation, with R100; keep real stakes, loss cues and push notifications out of the product.
 - **Consequences**: The review moves to 163 records and 368 outcomes (revision v2.27) and the no-cue design is grounded in an established process model.
 
+### ADR-092: Commercial-Program Claim Boundary
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Nguyen et al. 2022 (PMID 34251578) was narrative-only in NEW_MECHANIC_CANDIDATES.md and synthesised 43 commercial brain-training studies (N=2,636), finding near transfer but no robust general or everyday benefit.
+- **Decision**: Add it as a context record and a seventh Evidence-screen claim boundary, with R101; keep the app framed as task practice and enjoyment only.
+- **Consequences**: The review moves to 164 records and 370 outcomes (revision v2.28) and the central no-general-gain claim has direct pooled support.
+
 
 
 

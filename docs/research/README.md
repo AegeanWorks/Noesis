@@ -1,8 +1,8 @@
 # Noesis Evidence Review
 
-**Status:** v1.0 corpus complete; current review revision v2.27 (2026-11-23) with targeted UX, data-collection, export, new-game, working-memory residual-extraction, visual-search, adherence, everyday-function, clinical-boundary, game-design, multimodal, expectancy, clinical-mood, serious-game, data-reuse, far-transfer, metacognition, visual-search-context, JOL-reactivity, motivation, game-factor, spatial-training, action-game, inhibition-paradigm, visual-search-mechanism, incentive-design, autonomy, reward-context, dropout-feasibility, measure-validity, data-governance, monitoring-accuracy, UFOV-training and engagement-process updates, AI-assisted, internally pre-registered
+**Status:** v1.0 corpus complete; current review revision v2.28 (2026-11-23) with targeted UX, data-collection, export, new-game, working-memory residual-extraction, visual-search, adherence, everyday-function, clinical-boundary, game-design, multimodal, expectancy, clinical-mood, serious-game, data-reuse, far-transfer, metacognition, visual-search-context, JOL-reactivity, motivation, game-factor, spatial-training, action-game, inhibition-paradigm, visual-search-mechanism, incentive-design, autonomy, reward-context, dropout-feasibility, measure-validity, data-governance, monitoring-accuracy, UFOV-training, engagement-process and commercial-program updates, AI-assisted, internally pre-registered
 **Search date:** 2026-10-31; targeted updates 2026-11-08, 2026-11-22 and 2026-11-23
-**Records:** 163 included (103 primary, 60 context), 368 outcomes
+**Records:** 164 included (103 primary, 61 context), 370 outcomes
 **Review type:** PRISMA 2020 systematic umbrella review with landmark-RCT update
 
 ---
@@ -49,7 +49,7 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |
 | [REFERENCES.bib](REFERENCES.bib) | BibTeX for the included records |
-| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (163 records, 368 outcomes) |
+| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (164 records, 370 outcomes) |
 | [analysis/screening_reviews.csv](analysis/screening_reviews.csv) | Rule-based screen of the 1,495-review PubMed corpus |
 | [analysis/screening_summary.json](analysis/screening_summary.json) | Screening counts |
 | [records/](records/) | Raw PubMed, OpenAlex, trial-registry and metadata-verification records |

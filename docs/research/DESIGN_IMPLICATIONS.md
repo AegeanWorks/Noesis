@@ -188,6 +188,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R98 | The pre-test confidence note cites three JOL sources, including monitoring-accuracy evidence, and keeps the prompt descriptive rather than diagnostic. | Hu 2025 found stronger learners were slightly poorer at monitoring their learning (N=2,406), so self-ratings cannot calibrate performance. | 40875340; 29161973; 40845062; ADR-089 |
 | R99 | Visual Search cites both the positive UFOV training meta-analysis and the construct-purity critique, explaining the choice of transparent single-construct tasks over a proprietary composite. | Edwards 2018 found functional transfer and durability but no transfer to other neuropsychological outcomes; Woutersen 2017 found no subtest measures one construct. | 29175362; 29270605; ADR-090 |
 | R100 | Motivation safeguards cite the I-PACE process model to justify avoiding variable stakes, loss cues and push notifications. | Brand 2016 identifies cue-reactivity and reduced executive control as maintenance mechanisms of excessive use. | 27590829; ADR-091 |
+| R101 | The Evidence screen lists commercial brain training as a no-general-gain boundary, consistent with the app's task-practice-only framing. | Nguyen 2022 found near transfer across seven programs but no robust far transfer after publication-bias adjustment. | 34251578; ADR-092 |
 
 ---
 

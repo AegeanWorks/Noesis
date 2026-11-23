@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-ipace-evidence",
+    "task_id": "noesis-commercial-training-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795419481.0159461,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795420510.7202349,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795426681.0159461,
+    "lease_until": 1795427710.7202349,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795419526.602816,
-    "completed_head": "d8f4e94adece960da4fe9406ec64a024249e4b10",
-    "completed_tree": "ec53bddebf2e4e804ff0f4df14586d7dcf101573"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 157/360 records, 468 tests, gates 7/7, ADR-085",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-autonomy-reward-evidence",
-      "timestamp": 1795409802.8884904,
-      "timestamp_str": "2026-11-23 07:56:42",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-autonomy-reward-evidence' completed successfully.",
-      "head": "5ad00984b0786c8dacc1c8ab5eec690792a6f2fa",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-autonomy-reward-evidence",
-      "timestamp": 1795409844.637874,
-      "timestamp_str": "2026-11-23 07:57:24"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Clausen 2019 home training feasibility study as context and cite it on the adherence card",
@@ -409,6 +371,48 @@
       "task_id": "noesis-ipace-evidence",
       "timestamp": 1795419526.6636949,
       "timestamp_str": "2026-11-23 10:38:46"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Nguyen 2022 commercial brain-training meta-analysis as context and list it as a claim boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Resolves another narrative-only citation and strengthens the central no-general-gain boundary with publication-bias-adjusted results.",
+        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
+        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
+        "why": "The app refuses general memory, cognition and everyday-function claims; this 43-study meta-analysis is the direct pooled evidence and was narrative-only."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "26d31af3aa69c7af9a975637b222eaa9a0f3572af8b06fea46c65e6341f9d5a1",
+      "status": "in_progress",
+      "task_id": "noesis-commercial-training-evidence",
+      "timestamp": 1795420064.1604705,
+      "timestamp_str": "2026-11-23 10:47:44",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 164/370 records, 468 tests, gates 7/7, commercial boundary reviewed in Edge, ADR-092",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-commercial-training-evidence",
+      "timestamp": 1795420510.7202349,
+      "timestamp_str": "2026-11-23 10:55:10",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

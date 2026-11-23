@@ -273,3 +273,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Engagement process model (2026-11-23 targeted update)
 
 - Integrating psychological and neurobiological considerations regarding the development and maintenance of specific Internet-use disorders: An Interaction of Person-Affect-Cognition-Execution (I-PACE) model *Neuroscience & Biobehavioral Reviews*. 2016. PMID: [27590829](https://pubmed.ncbi.nlm.nih.gov/27590829/). DOI: [10.1016/j.neubiorev.2016.08.033](https://doi.org/10.1016/j.neubiorev.2016.08.033).
+
+## Commercial program evidence (2026-11-23 targeted update)
+
+- A Game a Day Keeps Cognitive Decline Away? A Systematic Review and Meta-Analysis of Commercially-Available Brain Training Programs in Healthy and Cognitively Impaired Older Adults *Neuropsychology Review*. 2022. PMID: [34251578](https://pubmed.ncbi.nlm.nih.gov/34251578/). DOI: [10.1007/s11065-021-09515-2](https://doi.org/10.1007/s11065-021-09515-2).

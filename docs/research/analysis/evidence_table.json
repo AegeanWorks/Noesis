@@ -9725,6 +9725,66 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for Motivation safeguards: Noesis avoids variable-ratio stakes, losing and push cues because those are the cue-reactivity routes the model identifies."
+  },
+  {
+   "pmid": "34251578",
+   "doi": "10.1007/s11065-021-09515-2",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Neuropsychology Review",
+   "title": "A Game a Day Keeps Cognitive Decline Away? A Systematic Review and Meta-Analysis of Commercially-Available Brain Training Programs in Healthy and Cognitively Impaired Older Adults",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults",
+    "mci"
+   ],
+   "k": 43,
+   "n": 2636,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "43 studies, 2636 participants across seven commercial programs; small significant near-transfer effects in healthy and MCI samples"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Far transfer absent in MCI; small subjective-only effect in healthy adults. After publication-bias adjustment only processing speed remained significant; no transfer to attention, everyday function, Gf or visuospatial"
+    }
+   ],
+   "findings": [
+    "Commercial programs show near transfer but no robust general or everyday benefit",
+    "Publication-bias adjustment removed most domain effects"
+   ],
+   "limitations": [
+    "Commercial programs heterogeneous",
+    "Mostly older-adult samples"
+   ],
+   "flags": [
+    "commercial_program",
+    "publication_bias_suspected",
+    "domain_null"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the no-general-gain boundary: the app offers enjoyment and task practice only, with no memory, intelligence or everyday-function claim."
   }
  ]
 }

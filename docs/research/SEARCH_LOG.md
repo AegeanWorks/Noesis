@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 163 |
-| Outcomes | 368 |
+| Records | 164 |
+| Outcomes | 370 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 101 |
+| Systematic reviews/meta-analyses | 102 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 30 |
 | RCTs | 12 |
 | Umbrella reviews | 2 |
-| DOI verified | 152 |
+| DOI verified | 153 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 71 |
+| cct | 72 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 152 |
+| DOI verified | 153 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **163** |
+| **Total** | **164** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -269,6 +269,8 @@ A 2026-11-23 monitoring-accuracy update resolved Hu et al. 2025 (PMID 40845062, 
 A 2026-11-23 UFOV-training update resolved Edwards et al. 2018 (PMID 29175362, *Neuroscience & Biobehavioral Reviews*; DOI 10.1016/j.neubiorev.2017.11.004) from narrative-only to a context record, verified via E-utilities `efetch`. Across 44 studies from 17 RCTs, UFOV training improved speed and attention with functional transfer and decade-long durability, but no transfer to other neuropsychological outcomes; the protocol is proprietary and not construct-pure (PMID 29270605). Visual Search now cites both sides (ADR-090). D7 is unchanged; the review is now 162 records and 367 outcomes, revision v2.26.
 
 A 2026-11-23 engagement-process update resolved Brand et al. 2016 (PMID 27590829, *Neuroscience & Biobehavioral Reviews*; DOI 10.1016/j.neubiorev.2016.08.033) from narrative-only to a context record, verified via E-utilities `efetch`. The I-PACE model proposes that cue-reactivity, coping styles and reduced executive control maintain excessive Internet use. The Motivation safeguards now cite it for the no-real-stakes and no-push-cue design (ADR-091). D7 is unchanged; the review is now 163 records and 368 outcomes, revision v2.27.
+
+A 2026-11-23 commercial-program update resolved Nguyen et al. 2022 (PMID 34251578, *Neuropsychology Review*; DOI 10.1007/s11065-021-09515-2) from narrative-only to a context record, verified via E-utilities `efetch`. Forty-three studies (N=2,636) of seven commercial brain-training programs showed small near transfer but no robust far transfer; after publication-bias adjustment only processing speed remained significant. The Evidence screen now lists this as a claim boundary (ADR-092). D7 is unchanged; the review is now 164 records and 370 outcomes, revision v2.28.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
