@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-keyboard-digit-symbol",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795433597.6920207,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795440797.6920207,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795433633.379173,
+    "completed_head": "e517ad2fe9677e12f02614be93f45282c57f7ae2",
+    "completed_tree": "89ea9bb7a4bd74a24fcbe61b19e4800ec99c864a"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: give Digit Span the same level-aware span trend card and Choose-a-test trend line as Spatial Span",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Consistent per-level comparison for the new game, with the same descriptive, no-diagnosis caveats.",
-        "mitigation": "Keep spatial testids unchanged, add failing-first digit trend tests, run suites and review the History tab in Edge.",
-        "risks": "contract: generalize the existing span trend helpers/card and add a digit variant; dependency: none; concurrency: none; state: no evidence-count changes",
-        "why": "Every other experimental focus test has a within-level trend summary; Digit Span currently reports a block result only."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "4c0c16113c60ea64bd5828d46667fea1e2326ca160261cdb8379f92d3153b6f2",
-      "status": "in_progress",
-      "task_id": "noesis-digit-span-trend",
-      "timestamp": 1795430878.8276155,
-      "timestamp_str": "2026-11-23 13:47:58",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-keyboard-digit-symbol' completed successfully.",
+      "head": "e517ad2fe9677e12f02614be93f45282c57f7ae2",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-keyboard-digit-symbol",
+      "timestamp": 1795433633.4402628,
+      "timestamp_str": "2026-11-23 14:33:53"
     }
   ]
 }

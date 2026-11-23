@@ -1881,5 +1881,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "32cd14b9268bf83cc50beb40afd7cebafbacfbf54d45a2ea0f0bbdc0b60c92bb",
     "baseline_digest": "32cd14b9268bf83cc50beb40afd7cebafbacfbf54d45a2ea0f0bbdc0b60c92bb"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Played a Digit Span session in Edge and pressed the target digit key: selection advanced, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795433607.8115,
+    "finished_at": 1795433633.0088153,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "205eeb53d7010f1fd91235b3be45a5fc593ff0dcd175ef4ed84166075ef86b73",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795433633.0088186
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/ui/test-briefing.test.tsx",
+        "reason": "Digit and Symbol keyboard mapping tests"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "205eeb53d7010f1fd91235b3be45a5fc593ff0dcd175ef4ed84166075ef86b73",
+    "baseline_digest": "205eeb53d7010f1fd91235b3be45a5fc593ff0dcd175ef4ed84166075ef86b73"
   }
 ]
