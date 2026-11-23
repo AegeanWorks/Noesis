@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-serious-games-boundary",
+    "task_id": "noesis-neural-mechanism-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795434780.1049075,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795435394.148551,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795441980.1049075,
+    "lease_until": 1795442594.148551,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795434825.1878815,
-    "completed_head": "7fe54e50c11806764ad00a1d24f954af02bceb1c",
-    "completed_tree": "50a3c7ce043dd71545271d593fb79fb785470212"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 185/404 records unchanged, 480 tests, gates 7/7, all 75 UI PMIDs grounded, ADR-106",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-citation-grounding-all-ui",
-      "timestamp": 1795432404.992067,
-      "timestamp_str": "2026-11-23 14:13:24",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-citation-grounding-all-ui' completed successfully.",
-      "head": "38921e621d60ca7b8ee1d6c111f800a12e8ccedf",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-citation-grounding-all-ui",
-      "timestamp": 1795432414.1524754,
-      "timestamp_str": "2026-11-23 14:13:34"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: update the stale EVIDENCE_REVIEW_VERSION constant to v2.37 and add a docs-vs-app drift guard",
@@ -409,6 +371,48 @@
       "task_id": "noesis-serious-games-boundary",
       "timestamp": 1795434825.5159967,
       "timestamp_str": "2026-11-23 14:53:45"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add two 2024/2026 neuroimaging meta-analyses as context and a mechanism-not-benefit note on Evidence",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Closes another D7 slice and makes the mechanism-vs-benefit distinction explicit using pooled imaging evidence.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add the note with tests, run suites and review UI in Edge.",
+        "risks": "contract: two context records, two UI citations, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "Two verified residual reviews find training-related activation changes; stating that neural markers are not general or everyday benefit strengthens the app's honesty framing."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "1690c29dbfc1eb98ed0c9d9fcee5535a75eabf5f5d4debf4db6ba19a3954d05e",
+      "status": "in_progress",
+      "task_id": "noesis-neural-mechanism-evidence",
+      "timestamp": 1795435019.68759,
+      "timestamp_str": "2026-11-23 14:56:59",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 188/410 records, 485 tests, gates 7/7, mechanism note verified in Edge, ADR-114",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-neural-mechanism-evidence",
+      "timestamp": 1795435394.148551,
+      "timestamp_str": "2026-11-23 15:03:14",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

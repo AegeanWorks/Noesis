@@ -803,6 +803,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add the record as a linked claim boundary on the Evidence screen with R122 and a negation-safe label.
 - **Consequences**: The app now states plainly that its games are not a substitute for care; no evidence count, claim level or version change.
 
+### ADR-114: Neural Markers Are Not a Benefit Claim
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Two eligible neuroimaging meta-analyses describe frontoparietal and subcortical activation changes after training, which are easily mistaken for evidence of broad cognitive benefit.
+- **Decision**: Add both as context records and an Evidence-screen note stating that these are mechanism markers, not general or everyday benefit, with R123; bump the review version to v2.39.
+- **Consequences**: The review moves to 188 records and 410 outcomes (revision v2.39), D7 residuals fall to 947, and the app's mechanism-vs-benefit distinction is explicit.
+
 
 
 

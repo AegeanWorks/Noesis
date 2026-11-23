@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 186 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 188 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -265,6 +265,21 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
             href="https://pubmed.ncbi.nlm.nih.gov/39822168/"
             label="Vafa 2025: type and duration interact with outcomes"
             pmid="39822168"
+          />
+        </p>
+        <p className="fine" data-testid="mechanism-evidence">
+          Brain-imaging meta-analyses find training-related activation changes in frontoparietal and
+          subcortical regions. These are mechanism markers, not evidence of broader or everyday
+          benefit.{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/39395643/"
+            label="Zhang 2024: working-memory training activation changes"
+            pmid="39395643"
+          />{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/42092905/"
+            label="Li 2026: neural signatures accompany trained-task gains"
+            pmid="42092905"
           />
         </p>
         <h3 data-testid="not-supported-heading">What the review does not support</h3>

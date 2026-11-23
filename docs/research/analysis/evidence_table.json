@@ -10960,6 +10960,119 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the Prospective Memory focus test: the app's cue-in-ongoing-task paradigm is process-based, an approach this review found too preliminary for a training claim."
+  },
+  {
+   "pmid": "42092905",
+   "doi": "10.1186/s12993-026-00338-w",
+   "doi_status": "verified",
+   "year": 2026,
+   "journal": "Behavioral and Brain Functions",
+   "title": "Domain-general behavioral gains and neural correlates of cognitive training in healthy populations: a neuroimaging meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "healthy_adults",
+    "adults"
+   ],
+   "k": 67,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.546,
+     "ci_low": 0.414,
+     "ci_high": 0.678,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "67 neuroimaging studies: cognitive training improved cognitive task performance (g=0.546, 95% CI 0.414-0.678) across domains, paradigms and ages"
+    },
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "activation_meta_analysis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Increased right superior parietal lobule and decreased bilateral anterior cingulate activation; changes associated with gains, training completion a key moderator"
+    }
+   ],
+   "findings": [
+    "Training-related activation changes accompany gains on trained cognitive tasks",
+    "Neural signatures are candidate plasticity markers, not everyday-function benefit"
+   ],
+   "limitations": [
+    "Imaging markers only",
+    "Behavioral outcome is trained-task performance, not transfer to daily life"
+   ],
+   "flags": [
+    "neural_marker",
+    "mechanism_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the mechanism-vs-benefit note: pooled imaging changes are neural markers accompanying trained-task gains, not evidence of general or everyday benefit."
+  },
+  {
+   "pmid": "39395643",
+   "doi": "10.1016/j.neuroimage.2024.120885",
+   "doi_status": "verified",
+   "year": 2024,
+   "journal": "NeuroImage",
+   "title": "Neural correlates of working memory training: An fMRI meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "healthy_adults",
+    "adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "activation_meta_analysis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "WM training associated with neural changes in frontoparietal and subcortical regions (striatum, anterior cingulate, insula)"
+    },
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "moderator_narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Shorter training related to frontoparietal changes, longer training to subcortical changes; updating tasks changed more regions than maintenance tasks"
+    }
+   ],
+   "findings": [
+    "WM training changes frontoparietal and dopamine-related regions",
+    "Dose and task type moderate the neural pattern"
+   ],
+   "limitations": [
+    "Neural outcomes only",
+    "No behavioural transfer estimate in the abstract"
+   ],
+   "flags": [
+    "neural_marker",
+    "mechanism_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the mechanism-vs-benefit note: imaging meta-analyses of WM training describe activation changes, which are not a product efficacy or transfer claim."
   }
  ]
 }

@@ -210,6 +210,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R120 | The Prospective Memory brief cites a 2022 review stating that process-based training evidence is preliminary, matching the app's cue-in-ongoing-task paradigm. | Tsang 2022 found strategy-based training promising but process-based and combined evidence too preliminary for conclusions. | 34275411; ADR-111 |
 | R121 | The pre-test briefing lists every citation after the primary source so additional evidence is visible before a block starts. | Previously only `citations[0]` was rendered, so carefully added secondary sources were invisible in the UI. | R120; ADR-112 |
 | R122 | The Evidence screen lists the serious-games caveat as a claim boundary: games supplement, not replace, established interventions. | Abd-Alrazaq 2023 found low-certainty learning gains in impaired older adults and explicitly recommended games as a supplement to care. | 37043277; ADR-113 |
+| R123 | The Evidence screen distinguishes neural mechanism markers from general or everyday benefit with two imaging meta-analyses. | Zhang 2024 and Li 2026 report training-related activation changes accompanying trained-task gains, not transfer to daily life. | 39395643; 42092905; ADR-114 |
 
 ---
 
