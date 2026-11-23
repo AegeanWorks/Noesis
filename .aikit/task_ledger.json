@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-exergame-motivation",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795402844.8277915,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795410044.8277915,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795402888.749933,
+    "completed_head": "723923bcc1637c238dfcd9d443c459c0d8ef3043",
+    "completed_tree": "ab5459f8b566a5f711ba69b97a3f018d51656402"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-safety-citations",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add PubMed-linked safety evidence to the onboarding screen",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795396612.3973696,
-      "timestamp_str": "2026-11-23 04:16:52",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The safety screen asks about seizures and exercise restrictions without linking the two corpus sources that justify those questions.",
-        "benefits": "Makes the safety posture verifiable with two in-corpus citations and pins them with a UI test.",
-        "risks": "contract: small UI text change + test; dependency: none; concurrency: none; state: none",
-        "mitigation": "Use existing corpus PMIDs 16146438 and 25771249, add failing-first test, run all suites and review the UI."
-      },
-      "plan_digest": "834527e2f98cd3ba2f9da6979028b3f3d0d53c625d752e1ad06c03c29400daaf",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-safety-citations",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-exergame-motivation",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-exergame-motivation' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795402888.812549,
+      "timestamp_str": "2026-11-23 06:01:28",
+      "agent": "opencode:hy4-flash-free",
+      "head": "723923bcc1637c238dfcd9d443c459c0d8ef3043",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
