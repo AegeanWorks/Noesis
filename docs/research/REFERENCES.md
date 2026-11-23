@@ -281,3 +281,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Cognitive-motor training (2026-11-23 targeted update)
 
 - Effectiveness of cognitive-motor dual task training in preventing falls in community older adults: A meta-analysis and systematic review *Geriatric Nursing*. 2025. PMID: [40410069](https://pubmed.ncbi.nlm.nih.gov/40410069/). DOI: [10.1016/j.gerinurse.2025.05.005](https://doi.org/10.1016/j.gerinurse.2025.05.005).
+
+## Dual-task comparisons (2026-11-23 targeted update)
+
+- Comparative effectiveness of different dual task mode interventions on cognitive function in older adults with mild cognitive impairment or dementia: a systematic review and network meta-analysis *Aging Clinical and Experimental Research*. 2025. PMID: [40304821](https://pubmed.ncbi.nlm.nih.gov/40304821/). DOI: [10.1007/s40520-025-03016-5](https://doi.org/10.1007/s40520-025-03016-5).

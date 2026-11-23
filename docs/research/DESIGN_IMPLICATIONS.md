@@ -190,6 +190,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R100 | Motivation safeguards cite the I-PACE process model to justify avoiding variable stakes, loss cues and push notifications. | Brand 2016 identifies cue-reactivity and reduced executive control as maintenance mechanisms of excessive use. | 27590829; ADR-091 |
 | R101 | The Evidence screen lists commercial brain training as a no-general-gain boundary, consistent with the app's task-practice-only framing. | Nguyen 2022 found near transfer across seven programs but no robust far transfer after publication-bias adjustment. | 34251578; ADR-092 |
 | R102 | The Evidence screen states that Noesis makes no gait, balance or fall-prevention claim because it has no motor component. | Gao & Liu 2025 found such benefits only from cognitive-motor dual-task training, a modality the app does not deliver. | 40410069; ADR-093 |
+| R103 | The modality boundary also notes that dual-task cognitive effects come from clinical, movement-based interventions, not a screen-based consumer tool. | Hao 2025 found executive-function gains only for motor-cognitive dual-task modes in MCI/dementia, with wide intervals. | 40304821; ADR-094 |
 
 ---
 

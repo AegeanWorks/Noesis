@@ -663,6 +663,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and an Evidence-screen modality boundary, with R102; state plainly that Noesis is screen-based and makes no motor benefit claim.
 - **Consequences**: The review moves to 165 records and 372 outcomes (revision v2.29) and the app's modality limits are explicit rather than implied.
 
+### ADR-094: Dual-Task Comparison on Modality Boundary
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Hao et al. 2025 (PMID 40304821) was narrative-only in NEW_MECHANIC_CANDIDATES.md section 6.3 and compares dual-task modes in 32 RCTs of MCI/dementia patients, finding executive-function gains only for motor-cognitive training.
+- **Decision**: Add it as a context record and a second citation on the no-motor-benefit boundary, with R103; keep the screen-based claim scope unchanged.
+- **Consequences**: The review moves to 166 records and 374 outcomes (revision v2.30) and the modality boundary covers both community and clinical dual-task evidence.
+
 
 
 

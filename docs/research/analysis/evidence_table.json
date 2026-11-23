@@ -9842,6 +9842,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the modality boundary: Noesis is screen-based with no motor component, so it makes no gait, balance or fall-prevention claim."
+  },
+  {
+   "pmid": "40304821",
+   "doi": "10.1007/s40520-025-03016-5",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "Aging Clinical and Experimental Research",
+   "title": "Comparative effectiveness of different dual task mode interventions on cognitive function in older adults with mild cognitive impairment or dementia: a systematic review and network meta-analysis",
+   "modality": "multi_intervention",
+   "design": "nma",
+   "populations": [
+    "mci",
+    "dementia",
+    "older_adults"
+   ],
+   "k": 32,
+   "n": 2370,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "SUCRA",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Dual cognitive task training ranked best for global cognition (SUCRA 79.2%); motor-cognitive dual task was the only mode improving executive function (SMD 1.53, 95% CI 0.06-3.01)"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 1.5,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Motor-cognitive dual task also improved activities of daily living (SMD 1.50) and quality of life (1.20)"
+    }
+   ],
+   "findings": [
+    "Dual cognitive task training ranked highest for global cognition",
+    "Motor-cognitive modes improved executive function and daily function in MCI/dementia"
+   ],
+   "limitations": [
+    "Clinical MCI/dementia populations only",
+    "Wide confidence intervals on executive-function estimate"
+   ],
+   "flags": [
+    "clinical_specific",
+    "wide_prediction_interval"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the modality boundary: dual-task cognitive gains are clinical-population, movement-based findings, not a claim for a screen-based consumer tool."
   }
  ]
 }
