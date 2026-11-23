@@ -936,6 +936,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Lv et al. 2025 as a context record and a citation on the serious-games boundary, with R141; bump the review version to v2.50.
 - **Consequences**: The review moves to 199 records and 437 outcomes (revision v2.50), D7 residuals fall to 936, and the boundary now reflects both null and positive game evidence without overstating either.
 
+### ADR-133: Second Commercial-Game Meta-Analysis on the General-Gain Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The central no-general-gain boundary cited a 43-study commercial-program review; a verified 2020 meta-analysis of 16 commercial-game RCTs adds domain-selective findings.
+- **Decision**: Add Bonnechère et al. 2020 as a context record and a second citation on that boundary, with R142; bump the review version to v2.51.
+- **Consequences**: The review moves to 200 records and 440 outcomes (revision v2.51), D7 residuals fall to 935, and the boundary now rests on two independent commercial-program syntheses.
+
 
 
 

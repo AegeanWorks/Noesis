@@ -232,6 +232,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R139 | The no-everyday-function boundary cites a broad behavioral-intervention review showing weak transfer and sparse everyday-function evidence. | Sprague 2019 found trained-domain gains across 75 RCTs but weak non-trained transfer and only nine everyday-function studies. | 31002885; ADR-130 |
 | R140 | The transfer-gradient copy cites a network meta-analysis showing that interventions benefit different executive-function subdomains. | Bai 2026 found computerized training's clearest effect on inhibition while other interventions led on other subdomains. | 41576774; ADR-131 |
 | R141 | The serious-games boundary cites pooled leisure-game RCTs to show that game gains are domain-specific and sample-bound, not a general or care-replacement claim. | Lv 2025 found cognitive gains across 23 RCTs of leisure games versus traditional rehabilitation in older adults. | 39842256; ADR-132 |
+| R142 | The no-general-gain boundary cites a second commercial-games meta-analysis showing selective domain improvements rather than a general cognitive benefit. | Bonnechère 2020 found gains in speed, working memory and executive function but none in attention or visuospatial ability. | 32943742; ADR-133 |
 
 ---
 

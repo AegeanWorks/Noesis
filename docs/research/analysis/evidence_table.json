@@ -11766,6 +11766,75 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the serious-games boundary: pooled game gains were domain-specific and sample-bound, so they do not license a general or care-replacement claim for a consumer app."
+  },
+  {
+   "pmid": "32943742",
+   "doi": "10.1038/s41598-020-72281-3",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Scientific Reports",
+   "title": "The use of commercial computerised cognitive games in older adults: a meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 16,
+   "n": 1543,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "processing_speed",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.4,
+     "ci_low": 0.2,
+     "ci_high": 0.6,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "16 RCTs, 1543 adults over 60 without impairment: commercial games improved processing speed (SMD 0.40), working memory (0.21) and executive function (0.21)"
+    },
+    {
+     "domain": "verbal_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.12,
+     "ci_low": 0.01,
+     "ci_high": 0.24,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Small verbal-memory gain; no significant improvement in attention or visuospatial abilities"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "No relationship between participant age or training amount and outcomes; one author declares commercial fees"
+    }
+   ],
+   "findings": [
+    "Commercial games improved some practiced cognitive domains",
+    "No effect on attention or visuospatial ability, and no general-gain result"
+   ],
+   "limitations": [
+    "Commercial programs heterogeneous",
+    "One author declares industry fees"
+   ],
+   "flags": [
+    "commercial_program",
+    "domain_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-general-gain boundary: pooled commercial-game evidence showed selective domain gains rather than a general cognitive benefit."
   }
  ]
 }

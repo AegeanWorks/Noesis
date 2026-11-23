@@ -378,3 +378,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Leisure-game evidence (2026-11-23 targeted update)
 
 - Effect of leisure activities on cognitive and memory function in older adults: A systematic review and meta-analysis of randomized controlled trials *Journal of Clinical Neuroscience*. 2025. PMID: [39842256](https://pubmed.ncbi.nlm.nih.gov/39842256/). DOI: [10.1016/j.jocn.2025.111055](https://doi.org/10.1016/j.jocn.2025.111055).
+
+## Commercial-game evidence (2026-11-24 targeted update)
+
+- The use of commercial computerised cognitive games in older adults: a meta-analysis *Scientific Reports*. 2020. PMID: [32943742](https://pubmed.ncbi.nlm.nih.gov/32943742/). DOI: [10.1038/s41598-020-72281-3](https://doi.org/10.1038/s41598-020-72281-3).

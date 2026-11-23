@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 199 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 200 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -180,6 +180,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/34251578/"
               label="No general memory, cognition or everyday gain from commercial brain training"
               pmid="34251578"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/32943742/"
+              label="Commercial game gains were domain-selective, not general"
+              pmid="32943742"
             />
           </li>
           <li>
