@@ -901,6 +901,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Roheger et al. 2021 as a context record and a second citation on that boundary, with R136; bump the review version to v2.45.
 - **Consequences**: The review moves to 194 records and 425 outcomes (revision v2.45), D7 residuals fall to 941, and the boundary now rests on both an RCT and a systematic review.
 
+### ADR-128: Multidomain Review on the Dementia Boundary
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The no-dementia-prevention boundary cited a small MCI training review; a verified 2023 systematic review adds direct evidence that multidomain lifestyle trials cannot isolate a cognitive-training effect.
+- **Decision**: Add Castro et al. 2023 as a context record and a third citation on that boundary, with R137; bump the review version to v2.46.
+- **Consequences**: The review moves to 195 records and 427 outcomes (revision v2.46), D7 residuals fall to 940, and the boundary now distinguishes whole-lifestyle programs from a single-component app.
+
 
 
 

@@ -11455,6 +11455,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-response-prediction boundary: systematic review evidence does not support personalising assignment by baseline age or performance."
+  },
+  {
+   "pmid": "38151879",
+   "doi": "10.1007/s12603-023-2046-2",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "The Journal of Nutrition, Health & Aging",
+   "title": "Multi-Domain Interventions for Dementia Prevention - A Systematic Review",
+   "modality": "multi_intervention",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "mci"
+   ],
+   "k": 15,
+   "n": 9439,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "mixed",
+     "certainty": "very_low",
+     "note": "15 trials in adults 49+ at higher dementia risk: 10 studies (9439 participants) reported cognitive improvement after multidomain lifestyle intervention, five reported none; outcome measures heterogeneous"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "na",
+     "measure": "design_limitation",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "not_reported",
+     "note": "Trials were not designed to isolate the contribution of cognitive training, diet or physical activity individually"
+    }
+   ],
+   "findings": [
+    "Multidomain lifestyle programs showed mixed cognitive results in at-risk older adults",
+    "Individual domain contributions, including cognitive training, cannot be isolated"
+   ],
+   "limitations": [
+    "Heterogeneous cognitive outcomes",
+    "At-risk clinical populations, not healthy consumers"
+   ],
+   "flags": [
+    "clinical_specific",
+    "mixed_findings"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-dementia-prevention boundary: reported benefits came from multidomain lifestyle programs in at-risk adults, not from an isolated cognitive-training app."
   }
  ]
 }

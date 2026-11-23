@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-prognostic-evidence",
+    "task_id": "noesis-dementia-boundary-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795460649.9469764,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795462556.6941273,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795467849.9469764,
+    "lease_until": 1795469756.6941273,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795460731.019972,
-    "completed_head": "2d2f26c4d164474830a73c5b4d521ec3e5db6971",
-    "completed_tree": "8f85549f61c2ce1ed8821de49e454091c6f2434d"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 191/417 records, 485 tests, gates 7/7, game-design citation verified in Edge, ADR-121",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-game-design-evidence",
-      "timestamp": 1795453713.3209565,
-      "timestamp_str": "2026-11-23 20:08:33",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-game-design-evidence' completed successfully.",
-      "head": "cf797a56ace6e0364b86d9610108b22a828aaaec",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-game-design-evidence",
-      "timestamp": 1795453778.131115,
-      "timestamp_str": "2026-11-23 20:09:38"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add within-level accuracy and response-time trend cards plus briefing lines for Visual Search and Digit Symbol",
@@ -409,6 +371,48 @@
       "task_id": "noesis-prognostic-evidence",
       "timestamp": 1795460731.1050303,
       "timestamp_str": "2026-11-23 22:05:31"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Castro 2023 multidomain dementia-prevention review as context and cite it on the no-dementia-prevention boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a second systematic-review context to an existing boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2023 review shows cognitive benefits came from multidomain lifestyle programs in at-risk adults with heterogeneous outcomes, supporting the app's refusal of a dementia-prevention claim."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "00bc45f5856038572ef6bffeac3366c8ae3ad6d58db4c86198102c2fa347539c",
+      "status": "in_progress",
+      "task_id": "noesis-dementia-boundary-evidence",
+      "timestamp": 1795461052.6490457,
+      "timestamp_str": "2026-11-23 22:10:52",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 195/427 records, 488 tests, gates 7/7, dementia boundary citation verified in Edge, ADR-128",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-dementia-boundary-evidence",
+      "timestamp": 1795462556.694127,
+      "timestamp_str": "2026-11-23 22:35:56",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

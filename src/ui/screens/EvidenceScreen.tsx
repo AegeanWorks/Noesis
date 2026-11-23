@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 194 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 195 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -368,6 +368,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/37043277/"
               label="No claim that games replace established interventions or care"
               pmid="37043277"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/38151879/"
+              label="No dementia prevention claim from a single-component app"
+              pmid="38151879"
             />
           </li>
           <li>

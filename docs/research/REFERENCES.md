@@ -358,3 +358,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Response-prediction boundary evidence (2026-11-23 targeted update)
 
 - Prognostic Factors and Models for Changes in Cognitive Performance After Multi-Domain Cognitive Training in Healthy Older Adults: A Systematic Review *Frontiers in Human Neuroscience*. 2021. PMID: [33986652](https://pubmed.ncbi.nlm.nih.gov/33986652/). DOI: [10.3389/fnhum.2021.636355](https://doi.org/10.3389/fnhum.2021.636355).
+
+## Dementia-prevention boundary evidence (2026-11-23 targeted update)
+
+- Multi-Domain Interventions for Dementia Prevention - A Systematic Review *The Journal of Nutrition, Health & Aging*. 2023. PMID: [38151879](https://pubmed.ncbi.nlm.nih.gov/38151879/). DOI: [10.1007/s12603-023-2046-2](https://doi.org/10.1007/s12603-023-2046-2).
