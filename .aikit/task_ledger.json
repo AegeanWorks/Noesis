@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-everyday-boundary-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795466191.8423452,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795473391.8423452,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795466269.3071644,
+    "completed_head": "2712c0a75748c98af6bd033724b135668ff1cc3a",
+    "completed_tree": "f1d40957f45711090d1552aa15b7ab9a0dd89a42"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: fix remaining ui-audit findings - constrain hero decoration on narrow screens and raise subtle buttons, checkboxes/radios and detail summaries to 44px touch targets",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Removes layout overflow on mobile and brings interactive controls to the touch-target minimum.",
-        "mitigation": "Adjust hero decoration media query and control sizes, rebuild, re-run ui-audit to compare counts, run suites and gates.",
-        "risks": "contract: CSS-only changes in one file; dependency: none; concurrency: none; state: no app logic or corpus changes",
-        "why": "The audit still flags hero overflow/clipping and undersized native controls, secondary buttons and detail summaries below the 44px target."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "5a5f88a16f56bf4ba76df3decc537127bb61a3fb75abc8bec8d0593417bcf35a",
-      "status": "in_progress",
-      "task_id": "noesis-ui-audit-remaining",
-      "timestamp": 1795455033.5082436,
-      "timestamp_str": "2026-11-23 20:30:33",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-everyday-boundary-evidence' completed successfully.",
+      "head": "2712c0a75748c98af6bd033724b135668ff1cc3a",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-everyday-boundary-evidence",
+      "timestamp": 1795466269.9609053,
+      "timestamp_str": "2026-11-23 23:37:49"
     }
   ]
 }
