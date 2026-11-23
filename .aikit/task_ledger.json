@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-visualsearch-reading-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795400903.5819252,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795408103.5819252,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795400949.3673327,
+    "completed_head": "8e3dca1757e51e187fc0a632b6063f9afea25923",
+    "completed_tree": "b9c847a3d71ba7914848fb3e428f350806408b04"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-serious-games-evidence",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: extract Abd-Alrazaq 2023 serious-games meta-analysis as context and record its low-quality/supplementary conclusion in the game rationale",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795394807.8019211,
-      "timestamp_str": "2026-11-23 03:46:47",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The app's games need a literature note on the quality of serious-game evidence; this 11-RCT meta-analysis explicitly concludes games supplement rather than replace established interventions.",
-        "benefits": "Adds a verified clinical games record and tempers the game-related rationale with the review's own evidence-quality caveat.",
-        "risks": "contract: one context record + prose note; dependency: none; concurrency: none; state: counts and references must move together",
-        "mitigation": "Verify via PubMed efetch, update counts/references/prose and the game rationale, run all suites, commit."
-      },
-      "plan_digest": "71145f38b9cd4b61b74eb747536685b934cf3dff65b810509da72e433a3d4a94",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-serious-games-evidence",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-visualsearch-reading-evidence",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-visualsearch-reading-evidence' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795400949.5512738,
+      "timestamp_str": "2026-11-23 05:29:09",
+      "agent": "opencode:hy4-flash-free",
+      "head": "8e3dca1757e51e187fc0a632b6063f9afea25923",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
