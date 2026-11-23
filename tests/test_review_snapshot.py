@@ -24,6 +24,24 @@ class ReviewSnapshotTest(unittest.TestCase):
     def setUpClass(cls):
         cls.entries = parse_entries(load_table())
 
+    def test_research_readme_counts_match_the_table(self):
+        readme = (ROOT / "docs" / "research" / "README.md").read_text(encoding="utf-8")
+        match = re.search(
+            r"\*\*Records:\*\* (\d+) included \((\d+) primary, (\d+) context\), (\d+) outcomes",
+            readme,
+        )
+        self.assertIsNotNone(match, "records line missing from research README")
+        assert match is not None
+        roles = Counter(entry.synthesis_role for entry in self.entries)
+        self.assertEqual(
+            (int(match.group(1)), int(match.group(4))),
+            (len(self.entries), sum(len(entry.outcomes) for entry in self.entries)),
+        )
+        self.assertEqual(
+            (int(match.group(2)), int(match.group(3))),
+            (roles["primary"], roles["context"]),
+        )
+
     def test_record_and_outcome_totals(self):
         self.assertEqual(len(self.entries), 185)
         self.assertEqual(sum(len(entry.outcomes) for entry in self.entries), 404)

@@ -775,6 +775,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Map digit keys 0-9 directly for `digit` and keys 1-4 to options 0-3 for `symbol`, with R118, and cover both with jsdom tests.
 - **Consequences**: The two newest focus tests are keyboard-accessible; jsdom tests and a real Edge key press both confirm the mapping.
 
+### ADR-110: Guard the Research README Counts
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The snapshot test pinned corpus counts in code, but the research README's canonical "Records" line could drift during evidence waves without any test noticing.
+- **Decision**: Parse that line in the snapshot test and assert its record, primary, context and outcome numbers match the table, with R119.
+- **Consequences**: Documentation, corpus and snapshot test now fail together if any one of them drifts; no app behaviour or evidence change.
+
 
 
 

@@ -9,8 +9,8 @@
 - **Total Python Modules**: `9`
 - **Total Classes**: `9`
 - **Total Top-Level Functions**: `20`
-- **Total Class Methods**: `31`
-- **Total Source Lines**: `744`
+- **Total Class Methods**: `32`
+- **Total Source Lines**: `762`
 
 ## 🧭 Map Coverage
 - **Indexed**: python (`9` module(s))
@@ -148,11 +148,12 @@
 ### [`tests/test_review_snapshot.py`](tests/test_review_snapshot.py)
 > *Snapshot checks for the current evidence review.*
 
-**Size**: `70` lines
+**Size**: `88` lines
 
 **Classes:**
 - `class ReviewSnapshotTest`
   - Method `.setUpClass()`
+  - Method `.test_research_readme_counts_match_the_table()`
   - Method `.test_record_and_outcome_totals()`
   - Method `.test_synthesis_role_split()`
   - Method `.test_modality_split()`
