@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-active-control-boundary",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795430301.2263436,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795437501.2263436,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795430360.4340527,
+    "completed_head": "34cf524c95ac3ec632caedcca6b573c4803d60a9",
+    "completed_tree": "56b3ade39efb91fe6a0179637e010bdb72de5931"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Foroughi 2016 placebo study as context and cite it on the no-intelligence-gain boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and grounds the expectancy/placebo caveat with an experimental demonstration.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The app states no intelligence or IQ claim; a controlled placebo study shows suggestive framing alone can mimic a large Gf gain after one session."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "3934b3e7aa27e5c81231818c13fe21e03985e3f1e54cc38152234806fe220df1",
-      "status": "in_progress",
-      "task_id": "noesis-placebo-evidence",
-      "timestamp": 1795423136.015878,
-      "timestamp_str": "2026-11-23 11:38:56",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-active-control-boundary' completed successfully.",
+      "head": "34cf524c95ac3ec632caedcca6b573c4803d60a9",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-active-control-boundary",
+      "timestamp": 1795430360.5064094,
+      "timestamp_str": "2026-11-23 13:39:20"
     }
   ]
 }
