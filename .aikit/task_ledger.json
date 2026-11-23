@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-prospective-ecology-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795464636.1565986,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795471836.1565986,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795464790.9493768,
+    "completed_head": "91dc9ac0a62f8110f1e4e3c012c46f779ae89d2e",
+    "completed_tree": "be7961e9188f635338a66b5c78e9c0a2464d1827"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: raise evidence/settings jump-chip min-height to 44px and enlarge jump labels to meet touch-target and text-size audit findings",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Keyboard and touch users get compliant targets; jump labels become legible.",
-        "mitigation": "Change min-height/padding/font-size, rebuild, re-run ui-audit to confirm zero chip/label findings, run suites and gates.",
-        "risks": "contract: two CSS rules in one file; dependency: none; concurrency: none; state: no app logic or corpus changes",
-        "why": "The UI audit flagged 22 jump chips at 32px height and two 11.52px jump labels below the 44px/12px accessibility thresholds."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "0eaa2be5dff50f35835c02ec806a2929e68c3d4ed72e390af5b293981600823a",
-      "status": "in_progress",
-      "task_id": "noesis-jump-chip-a11y",
-      "timestamp": 1795454507.548668,
-      "timestamp_str": "2026-11-23 20:21:47",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-prospective-ecology-evidence' completed successfully.",
+      "head": "91dc9ac0a62f8110f1e4e3c012c46f779ae89d2e",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-prospective-ecology-evidence",
+      "timestamp": 1795464791.0892582,
+      "timestamp_str": "2026-11-23 23:13:11"
     }
   ]
 }

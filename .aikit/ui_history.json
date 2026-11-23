@@ -2429,5 +2429,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "7ed0dff74ccda529b0615df3e46c62bfcbf136a2a334e086b31def3950da3bfd",
     "baseline_digest": "7ed0dff74ccda529b0615df3e46c62bfcbf136a2a334e086b31def3950da3bfd"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Prospective Memory briefing in Edge: ecological-validity caveat and third citation render, corpus count 196, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795464713.2005668,
+    "finished_at": 1795464790.2963765,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "fa573868201dacbbc302c5c95a220983af22fcb333b14f07f2bd1e8553fb64d2",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795464790.2963796
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Briefing caveat test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Briefing caveat test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/test-briefing.test.tsx",
+        "reason": "Briefing caveat test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "fa573868201dacbbc302c5c95a220983af22fcb333b14f07f2bd1e8553fb64d2",
+    "baseline_digest": "fa573868201dacbbc302c5c95a220983af22fcb333b14f07f2bd1e8553fb64d2"
   }
 ]
