@@ -628,6 +628,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a second research-export citation beside FAIR, with R97; keep consent versioned and revocable.
 - **Consequences**: The review moves to 160 records and 364 outcomes (revision v2.24) and the research data path is grounded in both reuse and governance principles.
 
+### ADR-089: Monitoring-Accuracy Source on Confidence Note
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Hu et al. 2025 (PMID 40845062) was narrative-only in NEW_MECHANIC_CANDIDATES.md section 8 and reports that stronger learners were slightly poorer at monitoring their own learning (meta-analysis N=2,406 plus replications).
+- **Decision**: Add it as a context record and a third confidence-note citation, with R98; keep the prompt explicitly non-diagnostic.
+- **Consequences**: The review moves to 161 records and 365 outcomes (revision v2.25) and the confidence caveat rests on reactivity, null-reactivity and monitoring-accuracy evidence.
+
 
 
 

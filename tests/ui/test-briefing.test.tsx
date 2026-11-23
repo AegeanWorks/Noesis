@@ -140,6 +140,7 @@ describe("pre-test briefing", () => {
     expect(note.textContent).toMatch(/not a validated memory intervention/i);
     expect(note.querySelector('a[href*="40875340"]')).toBeTruthy();
     expect(note.querySelector('a[href*="29161973"]')).toBeTruthy();
+    expect(note.querySelector('a[href*="40845062"]')).toBeTruthy();
   });
 
   it("does not brief a paused or completed block", () => {

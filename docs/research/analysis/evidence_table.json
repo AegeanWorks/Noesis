@@ -9580,6 +9580,50 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for research export: Noesis uses a versioned, revocable consent and a documented field dictionary so participation stays controllable and data stay interpretable."
+  },
+  {
+   "pmid": "40845062",
+   "doi": "10.1177/09567976251358838",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "Psychological Science",
+   "title": "Good Learners Are Poor Monitors: A Negative Relation Between Learning Ability and Monitoring Accuracy",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": null,
+   "n": 2406,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "mindfulness",
+     "transfer": "na",
+     "measure": "meta_analysis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Meta-analysis N=2406 found slightly poorer JOL monitoring resolution among stronger learners; two controlled replications supported the negative association"
+    }
+   ],
+   "findings": [
+    "Learning ability and monitoring accuracy were negatively related",
+    "Expert learners showed underconfidence for items they later recalled"
+   ],
+   "limitations": [
+    "JOL resolution is a group-level index, not an individual diagnostic",
+    "No pooled effect size in abstract"
+   ],
+   "flags": [
+    "narrative_only",
+    "domain_null"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the confidence note: monitoring accuracy is not a reliable self-diagnostic even for strong learners, so the app's prompt stays descriptive."
   }
  ]
 }

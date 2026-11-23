@@ -261,3 +261,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Data governance (2026-11-23 targeted update)
 
 - Building the foundations for global data banking in digital phenotyping for mental health *npj Digital Medicine*. 2026. PMID: [42443473](https://pubmed.ncbi.nlm.nih.gov/42443473/). DOI: [10.1038/s44277-026-00066-z](https://doi.org/10.1038/s44277-026-00066-z).
+
+## Monitoring accuracy (2026-11-23 targeted update)
+
+- Good Learners Are Poor Monitors: A Negative Relation Between Learning Ability and Monitoring Accuracy *Psychological Science*. 2025. PMID: [40845062](https://pubmed.ncbi.nlm.nih.gov/40845062/). DOI: [10.1177/09567976251358838](https://doi.org/10.1177/09567976251358838).

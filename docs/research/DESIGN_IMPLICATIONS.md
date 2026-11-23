@@ -185,6 +185,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R95 | The adherence card cites a second source showing that early endings are common in home-based training and that completers still report liking it. | Clausen 2019 found 38.5% and 57.1% dropout in two pilot arms; the app records early endings without judgement. | 30881315; ADR-086 |
 | R96 | Visual Search cites the UFOV construct-purity meta-analysis to justify single-construct, block-level measurement rather than a composite score. | Woutersen 2017 found every domain correlated with every UFOV subtest and no subtest selectively sensitive to one construct. | 29270605; ADR-087 |
 | R97 | The research export panel cites data-governance guidance beside FAIR: consent stays versioned and revocable so participation remains controllable. | O'Dea 2026 recommends harmonised standards and hybrid consent models that preserve participant control as analytics evolve. | 26978244; 42443473; ADR-088 |
+| R98 | The pre-test confidence note cites three JOL sources, including monitoring-accuracy evidence, and keeps the prompt descriptive rather than diagnostic. | Hu 2025 found stronger learners were slightly poorer at monitoring their learning (N=2,406), so self-ratings cannot calibrate performance. | 40875340; 29161973; 40845062; ADR-089 |
 
 ---
 
