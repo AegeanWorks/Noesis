@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-child-age-boundary",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795449838.141307,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795457038.141307,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795450013.1182163,
+    "completed_head": "960dd8cca8c16771b1cfa529ab683d117495bd13",
+    "completed_tree": "d6f05c2d7b802dab1b9897b16b756155cab9a715"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: surface the existing serious-games caveat on the Evidence screen as a claim boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Makes the app's 'games are not care' boundary explicit in the UI using an existing record.",
-        "mitigation": "Add the citation with a negated label, update the link-count test, run suites and review the screen in Edge.",
-        "risks": "contract: one Evidence-screen citation and one test assertion; dependency: none; concurrency: none; state: no evidence-count or version changes",
-        "why": "A verified 2023 review in the corpus says serious games should supplement, not replace established interventions, but users only see this in a research doc."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "0bfa8d2ce987ac6982495dc592a54fabe93f9fc931ccb0e3a15d00e81e5a8cc1",
-      "status": "in_progress",
-      "task_id": "noesis-serious-games-boundary",
-      "timestamp": 1795434596.097887,
-      "timestamp_str": "2026-11-23 14:49:56",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-child-age-boundary' completed successfully.",
+      "head": "960dd8cca8c16771b1cfa529ab683d117495bd13",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-child-age-boundary",
+      "timestamp": 1795450013.4474084,
+      "timestamp_str": "2026-11-23 19:06:53"
     }
   ]
 }
