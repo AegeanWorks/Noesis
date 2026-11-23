@@ -1803,5 +1803,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "a4b5b0c6bbcfd4c01e4425541d49e83aa7ed854107c32d9df112c20c5b6474cb",
     "baseline_digest": "a4b5b0c6bbcfd4c01e4425541d49e83aa7ed854107c32d9df112c20c5b6474cb"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: dementia-prevention and no-diagnostic claim boundary citations render, corpus count 185, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795432076.138546,
+    "finished_at": 1795432123.5551565,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "55176f93e7e1e756791d994e874f10215fe6dbef4d8097e3d8164dd9d255f582",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795432123.5551603
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Clinical boundary citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Clinical boundary citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "55176f93e7e1e756791d994e874f10215fe6dbef4d8097e3d8164dd9d255f582",
+    "baseline_digest": "55176f93e7e1e756791d994e874f10215fe6dbef4d8097e3d8164dd9d255f582"
   }
 ]

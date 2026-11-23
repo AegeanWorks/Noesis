@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-clinical-claim-boundary",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795432057.6589444,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795439257.6589444,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795432124.3815677,
+    "completed_head": "c7edaa9161c719da034ac7d3d17d28641f928091",
+    "completed_tree": "5a71c99411aff098165c068ae5c84390a8a3e186"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add four residual-pool records (Lampit 2014, Peeters 2023, Luis-Ruiz 2020, Vartanian 2022) and cite them on clock, adherence and transfer copy",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Partially closes D7 and links three more UI surfaces to verified evidence.",
-        "mitigation": "Verify via efetch, update counts and references, add citations with failing-first tests, run suites and review UI.",
-        "risks": "contract: four context records and four new UI links; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "Four directly relevant reviews remain unextracted in the logged residual pool; they ground the clock, adherence and near/far transfer UI copy."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "9172c41e71f8fde843b35c907c4211fe0698c609adceb8b69a6fa016212b54f5",
-      "status": "in_progress",
-      "task_id": "noesis-residual-transfer-evidence",
-      "timestamp": 1795427253.426841,
-      "timestamp_str": "2026-11-23 12:47:33",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-clinical-claim-boundary' completed successfully.",
+      "head": "c7edaa9161c719da034ac7d3d17d28641f928091",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-clinical-claim-boundary",
+      "timestamp": 1795432124.4975617,
+      "timestamp_str": "2026-11-23 14:08:44"
     }
   ]
 }
