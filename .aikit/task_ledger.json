@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-digit-proof-scripts",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795433132.3152542,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795440332.3152542,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795433141.889053,
+    "completed_head": "0c7744d2911908e794da133983571959d16a9b37",
+    "completed_tree": "7474308ad1bd785ca9149b4d3123d9567f791aeb"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: ground the Results screen's per-block, no-composite-score copy in construct-purity and transfer evidence",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Makes the app's central measurement honesty statement traceable to verified sources without adding a new claim.",
-        "mitigation": "Cite existing table PMIDs, add a failing-first test assertion, run suites and review the Results screen in Edge.",
-        "risks": "contract: one Results-screen citation line and one test assertion; dependency: none; concurrency: none; state: no evidence-count changes",
-        "why": "The Results screen states that blocks are reported separately with no single brain score, but the rationale was not evidence-linked."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "b155775bdf1db9b663cae36c126dca96264be856cb886fd89bc359d65e525a0c",
-      "status": "in_progress",
-      "task_id": "noesis-separate-blocks-evidence",
-      "timestamp": 1795430452.938594,
-      "timestamp_str": "2026-11-23 13:40:52",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-digit-proof-scripts' completed successfully.",
+      "head": "0c7744d2911908e794da133983571959d16a9b37",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-digit-proof-scripts",
+      "timestamp": 1795433141.9598415,
+      "timestamp_str": "2026-11-23 14:25:41"
     }
   ]
 }
