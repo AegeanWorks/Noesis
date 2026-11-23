@@ -8547,6 +8547,75 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the expectancy boundary: baseline optimism is not a validated responder predictor, so the app does not personalise assignment by self-expectancy."
+  },
+  {
+   "pmid": "33913064",
+   "doi": "10.1007/s11065-021-09487-3",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Neuropsychology Review",
+   "title": "A Systematic Review and Meta-Analysis of Cognitive Training in Adults with Major Depressive Disorder",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "clinical:depression",
+    "adults"
+   ],
+   "k": 9,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "effect size",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Moderate pooled cognitive and affective effects after cognitive training in diagnosed MDD; magnitudes not printed in abstract"
+    },
+    {
+     "domain": "depression",
+     "transfer": "far",
+     "measure": "effect size",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Affective outcomes improved in the clinical MDD sample; not a consumer-app or healthy-user result"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Very few studies examined far transfer to everyday functioning"
+    }
+   ],
+   "findings": [
+    "Nine controlled studies from 448 identified; heterogeneous but moderate pooled effects",
+    "Everyday-function transfer rarely measured"
+   ],
+   "limitations": [
+    "Diagnosed MDD population only",
+    "Small heterogeneous evidence base"
+   ],
+   "flags": [
+    "clinical_specific",
+    "small_trials"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the mood-treatment boundary: clinical affective effects in diagnosed MDD do not license a consumer-app treatment or wellbeing claim."
   }
  ]
 }

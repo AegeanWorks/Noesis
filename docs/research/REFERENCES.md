@@ -187,3 +187,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Expectancy and response prediction (2026-11-23 targeted update)
 
 - Expectancy Does Not Predict 18-month Treatment Outcomes with Cognitive Training in Mild Cognitive Impairment *Journal of Prevention of Alzheimer's Disease*. 2024. PMID: [38230719](https://pubmed.ncbi.nlm.nih.gov/38230719/). DOI: [10.14283/jpad.2023.62](https://doi.org/10.14283/jpad.2023.62).
+
+## Clinical mood evidence (2026-11-23 targeted update)
+
+- A Systematic Review and Meta-Analysis of Cognitive Training in Adults with Major Depressive Disorder *Neuropsychology Review*. 2022. PMID: [33913064](https://pubmed.ncbi.nlm.nih.gov/33913064/). DOI: [10.1007/s11065-021-09487-3](https://doi.org/10.1007/s11065-021-09487-3).

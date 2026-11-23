@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-expectancy-evidence",
+    "task_id": "noesis-mood-claim-boundary",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795391804.4279318,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795392840.7718441,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795399004.4279318,
+    "lease_until": 1795400040.7718441,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795391902.2309835,
-    "completed_head": "069b3a9cea0bec8178fed07542588aa5ea2c2c32",
-    "completed_tree": "652e8d5128e7e6fd60b7bff01177e3de657d5d72"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-visual-search-game",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 133/310 records, 456 node + 29 python tests, typecheck/build pass, visual search game reviewed in Edge, ADR-061",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795385396.1483297,
-      "timestamp_str": "2026-11-23 01:09:56",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-visual-search-game",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-visual-search-game' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795385592.3341148,
-      "timestamp_str": "2026-11-23 01:13:12",
-      "agent": "opencode:hy4-flash-free",
-      "head": "1e0b64ba1b703e7914d68a62d8ac5338a8a159b5",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-adherence-evidence",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-mood-claim-boundary",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: extract Woolf 2022 cognitive-training-in-depression meta-analysis and add a sixth linked claim boundary",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795392508.435905,
+      "timestamp_str": "2026-11-23 03:08:28",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The app logs symptoms but has no linked boundary distinguishing clinical depression evidence from a consumer wellbeing claim; Woolf 2022 (9 controlled studies) reports moderate clinical effects with little everyday-transfer evidence.",
+        "benefits": "Adds a verified clinical record and makes the no-treatment-claim boundary explicit with a PubMed link.",
+        "risks": "contract: one context record + sixth list item + citation test; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add the linked bullet, run all suites and review the UI."
+      },
+      "plan_digest": "0a24afa58f7841f686323fe9d4438987e71101d368c3687d76d7c24464fc0241",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-mood-claim-boundary",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 141/336 records, 458 node + 29 python tests, sixth claim boundary reviewed in Edge, ADR-068",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795392840.7718441,
+      "timestamp_str": "2026-11-23 03:14:00",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

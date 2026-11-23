@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 140 |
-| Outcomes | 333 |
+| Records | 141 |
+| Outcomes | 336 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 88 |
+| Systematic reviews/meta-analyses | 89 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 24 |
 | RCTs | 8 |
 | Umbrella reviews | 2 |
-| DOI verified | 129 |
+| DOI verified | 130 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 59 |
+| cct | 60 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 129 |
+| DOI verified | 130 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **140** |
+| **Total** | **141** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -227,6 +227,8 @@ A 2026-11-23 game-design update added one primary record from the residual eligi
 A 2026-11-23 multimodal update added one primary record from the residual eligible pool: Wu et al. 2023 (PMID 37065695, *PeerJ*; DOI 10.7717/peerj.15108), verified via E-utilities `efetch`. Twenty-one RCTs found combined exercise and cognitive training better than no intervention on working memory (SMD 0.29, 0.14-0.44), but not different from exercise alone (SMD 0.16, -0.04-0.35) or cognitive training alone (SMD 0.08, -0.13-0.30), so synergy remains unproven. This becomes a fourth linked claim boundary on the Evidence screen (ADR-066). The review is now 139 records and 331 outcomes, revision v2.5.
 
 A 2026-11-23 expectancy update added one context record from a targeted PubMed title search: Motter et al. 2024 (PMID 38230719, *Journal of Prevention of Alzheimer's Disease*; DOI 10.14283/jpad.2023.62), verified via E-utilities `efetch`. In a two-site RCT of 107 patients with MCI, expectancy was higher for computerized training than crosswords but was not associated with 78-week change in global cognition, everyday function or hippocampal volume, and did not interact with treatment. Baseline expectancy is therefore not a validated responder predictor, which becomes a fifth linked claim boundary on the Evidence screen (ADR-067). The record comes from a targeted search, not the residual corpus, so D7 is unchanged. The review is now 140 records and 333 outcomes, revision v2.6.
+
+A 2026-11-23 clinical-mood update added one context record: Woolf et al. 2022 (PMID 33913064, *Neuropsychology Review*; DOI 10.1007/s11065-021-09487-3), verified via E-utilities `efetch`. Nine controlled studies in adults with diagnosed major depressive disorder produced moderate pooled cognitive and affective effects, but very few examined transfer to everyday functioning. The result is clinical and population-specific, so it becomes a sixth linked claim boundary: no mood-disorder treatment claim for a consumer app (ADR-068). This record came from a targeted search, so D7 is unchanged. The review is now 141 records and 336 outcomes, revision v2.7.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

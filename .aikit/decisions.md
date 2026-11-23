@@ -481,6 +481,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Motter 2024 as a context record with its null associations, extend the Evidence screen's claim-boundary list with a fifth linked bullet, add R76, and update the synthesis measurement plan to say expectancy should be measured but not used for responder selection.
 - **Consequences**: The review moves to 140 records and 333 outcomes (revision v2.6), D7 is unchanged because the record came from a targeted search, and the app states that it does not personalise assignment by self-expectancy.
 
+### ADR-068: Clinical Mood Claim Boundary
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The app's symptom check-in records adverse experiences, and it makes no treatment claim. Woolf et al. 2022 (PMID 33913064) found moderate pooled cognitive and affective effects of cognitive training in adults with diagnosed major depressive disorder, but very few studies assessed everyday-function transfer; the population and claim are clinical, not consumer.
+- **Decision**: Add Woolf 2022 as a context record with null-valued narrative outcomes, and add a sixth linked boundary to the Evidence screen: no mood-disorder treatment claim from consumer brain training. Add R78 and extend the citation test.
+- **Consequences**: The review moves to 141 records and 336 outcomes (revision v2.7), D7 is unchanged, and the app's safety logging is explicitly separated from any therapeutic claim.
+
 
 
 
