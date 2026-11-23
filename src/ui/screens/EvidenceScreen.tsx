@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 183 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 185 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -321,6 +321,18 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/42356174/"
               label="No significant digital-training benefit over active controls"
               pmid="42356174"
+            />
+          </li>
+          <li>
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/21942932/"
+              label="No dementia-prevention or training-treatment claim"
+              pmid="21942932"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/40299473/"
+              label="No diagnostic claim: Noesis is not a validated screening tool"
+              pmid="40299473"
             />
           </li>
         </ul>

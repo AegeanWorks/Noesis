@@ -201,6 +201,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R111 | The Results screen explains why blocks are reported separately instead of as one composite score. | Woutersen 2017 found no UFOV subtest measures a single construct; Sala & Gobet 2020 found near transfer grows with training-outcome similarity, so component-level comparison is more informative. | 29270605; 31939109; ADR-102 |
 | R112 | Digit Span gets the same level-aware mean/longest-span trend card and Choose-a-test trend line as Spatial Span, with descriptive-only caveats. | Consistent within-level comparison avoids cross-level confusion; this is a presentation rule, not a new efficacy claim. | R107; R109; ADR-103 |
 | R113 | The Home screen's weakest-link focus suggestion cites testing-effect and distributed-practice evidence, framed as group-level context rather than a personal dose target. | Rowland 2014 found testing beats restudy; Cepeda 2006 found spacing beats massing across retention intervals. | 25150680; 16719566; ADR-104 |
+| R114 | The Evidence screen states no dementia-prevention claim and no diagnostic claim, distinguishing validated screening tools from this consumer focus-test app. | Gates 2011 found low-quality memory gains in MCI without a prevention outcome; Li 2025 reports screening accuracy for validated tools that Noesis does not have. | 21942932; 40299473; ADR-105 |
 
 ---
 

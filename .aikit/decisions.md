@@ -740,6 +740,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add one citation line to the weakest-link card linking the testing effect and distributed-practice syntheses, with R113; keep the group-level-context caveat.
 - **Consequences**: The focus suggestion becomes evidence-linked without changing the recommendation or any evidence count; sourced author-year labels were verified by E-utilities `efetch`.
 
+### ADR-105: Dementia and Diagnostic Claim Boundaries
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The Evidence screen covered many claim boundaries but not dementia prevention or diagnosis. Gates et al. 2011 (low-quality MCI training gains, no prevention outcome) and Li et al. 2025 (validated unsupervised screening accuracy) were uncited eligible residual reviews.
+- **Decision**: Add both as context records and one new claim-boundary row stating that Noesis makes no dementia-prevention or diagnostic claim and is not a validated screening tool, with R114.
+- **Consequences**: The review moves to 185 records and 404 outcomes (revision v2.37), D7 residuals fall to 950, and the app's clinical limits become explicit rather than implied.
+
 
 
 

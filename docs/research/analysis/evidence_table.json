@@ -10786,6 +10786,121 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-dose-prescription copy: intervention type, duration and education interact with outcomes at group level, so the app avoids universal session-count advice."
+  },
+  {
+   "pmid": "21942932",
+   "doi": "10.1186/1471-2318-11-55",
+   "doi_status": "verified",
+   "year": 2011,
+   "journal": "BMC Geriatrics",
+   "title": "Cognitive and memory training in adults at risk of dementia: a systematic review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "mci",
+    "older_adults"
+   ],
+   "k": 10,
+   "n": 305,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "verbal_memory",
+     "transfer": "near",
+     "measure": "narrative_effect_sizes",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "10 studies, 305 MCI participants; moderate effects on memory outcomes in seven trials; cognitive exercises relative effects .10-1.21"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Only five RCTs; meta-analysis inappropriate due to heterogeneity; no dementia-prevention or disease-modification outcome established"
+    }
+   ],
+   "findings": [
+    "Cognitive exercises produced moderate memory gains in MCI samples",
+    "Few high-quality RCTs, so no prevention claim follows"
+   ],
+   "limitations": [
+    "Clinical MCI population",
+    "Heterogeneous interventions and only five RCTs"
+   ],
+   "flags": [
+    "clinical_specific",
+    "narrative_only",
+    "low_quality"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the no-dementia-prevention boundary: training in MCI improved memory outcomes with low evidence quality and no established prevention effect."
+  },
+  {
+   "pmid": "40299473",
+   "doi": "10.1080/13607863.2025.2495794",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "Aging & Mental Health",
+   "title": "Diagnostic performance of self-administered unsupervised computerized cognitive tests for the identification of mild cognitive impairment (MCI) and dementia: a systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "mci",
+    "dementia"
+   ],
+   "k": 28,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "na",
+     "measure": "sensitivity",
+     "value": 0.84,
+     "ci_low": 0.81,
+     "ci_high": 0.87,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "28 articles, 21 in meta-analysis: pooled sensitivity 0.84 for unsupervised computerized MCI/dementia screening; tools under five minutes had sensitivity 0.85"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "na",
+     "measure": "specificity",
+     "value": 0.86,
+     "ci_low": 0.82,
+     "ci_high": 0.89,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Pooled specificity 0.86; only three studies assessed feasibility and usability in intended clinical settings"
+    }
+   ],
+   "findings": [
+    "Validated unsupervised computerized tests can screen for MCI and dementia in clinical samples",
+    "Usability was rarely evaluated and screening is not diagnosis"
+   ],
+   "limitations": [
+    "Clinical screening populations",
+    "Screening accuracy does not validate an unrelated consumer app"
+   ],
+   "flags": [
+    "diagnostic_context",
+    "clinical_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-diagnostic-claim boundary: validated screening tools exist but Noesis has not been validated as one and does not diagnose, screen or triage."
   }
  ]
 }

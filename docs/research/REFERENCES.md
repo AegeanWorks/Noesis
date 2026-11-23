@@ -320,3 +320,8 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 
 - Comparing Digital Cognitive Interventions to Active Controls and Usual Care for Mild Cognitive Impairment and Dementia: A Systematic Review and Meta-Analysis *Medicina*. 2026. PMID: [42356174](https://pubmed.ncbi.nlm.nih.gov/42356174/). DOI: [10.3390/medicina62061162](https://doi.org/10.3390/medicina62061162).
 - The effectiveness of real-life cognitive and physical interventions on cognitive functioning in healthy older adults: A systematic review of the effects of education and training duration *Applied Psychology: Health and Well-Being*. 2025. PMID: [39822168](https://pubmed.ncbi.nlm.nih.gov/39822168/). DOI: [10.1111/aphw.12651](https://doi.org/10.1111/aphw.12651).
+
+## Clinical claim boundaries (2026-11-23 targeted update)
+
+- Cognitive and memory training in adults at risk of dementia: a systematic review *BMC Geriatrics*. 2011. PMID: [21942932](https://pubmed.ncbi.nlm.nih.gov/21942932/). DOI: [10.1186/1471-2318-11-55](https://doi.org/10.1186/1471-2318-11-55).
+- Diagnostic performance of self-administered unsupervised computerized cognitive tests for the identification of mild cognitive impairment (MCI) and dementia: a systematic review and meta-analysis *Aging & Mental Health*. 2025. PMID: [40299473](https://pubmed.ncbi.nlm.nih.gov/40299473/). DOI: [10.1080/13607863.2025.2495794](https://doi.org/10.1080/13607863.2025.2495794).
