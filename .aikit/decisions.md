@@ -971,6 +971,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Reijnders et al. 2013 as a context record and a third citation on that boundary, with R146; bump the review version to v2.55.
 - **Consequences**: The review moves to 204 records and 450 outcomes (revision v2.55), D7 residuals fall to 931, and the boundary now spans three systematic reviews.
 
+### ADR-138: Real-World Intervention Evidence on the Clock Note
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The Settings clock note cited two CCT meta-analyses; a verified 2019 real-world meta-analysis adds community-intervention context that cognitive-only activities did not beat controls.
+- **Decision**: Add Vaportzis et al. 2019 as a context record and a third citation on that note, with R147; bump the review version to v2.56.
+- **Consequences**: The review moves to 205 records and 452 outcomes (revision v2.56), D7 residuals fall to 930, and the group-level-context caveat gains direct support.
+
 
 
 

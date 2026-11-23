@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-everyday-generalization-evidence",
+    "task_id": "noesis-realworld-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795472854.5465422,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795474182.5844316,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795480054.5465422,
+    "lease_until": 1795481382.5844316,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795472980.9202302,
-    "completed_head": "2f966be36bd297fa10c8ed019836d3baa9b25781",
-    "completed_tree": "40bd16dbb78946d506e24f7b21d7280ab49ed10a"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 198/435 records, 489 tests, gates 7/7, EF subdomain citation verified in Edge, ADR-131",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-ef-nma-evidence",
-      "timestamp": 1795467168.3046858,
-      "timestamp_str": "2026-11-23 23:52:48",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-ef-nma-evidence' completed successfully.",
-      "head": "5a41386c53f0d68f9256948a739b759262fbc907",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-ef-nma-evidence",
-      "timestamp": 1795467237.275173,
-      "timestamp_str": "2026-11-23 23:53:57"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Lv 2025 leisure-activity RCT meta-analysis as context and cite it on the serious-games care-replacement boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-everyday-generalization-evidence",
       "timestamp": 1795472981.1523626,
       "timestamp_str": "2026-11-24 01:29:41"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Vaportzis 2019 real-world interventions meta-analysis as context and cite it on the Settings clock-evidence note",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a third source to the Settings clock note and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2019 meta-analysis of 43 RCTs found cognitive-activity interventions alone did not improve outcomes versus controls, directly relevant to the app's group-level design context."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "72a727e5fa54872d81c5f191cdfcf990e909bcf46359946305b0f0680cf88ae4",
+      "status": "in_progress",
+      "task_id": "noesis-realworld-evidence",
+      "timestamp": 1795473517.830706,
+      "timestamp_str": "2026-11-24 01:38:37",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 205/452 records, 489 tests, gates 7/7, real-world citation verified in Edge Settings, ADR-138",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-realworld-evidence",
+      "timestamp": 1795474182.5844316,
+      "timestamp_str": "2026-11-24 01:49:42",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

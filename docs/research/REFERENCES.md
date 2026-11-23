@@ -398,3 +398,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Everyday generalization evidence (2026-11-24 targeted update)
 
 - Cognitive interventions in healthy older adults and people with mild cognitive impairment: a systematic review *Ageing Research Reviews*. 2013. PMID: [22841936](https://pubmed.ncbi.nlm.nih.gov/22841936/). DOI: [10.1016/j.arr.2012.07.003](https://doi.org/10.1016/j.arr.2012.07.003).
+
+## Real-world intervention evidence (2026-11-24 targeted update)
+
+- A systematic literature review and meta-analysis of real-world interventions for cognitive ageing in healthy older adults *Ageing Research Reviews*. 2019. PMID: [30707947](https://pubmed.ncbi.nlm.nih.gov/30707947/). DOI: [10.1016/j.arr.2019.01.006](https://doi.org/10.1016/j.arr.2019.01.006).

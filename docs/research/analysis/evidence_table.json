@@ -12091,6 +12091,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-everyday-function boundary: even where objective cognitive gains appeared, daily-life generalization was unresolved and study quality low."
+  },
+  {
+   "pmid": "30707947",
+   "doi": "10.1016/j.arr.2019.01.006",
+   "doi_status": "verified",
+   "year": 2019,
+   "journal": "Ageing Research Reviews",
+   "title": "A systematic literature review and meta-analysis of real-world interventions for cognitive ageing in healthy older adults",
+   "modality": "multi_intervention",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 43,
+   "n": 5060,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "attention",
+     "transfer": "near",
+     "measure": "mean_difference",
+     "value": 0.43,
+     "ci_low": -0.0,
+     "ci_high": 0.86,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "43 RCTs (2826 intervention, 2234 controls): TMT-A improved marginally (M=0.43, 95% CI -0.00 to 0.86) and verbal fluency (M=0.31, 0.02-0.61)"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Cognitive activity interventions alone showed no significant improvements versus all controls; physical-activity interventions were more consistently associated with gains"
+    }
+   ],
+   "findings": [
+    "Cognitive-only real-world activities did not improve cognition versus controls",
+    "Physical activity showed more consistent benefits; effects are group-level"
+   ],
+   "limitations": [
+    "Heterogeneous community interventions",
+    "Most outcomes only marginal at p=0.05"
+   ],
+   "flags": [
+    "group_level_context",
+    "domain_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the Settings clock note: intervention format matters at group level, but these heterogeneous community results are not a personal dose prescription."
   }
  ]
 }

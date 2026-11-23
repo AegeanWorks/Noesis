@@ -254,8 +254,10 @@ export function SettingsScreen({
           adults) reported small gains in processing speed (g=0.23), selective attention (g=0.40)
           and short-term memory (g=0.35); non-time-pressure formats were among the preferable
           design features. A separate 52-trial meta-analysis found a small overall benefit (g=0.22)
-          but no advantage for unsupervised home practice or more than three sessions a week. That is
-          group-level context, not a personal prescription.{" "}
+          but no advantage for unsupervised home practice or more than three sessions a week. A
+          community-intervention meta-analysis found cognitive activities alone did not beat controls
+          while physical activity showed more consistent gains. That is group-level context, not a
+          personal prescription.{" "}
           <a
             href="https://pubmed.ncbi.nlm.nih.gov/32980574/"
             target="_blank"
@@ -271,7 +273,15 @@ export function SettingsScreen({
           >
             Lampit et al. 2014
           </a>{" "}
-          <span className="pmid">PMID 25405755</span>
+          <span className="pmid">PMID 25405755</span>{" "}
+          <a
+            href="https://pubmed.ncbi.nlm.nih.gov/30707947/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Vaportzis et al. 2019
+          </a>{" "}
+          <span className="pmid">PMID 30707947</span>
         </p>
       </div>
 
