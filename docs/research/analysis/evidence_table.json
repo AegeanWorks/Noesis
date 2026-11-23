@@ -9785,6 +9785,63 @@
    ],
    "synthesis_role": "context",
    "product_use": "Grounds the no-general-gain boundary: the app offers enjoyment and task practice only, with no memory, intelligence or everyday-function claim."
+  },
+  {
+   "pmid": "40410069",
+   "doi": "10.1016/j.gerinurse.2025.05.005",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "Geriatric Nursing",
+   "title": "Effectiveness of cognitive-motor dual task training in preventing falls in community older adults: A meta-analysis and systematic review",
+   "modality": "multi_intervention",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "gait_balance",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Dual-task training improved gait, static/dynamic balance (>=12 weeks) and executive function and reduced fall risk versus traditional fall prevention"
+    },
+    {
+     "domain": "adverse_events",
+     "transfer": "na",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Effects on lower-limb strength and fear of falling remained controversial"
+    }
+   ],
+   "findings": [
+    "Motor+cognitive dual-task training improves balance, gait and executive function",
+    "Long-term effectiveness needs higher-quality trials"
+   ],
+   "limitations": [
+    "Requires physical movement, absent from Noesis",
+    "Fall-prevention outcome, not cognitive transfer"
+   ],
+   "flags": [
+    "clinical_specific",
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the modality boundary: Noesis is screen-based with no motor component, so it makes no gait, balance or fall-prevention claim."
   }
  ]
 }

@@ -656,6 +656,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a seventh Evidence-screen claim boundary, with R101; keep the app framed as task practice and enjoyment only.
 - **Consequences**: The review moves to 164 records and 370 outcomes (revision v2.28) and the central no-general-gain claim has direct pooled support.
 
+### ADR-093: Modality Boundary from Dual-Task Evidence
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Gao & Liu 2025 (PMID 40410069) was narrative-only in NEW_MECHANIC_CANDIDATES.md section 6.3 and reports gait, balance, executive-function and fall-risk benefits from cognitive-motor dual-task training in community older adults.
+- **Decision**: Add it as a context record and an Evidence-screen modality boundary, with R102; state plainly that Noesis is screen-based and makes no motor benefit claim.
+- **Consequences**: The review moves to 165 records and 372 outcomes (revision v2.29) and the app's modality limits are explicit rather than implied.
+
 
 
 

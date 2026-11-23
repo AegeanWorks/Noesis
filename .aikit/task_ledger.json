@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-commercial-training-evidence",
+    "task_id": "noesis-dualtask-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795420510.7202349,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795421536.143847,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795427710.7202349,
+    "lease_until": 1795428736.143847,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795420552.8760605,
-    "completed_head": "7133ff72adf15e8037adb6a629a35b90d80d3e09",
-    "completed_tree": "8dfacf07cb2f5cc0111672be55da9ea999980b65"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 158/362 records, 468 tests, gates 7/7, dropout citation reviewed in Edge, ADR-086",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-dropout-evidence",
-      "timestamp": 1795410999.1686535,
-      "timestamp_str": "2026-11-23 08:16:39",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-dropout-evidence' completed successfully.",
-      "head": "a0cd70669b798b6998eee012e274dfaa3c5c4d36",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-dropout-evidence",
-      "timestamp": 1795411155.7512054,
-      "timestamp_str": "2026-11-23 08:19:15"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Woutersen 2017 UFOV construct-purity meta-analysis as context and cite it in Visual Search",
@@ -409,6 +371,48 @@
       "task_id": "noesis-commercial-training-evidence",
       "timestamp": 1795420552.933946,
       "timestamp_str": "2026-11-23 10:55:52"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Gao 2025 dual-task meta-analysis as context and add a no-motor-benefit claim boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Resolves another narrative-only citation and documents why Noesis claims no gait, balance or fall-prevention benefit.",
+        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
+        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
+        "why": "The app has no motor component, yet exercise evidence is cited narratively; a pooled dual-task result makes the modality boundary explicit."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "3f29a93b3c7cc35f1560740a2c76e61de36720367e97bead7684efe8b580400b",
+      "status": "in_progress",
+      "task_id": "noesis-dualtask-evidence",
+      "timestamp": 1795421092.5217986,
+      "timestamp_str": "2026-11-23 11:04:52",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 165/372 records, 468 tests, gates 7/7, dual-task boundary reviewed in Edge, ADR-093",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-dualtask-evidence",
+      "timestamp": 1795421536.143847,
+      "timestamp_str": "2026-11-23 11:12:16",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

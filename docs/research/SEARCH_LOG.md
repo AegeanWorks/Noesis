@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 164 |
-| Outcomes | 370 |
+| Records | 165 |
+| Outcomes | 372 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 102 |
+| Systematic reviews/meta-analyses | 103 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 30 |
 | RCTs | 12 |
 | Umbrella reviews | 2 |
-| DOI verified | 153 |
+| DOI verified | 154 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -141,7 +141,7 @@ By modality:
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
-| multi_intervention | 6 |
+| multi_intervention | 7 |
 | safety | 8 |
 | engagement | 38 |
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 153 |
+| DOI verified | 154 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **164** |
+| **Total** | **165** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -271,6 +271,8 @@ A 2026-11-23 UFOV-training update resolved Edwards et al. 2018 (PMID 29175362, *
 A 2026-11-23 engagement-process update resolved Brand et al. 2016 (PMID 27590829, *Neuroscience & Biobehavioral Reviews*; DOI 10.1016/j.neubiorev.2016.08.033) from narrative-only to a context record, verified via E-utilities `efetch`. The I-PACE model proposes that cue-reactivity, coping styles and reduced executive control maintain excessive Internet use. The Motivation safeguards now cite it for the no-real-stakes and no-push-cue design (ADR-091). D7 is unchanged; the review is now 163 records and 368 outcomes, revision v2.27.
 
 A 2026-11-23 commercial-program update resolved Nguyen et al. 2022 (PMID 34251578, *Neuropsychology Review*; DOI 10.1007/s11065-021-09515-2) from narrative-only to a context record, verified via E-utilities `efetch`. Forty-three studies (N=2,636) of seven commercial brain-training programs showed small near transfer but no robust far transfer; after publication-bias adjustment only processing speed remained significant. The Evidence screen now lists this as a claim boundary (ADR-092). D7 is unchanged; the review is now 164 records and 370 outcomes, revision v2.28.
+
+A 2026-11-23 dual-task update resolved Gao & Liu 2025 (PMID 40410069, *Geriatric Nursing*; DOI 10.1016/j.gerinurse.2025.05.005) from narrative-only to a context record, verified via E-utilities `efetch`. Cognitive-motor dual-task training improved gait, balance and executive function in community older adults, but the modality requires physical movement that Noesis does not have. The Evidence screen now lists a no-motor-benefit boundary (ADR-093). D7 is unchanged; the review is now 165 records and 372 outcomes, revision v2.29.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

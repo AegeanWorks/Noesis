@@ -277,3 +277,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Commercial program evidence (2026-11-23 targeted update)
 
 - A Game a Day Keeps Cognitive Decline Away? A Systematic Review and Meta-Analysis of Commercially-Available Brain Training Programs in Healthy and Cognitively Impaired Older Adults *Neuropsychology Review*. 2022. PMID: [34251578](https://pubmed.ncbi.nlm.nih.gov/34251578/). DOI: [10.1007/s11065-021-09515-2](https://doi.org/10.1007/s11065-021-09515-2).
+
+## Cognitive-motor training (2026-11-23 targeted update)
+
+- Effectiveness of cognitive-motor dual task training in preventing falls in community older adults: A meta-analysis and systematic review *Geriatric Nursing*. 2025. PMID: [40410069](https://pubmed.ncbi.nlm.nih.gov/40410069/). DOI: [10.1016/j.gerinurse.2025.05.005](https://doi.org/10.1016/j.gerinurse.2025.05.005).
