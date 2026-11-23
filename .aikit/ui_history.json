@@ -2162,5 +2162,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "4a25c150f4bb6345e15ba1c0cf319cdfcb7f48636a38c9d1ac4e9a8c8dda2ae2",
     "baseline_digest": "4a25c150f4bb6345e15ba1c0cf319cdfcb7f48636a38c9d1ac4e9a8c8dda2ae2"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Menu History in Edge: Search and Symbol accuracy/response-time cards and briefing lines render, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795454245.5092318,
+    "finished_at": 1795454289.7538803,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "eaa7a93db1a87681db820a7c8a00c620c9df6f2dcb85577426f67d9697ac3309",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795454289.7538834
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/ui/practice-menu.test.tsx",
+        "reason": "Search and Symbol trend card tests"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "eaa7a93db1a87681db820a7c8a00c620c9df6f2dcb85577426f67d9697ac3309",
+    "baseline_digest": "eaa7a93db1a87681db820a7c8a00c620c9df6f2dcb85577426f67d9697ac3309"
   }
 ]
