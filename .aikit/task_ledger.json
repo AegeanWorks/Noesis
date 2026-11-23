@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-symbol-game",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795394229.6379638,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795401429.6379638,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795394364.6328297,
+    "completed_head": "e460cf65044a8b8e99bdf6ff0d6b02b9ccee5e5b",
+    "completed_tree": "c229b15b8c10fb11d9ad0b0d85b435c47ee85e0c"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-everyday-function-evidence",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: extract Kelly 2014 and Chandler 2016 everyday-function reviews and ground the Results claim-boundary note",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795387004.1527312,
-      "timestamp_str": "2026-11-23 01:36:44",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The Results screen lists what a block does not mean but cites no source; two residual eligible reviews directly address everyday-function transfer in healthy older adults and MCI.",
-        "benefits": "Adds pooled near-transfer evidence and explicit everyday-function uncertainty with a verifiable PubMed link in the result view.",
-        "risks": "contract: two evidence records + results note + test; dependency: none; concurrency: none; state: counts and references must move together",
-        "mitigation": "Verify both records via PubMed efetch, update counts/references/prose, add one linked note with a test, run all suites and review the UI."
-      },
-      "plan_digest": "4d06cde38f62c5bac5607b2dac1726560180a0bcec0afebd5fa645a979fd92e1",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-everyday-function-evidence",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-symbol-game",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-symbol-game' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795394364.6976802,
+      "timestamp_str": "2026-11-23 03:39:24",
+      "agent": "opencode:hy4-flash-free",
+      "head": "e460cf65044a8b8e99bdf6ff0d6b02b9ccee5e5b",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }

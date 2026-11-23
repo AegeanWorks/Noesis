@@ -395,5 +395,64 @@
     "final_snapshot_entries": 0,
     "surface_digest": "3c5d7a485c97a3b711d9cd4a1c6f5c8d803660c323758119bd0044fc6fcf4ea1",
     "baseline_digest": "3c5d7a485c97a3b711d9cd4a1c6f5c8d803660c323758119bd0044fc6fcf4ea1"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Played Digit Symbol in Edge: legend, target shape and four digit buttons render correctly, tap produces feedback, no console errors; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795394327.0933533,
+    "finished_at": 1795394364.2543335,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "cfdccb45d6d8a28982299c44fbf8483e04c9830f1ad5051a7d14be1d33a15081",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795394364.2543352
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/engine/ai.test.ts",
+        "reason": "Digit Symbol mechanic and count updates"
+      },
+      {
+        "path": "tests/engine/symbol.test.ts",
+        "reason": "Digit Symbol mechanic and count updates"
+      },
+      {
+        "path": "tests/scripts/ai-drive-flags.test.ts",
+        "reason": "Digit Symbol mechanic and count updates"
+      },
+      {
+        "path": "tests/storage/adaptive.test.ts",
+        "reason": "Digit Symbol mechanic and count updates"
+      },
+      {
+        "path": "tests/ui/mechanic-stage.test.tsx",
+        "reason": "Digit Symbol mechanic and count updates"
+      },
+      {
+        "path": "tests/ui/menu-filter.test.tsx",
+        "reason": "Digit Symbol mechanic and count updates"
+      },
+      {
+        "path": "tests/ui/settings-symptoms.test.tsx",
+        "reason": "Digit Symbol mechanic and count updates"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "cfdccb45d6d8a28982299c44fbf8483e04c9830f1ad5051a7d14be1d33a15081",
+    "baseline_digest": "cfdccb45d6d8a28982299c44fbf8483e04c9830f1ad5051a7d14be1d33a15081"
   }
 ]
