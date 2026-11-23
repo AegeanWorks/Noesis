@@ -10,7 +10,7 @@
 - **Total Classes**: `9`
 - **Total Top-Level Functions**: `20`
 - **Total Class Methods**: `33`
-- **Total Source Lines**: `780`
+- **Total Source Lines**: `783`
 
 ## 🧭 Map Coverage
 - **Indexed**: python (`9` module(s))
@@ -148,7 +148,7 @@
 ### [`tests/test_review_snapshot.py`](tests/test_review_snapshot.py)
 > *Snapshot checks for the current evidence review.*
 
-**Size**: `106` lines
+**Size**: `109` lines
 
 **Classes:**
 - `class ReviewSnapshotTest`

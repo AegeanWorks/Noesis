@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-trial-dossier-lineup",
+    "task_id": "noesis-design-doc-focus-list",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795436216.8224182,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795436339.2788193,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795443416.8224182,
+    "lease_until": 1795443539.2788193,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795436227.5851245,
-    "completed_head": "54e05899b58063c1c717ba4114be5d08cbde033c",
-    "completed_tree": "bfa136d980e4913959165ed9251a0967d4d8e493"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 185/404 records unchanged, 481 tests, gates 7/7, both Digit Span browser proofs pass with screenshots, ADR-108",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-digit-proof-scripts",
-      "timestamp": 1795433132.3152542,
-      "timestamp_str": "2026-11-23 14:25:32",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-digit-proof-scripts' completed successfully.",
-      "head": "0c7744d2911908e794da133983571959d16a9b37",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-digit-proof-scripts",
-      "timestamp": 1795433141.9598415,
-      "timestamp_str": "2026-11-23 14:25:41"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: wire keyboard number keys for Digit Span (0-9) and Symbol (1-4) in SessionScreen",
@@ -409,6 +371,48 @@
       "task_id": "noesis-trial-dossier-lineup",
       "timestamp": 1795436227.7727888,
       "timestamp_str": "2026-11-23 15:17:07"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add the three missing focus-test bullets to DESIGN_IMPLICATIONS overview and extend the doc guard",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Design traceability now matches the shipped lineup in both overview and requirement rows.",
+        "mitigation": "Add the three bullets, extend the existing guard test, run gates.",
+        "risks": "contract: two documentation/test files; dependency: none; concurrency: none; state: no app or corpus changes",
+        "why": "The overview bullet list still named only seven of ten focus tests after the previous dossier fix."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "3c8950628bc2e8d958f708d8a0709caa8401cb12708d08442cfaab6711b89789",
+      "status": "in_progress",
+      "task_id": "noesis-design-doc-focus-list",
+      "timestamp": 1795436338.773872,
+      "timestamp_str": "2026-11-23 15:18:58",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 188/410 records unchanged, 31 Python + 485 JS tests, gates 7/7, both docs guarded",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-design-doc-focus-list",
+      "timestamp": 1795436339.278819,
+      "timestamp_str": "2026-11-23 15:18:59",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

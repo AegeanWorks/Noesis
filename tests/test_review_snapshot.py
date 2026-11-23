@@ -25,10 +25,7 @@ class ReviewSnapshotTest(unittest.TestCase):
         cls.entries = parse_entries(load_table())
 
     def test_trial_dossier_lists_every_focus_test(self):
-        dossier = (ROOT / "docs" / "research" / "TRIAL_READINESS.md").read_text(
-            encoding="utf-8"
-        )
-        for name in (
+        focus_tests = (
             "Task Switch",
             "Flanker",
             "Spatial Span",
@@ -39,8 +36,14 @@ class ReviewSnapshotTest(unittest.TestCase):
             "Visual Search",
             "Digit Symbol",
             "Digit Span",
+        )
+        for rel in (
+            "docs/research/TRIAL_READINESS.md",
+            "docs/research/DESIGN_IMPLICATIONS.md",
         ):
-            self.assertIn(name, dossier)
+            doc = (ROOT / rel).read_text(encoding="utf-8")
+            for name in focus_tests:
+                self.assertIn(name, doc, f"{name} missing from {rel}")
 
     def test_research_readme_counts_match_the_table(self):
         readme = (ROOT / "docs" / "research" / "README.md").read_text(encoding="utf-8")

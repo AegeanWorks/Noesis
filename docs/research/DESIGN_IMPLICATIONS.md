@@ -28,6 +28,9 @@ The first vertical slice implements:
 - an experimental Prospective Memory focus test for delayed-intention practice;
 - an experimental Paired Associates focus test for verbal episodic-memory practice;
 - an experimental Change Detection focus test for visual working-memory practice;
+- an experimental Visual Search focus test for conjunction-attention practice;
+- an experimental Digit Symbol focus test for digit-to-symbol association practice;
+- an experimental Digit Span focus test for verbal sequence recall;
 - resumable sessions: a validated local snapshot survives reloads and Android WebView restarts;
 - an optional when/where practice plan, user-selected session length and difficulty, and a non-punitive weekly summary;
 - a bounded Motivation mode: cosmetic variable bonuses, streak multipliers, a real near-best cue, optional bonus-only risk and a target time;
