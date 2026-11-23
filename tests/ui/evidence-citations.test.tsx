@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 25);
+    expect(links).toHaveLength(mechanicCitations + 28);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -28,6 +28,9 @@ describe("evidence citation rows", () => {
     expect(gradient.querySelector("a")?.getAttribute("href")).toBe(
       "https://pubmed.ncbi.nlm.nih.gov/29276344/",
     );
+    const support = screen.getByTestId("transfer-support-evidence");
+    expect(support.textContent).toMatch(/task-specific/i);
+    expect(support.querySelectorAll("a")).toHaveLength(3);
     const notSupported = screen.getByTestId("not-supported-list");
     expect(notSupported.textContent).toMatch(/ADHD symptom treatment/i);
     expect(notSupported.textContent).toMatch(/Everyday-function benefit/i);

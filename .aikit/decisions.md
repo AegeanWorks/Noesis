@@ -691,6 +691,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add all three as context records and one grouped Evidence-safeguards citation justifying small, cosmetic, never-randomized bonuses, with R106.
 - **Consequences**: The review moves to 173 records and 381 outcomes (revision v2.33) and the cosmetic-reward design is grounded in established reward mechanisms.
 
+### ADR-098: Transfer Foundations and Near-Miss Mechanism
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Four behavioral/transfer sources were narrative-only: Clark et al. 2009 (near-misses recruit reward circuitry), Karbach & Kray 2009 (near exceeds far transfer), Gross et al. 2012 (modest trained-memory gain), and Llana et al. 2026 (trained spatial gains). Schultz 1998 is verified but falls outside the 2000-2026 review window and stays narrative-only.
+- **Decision**: Add the four in-window sources as context records; cite the three training studies on the transfer-gradient copy and the near-miss finding beside the existing safeguard, with R107.
+- **Consequences**: The review moves to 177 records and 387 outcomes (revision v2.34), the near/far gradient copy becomes evidence-linked, and the pre-window exception is documented rather than silently dropped.
+
 
 
 

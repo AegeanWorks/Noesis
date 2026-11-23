@@ -194,6 +194,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R104 | The no-intelligence-gain boundary cites the placebo study, and the app uses neutral claim language throughout to avoid suggestive framing. | Foroughi 2016 found apparent IQ gains after one hour when recruitment was suggestive, with no gain in controls. | 22612437; 27325761; ADR-095 |
 | R105 | The optional practice plan cites planning and temptation-bundling evidence; motivation safeguards cite the losses-disguised-as-wins study to justify real, not fabricated, near-best cues. | Masicampo 2011 found plans quiet unfulfilled goals; Milkman 2014 found bundling effects fade; Dixon 2010 found fake wins are as arousing as real ones. | 21688924; 25843979; 20712818; ADR-096 |
 | R106 | The Evidence safeguards cite reward-prediction, jackpot goal-gradient and rare-reward mechanisms to justify keeping bonuses small, cosmetic and never randomized. | Schultz 2016 described prediction-error coding; Li 2016 found goal-gradient/rollout betting amplification; Larche 2021 found rare rewards raise arousal and urge. | 27069377; 26063627; 31760581; ADR-097 |
+| R107 | The transfer-gradient copy cites task-switching, memory-strategy and spatial-training evidence to state that practice gains are task-specific rather than general. | Karbach 2009 found near transfer exceeding far; Gross 2012 found a modest g=0.31 trained-memory gain; Llana 2026 found trained spatial-task gains; Clark 2009 joins the near-miss safeguard. | 19840052; 22423647; 41570544; 19217383; ADR-098 |
 
 ---
 

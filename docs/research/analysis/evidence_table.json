@@ -10218,6 +10218,215 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-loot-box rule: rare random rewards drive arousal and urge, so the app's bonuses are small, cosmetic and never randomized prize drops."
+  },
+  {
+   "pmid": "19217383",
+   "doi": "10.1016/j.neuron.2008.12.031",
+   "doi_status": "verified",
+   "year": 2009,
+   "journal": "Neuron",
+   "title": "Gambling near-misses enhance motivation to gamble and recruit win-related brain circuitry",
+   "modality": "engagement",
+   "design": "rct",
+   "populations": [
+    "adults",
+    "young_adults"
+   ],
+   "k": 1,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "experimental_task",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Near-misses were less pleasant than full misses yet increased desire to play; effect required personal control"
+    },
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "fMRI",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Near-misses recruited striatal and insula circuitry also responding to monetary wins"
+    }
+   ],
+   "findings": [
+    "Near-misses invigorate play despite no monetary reinforcement",
+    "Reward circuitry is recruited anomalously by near-outcomes"
+   ],
+   "limitations": [
+    "Simplified slot-machine task",
+    "Mechanism study, not a consumer-app outcome"
+   ],
+   "flags": [
+    "near_miss",
+    "mechanism_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the near-best cue safeguard: near-out recruit reward circuitry, so Noesis uses an honest personal-best gap and never a fabricated near-win."
+  },
+  {
+   "pmid": "19840052",
+   "doi": "10.1111/j.1467-7687.2009.00846.x",
+   "doi_status": "verified",
+   "year": 2009,
+   "journal": "Developmental Science",
+   "title": "How useful is executive control training? Age differences in near and far transfer of task-switching training",
+   "modality": "cct",
+   "design": "rct",
+   "populations": [
+    "children",
+    "young_adults",
+    "older_adults"
+   ],
+   "k": 1,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "pretest_posttest",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Near transfer to structurally similar tasks in all three age groups, strongest in children and older adults"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "far",
+     "measure": "pretest_posttest",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Far transfer to dissimilar executive tasks and fluid-intelligence measures reported, with variable-training effects differing by age"
+    }
+   ],
+   "findings": [
+    "Task-switching practice transfers reliably to similar tasks",
+    "Far transfer is less robust and depends on training variability and age"
+   ],
+   "limitations": [
+    "Single pretest-training-posttest study",
+    "Transfer pattern differs across age groups"
+   ],
+   "flags": [
+    "transfer_gradient",
+    "single_trial"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Supports the near/far gradient framing: task-switching practice gave near transfer across the lifespan with less robust far transfer."
+  },
+  {
+   "pmid": "22423647",
+   "doi": "10.1080/13607863.2012.667783",
+   "doi_status": "verified",
+   "year": 2012,
+   "journal": "Aging & Mental Health",
+   "title": "Memory training interventions for older adults: a meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 35,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "verbal_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.31,
+     "ci_low": 0.22,
+     "ci_high": 0.39,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "35 studies: trained groups gained 0.31 SD (95% CI 0.22-0.39) more than controls in pre-post memory performance; multi-strategy training gave larger gains"
+    }
+   ],
+   "findings": [
+    "Memory strategy training produced modest gains on trained memory tasks",
+    "No single strategy or program characteristic explained gains"
+   ],
+   "limitations": [
+    "Community-dwelling older adults only",
+    "Near-transfer measure, not everyday function"
+   ],
+   "flags": [
+    "near_transfer_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for task-practice framing: strategy training improved the trained memory tasks modestly, which does not imply a general memory benefit."
+  },
+  {
+   "pmid": "41570544",
+   "doi": "10.1016/j.actpsy.2026.106260",
+   "doi_status": "verified",
+   "year": 2026,
+   "journal": "Acta Psychologica",
+   "title": "Neuropsychological rehabilitation of spatial memory: A systematic review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "mci"
+   ],
+   "k": 8,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "visuospatial_memory",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Eight studies: moderate-to-large effects (d=0.5-0.9) for allocentric and active navigation training, especially in immersive VR and multimodal programs"
+    }
+   ],
+   "findings": [
+    "Spatial rehabilitation improved trained recall, route learning and navigation",
+    "Effects broader in healthy older adults and compensatory in MCI"
+   ],
+   "limitations": [
+    "Eight studies only",
+    "Clinical and older-adult populations; immersive VR not available in Noesis"
+   ],
+   "flags": [
+    "clinical_specific",
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the Corsi/spatial-span task family: spatial training improves trained spatial tasks, with clinical-population and modality caveats."
   }
  ]
 }

@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 173 |
-| Outcomes | 381 |
+| Records | 177 |
+| Outcomes | 387 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 103 |
+| Systematic reviews/meta-analyses | 104 |
 | Network meta-analyses | 19 |
-| Other systematic reviews | 35 |
-| RCTs | 16 |
+| Other systematic reviews | 34 |
+| RCTs | 18 |
 | Umbrella reviews | 2 |
-| DOI verified | 162 |
+| DOI verified | 166 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,13 +137,13 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 73 |
+| cct | 76 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
 | multi_intervention | 8 |
 | safety | 8 |
-| engagement | 44 |
+| engagement | 45 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 162 |
+| DOI verified | 166 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **173** |
+| **Total** | **177** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -281,6 +281,8 @@ A 2026-11-23 placebo update resolved Foroughi et al. 2016 (PMID 27325761, *PNAS*
 A 2026-11-23 planning-and-cues update resolved three narrative-only engagement sources into context records, all verified via E-utilities `efetch`: Masicampo & Baumeister 2011 (PMID 21688924, *JPSP*; DOI 10.1037/a0024192) found that specific plans quiet unfulfilled-goal intrusions; Milkman et al. 2014 (PMID 25843979, *Management Science*; DOI 10.1287/mnsc.2013.1784) found temptation bundling raised gym visits initially but faded; Dixon et al. 2010 (PMID 20712818, *Addiction*; DOI 10.1111/j.1360-0443.2010.03050.x) showed losses-disguised-as-wins are as arousing as real wins. The practice-plan card and no-fake-win safeguard now cite them (ADR-096). D7 is unchanged; the review is now 170 records and 378 outcomes, revision v2.32.
 
 A 2026-11-23 reward-mechanism update resolved three narrative-only sources into context records, all verified via E-utilities `efetch`: Schultz 2016 (PMID 27069377, *Dialogues in Clinical Neuroscience*; DOI 10.31887/DCNS.2016.18.1/wschultz) described dopamine reward-prediction-error coding; Li et al. 2016 (PMID 26063627, *Journal of Gambling Studies*; DOI 10.1007/s10899-015-9557-7) found jackpot goal-gradient and rollover effects raised bets up to 20.3%; Larche et al. 2021 (PMID 31760581, *Journal of Gambling Studies*; DOI 10.1007/s10899-019-09913-5) found rare loot-box rewards raised arousal and urge. The Evidence safeguards now cite them as one grouped reward-mechanism line justifying small, cosmetic, never-randomized bonuses (ADR-097). D7 is unchanged; the review is now 173 records and 381 outcomes, revision v2.33.
+
+A 2026-11-23 transfer-foundation update resolved four more narrative-only sources into context records, all verified via E-utilities `efetch`: Clark et al. 2009 (PMID 19217383, *Neuron*; DOI 10.1016/j.neuron.2008.12.031) found near-misses recruit win-related circuitry; Karbach & Kray 2009 (PMID 19840052, *Developmental Science*; DOI 10.1111/j.1467-7687.2009.00846.x) found task-switching near transfer across the lifespan with less robust far transfer; Gross et al. 2012 (PMID 22423647, *Aging & Mental Health*; DOI 10.1080/13607863.2012.667783) pooled 35 studies for a modest trained-memory gain (g=0.31, 95% CI 0.22-0.39); Llana et al. 2026 (PMID 41570544, *Acta Psychologica*; DOI 10.1016/j.actpsy.2026.106260) reviewed spatial-memory rehabilitation. The Evidence screen's transfer-gradient copy now cites the three training studies, and the near-miss finding joins the existing near-miss safeguard (ADR-098). Schultz 1998 (PMID 9658025) was also verified but stays narrative-only because the 2000-2026 review window excludes it; the 2016 review carries that mechanism in the corpus. D7 is unchanged; the review is now 177 records and 387 outcomes, revision v2.34.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

@@ -301,3 +301,10 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 - Dopamine reward prediction error coding *Dialogues in Clinical Neuroscience*. 2016. PMID: [27069377](https://pubmed.ncbi.nlm.nih.gov/27069377/). DOI: [10.31887/DCNS.2016.18.1/wschultz](https://doi.org/10.31887/DCNS.2016.18.1/wschultz).
 - Jackpot Structural Features: Rollover Effect and Goal-Gradient Effect in EGM Gambling *Journal of Gambling Studies*. 2016. PMID: [26063627](https://pubmed.ncbi.nlm.nih.gov/26063627/). DOI: [10.1007/s10899-015-9557-7](https://doi.org/10.1007/s10899-015-9557-7).
 - Rare Loot Box Rewards Trigger Larger Arousal and Reward Responses, and Greater Urge to Open More Loot Boxes *Journal of Gambling Studies*. 2021. PMID: [31760581](https://pubmed.ncbi.nlm.nih.gov/31760581/). DOI: [10.1007/s10899-019-09913-5](https://doi.org/10.1007/s10899-019-09913-5).
+
+## Transfer gradient and reward mechanism foundations (2026-11-23 targeted update)
+
+- Gambling near-misses enhance motivation to gamble and recruit win-related brain circuitry *Neuron*. 2009. PMID: [19217383](https://pubmed.ncbi.nlm.nih.gov/19217383/). DOI: [10.1016/j.neuron.2008.12.031](https://doi.org/10.1016/j.neuron.2008.12.031).
+- How useful is executive control training? Age differences in near and far transfer of task-switching training *Developmental Science*. 2009. PMID: [19840052](https://pubmed.ncbi.nlm.nih.gov/19840052/). DOI: [10.1111/j.1467-7687.2009.00846.x](https://doi.org/10.1111/j.1467-7687.2009.00846.x).
+- Memory training interventions for older adults: a meta-analysis *Aging & Mental Health*. 2012. PMID: [22423647](https://pubmed.ncbi.nlm.nih.gov/22423647/). DOI: [10.1080/13607863.2012.667783](https://doi.org/10.1080/13607863.2012.667783).
+- Neuropsychological rehabilitation of spatial memory: A systematic review *Acta Psychologica*. 2026. PMID: [41570544](https://pubmed.ncbi.nlm.nih.gov/41570544/). DOI: [10.1016/j.actpsy.2026.106260](https://doi.org/10.1016/j.actpsy.2026.106260).

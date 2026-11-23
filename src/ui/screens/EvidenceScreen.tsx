@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 173 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 177 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -231,6 +231,25 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
             href="https://pubmed.ncbi.nlm.nih.gov/29276344/"
             label="Sala & Gobet 2017: does far transfer exist?"
             pmid="29276344"
+          />
+        </p>
+        <p className="fine" data-testid="transfer-support-evidence">
+          Practice gains are task-specific: task-switching and memory-strategy training improve
+          the trained tasks most reliably, and spatial training helps trained navigation.{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/19840052/"
+            label="Karbach & Kray 2009: near transfer exceeds far"
+            pmid="19840052"
+          />{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/22423647/"
+            label="Gross 2012: trained-memory gains only"
+            pmid="22423647"
+          />{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/41570544/"
+            label="Llana 2026: trained spatial tasks improve"
+            pmid="41570544"
           />
         </p>
         <h3 data-testid="not-supported-heading">What the review does not support</h3>

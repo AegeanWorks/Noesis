@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-reward-mechanism-evidence",
+    "task_id": "noesis-transfer-mechanism-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795426447.523236,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795427009.099132,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795433647.523236,
+    "lease_until": 1795434209.099132,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795426492.643127,
-    "completed_head": "1353544f066776b5b429d9e771a0c6b417dad18b",
-    "completed_tree": "fb97e5bfc910405b2d44260cfbeaefd1974c90b0"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 163/368 records, 468 tests, gates 7/7, I-PACE citation reviewed in Edge, ADR-091",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-ipace-evidence",
-      "timestamp": 1795419481.015946,
-      "timestamp_str": "2026-11-23 10:38:01",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-ipace-evidence' completed successfully.",
-      "head": "d8f4e94adece960da4fe9406ec64a024249e4b10",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-ipace-evidence",
-      "timestamp": 1795419526.6636949,
-      "timestamp_str": "2026-11-23 10:38:46"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Nguyen 2022 commercial brain-training meta-analysis as context and list it as a claim boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-reward-mechanism-evidence",
       "timestamp": 1795426492.716983,
       "timestamp_str": "2026-11-23 12:34:52"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: resolve five narrative-only sources (Clark 2009, Schultz 1998, Karbach 2009, Gross 2012, Llana 2026) into context records and cite them on transfer/reward copy",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Closes the remaining narrative-only citation gap and makes the transfer-gradient copy evidence-linked.",
+        "mitigation": "Verify via efetch, update counts and references, add citations with failing-first tests, run suites and review UI.",
+        "risks": "contract: five context records and four new UI links; dependency: none; concurrency: none; state: counts and references must move together",
+        "why": "These five sources remain narrative-only but directly ground the near-miss safeguard, cosmetic-reward design and near/far transfer framing."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "a1c56dcae374f984dbdb2dc511700abe6e1d5da55a1e3c85d9d217871e4cf659",
+      "status": "in_progress",
+      "task_id": "noesis-transfer-mechanism-evidence",
+      "timestamp": 1795426616.4719212,
+      "timestamp_str": "2026-11-23 12:36:56",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 177/387 records, 468 tests, gates 7/7, transfer citations reviewed in Edge, ADR-098",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-transfer-mechanism-evidence",
+      "timestamp": 1795427009.099132,
+      "timestamp_str": "2026-11-23 12:43:29",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
