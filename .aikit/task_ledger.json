@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-episodic-memory-review",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795436774.9566174,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795443974.9566174,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795436838.1707158,
+    "completed_head": "1ce7db223017eeb809e132669508119a8fe6f2d1",
+    "completed_tree": "e10ba748a6a149ea7cc5b95c1bed43d598a14ca1"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add a Python test asserting docs/research/README.md record and outcome counts match the evidence table",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "A single guard keeps the canonical docs, evidence table and snapshot test in agreement.",
-        "mitigation": "Parse the README status line, compare to table counts, run the Python suite and full gates.",
-        "risks": "contract: one test method in an existing test file; dependency: regex and Path only; concurrency: none; state: no app or corpus changes",
-        "why": "The snapshot test pins counts in code but the research README's stated counts can drift during evidence waves."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "780c96253dd4b217ffbf50bd581272b5f9a0b77f1e42dd67cce7e1cb0b6bb4b4",
-      "status": "in_progress",
-      "task_id": "noesis-docs-count-guard",
-      "timestamp": 1795433729.0902877,
-      "timestamp_str": "2026-11-23 14:35:29",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-episodic-memory-review' completed successfully.",
+      "head": "1ce7db223017eeb809e132669508119a8fe6f2d1",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-episodic-memory-review",
+      "timestamp": 1795436838.2376008,
+      "timestamp_str": "2026-11-23 15:27:18"
     }
   ]
 }
