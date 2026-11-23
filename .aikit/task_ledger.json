@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-safety-citations",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795396831.0321152,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795404031.0321152,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795396873.4730122,
+    "completed_head": "3cb5187bee934cccac65329e059db125ec403ef9",
+    "completed_tree": "3006b2c4243bb72f73d5be7a2b3f6445aaa2a854"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-multimodal-synergy",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: extract Wu 2023 combined exercise+cognitive training meta-analysis and add a fourth linked claim boundary on the Evidence screen",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795390044.6537857,
-      "timestamp_str": "2026-11-23 02:27:24",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The review states that exercise plus cognitive training is not proven synergistic but cites no pooled head-to-head estimate; Wu 2023 (21 RCTs) directly tests that.",
-        "benefits": "Adds SMD 0.29 vs no intervention and null comparisons vs either component alone, and makes the no-synergy boundary explicit in the app.",
-        "risks": "contract: one evidence record + fourth list item + citation test; dependency: none; concurrency: none; state: counts and references must move together",
-        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add the linked bullet, run all suites and review the UI."
-      },
-      "plan_digest": "4b65616f4263ff9153c4fdda78f1d2bbaed021f7270db87eb7c99e90b9ac1014",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-multimodal-synergy",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-safety-citations",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-safety-citations' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795396873.6572876,
+      "timestamp_str": "2026-11-23 04:21:13",
+      "agent": "opencode:hy4-flash-free",
+      "head": "3cb5187bee934cccac65329e059db125ec403ef9",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }

@@ -524,5 +524,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "614293406f79886a94d015b07619d72b3d805c014b4eaf48410bad43757cac60",
     "baseline_digest": "614293406f79886a94d015b07619d72b3d805c014b4eaf48410bad43757cac60"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the safety screen in Edge: two linked citations (PMIDs 16146438, 25771249) render with no console errors; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795396845.0892444,
+    "finished_at": 1795396873.108692,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "756ee7cda5bbd2d90da275c9c86ef72d67ba1e6411062de0de0381d277d82e6c",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795396873.1086936
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/ui/safety.test.tsx",
+        "reason": "Safety citation links test"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "756ee7cda5bbd2d90da275c9c86ef72d67ba1e6411062de0de0381d277d82e6c",
+    "baseline_digest": "756ee7cda5bbd2d90da275c9c86ef72d67ba1e6411062de0de0381d277d82e6c"
   }
 ]
