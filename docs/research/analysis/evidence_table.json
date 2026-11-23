@@ -9237,6 +9237,63 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for Go/No-Go: the inhibition literature outside cognitive training targets appetitive behaviour, so the app does not claim Stop-Signal or eating-behaviour benefits."
+  },
+  {
+   "pmid": "30859709",
+   "doi": "10.1002/hbm.24560",
+   "doi_status": "verified",
+   "year": 2019,
+   "journal": "Human Brain Mapping",
+   "title": "Resting-state fMRI detects the effects of learning in short term: A visual search training study",
+   "modality": "cct",
+   "design": "rct",
+   "populations": [
+    "healthy_adults",
+    "adults"
+   ],
+   "k": 1,
+   "n": 42,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Trained group showed enhanced resting-state connectivity in visual-search regions after 30 minutes of training; whole-brain networks unchanged"
+    },
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "mixed",
+     "certainty": "very_low",
+     "note": "Connectivity change tracked individual learning; no everyday-function outcome"
+    }
+   ],
+   "findings": [
+    "Short-term training altered task-relevant resting connectivity",
+    "No whole-network change; neural mechanism only"
+   ],
+   "limitations": [
+    "Single small sample",
+    "Neural outcome, not user benefit"
+   ],
+   "flags": [
+    "neural_behaviour_gap",
+    "single_trial"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for Visual Search: neural adaptation after short training is a mechanism finding, not evidence of cognitive or everyday benefit."
   }
  ]
 }

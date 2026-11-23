@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 153 |
-| Outcomes | 354 |
+| Records | 154 |
+| Outcomes | 356 |
 | Primary outcomes | 258 |
 | Systematic reviews/meta-analyses | 98 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 26 |
-| RCTs | 9 |
+| RCTs | 10 |
 | Umbrella reviews | 2 |
-| DOI verified | 142 |
+| DOI verified | 143 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 66 |
+| cct | 67 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 142 |
+| DOI verified | 143 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **153** |
+| **Total** | **154** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -251,6 +251,8 @@ A 2026-11-23 spatial-training update resolved Hawes et al. 2022 (PMID 35073120, 
 A 2026-11-23 action-game update resolved Bediou et al. 2018 (PMID 29172564, *Psychological Bulletin*; DOI 10.1037/bul0000130) from narrative-only to a context record, verified via E-utilities `efetch`. Habitual action-game players differed from controls by g=0.55, but long-term interventions against other commercial games gave g=0.34, and publication bias was estimated to inflate published effects by about 30 percent; the genre remains excluded from Noesis on flashing/fast-presentation safety grounds. The Motivation safeguards now cite it (ADR-081). D7 is unchanged; the review is now 152 records and 353 outcomes, revision v2.17.
 
 A 2026-11-23 inhibition-paradigm update resolved McGreen et al. 2024 (PMID 38309625, *Appetite*; DOI 10.1016/j.appet.2024.107215) from narrative-only to a context record, verified via E-utilities `efetch`. Thirty-two studies of Go/No-Go and Stop-Signal training with food cues gave a small behaviour effect (g=-0.21, -0.31 to -0.11), not cognitive transfer. The Go/No-Go brief now cites it beside the inhibitory-control evidence, keeping the no-daily-impulse-control claim (ADR-082). D7 is unchanged; the review is now 153 records and 354 outcomes, revision v2.18.
+
+A 2026-11-23 visual-search mechanism update resolved Bueichekú et al. 2019 (PMID 30859709, *Human Brain Mapping*; DOI 10.1002/hbm.24560) from narrative-only to a context record, verified via E-utilities `efetch`. Forty-two adults showed task-relevant resting-connectivity changes after 30 minutes of visual-search training, with no whole-network change and no everyday-function outcome. It is now a third Visual Search citation so the neural result cannot be read as a user benefit (ADR-083). D7 is unchanged; the review is now 154 records and 356 outcomes, revision v2.19.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

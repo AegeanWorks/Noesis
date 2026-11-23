@@ -586,6 +586,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a third Go/No-Go citation, with R91; keep the brief's no-daily-impulse-control wording and the Stop-Signal exclusion.
 - **Consequences**: The review moves to 153 records and 354 outcomes (revision v2.18) and the inhibition claim boundary is backed by a pooled estimate showing the paradigm's actual outcome domain.
 
+### ADR-083: Neural Mechanism Citation on Visual Search
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Bueichekú et al. 2019 (PMID 30859709) was narrative-only in NEW_MECHANIC_CANDIDATES.md section 7 and reports task-relevant resting-connectivity changes after 30 minutes of visual-search training in 42 adults, with no whole-network change and no everyday outcome.
+- **Decision**: Add it as a context record and a third Visual Search citation, with R92, so the neural adaptation is explicitly labelled a mechanism rather than a user benefit.
+- **Consequences**: The review moves to 154 records and 356 outcomes (revision v2.19) and the game's evidence list covers behavioural, clinical and neural levels with their respective limits.
+
 
 
 

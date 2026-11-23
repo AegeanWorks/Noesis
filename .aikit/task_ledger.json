@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-stop-signal-evidence",
+    "task_id": "noesis-visualsearch-neural",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795406786.8354144,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795407784.3683257,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795413986.8354144,
+    "lease_until": 1795414984.3683257,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795406864.4755545,
-    "completed_head": "ab6129319f827648e6b8fbd047d01adb3eb95a3c",
-    "completed_tree": "411b65e79f272cd88f607d3d1eca9be6ed66a99b"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 147/344 records, 468 tests, gates 7/7, ADR-076",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-visualsearch-reading-evidence",
-      "timestamp": 1795400903.5819252,
-      "timestamp_str": "2026-11-23 05:28:23",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-visualsearch-reading-evidence' completed successfully.",
-      "head": "8e3dca1757e51e187fc0a632b6063f9afea25923",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-visualsearch-reading-evidence",
-      "timestamp": 1795400949.5512738,
-      "timestamp_str": "2026-11-23 05:29:09"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Double 2018 JOL-reactivity meta-analysis as context and link it from the briefing confidence note",
@@ -409,6 +371,48 @@
       "task_id": "noesis-stop-signal-evidence",
       "timestamp": 1795406864.5375812,
       "timestamp_str": "2026-11-23 07:07:44"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Bueicheku 2019 visual-search connectivity study as context and cite it in Visual Search",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Resolves another narrative-only citation and separates neural change from user benefit.",
+        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
+        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
+        "why": "Visual Search's narrative rationale cites a neural training study not in the corpus; its mechanism-only result supports the no-behavioural-transfer caveat."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "fe81165d050e1cf460ec631b95943d80da8f832529f09723b0842c716192622d",
+      "status": "in_progress",
+      "task_id": "noesis-visualsearch-neural",
+      "timestamp": 1795407382.9092865,
+      "timestamp_str": "2026-11-23 07:16:22",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 154/356 records, 468 tests, gates 7/7, ADR-083",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-visualsearch-neural",
+      "timestamp": 1795407784.3683257,
+      "timestamp_str": "2026-11-23 07:23:04",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

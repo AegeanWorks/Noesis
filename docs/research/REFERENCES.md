@@ -236,3 +236,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Inhibition paradigms (2026-11-23 targeted update)
 
 - The effectiveness of Go/No-Go and Stop-Signal training in reducing food consumption and choice: A systematic review and meta-analysis *Appetite*. 2024. PMID: [38309625](https://pubmed.ncbi.nlm.nih.gov/38309625/). DOI: [10.1016/j.appet.2024.107215](https://doi.org/10.1016/j.appet.2024.107215).
+
+## Visual-search mechanism (2026-11-23 targeted update)
+
+- Resting-state fMRI detects the effects of learning in short term: A visual search training study *Human Brain Mapping*. 2019. PMID: [30859709](https://pubmed.ncbi.nlm.nih.gov/30859709/). DOI: [10.1002/hbm.24560](https://doi.org/10.1002/hbm.24560).
