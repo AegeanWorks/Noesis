@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 47);
+    expect(links).toHaveLength(mechanicCitations + 48);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -33,7 +33,8 @@ describe("evidence citation rows", () => {
     expect(support.querySelectorAll("a")).toHaveLength(8);
     const mechanism = screen.getByTestId("mechanism-evidence");
     expect(mechanism.textContent).toMatch(/mechanism markers/i);
-    expect(mechanism.querySelectorAll("a")).toHaveLength(2);
+    expect(mechanism.querySelectorAll("a")).toHaveLength(3);
+    expect(mechanism.textContent).toMatch(/neurofeedback of neural signals rarely improved/i);
     const notSupported = screen.getByTestId("not-supported-list");
     expect(notSupported.textContent).toMatch(/ADHD symptom treatment/i);
     expect(notSupported.textContent).toMatch(/Everyday-function benefit/i);

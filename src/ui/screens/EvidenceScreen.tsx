@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 201 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 202 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -284,7 +284,8 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
         </p>
         <p className="fine" data-testid="mechanism-evidence">
           Brain-imaging meta-analyses find training-related activation changes in frontoparietal and
-          subcortical regions. These are mechanism markers, not evidence of broader or everyday
+          subcortical regions, and even direct neurofeedback of neural signals rarely improved lab
+          task performance. These are mechanism markers, not evidence of broader or everyday
           benefit.{" "}
           <CitationLink
             href="https://pubmed.ncbi.nlm.nih.gov/39395643/"
@@ -295,6 +296,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
             href="https://pubmed.ncbi.nlm.nih.gov/42092905/"
             label="Li 2026: neural signatures accompany trained-task gains"
             pmid="42092905"
+          />{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/37148977/"
+            label="Chiasson 2023: neural feedback rarely improved task performance"
+            pmid="37148977"
           />
         </p>
         <h3 data-testid="not-supported-heading">What the review does not support</h3>

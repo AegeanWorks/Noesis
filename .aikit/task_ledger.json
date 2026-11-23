@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-adhd-boundary-evidence",
+    "task_id": "noesis-neurofeedback-mechanism-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795469863.3721623,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795470580.8514853,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795477063.3721623,
+    "lease_until": 1795477780.8514853,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795469954.0678763,
-    "completed_head": "2a686fb0c35bd678f170c2481a354feff78ec55e",
-    "completed_tree": "014015a11d198c09b1a39b74692bd0d0d60585fb"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 195/427 records, 488 tests, gates 7/7, dementia boundary citation verified in Edge, ADR-128",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-dementia-boundary-evidence",
-      "timestamp": 1795462556.694127,
-      "timestamp_str": "2026-11-23 22:35:56",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-dementia-boundary-evidence' completed successfully.",
-      "head": "dfb9acc2d0597bcf7c1021d5578df677c7fa2475",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-dementia-boundary-evidence",
-      "timestamp": 1795462685.599385,
-      "timestamp_str": "2026-11-23 22:38:05"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Jones 2021 prospective-memory intervention meta-analysis as context and cite it on the Prospective Memory focus test with an ecological-validity caveat",
@@ -409,6 +371,48 @@
       "task_id": "noesis-adhd-boundary-evidence",
       "timestamp": 1795469954.1457207,
       "timestamp_str": "2026-11-24 00:39:14"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Chiasson 2023 neurofeedback lab-performance review as context and cite it on the mechanism-vs-benefit note",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a fourth evidence source to the mechanism note and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2023 review finds only a minority of neurofeedback studies report meaningful task-performance effects, directly supporting the app's mechanism-marker-not-benefit framing."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "9ceb269025327420262dd649f7c969922b01563c263aedac891161b4767eccb6",
+      "status": "in_progress",
+      "task_id": "noesis-neurofeedback-mechanism-evidence",
+      "timestamp": 1795470212.2921169,
+      "timestamp_str": "2026-11-24 00:43:32",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 202/445 records, 489 tests, gates 7/7, neurofeedback mechanism citation verified in Edge, ADR-135",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-neurofeedback-mechanism-evidence",
+      "timestamp": 1795470580.8514853,
+      "timestamp_str": "2026-11-24 00:49:40",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

@@ -386,3 +386,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## ADHD clinical boundary evidence (2026-11-24 targeted update)
 
 - Cognitive training for attention-deficit/hyperactivity disorder: meta-analysis of clinical and neuropsychological outcomes from randomized controlled trials *Journal of the American Academy of Child & Adolescent Psychiatry*. 2015. PMID: [25721181](https://pubmed.ncbi.nlm.nih.gov/25721181/). DOI: [10.1016/j.jaac.2014.12.010](https://doi.org/10.1016/j.jaac.2014.12.010).
+
+## Neural mechanism boundary evidence (2026-11-24 targeted update)
+
+- Effects of neurofeedback training on performance in laboratory tasks: A systematic review *International Journal of Psychophysiology*. 2023. PMID: [37148977](https://pubmed.ncbi.nlm.nih.gov/37148977/). DOI: [10.1016/j.ijpsycho.2023.04.005](https://doi.org/10.1016/j.ijpsycho.2023.04.005).

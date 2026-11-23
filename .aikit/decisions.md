@@ -950,6 +950,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Cortese et al. 2015 as a context record and a second citation on that boundary, with R143; bump the review version to v2.52.
 - **Consequences**: The review moves to 201 records and 443 outcomes (revision v2.52), D7 residuals fall to 934, and the clinical boundary now rests on two independent meta-analyses.
 
+### ADR-135: Neurofeedback Evidence on the Mechanism Note
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The mechanism-vs-benefit note cited imaging meta-analyses; a verified 2023 review adds direct evidence that even neurofeedback of neural signals rarely improves task performance.
+- **Decision**: Add Chiasson et al. 2023 as a context record and a third citation on that note, with R144; bump the review version to v2.53.
+- **Consequences**: The review moves to 202 records and 445 outcomes (revision v2.53), D7 residuals fall to 933, and the distinction between neural markers and cognitive benefit is reinforced.
+
 
 
 

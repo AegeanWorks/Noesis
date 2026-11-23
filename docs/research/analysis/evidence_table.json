@@ -11905,6 +11905,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-ADHD-treatment boundary: even in clinical RCTs, symptom effects shrink under blinding and working-memory gains do not transfer to symptoms."
+  },
+  {
+   "pmid": "37148977",
+   "doi": "10.1016/j.ijpsycho.2023.04.005",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "International Journal of Psychophysiology",
+   "title": "Effects of neurofeedback training on performance in laboratory tasks: A systematic review",
+   "modality": "neurofeedback",
+   "design": "sr",
+   "populations": [
+    "healthy_adults",
+    "adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Only a minority of reviewed studies reported statistically meaningful neurofeedback effects on cognitive or affective laboratory-task performance"
+    },
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "quality_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Substantial variability in designs, feedback implementation and neural targets; z-curve found no reporting-bias evidence but overall does not support strong task-performance effects"
+    }
+   ],
+   "findings": [
+    "Neural-feedback changes do not reliably improve laboratory task performance",
+    "Neural mechanism markers should not be treated as cognitive benefit"
+   ],
+   "limitations": [
+    "Heterogeneous neurofeedback protocols",
+    "Laboratory-task outcomes only"
+   ],
+   "flags": [
+    "mechanism_only",
+    "heterogeneous"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the mechanism-vs-benefit note: even direct neurofeedback of neural signals rarely improves task performance, so imaging markers alone are not a benefit claim."
   }
  ]
 }
