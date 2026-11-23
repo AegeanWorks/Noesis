@@ -11073,6 +11073,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the mechanism-vs-benefit note: imaging meta-analyses of WM training describe activation changes, which are not a product efficacy or transfer claim."
+  },
+  {
+   "pmid": "35967680",
+   "doi": "10.3389/fpsyg.2022.947519",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Frontiers in Psychology",
+   "title": "Episodic memory training in elderly: A systematic review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults",
+    "dementia"
+   ],
+   "k": 23,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "episodic_memory",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "23 of 572 articles included: different episodic-memory training protocols reported effectiveness in healthy and clinical older adults"
+    },
+    {
+     "domain": "episodic_memory",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Authors state further empirical studies are still needed in healthy and clinical elderly samples; no pooled transfer estimate in the abstract"
+    }
+   ],
+   "findings": [
+    "Episodic-memory training protocols reported benefits in older adults",
+    "Evidence base still needs more empirical studies"
+   ],
+   "limitations": [
+    "Narrative synthesis with heterogeneous protocols",
+    "Mixed healthy and clinical samples"
+   ],
+   "flags": [
+    "narrative_only",
+    "heterogeneous_protocols"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for Paired Associates: older-adult episodic-memory training shows reported benefits but a heterogeneous, still-developing evidence base, so the game remains task practice only."
   }
  ]
 }

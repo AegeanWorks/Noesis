@@ -247,6 +247,7 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     citations: [
       { pmid: "36301274", label: "Mnemonic memory-training meta-analysis (2022)" },
+      { pmid: "35967680", label: "Episodic-memory training review (2022)" },
     ],
     safety: "Static words; no flashing.",
   },

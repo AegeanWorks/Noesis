@@ -334,3 +334,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 
 - Domain-general behavioral gains and neural correlates of cognitive training in healthy populations: a neuroimaging meta-analysis *Behavioral and Brain Functions*. 2026. PMID: [42092905](https://pubmed.ncbi.nlm.nih.gov/42092905/). DOI: [10.1186/s12993-026-00338-w](https://doi.org/10.1186/s12993-026-00338-w).
 - Neural correlates of working memory training: An fMRI meta-analysis *NeuroImage*. 2024. PMID: [39395643](https://pubmed.ncbi.nlm.nih.gov/39395643/). DOI: [10.1016/j.neuroimage.2024.120885](https://doi.org/10.1016/j.neuroimage.2024.120885).
+
+## Episodic-memory training context (2026-11-23 targeted update)
+
+- Episodic memory training in elderly: A systematic review *Frontiers in Psychology*. 2022. PMID: [35967680](https://pubmed.ncbi.nlm.nih.gov/35967680/). DOI: [10.3389/fpsyg.2022.947519](https://doi.org/10.3389/fpsyg.2022.947519).

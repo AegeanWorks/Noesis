@@ -817,6 +817,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: List all ten focus tests in both documents, fix the grammar, and add a test asserting the dossier names every focus test, with R124.
 - **Consequences**: Investigators see the same lineup as the app; no app behaviour, corpus or version change.
 
+### ADR-116: Episodic-Memory Review on Paired Associates
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Paired Associates had a single mnemonic-training citation; a verified 2022 systematic review adds older-adult context and an explicit evidence-quality caveat.
+- **Decision**: Add the review as a context record and a second citation on the mechanic, with R125; bump the review version to v2.40.
+- **Consequences**: The review moves to 189 records and 412 outcomes (revision v2.40), D7 residuals fall to 946, and the game's bounded rationale gains a second, honestly framed source.
+
 
 
 

@@ -215,6 +215,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R122 | The Evidence screen lists the serious-games caveat as a claim boundary: games supplement, not replace, established interventions. | Abd-Alrazaq 2023 found low-certainty learning gains in impaired older adults and explicitly recommended games as a supplement to care. | 37043277; ADR-113 |
 | R123 | The Evidence screen distinguishes neural mechanism markers from general or everyday benefit with two imaging meta-analyses. | Zhang 2024 and Li 2026 report training-related activation changes accompanying trained-task gains, not transfer to daily life. | 39395643; 42092905; ADR-114 |
 | R124 | The trial dossier and design traceability list all ten experimental focus tests, and a test guards the dossier's list. | The dossier still named only seven focus tests after Visual Search, Digit Symbol and Digit Span shipped. | ADR-115 |
+| R125 | Paired Associates cites an older-adult episodic-memory review beside the mnemonic meta-analysis, with the heterogeneous evidence caveat. | Mendonça 2022 found reported benefits across varied protocols but stressed the need for more empirical studies. | 35967680; ADR-116 |
 
 ---
 
