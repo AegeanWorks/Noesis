@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-dementia-boundary-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795462556.6941273,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795469756.6941273,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795462685.30696,
+    "completed_head": "dfb9acc2d0597bcf7c1021d5578df677c7fa2475",
+    "completed_tree": "72db1b91a794d4cc30dd103c105eac192669fc57"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add within-level accuracy and response-time trend cards plus briefing lines for Visual Search and Digit Symbol",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Consistent within-level comparison across all focus tests with the same descriptive caveats.",
-        "mitigation": "Reuse DualMetricTrendCard, keep existing testids unchanged, add failing-first tests, run gates and verify in Edge.",
-        "risks": "contract: generalize the dual-metric helper, add two cards and briefing lines, plus tests; dependency: none; concurrency: none; state: no corpus or version changes",
-        "why": "Search and Symbol were the only focus tests without per-level trend summaries, so users could not compare blocks at the same level."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "a0f3342e7db929e7c9eb36888cd4be2393791ff04cf88b8e7a8cd3796c64452d",
-      "status": "in_progress",
-      "task_id": "noesis-search-symbol-trends",
-      "timestamp": 1795453940.3398302,
-      "timestamp_str": "2026-11-23 20:12:20",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-dementia-boundary-evidence' completed successfully.",
+      "head": "dfb9acc2d0597bcf7c1021d5578df677c7fa2475",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-dementia-boundary-evidence",
+      "timestamp": 1795462685.599385,
+      "timestamp_str": "2026-11-23 22:38:05"
     }
   ]
 }
