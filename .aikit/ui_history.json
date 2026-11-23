@@ -1553,5 +1553,52 @@
     "final_snapshot_entries": 0,
     "surface_digest": "eefda097f7ea8d937377e44ab7fba2d1bedea16763036a387a2fb168f26193f4",
     "baseline_digest": "eefda097f7ea8d937377e44ab7fba2d1bedea16763036a387a2fb168f26193f4"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence, Settings and Menu/History screens in Edge: Lampit/Peeters/Luis-Ruiz/Vartanian citations render, corpus count 181, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795427865.7094092,
+    "finished_at": 1795427906.8509793,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "9425ed7d5d838c6009902937327bedb644683280d553cda5376a8e0f342c7943",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795427906.850983
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Residual citation tests and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Residual citation tests and snapshot counts"
+      },
+      {
+        "path": "tests/ui/practice-menu.test.tsx",
+        "reason": "Residual citation tests and snapshot counts"
+      },
+      {
+        "path": "tests/ui/settings-symptoms.test.tsx",
+        "reason": "Residual citation tests and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "9425ed7d5d838c6009902937327bedb644683280d553cda5376a8e0f342c7943",
+    "baseline_digest": "9425ed7d5d838c6009902937327bedb644683280d553cda5376a8e0f342c7943"
   }
 ]
