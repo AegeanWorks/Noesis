@@ -9682,6 +9682,49 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for Visual Search: UFOV has ecological evidence but is proprietary and not construct-pure, so Noesis uses transparent single-construct focus tests instead."
+  },
+  {
+   "pmid": "27590829",
+   "doi": "10.1016/j.neubiorev.2016.08.033",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Neuroscience & Biobehavioral Reviews",
+   "title": "Integrating psychological and neurobiological considerations regarding the development and maintenance of specific Internet-use disorders: An Interaction of Person-Affect-Cognition-Execution (I-PACE) model",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults",
+    "adolescents"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "theoretical_model",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "not_reported",
+     "note": "I-PACE process model: predisposing factors, coping styles and cognitive biases interact with affective responses and reduced executive control to maintain excessive use"
+    }
+   ],
+   "findings": [
+    "Cue-reactivity and reduced executive control are proposed maintenance mechanisms",
+    "Model hypotheses still require empirical testing"
+   ],
+   "limitations": [
+    "Theoretical model, not an intervention trial",
+    "Clinical Internet-use disorder population"
+   ],
+   "flags": [
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for Motivation safeguards: Noesis avoids variable-ratio stakes, losing and push cues because those are the cue-reactivity routes the model identifies."
   }
  ]
 }

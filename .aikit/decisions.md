@@ -642,6 +642,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a fifth Visual Search citation beside the construct-purity critique, with R99; keep the app's transparent single-construct design.
 - **Consequences**: The review moves to 162 records and 367 outcomes (revision v2.26) and the game rationale records both the promise of functional transfer and the reasons Noesis does not implement that protocol.
 
+### ADR-091: I-PACE Model on Motivation Safeguards
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Brand et al. 2016 (PMID 27590829) was narrative-only in BEHAVIORAL_ENGAGEMENT.md and proposes that cue-reactivity, coping styles and reduced executive control maintain excessive Internet use.
+- **Decision**: Add it as a context record and a further Motivation-safeguards citation, with R100; keep real stakes, loss cues and push notifications out of the product.
+- **Consequences**: The review moves to 163 records and 368 outcomes (revision v2.27) and the no-cue design is grounded in an established process model.
+
 
 
 

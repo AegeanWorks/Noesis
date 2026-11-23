@@ -269,3 +269,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## UFOV training evidence (2026-11-23 targeted update)
 
 - Systematic review and meta-analyses of useful field of view cognitive training *Neuroscience & Biobehavioral Reviews*. 2018. PMID: [29175362](https://pubmed.ncbi.nlm.nih.gov/29175362/). DOI: [10.1016/j.neubiorev.2017.11.004](https://doi.org/10.1016/j.neubiorev.2017.11.004).
+
+## Engagement process model (2026-11-23 targeted update)
+
+- Integrating psychological and neurobiological considerations regarding the development and maintenance of specific Internet-use disorders: An Interaction of Person-Affect-Cognition-Execution (I-PACE) model *Neuroscience & Biobehavioral Reviews*. 2016. PMID: [27590829](https://pubmed.ncbi.nlm.nih.gov/27590829/). DOI: [10.1016/j.neubiorev.2016.08.033](https://doi.org/10.1016/j.neubiorev.2016.08.033).
