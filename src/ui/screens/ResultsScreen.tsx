@@ -742,6 +742,27 @@ export function ResultsScreen({
         These are practice metrics, not a diagnosis, a test score or a single brain score.
         Compare a block only with your own earlier performance on the same task.
       </p>
+      <p className="fine" data-testid="separate-blocks-evidence">
+        Why no single score: a component analysis of a commercial attention battery found that no
+        subtest measures one construct, and transfer reviews find gains track the trained component
+        rather than a general factor. Comparing like with like is therefore more informative.{" "}
+        <a
+          href="https://pubmed.ncbi.nlm.nih.gov/29270605/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Woutersen et al. 2017
+        </a>{" "}
+        <span className="pmid">PMID 29270605</span>{" "}
+        <a
+          href="https://pubmed.ncbi.nlm.nih.gov/31939109/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Sala &amp; Gobet 2020
+        </a>{" "}
+        <span className="pmid">PMID 31939109</span>
+      </p>
 
       {results.length > 0 ? (
         <div className="session-snapshot" aria-label="Session at a glance">

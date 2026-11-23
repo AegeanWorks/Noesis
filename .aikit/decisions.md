@@ -719,6 +719,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add both as context records; list the active-control null in the Evidence screen's "what the review does not support" set and cite the duration review on the transfer-gradient copy, with R110.
 - **Consequences**: The review moves to 183 records and 400 outcomes (revision v2.36), D7 residuals fall to 952, and the central active-control caveat now has direct pooled support.
 
+### ADR-102: Evidence for Per-Block Reporting
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The Results screen already reported blocks separately and refused a single brain score, but gave no reason; construct-purity and transfer evidence explain why a composite would be misleading.
+- **Decision**: Add one citation line to the Results screen linking the no-subtest-is-one-construct critique and the training-outcome-similarity synthesis, with R111; keep all measurement copy descriptive.
+- **Consequences**: The app's central measurement-honesty statement becomes traceable to two verified sources without changing any claim level or evidence count.
+
 
 
 

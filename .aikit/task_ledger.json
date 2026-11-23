@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-active-control-boundary",
+    "task_id": "noesis-separate-blocks-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795430301.2263436,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795430692.2741494,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795437501.2263436,
+    "lease_until": 1795437892.2741494,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795430360.4340527,
-    "completed_head": "34cf524c95ac3ec632caedcca6b573c4803d60a9",
-    "completed_tree": "56b3ade39efb91fe6a0179637e010bdb72de5931"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 167/375 records, 468 tests, gates 7/7, placebo boundary reviewed in Edge, ADR-095",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-placebo-evidence",
-      "timestamp": 1795424491.5424778,
-      "timestamp_str": "2026-11-23 12:01:31",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-placebo-evidence' completed successfully.",
-      "head": "8df816ba989a9e279541662c715bb0a03252fd2a",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-placebo-evidence",
-      "timestamp": 1795424538.943976,
-      "timestamp_str": "2026-11-23 12:02:18"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Masicampo 2011, Dixon 2010 and Milkman 2014 as context; cite planning and LDW evidence in-app",
@@ -409,6 +371,48 @@
       "task_id": "noesis-active-control-boundary",
       "timestamp": 1795430360.5064094,
       "timestamp_str": "2026-11-23 13:39:20"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: ground the Results screen's per-block, no-composite-score copy in construct-purity and transfer evidence",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Makes the app's central measurement honesty statement traceable to verified sources without adding a new claim.",
+        "mitigation": "Cite existing table PMIDs, add a failing-first test assertion, run suites and review the Results screen in Edge.",
+        "risks": "contract: one Results-screen citation line and one test assertion; dependency: none; concurrency: none; state: no evidence-count changes",
+        "why": "The Results screen states that blocks are reported separately with no single brain score, but the rationale was not evidence-linked."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "b155775bdf1db9b663cae36c126dca96264be856cb886fd89bc359d65e525a0c",
+      "status": "in_progress",
+      "task_id": "noesis-separate-blocks-evidence",
+      "timestamp": 1795430452.938594,
+      "timestamp_str": "2026-11-23 13:40:52",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 183/400 records unchanged, 476 tests, gates 7/7, Results rationale verified in a played Edge session, ADR-102",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-separate-blocks-evidence",
+      "timestamp": 1795430692.2741494,
+      "timestamp_str": "2026-11-23 13:44:52",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

@@ -71,6 +71,10 @@ describe("trial data path", () => {
     completeSession();
 
     expect(screen.getByRole("heading", { name: "Your blocks, separately" })).toBeTruthy();
+    const rationale = screen.getByTestId("separate-blocks-evidence");
+    expect(rationale.textContent).toMatch(/no subtest measures one construct/i);
+    expect(rationale.querySelector('a[href*="29270605"]')).toBeTruthy();
+    expect(rationale.querySelector('a[href*="31939109"]')).toBeTruthy();
     expect(loadAdherence()[0]?.status).toBe("completed");
     expect(loadAdherence()[0]?.blocksCompleted).toBeGreaterThan(0);
     const history = loadHistory();
