@@ -978,6 +978,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Vaportzis et al. 2019 as a context record and a third citation on that note, with R147; bump the review version to v2.56.
 - **Consequences**: The review moves to 205 records and 452 outcomes (revision v2.56), D7 residuals fall to 930, and the group-level-context caveat gains direct support.
 
+### ADR-139: Umbrella Review on the Clinical-Value Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: A verified 2020 overview of 46 meta-analyses found small cognitive effects with clinical value still unclear, which belongs in the app's explicit list of unsupported claims.
+- **Decision**: Add Gavelin et al. 2020 as a context record and a new no-clinical-benefit claim boundary, with R148; bump the review version to v2.57.
+- **Consequences**: The review moves to 206 records and 454 outcomes (revision v2.57), D7 residuals fall to 929, and the app's claim boundaries now include an umbrella-level verdict on clinical meaningfulness.
+
 
 
 

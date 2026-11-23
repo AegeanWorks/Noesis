@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 50);
+    expect(links).toHaveLength(mechanicCitations + 51);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -55,6 +55,7 @@ describe("evidence citation rows", () => {
     expect(notSupported.textContent).toMatch(/transfer to ADHD symptoms/i);
     expect(notSupported.textContent).toMatch(/child WM gains did not reach academics/i);
     expect(notSupported.textContent).toMatch(/everyday-life generalization remains unresolved/i);
+    expect(screen.getByText(/no clinical benefit claim/i)).toBeTruthy();
     expect(notSupported.querySelectorAll("a")).toHaveLength(20);
   });
 });

@@ -12149,6 +12149,66 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the Settings clock note: intervention format matters at group level, but these heterogeneous community results are not a personal dose prescription."
+  },
+  {
+   "pmid": "32266520",
+   "doi": "10.1007/s11065-020-09434-8",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Neuropsychology Review",
+   "title": "Cognition-Oriented Treatments for Older Adults: a Systematic Overview of Systematic Reviews",
+   "modality": "multi_intervention",
+   "design": "umbrella",
+   "populations": [
+    "older_adults",
+    "healthy_adults",
+    "mci",
+    "dementia"
+   ],
+   "k": 46,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "mean Hedges g",
+     "value": 0.32,
+     "ci_low": 0.13,
+     "ci_high": 0.64,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Overview of 46 meta-analyses: mean cognitive effect was small for cognitive training in healthy older adults (g=0.32, range 0.13-0.64), MCI (0.40) and dementia (0.38)"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "na",
+     "measure": "AMSTAR_quality",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "52% of reviews rated critically low and 28% low on AMSTAR; clinical value of effects remains unclear due to scarce high-quality evidence and heterogeneity"
+    }
+   ],
+   "findings": [
+    "Small pooled cognitive effects across treatment types and populations",
+    "Clinical value remains unclear; higher-quality reviews tended toward larger effects"
+   ],
+   "limitations": [
+    "Overview of reviews inherits primary-study heterogeneity",
+    "Non-cognitive outcomes sparsely reported"
+   ],
+   "flags": [
+    "umbrella",
+    "clinical_value_unclear"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the clinical-value claim boundary: even an umbrella review finds only small cognitive effects with unclear real-world value, so the app makes no clinical-benefit claim."
   }
  ]
 }

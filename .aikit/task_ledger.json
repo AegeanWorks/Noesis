@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-realworld-evidence",
+    "task_id": "noesis-clinical-value-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795474182.5844316,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795476470.9270422,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795481382.5844316,
+    "lease_until": 1795483670.9270422,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795474287.1675222,
-    "completed_head": "a4beab86b599f8516cc3f2878745383e1202e7e5",
-    "completed_tree": "758fd9ccf9634344a545fbab2af7a313a3ac54b3"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 199/437 records, 489 tests, gates 7/7, leisure-game boundary citation verified in Edge, ADR-132",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-leisure-games-evidence",
-      "timestamp": 1795468150.3782558,
-      "timestamp_str": "2026-11-24 00:09:10",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-leisure-games-evidence' completed successfully.",
-      "head": "ae3de602d8d4f58433df7b757ad49fe2987b57dc",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-leisure-games-evidence",
-      "timestamp": 1795468207.7372642,
-      "timestamp_str": "2026-11-24 00:10:07"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Bonnechere 2020 commercial cognitive-games meta-analysis as context and cite it on the no-general-gain boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-realworld-evidence",
       "timestamp": 1795474287.4170043,
       "timestamp_str": "2026-11-24 01:51:27"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Gavelin 2020 umbrella review as context and cite it on a new clinical-value claim boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a high-level synthesis to the claim-boundary list and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2020 overview of 46 meta-analyses found small cognitive effects but clinical value unclear due to scarce high-quality evidence, directly supporting a new honesty boundary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "2706bf5f0da38dd69dc63833db9a9f572bd7a9f4f245a7c7da814a60001fa45d",
+      "status": "in_progress",
+      "task_id": "noesis-clinical-value-evidence",
+      "timestamp": 1795475034.9808657,
+      "timestamp_str": "2026-11-24 02:03:54",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 206/454 records, 489 tests, gates 7/7, clinical-value boundary citation verified in Edge, ADR-139",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-clinical-value-evidence",
+      "timestamp": 1795476470.9270422,
+      "timestamp_str": "2026-11-24 02:27:50",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

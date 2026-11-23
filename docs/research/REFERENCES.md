@@ -402,3 +402,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Real-world intervention evidence (2026-11-24 targeted update)
 
 - A systematic literature review and meta-analysis of real-world interventions for cognitive ageing in healthy older adults *Ageing Research Reviews*. 2019. PMID: [30707947](https://pubmed.ncbi.nlm.nih.gov/30707947/). DOI: [10.1016/j.arr.2019.01.006](https://doi.org/10.1016/j.arr.2019.01.006).
+
+## Clinical-value umbrella evidence (2026-11-24 targeted update)
+
+- Cognition-Oriented Treatments for Older Adults: a Systematic Overview of Systematic Reviews *Neuropsychology Review*. 2020. PMID: [32266520](https://pubmed.ncbi.nlm.nih.gov/32266520/). DOI: [10.1007/s11065-020-09434-8](https://doi.org/10.1007/s11065-020-09434-8).
