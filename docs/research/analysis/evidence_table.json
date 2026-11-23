@@ -10669,6 +10669,123 @@
    ],
    "synthesis_role": "context",
    "product_use": "Mechanism context for the transfer copy: training-related neural changes are activation decreases in frontoparietal regions, not evidence of expanded capacity or everyday benefit."
+  },
+  {
+   "pmid": "42356174",
+   "doi": "10.3390/medicina62061162",
+   "doi_status": "verified",
+   "year": 2026,
+   "journal": "Medicina",
+   "title": "Comparing Digital Cognitive Interventions to Active Controls and Usual Care for Mild Cognitive Impairment and Dementia: A Systematic Review and Meta-Analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "mci",
+    "dementia",
+    "older_adults"
+   ],
+   "k": 37,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.44,
+     "ci_low": 0.18,
+     "ci_high": 0.69,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "37 studies: digital cognitive interventions improved global cognition versus all controls (SMD 0.44, 95% CI 0.18-0.69)"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.24,
+     "ci_low": -0.35,
+     "ci_high": 0.82,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Against active controls the pooled effect was not significant (SMD 0.24, 95% CI -0.35-0.82); VR formats more inconsistent than computer-based ones"
+    }
+   ],
+   "findings": [
+    "Benefits versus usual care shrink to non-significance against active controls",
+    "Computer-based formats were more consistent than VR in this clinical population"
+   ],
+   "limitations": [
+    "MCI and dementia populations only",
+    "Wide interval on the active-control comparison"
+   ],
+   "flags": [
+    "active_control",
+    "clinical_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the active-control claim boundary: a 37-study clinical meta-analysis found a significant pooled gain overall but no significant advantage over active controls."
+  },
+  {
+   "pmid": "39822168",
+   "doi": "10.1111/aphw.12651",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "Applied Psychology: Health and Well-Being",
+   "title": "The effectiveness of real-life cognitive and physical interventions on cognitive functioning in healthy older adults: A systematic review of the effects of education and training duration",
+   "modality": "multi_intervention",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "65% of studies across physical activity, cognitive training, cognitive stimulation and combined interventions reported post-intervention improvement; memory, executive and global functions most often improved"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "na",
+     "measure": "moderator_narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Education and duration interacted with outcome: >20 sessions helped in physical/stimulation/combined categories, <20 sessions in cognitive training; group-level context, not a dose prescription"
+    }
+   ],
+   "findings": [
+    "Intervention type, duration and education jointly shape reported gains",
+    "No single dose or format is supported for all users"
+   ],
+   "limitations": [
+    "Narrative synthesis rather than pooled estimates",
+    "Healthy older adults only"
+   ],
+   "flags": [
+    "design_moderator",
+    "no_dose_prescription"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-dose-prescription copy: intervention type, duration and education interact with outcomes at group level, so the app avoids universal session-count advice."
   }
  ]
 }

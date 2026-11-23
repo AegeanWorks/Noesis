@@ -25,27 +25,27 @@ class ReviewSnapshotTest(unittest.TestCase):
         cls.entries = parse_entries(load_table())
 
     def test_record_and_outcome_totals(self):
-        self.assertEqual(len(self.entries), 181)
-        self.assertEqual(sum(len(entry.outcomes) for entry in self.entries), 396)
+        self.assertEqual(len(self.entries), 183)
+        self.assertEqual(sum(len(entry.outcomes) for entry in self.entries), 400)
 
     def test_synthesis_role_split(self):
         roles = Counter(entry.synthesis_role for entry in self.entries)
         self.assertEqual(roles["primary"], 103)
-        self.assertEqual(roles["context"], 78)
+        self.assertEqual(roles["context"], 80)
 
     def test_modality_split(self):
         modalities = Counter(entry.modality for entry in self.entries)
-        self.assertEqual(modalities["cct"], 79)
+        self.assertEqual(modalities["cct"], 80)
         self.assertEqual(modalities["neurofeedback"], 17)
         self.assertEqual(modalities["multimodal"], 17)
         self.assertEqual(modalities["ave"], 6)
-        self.assertEqual(modalities["multi_intervention"], 8)
+        self.assertEqual(modalities["multi_intervention"], 9)
         self.assertEqual(modalities["safety"], 8)
         self.assertEqual(modalities["engagement"], 46)
 
     def test_identifier_status_split(self):
         status = Counter(entry.doi_status for entry in self.entries)
-        self.assertEqual(status["verified"], 170)
+        self.assertEqual(status["verified"], 172)
         self.assertEqual(status["preprint"], 4)
         self.assertEqual(status["unverified"], 7)
 

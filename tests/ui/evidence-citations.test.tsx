@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 30);
+    expect(links).toHaveLength(mechanicCitations + 32);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -30,13 +30,14 @@ describe("evidence citation rows", () => {
     );
     const support = screen.getByTestId("transfer-support-evidence");
     expect(support.textContent).toMatch(/task-specific/i);
-    expect(support.querySelectorAll("a")).toHaveLength(5);
+    expect(support.querySelectorAll("a")).toHaveLength(6);
     const notSupported = screen.getByTestId("not-supported-list");
     expect(notSupported.textContent).toMatch(/ADHD symptom treatment/i);
     expect(notSupported.textContent).toMatch(/Everyday-function benefit/i);
     expect(notSupported.textContent).toMatch(/combining exercise/i);
     expect(notSupported.textContent).toMatch(/baseline expectancy/i);
     expect(notSupported.textContent).toMatch(/mood-disorder treatment/i);
-    expect(notSupported.querySelectorAll("a")).toHaveLength(7);
+    expect(notSupported.textContent).toMatch(/active controls/i);
+    expect(notSupported.querySelectorAll("a")).toHaveLength(8);
   });
 });

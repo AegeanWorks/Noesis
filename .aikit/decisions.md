@@ -712,6 +712,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add `digit` as an experimental focus test with static digit presentation, forward/backward recall and adaptive span; cite the four broad reviews in the mechanic meta, add R109, and keep it out of the default lineup.
 - **Consequences**: The app gains a tenth claim-bounded focus test with no new evidence records, no flashing or audio, and a brief that explicitly refuses general-memory, intelligence and everyday-function claims.
 
+### ADR-101: Active-Control Null on the Claim Boundaries
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Two eligible residual reviews were directly relevant to the app's honesty copy: Lee et al. 2026 (digital cognitive interventions non-significant versus active controls) and Vafa et al. 2025 (type, duration and education interact with outcomes).
+- **Decision**: Add both as context records; list the active-control null in the Evidence screen's "what the review does not support" set and cite the duration review on the transfer-gradient copy, with R110.
+- **Consequences**: The review moves to 183 records and 400 outcomes (revision v2.36), D7 residuals fall to 952, and the central active-control caveat now has direct pooled support.
+
 
 
 

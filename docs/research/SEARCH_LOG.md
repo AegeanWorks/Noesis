@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 181 |
-| Outcomes | 396 |
+| Records | 183 |
+| Outcomes | 400 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 106 |
+| Systematic reviews/meta-analyses | 107 |
 | Network meta-analyses | 19 |
-| Other systematic reviews | 36 |
+| Other systematic reviews | 37 |
 | RCTs | 18 |
 | Umbrella reviews | 2 |
-| DOI verified | 170 |
+| DOI verified | 172 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,11 +137,11 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 79 |
+| cct | 80 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
-| multi_intervention | 8 |
+| multi_intervention | 9 |
 | safety | 8 |
 | engagement | 46 |
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 170 |
+| DOI verified | 172 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **181** |
+| **Total** | **183** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -286,6 +286,8 @@ A 2026-11-23 transfer-foundation update resolved four more narrative-only source
 
 A 2026-11-23 residual-extraction update took four directly relevant reviews from the logged eligible pool, each verified via E-utilities `efetch`: Lampit et al. 2014 (PMID 25405755, *PLoS Medicine*; DOI 10.1371/journal.pmed.1001756) pooled 52 RCTs (N=4,885) for a small overall effect (g=0.22) with no benefit from unsupervised home training or more than three sessions a week; Peeters et al. 2023 (PMID 35157209, *Neuropsychology Review*; DOI 10.1007/s11065-022-09537-4) found self-monitoring linked to higher adherence and person-delivered feedback or non-specific rewards linked to lower efficacy across 90 papers; Luis-Ruiz et al. 2020 (PMID 32565174, *Neuroscience & Biobehavioral Reviews*; DOI 10.1016/j.neubiorev.2020.06.019) found near working-memory transfer with inconsistent, non-durable far transfer in 16 RCTs; Vartanian et al. 2022 (PMID 35432071, *Frontiers in Psychology*; DOI 10.3389/fpsyg.2022.868001) found training associated with decreased frontoparietal BOLD responses. The Settings clock note, adherence card and transfer-gradient copy now cite them (ADR-099). D7 residuals fall to 954; the review is now 181 records and 396 outcomes, revision v2.35.
 
+A 2026-11-23 active-control update took two more reviews from the logged eligible pool, each verified via E-utilities `efetch`: Lee et al. 2026 (PMID 42356174, *Medicina*; DOI 10.3390/medicina62061162) pooled 37 studies and found digital cognitive interventions better than all controls (SMD 0.44, 95% CI 0.18-0.69) but not significantly better than active controls (SMD 0.24, 95% CI -0.35-0.82); Vafa et al. 2025 (PMID 39822168, *Applied Psychology: Health and Well-Being*; DOI 10.1111/aphw.12651) found 65% of studies reporting improvement with education and duration interacting by intervention type, so no universal dose follows. The Evidence screen now lists the active-control null as a claim boundary and cites the duration review on the transfer-gradient copy (ADR-101). D7 residuals fall to 952; the review is now 183 records and 400 outcomes, revision v2.36.
+
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
 One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
@@ -311,7 +313,7 @@ One adherence record joined the table the same day (PMID 35612886, 99 studies, e
 | D4 | Independent GRADE not performed | Certainty would require full-text appraisal of every review | Certainty is recorded **as reported by the source** and is provisional |
 | D5 | PsycINFO, Embase, CINAHL and ERIC not searched directly | No institutional access in this environment | OpenAlex and PubMed citation coverage mitigate but do not close the gap |
 | D6 | English-language restriction | Feasibility | Language bias cannot be excluded |
-| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 19 eligible reviews extracted 2026-11-22/23 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change) | Prioritisation by modality × population × outcome cell | 954 eligible reviews remain logged but not synthesised; partially closed |
+| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 21 eligible reviews extracted 2026-11-22/23 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change, 2 active-control/context) | Prioritisation by modality × population × outcome cell | 952 eligible reviews remain logged but not synthesised; partially closed |
 | D8 | PubMed DOI fields unreliable | XML metadata inconsistency | Crossref verification used; 7 records are PMID-only and 4 carry preprint DOIs |
 | D9 | Preprint identifiers retained for four records | Crossref matched a preprint version | Flagged `preprint`; conclusions do not rely solely on them |
 | D10 | Initial 997-review corpus query omitted working-memory training, cognitive stimulation/rehabilitation, serious-game and VR-cognitive terms | Gap detected during screening | Query expanded to 1,495 reviews; final denominator and screening counts use the expanded corpus |
