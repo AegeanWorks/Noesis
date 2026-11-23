@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-neural-mechanism-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795435394.148551,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795442594.148551,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795435442.0933852,
+    "completed_head": "7f826ba6a38bffc3e0e90b377e26b0060df6f209",
+    "completed_tree": "59d92e66dcdc3b6f8229f17e5aaed2f4b5e1c13c"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: update the stale EVIDENCE_REVIEW_VERSION constant to v2.37 and add a docs-vs-app drift guard",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Exports and UI report the correct review revision; a guard test prevents future drift.",
-        "mitigation": "Update the constant and pinned regex, add a test comparing it to the docs status line, run suites and verify the Settings label in Edge.",
-        "risks": "contract: one metadata constant, one pinned test and one new guard test; dependency: none; concurrency: none; state: no evidence-count changes",
-        "why": "Research exports and the Settings screen still label the corpus v1.8 (2026-11-08) while the review is v2.37, mislabelling exported data."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "e330c6b7c0434587a590f2aa7da24984f7dc6d93a3e27060b112df8ff8f6e481",
-      "status": "in_progress",
-      "task_id": "noesis-evidence-version-sync",
-      "timestamp": 1795432489.9502432,
-      "timestamp_str": "2026-11-23 14:14:49",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-neural-mechanism-evidence' completed successfully.",
+      "head": "7f826ba6a38bffc3e0e90b377e26b0060df6f209",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-neural-mechanism-evidence",
+      "timestamp": 1795435442.1560094,
+      "timestamp_str": "2026-11-23 15:04:02"
     }
   ]
 }

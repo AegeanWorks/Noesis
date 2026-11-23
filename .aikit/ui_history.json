@@ -1994,5 +1994,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "8b5f32438e2fd7bbf2b9084c373c93832f1c0b625fe9783ec0d4eb4f81c0550b",
     "baseline_digest": "8b5f32438e2fd7bbf2b9084c373c93832f1c0b625fe9783ec0d4eb4f81c0550b"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: neural mechanism note and both citations render, corpus count 188, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795435408.075114,
+    "finished_at": 1795435441.656385,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "de0311132a631b1d16e997f3d94b6eec728be10a2d1031bd11028821406fc3c1",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795435441.656388
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Mechanism citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Mechanism citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Mechanism citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "de0311132a631b1d16e997f3d94b6eec728be10a2d1031bd11028821406fc3c1",
+    "baseline_digest": "de0311132a631b1d16e997f3d94b6eec728be10a2d1031bd11028821406fc3c1"
   }
 ]
