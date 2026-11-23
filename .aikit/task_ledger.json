@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-gamefactors-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795403794.3605523,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795410994.3605523,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795403838.4024954,
+    "completed_head": "6b98e606569153fa59c60cba95e2b749562022ec",
+    "completed_tree": "1f367c810a86c5dc2b26402ce318cf0f426fba18"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-data-reuse-citations",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add FAIR principles and data-sharing measurement review as context records and link FAIR in the research export panel",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795397462.447642,
-      "timestamp_str": "2026-11-23 04:31:02",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The research export panel states a FAIR-like format with no source; the review note cites two verified PMIDs absent from the table.",
-        "benefits": "Makes the data-reuse rationale verifiable and resolves two previously narrative-only citations into the corpus.",
-        "risks": "contract: two context records + UI link + test; dependency: none; concurrency: none; state: counts and references must move together",
-        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add failing-first UI test, run all suites and review the UI."
-      },
-      "plan_digest": "a79263de820ddc12af45254caac4dacbc988a3bde3283ee3c25fce2881d39c39",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-data-reuse-citations",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-gamefactors-evidence",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-gamefactors-evidence' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795403838.462244,
+      "timestamp_str": "2026-11-23 06:17:18",
+      "agent": "opencode:hy4-flash-free",
+      "head": "6b98e606569153fa59c60cba95e2b749562022ec",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
