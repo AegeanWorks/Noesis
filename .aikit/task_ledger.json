@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-data-dictionary-span",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795437442.1964526,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795444642.1964526,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795437452.2420285,
+    "completed_head": "0cebdba06def4d7409dc5f232478a0ff719858fd",
+    "completed_tree": "b27890f2330942ac7a8fddf779b540727f6c53c3"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Tsang 2022 prospective-memory review as context and cite it on the Prospective Memory game with a process-based caveat",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Strengthens the game's claim-bounded brief with direct source support and reduces D7.",
-        "mitigation": "Verify via efetch, update counts/references/version, add citation and brief copy, run suites and review the briefing in Edge.",
-        "risks": "contract: one context record, one mechanic citation, one brief sentence and count/version updates; dependency: none; concurrency: none; state: counts, references and version constant must move together",
-        "why": "Prospective Memory had only one citation; a verified 2022 review adds the important caveat that process-based training evidence is preliminary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "d963b664dd3ed308b966d6da2349474baa713bfa02a30de99a7984dbfd6c36da",
-      "status": "in_progress",
-      "task_id": "noesis-prospective-review-evidence",
-      "timestamp": 1795433983.9807625,
-      "timestamp_str": "2026-11-23 14:39:43",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-data-dictionary-span' completed successfully.",
+      "head": "0cebdba06def4d7409dc5f232478a0ff719858fd",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-data-dictionary-span",
+      "timestamp": 1795437452.2986128,
+      "timestamp_str": "2026-11-23 15:37:32"
     }
   ]
 }
