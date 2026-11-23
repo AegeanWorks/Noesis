@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-docs-count-guard",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795433863.1073697,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795441063.1073697,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795433874.531295,
+    "completed_head": "0e0a0eb85fa5bcc46bef348cb17a3efe494e2efa",
+    "completed_tree": "479540b67e1c544016504359b2f9a328c7abe333"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: cite retrieval-practice and spacing evidence on the Home screen's weakest-link focus suggestion",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Makes the focus suggestion traceable to testing-effect and spacing evidence without changing the recommendation or adding claims.",
-        "mitigation": "Cite existing table PMIDs 25150680 and 16719566, add a failing-first test, run suites and review the card in Edge.",
-        "risks": "contract: one Home-screen citation line and one test assertion; dependency: none; concurrency: none; state: no evidence-count changes",
-        "why": "The weakest-link card recommends focused re-testing of weak tasks but had no evidence link, while two verified retrieval-practice records exist in the corpus."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "c54f5095be77f2e12c85f52d813b4606601e481980f0d8c03dd8007421bb876e",
-      "status": "in_progress",
-      "task_id": "noesis-weakest-link-evidence",
-      "timestamp": 1795431439.6163318,
-      "timestamp_str": "2026-11-23 13:57:19",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-docs-count-guard' completed successfully.",
+      "head": "0e0a0eb85fa5bcc46bef348cb17a3efe494e2efa",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-docs-count-guard",
+      "timestamp": 1795433874.5936902,
+      "timestamp_str": "2026-11-23 14:37:54"
     }
   ]
 }
