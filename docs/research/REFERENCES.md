@@ -394,3 +394,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Child working-memory boundary evidence (2026-11-24 targeted update)
 
 - Efficacy of cogmed working memory training program in improving working memory in school-age children with and without neurological insults or disorders: A meta-analysis *Applied Neuropsychology: Child*. 2022. PMID: [34085876](https://pubmed.ncbi.nlm.nih.gov/34085876/). DOI: [10.1080/21622965.2021.1920943](https://doi.org/10.1080/21622965.2021.1920943).
+
+## Everyday generalization evidence (2026-11-24 targeted update)
+
+- Cognitive interventions in healthy older adults and people with mild cognitive impairment: a systematic review *Ageing Research Reviews*. 2013. PMID: [22841936](https://pubmed.ncbi.nlm.nih.gov/22841936/). DOI: [10.1016/j.arr.2012.07.003](https://doi.org/10.1016/j.arr.2012.07.003).

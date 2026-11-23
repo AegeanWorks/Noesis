@@ -12032,6 +12032,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the child/academic boundary: even in children, working-memory training gains stayed near and did not reach academic outcomes."
+  },
+  {
+   "pmid": "22841936",
+   "doi": "10.1016/j.arr.2012.07.003",
+   "doi_status": "verified",
+   "year": 2013,
+   "journal": "Ageing Research Reviews",
+   "title": "Cognitive interventions in healthy older adults and people with mild cognitive impairment: a systematic review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults",
+    "mci"
+   ],
+   "k": 35,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "35 studies (27 RCTs, 8 clinical): cognitive training improved memory, executive function, processing speed, attention and fluid intelligence"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Whether effects generalize to everyday-life activities remained unresolved; mean CONSORT adherence was only 44%"
+    }
+   ],
+   "findings": [
+    "Cognitive interventions improved several objective cognitive domains",
+    "Everyday-life generalization remained unresolved with low reporting quality"
+   ],
+   "limitations": [
+    "Methodological quality averaged 44% of CONSORT items",
+    "Heterogeneous intervention content"
+   ],
+   "flags": [
+    "everyday_unresolved",
+    "low_quality"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-everyday-function boundary: even where objective cognitive gains appeared, daily-life generalization was unresolved and study quality low."
   }
  ]
 }

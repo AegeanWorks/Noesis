@@ -964,6 +964,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Bharadwaj et al. 2022 as a context record and a second citation on that boundary, with R145; bump the review version to v2.54.
 - **Consequences**: The review moves to 203 records and 448 outcomes (revision v2.54), D7 residuals fall to 932, and the child boundary now rests on two independent meta-analyses.
 
+### ADR-137: Third Review on the Everyday-Function Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-everyday-function boundary cited Kelly 2014 and Sprague 2019; a verified 2013 systematic review adds a third perspective with explicit low-quality caveats.
+- **Decision**: Add Reijnders et al. 2013 as a context record and a third citation on that boundary, with R146; bump the review version to v2.55.
+- **Consequences**: The review moves to 204 records and 450 outcomes (revision v2.55), D7 residuals fall to 931, and the boundary now spans three systematic reviews.
+
 
 
 

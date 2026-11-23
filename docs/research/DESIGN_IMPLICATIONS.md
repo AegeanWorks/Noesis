@@ -236,6 +236,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R143 | The no-ADHD-treatment boundary cites a second RCT meta-analysis showing blinded symptom effects shrink and WM gains do not reach symptoms or academics. | Cortese 2015 found total symptom SMD 0.37 with proximal raters versus 0.20 with blinded raters. | 25721181; ADR-134 |
 | R144 | The mechanism-vs-benefit note cites a neurofeedback review showing that neural-signal feedback rarely improves task performance. | Chiasson 2023 found only a minority of studies with meaningful effects on cognitive or affective lab tasks. | 37148977; ADR-135 |
 | R145 | The child/academic boundary cites a second child meta-analysis showing near working-memory gains without transfer to academics or attention. | Bharadwaj 2022 found Cogmed improved verbal and visuospatial WM in school-age children but not far-transfer outcomes. | 34085876; ADR-136 |
+| R146 | The no-everyday-function boundary cites a third review reporting objective cognitive gains with everyday-life generalization still unresolved. | Reijnders 2013 found gains across several cognitive domains but low CONSORT adherence and no resolution of daily-life transfer. | 22841936; ADR-137 |
 
 ---
 
