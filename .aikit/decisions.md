@@ -761,6 +761,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Update the constant and the export test to v2.37, and add a guard test that fails whenever the constant no longer matches the README status line, with R116.
 - **Consequences**: Research exports and the UI now report the correct corpus revision, and any later revision bump must update the constant in the same change.
 
+### ADR-108: Digit Span Dogfood Proofs
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Digit Span was the only game without a committed browser proof script; its verification had lived in throwaway scripts, so the dogfooding convention was incomplete.
+- **Decision**: Add `digit-proof.mjs` and `digit-trend-proof.mjs`, adapted from the Spatial Span proofs with forward/backward answer logic, and capture screenshots plus console-error checks, with R117.
+- **Consequences**: Both proofs run against a built app with `?ai` enabled and pass; the project now has a repeatable gameplay and trend check for every game.
+
 
 
 

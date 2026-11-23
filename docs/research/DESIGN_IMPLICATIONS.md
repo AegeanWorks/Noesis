@@ -204,6 +204,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R114 | The Evidence screen states no dementia-prevention claim and no diagnostic claim, distinguishing validated screening tools from this consumer focus-test app. | Gates 2011 found low-quality memory gains in MCI without a prevention outcome; Li 2025 reports screening accuracy for validated tools that Noesis does not have. | 21942932; 40299473; ADR-105 |
 | R115 | A project-wide grounding test requires every PMID hardcoded in any UI source to resolve to the evidence table, so citations cannot drift silently. | All 75 in-app PMIDs currently resolve; the check covers screens, panels and components rather than only the Evidence screen. | ADR-106 |
 | R116 | The review revision reported by the app and in research exports matches the revision declared in the research README. | The shipped constant had drifted to v1.8 while the corpus reached v2.37, mislabelling exported data; a guard test now compares them. | ADR-107 |
+| R117 | Digit Span has committed browser proof scripts for gameplay and within-level trends, matching the dogfood proofs of the other games. | The proofs drive a real three-block session and seeded history, capture screenshots and assert no console errors. | R109; R112; ADR-108 |
 
 ---
 
