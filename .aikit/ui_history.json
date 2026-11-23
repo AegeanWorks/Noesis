@@ -2227,5 +2227,35 @@
     "final_snapshot_entries": 0,
     "surface_digest": "0b23f3684af152e19f2c7c01f2692a53d6e609c74167f6485a01d857812c85fa",
     "baseline_digest": "0b23f3684af152e19f2c7c01f2692a53d6e609c74167f6485a01d857812c85fa"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Re-ran scripts/ui-audit.mjs: clipped 3->0, overflow 11->2 (intentional scrollable chip rows), smallTargets 51->30 (remaining are inline prose links), zero console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795455678.057876,
+    "finished_at": 1795455740.6146915,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "449c97b03afb22e0d07c2a0b2166d053426aeb4ef467ec1a4fa04fd33a36dd43",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795455740.614696
+    },
+    "allowed_removals": [],
+    "allowed_tests": [],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "449c97b03afb22e0d07c2a0b2166d053426aeb4ef467ec1a4fa04fd33a36dd43",
+    "baseline_digest": "449c97b03afb22e0d07c2a0b2166d053426aeb4ef467ec1a4fa04fd33a36dd43"
   }
 ]

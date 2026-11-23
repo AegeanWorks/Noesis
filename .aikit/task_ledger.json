@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-ui-audit-remaining",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795455643.8132708,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795462843.8132708,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795455741.4320507,
+    "completed_head": "bebbb9a39f72ef79b9b75459d5d9b3d879aceeb8",
+    "completed_tree": "7092339fcbda49ed60af5bec103484194afd0239"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add a committed Digit Span mid-session reload resume proof, matching the other focus tests",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Repeatable verification that the persisted snapshot, Resume session and completion work for the new game.",
-        "mitigation": "Adapt the spatial resume proof with forward/backward answers, run it to completion, regenerate map and commit.",
-        "risks": "contract: one new proof script, regenerated codebase map and docs; dependency: local server with ?ai; concurrency: none; state: no app or corpus changes",
-        "why": "Digit Span lacked a committed resume proof even though every other focus test has one."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "df8f9cf9bb7213394e3e5bbd61c2eeb4b92a1243bb4a3bf0650781037de58725",
-      "status": "in_progress",
-      "task_id": "noesis-digit-resume-proof",
-      "timestamp": 1795452087.2954147,
-      "timestamp_str": "2026-11-23 19:41:27",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-ui-audit-remaining' completed successfully.",
+      "head": "bebbb9a39f72ef79b9b75459d5d9b3d879aceeb8",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-ui-audit-remaining",
+      "timestamp": 1795455741.516169,
+      "timestamp_str": "2026-11-23 20:42:21"
     }
   ]
 }
