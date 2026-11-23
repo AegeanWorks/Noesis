@@ -11201,6 +11201,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the child/academic claim boundary: more rigorous designs shrink effects and no academic or general cognitive gain was found in children."
+  },
+  {
+   "pmid": "37257469",
+   "doi": "10.1055/s-0043-1764413",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Arquivos de Neuro-Psiquiatria",
+   "title": "Effects of cognitive interventions with video games on cognition in healthy elderly people: a systematic review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 9,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "processing_speed",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Nine included studies of game-based cognitive training in healthy older adults reported significant improvements in processing speed and working memory"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "No improvements in executive functions; few studies involved healthy older adults, with most focused on impairment"
+    }
+   ],
+   "findings": [
+    "Game-based training gains were domain-specific: speed and memory improved, executive function did not",
+    "Healthy older-adult evidence remains sparse"
+   ],
+   "limitations": [
+    "Only nine studies",
+    "Qualitative synthesis without pooled estimates"
+   ],
+   "flags": [
+    "domain_specific",
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the task-practice framing: game-based gains are domain-specific and sparse in healthy older adults, so Noesis games make no general cognitive claim."
   }
  ]
 }

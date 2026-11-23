@@ -342,3 +342,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Child and academic boundary evidence (2026-11-23 targeted update)
 
 - Working memory training in typically developing children: A meta-analysis of the available evidence *Developmental Psychology*. 2017. PMID: [28165253](https://pubmed.ncbi.nlm.nih.gov/28165253/). DOI: [10.1037/dev0000265](https://doi.org/10.1037/dev0000265).
+
+## Game-based training context (2026-11-23 targeted update)
+
+- Effects of cognitive interventions with video games on cognition in healthy elderly people: a systematic review *Arquivos de Neuro-Psiquiatria*. 2023. PMID: [37257469](https://pubmed.ncbi.nlm.nih.gov/37257469/). DOI: [10.1055/s-0043-1764413](https://doi.org/10.1055/s-0043-1764413).

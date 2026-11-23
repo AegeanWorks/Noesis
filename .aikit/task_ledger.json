@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-core-game-proofs",
+    "task_id": "noesis-game-design-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795452918.3491826,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795453713.3209565,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795460118.3491826,
+    "lease_until": 1795460913.3209565,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795452931.7921722,
-    "completed_head": "e6612a5cc81b3a20c58eb68ecca85f73c90ba696",
-    "completed_tree": "465b3cb31209b36cbeceb923a79a5e2bd3687904"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 188/410 records unchanged, 31 Python + 485 JS tests, gates 7/7, both docs guarded",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-design-doc-focus-list",
-      "timestamp": 1795436339.278819,
-      "timestamp_str": "2026-11-23 15:18:59",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-design-doc-focus-list' completed successfully.",
-      "head": "88a748243f0053acbba6af4d11bde005673f569b",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-design-doc-focus-list",
-      "timestamp": 1795436349.036378,
-      "timestamp_str": "2026-11-23 15:19:09"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Mendonca 2022 episodic-memory review as context and cite it on Paired Associates with an evidence-quality caveat",
@@ -409,6 +371,48 @@
       "task_id": "noesis-core-game-proofs",
       "timestamp": 1795452931.8542428,
       "timestamp_str": "2026-11-23 19:55:31"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Ishibashi 2023 video-game training review as context and cite it on the transfer-gradient copy",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a game-specific evidence context and reduces D7 without broadening claims.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add the citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified residual review reports domain-specific gains from game-based training in healthy older adults, directly relevant to the app's claim-bounded game rationale."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "3e7648f9d505b38b024ae2afd163fb78fcdcadad0fd3c3241e609a6759e4f5bf",
+      "status": "in_progress",
+      "task_id": "noesis-game-design-evidence",
+      "timestamp": 1795453034.785553,
+      "timestamp_str": "2026-11-23 19:57:14",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 191/417 records, 485 tests, gates 7/7, game-design citation verified in Edge, ADR-121",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-game-design-evidence",
+      "timestamp": 1795453713.3209565,
+      "timestamp_str": "2026-11-23 20:08:33",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

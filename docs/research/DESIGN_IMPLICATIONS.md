@@ -220,6 +220,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R127 | Digit Span has a committed resume proof covering mid-session reload and completion, matching the other focus tests. | The proof verifies the persisted snapshot, Resume session label, restored seed/level/trial phase and three completed blocks without console errors. | R117; ADR-118 |
 | R128 | Visual Search and Digit Symbol have committed gameplay proofs, giving all ten games the same dogfood coverage. | The proofs drive a real three-block session, capture screenshots and report block metrics with no console errors. | ADR-119 |
 | R129 | Reasoning and Speed Tap also have committed gameplay proofs, completing played-session coverage for every mechanic. | The proofs use each mechanic's response action (option selection and Space-style response) and report block metrics without console errors. | ADR-120 |
+| R130 | The transfer-gradient copy cites game-based training evidence showing domain-specific gains and sparse healthy-adult studies. | Ishibashi 2023 found processing-speed and working-memory gains but no executive-function improvement in game training. | 37257469; ADR-121 |
 
 ---
 

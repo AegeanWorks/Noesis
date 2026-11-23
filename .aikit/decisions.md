@@ -852,6 +852,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add `reasoning-proof.mjs` and `speed-proof.mjs`, adapted from the Digit Span proof with each mechanic's response action (option selection and respond), with R129.
 - **Consequences**: Both proofs pass against a built app with `?ai` enabled and no console errors; all fourteen mechanics now have repeatable gameplay coverage.
 
+### ADR-121: Game-Based Training Context on Transfer Copy
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: A verified 2023 systematic review in the residual pool reported domain-specific gains from game-based training in healthy older adults, relevant to the app's claim-bounded game rationale.
+- **Decision**: Add the review as a context record, cite it on the transfer-gradient copy with R130, and bump the review version to v2.42.
+- **Consequences**: The review moves to 191 records and 417 outcomes (revision v2.42), D7 residuals fall to 944, and the game-specific evidence caveat becomes visible in the app.
+
 
 
 

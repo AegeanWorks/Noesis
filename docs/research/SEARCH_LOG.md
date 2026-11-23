@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 190 |
-| Outcomes | 415 |
+| Records | 191 |
+| Outcomes | 417 |
 | Primary outcomes | 258 |
 | Systematic reviews/meta-analyses | 111 |
 | Network meta-analyses | 19 |
-| Other systematic reviews | 40 |
+| Other systematic reviews | 41 |
 | RCTs | 18 |
 | Umbrella reviews | 2 |
-| DOI verified | 179 |
+| DOI verified | 180 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 87 |
+| cct | 88 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 179 |
+| DOI verified | 180 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **190** |
+| **Total** | **191** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -298,6 +298,8 @@ A 2026-11-23 episodic-memory update added Mendonça et al. 2022 (PMID 35967680, 
 
 A 2026-11-23 child-age boundary update added Sala & Gobet 2017 (PMID 28165253, *Developmental Psychology*; DOI 10.1037/dev0000265), verified via E-utilities `efetch`. Across typically developing children aged 3-16, WM training improved trained/near skills (g=0.46) with minimal far transfer (g=0.12), effects shrinking with stronger designs and no academic gains. The Evidence screen now states that Noesis makes no child-development or academic claim (ADR-117). D7 residuals fall to 945; the review is now 190 records and 415 outcomes, revision v2.41.
 
+A 2026-11-23 game-design context update added Ishibashi et al. 2023 (PMID 37257469, *Arquivos de Neuro-Psiquiatria*; DOI 10.1055/s-0043-1764413), verified via E-utilities `efetch`. Nine studies of game-based training in healthy older adults reported processing-speed and working-memory gains but no executive-function improvement, with healthy-adult evidence sparse. The Evidence screen's transfer-gradient copy now cites it as domain-specific context (ADR-121). D7 residuals fall to 944; the review is now 191 records and 417 outcomes, revision v2.42.
+
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
 One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
@@ -323,7 +325,7 @@ One adherence record joined the table the same day (PMID 35612886, 99 studies, e
 | D4 | Independent GRADE not performed | Certainty would require full-text appraisal of every review | Certainty is recorded **as reported by the source** and is provisional |
 | D5 | PsycINFO, Embase, CINAHL and ERIC not searched directly | No institutional access in this environment | OpenAlex and PubMed citation coverage mitigate but do not close the gap |
 | D6 | English-language restriction | Feasibility | Language bias cannot be excluded |
-| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 28 eligible reviews extracted 2026-11-22/23 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change, 2 active-control/context, 2 clinical-claim, 1 prospective-memory, 2 neuroimaging-mechanism, 1 episodic-memory, 1 child-age-boundary) | Prioritisation by modality × population × outcome cell | 945 eligible reviews remain logged but not synthesised; partially closed |
+| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 29 eligible reviews extracted 2026-11-22/23 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change, 2 active-control/context, 2 clinical-claim, 1 prospective-memory, 2 neuroimaging-mechanism, 1 episodic-memory, 1 child-age-boundary, 1 game-design-context) | Prioritisation by modality × population × outcome cell | 944 eligible reviews remain logged but not synthesised; partially closed |
 | D8 | PubMed DOI fields unreliable | XML metadata inconsistency | Crossref verification used; 7 records are PMID-only and 4 carry preprint DOIs |
 | D9 | Preprint identifiers retained for four records | Crossref matched a preprint version | Flagged `preprint`; conclusions do not rely solely on them |
 | D10 | Initial 997-review corpus query omitted working-memory training, cognitive stimulation/rehabilitation, serious-game and VR-cognitive terms | Gap detected during screening | Query expanded to 1,495 reviews; final denominator and screening counts use the expanded corpus |
