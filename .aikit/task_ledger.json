@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-spatial-training-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795404786.4707808,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795411986.4707808,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795404827.7551725,
+    "completed_head": "82f2c6468bae422a6ef529aeba1c6357bbc7a46e",
+    "completed_tree": "436e5f5f07b430e27f56cf3efc5548903306a3e3"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-fartransfer-citation",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add Sala & Gobet 2017 far-transfer review as context and link it from the near/far transfer aside",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795398541.4512048,
-      "timestamp_str": "2026-11-23 04:49:01",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The Evidence screen's near/far transfer explanation asserts the central gradient without a citation; Sala & Gobet 2017 is a narrative-only review in the notes with three meta-analyses.",
-        "benefits": "Resolves a key narrative-only citation into the corpus and makes the app's central evidence claim click-through verifiable.",
-        "risks": "contract: one context record + UI link + test; dependency: none; concurrency: none; state: counts and references must move together",
-        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add failing-first test, run suites and review UI."
-      },
-      "plan_digest": "577ca972ef85f93d86500359e82e365dfa45c671abd43aab7db3bb35664fee9e",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-fartransfer-citation",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-spatial-training-evidence",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-spatial-training-evidence' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795404827.9526536,
+      "timestamp_str": "2026-11-23 06:33:47",
+      "agent": "opencode:hy4-flash-free",
+      "head": "82f2c6468bae422a6ef529aeba1c6357bbc7a46e",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }

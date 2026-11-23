@@ -828,5 +828,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "6a648a999e4c5c977f6a55f2cb58ea73b5d329e253c5e84555038e9b7283d6a7",
     "baseline_digest": "6a648a999e4c5c977f6a55f2cb58ea73b5d329e253c5e84555038e9b7283d6a7"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the running app in Edge: corpus count 151 and Mental Rotation source list resolve with no console errors; citation test passes",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795404797.0628848,
+    "finished_at": 1795404827.215608,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "53b9e5b0b1e3e691113f51d82ff88ee2284d17b7838ebbdf0686942d5f9f6038",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795404827.2156096
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Snapshot counts follow the evidence table"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "53b9e5b0b1e3e691113f51d82ff88ee2284d17b7838ebbdf0686942d5f9f6038",
+    "baseline_digest": "53b9e5b0b1e3e691113f51d82ff88ee2284d17b7838ebbdf0686942d5f9f6038"
   }
 ]
