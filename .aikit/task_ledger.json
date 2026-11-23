@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-data-governance-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795416420.6585562,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795423620.6585562,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795416509.469388,
+    "completed_head": "1672820a723ab36847cc691196150283595c3ee7",
+    "completed_tree": "b45a6f7054f00d0892778dce795d8fa544058207"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add McGreen 2024 Go/No-Go Stop-Signal review as context and cite it in the Go/No-Go mechanic",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and makes the inhibition claim boundary clearer.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The stop-signal exclusion is justified narratively; the pooled estimate and its appetitive-behaviour focus belong in the corpus."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "8caed3f8aaf7e10a8bbd3ace36a5549845b760afd6c582682e6d551b52d65a13",
-      "status": "in_progress",
-      "task_id": "noesis-stop-signal-evidence",
-      "timestamp": 1795406361.323063,
-      "timestamp_str": "2026-11-23 06:59:21",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-data-governance-evidence' completed successfully.",
+      "head": "1672820a723ab36847cc691196150283595c3ee7",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-data-governance-evidence",
+      "timestamp": 1795416509.5958996,
+      "timestamp_str": "2026-11-23 09:48:29"
     }
   ]
 }

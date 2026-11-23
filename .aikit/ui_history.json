@@ -1124,5 +1124,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "e33b45136ed974d8fa12b508b5996bcaec5107950d4bb0a9a5de797596773062",
     "baseline_digest": "e33b45136ed974d8fa12b508b5996bcaec5107950d4bb0a9a5de797596773062"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the research export panel in Edge: FAIR and data-governance links both render, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795416435.493106,
+    "finished_at": 1795416508.8446784,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "054ca7d11f503522fac21d4b7bd56bfb1d53f7442d2b77dad42d5e92e4ef7454",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795416508.8446805
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Governance citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/research-data.test.tsx",
+        "reason": "Governance citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "054ca7d11f503522fac21d4b7bd56bfb1d53f7442d2b77dad42d5e92e4ef7454",
+    "baseline_digest": "054ca7d11f503522fac21d4b7bd56bfb1d53f7442d2b77dad42d5e92e4ef7454"
   }
 ]
