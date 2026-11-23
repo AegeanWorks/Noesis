@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-ipace-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795419481.0159461,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795426681.0159461,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795419526.602816,
+    "completed_head": "d8f4e94adece960da4fe9406ec64a024249e4b10",
+    "completed_tree": "ec53bddebf2e4e804ff0f4df14586d7dcf101573"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Faraoni 2023 and Miendlarzewska 2016 as context and cite them in Motivation safeguards",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves both remaining narrative-only engagement citations and documents the autonomy and reward-learning rationale in-app.",
-        "mitigation": "Verify via efetch, update counts and references, add citations, run suites and review UI.",
-        "risks": "contract: two context records and UI citations; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "Two behavioral-engagement sources cited narratively directly address autonomy and reward-driven memory change, the two concerns behind Noesis's cosmetic, non-coercive reward design."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "7ad8ab9a5b0f5da2d93c80700a45cde425f02480458b7fc0c10883c8123f2e23",
-      "status": "in_progress",
-      "task_id": "noesis-autonomy-reward-evidence",
-      "timestamp": 1795409399.696648,
-      "timestamp_str": "2026-11-23 07:49:59",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-ipace-evidence' completed successfully.",
+      "head": "d8f4e94adece960da4fe9406ec64a024249e4b10",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-ipace-evidence",
+      "timestamp": 1795419526.6636949,
+      "timestamp_str": "2026-11-23 10:38:46"
     }
   ]
 }
