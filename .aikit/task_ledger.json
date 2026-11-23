@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-jump-chip-a11y",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795454692.4029832,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795461892.4029832,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795454752.715566,
+    "completed_head": "8d58b0a6f944e9ba9c0643f1a3ad6f0e9a661420",
+    "completed_tree": "3ad6468e13e5f16c76cbd770b7082d60988ff38c"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Sala & Gobet 2017 child working-memory meta-analysis as context and a no-child-academic-gain claim boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds an honest age/academic boundary backed by a verified pooled analysis and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add the boundary with tests, run suites and review UI.",
-        "risks": "contract: one context record, one claim-boundary citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "The app is not age-gated but the Evidence screen lacks any boundary about child or academic claims; this 2017 meta-analysis directly addresses them."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "90cc644e35b45388667544b8cbe3ab58ac7d8b113d379ad02d492b4c70d75706",
-      "status": "in_progress",
-      "task_id": "noesis-child-age-boundary",
-      "timestamp": 1795448190.231897,
-      "timestamp_str": "2026-11-23 18:36:30",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-jump-chip-a11y' completed successfully.",
+      "head": "8d58b0a6f944e9ba9c0643f1a3ad6f0e9a661420",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-jump-chip-a11y",
+      "timestamp": 1795454752.7858622,
+      "timestamp_str": "2026-11-23 20:25:52"
     }
   ]
 }
