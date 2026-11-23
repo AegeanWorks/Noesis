@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 155 |
-| Outcomes | 358 |
+| Records | 157 |
+| Outcomes | 360 |
 | Primary outcomes | 258 |
 | Systematic reviews/meta-analyses | 98 |
 | Network meta-analyses | 18 |
-| Other systematic reviews | 26 |
+| Other systematic reviews | 28 |
 | RCTs | 11 |
 | Umbrella reviews | 2 |
-| DOI verified | 144 |
+| DOI verified | 146 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -143,7 +143,7 @@ By modality:
 | ave | 6 |
 | multi_intervention | 6 |
 | safety | 8 |
-| engagement | 34 |
+| engagement | 36 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 144 |
+| DOI verified | 146 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **155** |
+| **Total** | **157** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -255,6 +255,8 @@ A 2026-11-23 inhibition-paradigm update resolved McGreen et al. 2024 (PMID 38309
 A 2026-11-23 visual-search mechanism update resolved Bueichekú et al. 2019 (PMID 30859709, *Human Brain Mapping*; DOI 10.1002/hbm.24560) from narrative-only to a context record, verified via E-utilities `efetch`. Forty-two adults showed task-relevant resting-connectivity changes after 30 minutes of visual-search training, with no whole-network change and no everyday-function outcome. It is now a third Visual Search citation so the neural result cannot be read as a user benefit (ADR-083). D7 is unchanged; the review is now 154 records and 356 outcomes, revision v2.19.
 
 A 2026-11-23 incentive-design update resolved de Buisonjé et al. 2022 (PMID 36201384, *Journal of Medical Internet Research*; DOI 10.2196/38339) from narrative-only to a context record, verified via E-utilities `efetch`. In a 126-person app RCT, financial incentives beat no incentive, but deposit contracts had lower uptake (62% vs 100%) and were not superior to rewards, and loss frames underperformed gain frames (10.50 vs 14.67 goal days, P=.007). The Motivation safeguards now cite it beside the other incentive sources (ADR-084). D7 is unchanged; the review is now 155 records and 358 outcomes, revision v2.20.
+
+A 2026-11-23 engagement-context update resolved two narrative-only sources into context records, both verified via E-utilities `efetch`: Faraoni 2023 (PMID 37469930, *Frontiers in Artificial Intelligence*; DOI 10.3389/frai.2023.1216340) argues that unperceived computational persuasion undermines autonomy and mental self-determination, and Miendlarzewska 2016 (PMID 26657967, *Neuroscience & Biobehavioral Reviews*; DOI 10.1016/j.neubiorev.2015.11.015) reviews how reward value can prioritise and generalise across memory. Both are now Motivation-safeguards citations (ADR-085). D7 is unchanged; the review is now 157 records and 360 outcomes, revision v2.21.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

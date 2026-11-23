@@ -181,6 +181,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R91 | Go/No-Go cites the appetitive-behaviour meta-analysis and keeps its no-daily-impulse-control claim; Stop-Signal remains out of scope. | McGreen 2024 found g=-0.21 for food-related behaviour, not cognitive transfer. | 38309625; ADR-082 |
 | R92 | Visual Search cites the neural training study explicitly as a mechanism finding, not evidence of user benefit. | Bueichekú 2019 found task-relevant resting-connectivity change after short training with no whole-network or everyday outcome. | 30859709; ADR-083 |
 | R93 | Motivation mode uses cosmetic, capped rewards with gain framing and no real stakes; the safeguards cite the incentive-design RCT for the uptake and framing findings. | de Buisonjé 2022 found deposit contracts cut uptake and loss frames underperformed gain frames. | 36201384; ADR-084 |
+| R94 | Motivation safeguards also cite the autonomy and reward-learning sources: rewards stay conspicuous and switchable, and never change scores, content or claims. | Faraoni 2023 links unperceived persuasion to loss of autonomy; Miendlarzewska 2016 shows reward can bias what is learned. | 37469930; 26657967; ADR-085 |
 
 ---
 

@@ -600,6 +600,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a seventh Motivation-safeguards citation, with R93; keep momentum cosmetic and capped with no real stakes or loss framing.
 - **Consequences**: The review moves to 155 records and 358 outcomes (revision v2.20) and the no-real-stakes design choice is backed by an uptake and framing result rather than only by harm-avoidance logic.
 
+### ADR-085: Autonomy and Reward Context on Motivation Mode
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Two engagement sources were narrative-only: Faraoni et al. 2023 (PMID 37469930) on hypernudging and autonomy, and Miendlarzewska et al. 2016 (PMID 26657967) on reward-driven memory bias. Both bear directly on why Noesis's momentum is conspicuous, cosmetic, optional and score-neutral.
+- **Decision**: Add both as context records and as Motivation-safeguards citations, with R94; keep the existing reward behaviour unchanged.
+- **Consequences**: The review moves to 157 records and 360 outcomes (revision v2.21) and the autonomy posture is documented with both a rights-based argument and a reward-learning mechanism.
+
 
 
 

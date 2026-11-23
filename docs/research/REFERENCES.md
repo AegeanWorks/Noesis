@@ -244,3 +244,8 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Incentive design (2026-11-23 targeted update)
 
 - Investigating Rewards and Deposit Contract Financial Incentives for Physical Activity Behavior Change Using a Smartphone App: Randomized Controlled Trial *Journal of Medical Internet Research*. 2022. PMID: [36201384](https://pubmed.ncbi.nlm.nih.gov/36201384/). DOI: [10.2196/38339](https://doi.org/10.2196/38339).
+
+## Engagement context (2026-11-23 targeted update)
+
+- Persuasive Technology and computational manipulation: hypernudging out of mental self-determination *Frontiers in Artificial Intelligence*. 2023. PMID: [37469930](https://pubmed.ncbi.nlm.nih.gov/37469930/). DOI: [10.3389/frai.2023.1216340](https://doi.org/10.3389/frai.2023.1216340).
+- Influence of reward motivation on human declarative memory *Neuroscience & Biobehavioral Reviews*. 2016. PMID: [26657967](https://pubmed.ncbi.nlm.nih.gov/26657967/). DOI: [10.1016/j.neubiorev.2015.11.015](https://doi.org/10.1016/j.neubiorev.2015.11.015).

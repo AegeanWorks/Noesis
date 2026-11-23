@@ -9351,6 +9351,91 @@
    ],
    "synthesis_role": "context",
    "product_use": "Grounds Motivation mode's cosmetic-only rewards and gain framing: real stakes reduced uptake, loss framing underperformed, and Noesis uses no money or loss frames."
+  },
+  {
+   "pmid": "37469930",
+   "doi": "10.3389/frai.2023.1216340",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Frontiers in Artificial Intelligence",
+   "title": "Persuasive Technology and computational manipulation: hypernudging out of mental self-determination",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "conceptual_analysis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "not_reported",
+     "note": "Unperceived AI persuasion via dark patterns can undermine autonomy and mental self-determination; no empirical effect estimate"
+    }
+   ],
+   "findings": [
+    "Computational manipulation targets automatic processes without awareness",
+    "Autonomy and informational self-determination are the affected rights"
+   ],
+   "limitations": [
+    "Conceptual legal paper, not an empirical trial"
+   ],
+   "flags": [
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds Noesis's autonomy posture: no push channel, no hidden incentives, and conspicuous cosmetic rewards that the user can switch off."
+  },
+  {
+   "pmid": "26657967",
+   "doi": "10.1016/j.neubiorev.2015.11.015",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Neuroscience & Biobehavioral Reviews",
+   "title": "Influence of reward motivation on human declarative memory",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "episodic_memory",
+     "transfer": "na",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "Reward value can prioritise encoding and consolidation and generalise to related items, altering memory structure; no pooled estimate"
+    }
+   ],
+   "findings": [
+    "Reward guides attention and memory consolidation",
+    "Learned reward values can generalise to related representations"
+   ],
+   "limitations": [
+    "Narrative neuroscience review",
+    "Reward paradigms are not app momentum"
+   ],
+   "flags": [
+    "narrative_only",
+    "mechanism_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for Motivation mode: cosmetic rewards can still bias what is learned, so they never change scores, content or claims."
   }
  ]
 }

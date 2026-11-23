@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-incentive-framing-evidence",
+    "task_id": "noesis-autonomy-reward-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795408784.4994955,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795409802.8884904,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795415984.4994955,
+    "lease_until": 1795417002.8884904,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795408828.590254,
-    "completed_head": "d8d636452f495642b5c3dba19108998f10b87a39",
-    "completed_tree": "a9b82ab85077085a41714f2608a64af31d56b3c1"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 149/347 records, 468 tests, gates 7/7, motivation citation reviewed in Edge, ADR-078",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-exergame-motivation",
-      "timestamp": 1795402844.8277917,
-      "timestamp_str": "2026-11-23 06:00:44",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-exergame-motivation' completed successfully.",
-      "head": "723923bcc1637c238dfcd9d443c459c0d8ef3043",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-exergame-motivation",
-      "timestamp": 1795402888.812549,
-      "timestamp_str": "2026-11-23 06:01:28"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Smith & Basak 2023 game-factors meta-analysis as context and link it from the Motivation safeguards",
@@ -409,6 +371,48 @@
       "task_id": "noesis-incentive-framing-evidence",
       "timestamp": 1795408828.7713284,
       "timestamp_str": "2026-11-23 07:40:28"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Faraoni 2023 and Miendlarzewska 2016 as context and cite them in Motivation safeguards",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Resolves both remaining narrative-only engagement citations and documents the autonomy and reward-learning rationale in-app.",
+        "mitigation": "Verify via efetch, update counts and references, add citations, run suites and review UI.",
+        "risks": "contract: two context records and UI citations; dependency: none; concurrency: none; state: counts and references must move together",
+        "why": "Two behavioral-engagement sources cited narratively directly address autonomy and reward-driven memory change, the two concerns behind Noesis's cosmetic, non-coercive reward design."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "7ad8ab9a5b0f5da2d93c80700a45cde425f02480458b7fc0c10883c8123f2e23",
+      "status": "in_progress",
+      "task_id": "noesis-autonomy-reward-evidence",
+      "timestamp": 1795409399.696648,
+      "timestamp_str": "2026-11-23 07:49:59",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 157/360 records, 468 tests, gates 7/7, ADR-085",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-autonomy-reward-evidence",
+      "timestamp": 1795409802.8884904,
+      "timestamp_str": "2026-11-23 07:56:42",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

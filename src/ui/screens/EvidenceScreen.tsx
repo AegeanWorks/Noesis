@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 155 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 157 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -147,6 +147,20 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/36201384/"
               label="Deposits cut uptake and loss frames underperform gain frames"
               pmid="36201384"
+            />
+          </li>
+          <li>
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/37469930/"
+              label="Hypernudging and autonomy: why rewards stay conspicuous and optional"
+              pmid="37469930"
+            />
+          </li>
+          <li>
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/26657967/"
+              label="Reward can bias what is learned, so momentum never changes scores"
+              pmid="26657967"
             />
           </li>
         </ul>
