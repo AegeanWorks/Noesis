@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-engagement-planning-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795425382.306576,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795432582.306576,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795425445.8521652,
+    "completed_head": "efdda50e0c11aebc4e5d8ccc3a434f8a2de2c5eb",
+    "completed_tree": "c2b9402ca564d820363f3c4d797ef4535bd430e1"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Edwards 2018 UFOV training meta-analysis as context and cite it in Visual Search",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Documents both sides: UFOV shows functional transfer and durability, but is proprietary and not construct-pure, justifying single-construct alternatives.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The game-exclusion rationale cites UFOV training benefits narratively; the pooled estimate belongs in the corpus next to the construct-purity caveat."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "db7c879f8c982c7cbaa049f9addacc0513699cc2e337563645b44a7d87e67170",
-      "status": "in_progress",
-      "task_id": "noesis-ufov-training-evidence",
-      "timestamp": 1795417986.0708587,
-      "timestamp_str": "2026-11-23 10:13:06",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-engagement-planning-evidence' completed successfully.",
+      "head": "efdda50e0c11aebc4e5d8ccc3a434f8a2de2c5eb",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-engagement-planning-evidence",
+      "timestamp": 1795425445.9157014,
+      "timestamp_str": "2026-11-23 12:17:25"
     }
   ]
 }

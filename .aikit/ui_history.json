@@ -1432,5 +1432,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "49077eb9983337c8bd5f4aa905a4d9c59953fb455538b75fa82de3a561239a1d",
     "baseline_digest": "49077eb9983337c8bd5f4aa905a4d9c59953fb455538b75fa82de3a561239a1d"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed practice-plan and Evidence screens in Edge: Masicampo/Milkman and LDW citations render, corpus count 170, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795425396.4238238,
+    "finished_at": 1795425445.4228559,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "e4e417f944ba71af7cea7832b935be945ce72f7ad3992a59c877306e546fecd7",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795425445.422859
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Planning/LDW citation tests and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Planning/LDW citation tests and snapshot counts"
+      },
+      {
+        "path": "tests/ui/home.test.tsx",
+        "reason": "Planning/LDW citation tests and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "e4e417f944ba71af7cea7832b935be945ce72f7ad3992a59c877306e546fecd7",
+    "baseline_digest": "e4e417f944ba71af7cea7832b935be945ce72f7ad3992a59c877306e546fecd7"
   }
 ]
