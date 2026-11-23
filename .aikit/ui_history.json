@@ -2515,5 +2515,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "f62ad08d9f3d0078e097a39739f96c7e709410850d9732ba6f7676adc5f552d2",
     "baseline_digest": "f62ad08d9f3d0078e097a39739f96c7e709410850d9732ba6f7676adc5f552d2"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: EF subdomain citation renders in transfer copy, corpus count 198, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795467182.6273074,
+    "finished_at": 1795467234.708471,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "a170960678b6dbf7632f85b6ada1fc11e5eadf93a4bf209e80e7cb0c648afd54",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795467234.7084742
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Transfer citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Transfer citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Transfer citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "a170960678b6dbf7632f85b6ada1fc11e5eadf93a4bf209e80e7cb0c648afd54",
+    "baseline_digest": "a170960678b6dbf7632f85b6ada1fc11e5eadf93a4bf209e80e7cb0c648afd54"
   }
 ]

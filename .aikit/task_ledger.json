@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-ef-nma-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795467168.3046858,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795474368.3046858,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795467236.8893242,
+    "completed_head": "5a41386c53f0d68f9256948a739b759262fbc907",
+    "completed_tree": "abd30c484cef9488b42c72748f6e130efbc29112"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Bai 2026 WM-training mood meta-analysis as context and a second citation on the no-mood-treatment boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Strengthens an existing boundary with pooled clinical evidence and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2026 RCT meta-analysis quantifies a small transient depressive-symptom effect with no durability, directly supporting the app's no-mood-treatment claim boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "1b0e6db0636d2ed46b8af8f7b3e35952c7d58f50985713b7ff178d4e86ec6fd7",
-      "status": "in_progress",
-      "task_id": "noesis-mood-boundary-evidence",
-      "timestamp": 1795455959.3116767,
-      "timestamp_str": "2026-11-23 20:45:59",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-ef-nma-evidence' completed successfully.",
+      "head": "5a41386c53f0d68f9256948a739b759262fbc907",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-ef-nma-evidence",
+      "timestamp": 1795467237.275173,
+      "timestamp_str": "2026-11-23 23:53:57"
     }
   ]
 }
