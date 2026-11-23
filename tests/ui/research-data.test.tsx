@@ -56,6 +56,7 @@ describe("ResearchDataPanel", () => {
     expect(note.querySelector("a")?.getAttribute("href")).toBe(
       "https://pubmed.ncbi.nlm.nih.gov/26978244/",
     );
+    expect(note.querySelector('a[href*="42443473"]')).toBeTruthy();
   });
 
   it("requires consent before sending", () => {

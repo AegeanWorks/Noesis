@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-ufov-construct-evidence",
+    "task_id": "noesis-data-governance-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795411844.449028,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795416420.6585562,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795419044.449028,
+    "lease_until": 1795423620.6585562,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795411896.11206,
-    "completed_head": "e856d92589b694ff52dd4c957f3c04123a194a22",
-    "completed_tree": "605ad4ebd88ee0d64a4f34c1a2fa1e725cb54670"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 152/353 records, 468 tests, gates 7/7, action-game citation reviewed in Edge, ADR-081",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-actiongame-evidence",
-      "timestamp": 1795405802.538823,
-      "timestamp_str": "2026-11-23 06:50:02",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-actiongame-evidence' completed successfully.",
-      "head": "59672c7f0d684beebf61211e4e444e5c6f5406c4",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-actiongame-evidence",
-      "timestamp": 1795405860.0179796,
-      "timestamp_str": "2026-11-23 06:51:00"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add McGreen 2024 Go/No-Go Stop-Signal review as context and cite it in the Go/No-Go mechanic",
@@ -409,6 +371,48 @@
       "task_id": "noesis-ufov-construct-evidence",
       "timestamp": 1795411896.3021328,
       "timestamp_str": "2026-11-23 08:31:36"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add O'Dea 2026 data-banking perspective as context and cite it in the research export panel",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Resolves another narrative-only citation and grounds the consent design in a data-governance framework.",
+        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
+        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
+        "why": "Noesis versions and revokes research consent explicitly; this perspective argues for hybrid broad-plus-dynamic consent and co-designed governance."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "d2c131e201336b5dc497c80730496d950f8deb67ebcbd560a3057abef31702e9",
+      "status": "in_progress",
+      "task_id": "noesis-data-governance-evidence",
+      "timestamp": 1795412439.2012422,
+      "timestamp_str": "2026-11-23 08:40:39",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 160/364 records, 468 tests, gates 7/7, data governance citation reviewed in Edge, ADR-088",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-data-governance-evidence",
+      "timestamp": 1795416420.6585562,
+      "timestamp_str": "2026-11-23 09:47:00",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

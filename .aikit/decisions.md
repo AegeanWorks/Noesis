@@ -621,6 +621,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a fourth Visual Search citation, with R96; keep block-level single-construct reporting rather than a composite score.
 - **Consequences**: The review moves to 159 records and 363 outcomes (revision v2.23) and the app's measurement architecture is grounded in a construct-validity finding.
 
+### ADR-088: Data-Governance Citation on Research Export
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: O'Dea et al. 2026 (PMID 42443473) was narrative-only in DATA_COLLECTION_AND_CONSENT.md and argues for harmonised standards plus hybrid broad-and-dynamic consent to keep participant control as analytics evolve.
+- **Decision**: Add it as a context record and a second research-export citation beside FAIR, with R97; keep consent versioned and revocable.
+- **Consequences**: The review moves to 160 records and 364 outcomes (revision v2.24) and the research data path is grounded in both reuse and governance principles.
+
 
 
 

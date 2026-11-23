@@ -170,7 +170,13 @@ export function ResearchDataPanel({
         <a href="https://pubmed.ncbi.nlm.nih.gov/26978244/" target="_blank" rel="noreferrer">
           Wilkinson et al. 2016
         </a>{" "}
-        <span className="pmid">PMID 26978244</span>
+        <span className="pmid">PMID 26978244</span>.{" "}
+        <strong>Consent stays versioned and revocable</strong> so participation remains under your
+        control as the study evolves.{" "}
+        <a href="https://pubmed.ncbi.nlm.nih.gov/42443473/" target="_blank" rel="noreferrer">
+          O'Dea et al. 2026
+        </a>{" "}
+        <span className="pmid">PMID 42443473</span>
       </p>
     </div>
   );

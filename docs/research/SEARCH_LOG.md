@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 159 |
-| Outcomes | 363 |
+| Records | 160 |
+| Outcomes | 364 |
 | Primary outcomes | 258 |
 | Systematic reviews/meta-analyses | 99 |
 | Network meta-analyses | 18 |
-| Other systematic reviews | 28 |
+| Other systematic reviews | 29 |
 | RCTs | 12 |
 | Umbrella reviews | 2 |
-| DOI verified | 148 |
+| DOI verified | 149 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -143,7 +143,7 @@ By modality:
 | ave | 6 |
 | multi_intervention | 6 |
 | safety | 8 |
-| engagement | 36 |
+| engagement | 37 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 148 |
+| DOI verified | 149 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **159** |
+| **Total** | **160** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -261,6 +261,8 @@ A 2026-11-23 engagement-context update resolved two narrative-only sources into 
 A 2026-11-23 dropout-feasibility update resolved Clausen et al. 2019 (PMID 30881315, *Frontiers in Psychiatry*; DOI 10.3389/fpsyt.2019.00062) from narrative-only to a context record, verified via E-utilities `efetch`. In a pilot home-based training trial, dropout was 38.5% in the executive-function arm and 57.1% in the word-game arm, completers liked the programme, and trained-task gains did not generalise to standard tests. The adherence card now cites it beside the larger meta-analysis (ADR-086). D7 is unchanged; the review is now 158 records and 362 outcomes, revision v2.22.
 
 A 2026-11-23 measure-validity update resolved Woutersen et al. 2017 (PMID 29270605, *Journal of Vision*; DOI 10.1167/17.14.11) from narrative-only to a context record, verified via E-utilities `efetch`. Across 116 correlations in 18 articles, every cognitive domain correlated with every UFOV subtest and no subtest was selectively sensitive to one construct. Visual Search now cites it beside the training studies to explain the single-construct, block-level measurement choice (ADR-087). D7 is unchanged; the review is now 159 records and 363 outcomes, revision v2.23.
+
+A 2026-11-23 data-governance update resolved O'Dea et al. 2026 (PMID 42443473, *npj Digital Medicine*; DOI 10.1038/s44277-026-00066-z) from narrative-only to a context record, verified via E-utilities `efetch`. This Perspective calls for harmonised standards and hybrid broad-plus-dynamic consent so participants retain control as analytics evolve. The research export panel now cites it beside the FAIR principles (ADR-088). D7 is unchanged; the review is now 160 records and 364 outcomes, revision v2.24.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

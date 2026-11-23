@@ -9538,6 +9538,48 @@
    ],
    "synthesis_role": "context",
    "product_use": "Grounds the choice of single-construct focus tests: a composite score would hide which function changed, so Noesis reports block-level measures separately."
+  },
+  {
+   "pmid": "42443473",
+   "doi": "10.1038/s44277-026-00066-z",
+   "doi_status": "verified",
+   "year": 2026,
+   "journal": "npj Digital Medicine",
+   "title": "Building the foundations for global data banking in digital phenotyping for mental health",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "consensus_principles",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "not_reported",
+     "note": "Priorities: harmonised data standards, hybrid broad-plus-dynamic consent, governance co-designed with lived experience, privacy-preserving reuse"
+    }
+   ],
+   "findings": [
+    "Hybrid consent models preserve participant control as analytics evolve",
+    "Standardisation and co-designed governance are prerequisites for trustworthy reuse"
+   ],
+   "limitations": [
+    "Perspective article, not empirical evidence",
+    "Digital-phenotyping context"
+   ],
+   "flags": [
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for research export: Noesis uses a versioned, revocable consent and a documented field dictionary so participation stays controllable and data stay interpretable."
   }
  ]
 }

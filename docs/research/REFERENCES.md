@@ -257,3 +257,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Measure construct validity (2026-11-23 targeted update)
 
 - A meta-analysis of perceptual and cognitive functions involved in useful-field-of-view test performance *Journal of Vision*. 2017. PMID: [29270605](https://pubmed.ncbi.nlm.nih.gov/29270605/). DOI: [10.1167/17.14.11](https://doi.org/10.1167/17.14.11).
+
+## Data governance (2026-11-23 targeted update)
+
+- Building the foundations for global data banking in digital phenotyping for mental health *npj Digital Medicine*. 2026. PMID: [42443473](https://pubmed.ncbi.nlm.nih.gov/42443473/). DOI: [10.1038/s44277-026-00066-z](https://doi.org/10.1038/s44277-026-00066-z).
