@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-farcheck-citation",
+    "task_id": "noesis-safety-citations",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795396012.5670173,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795396831.0321152,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795403212.5670173,
+    "lease_until": 1795404031.0321152,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795396057.2243643,
-    "completed_head": "8dacb570e8e2ec6b0d40f04c6512df17cf2cca39",
-    "completed_tree": "40be0811fe228e392231339a3a4564c46250b2d3"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-game-design-evidence",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 138/328 records, 458 node + 29 python tests, clock note reviewed in Edge, ADR-065",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795389313.256398,
-      "timestamp_str": "2026-11-23 02:15:13",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-game-design-evidence",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-game-design-evidence' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795389469.6465216,
-      "timestamp_str": "2026-11-23 02:17:49",
-      "agent": "opencode:hy4-flash-free",
-      "head": "43f529d4d346492ab73bd6ad6366d98829fd6da8",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-multimodal-synergy",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-safety-citations",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add PubMed-linked safety evidence to the onboarding screen",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795396612.3973696,
+      "timestamp_str": "2026-11-23 04:16:52",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The safety screen asks about seizures and exercise restrictions without linking the two corpus sources that justify those questions.",
+        "benefits": "Makes the safety posture verifiable with two in-corpus citations and pins them with a UI test.",
+        "risks": "contract: small UI text change + test; dependency: none; concurrency: none; state: none",
+        "mitigation": "Use existing corpus PMIDs 16146438 and 25771249, add failing-first test, run all suites and review the UI."
+      },
+      "plan_digest": "834527e2f98cd3ba2f9da6979028b3f3d0d53c625d752e1ad06c03c29400daaf",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-safety-citations",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 466 tests, gates 7/7, safety citations reviewed in Edge, ADR-072",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795396831.0321152,
+      "timestamp_str": "2026-11-23 04:20:31",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

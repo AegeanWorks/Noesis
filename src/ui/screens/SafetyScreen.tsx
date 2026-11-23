@@ -42,6 +42,18 @@ export function SafetyScreen({ onComplete }: SafetyScreenProps) {
       <p className="privacy-chip">
         <span aria-hidden="true">✓</span> Answers stay on this device
       </p>
+      <p className="fine" data-testid="safety-evidence">
+        <strong>Why we ask:</strong> photosensitive seizure risk is a hard design constraint in the
+        consensus literature, and multidomain trials report more adverse events in exercise arms.{" "}
+        <a href="https://pubmed.ncbi.nlm.nih.gov/16146438/" target="_blank" rel="noreferrer">
+          Epilepsy Foundation consensus
+        </a>{" "}
+        <span className="pmid">PMID 16146438</span> ·{" "}
+        <a href="https://pubmed.ncbi.nlm.nih.gov/25771249/" target="_blank" rel="noreferrer">
+          FINGER trial
+        </a>{" "}
+        <span className="pmid">PMID 25771249</span>
+      </p>
 
       <form
         className="card form"

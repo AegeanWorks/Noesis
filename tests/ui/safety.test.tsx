@@ -34,6 +34,15 @@ describe("SafetyScreen", () => {
     expect(loadSafety()?.consent).toBe(true);
   });
 
+  it("links the safety questions to their corpus sources", () => {
+    render(<SafetyScreen onComplete={vi.fn()} />);
+    const note = screen.getByTestId("safety-evidence");
+    expect(note.textContent).toMatch(/photosensitive/i);
+    const links = Array.from(note.querySelectorAll("a")).map((a) => a.getAttribute("href"));
+    expect(links).toContain("https://pubmed.ncbi.nlm.nih.gov/16146438/");
+    expect(links).toContain("https://pubmed.ncbi.nlm.nih.gov/25771249/");
+  });
+
   it("shows the photosensitivity warning when needed", () => {
     const onComplete = vi.fn();
     render(<SafetyScreen onComplete={onComplete} />);

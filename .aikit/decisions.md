@@ -509,6 +509,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add a short, PubMed-linked citation to the far-check card stating that no convincing far transfer was found in that meta-analysis, add R80, and pin the wording and link with a failing-first UI test.
 - **Consequences**: No evidence-table or count changes. The app's most prominent transfer caveat becomes click-through verifiable, and the test guards against the citation drifting away.
 
+### ADR-072: Linked Safety Evidence on Onboarding
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The safety screen asked about seizure history and clinician-advised exercise restrictions but gave no reason for either question. Both justifications are already in the corpus: the Epilepsy Foundation photosensitivity consensus (PMID 16146438) and FINGER's adverse-event profile (PMID 25771249).
+- **Decision**: Add a short, two-link "why we ask" note to the safety screen, add R81, and pin both PubMed links with a failing-first UI test.
+- **Consequences**: No evidence-table or count changes. The safety posture becomes auditable from the onboarding screen while remaining a design constraint, not medical advice.
+
 
 
 
