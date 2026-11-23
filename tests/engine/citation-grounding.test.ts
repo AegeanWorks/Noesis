@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync, statSync } from "node:fs";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { MECHANIC_META } from "../../src/engine/evidence";
 
 const TABLE = new URL(
@@ -24,6 +26,29 @@ function screenPmids(): string[] {
   const source = readFileSync(EVIDENCE_SCREEN, "utf-8");
   const found = source.match(/\b([1-4]\d{7})\b/g) ?? [];
   return [...new Set(found)];
+}
+
+function uiSourceFiles(dir: URL): string[] {
+  const files: string[] = [];
+  for (const entry of readdirSync(dir)) {
+    const path = join(fileURLToPath(dir), entry);
+    if (statSync(path).isDirectory()) {
+      files.push(...uiSourceFiles(new URL(`./${entry}/`, dir)));
+    } else if (/\.(ts|tsx)$/.test(entry)) {
+      files.push(path);
+    }
+  }
+  return files;
+}
+
+function allUiPmids(): string[] {
+  const found = new Set<string>();
+  for (const file of uiSourceFiles(new URL("../../src/ui/", import.meta.url))) {
+    for (const pmid of readFileSync(file, "utf-8").match(/\b([1-4]\d{7})\b/g) ?? []) {
+      found.add(pmid);
+    }
+  }
+  return [...found];
 }
 
 function tableYears(): Map<string, number> {
@@ -66,6 +91,14 @@ describe("mechanic citation grounding (R4/R6)", () => {
   it("resolves every hardcoded EvidenceScreen PMID to the corpus or the allowlist", () => {
     const known = tablePmids();
     const dangling = screenPmids().filter(
+      (pmid) => !known.has(pmid) && !NARRATIVE_ALLOWLIST.has(pmid),
+    );
+    expect(dangling).toEqual([]);
+  });
+
+  it("resolves every PMID hardcoded in any UI source to the corpus", () => {
+    const known = tablePmids();
+    const dangling = allUiPmids().filter(
       (pmid) => !known.has(pmid) && !NARRATIVE_ALLOWLIST.has(pmid),
     );
     expect(dangling).toEqual([]);

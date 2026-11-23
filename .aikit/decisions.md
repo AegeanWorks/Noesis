@@ -747,6 +747,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add both as context records and one new claim-boundary row stating that Noesis makes no dementia-prevention or diagnostic claim and is not a validated screening tool, with R114.
 - **Consequences**: The review moves to 185 records and 404 outcomes (revision v2.37), D7 residuals fall to 950, and the app's clinical limits become explicit rather than implied.
 
+### ADR-106: Project-Wide Citation Grounding
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The citation-grounding test scanned only EvidenceScreen; hardcoded PMIDs in Home, Settings, Results, Menu and ResearchDataPanel could drift without any gate noticing.
+- **Decision**: Extend the grounding test to every `.ts`/`.tsx` source under `src/ui`, reusing the corpus lookup and narrative allowlist, with R115.
+- **Consequences**: All 75 in-app citations are now covered by a single invariant; no app behaviour, claim level or evidence count changes.
+
 
 
 
