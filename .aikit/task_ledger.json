@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-dropout-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795410999.1686537,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795418199.1686537,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795411155.6655185,
+    "completed_head": "a0cd70669b798b6998eee012e274dfaa3c5c4d36",
+    "completed_tree": "e102e9187b72341ded71b37b9af42b387a79834b"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Hawes 2022 spatial-training meta-analysis as context and cite it in Mental Rotation",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and supports the no-academic-claim boundary.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "Mental Rotation lacks the pooled math-transfer estimate and the computerized-versus-concrete caveat from Hawes 2022."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "2e26bc94f3ecce4b6132273e8f628afdb12bc3b7d4cdfff0a4b6c261e90c3c7e",
-      "status": "in_progress",
-      "task_id": "noesis-spatial-training-evidence",
-      "timestamp": 1795404406.088885,
-      "timestamp_str": "2026-11-23 06:26:46",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-dropout-evidence' completed successfully.",
+      "head": "a0cd70669b798b6998eee012e274dfaa3c5c4d36",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-dropout-evidence",
+      "timestamp": 1795411155.7512054,
+      "timestamp_str": "2026-11-23 08:19:15"
     }
   ]
 }

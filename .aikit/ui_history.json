@@ -1050,5 +1050,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "b63808462a7367b530a2f0f6ee9199ab90ded39bca233deb59f5f466527e0e02",
     "baseline_digest": "b63808462a7367b530a2f0f6ee9199ab90ded39bca233deb59f5f466527e0e02"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the adherence card in Edge: both Li 2024 and Clausen 2019 links render, corpus count 158, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795411035.120436,
+    "finished_at": 1795411154.993905,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "f02c50a78d9644506c2e63a5282fbd5c378a7aed784f604537584c0dfce8eccf",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795411154.9939072
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Snapshot counts follow the evidence table"
+      },
+      {
+        "path": "tests/ui/practice-menu.test.tsx",
+        "reason": "Adherence citation test"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "f02c50a78d9644506c2e63a5282fbd5c378a7aed784f604537584c0dfce8eccf",
+    "baseline_digest": "f02c50a78d9644506c2e63a5282fbd5c378a7aed784f604537584c0dfce8eccf"
   }
 ]
