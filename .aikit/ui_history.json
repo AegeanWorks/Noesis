@@ -1733,5 +1733,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "7ab8e66883dd458bf1d2f3aa04b4e93938318c0419b0f4ecb58334295252fdbb",
     "baseline_digest": "7ab8e66883dd458bf1d2f3aa04b4e93938318c0419b0f4ecb58334295252fdbb"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Played a Digit Span focus session in Edge then opened Menu/History: Digit Span trend card and level row render, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795431197.122761,
+    "finished_at": 1795431246.7633092,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "4d40eda118a091a515cfbb35b1212e349f6d32acdcae4fb1e481b65d5f4d73b2",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795431246.7633128
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/ui/practice-menu.test.tsx",
+        "reason": "Digit Span trend card and briefing line tests"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "4d40eda118a091a515cfbb35b1212e349f6d32acdcae4fb1e481b65d5f4d73b2",
+    "baseline_digest": "4d40eda118a091a515cfbb35b1212e349f6d32acdcae4fb1e481b65d5f4d73b2"
   }
 ]
