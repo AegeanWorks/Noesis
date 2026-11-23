@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-citation-grounding-all-ui",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795432404.992067,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795439604.992067,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795432414.0906518,
+    "completed_head": "38921e621d60ca7b8ee1d6c111f800a12e8ccedf",
+    "completed_tree": "e8c5f5e5bed1a8d93d20d4c2c401050ab8f6827f"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Digit Span as an experimental verbal working-memory focus test with indirect, explicitly bounded evidence",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a genuinely new, safe, static game; broad WM meta-analyses support task-practice framing without transfer claims.",
-        "mitigation": "Mirror the spatial engine, keep no flashing or audio, update every mechanic list, add failing-first tests and verify gameplay in Edge.",
-        "risks": "contract: new MechanicId touches types, schema, engine dispatch, UI stage, adaptive storage and script/test mechanic lists; dependency: none; concurrency: none; state: no evidence-count changes",
-        "why": "Verbal digit span is a distinct working-memory construct not covered by N-back, Corsi or paired associates, and the app could offer another claim-bounded focus test."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "9490be7475af0765356ac7f47e8d94daa0ba4c1db75efae3e95166c2f4e8e640",
-      "status": "in_progress",
-      "task_id": "noesis-digit-span-game",
-      "timestamp": 1795428212.7697656,
-      "timestamp_str": "2026-11-23 13:03:32",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-citation-grounding-all-ui' completed successfully.",
+      "head": "38921e621d60ca7b8ee1d6c111f800a12e8ccedf",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-citation-grounding-all-ui",
+      "timestamp": 1795432414.1524754,
+      "timestamp_str": "2026-11-23 14:13:34"
     }
   ]
 }
