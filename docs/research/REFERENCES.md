@@ -224,3 +224,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Game factors (2026-11-23 targeted update)
 
 - A game-factors approach to cognitive benefits from video-game training: A meta-analysis *PLOS ONE*. 2023. PMID: [37531408](https://pubmed.ncbi.nlm.nih.gov/37531408/). DOI: [10.1371/journal.pone.0285925](https://doi.org/10.1371/journal.pone.0285925).
+
+## Spatial training (2026-11-23 targeted update)
+
+- Effects of spatial training on mathematics performance: A meta-analysis *Developmental Psychology*. 2022. PMID: [35073120](https://pubmed.ncbi.nlm.nih.gov/35073120/). DOI: [10.1037/dev0001281](https://doi.org/10.1037/dev0001281).

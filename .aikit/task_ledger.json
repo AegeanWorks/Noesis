@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-gamefactors-evidence",
+    "task_id": "noesis-spatial-training-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795403794.3605523,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795404786.4707808,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795410994.3605523,
+    "lease_until": 1795411986.4707808,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795403838.4024954,
-    "completed_head": "6b98e606569153fa59c60cba95e2b749562022ec",
-    "completed_tree": "1f367c810a86c5dc2b26402ce318cf0f426fba18"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-data-reuse-citations",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 144/340 records, 467 tests, gates 7/7, FAIR link and count reviewed in Edge, ADR-073",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795397922.271534,
-      "timestamp_str": "2026-11-23 04:38:42",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-data-reuse-citations",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-data-reuse-citations' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795397962.2111058,
-      "timestamp_str": "2026-11-23 04:39:22",
-      "agent": "opencode:hy4-flash-free",
-      "head": "502152ff73e0a7ef3fca9a2d4dbbacad92521a27",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-fartransfer-citation",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-spatial-training-evidence",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add Hawes 2022 spatial-training meta-analysis as context and cite it in Mental Rotation",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795404406.088885,
+      "timestamp_str": "2026-11-23 06:26:46",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "Mental Rotation lacks the pooled math-transfer estimate and the computerized-versus-concrete caveat from Hawes 2022.",
+        "benefits": "Resolves another narrative-only citation and supports the no-academic-claim boundary.",
+        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI."
+      },
+      "plan_digest": "2e26bc94f3ecce4b6132273e8f628afdb12bc3b7d4cdfff0a4b6c261e90c3c7e",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-spatial-training-evidence",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 151/351 records, 468 tests, gates 7/7, ADR-080",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795404786.4707808,
+      "timestamp_str": "2026-11-23 06:33:06",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

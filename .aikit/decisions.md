@@ -565,6 +565,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a fifth Motivation-safeguards citation, with R88; keep all game claims at task-practice level rather than genre promises.
 - **Consequences**: The review moves to 150 records and 349 outcomes (revision v2.15) and the game-design rationale carries both the pooled effect and its feature-level caveat.
 
+### ADR-080: Spatial-Training Citation on Mental Rotation
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Mental Rotation cited Uttal 2013 only. Hawes et al. 2022 (PMID 35073120) is the larger spatial-training meta-analysis, reporting spatial-thinking g=0.49, maths transfer g=0.28, and that concrete materials outperformed computerized training — directly relevant to a screen-based game.
+- **Decision**: Add Hawes 2022 as a context record and a second Mental Rotation citation, with R89; keep the brief's no-academic-claim boundary.
+- **Consequences**: The review moves to 151 records and 351 outcomes (revision v2.16) and Mental Rotation's caveat rests on two pooled syntheses with an explicit modality limitation.
+
 
 
 

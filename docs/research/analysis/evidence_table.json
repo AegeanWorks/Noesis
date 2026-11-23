@@ -9073,6 +9073,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the game mechanics: small overall effects and feature-level (not genre-level) prediction justify claim-bounded games rather than genre-based promises."
+  },
+  {
+   "pmid": "35073120",
+   "doi": "10.1037/dev0001281",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Developmental Psychology",
+   "title": "Effects of spatial training on mathematics performance: A meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children",
+    "adults"
+   ],
+   "k": 29,
+   "n": 3765,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "academic",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.28,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "29 controlled studies, N=3765, k=89; math transfer g=0.28 (SE=0.07), larger for near outcomes"
+    },
+    {
+     "domain": "visuospatial_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.49,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Spatial thinking improved g=0.49 (SE=0.09); concrete manipulatives outperformed computerized training"
+    }
+   ],
+   "findings": [
+    "Spatial training improves spatial thinking and yields smaller math transfer",
+    "Concrete materials beat computerized paradigms; near transfer exceeds distal transfer"
+   ],
+   "limitations": [
+    "Mechanisms of transfer poorly understood",
+    "Computerized training was the weaker paradigm"
+   ],
+   "flags": [
+    "transfer_gradient",
+    "modality_dependent"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for Mental Rotation: a screen-based spatial game can practice spatial thinking but has no academic claim, especially given weaker computerized effects."
   }
  ]
 }

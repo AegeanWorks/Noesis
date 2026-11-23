@@ -191,6 +191,7 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     citations: [
       { pmid: "22663761", label: "Spatial skills training meta-analysis (2013)" },
+      { pmid: "35073120", label: "Spatial training and mathematics meta-analysis (2022)" },
     ],
     safety: "Static block figures; no flashing.",
   },

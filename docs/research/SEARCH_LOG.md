@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 150 |
-| Outcomes | 349 |
+| Records | 151 |
+| Outcomes | 351 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 95 |
+| Systematic reviews/meta-analyses | 96 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 26 |
 | RCTs | 9 |
 | Umbrella reviews | 2 |
-| DOI verified | 139 |
+| DOI verified | 140 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 64 |
+| cct | 65 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 139 |
+| DOI verified | 140 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **150** |
+| **Total** | **151** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -245,6 +245,8 @@ A 2026-11-23 JOL-reactivity update resolved Double et al. 2018 (PMID 29161973, *
 A 2026-11-23 motivation update resolved Buyle et al. 2022 (PMID 35989930, *Frontiers in Neurology*; DOI 10.3389/fneur.2022.903673) from narrative-only to a context record, verified via E-utilities `efetch`. In exergame fall-prevention trials, COM-B motivation and capability components influenced outcomes, but a game format alone may not improve fall risk or cognitive performance. The Evidence screen's Motivation safeguards now cite it alongside the gaming-disorder sources (ADR-078). D7 is unchanged; the review is now 149 records and 347 outcomes, revision v2.14.
 
 A 2026-11-23 game-factor update resolved Smith & Basak 2023 (PMID 37531408, *PLOS ONE*; DOI 10.1371/journal.pone.0285925) from narrative-only to a context record, verified via E-utilities `efetch`. Sixty-three video-game training studies (118 investigations, N=2,079) gave a small overall cognitive gain (g=0.25), with transfer to attention/perception and higher-order cognition; individual gameplay features, not genre labels, predicted outcomes. The Motivation safeguards now cite it beside the other game-design sources (ADR-079). D7 is unchanged; the review is now 150 records and 349 outcomes, revision v2.15.
+
+A 2026-11-23 spatial-training update resolved Hawes et al. 2022 (PMID 35073120, *Developmental Psychology*; DOI 10.1037/dev0001281) from narrative-only to a context record, verified via E-utilities `efetch`. Twenty-nine controlled studies (N=3,765, k=89) found spatial-thinking gains g=0.49 and smaller mathematics transfer g=0.28, with concrete materials outperforming computerized training. The Mental Rotation brief now cites both this and Uttal 2013, keeping its no-academic-claim boundary (ADR-080). D7 is unchanged; the review is now 151 records and 351 outcomes, revision v2.16.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
