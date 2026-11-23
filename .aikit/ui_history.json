@@ -2601,5 +2601,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "f7b6adf4c6854ec04b03adf865f6d32c10a4ddc2a6c2d26d4829ce060c4a0b28",
     "baseline_digest": "f7b6adf4c6854ec04b03adf865f6d32c10a4ddc2a6c2d26d4829ce060c4a0b28"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: commercial-game boundary citation renders, corpus count 200, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795468980.471484,
+    "finished_at": 1795469064.6336498,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "49837e7ce11dce666d709ba99b457a82962f90b47221afb3c3d5e856ef92b5f7",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795469064.633653
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "49837e7ce11dce666d709ba99b457a82962f90b47221afb3c3d5e856ef92b5f7",
+    "baseline_digest": "49837e7ce11dce666d709ba99b457a82962f90b47221afb3c3d5e856ef92b5f7"
   }
 ]

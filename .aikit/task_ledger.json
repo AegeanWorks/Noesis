@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-commercial-games-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795468957.3373618,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795476157.3373618,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795469065.754151,
+    "completed_head": "f8448bf13e85e88c6eba84c10cba7b99ba2d9805",
+    "completed_tree": "c7a3fd2dc36e1c104c085629802cefb6c17ac612"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Roheger 2021 prognostic-factor review as context and cite it on the no-response-prediction boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds systematic-review support to an existing honesty boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2021 systematic review finds prognostic factors for training response too inconsistent for conclusions, directly supporting the app's refusal to personalise by baseline profile."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "51c62de284b2169220ed1ef5cfb9028e8f4ebedf557cbf21fa75b168884a56ab",
-      "status": "in_progress",
-      "task_id": "noesis-prognostic-evidence",
-      "timestamp": 1795459023.2502537,
-      "timestamp_str": "2026-11-23 21:37:03",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-commercial-games-evidence' completed successfully.",
+      "head": "f8448bf13e85e88c6eba84c10cba7b99ba2d9805",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-commercial-games-evidence",
+      "timestamp": 1795469065.9056606,
+      "timestamp_str": "2026-11-24 00:24:25"
     }
   ]
 }
