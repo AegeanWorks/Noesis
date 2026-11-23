@@ -390,3 +390,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Neural mechanism boundary evidence (2026-11-24 targeted update)
 
 - Effects of neurofeedback training on performance in laboratory tasks: A systematic review *International Journal of Psychophysiology*. 2023. PMID: [37148977](https://pubmed.ncbi.nlm.nih.gov/37148977/). DOI: [10.1016/j.ijpsycho.2023.04.005](https://doi.org/10.1016/j.ijpsycho.2023.04.005).
+
+## Child working-memory boundary evidence (2026-11-24 targeted update)
+
+- Efficacy of cogmed working memory training program in improving working memory in school-age children with and without neurological insults or disorders: A meta-analysis *Applied Neuropsychology: Child*. 2022. PMID: [34085876](https://pubmed.ncbi.nlm.nih.gov/34085876/). DOI: [10.1080/21622965.2021.1920943](https://doi.org/10.1080/21622965.2021.1920943).

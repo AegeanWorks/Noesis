@@ -11963,6 +11963,75 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the mechanism-vs-benefit note: even direct neurofeedback of neural signals rarely improves task performance, so imaging markers alone are not a benefit claim."
+  },
+  {
+   "pmid": "34085876",
+   "doi": "10.1080/21622965.2021.1920943",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Applied Neuropsychology: Child",
+   "title": "Efficacy of cogmed working memory training program in improving working memory in school-age children with and without neurological insults or disorders: A meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children",
+    "adolescents"
+   ],
+   "k": 11,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "11 Cogmed studies in school-age children: medium near-transfer effects on verbal and visuospatial working memory post-intervention"
+    },
+    {
+     "domain": "verbal_memory",
+     "transfer": "near",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Verbal working-memory gain persisted at 3-6 months; visuospatial gain did not"
+    },
+    {
+     "domain": "academic",
+     "transfer": "far",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "No generalization to attention, executive function or academic achievement"
+    }
+   ],
+   "findings": [
+    "Cogmed improved trained working-memory tasks in children",
+    "No far transfer to attention, executive function or academics"
+   ],
+   "limitations": [
+    "One commercial program",
+    "Published and unpublished data mixed"
+   ],
+   "flags": [
+    "commercial_program",
+    "near_transfer_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the child/academic boundary: even in children, working-memory training gains stayed near and did not reach academic outcomes."
   }
  ]
 }

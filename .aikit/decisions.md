@@ -957,6 +957,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Chiasson et al. 2023 as a context record and a third citation on that note, with R144; bump the review version to v2.53.
 - **Consequences**: The review moves to 202 records and 445 outcomes (revision v2.53), D7 residuals fall to 933, and the distinction between neural markers and cognitive benefit is reinforced.
 
+### ADR-136: Second Child Meta-Analysis on the Academic Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-child-academic-gain boundary cited one child meta-analysis; a verified 2022 Cogmed meta-analysis adds near-transfer-without-far-transfer evidence.
+- **Decision**: Add Bharadwaj et al. 2022 as a context record and a second citation on that boundary, with R145; bump the review version to v2.54.
+- **Consequences**: The review moves to 203 records and 448 outcomes (revision v2.54), D7 residuals fall to 932, and the child boundary now rests on two independent meta-analyses.
+
 
 
 
