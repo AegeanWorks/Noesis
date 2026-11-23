@@ -838,6 +838,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add `digit-resume-proof.mjs`, adapted from the Spatial Span proof with forward/backward answer logic, covering snapshot persistence, Resume session, restored trial phase and completion, with R127.
 - **Consequences**: The proof passes against a built app with `?ai` enabled; all ten games now have repeatable resume coverage.
 
+### ADR-119: Gameplay Proofs for Search and Symbol
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Visual Search and Digit Symbol were the only two games without committed browser gameplay proofs; their verification was ad hoc.
+- **Decision**: Add `search-proof.mjs` and `symbol-proof.mjs`, adapted from the Digit Span proof with each mechanic's answer rule (target index and correct digit), covering menu card, briefing, three blocks, metrics and screenshots, with R128.
+- **Consequences**: Both proofs pass against a built app with `?ai` enabled and no console errors; every game now has repeatable gameplay coverage.
+
 
 
 

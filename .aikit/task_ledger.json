@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-digit-resume-proof",
+    "task_id": "noesis-search-symbol-proofs",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795452088.0549345,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795452647.2039135,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795459288.0549345,
+    "lease_until": 1795459847.2039135,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795452103.0110676,
-    "completed_head": "20a70f3e8e6cf507eacebf7cacb4b7523fa5b348",
-    "completed_tree": "94fb7c3d9992b407246ced5563336ea096afbe4c"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 188/410 records, 485 tests, gates 7/7, mechanism note verified in Edge, ADR-114",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-neural-mechanism-evidence",
-      "timestamp": 1795435394.148551,
-      "timestamp_str": "2026-11-23 15:03:14",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-neural-mechanism-evidence' completed successfully.",
-      "head": "7f826ba6a38bffc3e0e90b377e26b0060df6f209",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-neural-mechanism-evidence",
-      "timestamp": 1795435442.1560094,
-      "timestamp_str": "2026-11-23 15:04:02"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: update the trial dossier and design doc to list all ten experimental focus tests",
@@ -409,6 +371,48 @@
       "task_id": "noesis-digit-resume-proof",
       "timestamp": 1795452103.3201356,
       "timestamp_str": "2026-11-23 19:41:43"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add committed browser gameplay proof scripts for Visual Search and Digit Symbol, the last two games without them",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "All ten games get the same dogfood coverage: menu card, briefing, played three-block session, metrics and screenshots.",
+        "mitigation": "Adapt the digit proof with each mechanic's answer logic, run both to completion, regenerate map and commit.",
+        "risks": "contract: two new proof scripts and regenerated codebase map; dependency: playwright-core, local server with ?ai; concurrency: none; state: no app or corpus changes",
+        "why": "Search and Symbol are the only focus tests without repeatable gameplay proofs; their verification was ad hoc."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "3381d3dd3eef5b12aef747e3966e7b62bde3d20343b638988690e79e5046aec3",
+      "status": "in_progress",
+      "task_id": "noesis-search-symbol-proofs",
+      "timestamp": 1795452329.0664554,
+      "timestamp_str": "2026-11-23 19:45:29",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 190/415 records unchanged, 485 tests, gates 7/7, both gameplay proofs pass in Edge, ADR-119",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-search-symbol-proofs",
+      "timestamp": 1795452647.2039137,
+      "timestamp_str": "2026-11-23 19:50:47",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
