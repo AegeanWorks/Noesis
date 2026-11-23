@@ -831,6 +831,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Sala & Gobet 2017 as a context record and a claim boundary stating that Noesis makes no child-development or academic claim, with R126; bump the review version to v2.41.
 - **Consequences**: The review moves to 190 records and 415 outcomes (revision v2.41), D7 residuals fall to 945, and the app's age-related limits become explicit.
 
+### ADR-118: Digit Span Resume Proof
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Digit Span was the only focus test without a committed mid-session reload proof, so its resume behavior was verified only with a throwaway script.
+- **Decision**: Add `digit-resume-proof.mjs`, adapted from the Spatial Span proof with forward/backward answer logic, covering snapshot persistence, Resume session, restored trial phase and completion, with R127.
+- **Consequences**: The proof passes against a built app with `?ai` enabled; all ten games now have repeatable resume coverage.
+
 
 
 
