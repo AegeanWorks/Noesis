@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-ufov-training-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795418464.3536303,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795425664.3536303,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795418516.658292,
+    "completed_head": "7578df757000e829ff8f79e89ea0a073437c96ad",
+    "completed_tree": "fffd3977dfc5cb1c64da18e4e5ae828b131ed966"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add de Buisonje 2022 incentive RCT as context and cite it in Motivation safeguards",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and grounds the cosmetic-reward and gain-framing design.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "Motivation safeguards forbid real stakes and loss framing; this RCT found deposit contracts had lower uptake and loss frames underperformed gain frames."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "35bf20d0eb9dcd3c20e54a3b8ab153ca40e22c2896a15155371f8bd0d52524b4",
-      "status": "in_progress",
-      "task_id": "noesis-incentive-framing-evidence",
-      "timestamp": 1795408396.1597214,
-      "timestamp_str": "2026-11-23 07:33:16",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-ufov-training-evidence' completed successfully.",
+      "head": "7578df757000e829ff8f79e89ea0a073437c96ad",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-ufov-training-evidence",
+      "timestamp": 1795418516.7272184,
+      "timestamp_str": "2026-11-23 10:21:56"
     }
   ]
 }

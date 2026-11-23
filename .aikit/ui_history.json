@@ -1202,5 +1202,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "6cc3a5b3997db91c6b9a8836641d9e2a7fd88b9392f27124af955db610b6e579",
     "baseline_digest": "6cc3a5b3997db91c6b9a8836641d9e2a7fd88b9392f27124af955db610b6e579"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the running app in Edge: corpus count 162, UFOV training citation resolves in Visual Search, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795418478.1396093,
+    "finished_at": 1795418516.2594278,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "19d07046cc946eb77d4397cad9069b4c5d2421bdb44383390d29b4871977d829",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795418516.25943
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Snapshot counts follow the evidence table"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "19d07046cc946eb77d4397cad9069b4c5d2421bdb44383390d29b4871977d829",
+    "baseline_digest": "19d07046cc946eb77d4397cad9069b4c5d2421bdb44383390d29b4871977d829"
   }
 ]
