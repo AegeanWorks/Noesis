@@ -182,6 +182,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R92 | Visual Search cites the neural training study explicitly as a mechanism finding, not evidence of user benefit. | Bueichekú 2019 found task-relevant resting-connectivity change after short training with no whole-network or everyday outcome. | 30859709; ADR-083 |
 | R93 | Motivation mode uses cosmetic, capped rewards with gain framing and no real stakes; the safeguards cite the incentive-design RCT for the uptake and framing findings. | de Buisonjé 2022 found deposit contracts cut uptake and loss frames underperformed gain frames. | 36201384; ADR-084 |
 | R94 | Motivation safeguards also cite the autonomy and reward-learning sources: rewards stay conspicuous and switchable, and never change scores, content or claims. | Faraoni 2023 links unperceived persuasion to loss of autonomy; Miendlarzewska 2016 shows reward can bias what is learned. | 37469930; 26657967; ADR-085 |
+| R95 | The adherence card cites a second source showing that early endings are common in home-based training and that completers still report liking it. | Clausen 2019 found 38.5% and 57.1% dropout in two pilot arms; the app records early endings without judgement. | 30881315; ADR-086 |
 
 ---
 

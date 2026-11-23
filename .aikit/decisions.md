@@ -607,6 +607,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add both as context records and as Motivation-safeguards citations, with R94; keep the existing reward behaviour unchanged.
 - **Consequences**: The review moves to 157 records and 360 outcomes (revision v2.21) and the autonomy posture is documented with both a rights-based argument and a reward-learning mechanism.
 
+### ADR-086: Dropout Feasibility Citation on the Adherence Card
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Clausen et al. 2019 (PMID 30881315) was narrative-only in ADHERENCE_LOGGING.md and DATA_COLLECTION_AND_CONSENT.md and reports 38.5% and 57.1% dropout in two home-based pilot training arms, with completers liking the programme and no generalisation to standard tests.
+- **Decision**: Add it as a context record and a second adherence-card citation, with R95; keep early endings logged without judgement.
+- **Consequences**: The review moves to 158 records and 362 outcomes (revision v2.22) and the non-shaming adherence copy is backed by a feasibility result rather than only by design intention.
+
 
 
 

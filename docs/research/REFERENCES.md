@@ -249,3 +249,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 
 - Persuasive Technology and computational manipulation: hypernudging out of mental self-determination *Frontiers in Artificial Intelligence*. 2023. PMID: [37469930](https://pubmed.ncbi.nlm.nih.gov/37469930/). DOI: [10.3389/frai.2023.1216340](https://doi.org/10.3389/frai.2023.1216340).
 - Influence of reward motivation on human declarative memory *Neuroscience & Biobehavioral Reviews*. 2016. PMID: [26657967](https://pubmed.ncbi.nlm.nih.gov/26657967/). DOI: [10.1016/j.neubiorev.2015.11.015](https://doi.org/10.1016/j.neubiorev.2015.11.015).
+
+## Home-based training feasibility (2026-11-23 targeted update)
+
+- Computer-Based Executive Function Training for Combat Veterans With PTSD: A Pilot Clinical Trial Assessing Feasibility and Predictors of Dropout *Frontiers in Psychiatry*. 2019. PMID: [30881315](https://pubmed.ncbi.nlm.nih.gov/30881315/). DOI: [10.3389/fpsyt.2019.00062](https://doi.org/10.3389/fpsyt.2019.00062).

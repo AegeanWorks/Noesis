@@ -307,6 +307,7 @@ describe("PracticeMenuScreen", () => {
     expect(evidence.querySelector("a")?.getAttribute("href")).toBe(
       "https://pubmed.ncbi.nlm.nih.gov/38266127/",
     );
+    expect(evidence.querySelector('a[href*="30881315"]')).toBeTruthy();
   });
 
   it("shows an empty history state before the first session", () => {

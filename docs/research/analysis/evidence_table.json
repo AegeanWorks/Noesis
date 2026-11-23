@@ -9436,6 +9436,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for Motivation mode: cosmetic rewards can still bias what is learned, so they never change scores, content or claims."
+  },
+  {
+   "pmid": "30881315",
+   "doi": "10.3389/fpsyt.2019.00062",
+   "doi_status": "verified",
+   "year": 2019,
+   "journal": "Frontiers in Psychiatry",
+   "title": "Computer-Based Executive Function Training for Combat Veterans With PTSD: A Pilot Clinical Trial Assessing Feasibility and Predictors of Dropout",
+   "modality": "cct",
+   "design": "rct",
+   "populations": [
+    "clinical:ptsd",
+    "adults"
+   ],
+   "k": 1,
+   "n": 40,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "adherence",
+     "transfer": "na",
+     "measure": "dropout_pct",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Home-based training dropout 38.5% (executive function) and 57.1% (word-game placebo) over six weeks; completers reported liking the programme"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Improved on trained tasks but not traditional neuropsychological assessments"
+    }
+   ],
+   "findings": [
+    "Dropout is common in home-based training even in supervised trials",
+    "Trained-task gains did not generalise to standard tests"
+   ],
+   "limitations": [
+    "Pilot with 20 patients and 20 controls",
+    "Clinical PTSD population"
+   ],
+   "flags": [
+    "attrition",
+    "small_trials",
+    "clinical_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the adherence card: early endings are common and non-judgemental logging is appropriate; the app makes no treatment claim."
   }
  ]
 }

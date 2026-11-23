@@ -1163,7 +1163,15 @@ function HistoryPanel({
           >
             Li et al. 2024
           </a>{" "}
-          <span className="pmid">PMID 38266127</span>
+          <span className="pmid">PMID 38266127</span>{" "}
+          <a
+            href="https://pubmed.ncbi.nlm.nih.gov/30881315/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Clausen et al. 2019
+          </a>{" "}
+          <span className="pmid">PMID 30881315</span>
         </p>
       </section>
 
