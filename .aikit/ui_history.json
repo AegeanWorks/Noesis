@@ -1514,5 +1514,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "f190a5740436739addfc20e0fe3df962283c667f26719c0f93ab3fd7346278ae",
     "baseline_digest": "f190a5740436739addfc20e0fe3df962283c667f26719c0f93ab3fd7346278ae"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: task-specific transfer citations and near-miss safeguard render, corpus count 177, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795427023.8386807,
+    "finished_at": 1795427056.759169,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "eefda097f7ea8d937377e44ab7fba2d1bedea16763036a387a2fb168f26193f4",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795427056.7591722
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Transfer citation tests and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Transfer citation tests and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "eefda097f7ea8d937377e44ab7fba2d1bedea16763036a387a2fb168f26193f4",
+    "baseline_digest": "eefda097f7ea8d937377e44ab7fba2d1bedea16763036a387a2fb168f26193f4"
   }
 ]

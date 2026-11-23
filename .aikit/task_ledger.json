@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-transfer-mechanism-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795427009.099132,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795434209.099132,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795427057.2118921,
+    "completed_head": "1e7798d570079f5164ccedc7c2480a24bc2fc0f2",
+    "completed_tree": "ae421db2eb1009e5b6d8a791886ff4b0cfe8a434"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Nguyen 2022 commercial brain-training meta-analysis as context and list it as a claim boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and strengthens the central no-general-gain boundary with publication-bias-adjusted results.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The app refuses general memory, cognition and everyday-function claims; this 43-study meta-analysis is the direct pooled evidence and was narrative-only."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "26d31af3aa69c7af9a975637b222eaa9a0f3572af8b06fea46c65e6341f9d5a1",
-      "status": "in_progress",
-      "task_id": "noesis-commercial-training-evidence",
-      "timestamp": 1795420064.1604705,
-      "timestamp_str": "2026-11-23 10:47:44",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-transfer-mechanism-evidence' completed successfully.",
+      "head": "1e7798d570079f5164ccedc7c2480a24bc2fc0f2",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-transfer-mechanism-evidence",
+      "timestamp": 1795427057.2763016,
+      "timestamp_str": "2026-11-23 12:44:17"
     }
   ]
 }
