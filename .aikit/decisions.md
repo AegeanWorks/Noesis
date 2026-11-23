@@ -894,6 +894,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Webb et al. 2018 as a context record and a third citation on the Results-screen rationale, with R135; bump the review version to v2.44.
 - **Consequences**: The review moves to 193 records and 423 outcomes (revision v2.44), D7 residuals fall to 942, and the app's component-level measurement stance gains taxonomy-level support.
 
+### ADR-127: Prognostic Review on the Response-Prediction Boundary
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The no-response-prediction boundary already cited an expectancy RCT; a verified 2021 systematic review adds direct evidence that no baseline profile reliably predicts training response.
+- **Decision**: Add Roheger et al. 2021 as a context record and a second citation on that boundary, with R136; bump the review version to v2.45.
+- **Consequences**: The review moves to 194 records and 425 outcomes (revision v2.45), D7 residuals fall to 941, and the boundary now rests on both an RCT and a systematic review.
+
 
 
 

@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 193 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 194 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -327,6 +327,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/38230719/"
               label="No reliable prediction of training response from baseline expectancy"
               pmid="38230719"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/33986652/"
+              label="No validated baseline profile for assigning training"
+              pmid="33986652"
             />
           </li>
           <li>

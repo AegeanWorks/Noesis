@@ -11397,6 +11397,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for per-block reporting: because construct labels change conclusions, Noesis keeps single-construct focus tests and reports blocks separately instead of a composite."
+  },
+  {
+   "pmid": "33986652",
+   "doi": "10.3389/fnhum.2021.636355",
+   "doi_status": "verified",
+   "year": 2021,
+   "journal": "Frontiers in Human Neuroscience",
+   "title": "Prognostic Factors and Models for Changes in Cognitive Performance After Multi-Domain Cognitive Training in Healthy Older Adults: A Systematic Review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 23,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "na",
+     "measure": "prognostic_review",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "23 prognostic studies: high heterogeneity in interventions, predictors, outcomes and statistical approaches"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "na",
+     "measure": "predictor_narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Age and baseline neuropsychological performance were the most studied predictors but produced inconsistent results"
+    }
+   ],
+   "findings": [
+    "Prognostic evidence after multi-domain training is too rare and inconsistent for clear conclusions",
+    "No validated baseline profile for assigning users to training"
+   ],
+   "limitations": [
+    "Statistical shortcomings and low reporting quality",
+    "Healthy older adults with multi-domain interventions only"
+   ],
+   "flags": [
+    "no_predictor",
+    "heterogeneous"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-response-prediction boundary: systematic review evidence does not support personalising assignment by baseline age or performance."
   }
  ]
 }

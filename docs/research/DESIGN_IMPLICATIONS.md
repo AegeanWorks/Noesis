@@ -226,6 +226,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R133 | The hero decoration stays inside its card on narrow screens and interactive controls (buttons, checkboxes, radios, selects, summaries) meet the 44px touch target. | The audit's three clipped cards and eleven overflow nodes fell to zero clipped and two intentional scrollable chip rows; all remaining small-target flags are inline prose links. | ADR-124 |
 | R134 | The no-mood-treatment boundary cites a 2026 RCT meta-analysis showing a small, non-durable symptom effect in clinical samples. | Bai 2026 found post-training g=0.20 that was not maintained at follow-up, with uncertain clinical utility. | 41765936; ADR-125 |
 | R135 | The no-single-score rationale cites an executive-function taxonomy reanalysis showing that construct labels change conclusions. | Webb 2018 found common classifications conflate executive function with fluid reasoning and retrieval fluency, and attention with perception. | 29721646; ADR-126 |
+| R136 | The no-response-prediction boundary cites a systematic review finding inconsistent prognostic factors after training. | Roheger 2021 found age and baseline performance inconsistent across 23 studies and no validated profile for assigning users. | 33986652; ADR-127 |
 
 ---
 
