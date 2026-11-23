@@ -1698,5 +1698,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "07556be6093a7818a560a6857364240b41fd25e9b165800388a9ebf1dbcbad68",
     "baseline_digest": "07556be6093a7818a560a6857364240b41fd25e9b165800388a9ebf1dbcbad68"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Played a quick session in Edge: Results screen per-block rationale and both citations render, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795430703.870367,
+    "finished_at": 1795430735.5617743,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "7ab8e66883dd458bf1d2f3aa04b4e93938318c0419b0f4ecb58334295252fdbb",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795430735.5617778
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/ui/study-journey.test.tsx",
+        "reason": "Results rationale citation assertion"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "7ab8e66883dd458bf1d2f3aa04b4e93938318c0419b0f4ecb58334295252fdbb",
+    "baseline_digest": "7ab8e66883dd458bf1d2f3aa04b4e93938318c0419b0f4ecb58334295252fdbb"
   }
 ]

@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-separate-blocks-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795430692.2741494,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795437892.2741494,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795430736.0246544,
+    "completed_head": "c0c19fd6463a3e75c7b38070b64795e835a888c0",
+    "completed_tree": "d0aef1456b89b0f6750accfef2f09697eadcf415"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Masicampo 2011, Dixon 2010 and Milkman 2014 as context; cite planning and LDW evidence in-app",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Grounds the when-where-pairing plan and the no-fake-win rule in experiments, resolving three citations.",
-        "mitigation": "Verify via efetch, update counts and references, add citations with failing-first tests, run suites and review UI.",
-        "risks": "contract: three context records and UI citations; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The practice-plan card and near-best/safeguard copy rest on narrative-only behavioral sources."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "a08ba57d4245678eb9e7f3fe98b845b9dab50466f236db4e98b6a39487a04072",
-      "status": "in_progress",
-      "task_id": "noesis-engagement-planning-evidence",
-      "timestamp": 1795424687.1208758,
-      "timestamp_str": "2026-11-23 12:04:47",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-separate-blocks-evidence' completed successfully.",
+      "head": "c0c19fd6463a3e75c7b38070b64795e835a888c0",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-separate-blocks-evidence",
+      "timestamp": 1795430736.234929,
+      "timestamp_str": "2026-11-23 13:45:36"
     }
   ]
 }
