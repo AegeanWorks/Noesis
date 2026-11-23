@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 9);
+    expect(links).toHaveLength(mechanicCitations + 10);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -23,6 +23,11 @@ describe("evidence citation rows", () => {
       expect(link.getAttribute("target")).toBe("_blank");
       expect(link.getAttribute("rel")).toContain("noreferrer");
     }
+    const gradient = screen.getByTestId("transfer-gradient-evidence");
+    expect(gradient.textContent).toMatch(/far transfer rarely occurs/i);
+    expect(gradient.querySelector("a")?.getAttribute("href")).toBe(
+      "https://pubmed.ncbi.nlm.nih.gov/29276344/",
+    );
     const notSupported = screen.getByTestId("not-supported-list");
     expect(notSupported.textContent).toMatch(/ADHD symptom treatment/i);
     expect(notSupported.textContent).toMatch(/Everyday-function benefit/i);

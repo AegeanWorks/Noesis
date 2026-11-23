@@ -523,6 +523,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add both as context records and link the FAIR paper from the research export panel, with R82 and a failing-first UI test. Keep consent explicit and revocable rather than inferring willingness.
 - **Consequences**: The review moves to 144 records and 340 outcomes (revision v2.9), both previously narrative-only citations resolve in-app, and the export rationale becomes click-through verifiable.
 
+### ADR-074: Linked Far-Transfer Synthesis
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The Evidence screen's near/far transfer aside stated the central gradient without a source. Sala & Gobet 2017 (PMID 29276344) had been narrative-only in NEW_MECHANIC_CANDIDATES.md and synthesises three meta-analyses showing that effects shrink with design quality and far transfer rarely occurs.
+- **Decision**: Add Sala & Gobet 2017 as a context record, link it from the near/far aside, update R83 and the citation test, and keep the claim wording unchanged.
+- **Consequences**: The review moves to 145 records and 341 outcomes (revision v2.10) and the app's most important evidence claim becomes click-through verifiable without changing what it asserts.
+
 
 
 

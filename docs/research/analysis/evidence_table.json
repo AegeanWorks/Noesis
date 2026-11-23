@@ -8758,6 +8758,53 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for consent design: data-sharing attitudes are not measured reliably, so Noesis uses explicit, revocable consent rather than inferred willingness."
+  },
+  {
+   "pmid": "29276344",
+   "doi": "10.1177/0963721417712760",
+   "doi_status": "verified",
+   "year": 2017,
+   "journal": "Current Directions in Psychological Science",
+   "title": "Does Far Transfer Exist? Negative Evidence From Chess, Music, and Working Memory Training",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children",
+    "healthy_adults"
+   ],
+   "k": 3,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "meta_analysis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Three meta-analyses (chess, music, working-memory training) found small-to-moderate effects inversely related to design quality; far transfer rarely observed"
+    }
+   ],
+   "findings": [
+    "Effect sizes shrink as experimental quality rises, notably with active controls",
+    "Chess, music and working-memory training all fail to show robust far transfer"
+   ],
+   "limitations": [
+    "Narrative review of three meta-analyses",
+    "No pooled estimate printed in abstract"
+   ],
+   "flags": [
+    "far_transfer_null",
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the Evidence screen's near-versus-far gradient: the app reports near transfer and treats far transfer as a research question."
   }
  ]
 }

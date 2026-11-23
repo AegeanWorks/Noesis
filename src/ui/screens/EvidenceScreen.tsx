@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 144 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 145 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -131,6 +131,15 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
           means improvement in an untrained skill or everyday life. The evidence supports near
           transfer far more reliably than far transfer, which is why this app reports blocks
           separately and makes no intelligence claim.
+        </p>
+        <p className="fine" data-testid="transfer-gradient-evidence">
+          Three meta-analyses of chess, music and working-memory training found that effect sizes
+          shrink as study quality rises and far transfer rarely occurs.{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/29276344/"
+            label="Sala & Gobet 2017: does far transfer exist?"
+            pmid="29276344"
+          />
         </p>
         <h3 data-testid="not-supported-heading">What the review does not support</h3>
         <ul className="citations" data-testid="not-supported-list">

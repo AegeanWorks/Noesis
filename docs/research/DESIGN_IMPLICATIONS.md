@@ -170,6 +170,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R80 | The monthly far-check card links its no-transfer caveat to the underlying meta-analysis rather than stating it as unsupported assertion. | Melby-Lervåg & Hulme 2013 is in the corpus and reports reliable trained-task gains with no convincing generalization; a linked caveat keeps the app's central claim boundary verifiable. | 22612437; ADR-071 |
 | R81 | The safety onboarding screen links its seizure and exercise questions to the corpus sources that justify them. | Epilepsy Foundation consensus and FINGER are in the corpus; linked citations make the safety posture auditable without adding medical advice. | 16146438; 25771249; ADR-072 |
 | R82 | The research export panel links its documented, locally controlled file format to the FAIR principles, and consent stays explicit and revocable because data-sharing attitudes are not reliably measurable. | Wilkinson 2016 defines FAIR; Maxwell 2026 found weak measurement properties in 60 data-sharing surveys. | 26978244; 41813053; ADR-073 |
+| R83 | The Evidence screen's near/far transfer explanation links the synthesis showing that effect sizes shrink with design quality and far transfer rarely occurs. | Sala & Gobet 2017 pooled chess, music and working-memory training meta-analyses and concluded that far transfer is rare. | 29276344; ADR-074 |
 
 ---
 

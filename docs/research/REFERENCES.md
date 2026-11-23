@@ -200,3 +200,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 
 - The FAIR Guiding Principles for scientific data management and stewardship *Scientific Data*. 2016. PMID: [26978244](https://pubmed.ncbi.nlm.nih.gov/26978244/). DOI: [10.1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18).
 - How do we measure data sharing in the biomedical sciences? A measurement systematic review of biomedical data sharing-related knowledge, attitudes and practices across stakeholder groups, data types and geographies *BMJ Open*. 2026. PMID: [41813053](https://pubmed.ncbi.nlm.nih.gov/41813053/). DOI: [10.1136/bmjopen-2025-100314](https://doi.org/10.1136/bmjopen-2025-100314).
+
+## Far-transfer synthesis (2026-11-23 targeted update)
+
+- Does Far Transfer Exist? Negative Evidence From Chess, Music, and Working Memory Training *Current Directions in Psychological Science*. 2017. PMID: [29276344](https://pubmed.ncbi.nlm.nih.gov/29276344/). DOI: [10.1177/0963721417712760](https://doi.org/10.1177/0963721417712760).

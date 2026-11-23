@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-data-reuse-citations",
+    "task_id": "noesis-fartransfer-citation",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795397922.271534,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795398983.9883003,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795405122.271534,
+    "lease_until": 1795406183.9883003,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795397962.1546135,
-    "completed_head": "502152ff73e0a7ef3fca9a2d4dbbacad92521a27",
-    "completed_tree": "6ec3e6ea40ae9c416477975db3109d6284a39ea2"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-expectancy-evidence",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 140/333 records, 458 node + 29 python tests, fifth claim boundary reviewed in Edge, ADR-067",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795391804.4279318,
-      "timestamp_str": "2026-11-23 02:56:44",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-expectancy-evidence",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-expectancy-evidence' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795391902.3151245,
-      "timestamp_str": "2026-11-23 02:58:22",
-      "agent": "opencode:hy4-flash-free",
-      "head": "069b3a9cea0bec8178fed07542588aa5ea2c2c32",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-mood-claim-boundary",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-fartransfer-citation",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add Sala & Gobet 2017 far-transfer review as context and link it from the near/far transfer aside",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795398541.4512048,
+      "timestamp_str": "2026-11-23 04:49:01",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The Evidence screen's near/far transfer explanation asserts the central gradient without a citation; Sala & Gobet 2017 is a narrative-only review in the notes with three meta-analyses.",
+        "benefits": "Resolves a key narrative-only citation into the corpus and makes the app's central evidence claim click-through verifiable.",
+        "risks": "contract: one context record + UI link + test; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add failing-first test, run suites and review UI."
+      },
+      "plan_digest": "577ca972ef85f93d86500359e82e365dfa45c671abd43aab7db3bb35664fee9e",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-fartransfer-citation",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 145/341 records, 467 tests, gates 7/7, far-transfer citation reviewed in Edge, ADR-074",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795398983.9883003,
+      "timestamp_str": "2026-11-23 04:56:23",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

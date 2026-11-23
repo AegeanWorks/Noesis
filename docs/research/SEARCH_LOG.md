@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 144 |
-| Outcomes | 340 |
+| Records | 145 |
+| Outcomes | 341 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 90 |
+| Systematic reviews/meta-analyses | 91 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 26 |
 | RCTs | 8 |
 | Umbrella reviews | 2 |
-| DOI verified | 133 |
+| DOI verified | 134 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 60 |
+| cct | 61 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 133 |
+| DOI verified | 134 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **144** |
+| **Total** | **145** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -233,6 +233,8 @@ A 2026-11-23 clinical-mood update added one context record: Woolf et al. 2022 (P
 A 2026-11-23 serious-games update added one context record from the residual eligible pool: Abd-Alrazaq et al. 2023 (PMID 37043277, *Journal of Medical Internet Research*; DOI 10.2196/43607), verified via E-utilities `efetch`. Eleven RCTs in older adults with cognitive impairment showed verbal and nonverbal learning gains versus no/sham controls (P=.04 and P=.03) and nonverbal gains versus conventional cognitive training (P<.001), but only 2-5 trials entered each pool, 6 of 8 pooled studies were small, and the authors concluded that serious games should supplement rather than replace established interventions. The record is context only and its caveat is recorded in NEW_MECHANIC_CANDIDATES.md (ADR-070). D7 residuals fall to 958; the review is now 142 records and 338 outcomes, revision v2.8.
 
 A 2026-11-23 data-reuse update resolved the two narrative-only citations in DATA_EXPORT_AND_REUSE.md into context records, both verified via E-utilities `efetch`. Wilkinson et al. 2016 (PMID 26978244, *Scientific Data*; DOI 10.1038/sdata.2016.18) defines the FAIR principles for documented, machine-readable, reusable data. Maxwell et al. 2026 (PMID 41813053, *BMJ Open*; DOI 10.1136/bmjopen-2025-100314) reviewed 60 data-sharing KAP surveys and found weak development and reporting, so data-sharing willingness cannot be inferred reliably. The research export panel now links the FAIR paper (ADR-073). These came from a targeted search, so D7 is unchanged. The review is now 144 records and 340 outcomes, revision v2.9.
+
+A 2026-11-23 far-transfer update resolved Sala & Gobet 2017 (PMID 29276344, *Current Directions in Psychological Science*; DOI 10.1177/0963721417712760) from narrative-only to a context record, verified via E-utilities `efetch`. Three meta-analyses of chess, music and working-memory training found small-to-moderate effects inversely related to design quality and concluded that far transfer rarely occurs. The Evidence screen's near/far gradient now cites it directly (ADR-074). The record came from a targeted search, so D7 is unchanged; the review is now 145 records and 341 outcomes, revision v2.10.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
