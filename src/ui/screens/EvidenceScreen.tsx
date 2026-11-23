@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 200 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 201 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -316,6 +316,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/36977764/"
               label="No ADHD symptom treatment from computerized training (blinded outcomes)"
               pmid="36977764"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/25721181/"
+              label="No WM-training transfer to ADHD symptoms or academics"
+              pmid="25721181"
             />
           </li>
           <li>

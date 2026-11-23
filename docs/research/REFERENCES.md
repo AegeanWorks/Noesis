@@ -382,3 +382,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Commercial-game evidence (2026-11-24 targeted update)
 
 - The use of commercial computerised cognitive games in older adults: a meta-analysis *Scientific Reports*. 2020. PMID: [32943742](https://pubmed.ncbi.nlm.nih.gov/32943742/). DOI: [10.1038/s41598-020-72281-3](https://doi.org/10.1038/s41598-020-72281-3).
+
+## ADHD clinical boundary evidence (2026-11-24 targeted update)
+
+- Cognitive training for attention-deficit/hyperactivity disorder: meta-analysis of clinical and neuropsychological outcomes from randomized controlled trials *Journal of the American Academy of Child & Adolescent Psychiatry*. 2015. PMID: [25721181](https://pubmed.ncbi.nlm.nih.gov/25721181/). DOI: [10.1016/j.jaac.2014.12.010](https://doi.org/10.1016/j.jaac.2014.12.010).

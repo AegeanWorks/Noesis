@@ -943,6 +943,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Bonnechère et al. 2020 as a context record and a second citation on that boundary, with R142; bump the review version to v2.51.
 - **Consequences**: The review moves to 200 records and 440 outcomes (revision v2.51), D7 residuals fall to 935, and the boundary now rests on two independent commercial-program syntheses.
 
+### ADR-134: Second ADHD Meta-Analysis on the Clinical Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-ADHD-treatment boundary cited one blinded-outcome review; a verified 2015 RCT meta-analysis adds rater-blinding and working-memory-transfer evidence.
+- **Decision**: Add Cortese et al. 2015 as a context record and a second citation on that boundary, with R143; bump the review version to v2.52.
+- **Consequences**: The review moves to 201 records and 443 outcomes (revision v2.52), D7 residuals fall to 934, and the clinical boundary now rests on two independent meta-analyses.
+
 
 
 

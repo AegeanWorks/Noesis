@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 46);
+    expect(links).toHaveLength(mechanicCitations + 47);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -51,6 +51,7 @@ describe("evidence citation rows", () => {
     expect(notSupported.textContent).toMatch(/broad transfer to untrained domains/i);
     expect(notSupported.textContent).toMatch(/domain-specific leisure-game gains/i);
     expect(screen.getByText(/commercial game gains were domain-selective/i)).toBeTruthy();
-    expect(notSupported.querySelectorAll("a")).toHaveLength(17);
+    expect(notSupported.textContent).toMatch(/transfer to ADHD symptoms/i);
+    expect(notSupported.querySelectorAll("a")).toHaveLength(18);
   });
 });

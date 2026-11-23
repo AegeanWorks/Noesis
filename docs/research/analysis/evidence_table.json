@@ -11835,6 +11835,76 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-general-gain boundary: pooled commercial-game evidence showed selective domain gains rather than a general cognitive benefit."
+  },
+  {
+   "pmid": "25721181",
+   "doi": "10.1016/j.jaac.2014.12.010",
+   "doi_status": "verified",
+   "year": 2015,
+   "journal": "Journal of the American Academy of Child & Adolescent Psychiatry",
+   "title": "Cognitive training for attention-deficit/hyperactivity disorder: meta-analysis of clinical and neuropsychological outcomes from randomized controlled trials",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children",
+    "adolescents",
+    "adhd_symptoms"
+   ],
+   "k": 16,
+   "n": 759,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "adhd_symptoms",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 0.2,
+     "ci_low": 0.01,
+     "ci_high": 0.4,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "16 RCTs, 759 children with ADHD: total symptom effect fell from SMD 0.37 (proximal raters) to 0.20 with probably blinded raters"
+    },
+    {
+     "domain": "adhd_symptoms",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": null,
+     "ci_low": -0.01,
+     "ci_high": 0.66,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Blinded inattention estimate did not exclude zero; hyperactivity/impulsivity and academic outcomes were not significant"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.52,
+     "ci_low": 0.24,
+     "ci_high": 0.8,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Laboratory working-memory performance improved (verbal SMD 0.52, visual 0.47), but WM training specifically had no effect on ADHD symptoms"
+    }
+   ],
+   "findings": [
+    "Blinded ADHDD symptom effects are small and close to null",
+    "Working-memory gains do not transfer to clinical symptoms or academic performance"
+   ],
+   "limitations": [
+    "Child and adolescent clinical sample",
+    "Blinded-rater analyses still limited in number"
+   ],
+   "flags": [
+    "clinical_specific",
+    "blinded_outcomes"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-ADHD-treatment boundary: even in clinical RCTs, symptom effects shrink under blinding and working-memory gains do not transfer to symptoms."
   }
  ]
 }
