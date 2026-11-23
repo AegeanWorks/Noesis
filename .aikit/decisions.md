@@ -796,6 +796,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Render the remaining citations as a "Further reading" line with the same PubMed links and PMIDs, with R121; keep the primary-source line unchanged.
 - **Consequences**: Every mechanic's full citation list is now visible in its briefing; the Prospective Memory caveat source renders and no claim level or evidence count changes.
 
+### ADR-113: Serious-Games Caveat on the Evidence Screen
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Abd-Alrazaq et al. 2023 was already in the corpus and documented in the research rationale, but users could not see its conclusion that serious games should supplement, not replace, established interventions.
+- **Decision**: Add the record as a linked claim boundary on the Evidence screen with R122 and a negation-safe label.
+- **Consequences**: The app now states plainly that its games are not a substitute for care; no evidence count, claim level or version change.
+
 
 
 

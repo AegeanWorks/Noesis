@@ -333,6 +333,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/40299473/"
               label="No diagnostic claim: Noesis is not a validated screening tool"
               pmid="40299473"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/37043277/"
+              label="No claim that games replace established interventions or care"
+              pmid="37043277"
             />
           </li>
         </ul>
