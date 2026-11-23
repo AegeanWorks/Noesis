@@ -711,5 +711,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "c1e50dbc6d115215515aa8787ea859691088238ed7c5233720819e7ac68f80f5",
     "baseline_digest": "c1e50dbc6d115215515aa8787ea859691088238ed7c5233720819e7ac68f80f5"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the pre-test briefing in Edge: both JOL links (PMIDs 40875340, 29161973) render with no console errors; screenshot captured",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795401898.5260386,
+    "finished_at": 1795401943.235236,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "71e8ed5f060d7aca6bbdea7d7ff4a55e51bd798e6b4ee563b496118887c5b2e5",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795401943.2352386
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "JOL citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/test-briefing.test.tsx",
+        "reason": "JOL citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "71e8ed5f060d7aca6bbdea7d7ff4a55e51bd798e6b4ee563b496118887c5b2e5",
+    "baseline_digest": "71e8ed5f060d7aca6bbdea7d7ff4a55e51bd798e6b4ee563b496118887c5b2e5"
   }
 ]

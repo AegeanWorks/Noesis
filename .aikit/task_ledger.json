@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-jol-reactivity",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795401888.005722,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795409088.005722,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795401945.7795737,
+    "completed_head": "065e3ae476ccec52a1c68ae772d0ca38a52b42ac",
+    "completed_tree": "0f897ecea3d3cfb9334fd5149909f448c952f917"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-farcheck-citation",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add a PubMed-linked evidence citation to the home far-check card",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795395847.2948196,
-      "timestamp_str": "2026-11-23 04:04:07",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The far-check card claims reviews usually find no transfer but gives no source, weakening the app's central claim-boundary message.",
-        "benefits": "Makes the far-transfer caveat verifiable with a link to an in-corpus meta-analysis and pins it with a UI test.",
-        "risks": "contract: small UI text change + test; dependency: none; concurrency: none; state: none",
-        "mitigation": "Use an existing in-corpus PMID, add a failing-first test, run all suites and review the UI."
-      },
-      "plan_digest": "64b53172699b820796e4191587447ae742fec28fb83f690921a4096ac70c394a",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-farcheck-citation",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-jol-reactivity",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-jol-reactivity' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795401946.0987654,
+      "timestamp_str": "2026-11-23 05:45:46",
+      "agent": "opencode:hy4-flash-free",
+      "head": "065e3ae476ccec52a1c68ae772d0ca38a52b42ac",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
