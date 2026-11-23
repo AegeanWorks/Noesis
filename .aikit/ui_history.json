@@ -1842,5 +1842,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "55176f93e7e1e756791d994e874f10215fe6dbef4d8097e3d8164dd9d255f582",
     "baseline_digest": "55176f93e7e1e756791d994e874f10215fe6dbef4d8097e3d8164dd9d255f582"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Settings screen in Edge: evidence review label reads v2.37 (2026-11-23), no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795432687.142112,
+    "finished_at": 1795432816.9331179,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "32cd14b9268bf83cc50beb40afd7cebafbacfbf54d45a2ea0f0bbdc0b60c92bb",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795432816.933121
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/engine/evidence-version.test.ts",
+        "reason": "Review version guard and export metadata pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Review version guard and export metadata pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "32cd14b9268bf83cc50beb40afd7cebafbacfbf54d45a2ea0f0bbdc0b60c92bb",
+    "baseline_digest": "32cd14b9268bf83cc50beb40afd7cebafbacfbf54d45a2ea0f0bbdc0b60c92bb"
   }
 ]
