@@ -1,8 +1,8 @@
 # Noesis Evidence Review
 
-**Status:** v1.0 corpus complete; current review revision v2.12 (2026-11-23) with targeted UX, data-collection, export, new-game, working-memory residual-extraction, visual-search, adherence, everyday-function, clinical-boundary, game-design, multimodal, expectancy, clinical-mood, serious-game, data-reuse, far-transfer, metacognition and visual-search-context updates, AI-assisted, internally pre-registered
+**Status:** v1.0 corpus complete; current review revision v2.13 (2026-11-23) with targeted UX, data-collection, export, new-game, working-memory residual-extraction, visual-search, adherence, everyday-function, clinical-boundary, game-design, multimodal, expectancy, clinical-mood, serious-game, data-reuse, far-transfer, metacognition, visual-search-context and JOL-reactivity updates, AI-assisted, internally pre-registered
 **Search date:** 2026-10-31; targeted updates 2026-11-08, 2026-11-22 and 2026-11-23
-**Records:** 147 included (103 primary, 44 context), 344 outcomes
+**Records:** 148 included (103 primary, 45 context), 346 outcomes
 **Review type:** PRISMA 2020 systematic umbrella review with landmark-RCT update
 
 ---
@@ -49,7 +49,7 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |
 | [REFERENCES.bib](REFERENCES.bib) | BibTeX for the included records |
-| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (147 records, 344 outcomes) |
+| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (148 records, 346 outcomes) |
 | [analysis/screening_reviews.csv](analysis/screening_reviews.csv) | Rule-based screen of the 1,495-review PubMed corpus |
 | [analysis/screening_summary.json](analysis/screening_summary.json) | Screening counts |
 | [records/](records/) | Raw PubMed, OpenAlex, trial-registry and metadata-verification records |

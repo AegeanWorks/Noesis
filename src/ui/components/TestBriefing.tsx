@@ -103,6 +103,13 @@ export function TestBriefing({
               rel="noreferrer"
             >
               PMID 40875340
+            </a>{" "}
+            <a
+              href="https://pubmed.ncbi.nlm.nih.gov/29161973/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              PMID 29161973
             </a>
           </p>
         </section>

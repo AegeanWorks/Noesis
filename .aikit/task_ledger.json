@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-visualsearch-reading-evidence",
+    "task_id": "noesis-jol-reactivity",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795400903.5819252,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795401888.005722,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795408103.5819252,
+    "lease_until": 1795409088.005722,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795400949.3673327,
-    "completed_head": "8e3dca1757e51e187fc0a632b6063f9afea25923",
-    "completed_tree": "b9c847a3d71ba7914848fb3e428f350806408b04"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-serious-games-evidence",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 142/338 records, 465 node + 29 python tests, evidence count reviewed in Edge, ADR-070",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795395237.2321022,
-      "timestamp_str": "2026-11-23 03:53:57",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-serious-games-evidence",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-serious-games-evidence' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795395281.5442443,
-      "timestamp_str": "2026-11-23 03:54:41",
-      "agent": "opencode:hy4-flash-free",
-      "head": "14d9d9c8d9c50fd21670e0e18e3d87a2ef7bab2b",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-farcheck-citation",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-jol-reactivity",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add Double 2018 JOL-reactivity meta-analysis as context and link it from the briefing confidence note",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795401500.002346,
+      "timestamp_str": "2026-11-23 05:38:20",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The briefing's confidence evidence note cites one JOL meta-analysis; Double 2018 is a narrative-only source with the overall null reactivity estimate that directly supports the wording.",
+        "benefits": "Resolves another narrative-only citation and gives the confidence caveat two independent pooled estimates with subgroup nuance.",
+        "risks": "contract: one context record + UI link + test; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add failing-first test, run suites and review UI."
+      },
+      "plan_digest": "a3db3134d1db17bf40ce66c16a1f742aeb33b368ddeb10fe68646471c0d486d4",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-jol-reactivity",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 148/346 records, 468 tests, gates 7/7, JOL citation reviewed in Edge, ADR-077",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795401888.005722,
+      "timestamp_str": "2026-11-23 05:44:47",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

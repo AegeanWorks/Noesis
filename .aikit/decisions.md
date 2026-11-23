@@ -544,6 +544,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Vialatte 2023 as a context record with its single-group limitations flagged, add it as a second Visual Search citation, and record R85 so the reading result is never read as a healthy-user transfer claim.
 - **Consequences**: The review moves to 147 records and 344 outcomes (revision v2.12); both Visual Search sources resolve in-app and the game's brief keeps its task-practice-only claim.
 
+### ADR-077: Second JOL Source on the Confidence Note
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The pre-test confidence note cited one JOL meta-analysis. Double et al. 2018 (PMID 29161973) had been narrative-only in SEARCH_LOG and reports no overall JOL reactivity (g=0.054, -0.027 to 0.135) with moderate effects only for related materials.
+- **Decision**: Add Double 2018 as a context record with its pooled estimates and material-dependence flags, add it as a second link in the briefing confidence note, and record R86.
+- **Consequences**: The review moves to 148 records and 346 outcomes (revision v2.13) and the confidence caveat rests on two pooled estimates instead of one, without changing the prompt.
+
 
 
 

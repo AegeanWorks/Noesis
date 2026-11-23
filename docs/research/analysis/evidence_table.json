@@ -8910,6 +8910,63 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for Visual Search: a clinical single-group study of symbol search shows a reading-accuracy signal, but it is not a basis for an academic or general-attention claim."
+  },
+  {
+   "pmid": "29161973",
+   "doi": "10.1080/09658211.2017.1404111",
+   "doi_status": "verified",
+   "year": 2018,
+   "journal": "Memory",
+   "title": "A meta-analysis and systematic review of reactivity to judgements of learning",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "episodic_memory",
+     "transfer": "na",
+     "measure": "Hedges g",
+     "value": 0.054,
+     "ci_low": -0.027,
+     "ci_high": 0.135,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Overall JOL reactivity is not significant; the app's block-level prompt is descriptive"
+    },
+    {
+     "domain": "verbal_memory",
+     "transfer": "na",
+     "measure": "Hedges g",
+     "value": 0.323,
+     "ci_low": 0.083,
+     "ci_high": 0.563,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Related word pairs; word lists g=0.384 (0.146-0.622); no reactivity for unrelated or mixed pairs"
+    }
+   ],
+   "findings": [
+    "Eliciting judgements of learning does not reliably change memory overall",
+    "Reactivity depends on material: related pairs and word lists show moderate effects, unrelated pairs none"
+   ],
+   "limitations": [
+    "Item-level judgements, not a block-level reflection prompt",
+    "Material-dependent effects"
+   ],
+   "flags": [
+    "domain_null",
+    "subgroup_dependent"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the briefing confidence caveat: JOL reactivity is near zero overall and material-dependent, so the app's reflection prompt is not presented as a memory intervention."
   }
  ]
 }

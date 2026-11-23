@@ -138,8 +138,8 @@ describe("pre-test briefing", () => {
     const note = screen.getByTestId("confidence-evidence");
     expect(note.textContent).toMatch(/weak predictor|weakly related/i);
     expect(note.textContent).toMatch(/not a validated memory intervention/i);
-    const link = note.querySelector('a[href*="40875340"]');
-    expect(link).toBeTruthy();
+    expect(note.querySelector('a[href*="40875340"]')).toBeTruthy();
+    expect(note.querySelector('a[href*="29161973"]')).toBeTruthy();
   });
 
   it("does not brief a paused or completed block", () => {

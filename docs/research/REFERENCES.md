@@ -212,3 +212,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Visual-search context (2026-11-23 targeted update)
 
 - Enhancing reading accuracy through visual search training using symbols *Scientific Reports*. 2023. PMID: [36922549](https://pubmed.ncbi.nlm.nih.gov/36922549/). DOI: [10.1038/s41598-023-31037-5](https://doi.org/10.1038/s41598-023-31037-5).
+
+## Judgements of learning (2026-11-23 targeted update)
+
+- A meta-analysis and systematic review of reactivity to judgements of learning *Memory*. 2018. PMID: [29161973](https://pubmed.ncbi.nlm.nih.gov/29161973/). DOI: [10.1080/09658211.2017.1404111](https://doi.org/10.1080/09658211.2017.1404111).

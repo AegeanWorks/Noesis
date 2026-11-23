@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 147 |
-| Outcomes | 344 |
+| Records | 148 |
+| Outcomes | 346 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 92 |
+| Systematic reviews/meta-analyses | 93 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 26 |
 | RCTs | 9 |
 | Umbrella reviews | 2 |
-| DOI verified | 136 |
+| DOI verified | 137 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 63 |
+| cct | 64 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 136 |
+| DOI verified | 137 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **147** |
+| **Total** | **148** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -239,6 +239,8 @@ A 2026-11-23 far-transfer update resolved Sala & Gobet 2017 (PMID 29276344, *Cur
 A 2026-11-23 metacognition update resolved Sella et al. 2023 (PMID 36218025, *Aging & Mental Health*; DOI 10.1080/13607863.2022.2122931) from narrative-only to a context record, verified via E-utilities `efetch`. Twenty-five studies (N=1,768) of metacognitive training reported memory d=0.52 (0.19-0.84), metacognitive-belief d=0.58 (0.23-0.93) and strategy-use d=0.98 (0.46-1.49), with often-limited methodological quality. The Results confidence prompt now links this source to clarify that a one-item reflection is not the structured intervention (ADR-075). D7 is unchanged; the review is now 146 records and 343 outcomes, revision v2.11.
 
 A 2026-11-23 visual-search context update resolved Vialatte et al. 2023 (PMID 36922549, *Scientific Reports*; DOI 10.1038/s41598-023-31037-5) from narrative-only to a context record, verified via E-utilities `efetch`. Twenty-one children with reading disorders improved reading accuracy after a month of daily symbol-search game training, without a speed-accuracy trade-off, but the single small clinical sample and within-subject training introduction preclude a transfer claim for healthy users. It is now a second, explicitly cautious citation on the Visual Search mechanic (ADR-076). D7 is unchanged; the review is now 147 records and 344 outcomes, revision v2.12.
+
+A 2026-11-23 JOL-reactivity update resolved Double et al. 2018 (PMID 29161973, *Memory*; DOI 10.1080/09658211.2017.1404111) from narrative-only to a context record, verified via E-utilities `efetch`. Eliciting judgements of learning had no significant overall effect on memory (g=0.054, -0.027 to 0.135), with moderate reactivity only for related pairs (g=0.323) and word lists (g=0.384). The pre-test confidence note now carries both this and the earlier JOL meta-analysis (ADR-077). D7 is unchanged; the review is now 148 records and 346 outcomes, revision v2.13.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
