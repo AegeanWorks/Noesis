@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-visualsearch-neural",
+    "task_id": "noesis-incentive-framing-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795407784.3683257,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795408784.4994955,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795414984.3683257,
+    "lease_until": 1795415984.4994955,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795407829.410179,
-    "completed_head": "19040a51fe5fc14b20d4451fd6207d54ae112f35",
-    "completed_tree": "e3d80c379fa48c0587914886702395bccab99755"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 148/346 records, 468 tests, gates 7/7, JOL citation reviewed in Edge, ADR-077",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-jol-reactivity",
-      "timestamp": 1795401888.005722,
-      "timestamp_str": "2026-11-23 05:44:47",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-jol-reactivity' completed successfully.",
-      "head": "065e3ae476ccec52a1c68ae772d0ca38a52b42ac",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-jol-reactivity",
-      "timestamp": 1795401946.0987654,
-      "timestamp_str": "2026-11-23 05:45:46"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Buyle 2022 exergame motivation review as context and link it from the Motivation safeguards aside",
@@ -409,6 +371,48 @@
       "task_id": "noesis-visualsearch-neural",
       "timestamp": 1795407829.6132586,
       "timestamp_str": "2026-11-23 07:23:49"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add de Buisonje 2022 incentive RCT as context and cite it in Motivation safeguards",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Resolves another narrative-only citation and grounds the cosmetic-reward and gain-framing design.",
+        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
+        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
+        "why": "Motivation safeguards forbid real stakes and loss framing; this RCT found deposit contracts had lower uptake and loss frames underperformed gain frames."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "35bf20d0eb9dcd3c20e54a3b8ab153ca40e22c2896a15155371f8bd0d52524b4",
+      "status": "in_progress",
+      "task_id": "noesis-incentive-framing-evidence",
+      "timestamp": 1795408396.1597214,
+      "timestamp_str": "2026-11-23 07:33:16",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 155/358 records, 468 tests, gates 7/7, ADR-084",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-incentive-framing-evidence",
+      "timestamp": 1795408784.4994955,
+      "timestamp_str": "2026-11-23 07:39:44",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

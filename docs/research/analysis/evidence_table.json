@@ -9294,6 +9294,63 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for Visual Search: neural adaptation after short training is a mechanism finding, not evidence of cognitive or everyday benefit."
+  },
+  {
+   "pmid": "36201384",
+   "doi": "10.2196/38339",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Journal of Medical Internet Research",
+   "title": "Investigating Rewards and Deposit Contract Financial Incentives for Physical Activity Behavior Change Using a Smartphone App: Randomized Controlled Trial",
+   "modality": "engagement",
+   "design": "rct",
+   "populations": [
+    "healthy_adults",
+    "young_adults"
+   ],
+   "k": 1,
+   "n": 126,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "physical_activity",
+     "transfer": "far",
+     "measure": "days_goal_achieved",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Incentive arms 13.10 days vs control 8.00 days achieved (P=.002); deposit 14.88 vs reward 12.13 not significant (P=.17)"
+    },
+    {
+     "domain": "adherence",
+     "transfer": "na",
+     "measure": "uptake",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Deposit-contract uptake 62% versus reward 100%; loss frames 10.50 days vs gain frames 14.67 (P=.007), favouring gain framing"
+    }
+   ],
+   "findings": [
+    "Financial incentives beat no incentive, but deposit contracts were not superior and had lower uptake",
+    "Loss framing was less effective than gain framing"
+   ],
+   "limitations": [
+    "Physical-activity outcome, not cognition",
+    "Limited power for some comparisons"
+   ],
+   "flags": [
+    "clinical_specific",
+    "small_sample"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds Motivation mode's cosmetic-only rewards and gain framing: real stakes reduced uptake, loss framing underperformed, and Noesis uses no money or loss frames."
   }
  ]
 }

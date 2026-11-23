@@ -240,3 +240,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Visual-search mechanism (2026-11-23 targeted update)
 
 - Resting-state fMRI detects the effects of learning in short term: A visual search training study *Human Brain Mapping*. 2019. PMID: [30859709](https://pubmed.ncbi.nlm.nih.gov/30859709/). DOI: [10.1002/hbm.24560](https://doi.org/10.1002/hbm.24560).
+
+## Incentive design (2026-11-23 targeted update)
+
+- Investigating Rewards and Deposit Contract Financial Incentives for Physical Activity Behavior Change Using a Smartphone App: Randomized Controlled Trial *Journal of Medical Internet Research*. 2022. PMID: [36201384](https://pubmed.ncbi.nlm.nih.gov/36201384/). DOI: [10.2196/38339](https://doi.org/10.2196/38339).

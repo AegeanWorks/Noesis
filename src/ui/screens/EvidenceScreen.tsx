@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 154 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 155 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -140,6 +140,13 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/29172564/"
               label="Action-game effects shrink in interventions and with bias correction"
               pmid="29172564"
+            />
+          </li>
+          <li>
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/36201384/"
+              label="Deposits cut uptake and loss frames underperform gain frames"
+              pmid="36201384"
             />
           </li>
         </ul>

@@ -180,6 +180,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R90 | The Motivation safeguards cite the action-game meta-analysis and keep action games excluded on flashing/fast-presentation safety grounds. | Bediou 2018 found g=0.55 for habitual players but only g=0.34 in interventions, with about 30 percent publication-bias inflation. | 29172564; ADR-081 |
 | R91 | Go/No-Go cites the appetitive-behaviour meta-analysis and keeps its no-daily-impulse-control claim; Stop-Signal remains out of scope. | McGreen 2024 found g=-0.21 for food-related behaviour, not cognitive transfer. | 38309625; ADR-082 |
 | R92 | Visual Search cites the neural training study explicitly as a mechanism finding, not evidence of user benefit. | Bueichekú 2019 found task-relevant resting-connectivity change after short training with no whole-network or everyday outcome. | 30859709; ADR-083 |
+| R93 | Motivation mode uses cosmetic, capped rewards with gain framing and no real stakes; the safeguards cite the incentive-design RCT for the uptake and framing findings. | de Buisonjé 2022 found deposit contracts cut uptake and loss frames underperformed gain frames. | 36201384; ADR-084 |
 
 ---
 

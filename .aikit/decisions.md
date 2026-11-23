@@ -593,6 +593,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a third Visual Search citation, with R92, so the neural adaptation is explicitly labelled a mechanism rather than a user benefit.
 - **Consequences**: The review moves to 154 records and 356 outcomes (revision v2.19) and the game's evidence list covers behavioural, clinical and neural levels with their respective limits.
 
+### ADR-084: Incentive-Design Evidence on Motivation Mode
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: de Buisonjé et al. 2022 (PMID 36201384) was narrative-only in BEHAVIORAL_ENGAGEMENT.md and reports that financial incentives improved activity, but self-funded deposits had lower uptake than rewards and loss frames were less effective than gain frames.
+- **Decision**: Add it as a context record and a seventh Motivation-safeguards citation, with R93; keep momentum cosmetic and capped with no real stakes or loss framing.
+- **Consequences**: The review moves to 155 records and 358 outcomes (revision v2.20) and the no-real-stakes design choice is backed by an uptake and framing result rather than only by harm-avoidance logic.
+
 
 
 
