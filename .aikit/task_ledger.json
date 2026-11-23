@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-dualtask-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795421536.143847,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795428736.143847,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795421600.2755706,
+    "completed_head": "9d1fea510e8096b0a59f02c88d81372d868a9e69",
+    "completed_tree": "9c6a45f458b95354e034e1aab363a98e8e6aaea7"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Woutersen 2017 UFOV construct-purity meta-analysis as context and cite it in Visual Search",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and grounds the single-construct focus-test choice.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The Visual Search rationale excludes UFOV partly because its subtests are not construct-pure; that justification is still narrative-only."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "eaf51202618e23744c8e934632e67f93e1a8504dc29fb3ddf5abfe72ee5aa591",
-      "status": "in_progress",
-      "task_id": "noesis-ufov-construct-evidence",
-      "timestamp": 1795411424.738587,
-      "timestamp_str": "2026-11-23 08:23:44",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-dualtask-evidence' completed successfully.",
+      "head": "9d1fea510e8096b0a59f02c88d81372d868a9e69",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-dualtask-evidence",
+      "timestamp": 1795421600.333794,
+      "timestamp_str": "2026-11-23 11:13:20"
     }
   ]
 }
