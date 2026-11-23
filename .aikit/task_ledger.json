@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-mood-claim-boundary",
+    "task_id": "noesis-symbol-game",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795392840.7718441,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795394229.6379638,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795400040.7718441,
+    "lease_until": 1795401429.6379638,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795392940.262711,
-    "completed_head": "139b69dee5f8d1ad9a93241329d6710926350f7f",
-    "completed_tree": "8063ab1f61a1efb634402b2f7a7a37a822a8343f"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-adherence-evidence",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 134/312 records, 456 node + 29 python tests, evidence-linked adherence note reviewed in Edge, ADR-062",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795386437.0587468,
-      "timestamp_str": "2026-11-23 01:27:17",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-adherence-evidence",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-adherence-evidence' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795386550.9079108,
-      "timestamp_str": "2026-11-23 01:29:10",
-      "agent": "opencode:hy4-flash-free",
-      "head": "a0f27d979271af6fd12928d89c2592c11fdce7f6",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-everyday-function-evidence",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-symbol-game",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add a claim-bounded digit-symbol processing-speed focus test grounded in broad CCT and game-design evidence",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795393474.126998,
+      "timestamp_str": "2026-11-23 03:24:34",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The practice lineup has simple reaction time and paired associates but no symbol-digit association speed task; broad CCT meta-analyses support processing-speed near transfer.",
+        "benefits": "A distinct, deterministic 13th focus test with accuracy, reaction-time and association metrics and an explicitly narrow claim.",
+        "risks": "contract: new MechanicId across engine/UI/tests; dependency: none; concurrency: none; state: adaptive levels and count assertions must move with the id",
+        "mitigation": "Follow the Visual Search integration pattern, add failing-first tests, run all suites, play it in Edge, then commit."
+      },
+      "plan_digest": "64241c043ea4f992401ccabdcddc8a9f77e6e3cbf87e1eb3b5c3bc247111bf77",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-symbol-game",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 141 records unchanged, 465 node + 29 python tests, 13th mechanic played in Edge, ADR-069",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795394229.6379638,
+      "timestamp_str": "2026-11-23 03:37:09",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

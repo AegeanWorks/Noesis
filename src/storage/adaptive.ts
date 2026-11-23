@@ -41,6 +41,7 @@ const DEFAULTS: AdaptiveState = {
     paired: 2,
     change: 2,
     search: 2,
+    symbol: 2,
   },
   log: [],
 };

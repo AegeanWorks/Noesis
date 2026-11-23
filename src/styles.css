@@ -2397,6 +2397,54 @@ html.high-contrast .speed-ring-active {
   background: #6ea8fe;
 }
 
+/* Digit-symbol association: static legend, one target shape, four digit options. */
+.symbol-legend {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 6px 0 14px;
+}
+
+.symbol-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted, #94a3b8);
+}
+
+.symbol-target {
+  width: 84px;
+  height: 84px;
+  margin: 8px auto 16px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.symbol-shape {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: var(--accent, #10b981);
+  border-radius: 3px;
+}
+
+.symbol-circle,
+.symbol-target.symbol-circle {
+  border-radius: 50%;
+}
+
+.symbol-triangle,
+.symbol-target.symbol-triangle {
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.symbol-diamond,
+.symbol-target.symbol-diamond {
+  transform: rotate(45deg);
+  border-radius: 3px;
+}
+
 
 .gonogo-dprime-note {
   margin: 4px 0 8px;

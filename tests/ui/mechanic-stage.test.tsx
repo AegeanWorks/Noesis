@@ -327,4 +327,27 @@ describe("MechanicStage", () => {
     fireEvent.click(screen.getByTestId("search-cell-2"));
     expect(onAnswer).toHaveBeenCalledWith(2);
   });
+
+  it("renders a digit-symbol legend and reports the chosen digit", () => {
+    const onAnswer = vi.fn();
+    render(
+      <MechanicStage
+        view={view({
+          mechanic: "symbol",
+          name: "Digit Symbol",
+          phase: "question",
+          prompt: "Which digit matches this shape?",
+          stimulus: "triangle",
+          options: ["1", "2", "3", "4"],
+        })}
+        onRespond={vi.fn()}
+        onAnswer={onAnswer}
+      />,
+    );
+    expect(document.querySelector(".stage-symbol")).not.toBeNull();
+    expect(screen.getByTestId("stimulus").getAttribute("data-state")).toBe("triangle");
+    expect(screen.getByTestId("symbol-legend-2")).not.toBeNull();
+    fireEvent.click(screen.getByTestId("option-2"));
+    expect(onAnswer).toHaveBeenCalledWith(2);
+  });
 });

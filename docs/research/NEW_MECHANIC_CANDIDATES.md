@@ -408,3 +408,11 @@ size in the abstract, so they stay narrative-only like the other task-specific c
 
 **Safety:** static coloured shapes; no flicker, no rapid serial presentation, no photosensitive
 trigger. Recorded in ADR-061.
+
+## 8. Digit-symbol association speed (implemented as an experimental focus test)
+
+A 2026-11-23 targeted search found no task-specific training meta-analysis for digit-symbol coding, so this candidate is **narrative-only** and does not add an evidence-table record. Its grounding is indirect: broad cognitive-training meta-analyses find small processing-speed near-transfer effects (PMID 32011155), game-based training in older adults found a small processing-speed effect (PMID 32980574, g=0.23), and executive-function training reviews find trained-task gains with much smaller transfer (PMID 30998045).
+
+**Decision:** implement a static digit-symbol association task as an experimental focus test. A four-entry legend maps digits to shapes; each trial shows one shape and the user taps its digit. No flashing or rapid presentation. The block reports accuracy, mean reaction time and the within-block reaction-time change from the first to the second half. The brief states that this is task practice with near-transfer evidence only; no general processing-speed, intelligence, academic or everyday-function claim is made. The task is claim-bounded like the other experimental focus tests.
+
+**Safety:** static shapes and digits; no flicker, no time pressure beyond the per-trial limit, no audio.

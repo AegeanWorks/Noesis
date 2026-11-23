@@ -14,6 +14,7 @@ export const MechanicIdSchema = z.enum([
   "paired",
   "change",
   "search",
+  "symbol",
 ]);
 
 export const BlockConfigSchema = z.object({

@@ -34,7 +34,7 @@ const BASE = {
   weeklyGoal: 3,
   onWeeklyGoal: () => {},
   adaptiveEnabled: false,
-  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2, change: 2, search: 2 } as const,
+  adaptiveLevels: { nback: 2, gonogo: 2, reasoning: 2, speed: 2, switching: 2, flanker: 2, spatial: 2, rotation: 2, prospective: 2, paired: 2, change: 2, search: 2, symbol: 2 } as const,
   onAdaptiveToggle: () => {},
   study: { enrolled: false, studyId: null, arm: null, consentedAt: null },
   onEnrollStudy: () => {},
@@ -166,7 +166,7 @@ describe("SettingsScreen adaptive difficulty", () => {
         onAdaptiveToggle={onToggle}
       />,
     );
-    expect(screen.getAllByText("Level 2")).toHaveLength(12);
+    expect(screen.getAllByText("Level 2")).toHaveLength(13);
   });
 });
 

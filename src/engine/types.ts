@@ -11,6 +11,7 @@ export const MECHANIC_IDS = [
   "paired",
   "change",
   "search",
+  "symbol",
 ] as const;
 
 export type MechanicId = (typeof MECHANIC_IDS)[number];
@@ -459,6 +460,45 @@ export interface PairedState {
   completed: boolean;
 }
 
+export interface SymbolConfig {
+  trials: number;
+  timeLimitMs: number;
+  feedbackMs: number;
+}
+
+export interface SymbolTrial {
+  shape: string;
+  correctDigit: number;
+}
+
+export interface SymbolResponse {
+  trial: number;
+  shape: string;
+  selected: number | null;
+  correctDigit: number;
+  correct: boolean;
+  reactionMs: number | null;
+  timedOut: boolean;
+  secondHalf: boolean;
+}
+
+export interface SymbolState {
+  mechanic: "symbol";
+  seed: number;
+  rng: number;
+  tick: number;
+  config: SymbolConfig;
+  trials: SymbolTrial[];
+  index: number;
+  phase: "question" | "feedback" | "complete";
+  phaseElapsed: number;
+  phaseDuration: number;
+  itemStartTick: number;
+  selected: number | null;
+  responses: SymbolResponse[];
+  completed: boolean;
+}
+
 export interface SearchConfig {
   trials: number;
   timeLimitMs: number;
@@ -574,7 +614,8 @@ export type MechanicState =
   | ProspectiveState
   | PairedState
   | ChangeState
-  | SearchState;
+  | SearchState
+  | SymbolState;
 
 export type MechanicAction =
   | { type: "respond" }

@@ -94,6 +94,14 @@ import {
   searchResult,
   searchView,
 } from "./search";
+import {
+  applySymbolAction,
+  createSymbol,
+  symbolComplete,
+  symbolConfig,
+  symbolResult,
+  symbolView,
+} from "./symbol";
 import type {
   MechanicAction,
   MechanicId,
@@ -114,6 +122,7 @@ export function defaultTrials(id: MechanicId, difficulty: number): number {
   if (id === "paired") return 12;
   if (id === "change") return 12;
   if (id === "search") return 16 + (difficulty - 1) * 2;
+  if (id === "symbol") return 16 + (difficulty - 1) * 2;
   return 8;
 }
 
@@ -134,6 +143,7 @@ export function createMechanic(
   if (id === "paired") return createPaired(seed, pairedConfig(difficulty, trials));
   if (id === "change") return createChange(seed, changeConfig(difficulty, trials));
   if (id === "search") return createSearch(seed, searchConfig(difficulty, trials));
+  if (id === "symbol") return createSymbol(seed, symbolConfig(difficulty, trials));
   return createReasoning(seed, reasoningConfig(difficulty, trials));
 }
 
@@ -152,6 +162,7 @@ export function applyMechanicAction(
   if (state.mechanic === "paired") return applyPairedAction(state, action);
   if (state.mechanic === "change") return applyChangeAction(state, action);
   if (state.mechanic === "search") return applySearchAction(state, action);
+  if (state.mechanic === "symbol") return applySymbolAction(state, action);
   return applyReasoningAction(state, action);
 }
 
@@ -167,6 +178,7 @@ export function mechanicView(state: MechanicState): MechanicView {
   if (state.mechanic === "paired") return pairedView(state);
   if (state.mechanic === "change") return changeView(state);
   if (state.mechanic === "search") return searchView(state);
+  if (state.mechanic === "symbol") return symbolView(state);
   return reasoningView(state);
 }
 
@@ -182,6 +194,7 @@ export function mechanicResult(state: MechanicState): MechanicResult {
   if (state.mechanic === "paired") return pairedResult(state);
   if (state.mechanic === "change") return changeResult(state);
   if (state.mechanic === "search") return searchResult(state);
+  if (state.mechanic === "symbol") return symbolResult(state);
   return reasoningResult(state);
 }
 
@@ -197,5 +210,6 @@ export function mechanicComplete(state: MechanicState): boolean {
   if (state.mechanic === "paired") return pairedComplete(state);
   if (state.mechanic === "change") return changeComplete(state);
   if (state.mechanic === "search") return searchComplete(state);
+  if (state.mechanic === "symbol") return symbolComplete(state);
   return reasoningComplete(state);
 }

@@ -488,6 +488,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Woolf 2022 as a context record with null-valued narrative outcomes, and add a sixth linked boundary to the Evidence screen: no mood-disorder treatment claim from consumer brain training. Add R78 and extend the citation test.
 - **Consequences**: The review moves to 141 records and 336 outcomes (revision v2.7), D7 is unchanged, and the app's safety logging is explicitly separated from any therapeutic claim.
 
+### ADR-069: Digit Symbol Experimental Focus Test
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The lineup has simple reaction time (Speed Tap) and verbal paired associates, but no symbol-digit association speed task. A targeted PubMed search found no task-specific digit-symbol training meta-analysis; broad CCT and game-design reviews support small processing-speed near transfer (PMIDs 32011155, 32980574, 30998045).
+- **Decision**: Add `symbol` as a claim-bounded focus test with a static four-pair digit-shape legend, one target shape per trial and four digit buttons; report accuracy, mean response time and within-block response-time change. Cite the three broad reviews in the mechanic meta, document the narrative-only rationale in NEW_MECHANIC_CANDIDATES.md section 8, and add R79.
+- **Consequences**: The practice menu grows to thirteen tests with no new evidence-table record or count change. Adaptive levels, schema, AI-drive help and count assertions gain the new id; the game is static, silent and free of flashing.
+
 
 
 

@@ -298,6 +298,33 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     safety: "Static coloured shapes; no flicker, no rapid presentation.",
   },
+  symbol: {
+    id: "symbol",
+    name: "Digit Symbol",
+    domain: "processing_speed",
+    tagline: "Symbol association speed",
+    instructions:
+      "Learn the four digit-to-shape pairs in the legend, then tap the digit that matches each shape. Work steadily; accuracy and response time are both reported.",
+    brief:
+      "Digit-symbol association: link a visual symbol to its digit and respond under a time limit. Broad cognitive-training meta-analyses find small processing-speed near-transfer effects, but no task-specific digit-symbol training meta-analysis was located. This is an experimental focus test, not a processing-speed diagnostic or a general-speed claim.",
+    claimLevel: "experimental",
+    claim: "Practices a learned digit-to-symbol association under a time limit.",
+    qualifier:
+      "Task practice only. Accuracy, response time and the within-block change are descriptive measures; this is not a diagnostic test and does not claim faster thinking, intelligence or everyday benefit.",
+    notClaimed: [
+      "General processing speed",
+      "General intelligence",
+      "Academic achievement",
+      "Everyday function",
+      "Dementia prevention",
+    ],
+    citations: [
+      { pmid: "32011155", label: "Cognitive training modules meta-analysis (2020)" },
+      { pmid: "32980574", label: "Game-based training meta-regression (2021)" },
+      { pmid: "30998045", label: "Executive-function training meta-analysis (2019)" },
+    ],
+    safety: "Static shapes and digits; no flicker, no audio.",
+  },
 };
 
 export function claimLabel(level: ClaimLevel): string {

@@ -357,6 +357,61 @@ function SearchStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) 
   );
 }
 
+function SymbolStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
+  const legend = ["circle", "square", "triangle", "diamond"];
+  const shape = view.stimulus ?? "";
+  return (
+    <div
+      className="stage stage-symbol"
+      data-mechanic="symbol"
+      data-phase={view.phase}
+      data-feedback={view.feedbackTone ?? "neutral"}
+    >
+      <p className="stage-prompt">{view.prompt}</p>
+      <div className="symbol-legend" role="group" aria-label="Digit to shape legend">
+        {legend.map((item, index) => (
+          <div className="symbol-legend-item" key={item}>
+            <span>{index + 1}</span>
+            <span
+              className={`symbol-shape symbol-${item}`}
+              data-testid={`symbol-legend-${index}`}
+              aria-hidden="true"
+            />
+          </div>
+        ))}
+      </div>
+      <div
+        className={`symbol-target symbol-${shape}`}
+        role="img"
+        aria-label={`Target shape: ${shape}`}
+        data-testid="stimulus"
+        data-state={shape}
+      />
+      <div className="options" role="group" aria-label="Digit options">
+        {(view.options ?? []).map((option, index) => (
+          <Button
+            key={option}
+            variant="ghost"
+            className="option"
+            disabled={!view.canRespond}
+            onClick={() => onAnswer(index)}
+            data-testid={`option-${index}`}
+          >
+            <span className="option-key">{index + 1}</span>
+            {option}
+          </Button>
+        ))}
+      </div>
+      <Feedback view={view} />
+      {view.explanation ? (
+        <p className="explanation" data-testid="explanation">
+          {view.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function PairedStage({ view, onAnswer }: Omit<MechanicStageProps, "onRespond">) {
   const [first = "", second = ""] = (view.stimulus ?? "").split("|");
   return (
@@ -578,6 +633,9 @@ export function MechanicStage(props: MechanicStageProps) {
   }
   if (view.mechanic === "search") {
     return <SearchStage view={view} onAnswer={props.onAnswer} />;
+  }
+  if (view.mechanic === "symbol") {
+    return <SymbolStage view={view} onAnswer={props.onAnswer} />;
   }
   return <ReasoningStage view={view} onAnswer={props.onAnswer} />;
 }
