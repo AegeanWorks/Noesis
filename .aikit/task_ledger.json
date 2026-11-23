@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-leisure-games-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795468150.3782558,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795475350.3782558,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795468207.6708539,
+    "completed_head": "ae3de602d8d4f58433df7b757ad49fe2987b57dc",
+    "completed_tree": "cc480640f599981b5e8e2d97c6e1353bf0722e3f"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Webb 2018 executive-function taxonomy meta-analysis as context and cite it on the per-block reporting rationale",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Strengthens an existing honesty rationale with a taxonomy-level meta-analysis and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2018 reanalysis shows that conflating cognitive constructs changes conclusions, directly supporting the app's single-construct focus tests and per-block reporting."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "fb1706587634e5abe30d9491c36f7706c306125965013656f7f270d1e102761c",
-      "status": "in_progress",
-      "task_id": "noesis-ef-taxonomy-evidence",
-      "timestamp": 1795457470.0935974,
-      "timestamp_str": "2026-11-23 21:11:10",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-leisure-games-evidence' completed successfully.",
+      "head": "ae3de602d8d4f58433df7b757ad49fe2987b57dc",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-leisure-games-evidence",
+      "timestamp": 1795468207.7372642,
+      "timestamp_str": "2026-11-24 00:10:07"
     }
   ]
 }
