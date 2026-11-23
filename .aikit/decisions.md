@@ -495,6 +495,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add `symbol` as a claim-bounded focus test with a static four-pair digit-shape legend, one target shape per trial and four digit buttons; report accuracy, mean response time and within-block response-time change. Cite the three broad reviews in the mechanic meta, document the narrative-only rationale in NEW_MECHANIC_CANDIDATES.md section 8, and add R79.
 - **Consequences**: The practice menu grows to thirteen tests with no new evidence-table record or count change. Adaptive levels, schema, AI-drive help and count assertions gain the new id; the game is static, silent and free of flashing.
 
+### ADR-070: Serious-Games Evidence Quality Caveat
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Noesis ships nine experimental game-like focus tests. Abd-Alrazaq et al. 2023 (PMID 37043277) pooled 11 RCTs of serious games in cognitively impaired older adults: verbal and nonverbal learning gains versus no/sham and nonverbal gains versus conventional training, but only 2-5 trials per comparison, small samples in 6 of 8 pooled studies, and an explicit conclusion that games should supplement rather than replace established interventions.
+- **Decision**: Add the review as a context record with null-valued narrative outcomes, record the caveat in NEW_MECHANIC_CANDIDATES.md section 8, and keep every game framed as claim-bounded task practice rather than a substitute for care.
+- **Consequences**: The review moves to 142 records and 338 outcomes (revision v2.8), D7 residuals fall to 958, and the game rationale carries the evidence-quality limitation next to the positive findings.
+
 
 
 

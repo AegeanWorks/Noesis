@@ -8616,6 +8616,67 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the mood-treatment boundary: clinical affective effects in diagnosed MDD do not license a consumer-app treatment or wellbeing claim."
+  },
+  {
+   "pmid": "37043277",
+   "doi": "10.2196/43607",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Journal of Medical Internet Research",
+   "title": "Serious Games for Learning Among Older Adults With Cognitive Impairment: Systematic Review and Meta-analysis",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "mci",
+    "dementia"
+   ],
+   "k": 11,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "verbal_memory",
+     "transfer": "near",
+     "measure": "p value",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "5 of 11 RCTs: serious games improved verbal learning versus no/sham (P=.04); equal to conventional exercise (2 RCTs, P=.98)"
+    },
+    {
+     "domain": "visuospatial_memory",
+     "transfer": "near",
+     "measure": "p value",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "4 of 11 RCTs versus no/sham (P=.03) and 2 versus conventional cognitive training (P<.001) for nonverbal learning"
+    }
+   ],
+   "findings": [
+    "Serious games improved verbal and nonverbal learning in impaired older adults, but meta-analyses used only 2-5 of 11 trials",
+    "Authors conclude games should supplement, not replace, established interventions"
+   ],
+   "limitations": [
+    "Low evidence quality",
+    "Small samples in 6 of 8 pooled studies",
+    "Clinical populations, not healthy users"
+   ],
+   "flags": [
+    "low_quality_evidence",
+    "small_samples",
+    "clinical_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the game rationale: serious-game learning effects in impaired older adults are low-certainty, so Noesis games are task practice and never a replacement for care."
   }
  ]
 }

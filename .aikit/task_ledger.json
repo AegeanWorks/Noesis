@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-symbol-game",
+    "task_id": "noesis-serious-games-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795394229.6379638,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795395237.2321022,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795401429.6379638,
+    "lease_until": 1795402437.2321022,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795394364.6328297,
-    "completed_head": "e460cf65044a8b8e99bdf6ff0d6b02b9ccee5e5b",
-    "completed_tree": "c229b15b8c10fb11d9ad0b0d85b435c47ee85e0c"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-everyday-function-evidence",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 136/319 records, 457 node + 29 python tests, result caveat reviewed in Edge, ADR-063",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795387518.4198265,
-      "timestamp_str": "2026-11-23 01:45:18",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-everyday-function-evidence",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-everyday-function-evidence' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795387634.431576,
-      "timestamp_str": "2026-11-23 01:47:14",
-      "agent": "opencode:hy4-flash-free",
-      "head": "aa2458dc5fb6665ff06fcbcd3455e8ffb96dd9ab",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-adhd-claim-boundary",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-serious-games-evidence",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: extract Abd-Alrazaq 2023 serious-games meta-analysis as context and record its low-quality/supplementary conclusion in the game rationale",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795394807.8019211,
+      "timestamp_str": "2026-11-23 03:46:47",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The app's games need a literature note on the quality of serious-game evidence; this 11-RCT meta-analysis explicitly concludes games supplement rather than replace established interventions.",
+        "benefits": "Adds a verified clinical games record and tempers the game-related rationale with the review's own evidence-quality caveat.",
+        "risks": "contract: one context record + prose note; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Verify via PubMed efetch, update counts/references/prose and the game rationale, run all suites, commit."
+      },
+      "plan_digest": "71145f38b9cd4b61b74eb747536685b934cf3dff65b810509da72e433a3d4a94",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-serious-games-evidence",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 142/338 records, 465 node + 29 python tests, evidence count reviewed in Edge, ADR-070",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795395237.2321022,
+      "timestamp_str": "2026-11-23 03:53:57",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

@@ -416,3 +416,9 @@ A 2026-11-23 targeted search found no task-specific training meta-analysis for d
 **Decision:** implement a static digit-symbol association task as an experimental focus test. A four-entry legend maps digits to shapes; each trial shows one shape and the user taps its digit. No flashing or rapid presentation. The block reports accuracy, mean reaction time and the within-block reaction-time change from the first to the second half. The brief states that this is task practice with near-transfer evidence only; no general processing-speed, intelligence, academic or everyday-function claim is made. The task is claim-bounded like the other experimental focus tests.
 
 **Safety:** static shapes and digits; no flicker, no time pressure beyond the per-trial limit, no audio.
+
+A 2026-11-23 serious-games update adds a caveat with a verified source: Abd-Alrazaq et al. 2023
+(PMID 37043277) found learning gains from serious games in cognitively impaired older adults but
+explicitly concluded that games should **supplement, not replace**, established interventions, with
+only 2-5 trials per pooled comparison and low evidence quality. Noesis therefore presents every
+game as claim-bounded task practice and never as a substitute for care.

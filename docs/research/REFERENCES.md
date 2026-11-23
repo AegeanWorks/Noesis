@@ -191,3 +191,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Clinical mood evidence (2026-11-23 targeted update)
 
 - A Systematic Review and Meta-Analysis of Cognitive Training in Adults with Major Depressive Disorder *Neuropsychology Review*. 2022. PMID: [33913064](https://pubmed.ncbi.nlm.nih.gov/33913064/). DOI: [10.1007/s11065-021-09487-3](https://doi.org/10.1007/s11065-021-09487-3).
+
+## Serious-game evidence quality (2026-11-23 targeted update)
+
+- Serious Games for Learning Among Older Adults With Cognitive Impairment: Systematic Review and Meta-analysis *Journal of Medical Internet Research*. 2023. PMID: [37043277](https://pubmed.ncbi.nlm.nih.gov/37043277/). DOI: [10.2196/43607](https://doi.org/10.2196/43607).
