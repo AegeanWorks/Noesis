@@ -205,6 +205,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R115 | A project-wide grounding test requires every PMID hardcoded in any UI source to resolve to the evidence table, so citations cannot drift silently. | All 75 in-app PMIDs currently resolve; the check covers screens, panels and components rather than only the Evidence screen. | ADR-106 |
 | R116 | The review revision reported by the app and in research exports matches the revision declared in the research README. | The shipped constant had drifted to v1.8 while the corpus reached v2.37, mislabelling exported data; a guard test now compares them. | ADR-107 |
 | R117 | Digit Span has committed browser proof scripts for gameplay and within-level trends, matching the dogfood proofs of the other games. | The proofs drive a real three-block session and seeded history, capture screenshots and assert no console errors. | R109; R112; ADR-108 |
+| R118 | Digit Span and Digit Symbol accept their advertised keyboard keys (0-9 and 1-4 respectively) so keyboard users are not forced to use the pointer. | The global keydown handler previously covered only the older mechanics even though both views published controls. | ADR-109 |
 
 ---
 

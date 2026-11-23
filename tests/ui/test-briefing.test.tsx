@@ -148,3 +148,47 @@ describe("pre-test briefing", () => {
     expect(screen.queryByTestId("test-briefing")).toBeNull();
   });
 });
+
+describe("keyboard answers for recent focus tests", () => {
+  it("maps digit keys 0-9 directly to Digit Span options", () => {
+    const onAnswer = vi.fn();
+    renderSession({
+      onAnswer,
+      view: {
+        ...view(),
+        mechanic: {
+          ...MECHANIC,
+          mechanic: "digit",
+          name: "Digit Span",
+          controls: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+          options: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        },
+      },
+    });
+    fireEvent.click(screen.getByTestId("begin-test"));
+    fireEvent.keyDown(window, { key: "7" });
+    expect(onAnswer).toHaveBeenCalledWith(7);
+  });
+
+  it("maps keys 1-4 to the four Symbol options", () => {
+    const onAnswer = vi.fn();
+    renderSession({
+      onAnswer,
+      view: {
+        ...view(),
+        mechanic: {
+          ...MECHANIC,
+          mechanic: "symbol",
+          name: "Digit Symbol",
+          controls: ["1", "2", "3", "4"],
+          options: ["1", "2", "3", "4"],
+        },
+      },
+    });
+    fireEvent.click(screen.getByTestId("begin-test"));
+    fireEvent.keyDown(window, { key: "3" });
+    expect(onAnswer).toHaveBeenCalledWith(2);
+    fireEvent.keyDown(window, { key: "9" });
+    expect(onAnswer).toHaveBeenCalledTimes(1);
+  });
+});

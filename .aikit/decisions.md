@@ -768,6 +768,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add `digit-proof.mjs` and `digit-trend-proof.mjs`, adapted from the Spatial Span proofs with forward/backward answer logic, and capture screenshots plus console-error checks, with R117.
 - **Consequences**: Both proofs run against a built app with `?ai` enabled and pass; the project now has a repeatable gameplay and trend check for every game.
 
+### ADR-109: Keyboard Controls for Digit Span and Symbol
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Both Digit Span and Digit Symbol publish keyboard controls in their view metadata, but the SessionScreen keydown handler omitted them, so those controls silently did nothing.
+- **Decision**: Map digit keys 0-9 directly for `digit` and keys 1-4 to options 0-3 for `symbol`, with R118, and cover both with jsdom tests.
+- **Consequences**: The two newest focus tests are keyboard-accessible; jsdom tests and a real Edge key press both confirm the mapping.
+
 
 
 

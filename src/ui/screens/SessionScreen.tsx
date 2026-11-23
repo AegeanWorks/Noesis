@@ -111,6 +111,11 @@ export function SessionScreen({
         if (view.mechanic.canRespond) onRespond();
         return;
       }
+      if (view.mechanic.mechanic === "digit" && /^[0-9]$/.test(event.key)) {
+        event.preventDefault();
+        if (view.mechanic.canRespond) onAnswer(Number(event.key));
+        return;
+      }
       if (
         (view.mechanic.mechanic === "reasoning" ||
           view.mechanic.mechanic === "switching" ||
@@ -119,7 +124,8 @@ export function SessionScreen({
           view.mechanic.mechanic === "rotation" ||
           view.mechanic.mechanic === "prospective" ||
           view.mechanic.mechanic === "paired" ||
-          view.mechanic.mechanic === "change") &&
+          view.mechanic.mechanic === "change" ||
+          view.mechanic.mechanic === "symbol") &&
         /^[1-9]$/.test(event.key)
       ) {
         const option = Number(event.key) - 1;
@@ -131,7 +137,8 @@ export function SessionScreen({
               ? 9
               : view.mechanic.mechanic === "prospective"
                 ? 3
-                : view.mechanic.mechanic === "paired"
+                : view.mechanic.mechanic === "paired" ||
+                    view.mechanic.mechanic === "symbol"
                   ? 4
                   : 2;
         if (option < max) {
