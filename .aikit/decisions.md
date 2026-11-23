@@ -537,6 +537,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Sella 2023 as a context record, extend the confidence note with a linked citation clarifying that a one-item prompt is not the structured intervention, add R84 and a failing-first UI test.
 - **Consequences**: The review moves to 146 records and 343 outcomes (revision v2.11) and the app's reflection-versus-intervention distinction becomes verifiable without changing the confidence feature itself.
 
+### ADR-076: Visual Search Context Citation
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Visual Search cited only Zhang 2022. Vialatte et al. 2023 (PMID 36922549) had been narrative-only in NEW_MECHANIC_CANDIDATES.md section 7 and reports a reading-accuracy signal from symbol-search game training in 21 children with reading disorders.
+- **Decision**: Add Vialatte 2023 as a context record with its single-group limitations flagged, add it as a second Visual Search citation, and record R85 so the reading result is never read as a healthy-user transfer claim.
+- **Consequences**: The review moves to 147 records and 344 outcomes (revision v2.12); both Visual Search sources resolve in-app and the game's brief keeps its task-practice-only claim.
+
 
 
 

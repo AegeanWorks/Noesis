@@ -8863,6 +8863,53 @@
    ],
    "synthesis_role": "context",
    "product_use": "Grounds the confidence-check caveat: structured metacognitive training shows benefits in trials but with limited study quality; the app's prompt is reflection, not that intervention."
+  },
+  {
+   "pmid": "36922549",
+   "doi": "10.1038/s41598-023-31037-5",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Scientific Reports",
+   "title": "Enhancing reading accuracy through visual search training using symbols",
+   "modality": "cct",
+   "design": "rct",
+   "populations": [
+    "children",
+    "clinical"
+   ],
+   "k": 1,
+   "n": 21,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "academic",
+     "transfer": "far",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Reading accuracy improved in the session after a month of daily symbol-search game training, without a speed-accuracy trade-off; correlated with time spent training"
+    }
+   ],
+   "findings": [
+    "Symbol search practice transferred to reading accuracy in 21 children with reading disorders"
+   ],
+   "limitations": [
+    "Single small sample",
+    "Clinical population",
+    "Training periods introduced within-subject, no parallel control group"
+   ],
+   "flags": [
+    "small_sample_bias",
+    "clinical_specific",
+    "single_trial"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for Visual Search: a clinical single-group study of symbol search shows a reading-accuracy signal, but it is not a basis for an academic or general-attention claim."
   }
  ]
 }

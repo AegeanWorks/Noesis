@@ -295,6 +295,7 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     citations: [
       { pmid: "35838486", label: "Conjunction visual-search training study (2022)" },
+      { pmid: "36922549", label: "Symbol-search serious game for readers (2023)" },
     ],
     safety: "Static coloured shapes; no flicker, no rapid presentation.",
   },

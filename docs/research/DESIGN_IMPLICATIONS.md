@@ -172,6 +172,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R82 | The research export panel links its documented, locally controlled file format to the FAIR principles, and consent stays explicit and revocable because data-sharing attitudes are not reliably measurable. | Wilkinson 2016 defines FAIR; Maxwell 2026 found weak measurement properties in 60 data-sharing surveys. | 26978244; 41813053; ADR-073 |
 | R83 | The Evidence screen's near/far transfer explanation links the synthesis showing that effect sizes shrink with design quality and far transfer rarely occurs. | Sala & Gobet 2017 pooled chess, music and working-memory training meta-analyses and concluded that far transfer is rare. | 29276344; ADR-074 |
 | R84 | When a confidence rating is shown, the result card links the metacognitive-training evidence and states that a one-item reflection prompt is not that intervention. | Sella 2023 found benefits from structured metacognitive training but often-limited study quality; the app's prompt is descriptive only. | 36218025; ADR-075 |
+| R85 | Visual Search cites both the conjunction-search training study and the clinical symbol-search study, with the latter explicitly framed as context rather than a transfer claim for healthy users. | Zhang 2022 supports task-specific search gains; Vialatte 2023 is a 21-child single-group reading study with limited generalisability. | 35838486; 36922549; ADR-076 |
 
 ---
 

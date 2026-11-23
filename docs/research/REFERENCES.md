@@ -208,3 +208,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Metacognition evidence (2026-11-23 targeted update)
 
 - Efficacy of memory training interventions targeting metacognition for older adults: a systematic review and meta-analysis *Aging & Mental Health*. 2023. PMID: [36218025](https://pubmed.ncbi.nlm.nih.gov/36218025/). DOI: [10.1080/13607863.2022.2122931](https://doi.org/10.1080/13607863.2022.2122931).
+
+## Visual-search context (2026-11-23 targeted update)
+
+- Enhancing reading accuracy through visual search training using symbols *Scientific Reports*. 2023. PMID: [36922549](https://pubmed.ncbi.nlm.nih.gov/36922549/). DOI: [10.1038/s41598-023-31037-5](https://doi.org/10.1038/s41598-023-31037-5).

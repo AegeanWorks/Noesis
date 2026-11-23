@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 146 |
-| Outcomes | 343 |
+| Records | 147 |
+| Outcomes | 344 |
 | Primary outcomes | 258 |
 | Systematic reviews/meta-analyses | 92 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 26 |
-| RCTs | 8 |
+| RCTs | 9 |
 | Umbrella reviews | 2 |
-| DOI verified | 135 |
+| DOI verified | 136 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 62 |
+| cct | 63 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 135 |
+| DOI verified | 136 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **146** |
+| **Total** | **147** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -237,6 +237,8 @@ A 2026-11-23 data-reuse update resolved the two narrative-only citations in DATA
 A 2026-11-23 far-transfer update resolved Sala & Gobet 2017 (PMID 29276344, *Current Directions in Psychological Science*; DOI 10.1177/0963721417712760) from narrative-only to a context record, verified via E-utilities `efetch`. Three meta-analyses of chess, music and working-memory training found small-to-moderate effects inversely related to design quality and concluded that far transfer rarely occurs. The Evidence screen's near/far gradient now cites it directly (ADR-074). The record came from a targeted search, so D7 is unchanged; the review is now 145 records and 341 outcomes, revision v2.10.
 
 A 2026-11-23 metacognition update resolved Sella et al. 2023 (PMID 36218025, *Aging & Mental Health*; DOI 10.1080/13607863.2022.2122931) from narrative-only to a context record, verified via E-utilities `efetch`. Twenty-five studies (N=1,768) of metacognitive training reported memory d=0.52 (0.19-0.84), metacognitive-belief d=0.58 (0.23-0.93) and strategy-use d=0.98 (0.46-1.49), with often-limited methodological quality. The Results confidence prompt now links this source to clarify that a one-item reflection is not the structured intervention (ADR-075). D7 is unchanged; the review is now 146 records and 343 outcomes, revision v2.11.
+
+A 2026-11-23 visual-search context update resolved Vialatte et al. 2023 (PMID 36922549, *Scientific Reports*; DOI 10.1038/s41598-023-31037-5) from narrative-only to a context record, verified via E-utilities `efetch`. Twenty-one children with reading disorders improved reading accuracy after a month of daily symbol-search game training, without a speed-accuracy trade-off, but the single small clinical sample and within-subject training introduction preclude a transfer claim for healthy users. It is now a second, explicitly cautious citation on the Visual Search mechanic (ADR-076). D7 is unchanged; the review is now 147 records and 344 outcomes, revision v2.12.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
