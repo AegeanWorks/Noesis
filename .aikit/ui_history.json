@@ -863,5 +863,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "53b9e5b0b1e3e691113f51d82ff88ee2284d17b7838ebbdf0686942d5f9f6038",
     "baseline_digest": "53b9e5b0b1e3e691113f51d82ff88ee2284d17b7838ebbdf0686942d5f9f6038"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Evidence screen in Edge: action-game citation (PMID 29172564) renders in Motivation safeguards, corpus count 152, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795405813.1001892,
+    "finished_at": 1795405859.360961,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "57931b9e0f97940703c47588ecdb8e633ca637453fe462a0d856ab5cf43eb121",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795405859.3609629
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Action-game citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Action-game citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "57931b9e0f97940703c47588ecdb8e633ca637453fe462a0d856ab5cf43eb121",
+    "baseline_digest": "57931b9e0f97940703c47588ecdb8e633ca637453fe462a0d856ab5cf43eb121"
   }
 ]

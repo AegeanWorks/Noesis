@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-actiongame-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795405802.538823,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795413002.538823,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795405859.952596,
+    "completed_head": "59672c7f0d684beebf61211e4e444e5c6f5406c4",
+    "completed_tree": "480d1954fb4a54f38af42f10cfbcd63c47fc634c"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-metacognition-citation",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add Sella 2023 metacognitive-training meta-analysis as context and link it from the confidence reflection note",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795399554.7922254,
-      "timestamp_str": "2026-11-23 05:05:54",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The confidence check explicitly says it is not metacognitive training, but no source supports that distinction; Sella 2023 is a narrative-only 25-study meta-analysis about such training.",
-        "benefits": "Resolves another narrative-only citation into the corpus and grounds the reflection-versus-intervention distinction with reported effects and quality limits.",
-        "risks": "contract: one context record + UI note + test; dependency: none; concurrency: none; state: counts and references must move together",
-        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add failing-first test, run suites and review UI."
-      },
-      "plan_digest": "61730e67393dff429ec3d7e2a9f6cda3e9a9c339018707ddc5d48097c0b8ba01",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-metacognition-citation",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-actiongame-evidence",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-actiongame-evidence' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795405860.0179796,
+      "timestamp_str": "2026-11-23 06:51:00",
+      "agent": "opencode:hy4-flash-free",
+      "head": "59672c7f0d684beebf61211e4e444e5c6f5406c4",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
