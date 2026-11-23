@@ -635,6 +635,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a third confidence-note citation, with R98; keep the prompt explicitly non-diagnostic.
 - **Consequences**: The review moves to 161 records and 365 outcomes (revision v2.25) and the confidence caveat rests on reactivity, null-reactivity and monitoring-accuracy evidence.
 
+### ADR-090: UFOV Training Evidence on Visual Search
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Edwards et al. 2018 (PMID 29175362) was narrative-only in NEW_MECHANIC_CANDIDATES.md section 6.1 and reports improved speed/attention, functional transfer and ten-year durability for proprietary UFOV training, but no transfer to other neuropsychological tests.
+- **Decision**: Add it as a context record and a fifth Visual Search citation beside the construct-purity critique, with R99; keep the app's transparent single-construct design.
+- **Consequences**: The review moves to 162 records and 367 outcomes (revision v2.26) and the game rationale records both the promise of functional transfer and the reasons Noesis does not implement that protocol.
+
 
 
 

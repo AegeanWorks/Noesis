@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 161 |
-| Outcomes | 365 |
+| Records | 162 |
+| Outcomes | 367 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 100 |
+| Systematic reviews/meta-analyses | 101 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 29 |
 | RCTs | 12 |
 | Umbrella reviews | 2 |
-| DOI verified | 150 |
+| DOI verified | 151 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 70 |
+| cct | 71 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 150 |
+| DOI verified | 151 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **161** |
+| **Total** | **162** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -265,6 +265,8 @@ A 2026-11-23 measure-validity update resolved Woutersen et al. 2017 (PMID 292706
 A 2026-11-23 data-governance update resolved O'Dea et al. 2026 (PMID 42443473, *npj Digital Medicine*; DOI 10.1038/s44277-026-00066-z) from narrative-only to a context record, verified via E-utilities `efetch`. This Perspective calls for harmonised standards and hybrid broad-plus-dynamic consent so participants retain control as analytics evolve. The research export panel now cites it beside the FAIR principles (ADR-088). D7 is unchanged; the review is now 160 records and 364 outcomes, revision v2.24.
 
 A 2026-11-23 monitoring-accuracy update resolved Hu et al. 2025 (PMID 40845062, *Psychological Science*; DOI 10.1177/09567976251358838) from narrative-only to a context record, verified via E-utilities `efetch`. A meta-analysis (N=2,406) plus two replications found that stronger learners were slightly poorer at monitoring their own learning. The pre-test confidence note now cites it as a third source for the reflection-not-diagnostic wording (ADR-089). D7 is unchanged; the review is now 161 records and 365 outcomes, revision v2.25.
+
+A 2026-11-23 UFOV-training update resolved Edwards et al. 2018 (PMID 29175362, *Neuroscience & Biobehavioral Reviews*; DOI 10.1016/j.neubiorev.2017.11.004) from narrative-only to a context record, verified via E-utilities `efetch`. Across 44 studies from 17 RCTs, UFOV training improved speed and attention with functional transfer and decade-long durability, but no transfer to other neuropsychological outcomes; the protocol is proprietary and not construct-pure (PMID 29270605). Visual Search now cites both sides (ADR-090). D7 is unchanged; the review is now 162 records and 367 outcomes, revision v2.26.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

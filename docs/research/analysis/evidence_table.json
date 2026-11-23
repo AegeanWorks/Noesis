@@ -9624,6 +9624,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the confidence note: monitoring accuracy is not a reliable self-diagnostic even for strong learners, so the app's prompt stays descriptive."
+  },
+  {
+   "pmid": "29175362",
+   "doi": "10.1016/j.neubiorev.2017.11.004",
+   "doi_status": "verified",
+   "year": 2018,
+   "journal": "Neuroscience & Biobehavioral Reviews",
+   "title": "Systematic review and meta-analyses of useful field of view cognitive training",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "adults"
+   ],
+   "k": 17,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "processing_speed",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "44 studies from 17 RCTs: UFOV training enhanced speed of processing, attention and neural outcomes; effects equivalent against active and no-contact controls"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Far transfer to everyday function and well-being reported, with gains enduring up to ten years; no transfer to other neuropsychological outcomes"
+    }
+   ],
+   "findings": [
+    "Functional transfer and long-term durability reported for proprietary UFOV training",
+    "Adaptive and community-based protocols produced larger effects"
+   ],
+   "limitations": [
+    "UFOV is a proprietary, brief composite protocol",
+    "Some trials had financial interests; construct purity is doubtful (PMID 29270605)"
+   ],
+   "flags": [
+    "commercial_program",
+    "construct_impurity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for Visual Search: UFOV has ecological evidence but is proprietary and not construct-pure, so Noesis uses transparent single-construct focus tests instead."
   }
  ]
 }

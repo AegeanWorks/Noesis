@@ -265,3 +265,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Monitoring accuracy (2026-11-23 targeted update)
 
 - Good Learners Are Poor Monitors: A Negative Relation Between Learning Ability and Monitoring Accuracy *Psychological Science*. 2025. PMID: [40845062](https://pubmed.ncbi.nlm.nih.gov/40845062/). DOI: [10.1177/09567976251358838](https://doi.org/10.1177/09567976251358838).
+
+## UFOV training evidence (2026-11-23 targeted update)
+
+- Systematic review and meta-analyses of useful field of view cognitive training *Neuroscience & Biobehavioral Reviews*. 2018. PMID: [29175362](https://pubmed.ncbi.nlm.nih.gov/29175362/). DOI: [10.1016/j.neubiorev.2017.11.004](https://doi.org/10.1016/j.neubiorev.2017.11.004).

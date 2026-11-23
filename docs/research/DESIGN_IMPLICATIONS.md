@@ -186,6 +186,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R96 | Visual Search cites the UFOV construct-purity meta-analysis to justify single-construct, block-level measurement rather than a composite score. | Woutersen 2017 found every domain correlated with every UFOV subtest and no subtest selectively sensitive to one construct. | 29270605; ADR-087 |
 | R97 | The research export panel cites data-governance guidance beside FAIR: consent stays versioned and revocable so participation remains controllable. | O'Dea 2026 recommends harmonised standards and hybrid consent models that preserve participant control as analytics evolve. | 26978244; 42443473; ADR-088 |
 | R98 | The pre-test confidence note cites three JOL sources, including monitoring-accuracy evidence, and keeps the prompt descriptive rather than diagnostic. | Hu 2025 found stronger learners were slightly poorer at monitoring their learning (N=2,406), so self-ratings cannot calibrate performance. | 40875340; 29161973; 40845062; ADR-089 |
+| R99 | Visual Search cites both the positive UFOV training meta-analysis and the construct-purity critique, explaining the choice of transparent single-construct tasks over a proprietary composite. | Edwards 2018 found functional transfer and durability but no transfer to other neuropsychological outcomes; Woutersen 2017 found no subtest measures one construct. | 29175362; 29270605; ADR-090 |
 
 ---
 
