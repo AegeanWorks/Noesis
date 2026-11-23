@@ -2119,5 +2119,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "05e0347a0b123d69b31df1f73e057744e030c4b734532fc783eec0c7763ed179",
     "baseline_digest": "05e0347a0b123d69b31df1f73e057744e030c4b734532fc783eec0c7763ed179"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: game-based training citation renders in transfer copy, corpus count 191, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795453730.3535933,
+    "finished_at": 1795453777.3415108,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "4a25c150f4bb6345e15ba1c0cf319cdfcb7f48636a38c9d1ac4e9a8c8dda2ae2",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795453777.3415146
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "4a25c150f4bb6345e15ba1c0cf319cdfcb7f48636a38c9d1ac4e9a8c8dda2ae2",
+    "baseline_digest": "4a25c150f4bb6345e15ba1c0cf319cdfcb7f48636a38c9d1ac4e9a8c8dda2ae2"
   }
 ]
