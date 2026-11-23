@@ -1768,5 +1768,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "4d40eda118a091a515cfbb35b1212e349f6d32acdcae4fb1e481b65d5f4d73b2",
     "baseline_digest": "4d40eda118a091a515cfbb35b1212e349f6d32acdcae4fb1e481b65d5f4d73b2"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Home screen in Edge: weakest-link retrieval/spacing citations render, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795431626.5393353,
+    "finished_at": 1795431660.0386517,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "a4b5b0c6bbcfd4c01e4425541d49e83aa7ed854107c32d9df112c20c5b6474cb",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795431660.0386546
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/ui/home.test.tsx",
+        "reason": "Weakest-link citation assertion"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "a4b5b0c6bbcfd4c01e4425541d49e83aa7ed854107c32d9df112c20c5b6474cb",
+    "baseline_digest": "a4b5b0c6bbcfd4c01e4425541d49e83aa7ed854107c32d9df112c20c5b6474cb"
   }
 ]

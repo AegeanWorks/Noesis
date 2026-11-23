@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-weakest-link-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795431615.7269614,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795438815.7269614,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795431660.614678,
+    "completed_head": "b814d25248343902c7244091a53d21b729f57264",
+    "completed_tree": "f9d40a90cb49cd2e0a0c2d49fadf644cff9a37a1"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: resolve five narrative-only sources (Clark 2009, Schultz 1998, Karbach 2009, Gross 2012, Llana 2026) into context records and cite them on transfer/reward copy",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Closes the remaining narrative-only citation gap and makes the transfer-gradient copy evidence-linked.",
-        "mitigation": "Verify via efetch, update counts and references, add citations with failing-first tests, run suites and review UI.",
-        "risks": "contract: five context records and four new UI links; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "These five sources remain narrative-only but directly ground the near-miss safeguard, cosmetic-reward design and near/far transfer framing."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "a1c56dcae374f984dbdb2dc511700abe6e1d5da55a1e3c85d9d217871e4cf659",
-      "status": "in_progress",
-      "task_id": "noesis-transfer-mechanism-evidence",
-      "timestamp": 1795426616.4719212,
-      "timestamp_str": "2026-11-23 12:36:56",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-weakest-link-evidence' completed successfully.",
+      "head": "b814d25248343902c7244091a53d21b729f57264",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-weakest-link-evidence",
+      "timestamp": 1795431660.850253,
+      "timestamp_str": "2026-11-23 14:01:00"
     }
   ]
 }
