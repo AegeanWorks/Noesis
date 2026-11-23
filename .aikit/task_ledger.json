@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-residual-transfer-evidence",
+    "task_id": "noesis-digit-span-game",
     "last_phase": "phase 4",
     "active_phase": 5,
     "status": "completed",
-    "updated_at": 1795427846.5407555,
+    "updated_at": 1795429659.000101,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795435046.5407555,
+    "lease_until": 1795436859.000101,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -16,70 +16,11 @@
         "path": "projects/noesis"
       }
     ],
-    "completed_at": 1795427907.3188846,
-    "completed_head": "b270e82f0c079d7af3c53ca84264654454f420d5",
-    "completed_tree": "680eca8783d0785112418ecf8c8400af4e77a94c"
+    "completed_at": 1795429717.8438702,
+    "completed_head": "e824277787997402e723fa1d98f48c59ed9fd76b",
+    "completed_tree": "b200f62f68a8d05e8dcd5a982c47d7fa2c35fc9c"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 165/372 records, 468 tests, gates 7/7, dual-task boundary reviewed in Edge, ADR-093",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-dualtask-evidence",
-      "timestamp": 1795421536.143847,
-      "timestamp_str": "2026-11-23 11:12:16",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-dualtask-evidence' completed successfully.",
-      "head": "9d1fea510e8096b0a59f02c88d81372d868a9e69",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-dualtask-evidence",
-      "timestamp": 1795421600.333794,
-      "timestamp_str": "2026-11-23 11:13:20"
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Hao 2025 dual-task network meta-analysis as context and cite it on the modality boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and sharpens the no-motor-benefit boundary with clinical-population context.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The dual-task exclusion cites two reviews narratively; the network meta-analysis adds pooled modality comparisons and a clear clinical-population caveat."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "27a644a24aa40b49b8c7697595f995f9821925832ca235dcbfbe51d21f7d793d",
-      "status": "in_progress",
-      "task_id": "noesis-dualtask-network-evidence",
-      "timestamp": 1795422119.0319831,
-      "timestamp_str": "2026-11-23 11:21:59",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -409,6 +350,65 @@
       "task_id": "noesis-residual-transfer-evidence",
       "timestamp": 1795427908.0557356,
       "timestamp_str": "2026-11-23 12:58:28"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Digit Span as an experimental verbal working-memory focus test with indirect, explicitly bounded evidence",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a genuinely new, safe, static game; broad WM meta-analyses support task-practice framing without transfer claims.",
+        "mitigation": "Mirror the spatial engine, keep no flashing or audio, update every mechanic list, add failing-first tests and verify gameplay in Edge.",
+        "risks": "contract: new MechanicId touches types, schema, engine dispatch, UI stage, adaptive storage and script/test mechanic lists; dependency: none; concurrency: none; state: no evidence-count changes",
+        "why": "Verbal digit span is a distinct working-memory construct not covered by N-back, Corsi or paired associates, and the app could offer another claim-bounded focus test."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "9490be7475af0765356ac7f47e8d94daa0ba4c1db75efae3e95166c2f4e8e640",
+      "status": "in_progress",
+      "task_id": "noesis-digit-span-game",
+      "timestamp": 1795428212.7697656,
+      "timestamp_str": "2026-11-23 13:03:32",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 181/396 records unchanged, 476 tests, gates 7/7, Digit Span gameplay verified in Edge, ADR-100",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-digit-span-game",
+      "timestamp": 1795429659.000101,
+      "timestamp_str": "2026-11-23 13:27:38",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-digit-span-game' completed successfully.",
+      "head": "e824277787997402e723fa1d98f48c59ed9fd76b",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-digit-span-game",
+      "timestamp": 1795429717.9353013,
+      "timestamp_str": "2026-11-23 13:28:37"
     }
   ]
 }

@@ -1600,5 +1600,64 @@
     "final_snapshot_entries": 0,
     "surface_digest": "9425ed7d5d838c6009902937327bedb644683280d553cda5376a8e0f342c7943",
     "baseline_digest": "9425ed7d5d838c6009902937327bedb644683280d553cda5376a8e0f342c7943"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Played Digit Span in Edge: static digit stimulus, ten recall buttons, prompt advances after a tap, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795429674.2069986,
+    "finished_at": 1795429716.925177,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "8027f592650226c4480e7f165834ec08d50b3cf1e60447a3450fc38b01e8a2e1",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795429716.9251807
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/engine/ai.test.ts",
+        "reason": "Digit Span engine/UI tests and updated mechanic counts"
+      },
+      {
+        "path": "tests/engine/digit.test.ts",
+        "reason": "Digit Span engine/UI tests and updated mechanic counts"
+      },
+      {
+        "path": "tests/scripts/ai-drive-flags.test.ts",
+        "reason": "Digit Span engine/UI tests and updated mechanic counts"
+      },
+      {
+        "path": "tests/storage/adaptive.test.ts",
+        "reason": "Digit Span engine/UI tests and updated mechanic counts"
+      },
+      {
+        "path": "tests/ui/mechanic-stage.test.tsx",
+        "reason": "Digit Span engine/UI tests and updated mechanic counts"
+      },
+      {
+        "path": "tests/ui/menu-filter.test.tsx",
+        "reason": "Digit Span engine/UI tests and updated mechanic counts"
+      },
+      {
+        "path": "tests/ui/settings-symptoms.test.tsx",
+        "reason": "Digit Span engine/UI tests and updated mechanic counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "8027f592650226c4480e7f165834ec08d50b3cf1e60447a3450fc38b01e8a2e1",
+    "baseline_digest": "8027f592650226c4480e7f165834ec08d50b3cf1e60447a3450fc38b01e8a2e1"
   }
 ]
