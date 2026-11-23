@@ -103,6 +103,16 @@ record, the protocol or the pre-registered analysis plan.
 `switch_cost_ms`, `current_streak`, `max_streak`. `switch_cost_ms` is the switch mean reaction
 time minus the repeat mean reaction time; it can be negative and is 0 when either cell is empty.
 
+### 4.6 Span recall metrics (Spatial Span and Digit Span)
+
+`trials_seen`, `correct`, `incorrect`, `timed_out`, `accuracy` (0-1), `mean_span`,
+`max_span`, `current_streak`, `max_streak`. Digit Span also records
+`forward_accuracy` and `backward_accuracy` (0-1). `mean_span` is the mean
+attempted sequence length in a block; `max_span` is the longest sequence
+recalled correctly. In Digit Span the direction alternates by trial, with the
+first trial forward. All span values are descriptive within-block measures, not
+diagnoses or capacity estimates.
+
 ## 5. Study, far checks, symptoms and adaptation
 
 | Object | Fields |

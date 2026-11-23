@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-episodic-memory-review",
+    "task_id": "noesis-data-dictionary-span",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795436774.9566174,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795437442.1964526,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795443974.9566174,
+    "lease_until": 1795444642.1964526,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795436838.1707158,
-    "completed_head": "1ce7db223017eeb809e132669508119a8fe6f2d1",
-    "completed_tree": "e10ba748a6a149ea7cc5b95c1bed43d598a14ca1"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 185/404 records unchanged, 30 Python + 483 JS tests, gates 7/7, docs counts guard passes, ADR-110",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-docs-count-guard",
-      "timestamp": 1795433863.1073697,
-      "timestamp_str": "2026-11-23 14:37:43",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-docs-count-guard' completed successfully.",
-      "head": "0e0a0eb85fa5bcc46bef348cb17a3efe494e2efa",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-docs-count-guard",
-      "timestamp": 1795433874.5936902,
-      "timestamp_str": "2026-11-23 14:37:54"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Tsang 2022 prospective-memory review as context and cite it on the Prospective Memory game with a process-based caveat",
@@ -409,6 +371,48 @@
       "task_id": "noesis-episodic-memory-review",
       "timestamp": 1795436838.2376008,
       "timestamp_str": "2026-11-23 15:27:18"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: document Digit Span and Spatial Span metrics in the research data dictionary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Investigators can interpret span exports correctly; the dictionary matches the shipped metric keys.",
+        "mitigation": "Add the metric definitions, extend the existing doc guard test, run gates.",
+        "risks": "contract: one documentation section and a guard assertion; dependency: none; concurrency: none; state: no app or corpus changes",
+        "why": "Research exports carry mean_span, max_span, forward_accuracy and backward_accuracy, but the field-level dictionary never defined them."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "37b97aa394b4e501e5bb270fcb37f7088bffd02a7282f948942b121463803a3b",
+      "status": "in_progress",
+      "task_id": "noesis-data-dictionary-span",
+      "timestamp": 1795437378.6486225,
+      "timestamp_str": "2026-11-23 15:36:18",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 189/412 records unchanged, 32 Python + 485 JS tests, gates 7/7, span metrics documented and guarded",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-data-dictionary-span",
+      "timestamp": 1795437442.1964526,
+      "timestamp_str": "2026-11-23 15:37:22",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

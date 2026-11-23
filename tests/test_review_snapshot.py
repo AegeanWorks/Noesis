@@ -45,6 +45,18 @@ class ReviewSnapshotTest(unittest.TestCase):
             for name in focus_tests:
                 self.assertIn(name, doc, f"{name} missing from {rel}")
 
+    def test_data_dictionary_defines_span_metrics(self):
+        dictionary = (ROOT / "docs" / "research" / "DATA_DICTIONARY.md").read_text(
+            encoding="utf-8"
+        )
+        for field in (
+            "mean_span",
+            "max_span",
+            "forward_accuracy",
+            "backward_accuracy",
+        ):
+            self.assertIn(field, dictionary)
+
     def test_research_readme_counts_match_the_table(self):
         readme = (ROOT / "docs" / "research" / "README.md").read_text(encoding="utf-8")
         match = re.search(
