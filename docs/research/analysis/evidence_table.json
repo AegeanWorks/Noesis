@@ -11572,6 +11572,75 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the Prospective Memory focus test: training gains were mostly on low-ecological-validity lab tasks, so the app describes this as task practice with no everyday-function claim."
+  },
+  {
+   "pmid": "31002885",
+   "doi": "10.1016/j.arr.2019.04.002",
+   "doi_status": "verified",
+   "year": 2019,
+   "journal": "Ageing Research Reviews",
+   "title": "The impact of behavioral interventions on cognitive function in healthy older adults: A systematic review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 75,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "75 RCTs across 11 intervention types and 19 cognitive domains: process (n=26) and strategy (n=16) cognitive training improved trained domains"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Transfer to non-trained domains was weak; few studies examined action video games, leaving inconclusive results"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Only nine studies examined everyday function; notable long-term transfer appeared in some process/strategy training studies but the evidence base is small"
+    }
+   ],
+   "findings": [
+    "Cognitive training improves trained domains with weak transfer to untrained domains",
+    "Everyday-function evidence is sparse, so no general benefit is established"
+   ],
+   "limitations": [
+    "Narrative synthesis across heterogeneous interventions",
+    "Only nine everyday-function studies"
+   ],
+   "flags": [
+    "near_transfer_only",
+    "sparse_everyday_evidence"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-everyday-function boundary: even across 75 RCTs, transfer beyond trained domains was weak and everyday-function studies were few."
   }
  ]
 }

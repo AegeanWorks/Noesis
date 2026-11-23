@@ -366,3 +366,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Prospective-memory ecological validity (2026-11-23 targeted update)
 
 - Preserving prospective memory in daily life: A systematic review and meta-analysis of mnemonic strategy, cognitive training, external memory aid, and combination interventions *Neuropsychology*. 2021. PMID: [33393806](https://pubmed.ncbi.nlm.nih.gov/33393806/). DOI: [10.1037/neu0000704](https://doi.org/10.1037/neu0000704).
+
+## Everyday-function boundary evidence (2026-11-23 targeted update)
+
+- The impact of behavioral interventions on cognitive function in healthy older adults: A systematic review *Ageing Research Reviews*. 2019. PMID: [31002885](https://pubmed.ncbi.nlm.nih.gov/31002885/). DOI: [10.1016/j.arr.2019.04.002](https://doi.org/10.1016/j.arr.2019.04.002).

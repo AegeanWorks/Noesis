@@ -915,6 +915,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Jones et al. 2021 as a context record, a third mechanic citation and an explicit ecological-validity caveat in the brief, with R138; bump the review version to v2.47.
 - **Consequences**: The review moves to 196 records and 429 outcomes (revision v2.47), D7 residuals fall to 939, and the game's task-practice-only framing has direct pooled support.
 
+### ADR-130: Broad Behavioral Evidence on the Everyday Boundary
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The no-everyday-function boundary cited an under-investigation review; a verified 2019 systematic review adds cross-intervention evidence that transfer beyond trained domains is weak.
+- **Decision**: Add Sprague et al. 2019 as a context record and a second citation on that boundary, with R139; bump the review version to v2.48.
+- **Consequences**: The review moves to 197 records and 432 outcomes (revision v2.48), D7 residuals fall to 938, and the boundary now rests on two systematic reviews.
+
 
 
 

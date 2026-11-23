@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-prospective-ecology-evidence",
+    "task_id": "noesis-everyday-boundary-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795464636.1565986,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795466191.8423452,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795471836.1565986,
+    "lease_until": 1795473391.8423452,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795464790.9493768,
-    "completed_head": "91dc9ac0a62f8110f1e4e3c012c46f779ae89d2e",
-    "completed_tree": "be7961e9188f635338a66b5c78e9c0a2464d1827"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 191/417 records unchanged, 488 tests, gates 7/7, ui-audit zero jump-chip/small-label findings, ADR-123",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-jump-chip-a11y",
-      "timestamp": 1795454692.4029832,
-      "timestamp_str": "2026-11-23 20:24:52",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-jump-chip-a11y' completed successfully.",
-      "head": "8d58b0a6f944e9ba9c0643f1a3ad6f0e9a661420",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-jump-chip-a11y",
-      "timestamp": 1795454752.7858622,
-      "timestamp_str": "2026-11-23 20:25:52"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: fix remaining ui-audit findings - constrain hero decoration on narrow screens and raise subtle buttons, checkboxes/radios and detail summaries to 44px touch targets",
@@ -409,6 +371,48 @@
       "task_id": "noesis-prospective-ecology-evidence",
       "timestamp": 1795464791.0892582,
       "timestamp_str": "2026-11-23 23:13:11"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Sprague 2019 behavioral-intervention review as context and cite it on the no-everyday-function-benefit boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a broad systematic-review citation to the everyday-function boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2019 systematic review of 75 RCTs found trained-domain gains with weak transfer and few everyday-function studies, directly supporting the app's existing boundary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "63806168c1b05b770e9502c4f9815ee36cbe1aee62791f4ca3287f0ceb69ffdf",
+      "status": "in_progress",
+      "task_id": "noesis-everyday-boundary-evidence",
+      "timestamp": 1795465298.852653,
+      "timestamp_str": "2026-11-23 23:21:38",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 197/432 records, 489 tests, gates 7/7, everyday boundary citation verified in Edge, ADR-130",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-everyday-boundary-evidence",
+      "timestamp": 1795466191.8423452,
+      "timestamp_str": "2026-11-23 23:36:31",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
