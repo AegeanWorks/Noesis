@@ -754,6 +754,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Extend the grounding test to every `.ts`/`.tsx` source under `src/ui`, reusing the corpus lookup and narrative allowlist, with R115.
 - **Consequences**: All 75 in-app citations are now covered by a single invariant; no app behaviour, claim level or evidence count changes.
 
+### ADR-107: Sync the Review Version Constant
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: `EVIDENCE_REVIEW_VERSION` still read v1.8 (2026-11-08) and the export test pinned that value, while the research README declared v2.37; exported datasets and the Settings screen were mislabelled.
+- **Decision**: Update the constant and the export test to v2.37, and add a guard test that fails whenever the constant no longer matches the README status line, with R116.
+- **Consequences**: Research exports and the UI now report the correct corpus revision, and any later revision bump must update the constant in the same change.
+
 
 
 
