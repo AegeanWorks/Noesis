@@ -219,6 +219,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R126 | The Evidence screen states that Noesis makes no child-development or academic claim, since the app is not age-gated and the training evidence is adult-based. | Sala & Gobet 2017 found near gains with minimal far transfer and no academic benefit in typically developing children, with effects shrinking in stronger designs. | 28165253; ADR-117 |
 | R127 | Digit Span has a committed resume proof covering mid-session reload and completion, matching the other focus tests. | The proof verifies the persisted snapshot, Resume session label, restored seed/level/trial phase and three completed blocks without console errors. | R117; ADR-118 |
 | R128 | Visual Search and Digit Symbol have committed gameplay proofs, giving all ten games the same dogfood coverage. | The proofs drive a real three-block session, capture screenshots and report block metrics with no console errors. | ADR-119 |
+| R129 | Reasoning and Speed Tap also have committed gameplay proofs, completing played-session coverage for every mechanic. | The proofs use each mechanic's response action (option selection and Space-style response) and report block metrics without console errors. | ADR-120 |
 
 ---
 

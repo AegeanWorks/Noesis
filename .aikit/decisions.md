@@ -845,6 +845,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add `search-proof.mjs` and `symbol-proof.mjs`, adapted from the Digit Span proof with each mechanic's answer rule (target index and correct digit), covering menu card, briefing, three blocks, metrics and screenshots, with R128.
 - **Consequences**: Both proofs pass against a built app with `?ai` enabled and no console errors; every game now has repeatable gameplay coverage.
 
+### ADR-120: Gameplay Proofs for Reasoning and Speed Tap
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The two core mechanics were the last ones without committed browser gameplay proofs; other core-game scripts covered narrower evidence or prompt checks.
+- **Decision**: Add `reasoning-proof.mjs` and `speed-proof.mjs`, adapted from the Digit Span proof with each mechanic's response action (option selection and respond), with R129.
+- **Consequences**: Both proofs pass against a built app with `?ai` enabled and no console errors; all fourteen mechanics now have repeatable gameplay coverage.
+
 
 
 
