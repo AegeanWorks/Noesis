@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 170 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 173 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -192,6 +192,25 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/40304821/"
               label="Dual-task cognitive gains are clinical, movement-based findings"
               pmid="40304821"
+            />
+          </li>
+          <li>
+            Reward prediction, goal-gradient and rare-reward effects amplify pursuit, so bonuses
+            stay small, cosmetic and never randomized.{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/27069377/"
+              label="Schultz 2016: dopamine prediction error"
+              pmid="27069377"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/26063627/"
+              label="Li 2016: jackpot goal-gradient"
+              pmid="26063627"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/31760581/"
+              label="Larche 2021: rare rewards raise arousal"
+              pmid="31760581"
             />
           </li>
         </ul>

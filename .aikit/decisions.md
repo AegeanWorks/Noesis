@@ -684,6 +684,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add all three as context records; cite the first two on the practice-plan card and the third beside the near-miss safeguard, with R105.
 - **Consequences**: The review moves to 170 records and 378 outcomes (revision v2.32) and the app's planning and no-fake-win UI copy becomes evidence-linked.
 
+### ADR-097: Reward-Structure Mechanisms on Bonus Design
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Three sources from BEHAVIORAL_ENGAGEMENT.md were narrative-only: Schultz 2016 (dopamine reward-prediction error), Li et al. 2016 (jackpot goal-gradient and rollover effects raise bets), and Larche et al. 2021 (rare loot-box rewards raise arousal and urge).
+- **Decision**: Add all three as context records and one grouped Evidence-safeguards citation justifying small, cosmetic, never-randomized bonuses, with R106.
+- **Consequences**: The review moves to 173 records and 381 outcomes (revision v2.33) and the cosmetic-reward design is grounded in established reward mechanisms.
+
 
 
 

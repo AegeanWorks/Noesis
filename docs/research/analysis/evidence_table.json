@@ -10084,6 +10084,140 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the practice plan's 'pair it with' field: coupling a pleasant activity with practice may help, but the effect is not guaranteed to last."
+  },
+  {
+   "pmid": "27069377",
+   "doi": "10.31887/DCNS.2016.18.1/wschultz",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Dialogues in Clinical Neuroscience",
+   "title": "Dopamine reward prediction error coding",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "not_reported",
+     "note": "Dopamine neurons signal reward prediction error: more reward than predicted excites, expected reward is baseline, less depresses; addictive drugs hijack this signal"
+    }
+   ],
+   "findings": [
+    "Reward-prediction error drives striving for more reward",
+    "Nonlinear value coding and addiction hijack of the signal"
+   ],
+   "limitations": [
+    "Narrative neuroscience review",
+    "Mechanism, not a consumer-app outcome"
+   ],
+   "flags": [
+    "narrative_only",
+    "mechanism_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Mechanism rationale for cosmetic, capped rewards: variable rewards exploit prediction-error learning, so Noesis keeps stakes cosmetic and disclosed."
+  },
+  {
+   "pmid": "26063627",
+   "doi": "10.1007/s10899-015-9557-7",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Journal of Gambling Studies",
+   "title": "Jackpot Structural Features: Rollover Effect and Goal-Gradient Effect in EGM Gambling",
+   "modality": "engagement",
+   "design": "rct",
+   "populations": [
+    "adults"
+   ],
+   "k": 1,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "bet_size",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Large jackpots raised bets 20.3% (deterministic/goal-gradient) and 17.8% (progressive/rollover) above average; no effect for small jackpots"
+    }
+   ],
+   "findings": [
+    "Goal-gradient and rollover structures amplify betting on large prizes",
+    "Small jackpots did not produce the effect"
+   ],
+   "limitations": [
+    "Real-money gambling paradigm",
+    "Not a training context"
+   ],
+   "flags": [
+    "expectancy_risk",
+    "single_trial"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the capped-momentum rule: goal-gradient and rollover structures intensify pursuit, so the app caps cosmetic bonuses and avoids growing jackpots."
+  },
+  {
+   "pmid": "31760581",
+   "doi": "10.1007/s10899-019-09913-5",
+   "doi_status": "verified",
+   "year": 2021,
+   "journal": "Journal of Gambling Studies",
+   "title": "Rare Loot Box Rewards Trigger Larger Arousal and Reward Responses, and Greater Urge to Open More Loot Boxes",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults",
+    "young_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "arousal",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Rarer loot-box items were more arousing, rewarding and urge-inducing, with larger skin conductance and anticipatory arousal"
+    }
+   ],
+   "findings": [
+    "Rare rewards amplify arousal and the urge for more",
+    "Loot boxes parallel slot-machine reward reactivity"
+   ],
+   "limitations": [
+    "Video-game loot-box paradigm",
+    "Not a learning outcome"
+   ],
+   "flags": [
+    "expectancy_risk",
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-loot-box rule: rare random rewards drive arousal and urge, so the app's bonuses are small, cosmetic and never randomized prize drops."
   }
  ]
 }

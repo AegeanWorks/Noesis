@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-engagement-planning-evidence",
+    "task_id": "noesis-reward-mechanism-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795425382.306576,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795426447.523236,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795432582.306576,
+    "lease_until": 1795433647.523236,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795425445.8521652,
-    "completed_head": "efdda50e0c11aebc4e5d8ccc3a434f8a2de2c5eb",
-    "completed_tree": "c2b9402ca564d820363f3c4d797ef4535bd430e1"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 162/367 records, 468 tests, gates 7/7, UFOV training citation reviewed in Edge, ADR-090",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-ufov-training-evidence",
-      "timestamp": 1795418464.3536303,
-      "timestamp_str": "2026-11-23 10:21:04",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-ufov-training-evidence' completed successfully.",
-      "head": "7578df757000e829ff8f79e89ea0a073437c96ad",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-ufov-training-evidence",
-      "timestamp": 1795418516.7272184,
-      "timestamp_str": "2026-11-23 10:21:56"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Brand 2016 I-PACE model as context and cite it in Motivation safeguards",
@@ -409,6 +371,48 @@
       "task_id": "noesis-engagement-planning-evidence",
       "timestamp": 1795425445.9157014,
       "timestamp_str": "2026-11-23 12:17:25"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Li 2016, Larche 2021, Schultz 2016 as context and one grouped reward-mechanism citation",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Resolves three citations and adds the reward-prediction mechanism rationale without bloating the UI list.",
+        "mitigation": "Verify via efetch, update counts and references, add grouped citation with test, run suites and review UI.",
+        "risks": "contract: three context records and one grouped UI citation; dependency: none; concurrency: none; state: counts and references must move together",
+        "why": "Three gambling/reward-structure sources are cited narratively; they explain why bonus rewards stay cosmetic and capped."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "18f3ec55de6705eaf72f2a5e1313f1adf5265ada99a9c10a4fdeb6431c27da84",
+      "status": "in_progress",
+      "task_id": "noesis-reward-mechanism-evidence",
+      "timestamp": 1795426005.3321486,
+      "timestamp_str": "2026-11-23 12:26:45",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 173/381 records, 468 tests, gates 7/7, reward-mechanism citations verified in Edge, ADR-097",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-reward-mechanism-evidence",
+      "timestamp": 1795426447.523236,
+      "timestamp_str": "2026-11-23 12:34:07",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

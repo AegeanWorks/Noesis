@@ -295,3 +295,9 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 - Consider it done! Plan making can eliminate the cognitive effects of unfulfilled goals *Journal of Personality and Social Psychology*. 2011. PMID: [21688924](https://pubmed.ncbi.nlm.nih.gov/21688924/). DOI: [10.1037/a0024192](https://doi.org/10.1037/a0024192).
 - Losses disguised as wins in modern multi-line video slot machines *Addiction*. 2010. PMID: [20712818](https://pubmed.ncbi.nlm.nih.gov/20712818/). DOI: [10.1111/j.1360-0443.2010.03050.x](https://doi.org/10.1111/j.1360-0443.2010.03050.x).
 - Holding the Hunger Games Hostage at the Gym: An Evaluation of Temptation Bundling *Management Science*. 2014. PMID: [25843979](https://pubmed.ncbi.nlm.nih.gov/25843979/). DOI: [10.1287/mnsc.2013.1784](https://doi.org/10.1287/mnsc.2013.1784).
+
+## Reward-structure mechanisms (2026-11-23 targeted update)
+
+- Dopamine reward prediction error coding *Dialogues in Clinical Neuroscience*. 2016. PMID: [27069377](https://pubmed.ncbi.nlm.nih.gov/27069377/). DOI: [10.31887/DCNS.2016.18.1/wschultz](https://doi.org/10.31887/DCNS.2016.18.1/wschultz).
+- Jackpot Structural Features: Rollover Effect and Goal-Gradient Effect in EGM Gambling *Journal of Gambling Studies*. 2016. PMID: [26063627](https://pubmed.ncbi.nlm.nih.gov/26063627/). DOI: [10.1007/s10899-015-9557-7](https://doi.org/10.1007/s10899-015-9557-7).
+- Rare Loot Box Rewards Trigger Larger Arousal and Reward Responses, and Greater Urge to Open More Loot Boxes *Journal of Gambling Studies*. 2021. PMID: [31760581](https://pubmed.ncbi.nlm.nih.gov/31760581/). DOI: [10.1007/s10899-019-09913-5](https://doi.org/10.1007/s10899-019-09913-5).
