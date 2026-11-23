@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-placebo-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795424491.5424778,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795431691.5424778,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795424538.7559996,
+    "completed_head": "8df816ba989a9e279541662c715bb0a03252fd2a",
+    "completed_tree": "348067f0b35b942d9ac2680a7938320b920c2bd5"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Hu 2025 monitoring-accuracy meta-analysis as context and cite it in the confidence note",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and adds a third pooled source to the reflection-vs-diagnostic caveat.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The confidence note says confidence is a weak accuracy predictor; a verified meta-analysis shows even stronger learners monitor only slightly well."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "d9e3a020e3fda9d4e972af6f2f3a6b63fa5c9d2e1641f2827ee10f62d22cd6ec",
-      "status": "in_progress",
-      "task_id": "noesis-monitoring-accuracy-evidence",
-      "timestamp": 1795416958.160914,
-      "timestamp_str": "2026-11-23 09:55:58",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-placebo-evidence' completed successfully.",
+      "head": "8df816ba989a9e279541662c715bb0a03252fd2a",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-placebo-evidence",
+      "timestamp": 1795424538.943976,
+      "timestamp_str": "2026-11-23 12:02:18"
     }
   ]
 }

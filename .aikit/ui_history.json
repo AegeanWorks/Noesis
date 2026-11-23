@@ -1393,5 +1393,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "41c4f3fcbc6ac88728ac3c9fc49f64c451ef58a35cf19d1090968c73390eebe2",
     "baseline_digest": "41c4f3fcbc6ac88728ac3c9fc49f64c451ef58a35cf19d1090968c73390eebe2"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Evidence screen in Edge: placebo citation (PMID 27325761) renders in the no-intelligence boundary, corpus count 167, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795424502.3897526,
+    "finished_at": 1795424538.382152,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "49077eb9983337c8bd5f4aa905a4d9c59953fb455538b75fa82de3a561239a1d",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795424538.3821545
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Placebo citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Placebo citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "49077eb9983337c8bd5f4aa905a4d9c59953fb455538b75fa82de3a561239a1d",
+    "baseline_digest": "49077eb9983337c8bd5f4aa905a4d9c59953fb455538b75fa82de3a561239a1d"
   }
 ]
