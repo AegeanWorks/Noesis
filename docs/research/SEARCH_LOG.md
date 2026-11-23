@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 195 |
-| Outcomes | 427 |
+| Records | 196 |
+| Outcomes | 429 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 113 |
+| Systematic reviews/meta-analyses | 114 |
 | Network meta-analyses | 19 |
 | Other systematic reviews | 43 |
 | RCTs | 18 |
 | Umbrella reviews | 2 |
-| DOI verified | 184 |
+| DOI verified | 185 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 91 |
+| cct | 92 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 184 |
+| DOI verified | 185 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **195** |
+| **Total** | **196** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -308,6 +308,8 @@ A 2026-11-23 prognostic-boundary update added Roheger et al. 2021 (PMID 33986652
 
 A 2026-11-23 dementia-boundary update added Castro et al. 2023 (PMID 38151879, *The Journal of Nutrition, Health & Aging*; DOI 10.1007/s12603-023-2046-2), verified via E-utilities `efetch`. Across 15 multidomain lifestyle trials in at-risk older adults, cognitive outcomes were heterogeneous and individual component contributions could not be isolated. The Evidence screen's no-dementia-prevention boundary now cites it (ADR-128). D7 residuals fall to 940; the review is now 195 records and 427 outcomes, revision v2.46.
 
+A 2026-11-23 prospective-ecology update added Jones et al. 2021 (PMID 33393806, *Neuropsychology*; DOI 10.1037/neu0000704), verified via E-utilities `efetch`. Across 73 intervention studies, cognitive training improved prospective-memory tasks but only 20% of those studies had high ecological validity. The Prospective Memory brief now states this caveat (ADR-129). D7 residuals fall to 939; the review is now 196 records and 429 outcomes, revision v2.47.
+
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
 One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
@@ -333,7 +335,7 @@ One adherence record joined the table the same day (PMID 35612886, 99 studies, e
 | D4 | Independent GRADE not performed | Certainty would require full-text appraisal of every review | Certainty is recorded **as reported by the source** and is provisional |
 | D5 | PsycINFO, Embase, CINAHL and ERIC not searched directly | No institutional access in this environment | OpenAlex and PubMed citation coverage mitigate but do not close the gap |
 | D6 | English-language restriction | Feasibility | Language bias cannot be excluded |
-| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 33 eligible reviews extracted 2026-11-22/23 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change, 2 active-control/context, 2 clinical-claim, 1 prospective-memory, 2 neuroimaging-mechanism, 1 episodic-memory, 1 child-age-boundary, 1 game-design-context, 1 mood-boundary, 1 EF-taxonomy, 1 prognostic-boundary, 1 dementia-boundary) | Prioritisation by modality × population × outcome cell | 940 eligible reviews remain logged but not synthesised; partially closed |
+| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 34 eligible reviews extracted 2026-11-22/23 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change, 2 active-control/context, 2 clinical-claim, 1 prospective-memory, 2 neuroimaging-mechanism, 1 episodic-memory, 1 child-age-boundary, 1 game-design-context, 1 mood-boundary, 1 EF-taxonomy, 1 prognostic-boundary, 1 dementia-boundary, 1 prospective-ecology) | Prioritisation by modality × population × outcome cell | 939 eligible reviews remain logged but not synthesised; partially closed |
 | D8 | PubMed DOI fields unreliable | XML metadata inconsistency | Crossref verification used; 7 records are PMID-only and 4 carry preprint DOIs |
 | D9 | Preprint identifiers retained for four records | Crossref matched a preprint version | Flagged `preprint`; conclusions do not rely solely on them |
 | D10 | Initial 997-review corpus query omitted working-memory training, cognitive stimulation/rehabilitation, serious-game and VR-cognitive terms | Gap detected during screening | Query expanded to 1,495 reviews; final denominator and screening counts use the expanded corpus |

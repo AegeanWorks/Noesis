@@ -908,6 +908,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Castro et al. 2023 as a context record and a third citation on that boundary, with R137; bump the review version to v2.46.
 - **Consequences**: The review moves to 195 records and 427 outcomes (revision v2.46), D7 residuals fall to 940, and the boundary now distinguishes whole-lifestyle programs from a single-component app.
 
+### ADR-129: Ecological Validity on the Prospective Memory Brief
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The Prospective Memory brief cited efficacy meta-analyses but not the fact that training gains were mostly measured on low-ecological-validity lab tasks.
+- **Decision**: Add Jones et al. 2021 as a context record, a third mechanic citation and an explicit ecological-validity caveat in the brief, with R138; bump the review version to v2.47.
+- **Consequences**: The review moves to 196 records and 429 outcomes (revision v2.47), D7 residuals fall to 939, and the game's task-practice-only framing has direct pooled support.
+
 
 
 

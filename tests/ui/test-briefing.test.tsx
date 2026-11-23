@@ -216,3 +216,17 @@ describe("keyboard answers for recent focus tests", () => {
     expect(onAnswer).toHaveBeenCalledTimes(1);
   });
 });
+
+describe("prospective-memory briefing boundary", () => {
+  it("states the ecological-validity limit and links the 2021 meta-analysis", () => {
+    renderSession({
+      view: {
+        ...view(),
+        mechanic: { ...MECHANIC, mechanic: "prospective", name: "Prospective Memory" },
+      },
+    });
+    const briefing = screen.getByTestId("test-briefing");
+    expect(briefing.textContent).toMatch(/ecological validity in only 20%/i);
+    expect(briefing.querySelector('a[href*="33393806"]')).toBeTruthy();
+  });
+});

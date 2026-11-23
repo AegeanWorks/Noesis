@@ -228,6 +228,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R135 | The no-single-score rationale cites an executive-function taxonomy reanalysis showing that construct labels change conclusions. | Webb 2018 found common classifications conflate executive function with fluid reasoning and retrieval fluency, and attention with perception. | 29721646; ADR-126 |
 | R136 | The no-response-prediction boundary cites a systematic review finding inconsistent prognostic factors after training. | Roheger 2021 found age and baseline performance inconsistent across 23 studies and no validated profile for assigning users. | 33986652; ADR-127 |
 | R137 | The no-dementia-prevention boundary cites a multidomain lifestyle review showing heterogeneous outcomes and no isolable cognitive-training contribution. | Castro 2023 found mixed results across 15 trials in at-risk older adults, where single components could not be separated. | 38151879; ADR-128 |
+| R138 | The Prospective Memory brief states that training gains came mostly from lab tasks with low ecological validity, so no everyday-function benefit follows. | Jones 2021 found cognitive-training efficacy but high ecological validity in only 20% of those studies. | 33393806; ADR-129 |
 
 ---
 

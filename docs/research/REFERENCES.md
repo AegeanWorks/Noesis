@@ -362,3 +362,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Dementia-prevention boundary evidence (2026-11-23 targeted update)
 
 - Multi-Domain Interventions for Dementia Prevention - A Systematic Review *The Journal of Nutrition, Health & Aging*. 2023. PMID: [38151879](https://pubmed.ncbi.nlm.nih.gov/38151879/). DOI: [10.1007/s12603-023-2046-2](https://doi.org/10.1007/s12603-023-2046-2).
+
+## Prospective-memory ecological validity (2026-11-23 targeted update)
+
+- Preserving prospective memory in daily life: A systematic review and meta-analysis of mnemonic strategy, cognitive training, external memory aid, and combination interventions *Neuropsychology*. 2021. PMID: [33393806](https://pubmed.ncbi.nlm.nih.gov/33393806/). DOI: [10.1037/neu0000704](https://doi.org/10.1037/neu0000704).

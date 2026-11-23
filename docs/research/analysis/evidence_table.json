@@ -11513,6 +11513,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-dementia-prevention boundary: reported benefits came from multidomain lifestyle programs in at-risk adults, not from an isolated cognitive-training app."
+  },
+  {
+   "pmid": "33393806",
+   "doi": "10.1037/neu0000704",
+   "doi_status": "verified",
+   "year": 2021,
+   "journal": "Neuropsychology",
+   "title": "Preserving prospective memory in daily life: A systematic review and meta-analysis of mnemonic strategy, cognitive training, external memory aid, and combination interventions",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults",
+    "mci"
+   ],
+   "k": 73,
+   "n": 3749,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "episodic_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.538,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "73 prospective-memory intervention studies (N=3749): cognitive training was efficacious (g=0.538); mnemonic strategies g=0.450, external aids g=0.805"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "ecological_validity_rating",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Prospective-memory assessments had high ecological validity in only 20% of cognitive-training studies versus 84% of external-aid studies; combination interventions mixed (g=0.254)"
+    }
+   ],
+   "findings": [
+    "Cognitive training improved prospective-memory task performance",
+    "Ecological validity of those tasks was low, so everyday benefit is not established"
+   ],
+   "limitations": [
+    "Ecological-validity ratings varied by intervention type",
+    "Larger trials needed for adherence and daily-life implementation"
+   ],
+   "flags": [
+    "ecological_validity_gap",
+    "task_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the Prospective Memory focus test: training gains were mostly on low-ecological-validity lab tasks, so the app describes this as task practice with no everyday-function claim."
   }
  ]
 }
