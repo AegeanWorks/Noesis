@@ -1089,5 +1089,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "f02c50a78d9644506c2e63a5282fbd5c378a7aed784f604537584c0dfce8eccf",
     "baseline_digest": "f02c50a78d9644506c2e63a5282fbd5c378a7aed784f604537584c0dfce8eccf"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the running app in Edge: corpus count 159 and Visual Search source list resolve with no console errors; citation test passes",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795411856.9959986,
+    "finished_at": 1795411895.7109938,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "e33b45136ed974d8fa12b508b5996bcaec5107950d4bb0a9a5de797596773062",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795411895.7109952
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Snapshot counts follow the evidence table"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "e33b45136ed974d8fa12b508b5996bcaec5107950d4bb0a9a5de797596773062",
+    "baseline_digest": "e33b45136ed974d8fa12b508b5996bcaec5107950d4bb0a9a5de797596773062"
   }
 ]

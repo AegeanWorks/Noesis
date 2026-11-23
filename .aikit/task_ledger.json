@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-ufov-construct-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795411844.449028,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795419044.449028,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795411896.11206,
+    "completed_head": "e856d92589b694ff52dd4c957f3c04123a194a22",
+    "completed_tree": "605ad4ebd88ee0d64a4f34c1a2fa1e725cb54670"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Bediou 2018 action-game meta-analysis as context and cite it in Motivation safeguards",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and strengthens the game-format claim boundary.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "Action-game evidence is cited narratively to justify excluding that genre; its pooled effects and publication-bias warning belong in the corpus."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "848035888d70fdbccc9b1d9af84bb6c9c7962fc7b7db814d50ad42bba43072b6",
-      "status": "in_progress",
-      "task_id": "noesis-actiongame-evidence",
-      "timestamp": 1795405402.0804577,
-      "timestamp_str": "2026-11-23 06:43:22",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-ufov-construct-evidence' completed successfully.",
+      "head": "e856d92589b694ff52dd4c957f3c04123a194a22",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-ufov-construct-evidence",
+      "timestamp": 1795411896.3021328,
+      "timestamp_str": "2026-11-23 08:31:36"
     }
   ]
 }
