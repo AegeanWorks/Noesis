@@ -1011,5 +1011,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "4fa0cbb616e8f551735ba527ff596e0c3add657c36e80910ed221ca96f242e94",
     "baseline_digest": "4fa0cbb616e8f551735ba527ff596e0c3add657c36e80910ed221ca96f242e94"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Evidence screen in Edge: autonomy and reward citations render in Motivation safeguards, corpus count 157, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795409813.101284,
+    "finished_at": 1795409844.1861632,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "b63808462a7367b530a2f0f6ee9199ab90ded39bca233deb59f5f466527e0e02",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795409844.1861646
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Engagement citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Engagement citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "b63808462a7367b530a2f0f6ee9199ab90ded39bca233deb59f5f466527e0e02",
+    "baseline_digest": "b63808462a7367b530a2f0f6ee9199ab90ded39bca233deb59f5f466527e0e02"
   }
 ]

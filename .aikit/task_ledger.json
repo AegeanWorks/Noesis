@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-autonomy-reward-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795409802.8884904,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795417002.8884904,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795409844.5725324,
+    "completed_head": "5ad00984b0786c8dacc1c8ab5eec690792a6f2fa",
+    "completed_tree": "f4d3a8e579a3277aa85097e384f11bfa10e1c237"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Smith & Basak 2023 game-factors meta-analysis as context and link it from the Motivation safeguards",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and adds an effect size plus a design-feature caveat to the game rationale.",
-        "mitigation": "Add record, update counts/references/prose, add failing-first test, run suites and review UI.",
-        "risks": "contract: one context record + UI link + test; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The app's games and Motivation safeguards lack the largest pooled video-game training estimate, which also shows genre labels are not predictive."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "92f7109409382ea37c3f95c6cd094eacc32735eb2a4405b960c9438902b8439d",
-      "status": "in_progress",
-      "task_id": "noesis-gamefactors-evidence",
-      "timestamp": 1795403432.5363815,
-      "timestamp_str": "2026-11-23 06:10:32",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-autonomy-reward-evidence' completed successfully.",
+      "head": "5ad00984b0786c8dacc1c8ab5eec690792a6f2fa",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-autonomy-reward-evidence",
+      "timestamp": 1795409844.637874,
+      "timestamp_str": "2026-11-23 07:57:24"
     }
   ]
 }
