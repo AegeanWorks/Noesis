@@ -253,3 +253,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Home-based training feasibility (2026-11-23 targeted update)
 
 - Computer-Based Executive Function Training for Combat Veterans With PTSD: A Pilot Clinical Trial Assessing Feasibility and Predictors of Dropout *Frontiers in Psychiatry*. 2019. PMID: [30881315](https://pubmed.ncbi.nlm.nih.gov/30881315/). DOI: [10.3389/fpsyt.2019.00062](https://doi.org/10.3389/fpsyt.2019.00062).
+
+## Measure construct validity (2026-11-23 targeted update)
+
+- A meta-analysis of perceptual and cognitive functions involved in useful-field-of-view test performance *Journal of Vision*. 2017. PMID: [29270605](https://pubmed.ncbi.nlm.nih.gov/29270605/). DOI: [10.1167/17.14.11](https://doi.org/10.1167/17.14.11).

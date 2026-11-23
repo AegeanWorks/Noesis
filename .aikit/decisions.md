@@ -614,6 +614,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a second adherence-card citation, with R95; keep early endings logged without judgement.
 - **Consequences**: The review moves to 158 records and 362 outcomes (revision v2.22) and the non-shaming adherence copy is backed by a feasibility result rather than only by design intention.
 
+### ADR-087: Measure-Validity Citation on Visual Search
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Woutersen et al. 2017 (PMID 29270605) was narrative-only in NEW_MECHANIC_CANDIDATES.md section 6.1 and shows that none of the three UFOV subtests measures one clear construct, despite good ecological validity.
+- **Decision**: Add it as a context record and a fourth Visual Search citation, with R96; keep block-level single-construct reporting rather than a composite score.
+- **Consequences**: The review moves to 159 records and 363 outcomes (revision v2.23) and the app's measurement architecture is grounded in a construct-validity finding.
+
 
 
 

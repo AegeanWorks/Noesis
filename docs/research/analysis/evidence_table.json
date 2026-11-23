@@ -9494,6 +9494,50 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the adherence card: early endings are common and non-judgemental logging is appropriate; the app makes no treatment claim."
+  },
+  {
+   "pmid": "29270605",
+   "doi": "10.1167/17.14.11",
+   "doi_status": "verified",
+   "year": 2017,
+   "journal": "Journal of Vision",
+   "title": "A meta-analysis of perceptual and cognitive functions involved in useful-field-of-view test performance",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": 18,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "attention",
+     "transfer": "na",
+     "measure": "correlation_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "116 correlations from 18 articles; every domain correlated with every UFOV subtest and no subtest was selectively sensitive to one domain"
+    }
+   ],
+   "findings": [
+    "UFOV scores show high ecological validity but none of the three subtests measures one clear construct",
+    "A range of visual and cognitive functions contributes to each subtest"
+   ],
+   "limitations": [
+    "Correlational synthesis, not training evidence",
+    "UFOV is proprietary and brief by design"
+   ],
+   "flags": [
+    "construct_impurity",
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the choice of single-construct focus tests: a composite score would hide which function changed, so Noesis reports block-level measures separately."
   }
  ]
 }
