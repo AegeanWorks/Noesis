@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-data-reuse-citations",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795397922.271534,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795405122.271534,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795397962.1546135,
+    "completed_head": "502152ff73e0a7ef3fca9a2d4dbbacad92521a27",
+    "completed_tree": "6ec3e6ea40ae9c416477975db3109d6284a39ea2"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-expectancy-evidence",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: extract Motter 2024 expectancy trial and add a fifth linked claim boundary on the Evidence screen",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795391417.8764074,
-      "timestamp_str": "2026-11-23 02:50:17",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The review's measurement plan includes expectancy, but no corpus record shows whether baseline expectancy predicts training response; Motter 2024 is a 107-patient RCT with 78-week follow-up.",
-        "benefits": "Adds a direct null result for expectancy as a responder predictor and makes that boundary explicit alongside the other four.",
-        "risks": "contract: one context record + fifth list item + citation test; dependency: none; concurrency: none; state: counts and references must move together",
-        "mitigation": "Verify via PubMed efetch, update counts/references/prose, add the linked bullet, run all suites and review the UI."
-      },
-      "plan_digest": "0913f9566687aacefff9981ebe23077afaa3f6a6229eb5eca22c8ca4bf58042f",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-expectancy-evidence",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-data-reuse-citations",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-data-reuse-citations' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795397962.2111058,
+      "timestamp_str": "2026-11-23 04:39:22",
+      "agent": "opencode:hy4-flash-free",
+      "head": "502152ff73e0a7ef3fca9a2d4dbbacad92521a27",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }
