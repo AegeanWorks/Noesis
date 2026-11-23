@@ -873,6 +873,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Raise the shared jump-chip min-height to 44px with roomier padding and enlarge the shared jump-label font to 0.85rem, with R132.
 - **Consequences**: A fresh audit reports zero jump-chip small targets and zero tiny jump labels across all twelve views with no console errors; no app logic or corpus change.
 
+### ADR-124: Remaining UI Audit Findings
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The audit still reported three clipped hero cards, eleven overflow nodes, and undersized secondary buttons, form controls and detail summaries.
+- **Decision**: Constrain the hero decoration on narrow screens, raise those controls to 44px, and keep horizontally scrollable jump rows as intentional, with R133.
+- **Consequences**: Audit totals fell from clipped=3/overflow=11/smallTargets=51 to clipped=0/overflow=2/smallTargets=30; the remaining flags are inline prose links (WCAG inline exception) and off-screen chips in scrollable rows, with zero console errors.
+
 
 
 

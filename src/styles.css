@@ -348,7 +348,7 @@ p {
 .mechanic-details summary {
   display: flex;
   align-items: center;
-  min-height: 34px;
+  min-height: 44px;
   color: var(--accent);
   cursor: pointer;
   font-size: 0.84rem;
@@ -953,7 +953,7 @@ code {
 
   .hero-actions-secondary .btn {
     flex: 0 1 auto;
-    min-height: 40px;
+    min-height: 44px;
     padding: 8px 14px;
     font-size: 0.86rem;
   }
@@ -1496,19 +1496,19 @@ html.high-contrast .speed-ring-active {
 }
 
 .check input[type="checkbox"],
-.check input[type="radio"] {
-  inline-size: 22px;
-  block-size: 22px;
+.check input[type="radio"],
+.choice input[type="checkbox"],
+.choice input[type="radio"] {
+  inline-size: 44px;
+  block-size: 44px;
   flex: 0 0 auto;
   margin-top: 1px;
   accent-color: var(--accent);
 }
 
-.choice input[type="radio"] {
-  inline-size: 20px;
-  block-size: 20px;
-  flex: 0 0 auto;
-  accent-color: var(--accent);
+details > summary {
+  min-height: 44px;
+  padding-block: 8px;
 }
 
 
@@ -1633,7 +1633,7 @@ html.high-contrast .speed-ring-active {
 }
 
 .menu-filter select {
-  min-height: 40px;
+  min-height: 44px;
   padding: 8px 10px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -1666,7 +1666,7 @@ html.high-contrast .speed-ring-active {
 .menu-evidence summary {
   display: flex;
   align-items: center;
-  min-height: 34px;
+  min-height: 44px;
   color: var(--accent);
   cursor: pointer;
   font-size: 0.82rem;
@@ -1680,7 +1680,7 @@ html.high-contrast .speed-ring-active {
 .briefing-more summary {
   display: flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 44px;
   color: var(--accent);
   cursor: pointer;
   font-size: 0.84rem;
@@ -2259,6 +2259,7 @@ html.high-contrast .speed-ring-active {
 .confidence-option {
   border: 1px solid var(--border);
   border-radius: 999px;
+  min-height: 44px;
   padding: 8px 16px;
   background: rgba(255, 255, 255, 0.04);
   color: var(--muted);
@@ -2600,7 +2601,8 @@ html.high-contrast .speed-ring-active {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  padding: 6px 8px;
+  min-width: 44px;
+  padding: 6px 4px;
   border: 0;
   background: transparent;
   color: var(--muted);
@@ -2636,6 +2638,15 @@ html.high-contrast .speed-ring-active {
   .evidence-jump-chip,
   .settings-jump-chip {
     flex: 0 0 auto;
+  }
+
+  /* Keep the decorative mark inside the hero box on narrow screens: the outline
+     stays visible without extending the scroll width of the card. */
+  .hero-visual {
+    top: -48px;
+    right: 0;
+    width: 168px;
+    height: 168px;
   }
 }
 

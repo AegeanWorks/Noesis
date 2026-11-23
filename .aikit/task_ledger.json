@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-jump-chip-a11y",
+    "task_id": "noesis-ui-audit-remaining",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795454692.4029832,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795455643.8132708,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795461892.4029832,
+    "lease_until": 1795462843.8132708,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795454752.715566,
-    "completed_head": "8d58b0a6f944e9ba9c0643f1a3ad6f0e9a661420",
-    "completed_tree": "3ad6468e13e5f16c76cbd770b7082d60988ff38c"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 190/415 records, 485 tests, gates 7/7, child boundary verified in Edge, ADR-117",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-child-age-boundary",
-      "timestamp": 1795449838.141307,
-      "timestamp_str": "2026-11-23 19:03:58",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-child-age-boundary' completed successfully.",
-      "head": "960dd8cca8c16771b1cfa529ab683d117495bd13",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-child-age-boundary",
-      "timestamp": 1795450013.4474084,
-      "timestamp_str": "2026-11-23 19:06:53"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add a committed Digit Span mid-session reload resume proof, matching the other focus tests",
@@ -409,6 +371,48 @@
       "task_id": "noesis-jump-chip-a11y",
       "timestamp": 1795454752.7858622,
       "timestamp_str": "2026-11-23 20:25:52"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: fix remaining ui-audit findings - constrain hero decoration on narrow screens and raise subtle buttons, checkboxes/radios and detail summaries to 44px touch targets",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Removes layout overflow on mobile and brings interactive controls to the touch-target minimum.",
+        "mitigation": "Adjust hero decoration media query and control sizes, rebuild, re-run ui-audit to compare counts, run suites and gates.",
+        "risks": "contract: CSS-only changes in one file; dependency: none; concurrency: none; state: no app logic or corpus changes",
+        "why": "The audit still flags hero overflow/clipping and undersized native controls, secondary buttons and detail summaries below the 44px target."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "5a5f88a16f56bf4ba76df3decc537127bb61a3fb75abc8bec8d0593417bcf35a",
+      "status": "in_progress",
+      "task_id": "noesis-ui-audit-remaining",
+      "timestamp": 1795455033.5082436,
+      "timestamp_str": "2026-11-23 20:30:33",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 191/417 records unchanged, 488 tests, gates 7/7, audit clipped 3->0 overflow 11->2 smallTargets 51->30, ADR-124",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-ui-audit-remaining",
+      "timestamp": 1795455643.8132708,
+      "timestamp_str": "2026-11-23 20:40:43",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
