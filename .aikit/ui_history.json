@@ -2816,5 +2816,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "159d96beb374d4924579d3625ee9530d53f69515e03cfac750c08961409da057",
     "baseline_digest": "159d96beb374d4924579d3625ee9530d53f69515e03cfac750c08961409da057"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Settings clock note in Edge: real-world citation and caveat render, corpus count 205, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795474209.566856,
+    "finished_at": 1795474285.7791731,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "5c5f43cc35f2502ffc1f56e383ab7ceb458439b69b36c956ed154036a5360dda",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795474285.7791765
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Clock note citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/settings-symptoms.test.tsx",
+        "reason": "Clock note citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Clock note citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "5c5f43cc35f2502ffc1f56e383ab7ceb458439b69b36c956ed154036a5360dda",
+    "baseline_digest": "5c5f43cc35f2502ffc1f56e383ab7ceb458439b69b36c956ed154036a5360dda"
   }
 ]
