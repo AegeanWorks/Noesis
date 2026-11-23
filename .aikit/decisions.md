@@ -530,6 +530,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Sala & Gobet 2017 as a context record, link it from the near/far aside, update R83 and the citation test, and keep the claim wording unchanged.
 - **Consequences**: The review moves to 145 records and 341 outcomes (revision v2.10) and the app's most important evidence claim becomes click-through verifiable without changing what it asserts.
 
+### ADR-075: Linked Metacognition Caveat on Confidence Ratings
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The result card's confidence note says the rating is a reflection, not metacognitive training, with no source. Sella et al. 2023 (PMID 36218025) meta-analysed 25 structured metacognitive-training studies (N=1,768) and found memory and metacognitive benefits alongside often-limited study quality.
+- **Decision**: Add Sella 2023 as a context record, extend the confidence note with a linked citation clarifying that a one-item prompt is not the structured intervention, add R84 and a failing-first UI test.
+- **Consequences**: The review moves to 146 records and 343 outcomes (revision v2.11) and the app's reflection-versus-intervention distinction becomes verifiable without changing the confidence feature itself.
+
 
 
 

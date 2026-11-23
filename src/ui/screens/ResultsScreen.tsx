@@ -521,6 +521,20 @@ function ResultCard({
           calibration. Confidence is often only a weak predictor of accuracy.
         </p>
       ) : null}
+      {confidence ? (
+        <p className="fine" data-testid={`metacognition-evidence-${index}`}>
+          Structured metacognitive training shows benefits in trials, but study quality is often
+          limited; this one-item prompt is reflection, not that intervention.{" "}
+          <a
+            href="https://pubmed.ncbi.nlm.nih.gov/36218025/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Sella et al. 2023
+          </a>{" "}
+          <span className="pmid">PMID 36218025</span>
+        </p>
+      ) : null}
       {result.mechanic === "gonogo" ? (
         <p className="fine gonogo-dprime-note" data-testid="gonogo-dprime-note">
           Sensitivity (d′) = how well you distinguished Go from No-Go after correcting for the

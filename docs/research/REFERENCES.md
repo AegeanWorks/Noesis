@@ -204,3 +204,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Far-transfer synthesis (2026-11-23 targeted update)
 
 - Does Far Transfer Exist? Negative Evidence From Chess, Music, and Working Memory Training *Current Directions in Psychological Science*. 2017. PMID: [29276344](https://pubmed.ncbi.nlm.nih.gov/29276344/). DOI: [10.1177/0963721417712760](https://doi.org/10.1177/0963721417712760).
+
+## Metacognition evidence (2026-11-23 targeted update)
+
+- Efficacy of memory training interventions targeting metacognition for older adults: a systematic review and meta-analysis *Aging & Mental Health*. 2023. PMID: [36218025](https://pubmed.ncbi.nlm.nih.gov/36218025/). DOI: [10.1080/13607863.2022.2122931](https://doi.org/10.1080/13607863.2022.2122931).

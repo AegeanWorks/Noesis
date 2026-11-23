@@ -43,6 +43,15 @@ describe("Results confidence note", () => {
     expect(note).toMatch(/weak predictor/i);
   });
 
+  it("links the reflection caveat to the metacognitive-training evidence", () => {
+    renderResults("medium");
+    const note = screen.getByTestId("metacognition-evidence-0");
+    expect(note.textContent).toMatch(/reflection, not that intervention/i);
+    expect(note.querySelector("a")?.getAttribute("href")).toBe(
+      "https://pubmed.ncbi.nlm.nih.gov/36218025/",
+    );
+  });
+
   it("omits the note when no confidence was selected", () => {
     renderResults();
     expect(screen.queryByTestId("confidence-note-0")).toBeNull();

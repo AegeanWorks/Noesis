@@ -8805,6 +8805,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Grounds the Evidence screen's near-versus-far gradient: the app reports near transfer and treats far transfer as a research question."
+  },
+  {
+   "pmid": "36218025",
+   "doi": "10.1080/13607863.2022.2122931",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Aging & Mental Health",
+   "title": "Efficacy of memory training interventions targeting metacognition for older adults: a systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 25,
+   "n": 1768,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "episodic_memory",
+     "transfer": "near",
+     "measure": "Cohen d",
+     "value": 0.52,
+     "ci_low": 0.19,
+     "ci_high": 0.84,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Metacognitive training on memory; 25 studies, 1768 older adults"
+    },
+    {
+     "domain": "mindfulness",
+     "transfer": "na",
+     "measure": "Cohen d",
+     "value": 0.58,
+     "ci_low": 0.23,
+     "ci_high": 0.93,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Metacognitive beliefs; strategic training d=0.48 (0.28-0.69)"
+    }
+   ],
+   "findings": [
+    "Strategy use improved most (d=0.98 metacognitive, d=0.87 strategic)",
+    "Methodological quality of most studies was limited; well-designed confirmation needed"
+   ],
+   "limitations": [
+    "Limited study quality",
+    "Training protocols are structured interventions, not a single reflection prompt"
+   ],
+   "flags": [
+    "low_quality_evidence",
+    "intervention_mixing"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the confidence-check caveat: structured metacognitive training shows benefits in trials but with limited study quality; the app's prompt is reflection, not that intervention."
   }
  ]
 }

@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 145 |
-| Outcomes | 341 |
+| Records | 146 |
+| Outcomes | 343 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 91 |
+| Systematic reviews/meta-analyses | 92 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 26 |
 | RCTs | 8 |
 | Umbrella reviews | 2 |
-| DOI verified | 134 |
+| DOI verified | 135 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 61 |
+| cct | 62 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 134 |
+| DOI verified | 135 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **145** |
+| **Total** | **146** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -235,6 +235,8 @@ A 2026-11-23 serious-games update added one context record from the residual eli
 A 2026-11-23 data-reuse update resolved the two narrative-only citations in DATA_EXPORT_AND_REUSE.md into context records, both verified via E-utilities `efetch`. Wilkinson et al. 2016 (PMID 26978244, *Scientific Data*; DOI 10.1038/sdata.2016.18) defines the FAIR principles for documented, machine-readable, reusable data. Maxwell et al. 2026 (PMID 41813053, *BMJ Open*; DOI 10.1136/bmjopen-2025-100314) reviewed 60 data-sharing KAP surveys and found weak development and reporting, so data-sharing willingness cannot be inferred reliably. The research export panel now links the FAIR paper (ADR-073). These came from a targeted search, so D7 is unchanged. The review is now 144 records and 340 outcomes, revision v2.9.
 
 A 2026-11-23 far-transfer update resolved Sala & Gobet 2017 (PMID 29276344, *Current Directions in Psychological Science*; DOI 10.1177/0963721417712760) from narrative-only to a context record, verified via E-utilities `efetch`. Three meta-analyses of chess, music and working-memory training found small-to-moderate effects inversely related to design quality and concluded that far transfer rarely occurs. The Evidence screen's near/far gradient now cites it directly (ADR-074). The record came from a targeted search, so D7 is unchanged; the review is now 145 records and 341 outcomes, revision v2.10.
+
+A 2026-11-23 metacognition update resolved Sella et al. 2023 (PMID 36218025, *Aging & Mental Health*; DOI 10.1080/13607863.2022.2122931) from narrative-only to a context record, verified via E-utilities `efetch`. Twenty-five studies (N=1,768) of metacognitive training reported memory d=0.52 (0.19-0.84), metacognitive-belief d=0.58 (0.23-0.93) and strategy-use d=0.98 (0.46-1.49), with often-limited methodological quality. The Results confidence prompt now links this source to clarify that a one-item reflection is not the structured intervention (ADR-075). D7 is unchanged; the review is now 146 records and 343 outcomes, revision v2.11.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
