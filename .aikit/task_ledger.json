@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-monitoring-accuracy-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795417400.4182866,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795424600.4182866,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795417455.656908,
+    "completed_head": "47d19ddf92d2bec202f68daab80ff7f1ba60fe2b",
+    "completed_tree": "1c62ab6f2b52ce3c19af4dd1da8ff3f59b37caaf"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Bueicheku 2019 visual-search connectivity study as context and cite it in Visual Search",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and separates neural change from user benefit.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "Visual Search's narrative rationale cites a neural training study not in the corpus; its mechanism-only result supports the no-behavioural-transfer caveat."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "fe81165d050e1cf460ec631b95943d80da8f832529f09723b0842c716192622d",
-      "status": "in_progress",
-      "task_id": "noesis-visualsearch-neural",
-      "timestamp": 1795407382.9092865,
-      "timestamp_str": "2026-11-23 07:16:22",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-monitoring-accuracy-evidence' completed successfully.",
+      "head": "47d19ddf92d2bec202f68daab80ff7f1ba60fe2b",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-monitoring-accuracy-evidence",
+      "timestamp": 1795417455.717505,
+      "timestamp_str": "2026-11-23 10:04:15"
     }
   ]
 }

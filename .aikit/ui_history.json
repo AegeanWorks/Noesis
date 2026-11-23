@@ -1163,5 +1163,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "054ca7d11f503522fac21d4b7bd56bfb1d53f7442d2b77dad42d5e92e4ef7454",
     "baseline_digest": "054ca7d11f503522fac21d4b7bd56bfb1d53f7442d2b77dad42d5e92e4ef7454"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the pre-test briefing in Edge: all three confidence citations render, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795417414.2835793,
+    "finished_at": 1795417455.290157,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "6cc3a5b3997db91c6b9a8836641d9e2a7fd88b9392f27124af955db610b6e579",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795417455.2901585
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Monitoring citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/test-briefing.test.tsx",
+        "reason": "Monitoring citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "6cc3a5b3997db91c6b9a8836641d9e2a7fd88b9392f27124af955db610b6e579",
+    "baseline_digest": "6cc3a5b3997db91c6b9a8836641d9e2a7fd88b9392f27124af955db610b6e579"
   }
 ]
