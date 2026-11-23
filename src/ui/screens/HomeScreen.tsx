@@ -546,6 +546,27 @@ export function HomeScreen({
             Spaced retrieval works best on what you almost know. One focused session
             re-tests just this task.
           </p>
+          <p className="fine" data-testid="weakest-link-evidence">
+            Testing yourself beats restudying in the literature, and spaced practice outperforms
+            massed practice across retention intervals; these are group-level findings, not a
+            personal dose target.{" "}
+            <a
+              href="https://pubmed.ncbi.nlm.nih.gov/25150680/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Rowland 2014
+            </a>{" "}
+            <span className="pmid">PMID 25150680</span> ·{" "}
+            <a
+              href="https://pubmed.ncbi.nlm.nih.gov/16719566/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Cepeda et al. 2006
+            </a>{" "}
+            <span className="pmid">PMID 16719566</span>
+          </p>
           <div className="hero-actions">
             <Button
               variant="ghost"

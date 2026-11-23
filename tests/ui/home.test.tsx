@@ -241,6 +241,10 @@ describe("HomeScreen", () => {
     fireEvent.click(focusButtons[0]!);
     expect(props.onFocusMechanic).toHaveBeenCalledWith("reasoning");
     expect(screen.getByTestId("weakest-link").textContent).toMatch(/wobbliest lately/i);
+    const evidence = screen.getByTestId("weakest-link-evidence");
+    expect(evidence.textContent).toMatch(/testing yourself beats restudying/i);
+    expect(evidence.querySelector('a[href*="25150680"]')).toBeTruthy();
+    expect(evidence.querySelector('a[href*="16719566"]')).toBeTruthy();
     fireEvent.click(focusButtons[1]!);
     expect(props.onFocusMechanic).toHaveBeenCalledTimes(2);
     cleanup();

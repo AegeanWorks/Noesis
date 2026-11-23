@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-digit-span-trend",
+    "task_id": "noesis-weakest-link-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795431177.4121299,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795431615.7269614,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795438377.4121299,
+    "lease_until": 1795438815.7269614,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795431247.533948,
-    "completed_head": "82bde6327a528b6fe6165b7f2c0a49f8adf2dcd2",
-    "completed_tree": "8a9b91551a842cbd90383b995fad9c8f1a063f24"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 173/381 records, 468 tests, gates 7/7, reward-mechanism citations verified in Edge, ADR-097",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-reward-mechanism-evidence",
-      "timestamp": 1795426447.523236,
-      "timestamp_str": "2026-11-23 12:34:07",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-reward-mechanism-evidence' completed successfully.",
-      "head": "1353544f066776b5b429d9e771a0c6b417dad18b",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-reward-mechanism-evidence",
-      "timestamp": 1795426492.716983,
-      "timestamp_str": "2026-11-23 12:34:52"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: resolve five narrative-only sources (Clark 2009, Schultz 1998, Karbach 2009, Gross 2012, Llana 2026) into context records and cite them on transfer/reward copy",
@@ -409,6 +371,48 @@
       "task_id": "noesis-digit-span-trend",
       "timestamp": 1795431247.965928,
       "timestamp_str": "2026-11-23 13:54:07"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: cite retrieval-practice and spacing evidence on the Home screen's weakest-link focus suggestion",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Makes the focus suggestion traceable to testing-effect and spacing evidence without changing the recommendation or adding claims.",
+        "mitigation": "Cite existing table PMIDs 25150680 and 16719566, add a failing-first test, run suites and review the card in Edge.",
+        "risks": "contract: one Home-screen citation line and one test assertion; dependency: none; concurrency: none; state: no evidence-count changes",
+        "why": "The weakest-link card recommends focused re-testing of weak tasks but had no evidence link, while two verified retrieval-practice records exist in the corpus."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "c54f5095be77f2e12c85f52d813b4606601e481980f0d8c03dd8007421bb876e",
+      "status": "in_progress",
+      "task_id": "noesis-weakest-link-evidence",
+      "timestamp": 1795431439.6163318,
+      "timestamp_str": "2026-11-23 13:57:19",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 183/400 records unchanged, 479 tests, gates 7/7, weakest-link citations verified in Edge, ADR-104",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-weakest-link-evidence",
+      "timestamp": 1795431615.7269614,
+      "timestamp_str": "2026-11-23 14:00:15",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
