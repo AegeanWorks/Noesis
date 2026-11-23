@@ -502,6 +502,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add the review as a context record with null-valued narrative outcomes, record the caveat in NEW_MECHANIC_CANDIDATES.md section 8, and keep every game framed as claim-bounded task practice rather than a substitute for care.
 - **Consequences**: The review moves to 142 records and 338 outcomes (revision v2.8), D7 residuals fall to 958, and the game rationale carries the evidence-quality limitation next to the positive findings.
 
+### ADR-071: Linked Evidence on the Far-Check Card
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The home far-check card tells users that reviews usually find no transfer to untrained memory, but gave no source. Melby-Lervåg & Hulme 2013 (PMID 22612437) is already a primary record in the corpus and reports reliable working-memory training gains with no convincing generalization.
+- **Decision**: Add a short, PubMed-linked citation to the far-check card stating that no convincing far transfer was found in that meta-analysis, add R80, and pin the wording and link with a failing-first UI test.
+- **Consequences**: No evidence-table or count changes. The app's most prominent transfer caveat becomes click-through verifiable, and the test guards against the citation drifting away.
+
 
 
 

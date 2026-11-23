@@ -261,6 +261,11 @@ describe("HomeScreen", () => {
     const onStartFarCheck = vi.fn();
     renderHome({ farChecks: [], onStartFarCheck });
     expect(screen.getByTestId("far-check-card").textContent).toMatch(/monthly far check/i);
+    const evidence = screen.getByTestId("far-check-evidence");
+    expect(evidence.textContent).toMatch(/no convincing far transfer/i);
+    expect(evidence.querySelector("a")?.getAttribute("href")).toBe(
+      "https://pubmed.ncbi.nlm.nih.gov/22612437/",
+    );
     fireEvent.click(screen.getByRole("button", { name: "Start far check" }));
     expect(onStartFarCheck).toHaveBeenCalledTimes(1);
     cleanup();

@@ -489,6 +489,17 @@ export function HomeScreen({
             Two minutes of word recognition, kept separate from practice. It checks whether
             training reaches untrained memory — which reviews usually find it does not.
           </p>
+          <p className="fine" data-testid="far-check-evidence">
+            No convincing far transfer was found in the working-memory training meta-analysis.{" "}
+            <a
+              href="https://pubmed.ncbi.nlm.nih.gov/22612437/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Melby-Lervåg &amp; Hulme 2013
+            </a>{" "}
+            <span className="pmid">PMID 22612437</span>
+          </p>
           <div className="hero-actions">
             <Button variant="ghost" onClick={onStartFarCheck}>
               Start far check

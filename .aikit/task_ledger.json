@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-serious-games-evidence",
+    "task_id": "noesis-farcheck-citation",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795395237.2321022,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795396012.5670173,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795402437.2321022,
+    "lease_until": 1795403212.5670173,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795395281.37384,
-    "completed_head": "14d9d9c8d9c50fd21670e0e18e3d87a2ef7bab2b",
-    "completed_tree": "79e428644d73ac873a50e3dce007fbe0f35248cb"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-adhd-claim-boundary",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 137/324 records, 457 node + 29 python tests, claim-boundary list reviewed in Edge, ADR-064",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795388157.9187274,
-      "timestamp_str": "2026-11-23 01:55:57",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-adhd-claim-boundary",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-adhd-claim-boundary' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795388283.180373,
-      "timestamp_str": "2026-11-23 01:58:03",
-      "agent": "opencode:hy4-flash-free",
-      "head": "885c90ddc5af0dc2c4fbe96756f2df628648644a",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-game-design-evidence",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-farcheck-citation",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add a PubMed-linked evidence citation to the home far-check card",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795395847.2948196,
+      "timestamp_str": "2026-11-23 04:04:07",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "The far-check card claims reviews usually find no transfer but gives no source, weakening the app's central claim-boundary message.",
+        "benefits": "Makes the far-transfer caveat verifiable with a link to an in-corpus meta-analysis and pins it with a UI test.",
+        "risks": "contract: small UI text change + test; dependency: none; concurrency: none; state: none",
+        "mitigation": "Use an existing in-corpus PMID, add a failing-first test, run all suites and review the UI."
+      },
+      "plan_digest": "64b53172699b820796e4191587447ae742fec28fb83f690921a4096ac70c394a",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-farcheck-citation",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 465 tests, gates 7/7, far-check citation reviewed in Edge, ADR-071",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795396012.5670173,
+      "timestamp_str": "2026-11-23 04:06:52",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
