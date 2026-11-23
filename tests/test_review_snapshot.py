@@ -24,6 +24,24 @@ class ReviewSnapshotTest(unittest.TestCase):
     def setUpClass(cls):
         cls.entries = parse_entries(load_table())
 
+    def test_trial_dossier_lists_every_focus_test(self):
+        dossier = (ROOT / "docs" / "research" / "TRIAL_READINESS.md").read_text(
+            encoding="utf-8"
+        )
+        for name in (
+            "Task Switch",
+            "Flanker",
+            "Spatial Span",
+            "Mental Rotation",
+            "Prospective Memory",
+            "Paired Associates",
+            "Change Detection",
+            "Visual Search",
+            "Digit Symbol",
+            "Digit Span",
+        ):
+            self.assertIn(name, dossier)
+
     def test_research_readme_counts_match_the_table(self):
         readme = (ROOT / "docs" / "research" / "README.md").read_text(encoding="utf-8")
         match = re.search(

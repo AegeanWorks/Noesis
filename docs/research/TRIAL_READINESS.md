@@ -1,4 +1,4 @@
-# Noesis Investigational Use: Trial Dossier (v1.0, 2026-11-02; data-sharing update 2026-11-08)
+# Noesis Investigational Use: Trial Dossier (v1.0, 2026-11-02; data-sharing update 2026-11-08; lineup update 2026-11-23)
 
 This document is for investigators running a randomised controlled trial with
 Noesis. It states what each trial arm does, what each record carries and how
@@ -17,8 +17,8 @@ pre-post difference is a hypothesis the trial tests, not a finding.
 Both arms share: the same four core mechanics, fixed session structure, opt-in
 Motivation mode with identical risk rules, adaptive difficulty (opt-in),
 weekly day-goals, far checks, adverse-event capture, heavy-use monitoring
-and the Motivation pause. The experimental Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates and Change Detection are Menu focus tests
-and is not in the trial lineup unless the protocol adds it explicitly. The engagement arm differs only in incentive
+and the Motivation pause. The ten experimental focus tests — Task Switch, Flanker, Spatial Span, Mental Rotation, Prospective Memory, Paired Associates, Change Detection, Visual Search, Digit Symbol and Digit Span — are available from the Menu
+and are not in the trial lineup unless the protocol adds them explicitly. The engagement arm differs only in incentive
 delivery (R39, R51, ADR-015, ADR-027).
 
 Arm assignment is protocol-side. The app records the assigned arm per session

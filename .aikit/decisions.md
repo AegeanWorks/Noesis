@@ -810,6 +810,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add both as context records and an Evidence-screen note stating that these are mechanism markers, not general or everyday benefit, with R123; bump the review version to v2.39.
 - **Consequences**: The review moves to 188 records and 410 outcomes (revision v2.39), D7 residuals fall to 947, and the app's mechanism-vs-benefit distinction is explicit.
 
+### ADR-115: Trial Dossier Lineup Consistency
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The investigator dossier and the design traceability document still listed only seven focus tests after three more had shipped, and the dossier had a grammar error.
+- **Decision**: List all ten focus tests in both documents, fix the grammar, and add a test asserting the dossier names every focus test, with R124.
+- **Consequences**: Investigators see the same lineup as the app; no app behaviour, corpus or version change.
+
 
 
 
