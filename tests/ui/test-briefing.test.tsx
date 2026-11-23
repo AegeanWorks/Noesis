@@ -149,6 +149,30 @@ describe("pre-test briefing", () => {
   });
 });
 
+describe("further-reading citations in the briefing", () => {
+  it("lists every citation after the primary source", () => {
+    renderSession({
+      view: {
+        ...view(),
+        mechanic: { ...MECHANIC, mechanic: "prospective", name: "Prospective Memory" },
+      },
+    });
+    const reading = screen.getByTestId("briefing-further-reading");
+    expect(reading.querySelector('a[href*="34275411"]')).toBeTruthy();
+    expect(reading.textContent).toMatch(/PMID 34275411/);
+  });
+
+  it("omits further reading for a mechanic with one citation", () => {
+    renderSession({
+      view: {
+        ...view(),
+        mechanic: { ...MECHANIC, mechanic: "spatial", name: "Spatial Span" },
+      },
+    });
+    expect(screen.queryByTestId("briefing-further-reading")).toBeNull();
+  });
+});
+
 describe("keyboard answers for recent focus tests", () => {
   it("maps digit keys 0-9 directly to Digit Span options", () => {
     const onAnswer = vi.fn();

@@ -153,6 +153,25 @@ export function TestBriefing({
           </p>
         ) : null}
 
+        {meta.citations.length > 1 ? (
+          <p className="fine" data-testid="briefing-further-reading">
+            <strong>Further reading:</strong>{" "}
+            {meta.citations.slice(1).map((citation, index) => (
+              <span key={citation.pmid}>
+                {index > 0 ? " · " : ""}
+                <a
+                  href={`https://pubmed.ncbi.nlm.nih.gov/${citation.pmid}/`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {citation.label}
+                </a>{" "}
+                <span className="pmid">PMID {citation.pmid}</span>
+              </span>
+            ))}
+          </p>
+        ) : null}
+
         <p className="fine">
           <strong>Safety:</strong> {meta.safety} This explanation does not change your score.
         </p>

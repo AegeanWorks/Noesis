@@ -207,6 +207,8 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R117 | Digit Span has committed browser proof scripts for gameplay and within-level trends, matching the dogfood proofs of the other games. | The proofs drive a real three-block session and seeded history, capture screenshots and assert no console errors. | R109; R112; ADR-108 |
 | R118 | Digit Span and Digit Symbol accept their advertised keyboard keys (0-9 and 1-4 respectively) so keyboard users are not forced to use the pointer. | The global keydown handler previously covered only the older mechanics even though both views published controls. | ADR-109 |
 | R119 | The research README's record and outcome counts are checked against the evidence table so prose cannot drift during an evidence wave. | The snapshot test pinned counts in code only; the canonical docs line is now parsed and compared as well. | ADR-110 |
+| R120 | The Prospective Memory brief cites a 2022 review stating that process-based training evidence is preliminary, matching the app's cue-in-ongoing-task paradigm. | Tsang 2022 found strategy-based training promising but process-based and combined evidence too preliminary for conclusions. | 34275411; ADR-111 |
+| R121 | The pre-test briefing lists every citation after the primary source so additional evidence is visible before a block starts. | Previously only `citations[0]` was rendered, so carefully added secondary sources were invisible in the UI. | R120; ADR-112 |
 
 ---
 

@@ -782,6 +782,20 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Parse that line in the snapshot test and assert its record, primary, context and outcome numbers match the table, with R119.
 - **Consequences**: Documentation, corpus and snapshot test now fail together if any one of them drifts; no app behaviour or evidence change.
 
+### ADR-111: Prospective-Memory Review on the Focus Test
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The Prospective Memory focus test cited only the 2023 meta-analysis; a verified 2022 systematic review added a direct caveat about the process-based paradigm the app actually uses.
+- **Decision**: Add the review as a context record, cite it in the mechanic meta and state the process-based caveat in the brief, with R120; update the evidence version constant in the same change.
+- **Consequences**: The review moves to 186 records and 406 outcomes (revision v2.38), D7 residuals fall to 949, and the game's claim boundary is now explicit about the limits of its own paradigm.
+
+### ADR-112: Show All Briefing Citations
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: `TestBriefing` rendered only `meta.citations[0]` as the primary source, so secondary citations added for honest caveats were invisible to users before a block.
+- **Decision**: Render the remaining citations as a "Further reading" line with the same PubMed links and PMIDs, with R121; keep the primary-source line unchanged.
+- **Consequences**: Every mechanic's full citation list is now visible in its briefing; the Prospective Memory caveat source renders and no claim level or evidence count changes.
+
 
 
 

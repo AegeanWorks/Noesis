@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-docs-count-guard",
+    "task_id": "noesis-prospective-review-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795433863.1073697,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795434489.4966578,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795441063.1073697,
+    "lease_until": 1795441689.4966578,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795433874.531295,
-    "completed_head": "0e0a0eb85fa5bcc46bef348cb17a3efe494e2efa",
-    "completed_tree": "479540b67e1c544016504359b2f9a328c7abe333"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 183/400 records unchanged, 479 tests, gates 7/7, weakest-link citations verified in Edge, ADR-104",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-weakest-link-evidence",
-      "timestamp": 1795431615.7269614,
-      "timestamp_str": "2026-11-23 14:00:15",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-weakest-link-evidence' completed successfully.",
-      "head": "b814d25248343902c7244091a53d21b729f57264",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-weakest-link-evidence",
-      "timestamp": 1795431660.850253,
-      "timestamp_str": "2026-11-23 14:01:00"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Gates 2011 and Li 2025 as context and a no-dementia-prevention/no-diagnostic claim boundary on Evidence",
@@ -409,6 +371,48 @@
       "task_id": "noesis-docs-count-guard",
       "timestamp": 1795433874.5936902,
       "timestamp_str": "2026-11-23 14:37:54"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Tsang 2022 prospective-memory review as context and cite it on the Prospective Memory game with a process-based caveat",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Strengthens the game's claim-bounded brief with direct source support and reduces D7.",
+        "mitigation": "Verify via efetch, update counts/references/version, add citation and brief copy, run suites and review the briefing in Edge.",
+        "risks": "contract: one context record, one mechanic citation, one brief sentence and count/version updates; dependency: none; concurrency: none; state: counts, references and version constant must move together",
+        "why": "Prospective Memory had only one citation; a verified 2022 review adds the important caveat that process-based training evidence is preliminary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "d963b664dd3ed308b966d6da2349474baa713bfa02a30de99a7984dbfd6c36da",
+      "status": "in_progress",
+      "task_id": "noesis-prospective-review-evidence",
+      "timestamp": 1795433983.9807625,
+      "timestamp_str": "2026-11-23 14:39:43",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 186/406 records, 485 tests, gates 7/7, briefing caveat and all citations verified in Edge, ADR-112",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-prospective-review-evidence",
+      "timestamp": 1795434489.4966578,
+      "timestamp_str": "2026-11-23 14:48:09",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

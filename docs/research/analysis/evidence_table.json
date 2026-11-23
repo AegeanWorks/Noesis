@@ -10901,6 +10901,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-diagnostic-claim boundary: validated screening tools exist but Noesis has not been validated as one and does not diagnose, screen or triage."
+  },
+  {
+   "pmid": "34275411",
+   "doi": "10.1080/07317115.2021.1950253",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Clinical Gerontologist",
+   "title": "Prospective Memory Training for Healthy Older Adults: A Systematic Review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 11,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "episodic_memory",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "11 studies (six strategy-based, two process-based, three combined): strategy-based training appears to facilitate prospective memory in adults over 55"
+    },
+    {
+     "domain": "episodic_memory",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Conclusions impossible for process-based and combined training because the evidence is preliminary; transfer requires targeting multiple prospective-memory phases"
+    }
+   ],
+   "findings": [
+    "Strategy-based training shows promise for prospective memory in healthy older adults",
+    "Process-based and combined training evidence is too preliminary for conclusions"
+   ],
+   "limitations": [
+    "Only 11 studies",
+    "No pooled effect size in the abstract",
+    "Process-based evidence preliminary"
+   ],
+   "flags": [
+    "narrative_only",
+    "maintenance_gap"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the Prospective Memory focus test: the app's cue-in-ongoing-task paradigm is process-based, an approach this review found too preliminary for a training claim."
   }
  ]
 }

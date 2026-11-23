@@ -204,7 +204,7 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     instructions:
       "Sort each letter as a vowel or consonant. If the letter is Q, choose Remember instead. Keys 1, 2 and 3 work too.",
     brief:
-      "Prospective-memory practice: hold a delayed intention while an ongoing letter task continues. A 2023 meta-analysis of 29 randomized trials found a moderate immediate training effect (g=0.54) in older adults, but the long-term effect (g=0.20) was not significant. This is an experimental focus test, not a validated protocol or an everyday-function claim.",
+      "Prospective-memory practice: hold a delayed intention while an ongoing letter task continues. A 2023 meta-analysis of 29 randomized trials found a moderate immediate training effect (g=0.54) in older adults, but the long-term effect (g=0.20) was not significant. A 2022 systematic review found strategy-based training promising but process-based evidence, the type used here, still preliminary. This is an experimental focus test, not a validated protocol or an everyday-function claim.",
     claimLevel: "experimental",
     claim:
       "Practices remembering to carry out a delayed intention while an ongoing task continues.",
@@ -219,6 +219,7 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     ],
     citations: [
       { pmid: "35543836", label: "Prospective-memory training meta-analysis (2023)" },
+      { pmid: "34275411", label: "Prospective-memory training systematic review (2022)" },
     ],
     safety: "Static letters; no flashing.",
   },
