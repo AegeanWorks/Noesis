@@ -11710,6 +11710,62 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the transfer-gradient copy: pooled evidence supports domain-specific gains, so the app reports component-level results and makes no general executive-function claim."
+  },
+  {
+   "pmid": "39842256",
+   "doi": "10.1016/j.jocn.2025.111055",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "Journal of Clinical Neuroscience",
+   "title": "Effect of leisure activities on cognitive and memory function in older adults: A systematic review and meta-analysis of randomized controlled trials",
+   "modality": "multi_intervention",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults"
+   ],
+   "k": 23,
+   "n": 1293,
+   "comparators": [
+    "active"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "23 RCTs (n=1293) of mahjong, poker, VR and other leisure games: improvements reported on global cognition, memory and executive-function measures versus traditional cognitive rehabilitation"
+    },
+    {
+     "domain": "quality_of_life",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Quality-of-life and activities-of-daily-living measures also improved, but samples and activities were heterogeneous and not a consumer-app trial"
+    }
+   ],
+   "findings": [
+    "Leisure games produced domain-specific cognitive gains in older-adult RCTs",
+    "Findings concern supervised activities in clinical/community samples, not an unsupported care replacement"
+   ],
+   "limitations": [
+    "Heterogeneous games and samples",
+    "Comparison was traditional cognitive rehabilitation, not usual care"
+   ],
+   "flags": [
+    "clinical_specific",
+    "domain_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the serious-games boundary: pooled game gains were domain-specific and sample-bound, so they do not license a general or care-replacement claim for a consumer app."
   }
  ]
 }

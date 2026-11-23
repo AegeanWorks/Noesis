@@ -374,3 +374,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Executive-function subdomain evidence (2026-11-23 targeted update)
 
 - Effects of different non-pharmacological interventions on executive function in healthy older people: A systematic review and network meta-analysis *Archives of Gerontology and Geriatrics*. 2026. PMID: [41576774](https://pubmed.ncbi.nlm.nih.gov/41576774/). DOI: [10.1016/j.archger.2026.106141](https://doi.org/10.1016/j.archger.2026.106141).
+
+## Leisure-game evidence (2026-11-23 targeted update)
+
+- Effect of leisure activities on cognitive and memory function in older adults: A systematic review and meta-analysis of randomized controlled trials *Journal of Clinical Neuroscience*. 2025. PMID: [39842256](https://pubmed.ncbi.nlm.nih.gov/39842256/). DOI: [10.1016/j.jocn.2025.111055](https://doi.org/10.1016/j.jocn.2025.111055).

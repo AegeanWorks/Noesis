@@ -929,6 +929,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Bai et al. 2026 as a context record, a citation on the transfer-gradient copy and R140; bump the review version to v2.49.
 - **Consequences**: The review moves to 198 records and 435 outcomes (revision v2.49), D7 residuals fall to 937, and the app's no-general-EF framing gains large-scale pooled support.
 
+### ADR-132: Leisure-Game Evidence on the Care Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: A verified 2025 RCT meta-analysis found domain-specific cognitive gains from leisure games in older adults, which must not be read as a general or care-replacement claim for a consumer app.
+- **Decision**: Add Lv et al. 2025 as a context record and a citation on the serious-games boundary, with R141; bump the review version to v2.50.
+- **Consequences**: The review moves to 199 records and 437 outcomes (revision v2.50), D7 residuals fall to 936, and the boundary now reflects both null and positive game evidence without overstating either.
+
 
 
 
