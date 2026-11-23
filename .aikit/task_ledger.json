@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-spatial-training-evidence",
+    "task_id": "noesis-actiongame-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795404786.4707808,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795405802.538823,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795411986.4707808,
+    "lease_until": 1795413002.538823,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795404827.7551725,
-    "completed_head": "82f2c6468bae422a6ef529aeba1c6357bbc7a46e",
-    "completed_tree": "436e5f5f07b430e27f56cf3efc5548903306a3e3"
+    ]
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-fartransfer-citation",
-      "phase": "phase 4",
-      "phase_num": 4,
-      "description": "[2/2] Phase 4: 145/341 records, 467 tests, gates 7/7, far-transfer citation reviewed in Edge, ADR-074",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795398983.9883003,
-      "timestamp_str": "2026-11-23 04:56:23",
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "task_id": "noesis-fartransfer-citation",
-      "phase": "completed",
-      "phase_num": 5,
-      "description": "Task 'noesis-fartransfer-citation' completed successfully.",
-      "status": "completed",
-      "timestamp": 1795399024.7356539,
-      "timestamp_str": "2026-11-23 04:57:04",
-      "agent": "opencode:hy4-flash-free",
-      "head": "d494c12621f9b6da5ffcf375593d5bd8ebbba447",
-      "delivery": {
-        "roots": [
-          "."
-        ],
-        "forced": false
-      }
-    },
     {
       "task_id": "noesis-metacognition-citation",
       "phase": "phase 2",
@@ -409,6 +371,48 @@
         ],
         "forced": false
       }
+    },
+    {
+      "task_id": "noesis-actiongame-evidence",
+      "phase": "phase 2",
+      "phase_num": 2,
+      "description": "[1/2] Plan: add Bediou 2018 action-game meta-analysis as context and cite it in Motivation safeguards",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795405402.0804577,
+      "timestamp_str": "2026-11-23 06:43:22",
+      "agent": "opencode:hy4-flash-free",
+      "impact_assessment": {
+        "why": "Action-game evidence is cited narratively to justify excluding that genre; its pooled effects and publication-bias warning belong in the corpus.",
+        "benefits": "Resolves another narrative-only citation and strengthens the game-format claim boundary.",
+        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
+        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI."
+      },
+      "plan_digest": "848035888d70fdbccc9b1d9af84bb6c9c7962fc7b7db814d50ad42bba43072b6",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "task_id": "noesis-actiongame-evidence",
+      "phase": "phase 4",
+      "phase_num": 4,
+      "description": "[2/2] Phase 4: 152/353 records, 468 tests, gates 7/7, action-game citation reviewed in Edge, ADR-081",
+      "files_affected": [],
+      "status": "in_progress",
+      "timestamp": 1795405802.538823,
+      "timestamp_str": "2026-11-23 06:50:02",
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

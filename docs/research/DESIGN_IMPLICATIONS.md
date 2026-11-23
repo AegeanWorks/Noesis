@@ -177,6 +177,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R87 | The Motivation safeguards cite the exergame motivation review alongside gaming-disorder sources, and rewards remain cosmetic because a game format alone does not establish outcomes. | Buyle 2022 found motivation components shape adherence but no cognitive or fall-risk benefit from the game format itself. | 35989930; ADR-078 |
 | R88 | The Motivation safeguards also cite the game-factor meta-analysis, which reports small overall effects and feature-level rather than genre-level prediction. | Smith & Basak 2023 found g=0.25 across 63 studies and that gameplay features, not genre labels, predicted transfer; the app therefore promises task practice, not genre benefits. | 37531408; ADR-079 |
 | R89 | Mental Rotation cites both spatial-training meta-analyses and keeps its no-academic-claim boundary, noting that computerized paradigms were weaker than concrete materials. | Hawes 2022 found spatial-thinking g=0.49 and math transfer g=0.28 with modality and transfer-distance moderators. | 22663761; 35073120; ADR-080 |
+| R90 | The Motivation safeguards cite the action-game meta-analysis and keep action games excluded on flashing/fast-presentation safety grounds. | Bediou 2018 found g=0.55 for habitual players but only g=0.34 in interventions, with about 30 percent publication-bias inflation. | 29172564; ADR-081 |
 
 ---
 

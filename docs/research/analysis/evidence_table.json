@@ -9131,6 +9131,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for Mental Rotation: a screen-based spatial game can practice spatial thinking but has no academic claim, especially given weaker computerized effects."
+  },
+  {
+   "pmid": "29172564",
+   "doi": "10.1037/bul0000130",
+   "doi_status": "verified",
+   "year": 2018,
+   "journal": "Psychological Bulletin",
+   "title": "Meta-analysis of action video game impact on perceptual, attentional, and cognitive skills",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "children",
+    "healthy_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "active"
+   ],
+   "outcomes": [
+    {
+     "domain": "attention",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.34,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Long-term intervention studies versus other commercial game genres; cross-sectional player difference g=0.55"
+    },
+    {
+     "domain": "visuospatial_memory",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Top-down attention and spatial cognition most robustly enhanced; perception encouraging"
+    }
+   ],
+   "findings": [
+    "Intervention effects (g=0.34) are smaller than habitual-player differences (g=0.55)",
+    "Publication bias estimated to inflate published effects by about 30 percent"
+   ],
+   "limitations": [
+    "Action-game genre excluded from Noesis on safety grounds",
+    "Publication bias",
+    "Few interventions above 30 hours"
+   ],
+   "flags": [
+    "publication_bias_suspected",
+    "genre_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the game-format boundary: action games show small causal effects with substantial bias, and are excluded from Noesis for flashing/fast-presentation safety reasons."
   }
  ]
 }

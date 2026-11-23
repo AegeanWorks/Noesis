@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 151 |
-| Outcomes | 351 |
+| Records | 152 |
+| Outcomes | 353 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 96 |
+| Systematic reviews/meta-analyses | 97 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 26 |
 | RCTs | 9 |
 | Umbrella reviews | 2 |
-| DOI verified | 140 |
+| DOI verified | 141 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -143,7 +143,7 @@ By modality:
 | ave | 6 |
 | multi_intervention | 6 |
 | safety | 8 |
-| engagement | 32 |
+| engagement | 33 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 140 |
+| DOI verified | 141 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **151** |
+| **Total** | **152** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -247,6 +247,8 @@ A 2026-11-23 motivation update resolved Buyle et al. 2022 (PMID 35989930, *Front
 A 2026-11-23 game-factor update resolved Smith & Basak 2023 (PMID 37531408, *PLOS ONE*; DOI 10.1371/journal.pone.0285925) from narrative-only to a context record, verified via E-utilities `efetch`. Sixty-three video-game training studies (118 investigations, N=2,079) gave a small overall cognitive gain (g=0.25), with transfer to attention/perception and higher-order cognition; individual gameplay features, not genre labels, predicted outcomes. The Motivation safeguards now cite it beside the other game-design sources (ADR-079). D7 is unchanged; the review is now 150 records and 349 outcomes, revision v2.15.
 
 A 2026-11-23 spatial-training update resolved Hawes et al. 2022 (PMID 35073120, *Developmental Psychology*; DOI 10.1037/dev0001281) from narrative-only to a context record, verified via E-utilities `efetch`. Twenty-nine controlled studies (N=3,765, k=89) found spatial-thinking gains g=0.49 and smaller mathematics transfer g=0.28, with concrete materials outperforming computerized training. The Mental Rotation brief now cites both this and Uttal 2013, keeping its no-academic-claim boundary (ADR-080). D7 is unchanged; the review is now 151 records and 351 outcomes, revision v2.16.
+
+A 2026-11-23 action-game update resolved Bediou et al. 2018 (PMID 29172564, *Psychological Bulletin*; DOI 10.1037/bul0000130) from narrative-only to a context record, verified via E-utilities `efetch`. Habitual action-game players differed from controls by g=0.55, but long-term interventions against other commercial games gave g=0.34, and publication bias was estimated to inflate published effects by about 30 percent; the genre remains excluded from Noesis on flashing/fast-presentation safety grounds. The Motivation safeguards now cite it (ADR-081). D7 is unchanged; the review is now 152 records and 353 outcomes, revision v2.17.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

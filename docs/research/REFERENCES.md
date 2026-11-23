@@ -228,3 +228,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Spatial training (2026-11-23 targeted update)
 
 - Effects of spatial training on mathematics performance: A meta-analysis *Developmental Psychology*. 2022. PMID: [35073120](https://pubmed.ncbi.nlm.nih.gov/35073120/). DOI: [10.1037/dev0001281](https://doi.org/10.1037/dev0001281).
+
+## Action-game evidence (2026-11-23 targeted update)
+
+- Meta-analysis of action video game impact on perceptual, attentional, and cognitive skills *Psychological Bulletin*. 2018. PMID: [29172564](https://pubmed.ncbi.nlm.nih.gov/29172564/). DOI: [10.1037/bul0000130](https://doi.org/10.1037/bul0000130).

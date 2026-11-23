@@ -572,6 +572,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Hawes 2022 as a context record and a second Mental Rotation citation, with R89; keep the brief's no-academic-claim boundary.
 - **Consequences**: The review moves to 151 records and 351 outcomes (revision v2.16) and Mental Rotation's caveat rests on two pooled syntheses with an explicit modality limitation.
 
+### ADR-081: Action-Game Evidence on Safeguards
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Bediou et al. 2018 (PMID 29172564) was narrative-only in NEW_MECHANIC_CANDIDATES.md section 6.4 and reports g=0.55 for habitual action-game players, g=0.34 in interventions against other games, and about 30 percent publication-bias inflation.
+- **Decision**: Add it as a context record and a sixth Motivation-safeguards citation, with R90, and keep the action-game exclusion on safety grounds documented alongside the effect estimate.
+- **Consequences**: The review moves to 152 records and 353 outcomes (revision v2.17) and the no-flashing exclusion is supported by both the safety literature and the game evidence with its bias caveat.
+
 
 
 
