@@ -114,6 +114,36 @@ function spatialRecord(
   };
 }
 
+function digitRecord(
+  level: number,
+  spans: readonly (readonly [number, number])[],
+  id: string,
+  finishedAt: string,
+): SessionRecord {
+  return {
+    id,
+    finishedAt,
+    seed: 42,
+    results: spans.map(([meanSpan, longestSpan], index) => ({
+      mechanic: "digit",
+      domain: "working_memory",
+      trials: 8,
+      durationMs: 70_000,
+      metrics: {
+        accuracy: 1,
+        mean_span: meanSpan,
+        max_span: longestSpan,
+        forward_accuracy: 1,
+        backward_accuracy: 1,
+      },
+      summary: `Digit Span: 100% accuracy, 8/8 correct, longest span ${longestSpan}.`,
+      seed: 42,
+      stateHash: `abcdef012345678${index}`,
+      difficulty: level,
+    })),
+  };
+}
+
 function rotationRecord(
   level: number,
   blocks: readonly (readonly [number, number])[],
@@ -500,6 +530,52 @@ describe("PracticeMenuScreen", () => {
     cleanup();
     renderMenu({ history: [record()] });
     expect(screen.queryByTestId("menu-spatial-span")).toBeNull();
+  });
+
+  it("shows a level-aware Digit Span mean and longest-span trend", () => {
+    renderMenu({
+      history: [
+        digitRecord(3, [[5.0, 6], [5.5, 7]], "d3", "2026-11-03T10:00:00.000Z"),
+        digitRecord(2, [[4.0, 5]], "d2", "2026-11-02T10:00:00.000Z"),
+      ],
+      initialTab: "history",
+    });
+    const card = screen.getByTestId("digit-span-trend");
+    expect(card.textContent).toMatch(/Digit Span/);
+    expect(card.textContent).toMatch(/mean span/i);
+    const rows = screen.getAllByTestId(/^digit-span-level-/);
+    expect(rows.map((row) => row.getAttribute("data-testid"))).toEqual([
+      "digit-span-level-3",
+      "digit-span-level-2",
+    ]);
+    expect(screen.getByTestId("digit-span-level-3").textContent).toMatch(/Last mean 5.5/);
+    expect(screen.getByTestId("digit-span-level-3").textContent).toMatch(/Longest 7/);
+    expect(screen.getByTestId("digit-span-change-3").textContent).toBe(
+      "Improved +0.5 mean span vs previous block at this level",
+    );
+    expect(screen.getByTestId("digit-span-change-2").textContent).toBe(
+      "First block at this level",
+    );
+  });
+
+  it("shows the latest same-level Digit Span trend on the Digit Span card", () => {
+    renderMenu({
+      history: [
+        digitRecord(2, [[4.5, 6], [4.0, 5]], "d2", "2026-11-08T10:00:00.000Z"),
+        digitRecord(3, [[5.0, 7]], "d3", "2026-11-07T10:00:00.000Z"),
+      ],
+    });
+    expect(screen.getByTestId("menu-digit-span").textContent).toBe(
+      "Digit span L2: last mean 4.0 · longest 6 · worsened -0.5 vs previous block",
+    );
+  });
+
+  it("omits the Digit Span trend when there are no Digit Span blocks", () => {
+    renderMenu({ history: [record()], initialTab: "history" });
+    expect(screen.queryByTestId("digit-span-trend")).toBeNull();
+    cleanup();
+    renderMenu({ history: [record()] });
+    expect(screen.queryByTestId("menu-digit-span")).toBeNull();
   });
 
   it("shows a level-aware Mental Rotation accuracy and response-time trend", () => {

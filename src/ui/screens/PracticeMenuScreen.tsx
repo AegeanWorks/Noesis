@@ -302,11 +302,11 @@ function formatMeanSpan(value: number): string {
   return value.toFixed(1);
 }
 
-function spatialSpanLevels(history: readonly SessionRecord[]): SpatialSpanLevel[] {
+function spanLevelsFor(history: readonly SessionRecord[], mechanic: "spatial" | "digit"): SpatialSpanLevel[] {
   const longestByLevel = new Map<number, number>();
   for (const record of history) {
     for (const result of record.results) {
-      if (result.mechanic !== "spatial") continue;
+      if (result.mechanic !== mechanic) continue;
       const level = result.difficulty;
       const maxSpan = result.metrics.max_span;
       if (
@@ -318,11 +318,15 @@ function spatialSpanLevels(history: readonly SessionRecord[]): SpatialSpanLevel[
       }
     }
   }
-  return costLevelsFor(history, "spatial", "mean_span").map((entry) => ({
+  return costLevelsFor(history, mechanic, "mean_span").map((entry) => ({
     ...entry,
     delta: entry.delta === null ? null : Math.round(entry.delta * 10) / 10,
     longest: longestByLevel.get(entry.level) ?? 0,
   }));
+}
+
+function spatialSpanLevels(history: readonly SessionRecord[]): SpatialSpanLevel[] {
+  return spanLevelsFor(history, "spatial");
 }
 
 function spanChange(entry: SpatialSpanLevel): { direction: string; copy: string } {
@@ -344,7 +348,7 @@ function spanChange(entry: SpatialSpanLevel): { direction: string; copy: string 
   };
 }
 
-function spatialSpanLine(entry: SpatialSpanLevel): string {
+function spanLineFor(entry: SpatialSpanLevel, mechanic: "spatial" | "digit"): string {
   const change =
     entry.previous === null
       ? "first block at this level"
@@ -353,15 +357,23 @@ function spatialSpanLine(entry: SpatialSpanLevel): string {
         : entry.delta !== null && entry.delta > 0
           ? `improved +${formatMeanSpan(entry.delta)} vs previous block`
           : `worsened ${formatMeanSpan(entry.delta ?? 0)} vs previous block`;
-  return `Spatial span L${entry.level}: last mean ${formatMeanSpan(entry.last)} · longest ${Math.round(entry.longest)} · ${change}`;
+  return `${mechanic === "digit" ? "Digit" : "Spatial"} span L${entry.level}: last mean ${formatMeanSpan(entry.last)} · longest ${Math.round(entry.longest)} · ${change}`;
 }
 
-function SpanTrendCard({ levels }: { levels: readonly SpatialSpanLevel[] }) {
+function SpanTrendCard({
+  levels,
+  mechanic = "spatial",
+}: {
+  levels: readonly SpatialSpanLevel[];
+  mechanic?: "spatial" | "digit";
+}) {
+  const prefix = mechanic === "digit" ? "digit-span" : "spatial-span";
+  const label = mechanic === "digit" ? "Digit Span" : "Spatial Span";
   return (
-    <section className="card switch-cost-card" data-testid="spatial-span-trend">
+    <section className="card switch-cost-card" data-testid={`${prefix}-trend`}>
       <div className="card-top">
         <div>
-          <p className="eyebrow">Spatial Span</p>
+          <p className="eyebrow">{label}</p>
           <h2>Mean span by level</h2>
         </div>
       </div>
@@ -375,7 +387,7 @@ function SpanTrendCard({ levels }: { levels: readonly SpatialSpanLevel[] }) {
           return (
             <div
               className="switch-cost-level"
-              data-testid={`spatial-span-level-${entry.level}`}
+              data-testid={`${prefix}-level-${entry.level}`}
               key={entry.level}
             >
               <div className="switch-cost-head">
@@ -396,7 +408,7 @@ function SpanTrendCard({ levels }: { levels: readonly SpatialSpanLevel[] }) {
               </p>
               <p
                 className={`switch-cost-change switch-cost-change-${change.direction}`}
-                data-testid={`spatial-span-change-${entry.level}`}
+                data-testid={`${prefix}-change-${entry.level}`}
                 data-direction={change.direction}
               >
                 {change.copy}
@@ -879,7 +891,12 @@ function TestCard({
     mechanic === "spatial" && level !== null
       ? (spatialSpanLevels(history).find((entry) => entry.level === level) ?? null)
       : null;
-  const spanLine = spanLevel ? spatialSpanLine(spanLevel) : null;
+  const spanLine = spanLevel ? spanLineFor(spanLevel, "spatial") : null;
+  const digitSpanLevel =
+    mechanic === "digit" && level !== null
+      ? (spanLevelsFor(history, "digit").find((entry) => entry.level === level) ?? null)
+      : null;
+  const digitSpanLine = digitSpanLevel ? spanLineFor(digitSpanLevel, "digit") : null;
   const rotationLevel =
     mechanic === "rotation" && level !== null
       ? (rotationLevels(history).find((entry) => entry.level === level) ?? null)
@@ -955,6 +972,11 @@ function TestCard({
       {spanLine ? (
         <p className="fine menu-spatial-span" data-testid="menu-spatial-span">
           {spanLine}
+        </p>
+      ) : null}
+      {digitSpanLine ? (
+        <p className="fine menu-digit-span" data-testid="menu-digit-span">
+          {digitSpanLine}
         </p>
       ) : null}
       {rotationTrendLine ? (
@@ -1097,6 +1119,7 @@ function HistoryPanel({
   const costLevels = switchCostLevels(history);
   const interferenceLevels = flankerCostLevels(history);
   const spanLevels = spatialSpanLevels(history);
+  const digitSpanLevels = spanLevelsFor(history, "digit");
   const rotationTrendLevels = rotationLevels(history);
   const pairedTrendLevels = pairedLevels(history);
   const changeTrendLevels = changeLevels(history);
@@ -1210,6 +1233,7 @@ function HistoryPanel({
       ) : null}
 
       {spanLevels.length > 0 ? <SpanTrendCard levels={spanLevels} /> : null}
+      {digitSpanLevels.length > 0 ? <SpanTrendCard levels={digitSpanLevels} mechanic="digit" /> : null}
 
       {rotationTrendLevels.length > 0 ? (
         <RotationTrendCard levels={rotationTrendLevels} />

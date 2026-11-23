@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-separate-blocks-evidence",
+    "task_id": "noesis-digit-span-trend",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795430692.2741494,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795431177.4121299,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795437892.2741494,
+    "lease_until": 1795438377.4121299,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795430736.0246544,
-    "completed_head": "c0c19fd6463a3e75c7b38070b64795e835a888c0",
-    "completed_tree": "d0aef1456b89b0f6750accfef2f09697eadcf415"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 170/378 records, 468 tests, gates 7/7, planning/LDW citations verified in Edge, ADR-096",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-engagement-planning-evidence",
-      "timestamp": 1795425382.306576,
-      "timestamp_str": "2026-11-23 12:16:22",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-engagement-planning-evidence' completed successfully.",
-      "head": "efdda50e0c11aebc4e5d8ccc3a434f8a2de2c5eb",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-engagement-planning-evidence",
-      "timestamp": 1795425445.9157014,
-      "timestamp_str": "2026-11-23 12:17:25"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Li 2016, Larche 2021, Schultz 2016 as context and one grouped reward-mechanism citation",
@@ -409,6 +371,48 @@
       "task_id": "noesis-separate-blocks-evidence",
       "timestamp": 1795430736.234929,
       "timestamp_str": "2026-11-23 13:45:36"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: give Digit Span the same level-aware span trend card and Choose-a-test trend line as Spatial Span",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Consistent per-level comparison for the new game, with the same descriptive, no-diagnosis caveats.",
+        "mitigation": "Keep spatial testids unchanged, add failing-first digit trend tests, run suites and review the History tab in Edge.",
+        "risks": "contract: generalize the existing span trend helpers/card and add a digit variant; dependency: none; concurrency: none; state: no evidence-count changes",
+        "why": "Every other experimental focus test has a within-level trend summary; Digit Span currently reports a block result only."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "4c0c16113c60ea64bd5828d46667fea1e2326ca160261cdb8379f92d3153b6f2",
+      "status": "in_progress",
+      "task_id": "noesis-digit-span-trend",
+      "timestamp": 1795430878.8276155,
+      "timestamp_str": "2026-11-23 13:47:58",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 183/400 records unchanged, 479 tests, gates 7/7, Digit Span trend card verified after a played Edge session, ADR-103",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-digit-span-trend",
+      "timestamp": 1795431177.41213,
+      "timestamp_str": "2026-11-23 13:52:57",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

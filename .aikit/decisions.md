@@ -726,6 +726,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add one citation line to the Results screen linking the no-subtest-is-one-construct critique and the training-outcome-similarity synthesis, with R111; keep all measurement copy descriptive.
 - **Consequences**: The app's central measurement-honesty statement becomes traceable to two verified sources without changing any claim level or evidence count.
 
+### ADR-103: Digit Span Within-Level Trend Card
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Digit Span was added as a tenth focus test but, unlike the other experimental games, had no per-level trend summary in the Menu history or Choose-a-test briefing.
+- **Decision**: Generalize the existing Spatial Span trend helpers and card to accept a mechanic, render a Digit Span variant with its own testids and the same descriptive caveats, and add a latest-same-level line to the Digit Span briefing, with R112.
+- **Consequences**: The new game now supports the same within-level comparison as Spatial Span; existing Spatial Span testids and claims are unchanged, and no evidence record or test count changes.
+
 
 
 
