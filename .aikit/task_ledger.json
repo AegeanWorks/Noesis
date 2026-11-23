@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-clinical-value-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795476470.9270422,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795483670.9270422,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795477015.1852212,
+    "completed_head": "afe7053f2a9a2c326a34d8cfdea2ffdc0c629e99",
+    "completed_tree": "928e8182077f498a4d70e2d1cda83a305de484cd"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Bonnechere 2020 commercial cognitive-games meta-analysis as context and cite it on the no-general-gain boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a second commercial-program meta-analysis to the central no-general-gain boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2020 meta-analysis of 16 commercial-game RCTs found gains in practiced domains but not attention or visuospatial ability, directly supporting component-specific framing."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "e40b65340b2dffcdc7ce5dd087f10d86c5b3fb30b0edf74e25965f7b3636f7f8",
-      "status": "in_progress",
-      "task_id": "noesis-commercial-games-evidence",
-      "timestamp": 1795468390.7909417,
-      "timestamp_str": "2026-11-24 00:13:10",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-clinical-value-evidence' completed successfully.",
+      "head": "afe7053f2a9a2c326a34d8cfdea2ffdc0c629e99",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-clinical-value-evidence",
+      "timestamp": 1795477015.3949313,
+      "timestamp_str": "2026-11-24 02:36:55"
     }
   ]
 }
