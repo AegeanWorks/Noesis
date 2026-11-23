@@ -127,6 +127,10 @@ describe("HomeScreen", () => {
     renderHome({ onSaveIntention });
     const form = screen.getByTestId("practice-plan");
     expect(form.textContent).toMatch(/morning sessions form stronger habits/i);
+    const evidence = screen.getByTestId("plan-evidence");
+    expect(evidence.textContent).toMatch(/specific plan can quiet/i);
+    expect(evidence.querySelector('a[href*="21688924"]')).toBeTruthy();
+    expect(evidence.querySelector('a[href*="25843979"]')).toBeTruthy();
     fireEvent.change(form.querySelectorAll("input")[0]!, {
       target: { value: "tomorrow at 9am" },
     });

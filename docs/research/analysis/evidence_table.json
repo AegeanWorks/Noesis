@@ -9947,6 +9947,143 @@
    ],
    "synthesis_role": "context",
    "product_use": "Grounds the no-intelligence-gain boundary and the neutral claim language: suggestive framing can manufacture apparent gains, so the app avoids such promises."
+  },
+  {
+   "pmid": "21688924",
+   "doi": "10.1037/a0024192",
+   "doi_status": "verified",
+   "year": 2011,
+   "journal": "Journal of Personality and Social Psychology",
+   "title": "Consider it done! Plan making can eliminate the cognitive effects of unfulfilled goals",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": 6,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "experiment_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Forming specific plans for unfulfilled goals removed intrusive thoughts and freed cognitive resources; several lab studies"
+    }
+   ],
+   "findings": [
+    "Specific plans reduce goal-related intrusion",
+    "Effect mediated by earnestness of the plan"
+   ],
+   "limitations": [
+    "Laboratory studies",
+    "Not a cognitive-training outcome"
+   ],
+   "flags": [
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the optional when-and-where practice plan: making a concrete plan reduces the mental load of an unfulfilled intention."
+  },
+  {
+   "pmid": "20712818",
+   "doi": "10.1111/j.1360-0443.2010.03050.x",
+   "doi_status": "verified",
+   "year": 2010,
+   "journal": "Addiction",
+   "title": "Losses disguised as wins in modern multi-line video slot machines",
+   "modality": "engagement",
+   "design": "rct",
+   "populations": [
+    "young_adults",
+    "adults"
+   ],
+   "k": 1,
+   "n": 40,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "skin_conductance",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "40 novices: wins and losses-disguised-as-wins produced similarly elevated arousal, both above ordinary losses"
+    }
+   ],
+   "findings": [
+    "Reinforcing sights and sounds fire even when the player loses money",
+    "LDWs are as arousing as real wins"
+   ],
+   "limitations": [
+    "Novice players",
+    "Slot-machine paradigm"
+   ],
+   "flags": [
+    "expectancy_risk",
+    "single_trial"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the no-fake-win safeguard: the near-best cue uses a real personal-best gap, never celebratory feedback for a worse outcome."
+  },
+  {
+   "pmid": "25843979",
+   "doi": "10.1287/mnsc.2013.1784",
+   "doi_status": "verified",
+   "year": 2014,
+   "journal": "Management Science",
+   "title": "Holding the Hunger Games Hostage at the Gym: An Evaluation of Temptation Bundling",
+   "modality": "engagement",
+   "design": "rct",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": 1,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "adherence",
+     "transfer": "na",
+     "measure": "gym_visits",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Restricting tempting audiobooks to the gym raised gym visits 51% (full) and 29% (encouragement) initially; effects declined over time"
+    }
+   ],
+   "findings": [
+    "Bundling a want with a should raised the target behavior initially",
+    "The effect decayed over time"
+   ],
+   "limitations": [
+    "Exercise behavior, not cognition",
+    "Declining treatment effect"
+   ],
+   "flags": [
+    "maintenance_gap",
+    "clinical_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the practice plan's 'pair it with' field: coupling a pleasant activity with practice may help, but the effect is not guaranteed to last."
   }
  ]
 }

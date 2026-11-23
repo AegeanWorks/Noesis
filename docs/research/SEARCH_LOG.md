@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 167 |
-| Outcomes | 375 |
+| Records | 170 |
+| Outcomes | 378 |
 | Primary outcomes | 258 |
 | Systematic reviews/meta-analyses | 103 |
 | Network meta-analyses | 19 |
-| Other systematic reviews | 30 |
-| RCTs | 13 |
+| Other systematic reviews | 33 |
+| RCTs | 15 |
 | Umbrella reviews | 2 |
-| DOI verified | 156 |
+| DOI verified | 159 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -143,7 +143,7 @@ By modality:
 | ave | 6 |
 | multi_intervention | 8 |
 | safety | 8 |
-| engagement | 38 |
+| engagement | 41 |
 
 ## 9. Metadata verification
 
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 156 |
+| DOI verified | 159 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **167** |
+| **Total** | **170** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -277,6 +277,8 @@ A 2026-11-23 dual-task update resolved Gao & Liu 2025 (PMID 40410069, *Geriatric
 A 2026-11-23 dual-task comparison update resolved Hao et al. 2025 (PMID 40304821, *Aging Clinical and Experimental Research*; DOI 10.1007/s40520-025-03016-5) from narrative-only to a context record, verified via E-utilities `efetch`. In 32 RCTs (N=2,370) of MCI/dementia patients, dual cognitive task training ranked highest for global cognition and motor-cognitive training was the only mode improving executive function, with wide intervals. The modality boundary now cites it beside the community-dwelling fall-prevention review (ADR-094). D7 is unchanged; the review is now 166 records and 374 outcomes, revision v2.30.
 
 A 2026-11-23 placebo update resolved Foroughi et al. 2016 (PMID 27325761, *PNAS*; DOI 10.1073/pnas.1601243113) from narrative-only to a context record, verified via E-utilities `efetch`. Suggestive recruitment alone produced apparent fluid-intelligence gains after a single training hour, while nonsuggestive controls did not. The no-intelligence-gain boundary now cites it beside the working-memory meta-analysis (ADR-095). D7 is unchanged; the review is now 167 records and 375 outcomes, revision v2.31.
+
+A 2026-11-23 planning-and-cues update resolved three narrative-only engagement sources into context records, all verified via E-utilities `efetch`: Masicampo & Baumeister 2011 (PMID 21688924, *JPSP*; DOI 10.1037/a0024192) found that specific plans quiet unfulfilled-goal intrusions; Milkman et al. 2014 (PMID 25843979, *Management Science*; DOI 10.1287/mnsc.2013.1784) found temptation bundling raised gym visits initially but faded; Dixon et al. 2010 (PMID 20712818, *Addiction*; DOI 10.1111/j.1360-0443.2010.03050.x) showed losses-disguised-as-wins are as arousing as real wins. The practice-plan card and no-fake-win safeguard now cite them (ADR-096). D7 is unchanged; the review is now 170 records and 378 outcomes, revision v2.32.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

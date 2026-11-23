@@ -192,6 +192,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R102 | The Evidence screen states that Noesis makes no gait, balance or fall-prevention claim because it has no motor component. | Gao & Liu 2025 found such benefits only from cognitive-motor dual-task training, a modality the app does not deliver. | 40410069; ADR-093 |
 | R103 | The modality boundary also notes that dual-task cognitive effects come from clinical, movement-based interventions, not a screen-based consumer tool. | Hao 2025 found executive-function gains only for motor-cognitive dual-task modes in MCI/dementia, with wide intervals. | 40304821; ADR-094 |
 | R104 | The no-intelligence-gain boundary cites the placebo study, and the app uses neutral claim language throughout to avoid suggestive framing. | Foroughi 2016 found apparent IQ gains after one hour when recruitment was suggestive, with no gain in controls. | 22612437; 27325761; ADR-095 |
+| R105 | The optional practice plan cites planning and temptation-bundling evidence; motivation safeguards cite the losses-disguised-as-wins study to justify real, not fabricated, near-best cues. | Masicampo 2011 found plans quiet unfulfilled goals; Milkman 2014 found bundling effects fade; Dixon 2010 found fake wins are as arousing as real ones. | 21688924; 25843979; 20712818; ADR-096 |
 
 ---
 

@@ -677,6 +677,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a second citation on the no-intelligence-gain boundary, with R104; keep all claim wording neutral and non-suggestive.
 - **Consequences**: The review moves to 167 records and 375 outcomes (revision v2.31) and the app's refusal of IQ claims is backed by an experimental expectancy demonstration.
 
+### ADR-096: Planning and Reward-Cue Evidence in the App
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Three behavioral-engagement sources were narrative-only: Masicampo & Baumeister 2011 (planning quiets unfulfilled goals), Milkman et al. 2014 (temptation bundling raises then decays), and Dixon et al. 2010 (losses disguised as wins are as arousing as real wins).
+- **Decision**: Add all three as context records; cite the first two on the practice-plan card and the third beside the near-miss safeguard, with R105.
+- **Consequences**: The review moves to 170 records and 378 outcomes (revision v2.32) and the app's planning and no-fake-win UI copy becomes evidence-linked.
+
 
 
 

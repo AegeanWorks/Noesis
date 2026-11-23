@@ -160,6 +160,18 @@ function PracticePlan({
       <p className="fine">
         Same time and place each day works best — morning sessions form stronger habits.
       </p>
+      <p className="fine" data-testid="plan-evidence">
+        Making a specific plan can quiet an unfulfilled intention; pairing it with something you
+        enjoy may help follow-through, though that effect can fade.{" "}
+        <a href="https://pubmed.ncbi.nlm.nih.gov/21688924/" target="_blank" rel="noreferrer">
+          Masicampo &amp; Baumeister 2011
+        </a>{" "}
+        <span className="pmid">PMID 21688924</span> ·{" "}
+        <a href="https://pubmed.ncbi.nlm.nih.gov/25843979/" target="_blank" rel="noreferrer">
+          Milkman et al. 2014
+        </a>{" "}
+        <span className="pmid">PMID 25843979</span>
+      </p>
       <div className="plan-fields">
         <label>
           When?

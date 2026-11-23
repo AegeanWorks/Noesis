@@ -289,3 +289,9 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Expectancy and claims (2026-11-23 targeted update)
 
 - Placebo effects in cognitive training *Proceedings of the National Academy of Sciences*. 2016. PMID: [27325761](https://pubmed.ncbi.nlm.nih.gov/27325761/). DOI: [10.1073/pnas.1601243113](https://doi.org/10.1073/pnas.1601243113).
+
+## Engagement planning and reward cues (2026-11-23 targeted update)
+
+- Consider it done! Plan making can eliminate the cognitive effects of unfulfilled goals *Journal of Personality and Social Psychology*. 2011. PMID: [21688924](https://pubmed.ncbi.nlm.nih.gov/21688924/). DOI: [10.1037/a0024192](https://doi.org/10.1037/a0024192).
+- Losses disguised as wins in modern multi-line video slot machines *Addiction*. 2010. PMID: [20712818](https://pubmed.ncbi.nlm.nih.gov/20712818/). DOI: [10.1111/j.1360-0443.2010.03050.x](https://doi.org/10.1111/j.1360-0443.2010.03050.x).
+- Holding the Hunger Games Hostage at the Gym: An Evaluation of Temptation Bundling *Management Science*. 2014. PMID: [25843979](https://pubmed.ncbi.nlm.nih.gov/25843979/). DOI: [10.1287/mnsc.2013.1784](https://doi.org/10.1287/mnsc.2013.1784).

@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 167 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 170 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -105,6 +105,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/19217383/"
               label="Clark et al. (2009): near misses increase desire to play"
               pmid="19217383"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/20712818/"
+              label="Losses disguised as wins are as arousing as real wins"
+              pmid="20712818"
             />
           </li>
           <li>
