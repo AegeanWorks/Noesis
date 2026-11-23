@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-reward-mechanism-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795426447.523236,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795433647.523236,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795426492.643127,
+    "completed_head": "1353544f066776b5b429d9e771a0c6b417dad18b",
+    "completed_tree": "fb97e5bfc910405b2d44260cfbeaefd1974c90b0"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Brand 2016 I-PACE model as context and cite it in Motivation safeguards",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and grounds the cosmetic-reward safeguards in an established process model.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The behavioral-engagement review grounds the gaming-harm caveat in the I-PACE model, still narrative-only; the model explains how cue-reactivity and reduced control maintain excessive use."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "5c656e38c68be91a3b378dae3e93b305edd4748cc248d6a30427c78995f453f3",
-      "status": "in_progress",
-      "task_id": "noesis-ipace-evidence",
-      "timestamp": 1795419042.582655,
-      "timestamp_str": "2026-11-23 10:30:42",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-reward-mechanism-evidence' completed successfully.",
+      "head": "1353544f066776b5b429d9e771a0c6b417dad18b",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-reward-mechanism-evidence",
+      "timestamp": 1795426492.716983,
+      "timestamp_str": "2026-11-23 12:34:52"
     }
   ]
 }
