@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-everyday-generalization-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795472854.5465422,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795480054.5465422,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795472980.9202302,
+    "completed_head": "2f966be36bd297fa10c8ed019836d3baa9b25781",
+    "completed_tree": "40bd16dbb78946d506e24f7b21d7280ab49ed10a"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Bai 2026 executive-function network meta-analysis as context and cite it on the transfer-gradient copy",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a large pooled evidence context to the transfer-gradient copy and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2026 NMA of 115 RCTs shows different interventions benefit different executive-function subdomains, supporting the app's component-specific, no-general-EF framing."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "43788da772b5bc413440b4c6c96f689c807711935c2373a5dcfdc7c713bc8790",
-      "status": "in_progress",
-      "task_id": "noesis-ef-nma-evidence",
-      "timestamp": 1795466592.930358,
-      "timestamp_str": "2026-11-23 23:43:12",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-everyday-generalization-evidence' completed successfully.",
+      "head": "2f966be36bd297fa10c8ed019836d3baa9b25781",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-everyday-generalization-evidence",
+      "timestamp": 1795472981.1523626,
+      "timestamp_str": "2026-11-24 01:29:41"
     }
   ]
 }
