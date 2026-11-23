@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-stop-signal-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795406786.8354144,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795413986.8354144,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795406864.4755545,
+    "completed_head": "ab6129319f827648e6b8fbd047d01adb3eb95a3c",
+    "completed_tree": "411b65e79f272cd88f607d3d1eca9be6ed66a99b"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Vialatte 2023 symbol-search study as context and cite it in the Visual Search mechanic",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and adds a clearly flagged clinical/caution source to the game's evidence list.",
-        "mitigation": "Add record, update counts/references/prose and mechanic citations, run suites and review UI.",
-        "risks": "contract: one context record + mechanic citation + UI/test; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The Visual Search brief cites only Zhang 2022; the sibling narrative source (symbol search in readers) is verified but absent from the corpus."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "36a4d2d2bf8648e552a400808d551e7ba53b45f63c4e13c51e630f05bdcf2e4c",
-      "status": "in_progress",
-      "task_id": "noesis-visualsearch-reading-evidence",
-      "timestamp": 1795400540.3773222,
-      "timestamp_str": "2026-11-23 05:22:20",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-stop-signal-evidence' completed successfully.",
+      "head": "ab6129319f827648e6b8fbd047d01adb3eb95a3c",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-stop-signal-evidence",
+      "timestamp": 1795406864.5375812,
+      "timestamp_str": "2026-11-23 07:07:44"
     }
   ]
 }
