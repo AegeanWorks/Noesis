@@ -1916,5 +1916,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "205eeb53d7010f1fd91235b3be45a5fc593ff0dcd175ef4ed84166075ef86b73",
     "baseline_digest": "205eeb53d7010f1fd91235b3be45a5fc593ff0dcd175ef4ed84166075ef86b73"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Prospective Memory briefing in Edge: process-based caveat and both citations render, corpus count 186, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795434499.6886666,
+    "finished_at": 1795434526.6062799,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "e0c23094b3ffbcacf5fb998ecd25a88d428098f2c71c59428e38118842553571",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795434526.606283
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Prospective citation, version pin and briefing tests"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Prospective citation, version pin and briefing tests"
+      },
+      {
+        "path": "tests/ui/test-briefing.test.tsx",
+        "reason": "Prospective citation, version pin and briefing tests"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "e0c23094b3ffbcacf5fb998ecd25a88d428098f2c71c59428e38118842553571",
+    "baseline_digest": "e0c23094b3ffbcacf5fb998ecd25a88d428098f2c71c59428e38118842553571"
   }
 ]

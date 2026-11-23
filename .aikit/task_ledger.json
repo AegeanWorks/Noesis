@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-prospective-review-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795434489.4966578,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795441689.4966578,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795434526.9329991,
+    "completed_head": "92f8ce11f00cf4dee37bc7e29c8a7507da26fddb",
+    "completed_tree": "56e3b01db6f800cab9ea2bfcf76585b91b369f42"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Gates 2011 and Li 2025 as context and a no-dementia-prevention/no-diagnostic claim boundary on Evidence",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Closes a claim-boundary gap and documents the difference between validated screening and a consumer focus-test app.",
-        "mitigation": "Verify via efetch, add records and references, update counts, add failing-first UI tests, run suites and review UI.",
-        "risks": "contract: two context records and two new UI citations; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The Evidence screen lists many claim boundaries but none for dementia prevention or diagnosis, despite two verified residual reviews addressing exactly those distinctions."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "b613c115abe896baf39dd736e22ab3320ef0625a88c65b896436d9ade6c57e7c",
-      "status": "in_progress",
-      "task_id": "noesis-clinical-claim-boundary",
-      "timestamp": 1795431763.8360276,
-      "timestamp_str": "2026-11-23 14:02:43",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-prospective-review-evidence' completed successfully.",
+      "head": "92f8ce11f00cf4dee37bc7e29c8a7507da26fddb",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-prospective-review-evidence",
+      "timestamp": 1795434526.9894636,
+      "timestamp_str": "2026-11-23 14:48:46"
     }
   ]
 }
