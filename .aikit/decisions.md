@@ -866,6 +866,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Extend the dual-metric trend helper to both mechanics, add accuracy/response-time cards and latest-same-level briefing lines, with R131.
 - **Consequences**: All focus tests now support within-level comparison with the same descriptive-only caveats; no claim level or evidence count changes.
 
+### ADR-123: Jump-Chip Accessibility Fix
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The UI audit found 22 jump chips at 32px height and two "Jump to" labels at 11.52px, below the 44px/12px thresholds.
+- **Decision**: Raise the shared jump-chip min-height to 44px with roomier padding and enlarge the shared jump-label font to 0.85rem, with R132.
+- **Consequences**: A fresh audit reports zero jump-chip small targets and zero tiny jump labels across all twelve views with no console errors; no app logic or corpus change.
+
 
 
 

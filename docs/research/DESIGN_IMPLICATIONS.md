@@ -222,6 +222,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R129 | Reasoning and Speed Tap also have committed gameplay proofs, completing played-session coverage for every mechanic. | The proofs use each mechanic's response action (option selection and Space-style response) and report block metrics without console errors. | ADR-120 |
 | R130 | The transfer-gradient copy cites game-based training evidence showing domain-specific gains and sparse healthy-adult studies. | Ishibashi 2023 found processing-speed and working-memory gains but no executive-function improvement in game training. | 37257469; ADR-121 |
 | R131 | Visual Search and Digit Symbol get within-level accuracy and response-time trend cards and briefing lines, completing per-level comparison for the focus tests. | Both games previously reported only a single block result; the cards reuse the existing dual-metric presentation with descriptive caveats. | ADR-122 |
+| R132 | Jump chips on the Evidence and Settings screens meet the 44px touch-target minimum and their labels meet the 12px text-size floor. | The UI audit flagged 22 chips at 32px and two labels at 11.52px; the re-run reports zero such findings across all twelve views. | ADR-123 |
 
 ---
 
