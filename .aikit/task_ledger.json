@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-child-wm-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795471261.652978,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795478461.652978,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795471322.544518,
+    "completed_head": "3e23f10a9b7767a3ef2c4db243668eaf98d82736",
+    "completed_tree": "98f3bfa86aeca9c963a3db81c574cf531c338f3b"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Sprague 2019 behavioral-intervention review as context and cite it on the no-everyday-function-benefit boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a broad systematic-review citation to the everyday-function boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2019 systematic review of 75 RCTs found trained-domain gains with weak transfer and few everyday-function studies, directly supporting the app's existing boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "63806168c1b05b770e9502c4f9815ee36cbe1aee62791f4ca3287f0ceb69ffdf",
-      "status": "in_progress",
-      "task_id": "noesis-everyday-boundary-evidence",
-      "timestamp": 1795465298.852653,
-      "timestamp_str": "2026-11-23 23:21:38",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-child-wm-evidence' completed successfully.",
+      "head": "3e23f10a9b7767a3ef2c4db243668eaf98d82736",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-child-wm-evidence",
+      "timestamp": 1795471322.6990662,
+      "timestamp_str": "2026-11-24 01:02:02"
     }
   ]
 }
