@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-mood-boundary-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795457075.132773,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795464275.132773,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795457151.8824346,
+    "completed_head": "4f472cb4425dcc6fcd30df5c7aeb837d7fe2d1cc",
+    "completed_tree": "aa8fea7c701f3ef2c87f733a9a2c9eb6c24431e9"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add committed browser gameplay proof scripts for Visual Search and Digit Symbol, the last two games without them",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "All ten games get the same dogfood coverage: menu card, briefing, played three-block session, metrics and screenshots.",
-        "mitigation": "Adapt the digit proof with each mechanic's answer logic, run both to completion, regenerate map and commit.",
-        "risks": "contract: two new proof scripts and regenerated codebase map; dependency: playwright-core, local server with ?ai; concurrency: none; state: no app or corpus changes",
-        "why": "Search and Symbol are the only focus tests without repeatable gameplay proofs; their verification was ad hoc."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "3381d3dd3eef5b12aef747e3966e7b62bde3d20343b638988690e79e5046aec3",
-      "status": "in_progress",
-      "task_id": "noesis-search-symbol-proofs",
-      "timestamp": 1795452329.0664554,
-      "timestamp_str": "2026-11-23 19:45:29",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-mood-boundary-evidence' completed successfully.",
+      "head": "4f472cb4425dcc6fcd30df5c7aeb837d7fe2d1cc",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-mood-boundary-evidence",
+      "timestamp": 1795457151.999878,
+      "timestamp_str": "2026-11-23 21:05:51"
     }
   ]
 }
