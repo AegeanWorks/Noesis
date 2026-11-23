@@ -670,6 +670,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a second citation on the no-motor-benefit boundary, with R103; keep the screen-based claim scope unchanged.
 - **Consequences**: The review moves to 166 records and 374 outcomes (revision v2.30) and the modality boundary covers both community and clinical dual-task evidence.
 
+### ADR-095: Placebo Evidence on the Intelligence Claim Boundary
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Foroughi et al. 2016 (PMID 27325761) was narrative-only in BEHAVIORAL_ENGAGEMENT.md and shows that suggestive recruitment alone produced apparent fluid-intelligence gains after one training hour, with no gain in controls.
+- **Decision**: Add it as a context record and a second citation on the no-intelligence-gain boundary, with R104; keep all claim wording neutral and non-suggestive.
+- **Consequences**: The review moves to 167 records and 375 outcomes (revision v2.31) and the app's refusal of IQ claims is backed by an experimental expectancy demonstration.
+
 
 
 

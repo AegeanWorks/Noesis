@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 166 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 167 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -216,6 +216,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/22612437/"
               label="No general-intelligence or academic gain from working-memory training"
               pmid="22612437"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/27325761/"
+              label="No real Gf gain from placebo expectancy alone"
+              pmid="27325761"
             />
           </li>
           <li>

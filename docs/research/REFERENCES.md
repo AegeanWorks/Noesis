@@ -285,3 +285,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Dual-task comparisons (2026-11-23 targeted update)
 
 - Comparative effectiveness of different dual task mode interventions on cognitive function in older adults with mild cognitive impairment or dementia: a systematic review and network meta-analysis *Aging Clinical and Experimental Research*. 2025. PMID: [40304821](https://pubmed.ncbi.nlm.nih.gov/40304821/). DOI: [10.1007/s40520-025-03016-5](https://doi.org/10.1007/s40520-025-03016-5).
+
+## Expectancy and claims (2026-11-23 targeted update)
+
+- Placebo effects in cognitive training *Proceedings of the National Academy of Sciences*. 2016. PMID: [27325761](https://pubmed.ncbi.nlm.nih.gov/27325761/). DOI: [10.1073/pnas.1601243113](https://doi.org/10.1073/pnas.1601243113).

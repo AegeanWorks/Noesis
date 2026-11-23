@@ -9901,6 +9901,52 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the modality boundary: dual-task cognitive gains are clinical-population, movement-based findings, not a claim for a screen-based consumer tool."
+  },
+  {
+   "pmid": "27325761",
+   "doi": "10.1073/pnas.1601243113",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Proceedings of the National Academy of Sciences",
+   "title": "Placebo effects in cognitive training",
+   "modality": "cct",
+   "design": "rct",
+   "populations": [
+    "young_adults",
+    "healthy_adults"
+   ],
+   "k": 1,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Suggestive recruitment produced apparent fluid-intelligence gains after one hour of training (equivalent to 5-10 IQ points); nonsuggestive controls showed none"
+    }
+   ],
+   "findings": [
+    "Placebo expectancy can mimic large cognitive-training gains",
+    "Expectancy confounds can explain industry-style claims"
+   ],
+   "limitations": [
+    "Single experiment",
+    "Young-adult sample and suggestive recruitment paradigm"
+   ],
+   "flags": [
+    "expectancy_risk",
+    "single_trial"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the no-intelligence-gain boundary and the neutral claim language: suggestive framing can manufacture apparent gains, so the app avoids such promises."
   }
  ]
 }
