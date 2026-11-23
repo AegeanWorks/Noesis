@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-metacognition-citation",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795400105.1139498,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795407305.1139498,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795400150.575327,
+    "completed_head": "cea0372b51d41f52d93d748ce9c9efe6a663c07f",
+    "completed_tree": "12a8d680f270d974aeabdfbab86d4d5a94c8b6b5"
   },
   "checkpoints": [
-    {
-      "task_id": "noesis-symbol-game",
-      "phase": "phase 2",
-      "phase_num": 2,
-      "description": "[1/2] Plan: add a claim-bounded digit-symbol processing-speed focus test grounded in broad CCT and game-design evidence",
-      "files_affected": [],
-      "status": "in_progress",
-      "timestamp": 1795393474.126998,
-      "timestamp_str": "2026-11-23 03:24:34",
-      "agent": "opencode:hy4-flash-free",
-      "impact_assessment": {
-        "why": "The practice lineup has simple reaction time and paired associates but no symbol-digit association speed task; broad CCT meta-analyses support processing-speed near transfer.",
-        "benefits": "A distinct, deterministic 13th focus test with accuracy, reaction-time and association metrics and an explicitly narrow claim.",
-        "risks": "contract: new MechanicId across engine/UI/tests; dependency: none; concurrency: none; state: adaptive levels and count assertions must move with the id",
-        "mitigation": "Follow the Visual Search integration pattern, add failing-first tests, run all suites, play it in Edge, then commit."
-      },
-      "plan_digest": "64241c043ea4f992401ccabdcddc8a9f77e6e3cbf87e1eb3b5c3bc247111bf77",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "task_id": "noesis-symbol-game",
       "phase": "phase 4",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "task_id": "noesis-metacognition-citation",
+      "phase": "completed",
+      "phase_num": 5,
+      "description": "Task 'noesis-metacognition-citation' completed successfully.",
+      "status": "completed",
+      "timestamp": 1795400150.6363807,
+      "timestamp_str": "2026-11-23 05:15:50",
+      "agent": "opencode:hy4-flash-free",
+      "head": "cea0372b51d41f52d93d748ce9c9efe6a663c07f",
+      "delivery": {
+        "roots": [
+          "."
+        ],
+        "forced": false
+      }
     }
   ]
 }

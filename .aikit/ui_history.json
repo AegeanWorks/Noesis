@@ -637,5 +637,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "ebaff3e963a83a1f589d96c0111188d3b9add28f007984d377915a9314d53e91",
     "baseline_digest": "ebaff3e963a83a1f589d96c0111188d3b9add28f007984d377915a9314d53e91"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the change in the running app and via the confidence-note UI test: Sella 2023 link renders when a confidence rating is present, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795400116.0594506,
+    "finished_at": 1795400150.1954854,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "378114d7526c5501d507847144fbccd5397aedbe4455a4a60e4d6d259bc019f1",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795400150.1954873
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Metacognition citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/confidence-note.test.tsx",
+        "reason": "Metacognition citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "378114d7526c5501d507847144fbccd5397aedbe4455a4a60e4d6d259bc019f1",
+    "baseline_digest": "378114d7526c5501d507847144fbccd5397aedbe4455a4a60e4d6d259bc019f1"
   }
 ]
