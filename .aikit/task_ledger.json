@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-ef-taxonomy-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795458585.1070168,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795465785.1070168,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795458698.7033381,
+    "completed_head": "5da141a250f860f891eaaa77cdb38558ca148fec",
+    "completed_tree": "48242ae923b4af22fcf2ca18db4e78f85d857f6a"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add gameplay proofs for Reasoning and Speed Tap, the last two games without them",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Complete the dogfood coverage matrix so every game has a repeatable played-session check.",
-        "mitigation": "Adapt the digit proof to each mechanic's response action (answer/respond), run both to completion and commit.",
-        "risks": "contract: two new proof scripts and regenerated codebase map; dependency: local server with ?ai; concurrency: none; state: no app or corpus changes",
-        "why": "Reasoning and Speed Tap are the only mechanics with no committed browser gameplay proof."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "fa7387ec3834a703eb321d788d3f7fc1c9326d191271b3a1371bbacf696d6b72",
-      "status": "in_progress",
-      "task_id": "noesis-core-game-proofs",
-      "timestamp": 1795452755.8293295,
-      "timestamp_str": "2026-11-23 19:52:35",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-ef-taxonomy-evidence' completed successfully.",
+      "head": "5da141a250f860f891eaaa77cdb38558ca148fec",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-ef-taxonomy-evidence",
+      "timestamp": 1795458698.878719,
+      "timestamp_str": "2026-11-23 21:31:38"
     }
   ]
 }

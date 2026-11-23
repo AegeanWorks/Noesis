@@ -2300,5 +2300,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "5d53d7d982e5e3040febc7b75d7c6f0da572c1c99292a175c283b1486c0dbbb9",
     "baseline_digest": "5d53d7d982e5e3040febc7b75d7c6f0da572c1c99292a175c283b1486c0dbbb9"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Played a quick session in Edge: no-single-score rationale shows three citations including Webb 2018, corpus count 193, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795458629.3924127,
+    "finished_at": 1795458697.9179387,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "539dfe3388c4b8c718c38d049435622d80821065a9b64d12cc1ac9134251cb51",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795458697.9179423
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Rationale citation assertion, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/study-journey.test.tsx",
+        "reason": "Rationale citation assertion, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Rationale citation assertion, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "539dfe3388c4b8c718c38d049435622d80821065a9b64d12cc1ac9134251cb51",
+    "baseline_digest": "539dfe3388c4b8c718c38d049435622d80821065a9b64d12cc1ac9134251cb51"
   }
 ]
