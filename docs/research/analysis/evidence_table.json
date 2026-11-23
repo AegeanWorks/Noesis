@@ -8967,6 +8967,53 @@
    ],
    "synthesis_role": "context",
    "product_use": "Grounds the briefing confidence caveat: JOL reactivity is near zero overall and material-dependent, so the app's reflection prompt is not presented as a memory intervention."
+  },
+  {
+   "pmid": "35989930",
+   "doi": "10.3389/fneur.2022.903673",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Frontiers in Neurology",
+   "title": "The role of motivation factors in exergame interventions for fall prevention in older adults: A systematic review and meta-analysis",
+   "modality": "engagement",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Motivation and capability components influence exergame outcomes; exergames promising versus traditional exercise but may not improve fall risk or cognitive performance"
+    }
+   ],
+   "findings": [
+    "COM-B motivation and capability components influence intervention outcome",
+    "Exergame training alone may not improve fall risk or cognitive performance"
+   ],
+   "limitations": [
+    "Motor/fall-prevention population, not cognitive training",
+    "Motivation components analysed narratively"
+   ],
+   "flags": [
+    "clinical_specific",
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for Motivation mode: motivation supports adherence processes, but a game format alone does not establish cognitive or safety outcomes; rewards stay cosmetic."
   }
  ]
 }

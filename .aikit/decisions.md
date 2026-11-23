@@ -551,6 +551,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Double 2018 as a context record with its pooled estimates and material-dependence flags, add it as a second link in the briefing confidence note, and record R86.
 - **Consequences**: The review moves to 148 records and 346 outcomes (revision v2.13) and the confidence caveat rests on two pooled estimates instead of one, without changing the prompt.
 
+### ADR-078: Motivation-Review Citation on Safeguards
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The Evidence screen's Motivation safeguards cited gaming-disorder and gamification sources but not Buyle et al. 2022 (PMID 35989930), which had been narrative-only in SEARCH_LOG and directly addresses motivation in game-based interventions.
+- **Decision**: Add Buyle 2022 as a context record with its caution that a game format alone does not improve outcomes, add it to the safeguards citation list, and record R87. Rewards remain cosmetic and capped.
+- **Consequences**: The review moves to 149 records and 347 outcomes (revision v2.14) and the Motivation rationale now includes both the harm literature and the group-level motivation evidence with its limitation.
+
 
 
 
