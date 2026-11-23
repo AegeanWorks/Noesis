@@ -454,5 +454,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "cfdccb45d6d8a28982299c44fbf8483e04c9830f1ad5051a7d14be1d33a15081",
     "baseline_digest": "cfdccb45d6d8a28982299c44fbf8483e04c9830f1ad5051a7d14be1d33a15081"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Evidence screen in Edge: corpus count now 142 with no console errors; screenshot of count line verified",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795395249.020853,
+    "finished_at": 1795395281.0261364,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "aadaa39120453915a844b445a337286ce29f6ad1aad6720eb47f3fc62bcfd805",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795395281.0261378
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Snapshot counts follow the evidence table"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "aadaa39120453915a844b445a337286ce29f6ad1aad6720eb47f3fc62bcfd805",
+    "baseline_digest": "aadaa39120453915a844b445a337286ce29f6ad1aad6720eb47f3fc62bcfd805"
   }
 ]
