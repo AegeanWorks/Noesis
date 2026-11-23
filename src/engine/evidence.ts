@@ -46,6 +46,7 @@ export const MECHANIC_META: Record<MechanicId, MechanicMeta> = {
     citations: [
       { pmid: "40398202", label: "Inhibitory-control network meta-analysis (2025)" },
       { pmid: "37450981", label: "Executive-function review in ADHD (2023)" },
+      { pmid: "38309625", label: "Go/No-Go appetitive-behaviour meta-analysis (2024)" },
     ],
     safety: "Rapid shape changes. No flashing.",
   },

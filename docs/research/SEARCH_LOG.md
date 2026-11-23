@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 152 |
-| Outcomes | 353 |
+| Records | 153 |
+| Outcomes | 354 |
 | Primary outcomes | 258 |
-| Systematic reviews/meta-analyses | 97 |
+| Systematic reviews/meta-analyses | 98 |
 | Network meta-analyses | 18 |
 | Other systematic reviews | 26 |
 | RCTs | 9 |
 | Umbrella reviews | 2 |
-| DOI verified | 141 |
+| DOI verified | 142 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -137,7 +137,7 @@ By modality:
 
 | Modality | Records |
 |---|---:|
-| cct | 65 |
+| cct | 66 |
 | multimodal | 17 |
 | neurofeedback | 17 |
 | ave | 6 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 141 |
+| DOI verified | 142 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **152** |
+| **Total** | **153** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -249,6 +249,8 @@ A 2026-11-23 game-factor update resolved Smith & Basak 2023 (PMID 37531408, *PLO
 A 2026-11-23 spatial-training update resolved Hawes et al. 2022 (PMID 35073120, *Developmental Psychology*; DOI 10.1037/dev0001281) from narrative-only to a context record, verified via E-utilities `efetch`. Twenty-nine controlled studies (N=3,765, k=89) found spatial-thinking gains g=0.49 and smaller mathematics transfer g=0.28, with concrete materials outperforming computerized training. The Mental Rotation brief now cites both this and Uttal 2013, keeping its no-academic-claim boundary (ADR-080). D7 is unchanged; the review is now 151 records and 351 outcomes, revision v2.16.
 
 A 2026-11-23 action-game update resolved Bediou et al. 2018 (PMID 29172564, *Psychological Bulletin*; DOI 10.1037/bul0000130) from narrative-only to a context record, verified via E-utilities `efetch`. Habitual action-game players differed from controls by g=0.55, but long-term interventions against other commercial games gave g=0.34, and publication bias was estimated to inflate published effects by about 30 percent; the genre remains excluded from Noesis on flashing/fast-presentation safety grounds. The Motivation safeguards now cite it (ADR-081). D7 is unchanged; the review is now 152 records and 353 outcomes, revision v2.17.
+
+A 2026-11-23 inhibition-paradigm update resolved McGreen et al. 2024 (PMID 38309625, *Appetite*; DOI 10.1016/j.appet.2024.107215) from narrative-only to a context record, verified via E-utilities `efetch`. Thirty-two studies of Go/No-Go and Stop-Signal training with food cues gave a small behaviour effect (g=-0.21, -0.31 to -0.11), not cognitive transfer. The Go/No-Go brief now cites it beside the inhibitory-control evidence, keeping the no-daily-impulse-control claim (ADR-082). D7 is unchanged; the review is now 153 records and 354 outcomes, revision v2.18.
 
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 

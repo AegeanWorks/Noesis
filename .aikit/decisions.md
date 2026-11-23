@@ -579,6 +579,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a context record and a sixth Motivation-safeguards citation, with R90, and keep the action-game exclusion on safety grounds documented alongside the effect estimate.
 - **Consequences**: The review moves to 152 records and 353 outcomes (revision v2.17) and the no-flashing exclusion is supported by both the safety literature and the game evidence with its bias caveat.
 
+### ADR-082: Inhibition Paradigm Citation on Go/No-Go
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: McGreen et al. 2024 (PMID 38309625) was narrative-only in NEW_MECHANIC_CANDIDATES.md section 6.7 and reports a small effect of Go/No-Go and Stop-Signal training on food-related behaviour (g=-0.21), not cognitive transfer.
+- **Decision**: Add it as a context record and a third Go/No-Go citation, with R91; keep the brief's no-daily-impulse-control wording and the Stop-Signal exclusion.
+- **Consequences**: The review moves to 153 records and 354 outcomes (revision v2.18) and the inhibition claim boundary is backed by a pooled estimate showing the paradigm's actual outcome domain.
+
 
 
 

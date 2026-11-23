@@ -232,3 +232,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Action-game evidence (2026-11-23 targeted update)
 
 - Meta-analysis of action video game impact on perceptual, attentional, and cognitive skills *Psychological Bulletin*. 2018. PMID: [29172564](https://pubmed.ncbi.nlm.nih.gov/29172564/). DOI: [10.1037/bul0000130](https://doi.org/10.1037/bul0000130).
+
+## Inhibition paradigms (2026-11-23 targeted update)
+
+- The effectiveness of Go/No-Go and Stop-Signal training in reducing food consumption and choice: A systematic review and meta-analysis *Appetite*. 2024. PMID: [38309625](https://pubmed.ncbi.nlm.nih.gov/38309625/). DOI: [10.1016/j.appet.2024.107215](https://doi.org/10.1016/j.appet.2024.107215).

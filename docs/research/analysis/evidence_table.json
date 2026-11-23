@@ -9190,6 +9190,53 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the game-format boundary: action games show small causal effects with substantial bias, and are excluded from Noesis for flashing/fast-presentation safety reasons."
+  },
+  {
+   "pmid": "38309625",
+   "doi": "10.1016/j.appet.2024.107215",
+   "doi_status": "verified",
+   "year": 2024,
+   "journal": "Appetite",
+   "title": "The effectiveness of Go/No-Go and Stop-Signal training in reducing food consumption and choice: A systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": 32,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": -0.21,
+     "ci_low": -0.31,
+     "ci_high": -0.11,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Small reduction in food consumption/choice after Go/No-Go or Stop-Signal training with food cues; single-session Go/No-Go g=-0.31 (-0.45,-0.18)"
+    }
+   ],
+   "findings": [
+    "Small effect on food-related behaviour, not on cognitive transfer",
+    "Go/No-Go effect robust across moderators; stop-signal parameters varied"
+   ],
+   "limitations": [
+    "Appetitive-behaviour outcome, not cognitive transfer",
+    "Food-cue paradigm"
+   ],
+   "flags": [
+    "domain_null",
+    "paradigm_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for Go/No-Go: the inhibition literature outside cognitive training targets appetitive behaviour, so the app does not claim Stop-Signal or eating-behaviour benefits."
   }
  ]
 }
