@@ -11132,6 +11132,75 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for Paired Associates: older-adult episodic-memory training shows reported benefits but a heterogeneous, still-developing evidence base, so the game remains task practice only."
+  },
+  {
+   "pmid": "28165253",
+   "doi": "10.1037/dev0000265",
+   "doi_status": "verified",
+   "year": 2017,
+   "journal": "Developmental Psychology",
+   "title": "Working memory training in typically developing children: A meta-analysis of the available evidence",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children",
+    "adolescents"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.46,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Typically developing children aged 3-16: WM training improved WM-related cognitive skills (g=0.46)"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.12,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Little evidence for far transfer to non-WM cognitive skills (g=0.12); effect size inversely related to design quality"
+    },
+    {
+     "domain": "academic",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "No support for gains in fluid intelligence, mathematics or literacy in typically developing children"
+    }
+   ],
+   "findings": [
+    "WM training improves trained/near WM skills in children but far transfer is minimal",
+    "Stronger designs with active controls produce smaller effects; no academic gains"
+   ],
+   "limitations": [
+    "Typically developing children aged 3-16, not the app's adult evidence base",
+    "No pooled confidence intervals in the abstract"
+   ],
+   "flags": [
+    "far_transfer_null",
+    "age_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the child/academic claim boundary: more rigorous designs shrink effects and no academic or general cognitive gain was found in children."
   }
  ]
 }

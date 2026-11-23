@@ -216,6 +216,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R123 | The Evidence screen distinguishes neural mechanism markers from general or everyday benefit with two imaging meta-analyses. | Zhang 2024 and Li 2026 report training-related activation changes accompanying trained-task gains, not transfer to daily life. | 39395643; 42092905; ADR-114 |
 | R124 | The trial dossier and design traceability list all ten experimental focus tests, and a test guards the dossier's list. | The dossier still named only seven focus tests after Visual Search, Digit Symbol and Digit Span shipped. | ADR-115 |
 | R125 | Paired Associates cites an older-adult episodic-memory review beside the mnemonic meta-analysis, with the heterogeneous evidence caveat. | Mendonça 2022 found reported benefits across varied protocols but stressed the need for more empirical studies. | 35967680; ADR-116 |
+| R126 | The Evidence screen states that Noesis makes no child-development or academic claim, since the app is not age-gated and the training evidence is adult-based. | Sala & Gobet 2017 found near gains with minimal far transfer and no academic benefit in typically developing children, with effects shrinking in stronger designs. | 28165253; ADR-117 |
 
 ---
 

@@ -338,3 +338,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Episodic-memory training context (2026-11-23 targeted update)
 
 - Episodic memory training in elderly: A systematic review *Frontiers in Psychology*. 2022. PMID: [35967680](https://pubmed.ncbi.nlm.nih.gov/35967680/). DOI: [10.3389/fpsyg.2022.947519](https://doi.org/10.3389/fpsyg.2022.947519).
+
+## Child and academic boundary evidence (2026-11-23 targeted update)
+
+- Working memory training in typically developing children: A meta-analysis of the available evidence *Developmental Psychology*. 2017. PMID: [28165253](https://pubmed.ncbi.nlm.nih.gov/28165253/). DOI: [10.1037/dev0000265](https://doi.org/10.1037/dev0000265).

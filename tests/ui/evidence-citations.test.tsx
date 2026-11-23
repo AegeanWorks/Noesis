@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 37);
+    expect(links).toHaveLength(mechanicCitations + 38);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -44,6 +44,7 @@ describe("evidence citation rows", () => {
     expect(notSupported.textContent).toMatch(/dementia-prevention/i);
     expect(notSupported.textContent).toMatch(/validated screening tool/i);
     expect(notSupported.textContent).toMatch(/replace established interventions/i);
-    expect(notSupported.querySelectorAll("a")).toHaveLength(11);
+    expect(notSupported.textContent).toMatch(/child-development or academic/i);
+    expect(notSupported.querySelectorAll("a")).toHaveLength(12);
   });
 });

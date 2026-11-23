@@ -824,6 +824,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add the review as a context record and a second citation on the mechanic, with R125; bump the review version to v2.40.
 - **Consequences**: The review moves to 189 records and 412 outcomes (revision v2.40), D7 residuals fall to 946, and the game's bounded rationale gains a second, honestly framed source.
 
+### ADR-117: Child and Academic Claim Boundary
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The app has no age gate and the Evidence screen listed no child or academic boundary, while a verified child meta-analysis found minimal far transfer and no academic gain.
+- **Decision**: Add Sala & Gobet 2017 as a context record and a claim boundary stating that Noesis makes no child-development or academic claim, with R126; bump the review version to v2.41.
+- **Consequences**: The review moves to 190 records and 415 outcomes (revision v2.41), D7 residuals fall to 945, and the app's age-related limits become explicit.
+
 
 
 
