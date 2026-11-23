@@ -1,8 +1,8 @@
 # Noesis Evidence Review
 
-**Status:** v1.0 corpus complete; current review revision v2.8 (2026-11-23) with targeted UX, data-collection, export, new-game, working-memory residual-extraction, visual-search, adherence, everyday-function, clinical-boundary, game-design, multimodal, expectancy, clinical-mood and serious-game updates, AI-assisted, internally pre-registered
+**Status:** v1.0 corpus complete; current review revision v2.9 (2026-11-23) with targeted UX, data-collection, export, new-game, working-memory residual-extraction, visual-search, adherence, everyday-function, clinical-boundary, game-design, multimodal, expectancy, clinical-mood, serious-game and data-reuse updates, AI-assisted, internally pre-registered
 **Search date:** 2026-10-31; targeted updates 2026-11-08, 2026-11-22 and 2026-11-23
-**Records:** 142 included (103 primary, 39 context), 338 outcomes
+**Records:** 144 included (103 primary, 41 context), 340 outcomes
 **Review type:** PRISMA 2020 systematic umbrella review with landmark-RCT update
 
 ---
@@ -49,7 +49,7 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the full argument.
 | [SAFETY_AND_REGULATION.md](SAFETY_AND_REGULATION.md) | Seizure, exercise, audio, EEG, data and regulatory constraints |
 | [REFERENCES.md](REFERENCES.md) | All included records with PMIDs and verified DOIs |
 | [REFERENCES.bib](REFERENCES.bib) | BibTeX for the included records |
-| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (142 records, 338 outcomes) |
+| [analysis/evidence_table.json](analysis/evidence_table.json) | Machine-readable evidence table (144 records, 340 outcomes) |
 | [analysis/screening_reviews.csv](analysis/screening_reviews.csv) | Rule-based screen of the 1,495-review PubMed corpus |
 | [analysis/screening_summary.json](analysis/screening_summary.json) | Screening counts |
 | [records/](records/) | Raw PubMed, OpenAlex, trial-registry and metadata-verification records |

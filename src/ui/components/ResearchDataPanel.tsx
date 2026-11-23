@@ -163,6 +163,15 @@ export function ResearchDataPanel({
         send it. Withdrawing consent stops future emails; data already sent cannot be
         recalled.
       </p>
+      <p className="fine" data-testid="fair-evidence">
+        <strong>Why an export file:</strong> the FAIR principles favour documented, reusable
+        data, so the JSON manifest and CSV layouts are field-documented and stay on your device
+        until you choose to share.{" "}
+        <a href="https://pubmed.ncbi.nlm.nih.gov/26978244/" target="_blank" rel="noreferrer">
+          Wilkinson et al. 2016
+        </a>{" "}
+        <span className="pmid">PMID 26978244</span>
+      </p>
     </div>
   );
 }

@@ -49,6 +49,15 @@ function renderPanel(
 }
 
 describe("ResearchDataPanel", () => {
+  it("links the export rationale to the FAIR principles", () => {
+    renderPanel({ consent: null });
+    const note = screen.getByTestId("fair-evidence");
+    expect(note.textContent).toMatch(/FAIR principles/i);
+    expect(note.querySelector("a")?.getAttribute("href")).toBe(
+      "https://pubmed.ncbi.nlm.nih.gov/26978244/",
+    );
+  });
+
   it("requires consent before sending", () => {
     const props = renderPanel({ consent: null });
     expect(screen.getByText(/consent not given/i)).toBeTruthy();

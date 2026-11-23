@@ -195,3 +195,8 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Serious-game evidence quality (2026-11-23 targeted update)
 
 - Serious Games for Learning Among Older Adults With Cognitive Impairment: Systematic Review and Meta-analysis *Journal of Medical Internet Research*. 2023. PMID: [37043277](https://pubmed.ncbi.nlm.nih.gov/37043277/). DOI: [10.2196/43607](https://doi.org/10.2196/43607).
+
+## Data reuse and consent measurement (2026-11-23 targeted update)
+
+- The FAIR Guiding Principles for scientific data management and stewardship *Scientific Data*. 2016. PMID: [26978244](https://pubmed.ncbi.nlm.nih.gov/26978244/). DOI: [10.1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18).
+- How do we measure data sharing in the biomedical sciences? A measurement systematic review of biomedical data sharing-related knowledge, attitudes and practices across stakeholder groups, data types and geographies *BMJ Open*. 2026. PMID: [41813053](https://pubmed.ncbi.nlm.nih.gov/41813053/). DOI: [10.1136/bmjopen-2025-100314](https://doi.org/10.1136/bmjopen-2025-100314).

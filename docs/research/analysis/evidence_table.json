@@ -8677,6 +8677,87 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the game rationale: serious-game learning effects in impaired older adults are low-certainty, so Noesis games are task practice and never a replacement for care."
+  },
+  {
+   "pmid": "26978244",
+   "doi": "10.1038/sdata.2016.18",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Scientific Data",
+   "title": "The FAIR Guiding Principles for scientific data management and stewardship",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "consensus_principles",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "not_reported",
+     "note": "Findable, Accessible, Interoperable, Reusable principles for scholarly data; a guideline, not an effect estimate"
+    }
+   ],
+   "findings": [
+    "FAIR principles emphasise machine-readable metadata and explicit reuse conditions"
+   ],
+   "limitations": [
+    "Consensus principles, not empirical outcome evidence"
+   ],
+   "flags": [
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the research export manifest and data dictionary: local CSV/JSON exports carry field documentation and explicit consent metadata."
+  },
+  {
+   "pmid": "41813053",
+   "doi": "10.1136/bmjopen-2025-100314",
+   "doi_status": "verified",
+   "year": 2026,
+   "journal": "BMJ Open",
+   "title": "How do we measure data sharing in the biomedical sciences? A measurement systematic review of biomedical data sharing-related knowledge, attitudes and practices across stakeholder groups, data types and geographies",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "adults"
+   ],
+   "k": 60,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "behaviour",
+     "transfer": "na",
+     "measure": "measurement_review",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "60 surveys from 72 publications; fewer than one-third pilot tested, only 3 reported measurement properties, indicating low certainty in data-sharing attitude measurement"
+    }
+   ],
+   "findings": [
+    "Data-sharing KAP surveys are heterogeneous and weakly validated"
+   ],
+   "limitations": [
+    "Most surveys used once and from high-income settings"
+   ],
+   "flags": [
+    "low_quality_evidence",
+    "narrative_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for consent design: data-sharing attitudes are not measured reliably, so Noesis uses explicit, revocable consent rather than inferred willingness."
   }
  ]
 }

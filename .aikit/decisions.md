@@ -516,6 +516,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add a short, two-link "why we ask" note to the safety screen, add R81, and pin both PubMed links with a failing-first UI test.
 - **Consequences**: No evidence-table or count changes. The safety posture becomes auditable from the onboarding screen while remaining a design constraint, not medical advice.
 
+### ADR-073: FAIR-Linked Research Export Rationale
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: DATA_EXPORT_AND_REUSE.md cited two verified PMIDs that were not in the evidence table, and the research export panel gave no source for its documented file format. Wilkinson et al. 2016 (PMID 26978244) defines the FAIR principles; Maxwell et al. 2026 (PMID 41813053) found that data-sharing attitude surveys have weak measurement properties.
+- **Decision**: Add both as context records and link the FAIR paper from the research export panel, with R82 and a failing-first UI test. Keep consent explicit and revocable rather than inferring willingness.
+- **Consequences**: The review moves to 144 records and 340 outcomes (revision v2.9), both previously narrative-only citations resolve in-app, and the export rationale becomes click-through verifiable.
+
 
 
 
