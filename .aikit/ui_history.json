@@ -972,5 +972,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "ba7a59bf29683f3b910db82d6363188682f3a5889110fdaa6654cfd6a6fdf631",
     "baseline_digest": "ba7a59bf29683f3b910db82d6363188682f3a5889110fdaa6654cfd6a6fdf631"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Evidence screen in Edge: incentive-design citation (PMID 36201384) renders, corpus count 155, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795408795.4556427,
+    "finished_at": 1795408828.2105396,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "4fa0cbb616e8f551735ba527ff596e0c3add657c36e80910ed221ca96f242e94",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795408828.2105412
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Incentive citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Incentive citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "4fa0cbb616e8f551735ba527ff596e0c3add657c36e80910ed221ca96f242e94",
+    "baseline_digest": "4fa0cbb616e8f551735ba527ff596e0c3add657c36e80910ed221ca96f242e94"
   }
 ]

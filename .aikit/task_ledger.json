@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-incentive-framing-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795408784.4994955,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795415984.4994955,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795408828.590254,
+    "completed_head": "d8d636452f495642b5c3dba19108998f10b87a39",
+    "completed_tree": "a9b82ab85077085a41714f2608a64af31d56b3c1"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Buyle 2022 exergame motivation review as context and link it from the Motivation safeguards aside",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and adds a group-level motivation caveat to the cosmetic reward system's evidence list.",
-        "mitigation": "Add record from verified abstract, update counts/references/prose, add failing-first test, run suites and review UI.",
-        "risks": "contract: one context record + UI link + test; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "The Motivation safeguards aside cites gaming-disorder sources but not the exergame motivation review already narrated in SEARCH_LOG."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "8a45be8200f8076b26d6f3709a1937b7d8f6fefd5a8d2609959fcd29e8f857f5",
-      "status": "in_progress",
-      "task_id": "noesis-exergame-motivation",
-      "timestamp": 1795402461.338609,
-      "timestamp_str": "2026-11-23 05:54:21",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-incentive-framing-evidence' completed successfully.",
+      "head": "d8d636452f495642b5c3dba19108998f10b87a39",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-incentive-framing-evidence",
+      "timestamp": 1795408828.7713284,
+      "timestamp_str": "2026-11-23 07:40:28"
     }
   ]
 }
