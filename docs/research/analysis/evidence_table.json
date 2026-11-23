@@ -11259,6 +11259,75 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the task-practice framing: game-based gains are domain-specific and sparse in healthy older adults, so Noesis games make no general cognitive claim."
+  },
+  {
+   "pmid": "41765936",
+   "doi": "10.1038/s41398-026-03857-2",
+   "doi_status": "verified",
+   "year": 2026,
+   "journal": "Translational Psychiatry",
+   "title": "Effects of working memory training on depressive symptoms: a systematic review and meta-analysis of randomized controlled trials",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "clinical_symptoms"
+   ],
+   "k": 27,
+   "n": 1692,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "depression",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.2,
+     "ci_low": 0.04,
+     "ci_high": 0.35,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "27 RCTs, 1692 participants: small post-training reduction in depressive symptoms (g=0.20, 95% CI 0.04-0.35)"
+    },
+    {
+     "domain": "depression",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Effect not maintained at follow-up; authors state clinical utility remains uncertain and larger RCTs are needed"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.61,
+     "ci_low": 0.24,
+     "ci_high": 0.98,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Moderate WM gains post-training (g=0.61) and at follow-up (g=0.72, 95% CI 0.07-1.38)"
+    }
+   ],
+   "findings": [
+    "Small post-training mood effect was not maintained at follow-up",
+    "Clinical utility of working-memory training for depression remains uncertain"
+   ],
+   "limitations": [
+    "Clinical depression-spectrum samples",
+    "Small effects and uncertain durability"
+   ],
+   "flags": [
+    "clinical_specific",
+    "maintenance_gap"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-mood-treatment boundary: even in clinical RCTs the symptom effect was small and transient, with uncertain clinical utility, so a consumer app makes no treatment claim."
   }
  ]
 }

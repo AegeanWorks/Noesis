@@ -346,3 +346,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Game-based training context (2026-11-23 targeted update)
 
 - Effects of cognitive interventions with video games on cognition in healthy elderly people: a systematic review *Arquivos de Neuro-Psiquiatria*. 2023. PMID: [37257469](https://pubmed.ncbi.nlm.nih.gov/37257469/). DOI: [10.1055/s-0043-1764413](https://doi.org/10.1055/s-0043-1764413).
+
+## Mood claim boundary evidence (2026-11-23 targeted update)
+
+- Effects of working memory training on depressive symptoms: a systematic review and meta-analysis of randomized controlled trials *Translational Psychiatry*. 2026. PMID: [41765936](https://pubmed.ncbi.nlm.nih.gov/41765936/). DOI: [10.1038/s41398-026-03857-2](https://doi.org/10.1038/s41398-026-03857-2).

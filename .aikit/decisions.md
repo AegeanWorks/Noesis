@@ -880,6 +880,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Constrain the hero decoration on narrow screens, raise those controls to 44px, and keep horizontally scrollable jump rows as intentional, with R133.
 - **Consequences**: Audit totals fell from clipped=3/overflow=11/smallTargets=51 to clipped=0/overflow=2/smallTargets=30; the remaining flags are inline prose links (WCAG inline exception) and off-screen chips in scrollable rows, with zero console errors.
 
+### ADR-125: Mood Boundary Gains Pooled Support
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The no-mood-treatment boundary cited only a consumer-training review; a verified 2026 RCT meta-analysis quantified a small, transient symptom effect in clinical samples.
+- **Decision**: Add Bai et al. 2026 as a context record and a second citation on that boundary, with R134; bump the review version to v2.43.
+- **Consequences**: The review moves to 192 records and 420 outcomes (revision v2.43), D7 residuals fall to 943, and the boundary now reflects both consumer and clinical evidence.
+
 
 
 

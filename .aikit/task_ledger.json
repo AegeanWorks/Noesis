@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-ui-audit-remaining",
+    "task_id": "noesis-mood-boundary-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795455643.8132708,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795457075.132773,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795462843.8132708,
+    "lease_until": 1795464275.132773,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795455741.4320507,
-    "completed_head": "bebbb9a39f72ef79b9b75459d5d9b3d879aceeb8",
-    "completed_tree": "7092339fcbda49ed60af5bec103484194afd0239"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 190/415 records unchanged, 485 tests, gates 7/7, resume proof passes with restored seed/level and three blocks, ADR-118",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-digit-resume-proof",
-      "timestamp": 1795452088.0549345,
-      "timestamp_str": "2026-11-23 19:41:28",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-digit-resume-proof' completed successfully.",
-      "head": "20a70f3e8e6cf507eacebf7cacb4b7523fa5b348",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-digit-resume-proof",
-      "timestamp": 1795452103.3201356,
-      "timestamp_str": "2026-11-23 19:41:43"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add committed browser gameplay proof scripts for Visual Search and Digit Symbol, the last two games without them",
@@ -409,6 +371,48 @@
       "task_id": "noesis-ui-audit-remaining",
       "timestamp": 1795455741.516169,
       "timestamp_str": "2026-11-23 20:42:21"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Bai 2026 WM-training mood meta-analysis as context and a second citation on the no-mood-treatment boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Strengthens an existing boundary with pooled clinical evidence and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2026 RCT meta-analysis quantifies a small transient depressive-symptom effect with no durability, directly supporting the app's no-mood-treatment claim boundary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "1b0e6db0636d2ed46b8af8f7b3e35952c7d58f50985713b7ff178d4e86ec6fd7",
+      "status": "in_progress",
+      "task_id": "noesis-mood-boundary-evidence",
+      "timestamp": 1795455959.3116767,
+      "timestamp_str": "2026-11-23 20:45:59",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 192/420 records, 488 tests, gates 7/7, mood boundary citation verified in Edge, ADR-125",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-mood-boundary-evidence",
+      "timestamp": 1795457075.132773,
+      "timestamp_str": "2026-11-23 21:04:35",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
