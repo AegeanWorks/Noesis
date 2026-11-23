@@ -370,3 +370,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Everyday-function boundary evidence (2026-11-23 targeted update)
 
 - The impact of behavioral interventions on cognitive function in healthy older adults: A systematic review *Ageing Research Reviews*. 2019. PMID: [31002885](https://pubmed.ncbi.nlm.nih.gov/31002885/). DOI: [10.1016/j.arr.2019.04.002](https://doi.org/10.1016/j.arr.2019.04.002).
+
+## Executive-function subdomain evidence (2026-11-23 targeted update)
+
+- Effects of different non-pharmacological interventions on executive function in healthy older people: A systematic review and network meta-analysis *Archives of Gerontology and Geriatrics*. 2026. PMID: [41576774](https://pubmed.ncbi.nlm.nih.gov/41576774/). DOI: [10.1016/j.archger.2026.106141](https://doi.org/10.1016/j.archger.2026.106141).

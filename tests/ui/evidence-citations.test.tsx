@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 43);
+    expect(links).toHaveLength(mechanicCitations + 44);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -30,7 +30,7 @@ describe("evidence citation rows", () => {
     );
     const support = screen.getByTestId("transfer-support-evidence");
     expect(support.textContent).toMatch(/task-specific/i);
-    expect(support.querySelectorAll("a")).toHaveLength(7);
+    expect(support.querySelectorAll("a")).toHaveLength(8);
     const mechanism = screen.getByTestId("mechanism-evidence");
     expect(mechanism.textContent).toMatch(/mechanism markers/i);
     expect(mechanism.querySelectorAll("a")).toHaveLength(2);

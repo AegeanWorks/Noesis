@@ -11641,6 +11641,75 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-everyday-function boundary: even across 75 RCTs, transfer beyond trained domains was weak and everyday-function studies were few."
+  },
+  {
+   "pmid": "41576774",
+   "doi": "10.1016/j.archger.2026.106141",
+   "doi_status": "verified",
+   "year": 2026,
+   "journal": "Archives of Gerontology and Geriatrics",
+   "title": "Effects of different non-pharmacological interventions on executive function in healthy older people: A systematic review and network meta-analysis",
+   "modality": "cct",
+   "design": "nma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 115,
+   "n": 16824,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "inhibition",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.48,
+     "ci_low": 0.28,
+     "ci_high": 0.68,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "115 RCTs, 16,824 healthy adults aged 60+: computerized cognitive training showed a positive effect on inhibition (SMD 0.48, 95% CI 0.28-0.68)"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.96,
+     "ci_low": 0.5,
+     "ci_high": 1.43,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Dance ranked highest for overall executive function (SMD 0.82) and cognitive flexibility (SMD 0.96)"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "SMD",
+     "value": 0.86,
+     "ci_low": 0.51,
+     "ci_high": 1.2,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Resistance training ranked highest for working memory; no single intervention improved all executive-function subdomains"
+    }
+   ],
+   "findings": [
+    "Different non-drug interventions benefit different executive-function subdomains",
+    "Computerized training's clearest effect was on inhibition, not general executive function"
+   ],
+   "limitations": [
+    "Network comparisons are indirect",
+    "Subdomain-specific effects must not be read as broad EF improvement"
+   ],
+   "flags": [
+    "domain_specific",
+    "indirect_comparison"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the transfer-gradient copy: pooled evidence supports domain-specific gains, so the app reports component-level results and makes no general executive-function claim."
   }
  ]
 }

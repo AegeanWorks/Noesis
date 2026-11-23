@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-everyday-boundary-evidence",
+    "task_id": "noesis-ef-nma-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795466191.8423452,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795467168.3046858,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795473391.8423452,
+    "lease_until": 1795474368.3046858,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795466269.3071644,
-    "completed_head": "2712c0a75748c98af6bd033724b135668ff1cc3a",
-    "completed_tree": "f1d40957f45711090d1552aa15b7ab9a0dd89a42"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 191/417 records unchanged, 488 tests, gates 7/7, audit clipped 3->0 overflow 11->2 smallTargets 51->30, ADR-124",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-ui-audit-remaining",
-      "timestamp": 1795455643.8132708,
-      "timestamp_str": "2026-11-23 20:40:43",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-ui-audit-remaining' completed successfully.",
-      "head": "bebbb9a39f72ef79b9b75459d5d9b3d879aceeb8",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-ui-audit-remaining",
-      "timestamp": 1795455741.516169,
-      "timestamp_str": "2026-11-23 20:42:21"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Bai 2026 WM-training mood meta-analysis as context and a second citation on the no-mood-treatment boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-everyday-boundary-evidence",
       "timestamp": 1795466269.9609053,
       "timestamp_str": "2026-11-23 23:37:49"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Bai 2026 executive-function network meta-analysis as context and cite it on the transfer-gradient copy",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a large pooled evidence context to the transfer-gradient copy and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2026 NMA of 115 RCTs shows different interventions benefit different executive-function subdomains, supporting the app's component-specific, no-general-EF framing."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "43788da772b5bc413440b4c6c96f689c807711935c2373a5dcfdc7c713bc8790",
+      "status": "in_progress",
+      "task_id": "noesis-ef-nma-evidence",
+      "timestamp": 1795466592.930358,
+      "timestamp_str": "2026-11-23 23:43:12",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 198/435 records, 489 tests, gates 7/7, EF subdomain citation verified in Edge, ADR-131",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-ef-nma-evidence",
+      "timestamp": 1795467168.3046858,
+      "timestamp_str": "2026-11-23 23:52:48",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

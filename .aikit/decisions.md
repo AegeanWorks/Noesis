@@ -922,6 +922,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Sprague et al. 2019 as a context record and a second citation on that boundary, with R139; bump the review version to v2.48.
 - **Consequences**: The review moves to 197 records and 432 outcomes (revision v2.48), D7 residuals fall to 938, and the boundary now rests on two systematic reviews.
 
+### ADR-131: Subdomain Evidence on the Transfer Gradient
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: A verified 2026 network meta-analysis of 115 RCTs showed intervention effects differ by executive-function subdomain, reinforcing the app's component-level measurement stance.
+- **Decision**: Add Bai et al. 2026 as a context record, a citation on the transfer-gradient copy and R140; bump the review version to v2.49.
+- **Consequences**: The review moves to 198 records and 435 outcomes (revision v2.49), D7 residuals fall to 937, and the app's no-general-EF framing gains large-scale pooled support.
+
 
 
 
