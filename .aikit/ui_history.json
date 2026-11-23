@@ -2687,5 +2687,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "291c997c36bc4b13376d5ab28636e22e125097e641a97dad85e4a82bfd95fe27",
     "baseline_digest": "291c997c36bc4b13376d5ab28636e22e125097e641a97dad85e4a82bfd95fe27"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: neurofeedback mechanism note and citation render, corpus count 202, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795470606.4336474,
+    "finished_at": 1795470659.0830402,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "a9aa6fa54056d2cfac1911eabe9b8783241a7ab2fb1e996a1e7e71073c001d0a",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795470659.0830429
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Mechanism citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Mechanism citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Mechanism citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "a9aa6fa54056d2cfac1911eabe9b8783241a7ab2fb1e996a1e7e71073c001d0a",
+    "baseline_digest": "a9aa6fa54056d2cfac1911eabe9b8783241a7ab2fb1e996a1e7e71073c001d0a"
   }
 ]

@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-neurofeedback-mechanism-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795470580.8514853,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795477780.8514853,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795470660.249479,
+    "completed_head": "3614a8e84a1b0637b42870da7100941ed3479654",
+    "completed_tree": "1909cc7efffdaa87a3d2725ba1c107bdd37444db"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Jones 2021 prospective-memory intervention meta-analysis as context and cite it on the Prospective Memory focus test with an ecological-validity caveat",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Strengthens the Prospective Memory brief's honesty boundary with pooled evidence and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation and caveat with tests, run suites and review UI.",
-        "risks": "contract: one context record, one mechanic citation, brief copy, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2021 meta-analysis shows cognitive-training gains on prospective-memory tasks but only 20% ecological validity in those studies, directly supporting the app's task-practice-only framing."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "024b888ee8d5943138bdacf71ba1bd21d80aeb9b8ba9ac53cc0a0f6e777d7744",
-      "status": "in_progress",
-      "task_id": "noesis-prospective-ecology-evidence",
-      "timestamp": 1795463148.0035858,
-      "timestamp_str": "2026-11-23 22:45:48",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-neurofeedback-mechanism-evidence' completed successfully.",
+      "head": "3614a8e84a1b0637b42870da7100941ed3479654",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-neurofeedback-mechanism-evidence",
+      "timestamp": 1795470660.4259577,
+      "timestamp_str": "2026-11-24 00:51:00"
     }
   ]
 }
