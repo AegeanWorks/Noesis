@@ -253,7 +253,9 @@ export function SettingsScreen({
           <strong>What the literature says:</strong> a meta-analysis of 15 trials (759 older
           adults) reported small gains in processing speed (g=0.23), selective attention (g=0.40)
           and short-term memory (g=0.35); non-time-pressure formats were among the preferable
-          design features. That is group-level context, not a personal prescription.{" "}
+          design features. A separate 52-trial meta-analysis found a small overall benefit (g=0.22)
+          but no advantage for unsupervised home practice or more than three sessions a week. That is
+          group-level context, not a personal prescription.{" "}
           <a
             href="https://pubmed.ncbi.nlm.nih.gov/32980574/"
             target="_blank"
@@ -261,7 +263,15 @@ export function SettingsScreen({
           >
             Wang et al. 2021
           </a>{" "}
-          <span className="pmid">PMID 32980574</span>
+          <span className="pmid">PMID 32980574</span>{" "}
+          <a
+            href="https://pubmed.ncbi.nlm.nih.gov/25405755/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Lampit et al. 2014
+          </a>{" "}
+          <span className="pmid">PMID 25405755</span>
         </p>
       </div>
 

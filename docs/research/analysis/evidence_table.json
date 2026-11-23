@@ -10427,6 +10427,248 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the Corsi/spatial-span task family: spatial training improves trained spatial tasks, with clinical-population and modality caveats."
+  },
+  {
+   "pmid": "25405755",
+   "doi": "10.1371/journal.pmed.1001756",
+   "doi_status": "verified",
+   "year": 2014,
+   "journal": "PLoS Medicine",
+   "title": "Computerized cognitive training in cognitively healthy older adults: a systematic review and meta-analysis of effect modifiers",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 52,
+   "n": 4885,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.22,
+     "ci_low": 0.15,
+     "ci_high": 0.29,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "52 RCTs, 4,885 participants: overall effect g=0.22 (95% CI 0.15-0.29) vs control, small heterogeneity after removing one outlier, no publication-bias evidence"
+    },
+    {
+     "domain": "processing_speed",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.31,
+     "ci_low": 0.11,
+     "ci_high": 0.5,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Processing speed g=0.31; visuospatial skills g=0.30 (0.07-0.54) and nonverbal memory g=0.24 (0.09-0.38)"
+    },
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.22,
+     "ci_low": 0.09,
+     "ci_high": 0.35,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Working memory g=0.22, verbal memory g=0.08 (0.01-0.15)"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "No significant effects for executive functions or attention"
+    }
+   ],
+   "findings": [
+    "Small overall CCT benefit in healthy older adults, driven by several domains but not executive function or attention",
+    "Unsupervised home administration and more than three sessions per week were ineffective"
+   ],
+   "limitations": [
+    "Healthy older adults only",
+    "Durability not addressed",
+    "Design moderators are group-level, not a personal dose prescription"
+   ],
+   "flags": [
+    "near_transfer_only",
+    "design_moderator"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Grounds the no-time-pressure settings note: small group-level gains, with no benefit from unsupervised home training or more than three sessions a week; not a personal prescription."
+  },
+  {
+   "pmid": "35157209",
+   "doi": "10.1007/s11065-022-09537-4",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Neuropsychology Review",
+   "title": "Behaviour Change Techniques in Computerized Cognitive Training for Cognitively Healthy Older Adults: A Systematic Review",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 90,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "adherence",
+     "transfer": "na",
+     "measure": "median_adherence",
+     "value": 90,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "90 papers: median adherence 90% (IQR 81-95); self-monitoring of behaviour associated with higher adherence and graded tasks with lower adherence (p<0.001)"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "difference_in_Hedges_g",
+     "value": -0.19,
+     "ci_low": -0.31,
+     "ci_high": -0.07,
+     "favors": "control",
+     "certainty": "low",
+     "note": "Feedback on behaviour delivered by a person and non-specific reward were each associated with lower efficacy (Delta g=-0.19); no technique significantly improved efficacy"
+    }
+   ],
+   "findings": [
+    "Behaviour-change techniques can influence adherence and efficacy",
+    "Person-delivered feedback and non-specific reward tracked lower efficacy; self-monitoring tracked higher adherence"
+   ],
+   "limitations": [
+    "Observational meta-regression across studies",
+    "One author declares a company interest"
+   ],
+   "flags": [
+    "behaviour_change_techniques",
+    "observational_moderator"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the adherence card: the app favours neutral self-monitoring and avoids person-delivered feedback or non-specific rewards, which tracked lower efficacy in this review."
+  },
+  {
+   "pmid": "32565174",
+   "doi": "10.1016/j.neubiorev.2020.06.019",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Neuroscience & Biobehavioral Reviews",
+   "title": "Is cognitive training an effective tool for improving cognitive function and real-life behaviour in healthy children and adolescents? A systematic review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "children",
+    "adolescents"
+   ],
+   "k": 16,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "16 RCTs in typically developing children and adolescents: near transfer to working memory"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Far transfer to other cognitive functions and real-life measures inconsistent; cue-related inhibitory-control and attention training produced transient effects"
+    }
+   ],
+   "findings": [
+    "Near transfer to working memory is more consistent than far transfer",
+    "Real-life and long-term effects remain uncertain"
+   ],
+   "limitations": [
+    "Children and adolescents only",
+    "16 trials",
+    "Far-transfer effects did not last"
+   ],
+   "flags": [
+    "transfer_gradient",
+    "maintenance_gap"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Supports the transfer-gradient copy: near transfer to working memory with inconsistent, non-durable far transfer to other functions and real-life measures."
+  },
+  {
+   "pmid": "35432071",
+   "doi": "10.3389/fpsyg.2022.868001",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Frontiers in Psychology",
+   "title": "What Is Targeted When We Train Working Memory? Evidence From a Meta-Analysis of the Neural Correlates of Working Memory Training Using Activation Likelihood Estimation",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "adults",
+    "healthy_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "neural",
+     "transfer": "na",
+     "measure": "activation_likelihood_estimation",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "WM training associated exclusively with decreased BOLD responses in frontoparietal clusters: bilateral inferior parietal lobule (BA 39/40), middle (BA 9) and superior (BA 6) frontal gyri, and medial frontal gyrus (BA 8/32)"
+    }
+   ],
+   "findings": [
+    "Training-related neural change is reduced frontoparietal activation",
+    "The pattern is consistent with more efficient processing rather than expanded capacity"
+   ],
+   "limitations": [
+    "Neural marker only",
+    "No behavioural or everyday-function outcome"
+   ],
+   "flags": [
+    "mechanism_only",
+    "neural_marker"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Mechanism context for the transfer copy: training-related neural changes are activation decreases in frontoparietal regions, not evidence of expanded capacity or everyday benefit."
   }
  ]
 }

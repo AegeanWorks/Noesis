@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 177 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 181 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -250,6 +250,16 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
             href="https://pubmed.ncbi.nlm.nih.gov/41570544/"
             label="Llana 2026: trained spatial tasks improve"
             pmid="41570544"
+          />{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/32565174/"
+            label="Luis-Ruiz 2020: near gains, inconsistent far transfer"
+            pmid="32565174"
+          />{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/35432071/"
+            label="Vartanian 2022: training lowers frontoparietal activation"
+            pmid="35432071"
           />
         </p>
         <h3 data-testid="not-supported-heading">What the review does not support</h3>

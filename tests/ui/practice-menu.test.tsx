@@ -308,6 +308,8 @@ describe("PracticeMenuScreen", () => {
       "https://pubmed.ncbi.nlm.nih.gov/38266127/",
     );
     expect(evidence.querySelector('a[href*="30881315"]')).toBeTruthy();
+    expect(evidence.querySelector('a[href*="35157209"]')).toBeTruthy();
+    expect(evidence.textContent).toMatch(/self-monitoring associated/i);
   });
 
   it("shows an empty history state before the first session", () => {

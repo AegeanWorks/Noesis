@@ -698,6 +698,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add the four in-window sources as context records; cite the three training studies on the transfer-gradient copy and the near-miss finding beside the existing safeguard, with R107.
 - **Consequences**: The review moves to 177 records and 387 outcomes (revision v2.34), the near/far gradient copy becomes evidence-linked, and the pre-window exception is documented rather than silently dropped.
 
+### ADR-099: Residual-Pool Transfer and Behaviour-Change Evidence
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: Four directly relevant reviews remained unextracted in the logged eligible pool: Lampit et al. 2014 (CCT effect modifiers in healthy older adults), Peeters et al. 2023 (behaviour-change techniques and adherence), Luis-Ruiz et al. 2020 (near vs far transfer in children) and Vartanian et al. 2022 (neural correlates of WM training).
+- **Decision**: Add all four as context records; cite them on the Settings clock note, the adherence card and the transfer-gradient copy, with R108; retain the group-level-context caveat.
+- **Consequences**: The review moves to 181 records and 396 outcomes (revision v2.35), D7 residuals fall to 954, and three more UI surfaces become evidence-linked without dose prescriptions.
+
 
 
 

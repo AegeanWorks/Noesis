@@ -306,5 +306,7 @@ describe("SettingsScreen study enrollment", () => {  it("requires an id and cons
     expect(note.querySelector("a")?.getAttribute("href")).toBe(
       "https://pubmed.ncbi.nlm.nih.gov/32980574/",
     );
+    expect(note.querySelector('a[href*="25405755"]')).toBeTruthy();
+    expect(note.textContent).toMatch(/no advantage for unsupervised home practice/i);
   });
 });

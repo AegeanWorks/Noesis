@@ -1154,7 +1154,9 @@ function HistoryPanel({
         <p className="fine" data-testid="adherence-evidence">
           <strong>What the literature says:</strong> in a meta-analysis of 55 randomised trials
           (4,455 older adults), training effects were significant when engagement or persistence
-          exceeded 60% or adherence exceeded 80%. Those are study-level subgroup observations, not
+          exceeded 60% or adherence exceeded 80%. A review of behaviour-change techniques in 90 trials
+          found self-monitoring associated with higher adherence, while person-delivered feedback and
+          non-specific rewards tracked lower effects. Those are study-level subgroup observations, not
           a personal target or a promise of benefit.{" "}
           <a
             href="https://pubmed.ncbi.nlm.nih.gov/38266127/"
@@ -1171,7 +1173,15 @@ function HistoryPanel({
           >
             Clausen et al. 2019
           </a>{" "}
-          <span className="pmid">PMID 30881315</span>
+          <span className="pmid">PMID 30881315</span>{" "}
+          <a
+            href="https://pubmed.ncbi.nlm.nih.gov/35157209/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Peeters et al. 2023
+          </a>{" "}
+          <span className="pmid">PMID 35157209</span>
         </p>
       </section>
 
