@@ -350,3 +350,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Mood claim boundary evidence (2026-11-23 targeted update)
 
 - Effects of working memory training on depressive symptoms: a systematic review and meta-analysis of randomized controlled trials *Translational Psychiatry*. 2026. PMID: [41765936](https://pubmed.ncbi.nlm.nih.gov/41765936/). DOI: [10.1038/s41398-026-03857-2](https://doi.org/10.1038/s41398-026-03857-2).
+
+## Executive-function taxonomy context (2026-11-23 targeted update)
+
+- Meta-Analysis of the Effects of Computerized Cognitive Training on Executive Functions: a Cross-Disciplinary Taxonomy for Classifying Outcome Cognitive Factors *Neuropsychology Review*. 2018. PMID: [29721646](https://pubmed.ncbi.nlm.nih.gov/29721646/). DOI: [10.1007/s11065-018-9374-8](https://doi.org/10.1007/s11065-018-9374-8).

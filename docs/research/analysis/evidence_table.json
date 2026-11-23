@@ -11328,6 +11328,75 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-mood-treatment boundary: even in clinical RCTs the symptom effect was small and transient, with uncertain clinical utility, so a consumer app makes no treatment claim."
+  },
+  {
+   "pmid": "29721646",
+   "doi": "10.1007/s11065-018-9374-8",
+   "doi_status": "verified",
+   "year": 2018,
+   "journal": "Neuropsychology Review",
+   "title": "Meta-Analysis of the Effects of Computerized Cognitive Training on Executive Functions: a Cross-Disciplinary Taxonomy for Classifying Outcome Cognitive Factors",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "reanalysis_narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Reanalysis of Lampit 2014 under a CHC-M taxonomy produced substantively different statistical effects and interpretations"
+    },
+    {
+     "domain": "attention",
+     "transfer": "near",
+     "measure": "taxonomy_narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Common classification conflates executive function with fluid reasoning and retrieval fluency, and attention with sensory perception"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "na",
+     "measure": "taxonomy_narrative",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "not_reported",
+     "note": "Differentiating attention and working memory into shifting, inhibition and updating narrow domains has theoretical and practical advantage"
+    }
+   ],
+   "findings": [
+    "Outcome taxonomy changes the conclusion of the same meta-analytic data",
+    "Component-level constructs should not be conflated with broad ability labels"
+   ],
+   "limitations": [
+    "Reanalysis of one prior meta-analysis",
+    "Taxonomy-level result without a new pooled effect size"
+   ],
+   "flags": [
+    "construct_purity",
+    "taxonomy"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for per-block reporting: because construct labels change conclusions, Noesis keeps single-construct focus tests and reports blocks separately instead of a composite."
   }
  ]
 }

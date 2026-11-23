@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-mood-boundary-evidence",
+    "task_id": "noesis-ef-taxonomy-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795457075.132773,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795458585.1070168,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795464275.132773,
+    "lease_until": 1795465785.1070168,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795457151.8824346,
-    "completed_head": "4f472cb4425dcc6fcd30df5c7aeb837d7fe2d1cc",
-    "completed_tree": "aa8fea7c701f3ef2c87f733a9a2c9eb6c24431e9"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 190/415 records unchanged, 485 tests, gates 7/7, both gameplay proofs pass in Edge, ADR-119",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-search-symbol-proofs",
-      "timestamp": 1795452647.2039137,
-      "timestamp_str": "2026-11-23 19:50:47",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-search-symbol-proofs' completed successfully.",
-      "head": "554e29b126901a83e5f28578e9bf45d28c6d88b9",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-search-symbol-proofs",
-      "timestamp": 1795452659.059293,
-      "timestamp_str": "2026-11-23 19:50:59"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add gameplay proofs for Reasoning and Speed Tap, the last two games without them",
@@ -409,6 +371,48 @@
       "task_id": "noesis-mood-boundary-evidence",
       "timestamp": 1795457151.999878,
       "timestamp_str": "2026-11-23 21:05:51"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Webb 2018 executive-function taxonomy meta-analysis as context and cite it on the per-block reporting rationale",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Strengthens an existing honesty rationale with a taxonomy-level meta-analysis and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2018 reanalysis shows that conflating cognitive constructs changes conclusions, directly supporting the app's single-construct focus tests and per-block reporting."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "fb1706587634e5abe30d9491c36f7706c306125965013656f7f270d1e102761c",
+      "status": "in_progress",
+      "task_id": "noesis-ef-taxonomy-evidence",
+      "timestamp": 1795457470.0935974,
+      "timestamp_str": "2026-11-23 21:11:10",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 193/423 records, 488 tests, gates 7/7, taxonomy citation verified in played Edge session, ADR-126",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-ef-taxonomy-evidence",
+      "timestamp": 1795458585.1070168,
+      "timestamp_str": "2026-11-23 21:29:45",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

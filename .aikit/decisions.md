@@ -887,6 +887,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Bai et al. 2026 as a context record and a second citation on that boundary, with R134; bump the review version to v2.43.
 - **Consequences**: The review moves to 192 records and 420 outcomes (revision v2.43), D7 residuals fall to 943, and the boundary now reflects both consumer and clinical evidence.
 
+### ADR-126: Taxonomy Evidence for Per-Block Reporting
+- **Date**: 2026-11-23
+- **Status**: Accepted
+- **Context**: The no-single-score rationale cited construct-purity and transfer evidence but not a taxonomy-level reanalysis showing that outcome labels themselves change meta-analytic conclusions.
+- **Decision**: Add Webb et al. 2018 as a context record and a third citation on the Results-screen rationale, with R135; bump the review version to v2.44.
+- **Consequences**: The review moves to 193 records and 423 outcomes (revision v2.44), D7 residuals fall to 942, and the app's component-level measurement stance gains taxonomy-level support.
+
 
 
 

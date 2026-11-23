@@ -761,7 +761,15 @@ export function ResultsScreen({
         >
           Sala &amp; Gobet 2020
         </a>{" "}
-        <span className="pmid">PMID 31939109</span>
+        <span className="pmid">PMID 31939109</span>{" "}
+        <a
+          href="https://pubmed.ncbi.nlm.nih.gov/29721646/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Webb et al. 2018
+        </a>{" "}
+        <span className="pmid">PMID 29721646</span>
       </p>
 
       {results.length > 0 ? (
