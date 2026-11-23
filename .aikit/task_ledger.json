@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-dualtask-network-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795422551.2072945,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795429751.2072945,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795422597.3991287,
+    "completed_head": "24de6aef59e92c5a9fc8fba340be0f67a6fa8041",
+    "completed_tree": "57c6c344d3676400dfc783e7941a50027644806b"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add O'Dea 2026 data-banking perspective as context and cite it in the research export panel",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Resolves another narrative-only citation and grounds the consent design in a data-governance framework.",
-        "mitigation": "Verify via efetch, update counts and references, add citation, run suites and review UI.",
-        "risks": "contract: one context record and UI citation; dependency: none; concurrency: none; state: counts and references must move together",
-        "why": "Noesis versions and revokes research consent explicitly; this perspective argues for hybrid broad-plus-dynamic consent and co-designed governance."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "d2c131e201336b5dc497c80730496d950f8deb67ebcbd560a3057abef31702e9",
-      "status": "in_progress",
-      "task_id": "noesis-data-governance-evidence",
-      "timestamp": 1795412439.2012422,
-      "timestamp_str": "2026-11-23 08:40:39",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-dualtask-network-evidence' completed successfully.",
+      "head": "24de6aef59e92c5a9fc8fba340be0f67a6fa8041",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-dualtask-network-evidence",
+      "timestamp": 1795422597.462751,
+      "timestamp_str": "2026-11-23 11:29:57"
     }
   ]
 }

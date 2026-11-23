@@ -1354,5 +1354,44 @@
     "final_snapshot_entries": 0,
     "surface_digest": "894522d5e516b9d43f8cb1d2d87b345c059d9b219f44197cf3e65564c9465c3a",
     "baseline_digest": "894522d5e516b9d43f8cb1d2d87b345c059d9b219f44197cf3e65564c9465c3a"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed the Evidence screen in Edge: dual-task comparison citation (PMID 40304821) renders, corpus count 166, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795422561.2529545,
+    "finished_at": 1795422597.0168102,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "41c4f3fcbc6ac88728ac3c9fc49f64c451ef58a35cf19d1090968c73390eebe2",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795422597.0168123
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Dual-task comparison citation test and snapshot counts"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Dual-task comparison citation test and snapshot counts"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "41c4f3fcbc6ac88728ac3c9fc49f64c451ef58a35cf19d1090968c73390eebe2",
+    "baseline_digest": "41c4f3fcbc6ac88728ac3c9fc49f64c451ef58a35cf19d1090968c73390eebe2"
   }
 ]
