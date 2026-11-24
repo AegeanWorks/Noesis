@@ -3784,5 +3784,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "65db9aee3d0b96cbab7b398de4ddfe096d9fc55a45639f02097fd83400831715",
     "baseline_digest": "65db9aee3d0b96cbab7b398de4ddfe096d9fc55a45639f02097fd83400831715"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: strategy-training near-transfer citation renders in transfer-support section, corpus count 226, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "195d590c9f422d97dd8d9e3cf307ef847c590b0549afc520f0a3d411a6132684",
+    "started_at": 1795527454.918766,
+    "finished_at": 1795527588.0734777,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "a421fa217501dc865bc3fdf57d535a65cce8c7c990fd3e53153073cb4c0b2250",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795527588.0734818
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Strategy citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Strategy citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Strategy citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "a421fa217501dc865bc3fdf57d535a65cce8c7c990fd3e53153073cb4c0b2250",
+    "baseline_digest": "a421fa217501dc865bc3fdf57d535a65cce8c7c990fd3e53153073cb4c0b2250"
   }
 ]

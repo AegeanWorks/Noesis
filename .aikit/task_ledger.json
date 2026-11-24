@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-strategy-training-boundary",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795527253.5619946,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795534453.5619946,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795527603.8029366,
+    "completed_head": "018e3e51097b2f32032a2fc8f6f3b61e53548fb2",
+    "completed_tree": "4f4270c50435ef3873d62087aad90f2ec2c46a31"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Rieker 2022 combined cognitive-physical meta-analysis as context and cite it on the combined-training boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a 50-study/6164-participant source to the combined-training boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2022 three-level meta-analysis of 50 studies found combined training gave no additive memory or global-cognition benefit over cognitive training alone, grounding the app's no-extra-benefit-from-combining boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "34e8d95de467b68b632a5f4e881211de020a6ff3f55225da2b39f26fa6200204",
-      "status": "in_progress",
-      "task_id": "noesis-combined-training-boundary",
-      "timestamp": 1795500554.425522,
-      "timestamp_str": "2026-11-24 09:09:14",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-strategy-training-boundary' completed successfully.",
+      "head": "018e3e51097b2f32032a2fc8f6f3b61e53548fb2",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-strategy-training-boundary",
+      "timestamp": 1795527603.989106,
+      "timestamp_str": "2026-11-24 16:40:03"
     }
   ]
 }
