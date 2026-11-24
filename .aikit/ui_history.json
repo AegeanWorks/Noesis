@@ -3668,5 +3668,35 @@
     "final_snapshot_entries": 0,
     "surface_digest": "b72f422794788c051e9d7ba885b62e61870cb5221205d625b163dac5ef4fd1b5",
     "baseline_digest": "b72f422794788c051e9d7ba885b62e61870cb5221205d625b163dac5ef4fd1b5"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed committed Evidence screen in Edge: no-binaural-beats boundary and citation render, corpus count 223, no console errors",
+    "baseline_commit": "4c5768eba236df738a95d0cc3fa0f6f0c455d34e",
+    "contract_hash": "195d590c9f422d97dd8d9e3cf307ef847c590b0549afc520f0a3d411a6132684",
+    "started_at": 1795514556.453367,
+    "finished_at": 1795514860.9365745,
+    "strikes": 1,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "80ea0b8e698773f033a00908c2d7f53d9d3d7f035050fd935ce17996ceb43a41",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795514860.936577
+    },
+    "allowed_removals": [],
+    "allowed_tests": [],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "80ea0b8e698773f033a00908c2d7f53d9d3d7f035050fd935ce17996ceb43a41",
+    "baseline_digest": "80ea0b8e698773f033a00908c2d7f53d9d3d7f035050fd935ce17996ceb43a41"
   }
 ]

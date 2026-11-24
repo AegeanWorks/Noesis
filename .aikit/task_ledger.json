@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-binaural-cognition-boundary",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795512973.2607994,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795520173.2607994,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795514732.1399155,
+    "completed_head": "4c5768eba236df738a95d0cc3fa0f6f0c455d34e",
+    "completed_tree": "69eec18d848d20c54729177125966cb874557388"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Luctkar-Flude 2015 neurofeedback safety/effectiveness review as context and cite it in the mechanism section",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a therapy-effectiveness and safety context record to the neurofeedback boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2015 systematic review found insufficient evidence that neurofeedback is an effective therapy for fatigue or cognitive impairment, with only 2 of 17 studies high quality, grounding the app's conservative neurofeedback boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "8bda8c77a46d22b1a6c776b5d3fa53dbe17828aa9f4919fa86c4426e010d6fee",
-      "status": "in_progress",
-      "task_id": "noesis-neurofeedback-therapy-evidence",
-      "timestamp": 1795495791.0915966,
-      "timestamp_str": "2026-11-24 07:49:51",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-binaural-cognition-boundary' completed successfully.",
+      "head": "4c5768eba236df738a95d0cc3fa0f6f0c455d34e",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-binaural-cognition-boundary",
+      "timestamp": 1795514732.584865,
+      "timestamp_str": "2026-11-24 13:05:32"
     }
   ]
 }
