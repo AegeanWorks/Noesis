@@ -3160,5 +3160,40 @@
     "final_snapshot_entries": 0,
     "surface_digest": "f17950b7bb54abe50b1d595aef2ecea6d819328860da41820f68404dea90df56",
     "baseline_digest": "f17950b7bb54abe50b1d595aef2ecea6d819328860da41820f68404dea90df56"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: Simons 2016 landmark citation renders on no-general-gain boundary, corpus count 212, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795487336.5575845,
+    "finished_at": 1795487608.6108305,
+    "strikes": 2,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "8e9e0d9a2bc155be20499ead7a9eb7f37259bbd7061465c0181a9df673751549",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795487608.6108353
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Simons citation link-count test"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "8e9e0d9a2bc155be20499ead7a9eb7f37259bbd7061465c0181a9df673751549",
+    "baseline_digest": "8e9e0d9a2bc155be20499ead7a9eb7f37259bbd7061465c0181a9df673751549"
   }
 ]
