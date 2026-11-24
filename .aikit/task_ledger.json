@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-baseline-profile-boundary",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795509729.848572,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795516929.848572,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795509992.4665556,
+    "completed_head": "65732cab4d016c61968b4a57794c8e579fcfde38",
+    "completed_tree": "182f527cfee8fbe02cce2177ccf6437a09756d6d"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Therond 2021 cognitive-remediation-in-depression meta-analysis as context and cite its everyday-function limitation",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a clinical-population source to the everyday-function boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2021 meta-analysis found cognitive-remediation gains in depression but explicitly noted a lack of everyday-function indicators, directly grounding the app's no-everyday-function boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "f866fe06fe81dcd21ae26318088bbb25ca9f5ac693e856be0303ede4cfe24c54",
-      "status": "in_progress",
-      "task_id": "noesis-everyday-function-gap",
-      "timestamp": 1795494647.0893965,
-      "timestamp_str": "2026-11-24 07:30:47",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-baseline-profile-boundary' completed successfully.",
+      "head": "65732cab4d016c61968b4a57794c8e579fcfde38",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-baseline-profile-boundary",
+      "timestamp": 1795509992.8678489,
+      "timestamp_str": "2026-11-24 11:46:32"
     }
   ]
 }
