@@ -442,3 +442,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Neurofeedback methodology evidence (2026-11-24 targeted update)
 
 - The Lack of Neurofeedback Training Regulation Guidance and Process Evaluation May be a Source of Controversy in Post-Traumatic Stress Disorder-Neurofeedback Research: A Systematic Review and Statistical Analysis *Brain Connectivity*. 2026. PMID: [40371570](https://pubmed.ncbi.nlm.nih.gov/40371570/). DOI: [10.1089/brain.2024.0084](https://doi.org/10.1089/brain.2024.0084).
+
+## Everyday-function measurement evidence (2026-11-24 targeted update)
+
+- The Efficacy of Cognitive Remediation in Depression: A Systematic Literature Review and Meta-Analysis *Journal of Affective Disorders*. 2021. PMID: [33631438](https://pubmed.ncbi.nlm.nih.gov/33631438/). DOI: [10.1016/j.jad.2021.02.009](https://doi.org/10.1016/j.jad.2021.02.009).

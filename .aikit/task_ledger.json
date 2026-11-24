@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-neurofeedback-methodology",
+    "task_id": "noesis-everyday-function-gap",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795493909.7824535,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795495232.9573457,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795501109.7824535,
+    "lease_until": 1795502432.9573457,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795494138.8946946,
-    "completed_head": "35e5a87d92533001c2da0d261e9a120b6816cee2",
-    "completed_tree": "f2d1adf738c84c1c8c22d583159dbe79c33eb5f0"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 211/464 records, 489 tests, gates 7/7, exergaming cognition citation verified in Edge, ADR-144",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-exergaming-cognition-evidence",
-      "timestamp": 1795484208.9684026,
-      "timestamp_str": "2026-11-24 04:36:48",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-exergaming-cognition-evidence' completed successfully.",
-      "head": "05c3e1746b6e69ce1a14cb078792261773d01182",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-exergaming-cognition-evidence",
-      "timestamp": 1795484306.5465217,
-      "timestamp_str": "2026-11-24 04:38:26"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Bhome 2018 SCD intervention meta-analysis as context and cite it on the no-clinical-benefit boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-neurofeedback-methodology",
       "timestamp": 1795494139.254059,
       "timestamp_str": "2026-11-24 07:22:19"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Therond 2021 cognitive-remediation-in-depression meta-analysis as context and cite its everyday-function limitation",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a clinical-population source to the everyday-function boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2021 meta-analysis found cognitive-remediation gains in depression but explicitly noted a lack of everyday-function indicators, directly grounding the app's no-everyday-function boundary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "f866fe06fe81dcd21ae26318088bbb25ca9f5ac693e856be0303ede4cfe24c54",
+      "status": "in_progress",
+      "task_id": "noesis-everyday-function-gap",
+      "timestamp": 1795494647.0893965,
+      "timestamp_str": "2026-11-24 07:30:47",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 216/474 records, 489 tests, gates 7/7, everyday-function measurement citation verified in Edge, ADR-152",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-everyday-function-gap",
+      "timestamp": 1795495232.9573455,
+      "timestamp_str": "2026-11-24 07:40:32",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

@@ -12734,6 +12734,66 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the neurofeedback boundary: the research base itself lacks consistent protocol guidance and process evaluation, so the app makes no neural-feedback or treatment claim."
+  },
+  {
+   "pmid": "33631438",
+   "doi": "10.1016/j.jad.2021.02.009",
+   "doi_status": "verified",
+   "year": 2021,
+   "journal": "Journal of Affective Disorders",
+   "title": "The Efficacy of Cognitive Remediation in Depression: A Systematic Literature Review and Meta-Analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "clinical_symptoms",
+    "adults"
+   ],
+   "k": 8,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.44,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "8 controlled trials in adults with depression: cognitive remediation improved global cognition (g=0.44) and several domains, but not visuospatial memory or verbal fluency"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "limitation",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Authors explicitly noted a lack of indicators of everyday functioning; results limited by few studies and heterogeneous measures"
+    }
+   ],
+   "findings": [
+    "Cognitive remediation improved global cognition and selected domains in depression",
+    "No significant gains for visuospatial memory or verbal fluency",
+    "The literature lacked indicators of everyday functioning"
+   ],
+   "limitations": [
+    "Only 8 studies",
+    "Heterogeneous cognitive measures",
+    "No everyday-function indicators"
+   ],
+   "flags": [
+    "domain_specific",
+    "everyday_function_unmeasured"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-everyday-function boundary: even a positive clinical meta-analysis explicitly lacked everyday-function indicators, so the app makes no everyday-function claim."
   }
  ]
 }

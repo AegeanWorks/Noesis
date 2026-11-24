@@ -1069,6 +1069,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Ding et al. 2026 as a context record and a citation in the mechanism section with R159; bump the review version to v2.66.
 - **Consequences**: The review moves to 215 records and 472 outcomes (revision v2.66), D7 residuals fall to 920, and the no-neural-feedback-benefit framing gains methodological support.
 
+### ADR-152: Everyday-Function Measurement Gap Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-everyday-function boundary needed a source showing that even positive clinical cognitive-remediation reviews do not measure everyday functioning.
+- **Decision**: Add Thérond et al. 2021 as a context record and a citation on the everyday-function boundary with R160; bump the review version to v2.67.
+- **Consequences**: The review moves to 216 records and 474 outcomes (revision v2.67), D7 residuals fall to 919, and the no-everyday-function claim gains direct measurement-gap support.
+
 
 
 
