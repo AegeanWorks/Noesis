@@ -3698,5 +3698,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "80ea0b8e698773f033a00908c2d7f53d9d3d7f035050fd935ce17996ceb43a41",
     "baseline_digest": "80ea0b8e698773f033a00908c2d7f53d9d3d7f035050fd935ce17996ceb43a41"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: diagnostic accuracy citation renders on no-diagnostic boundary, corpus count 224, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "195d590c9f422d97dd8d9e3cf307ef847c590b0549afc520f0a3d411a6132684",
+    "started_at": 1795521442.218708,
+    "finished_at": 1795521902.376073,
+    "strikes": 1,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "e23672b9b3a8715fb7dde0b73e877927e9351dc241bc51c40258ce2bb78e4ded",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795521902.3760762
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Diagnostic citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Diagnostic citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Diagnostic citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "e23672b9b3a8715fb7dde0b73e877927e9351dc241bc51c40258ce2bb78e4ded",
+    "baseline_digest": "e23672b9b3a8715fb7dde0b73e877927e9351dc241bc51c40258ce2bb78e4ded"
   }
 ]
