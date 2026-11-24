@@ -1167,6 +1167,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Hitchcock et al. 2017 as a context record and a citation on the no-mood-treatment boundary with R171; bump the review version to v2.78.
 - **Consequences**: The review moves to 227 records and 496 outcomes (revision v2.78), D7 residuals fall to 908, and the no-mood-disorder-treatment claim gains direct clinical-intervention context.
 
+### ADR-166: ADL Durability Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-everyday-function boundary needed a quantitative source showing that even clinical remediation targeting daily living produced only small, non-durable gains.
+- **Decision**: Add Tulliani et al. 2022 as a context record and a citation on the no-everyday-function boundary with R172; bump the review version to v2.79.
+- **Consequences**: The review moves to 228 records and 498 outcomes (revision v2.79), D7 residuals fall to 907, and the no-everyday-function claim gains small-effect and durability-limit support.
+
 
 
 

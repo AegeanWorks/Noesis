@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 227 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 228 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -409,6 +409,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/33631438/"
               label="Even positive clinical reviews lacked everyday-function indicators"
               pmid="33631438"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/35918712/"
+              label="Daily-living gains were small and did not last"
+              pmid="35918712"
             />
           </li>
           <li>

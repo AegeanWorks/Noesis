@@ -13450,6 +13450,68 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-mood-treatment boundary: even targeted clinical memory training for depression had small, highly variable effects and sparse anxiety evidence, so the app makes no mood-disorder treatment claim."
+  },
+  {
+   "pmid": "35918712",
+   "doi": "10.1186/s13643-022-02032-0",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Systematic Reviews",
+   "title": "Efficacy of cognitive remediation on activities of daily living in individuals with mild cognitive impairment or early-stage dementia: a systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "mci",
+    "dementia",
+    "older_adults"
+   ],
+   "k": 13,
+   "n": 1414,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "SMD",
+     "value": 0.17,
+     "ci_low": 0.03,
+     "ci_high": 0.31,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "13 studies, n=1414 (11 pooled): cognitive remediation gave a small immediate improvement in instrumental activities of daily living (SMD 0.17, 95% CI 0.03-0.31)"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "durability",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Insufficient evidence of any lasting effect on activities of daily living; individualized short interventions (~10 hours) appeared beneficial"
+    }
+   ],
+   "findings": [
+    "Only a small immediate ADL benefit from cognitive remediation",
+    "Insufficient evidence of any lasting ADL effect",
+    "Effect found in clinical MCI/early-dementia populations, not healthy adults"
+   ],
+   "limitations": [
+    "Small effect size",
+    "No evidence of durability",
+    "Clinical MCI/dementia samples"
+   ],
+   "flags": [
+    "everyday_function_boundary",
+    "durability_unresolved",
+    "small_effect"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-everyday-function boundary: even targeted clinical remediation gave only a small immediate ADL gain with no lasting effect, so the app makes no everyday-function claim."
   }
  ]
 }

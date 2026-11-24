@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 73);
+    expect(links).toHaveLength(mechanicCitations + 74);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -57,6 +57,7 @@ describe("evidence citation rows", () => {
     expect(screen.getByText(/no binaural-beats claim/i)).toBeTruthy();
     expect(screen.getByText(/validated screening tests need formal accuracy evidence/i)).toBeTruthy();
     expect(screen.getByText(/even clinical mood training had small, highly variable effects/i)).toBeTruthy();
+    expect(screen.getByText(/daily-living gains were small and did not last/i)).toBeTruthy();
     expect(notSupported.textContent).toMatch(/dementia prevention claim/i);
     expect(notSupported.textContent).toMatch(/broad transfer to untrained domains/i);
     expect(notSupported.textContent).toMatch(/domain-specific leisure-game gains/i);
@@ -69,7 +70,7 @@ describe("evidence citation rows", () => {
     expect(screen.getByText(/no clinical benefit claim/i)).toBeTruthy();
     expect(screen.getByText(/training did not improve general cognition/i)).toBeTruthy();
     expect(screen.getByText(/only 7 of 18 commercial programs/i)).toBeTruthy();
-    expect(notSupported.querySelectorAll("a")).toHaveLength(31);
+    expect(notSupported.querySelectorAll("a")).toHaveLength(32);
     expect(screen.getByText(/lacked everyday-function indicators/i)).toBeTruthy();
     expect(screen.getByText(/game scores correlate only moderately/i)).toBeTruthy();
     expect(screen.getByText(/behavior gains lacked active controls/i)).toBeTruthy();

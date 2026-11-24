@@ -490,3 +490,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Mood-treatment boundary evidence (2026-11-24 targeted update)
 
 - Autobiographical episodic memory-based training for the treatment of mood, anxiety and stress-related disorders: A systematic review and meta-analysis *Clinical Psychology Review*. 2017. PMID: [28086133](https://pubmed.ncbi.nlm.nih.gov/28086133/). DOI: [10.1016/j.cpr.2016.12.003](https://doi.org/10.1016/j.cpr.2016.12.003).
+
+## ADL durability evidence (2026-11-24 targeted update)
+
+- Efficacy of cognitive remediation on activities of daily living in individuals with mild cognitive impairment or early-stage dementia: a systematic review and meta-analysis *Systematic Reviews*. 2022. PMID: [35918712](https://pubmed.ncbi.nlm.nih.gov/35918712/). DOI: [10.1186/s13643-022-02032-0](https://doi.org/10.1186/s13643-022-02032-0).
