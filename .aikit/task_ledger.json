@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-neurofeedback-therapy-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795496330.7479522,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795503530.7479522,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795496432.2308402,
+    "completed_head": "bba0e4b58019392f21821949bb18c74125d89912",
+    "completed_tree": "206ebb15a2df9d422e010fcf95b40c2ec209f6f5"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: surface the already-in-corpus Simons 2016 brain-training review on the no-general-gain boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Makes the app's most authoritative boundary source visible to users without adding a new corpus record.",
-        "mitigation": "Re-verify the source via efetch, add the citation with a failing-first test, run suites and review UI.",
-        "risks": "contract: one UI citation and one test assertion; dependency: none; concurrency: none; state: no corpus or version changes",
-        "why": "The landmark 2016 review is in the corpus but not cited in the UI; it directly grounds the app's central no-general-gain boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "c5d55488207d5d793537f6619e701f7a1ae1456400a0da36a412a1c0f7b674ed",
-      "status": "in_progress",
-      "task_id": "noesis-brain-training-consensus",
-      "timestamp": 1795486660.6409383,
-      "timestamp_str": "2026-11-24 05:17:40",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-neurofeedback-therapy-evidence' completed successfully.",
+      "head": "bba0e4b58019392f21821949bb18c74125d89912",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-neurofeedback-therapy-evidence",
+      "timestamp": 1795496432.549045,
+      "timestamp_str": "2026-11-24 08:00:32"
     }
   ]
 }

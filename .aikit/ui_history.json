@@ -3406,5 +3406,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "5e75aeef9871dab1d693ac1a9fda8e9117dffff1539f80e5d7da30ad52092fd3",
     "baseline_digest": "5e75aeef9871dab1d693ac1a9fda8e9117dffff1539f80e5d7da30ad52092fd3"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: neurofeedback therapy citation renders in mechanism section, corpus count 217, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795496360.811405,
+    "finished_at": 1795496430.7607892,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "3a887469584451e347460e475c2db6245c49701ff66ce2764f220408b01760b0",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795496430.7607925
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Mechanism citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Mechanism citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Mechanism citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "3a887469584451e347460e475c2db6245c49701ff66ce2764f220408b01760b0",
+    "baseline_digest": "3a887469584451e347460e475c2db6245c49701ff66ce2764f220408b01760b0"
   }
 ]
