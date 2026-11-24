@@ -3449,5 +3449,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "3a887469584451e347460e475c2db6245c49701ff66ce2764f220408b01760b0",
     "baseline_digest": "3a887469584451e347460e475c2db6245c49701ff66ce2764f220408b01760b0"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: serious-game diagnostic citation renders on no-diagnostic-claim boundary, corpus count 218, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795497016.443286,
+    "finished_at": 1795497127.375807,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "45c6d05e8285316e1f23eebb319ade2b08d94ac98e95f01320358134b33c7e5d",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795497127.3758101
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Diagnostic citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Diagnostic citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Diagnostic citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "45c6d05e8285316e1f23eebb319ade2b08d94ac98e95f01320358134b33c7e5d",
+    "baseline_digest": "45c6d05e8285316e1f23eebb319ade2b08d94ac98e95f01320358134b33c7e5d"
   }
 ]
