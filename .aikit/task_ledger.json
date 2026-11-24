@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-exergaming-cognition-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795484208.9684026,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795491408.9684026,
@@ -15,27 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795484306.1854188,
+    "completed_head": "05c3e1746b6e69ce1a14cb078792261773d01182",
+    "completed_tree": "c49cc5b4976994a71893ae7118a7f8e7ccd20a07"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 205/452 records, 489 tests, gates 7/7, real-world citation verified in Edge Settings, ADR-138",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-realworld-evidence",
-      "timestamp": 1795474182.5844316,
-      "timestamp_str": "2026-11-24 01:49:42",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "delivery": {
@@ -407,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-exergaming-cognition-evidence' completed successfully.",
+      "head": "05c3e1746b6e69ce1a14cb078792261773d01182",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-exergaming-cognition-evidence",
+      "timestamp": 1795484306.5465217,
+      "timestamp_str": "2026-11-24 04:38:26"
     }
   ]
 }

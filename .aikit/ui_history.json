@@ -3074,5 +3074,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "393a00969cb46ad069cb6380914da3f33431862fba596eeafffbb7c0325bd322",
     "baseline_digest": "393a00969cb46ad069cb6380914da3f33431862fba596eeafffbb7c0325bd322"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: exergaming cognition citation renders on no-motor boundary, corpus count 211, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795484234.5164936,
+    "finished_at": 1795484305.3827739,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "2f72d606ccc6a06c8610a67344fcf5496b8f599a6beaef717d03a53c6dca9e2a",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795484305.3827784
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "2f72d606ccc6a06c8610a67344fcf5496b8f599a6beaef717d03a53c6dca9e2a",
+    "baseline_digest": "2f72d606ccc6a06c8610a67344fcf5496b8f599a6beaef717d03a53c6dca9e2a"
   }
 ]
