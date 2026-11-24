@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-everyday-function-gap",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795495232.9573457,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795502432.9573457,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795495343.3763726,
+    "completed_head": "2a3f8bfe779e1d6f54b2fc658dbdf8d1cfe8d3f3",
+    "completed_tree": "534de859f3ac4920fe916de5f3867329826e5394"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Bhome 2018 SCD intervention meta-analysis as context and cite it on the no-clinical-benefit boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a second independent source to the clinical-value boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2018 meta-analysis found cognitive-training effects vanished under active controls and on global cognition, with clinical utility of small domain gains questionable."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "d3267227f1f984d2ee81a427b1879af067b17224b2dbabca81e7ac64517c6e4d",
-      "status": "in_progress",
-      "task_id": "noesis-scd-intervention-evidence",
-      "timestamp": 1795484693.7309265,
-      "timestamp_str": "2026-11-24 04:44:53",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-everyday-function-gap' completed successfully.",
+      "head": "2a3f8bfe779e1d6f54b2fc658dbdf8d1cfe8d3f3",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-everyday-function-gap",
+      "timestamp": 1795495343.5831225,
+      "timestamp_str": "2026-11-24 07:42:23"
     }
   ]
 }
