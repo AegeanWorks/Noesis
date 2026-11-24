@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 58);
+    expect(links).toHaveLength(mechanicCitations + 59);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -58,6 +58,7 @@ describe("evidence citation rows", () => {
     expect(screen.getByText(/balance gains came from movement-based exergames/i)).toBeTruthy();
     expect(notSupported.textContent).toMatch(/everyday-life generalization remains unresolved/i);
     expect(screen.getByText(/no clinical benefit claim/i)).toBeTruthy();
-    expect(notSupported.querySelectorAll("a")).toHaveLength(22);
+    expect(screen.getByText(/training did not improve general cognition/i)).toBeTruthy();
+    expect(notSupported.querySelectorAll("a")).toHaveLength(23);
   });
 });

@@ -1041,6 +1041,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a citation on the no-motor-benefit boundary with R156; keep the corpus and review version unchanged since the record was already included.
 - **Consequences**: The no-motor claim now rests on direct null findings for nonphysical training alongside the positive exergaming evidence; no corpus, count or version change is needed.
 
+### ADR-148: Dementia Clinical-Significance Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-dementia boundary needed a direct source showing that even in dementia, cognitive training did not improve general cognition and stimulation gains were rarely clinically significant.
+- **Decision**: Add Huntley et al. 2015 as a context record and a citation on the no-dementia-prevention boundary with R157; bump the review version to v2.64.
+- **Consequences**: The review moves to 213 records and 468 outcomes (revision v2.64), D7 residuals fall to 922, and the app's no-dementia and no-clinical-benefit claims gain direct dementia-specific support.
+
 
 
 

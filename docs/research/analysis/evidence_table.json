@@ -12554,6 +12554,68 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-clinical-benefit boundary: even pooled objective gains were null under active controls and on global measures, so the app makes no clinical claim."
+  },
+  {
+   "pmid": "25838501",
+   "doi": "10.1136/bmjopen-2014-005247",
+   "doi_status": "verified",
+   "year": 2015,
+   "journal": "BMJ Open",
+   "title": "Do cognitive interventions improve general cognition in dementia? A meta-analysis and meta-regression",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "dementia",
+    "mci",
+    "older_adults"
+   ],
+   "k": 33,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.51,
+     "ci_low": 0.35,
+     "ci_high": 0.66,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "33 studies: cognitive stimulation improved MMSE vs non-active controls (g=0.51, 95% CI 0.35-0.66) and active controls (g=0.35)"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "No evidence that cognitive training or mixed training-plus-stimulation improved general cognition; ADAS-Cog gains (g=-0.26) were generally not clinically significant"
+    }
+   ],
+   "findings": [
+    "Cognitive training did not improve general cognition in dementia",
+    "Cognitive-stimulation benefits on ADAS-Cog were generally not clinically significant",
+    "95% prediction intervals suggested CS may not benefit ADAS-Cog in all clinical settings"
+   ],
+   "limitations": [
+    "Dementia population",
+    "Difficulties with blinding and adequate placebo controls",
+    "Only 2/9 ADAS-Cog studies reached the minimum clinically important difference"
+   ],
+   "flags": [
+    "active_control_null",
+    "clinical_value_unclear",
+    "domain_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-dementia-prevention and no-clinical-benefit boundaries: even in dementia, cognitive training did not improve general cognition and stimulation gains were rarely clinically significant, so the app makes no dementia or clinical claim."
   }
  ]
 }

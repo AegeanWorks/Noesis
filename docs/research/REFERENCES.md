@@ -430,3 +430,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Clinical-value evidence (2026-11-24 targeted update)
 
 - Interventions for subjective cognitive decline: systematic review and meta-analysis *BMJ Open*. 2018. PMID: [30030318](https://pubmed.ncbi.nlm.nih.gov/30030318/). DOI: [10.1136/bmjopen-2018-021610](https://doi.org/10.1136/bmjopen-2018-021610).
+
+## Dementia clinical-significance evidence (2026-11-24 targeted update)
+
+- Do cognitive interventions improve general cognition in dementia? A meta-analysis and meta-regression *BMJ Open*. 2015. PMID: [25838501](https://pubmed.ncbi.nlm.nih.gov/25838501/). DOI: [10.1136/bmjopen-2014-005247](https://doi.org/10.1136/bmjopen-2014-005247).

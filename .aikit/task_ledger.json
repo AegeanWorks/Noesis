@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-pure-cognitive-motor-boundary",
+    "task_id": "noesis-dementia-clinical-significance",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795488703.6190066,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795490248.0796626,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795495903.6190066,
+    "lease_until": 1795497448.0796626,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,53 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795488935.1717343,
-    "completed_head": "d23a5113d6747d4429a6e211d097c13423b4dfdb",
-    "completed_tree": "7b6ed043ecbe462fb45130c45b8d29e4f8ddffae"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-diagnostic-boundary-evidence' completed successfully.",
-      "head": "744dacb202d1fe8386e690623c73cb750f46dd84",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-diagnostic-boundary-evidence",
-      "timestamp": 1795480303.1781297,
-      "timestamp_str": "2026-11-24 03:31:43"
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Floyd 1997 meta-analysis as context and cite it on the expectancy/placebo claim boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a foundational subjective-memory source and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 1997 meta-analysis found subjective memory gains from training were no larger than expectancy modification or placebo practice, directly supporting the app's honest claim boundaries."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "af45d5f9bd540d2803939d09d52ab107de929e1c1dac3191d9b252a0654fca89",
-      "status": "in_progress",
-      "task_id": "noesis-subjective-memory-evidence",
-      "timestamp": 1795481126.8922913,
-      "timestamp_str": "2026-11-24 03:45:26",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -409,6 +365,48 @@
       "task_id": "noesis-pure-cognitive-motor-boundary",
       "timestamp": 1795488935.9354384,
       "timestamp_str": "2026-11-24 05:55:35"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Huntley 2015 dementia cognition meta-analysis as context and cite it on the no-dementia-prevention boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a 33-study dementia meta-analysis to the boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2015 meta-analysis found cognitive training did not improve general cognition in dementia and cognitive-stimulation gains on ADAS-Cog were generally not clinically significant, directly grounding the app's no-dementia and no-clinical-benefit boundaries."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "6bdb3e0b329ed3dd3f23da990c8f22d8d881e809bfa26bf7492d3c7317836386",
+      "status": "in_progress",
+      "task_id": "noesis-dementia-clinical-significance",
+      "timestamp": 1795489112.4013562,
+      "timestamp_str": "2026-11-24 05:58:32",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 213/468 records, 489 tests, gates 7/7, dementia clinical-significance citation verified in Edge, ADR-148",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-dementia-clinical-significance",
+      "timestamp": 1795490248.0796626,
+      "timestamp_str": "2026-11-24 06:17:28",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

@@ -247,6 +247,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R154 | The no-clinical-benefit boundary cites a meta-analysis showing active-control and global-cognition effects were null in subjective cognitive decline. | Bhome 2018 found a small overall gain (g=0.13) that vanished against active controls (g=0.02) and on global measures (g=0.06). | 30030318; ADR-145 |
 | R155 | The no-general-gain boundary surfaces the landmark Simons 2016 review already in the corpus, making the authoritative verdict visible in-app. | Simons 2016 found trained-task gains, less near transfer and little far or everyday transfer, with no cited study meeting all best practices. | 27697851; ADR-146 |
 | R156 | The no-motor boundary also surfaces the in-corpus Li 2026 review showing pure cognitive training did not improve balance or single-task mobility. | Li 2026 found no single-task gait or balance gain from strictly nonphysical training, only a dual-task gait-speed effect. | 42525971; ADR-147 |
+| R157 | The no-dementia-prevention boundary cites a 33-study meta-analysis showing cognitive training did not improve general cognition in dementia and stimulation gains were rarely clinically significant. | Huntley 2015 found MMSE gains for cognitive stimulation but no general-cognition benefit from training and only 2/9 ADAS-Cog studies reached the minimum clinically important difference. | 25838501; ADR-148 |
 
 ---
 
