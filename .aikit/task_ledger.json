@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-dementia-clinical-significance",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795490248.0796626,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795497448.0796626,
@@ -15,27 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795490379.5931456,
+    "completed_head": "036ba597f62766a2476b86a803a91692146dc652",
+    "completed_tree": "7c3b1f392197238d40de988494af8478bdf95be1"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: verified Floyd 1997 but excluded as pre-window (2000-2026); used P\u00e9rez-Blanco 2022 instead; 208/458 records, ADR-142",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-subjective-memory-evidence",
-      "timestamp": 1795481285.301383,
-      "timestamp_str": "2026-11-24 03:48:05",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -407,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-dementia-clinical-significance' completed successfully.",
+      "head": "036ba597f62766a2476b86a803a91692146dc652",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-dementia-clinical-significance",
+      "timestamp": 1795490379.9958973,
+      "timestamp_str": "2026-11-24 06:19:39"
     }
   ]
 }
