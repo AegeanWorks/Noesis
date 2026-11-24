@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 222 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 223 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -447,6 +447,13 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/42356174/"
               label="No significant digital-training benefit over active controls"
               pmid="42356174"
+            />
+          </li>
+          <li>
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/35842538/"
+              label="No binaural-beats claim: cognitive evidence is mixed and parameter-dependent"
+              pmid="35842538"
             />
           </li>
           <li>

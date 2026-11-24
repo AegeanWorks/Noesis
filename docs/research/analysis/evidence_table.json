@@ -13150,6 +13150,66 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the baseline-profile boundary: the prognostic literature is too sparse and heterogeneous to predict who benefits from training, so the app makes no validated baseline-profile or assignment claim."
+  },
+  {
+   "pmid": "35842538",
+   "doi": "10.1007/s00426-022-01706-7",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Psychological Research",
+   "title": "Potential of binaural beats intervention for improving memory and attention: insights from meta-analysis and systematic review",
+   "modality": "ave",
+   "design": "sr_ma",
+   "populations": [
+    "healthy_adults",
+    "adults"
+   ],
+   "k": 15,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "working_memory",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.4,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "15 studies, 31 effect sizes: binaural beats gave a medium overall effect on memory and attention (g=0.40)"
+    },
+    {
+     "domain": "attention",
+     "transfer": "near",
+     "measure": "domain_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Systematic review found conflicting results, especially theta and beta effects on memory and attention; authors call for robust designs"
+    }
+   ],
+   "findings": [
+    "Pooled effect was medium (g=0.40) but based on few studies",
+    "Systematic review found conflicting, parameter-dependent results for theta and beta",
+    "Authors called for robust study designs before drawing strong conclusions"
+   ],
+   "limitations": [
+    "Mixed cognitive results",
+    "Parameter-dependent (beat frequency)",
+    "Small evidence base"
+   ],
+   "flags": [
+    "mixed_evidence",
+    "parameter_dependent"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-auditory-entrainment boundary: binaural-beat cognitive evidence is mixed and parameter-dependent, and the app uses no binaural beats or entrainment, so it makes no related claim."
   }
  ]
 }

@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-baseline-profile-boundary",
+    "task_id": "noesis-binaural-cognition-boundary",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795509729.848572,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795512973.2607994,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795516929.848572,
+    "lease_until": 1795520173.2607994,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795509992.4665556,
-    "completed_head": "65732cab4d016c61968b4a57794c8e579fcfde38",
-    "completed_tree": "182f527cfee8fbe02cce2177ccf6437a09756d6d"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 216/474 records, 489 tests, gates 7/7, everyday-function measurement citation verified in Edge, ADR-152",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-everyday-function-gap",
-      "timestamp": 1795495232.9573455,
-      "timestamp_str": "2026-11-24 07:40:32",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-everyday-function-gap' completed successfully.",
-      "head": "2a3f8bfe779e1d6f54b2fc658dbdf8d1cfe8d3f3",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-everyday-function-gap",
-      "timestamp": 1795495343.5831225,
-      "timestamp_str": "2026-11-24 07:42:23"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Luctkar-Flude 2015 neurofeedback safety/effectiveness review as context and cite it in the mechanism section",
@@ -409,6 +371,48 @@
       "task_id": "noesis-baseline-profile-boundary",
       "timestamp": 1795509992.8678489,
       "timestamp_str": "2026-11-24 11:46:32"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Basu 2023 binaural-beats cognition meta-analysis as context and add a new no-binaural-beats claim boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds aave context record and a new claim boundary distinguishing the app from entrainment gimmicks.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add bounded boundary citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one new UI boundary bullet with citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2023 meta-analysis found a medium pooled effect for binaural beats on memory/attention but conflicting, parameter-dependent results and calls for robust designs, grounding a new bounded app statement that it uses no auditory entrainment."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "97b967a18704a6fae9e8a87d8e0505e143e442dceb55b08ae9067bf5bf883c2b",
+      "status": "in_progress",
+      "task_id": "noesis-binaural-cognition-boundary",
+      "timestamp": 1795511541.32665,
+      "timestamp_str": "2026-11-24 12:12:21",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 223/488 records, 489 tests, gates 7/7, no-binaural-beats boundary verified in Edge, ADR-160",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-binaural-cognition-boundary",
+      "timestamp": 1795512973.2607994,
+      "timestamp_str": "2026-11-24 12:36:13",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

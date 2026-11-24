@@ -1125,6 +1125,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Liebermann-Jordanidis et al. 2023 as a context record and a citation on the baseline-profile boundary with R166; bump the review version to v2.73.
 - **Consequences**: The review moves to 222 records and 486 outcomes (revision v2.73), D7 residuals fall to 913, and the no-validated-baseline-profile claim gains direct prognostic-evidence support.
 
+### ADR-160: No Binaural-Beats Claim Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The app uses static exercises with no auditory entrainment, but the Evidence screen did not state this or cite the mixed cognitive evidence for binaural beats, a common brain-training gimmick.
+- **Decision**: Add Basu & Banerjee 2023 as a context record and a new bounded claim-boundary bullet ("No binaural-beats claim: cognitive evidence is mixed and parameter-dependent") with R167; bump the review version to v2.74.
+- **Consequences**: The review moves to 223 records and 488 outcomes (revision v2.74), D7 residuals fall to 912, and users see an explicit, sourced boundary distinguishing Noesis from entrainment-based products.
+
 
 
 
