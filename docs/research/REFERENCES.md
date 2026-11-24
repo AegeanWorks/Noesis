@@ -418,3 +418,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Single-component boundary evidence (2026-11-24 targeted update)
 
 - Neuropsychological approach to subjective cognitive complaints in cognitively unimpaired older people: A systematic review *International Journal of Geriatric Psychiatry*. 2022. PMID: [35607814](https://pubmed.ncbi.nlm.nih.gov/35607814/). DOI: [10.1002/gps.5728](https://doi.org/10.1002/gps.5728).
+
+## Motor boundary evidence (2026-11-24 targeted update)
+
+- Effects of Exergaming on Balance of Healthy Older Adults: A Systematic Review and Meta-analysis of Randomized Controlled Trials *Games for Health Journal*. 2020. PMID: [31800322](https://pubmed.ncbi.nlm.nih.gov/31800322/). DOI: [10.1089/g4h.2019.0016](https://doi.org/10.1089/g4h.2019.0016).

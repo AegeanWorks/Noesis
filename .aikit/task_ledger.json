@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-subjective-memory-evidence",
+    "task_id": "noesis-motor-boundary-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795481866.1321523,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795483124.735971,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795489066.1321523,
+    "lease_until": 1795490324.735971,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,53 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795481979.8880484,
-    "completed_head": "83ea22eb7324867d5f474fc09534c92dd66fb843",
-    "completed_tree": "8ca306a6485b03698cafdcb55214c7f086f2bd46"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-child-wm-evidence' completed successfully.",
-      "head": "3e23f10a9b7767a3ef2c4db243668eaf98d82736",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-child-wm-evidence",
-      "timestamp": 1795471322.6990662,
-      "timestamp_str": "2026-11-24 01:02:02"
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Reijnders 2013 cognitive-intervention review as context and cite it on the no-everyday-function boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a third systematic-review citation to the everyday-function boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2013 systematic review of 35 studies found cognitive gains but everyday-life generalization still unresolved, directly supporting the app's existing boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "97657b0445a463d58a94da90dc86a666fd58b443b8b7cd2b9c1372a4c71eb73a",
-      "status": "in_progress",
-      "task_id": "noesis-everyday-generalization-evidence",
-      "timestamp": 1795471612.3725915,
-      "timestamp_str": "2026-11-24 01:06:52",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -409,6 +365,48 @@
       "task_id": "noesis-subjective-memory-evidence",
       "timestamp": 1795481980.0028038,
       "timestamp_str": "2026-11-24 03:59:40"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Fang 2020 exergaming balance meta-analysis as context and cite it on the no-motor-benefit boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a second systematic review to the no-motor boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2020 meta-analysis found balance gains from exergames with 2-3 40-minute movement sessions weekly, directly supporting why a screen-based app makes no motor claim."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "b45cbb1b32ae3c3afb067861b7ff82224308bd459d40ef3a8194e1ece64dc3f0",
+      "status": "in_progress",
+      "task_id": "noesis-motor-boundary-evidence",
+      "timestamp": 1795482379.024192,
+      "timestamp_str": "2026-11-24 04:06:19",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 210/462 records, 489 tests, gates 7/7, motor boundary citation verified in Edge, ADR-143",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-motor-boundary-evidence",
+      "timestamp": 1795483124.735971,
+      "timestamp_str": "2026-11-24 04:18:44",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

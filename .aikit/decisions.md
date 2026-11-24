@@ -1006,6 +1006,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Pérez-Blanco et al. 2022 as a context record and a citation on the no-general-gain boundary, with R151; bump the review version to v2.60 and document the pre-window exception.
 - **Consequences**: The review moves to 209 records and 460 outcomes (revision v2.60), D7 residuals fall to 926, and the app's single-construct focus tests remain claim-bounded.
 
+### ADR-143: Exergaming Balance Evidence on the Motor Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-motor-benefit boundary cited dual-task training; a verified 2020 exergaming meta-analysis adds direct evidence that balance gains require movement-based protocols.
+- **Decision**: Add Fang et al. 2020 as a context record and a second citation on that boundary, with R152; bump the review version to v2.61.
+- **Consequences**: The review moves to 210 records and 462 outcomes (revision v2.61), D7 residuals fall to 925, and the no-motor claim remains explicitly grounded.
+
 
 
 

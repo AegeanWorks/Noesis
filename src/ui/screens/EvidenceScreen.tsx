@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 209 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 210 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -197,6 +197,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/40410069/"
               label="No gait, balance or fall-prevention claim: the app has no motor component"
               pmid="40410069"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/31800322/"
+              label="Balance gains came from movement-based exergames, not screen-only tasks"
+              pmid="31800322"
             />{" "}
             <CitationLink
               href="https://pubmed.ncbi.nlm.nih.gov/40304821/"

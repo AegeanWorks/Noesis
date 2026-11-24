@@ -12378,6 +12378,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-general-gain boundary: isolated cognitive stimulation showed no benefit, so a single-component consumer game makes no general cognitive claim."
+  },
+  {
+   "pmid": "31800322",
+   "doi": "10.1089/g4h.2019.0016",
+   "doi_status": "verified",
+   "year": 2020,
+   "journal": "Games for Health Journal",
+   "title": "Effects of Exergaming on Balance of Healthy Older Adults: A Systematic Review and Meta-analysis of Randomized Controlled Trials",
+   "modality": "multi_intervention",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 16,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "gait_balance",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.36,
+     "ci_low": 0.26,
+     "ci_high": 1.3,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "16 RCTs of exergaming in healthy older adults: moderate gains in dynamic balance (g=0.36) and perceived balance (g=0.31), larger on chair-stand and balance batteries"
+    },
+    {
+     "domain": "gait_balance",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": null,
+     "ci_low": -0.31,
+     "ci_high": 0.76,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "No significant effect on static or proactive balance; protocols averaged 2-3 40-minute movement sessions weekly for 8 weeks"
+    }
+   ],
+   "findings": [
+    "Balance benefits came from movement-based exergame protocols",
+    "No static-balance effect; screen-only cognitive tasks were not the intervention"
+   ],
+   "limitations": [
+    "Physical movement was the active ingredient",
+    "Healthy older adults, supplementary to traditional exercise"
+   ],
+   "flags": [
+    "motor_intervention",
+    "clinical_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-motor-benefit boundary: balance gains required movement-based exergaming, so a static screen-based app claims no gait or balance benefit."
   }
  ]
 }
