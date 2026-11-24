@@ -3117,5 +3117,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "2f72d606ccc6a06c8610a67344fcf5496b8f599a6beaef717d03a53c6dca9e2a",
     "baseline_digest": "2f72d606ccc6a06c8610a67344fcf5496b8f599a6beaef717d03a53c6dca9e2a"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: SCD clinical-value citation renders, corpus count 212, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795485804.9935296,
+    "finished_at": 1795485882.831677,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "f17950b7bb54abe50b1d595aef2ecea6d819328860da41820f68404dea90df56",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795485882.8316813
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "f17950b7bb54abe50b1d595aef2ecea6d819328860da41820f68404dea90df56",
+    "baseline_digest": "f17950b7bb54abe50b1d595aef2ecea6d819328860da41820f68404dea90df56"
   }
 ]

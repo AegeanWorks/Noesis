@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-scd-intervention-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795485760.3683648,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795492960.3683648,
@@ -15,27 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795485883.6578834,
+    "completed_head": "0d2ba6f7e352f816456166409e47c63eb1788c33",
+    "completed_tree": "2e978b3dd215c7a340ad3db14aac9696f3273fd9"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 206/454 records, 489 tests, gates 7/7, clinical-value boundary citation verified in Edge, ADR-139",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-clinical-value-evidence",
-      "timestamp": 1795476470.9270422,
-      "timestamp_str": "2026-11-24 02:27:50",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "delivery": {
@@ -407,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-scd-intervention-evidence' completed successfully.",
+      "head": "0d2ba6f7e352f816456166409e47c63eb1788c33",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-scd-intervention-evidence",
+      "timestamp": 1795485883.7963996,
+      "timestamp_str": "2026-11-24 05:04:43"
     }
   ]
 }
