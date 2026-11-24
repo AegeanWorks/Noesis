@@ -12616,6 +12616,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-dementia-prevention and no-clinical-benefit boundaries: even in dementia, cognitive training did not improve general cognition and stimulation gains were rarely clinically significant, so the app makes no dementia or clinical claim."
+  },
+  {
+   "pmid": "28092015",
+   "doi": "10.1007/s11065-016-9338-9",
+   "doi_status": "verified",
+   "year": 2017,
+   "journal": "Neuropsychology Review",
+   "title": "Enhancing Cognitive Functioning in Healthy Older Adults: a Systematic Review of the Clinical Significance of Commercially Available Computerized Cognitive Training in Preventing Cognitive Decline",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 26,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "evidence_level",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "18 commercial programs identified; only 7 investigated in 26 studies, just 2 Level I, 3 Level II and 2 Level III evidence"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "study_quality",
+     "value": 7.05,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Average PEDro score 7.05 for the evaluated studies; authors caution about selective reporting bias and do not claim uniform clinical validation"
+    }
+   ],
+   "findings": [
+    "Only 7 of 18 commercial brain-training programs had any clinical studies",
+    "Just 2 programs had Level I evidence and the authors cautioned about selective reporting bias",
+    "The review concluded at least some commercial programs may assist healthy brain ageing, not all"
+   ],
+   "limitations": [
+    "Commercial-program evidence base is thin and uneven",
+    "Selective reporting bias cannot be excluded"
+   ],
+   "flags": [
+    "commercial_validation",
+    "domain_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-general-claim boundary: most commercial brain-training programs lack clinical validation, so a static screen-based app makes no claim to validated or general cognitive benefit."
   }
  ]
 }

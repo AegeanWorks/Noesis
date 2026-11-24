@@ -149,7 +149,7 @@ describe("history export", () => {
       app: "noesis",
       appVersion: "0.1.0",
       exportSchemaVersion: 1,
-      evidenceReview: expect.stringMatching(/v2\.64/),
+      evidenceReview: expect.stringMatching(/v2\.65/),
       consentVersion: 1,
       exportedAt: "2026-11-08T12:00:00.000Z",
       counts: {

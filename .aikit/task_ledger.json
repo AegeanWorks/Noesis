@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-dementia-clinical-significance",
+    "task_id": "noesis-commercial-validation",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795490248.0796626,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795492015.7298079,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795497448.0796626,
+    "lease_until": 1795499215.7298079,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795490379.5931456,
-    "completed_head": "036ba597f62766a2476b86a803a91692146dc652",
-    "completed_tree": "7c3b1f392197238d40de988494af8478bdf95be1"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 209/460 records, 489 tests, gates 7/7, single-component boundary verified in Edge, pre-window Floyd exception documented, ADR-142",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-subjective-memory-evidence",
-      "timestamp": 1795481866.1321523,
-      "timestamp_str": "2026-11-24 03:57:46",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-subjective-memory-evidence' completed successfully.",
-      "head": "83ea22eb7324867d5f474fc09534c92dd66fb843",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-subjective-memory-evidence",
-      "timestamp": 1795481980.0028038,
-      "timestamp_str": "2026-11-24 03:59:40"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Fang 2020 exergaming balance meta-analysis as context and cite it on the no-motor-benefit boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-dementia-clinical-significance",
       "timestamp": 1795490379.9958973,
       "timestamp_str": "2026-11-24 06:19:39"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Shah 2017 commercial brain-training validation review as context and cite it on the no-general-claim boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a commercial-validation context record to the no-general-claim boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2017 systematic review found only 7 of 18 commercial programs had clinical studies and just 2 had Level I evidence, directly grounding the app's boundary that a static app makes no commercial-validation or general-gain claim."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "47c2fe06821f0a269a1d3191772205e8fbb7a8df04ac7c1c38f085ac5543c8e0",
+      "status": "in_progress",
+      "task_id": "noesis-commercial-validation",
+      "timestamp": 1795490836.773104,
+      "timestamp_str": "2026-11-24 06:27:16",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 214/470 records, 489 tests, gates 7/7, commercial validation citation verified in Edge, ADR-149",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-commercial-validation",
+      "timestamp": 1795492015.729808,
+      "timestamp_str": "2026-11-24 06:46:55",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

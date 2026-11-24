@@ -1048,6 +1048,20 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Huntley et al. 2015 as a context record and a citation on the no-dementia-prevention boundary with R157; bump the review version to v2.64.
 - **Consequences**: The review moves to 213 records and 468 outcomes (revision v2.64), D7 residuals fall to 922, and the app's no-dementia and no-clinical-benefit claims gain direct dementia-specific support.
 
+### ADR-149: Commercial Validation Evidence on the General-Claim Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-general-claim boundary needed a source documenting how thinly validated the commercial brain-training market is, so the app does not imply validated commercial efficacy.
+- **Decision**: Add Shah et al. 2017 as a context record and a citation on the no-general-claim boundary with R158; bump the review version to v2.65.
+- **Consequences**: The review moves to 214 records and 470 outcomes (revision v2.65), D7 residuals fall to 921, and the app's screen-only scope remains explicit next to commercial-validation context.
+
+### ADR-150: Bound Vitest Worker Concurrency
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: Vitest's default fork pool started 20+ workers on this shared host; under CPU contention from concurrently running project suites, individual tests repeatedly hit the 10s `testTimeout`, intermittently failing an otherwise green 489-test gate.
+- **Decision**: Set `test.maxWorkers = 4` in `vite.config.ts` (the installed vitest version does not accept `minWorkers`).
+- **Consequences**: No assertion, timeout value or production file changes; each worker gets enough CPU to stay under `testTimeout`, and the full suite (76 files / 489 tests) passes reliably. This is a test-execution reliability fix, not a test weakening.
+
 
 
 
