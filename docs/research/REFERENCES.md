@@ -406,3 +406,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Clinical-value umbrella evidence (2026-11-24 targeted update)
 
 - Cognition-Oriented Treatments for Older Adults: a Systematic Overview of Systematic Reviews *Neuropsychology Review*. 2020. PMID: [32266520](https://pubmed.ncbi.nlm.nih.gov/32266520/). DOI: [10.1007/s11065-020-09434-8](https://doi.org/10.1007/s11065-020-09434-8).
+
+## Visual-stimulus safety context (2026-11-24 targeted update)
+
+- Cognitive Neurorehabilitation in Epilepsy Patients via Virtual Reality Environments: Systematic Review *Advances in Experimental Medicine and Biology*. 2023. PMID: [37486487](https://pubmed.ncbi.nlm.nih.gov/37486487/). DOI: [10.1007/978-3-031-31982-2_14](https://doi.org/10.1007/978-3-031-31982-2_14).

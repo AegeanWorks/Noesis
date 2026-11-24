@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-clinical-value-evidence",
+    "task_id": "noesis-epilepsy-vr-safety",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795476470.9270422,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795478401.1520066,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795483670.9270422,
+    "lease_until": 1795485601.1520066,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795477015.1852212,
-    "completed_head": "afe7053f2a9a2c326a34d8cfdea2ffdc0c629e99",
-    "completed_tree": "928e8182077f498a4d70e2d1cda83a305de484cd"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 200/440 records, 489 tests, gates 7/7, commercial-game boundary citation verified in Edge, ADR-133",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-commercial-games-evidence",
-      "timestamp": 1795468957.3373618,
-      "timestamp_str": "2026-11-24 00:22:37",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-commercial-games-evidence' completed successfully.",
-      "head": "f8448bf13e85e88c6eba84c10cba7b99ba2d9805",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-commercial-games-evidence",
-      "timestamp": 1795469065.9056606,
-      "timestamp_str": "2026-11-24 00:24:25"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Cortese 2015 ADHD cognitive-training meta-analysis as context and cite it on the no-ADHD-treatment boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-clinical-value-evidence",
       "timestamp": 1795477015.3949313,
       "timestamp_str": "2026-11-24 02:36:55"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Fasilis 2023 epilepsy VR rehabilitation review as context and cite it on the Safety screen's photosensitivity evidence note",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Strengthens the safety onboarding evidence and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2023 review of VR cognitive rehabilitation in epilepsy adds clinical context for why Noesis screens photosensitivity and keeps visual stimuli static."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "077d1ca516ed2223a86a7e5b45fc6204f55660b3ddf40d7c0db8ac7964bd1e60",
+      "status": "in_progress",
+      "task_id": "noesis-epilepsy-vr-safety",
+      "timestamp": 1795477423.532107,
+      "timestamp_str": "2026-11-24 02:43:43",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 207/456 records, 489 tests, gates 7/7, epilepsy safety citation verified in Edge, ADR-140",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-epilepsy-vr-safety",
+      "timestamp": 1795478401.1520066,
+      "timestamp_str": "2026-11-24 03:00:01",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

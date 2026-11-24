@@ -41,6 +41,7 @@ describe("SafetyScreen", () => {
     const links = Array.from(note.querySelectorAll("a")).map((a) => a.getAttribute("href"));
     expect(links).toContain("https://pubmed.ncbi.nlm.nih.gov/16146438/");
     expect(links).toContain("https://pubmed.ncbi.nlm.nih.gov/25771249/");
+    expect(links).toContain("https://pubmed.ncbi.nlm.nih.gov/37486487/");
   });
 
   it("shows the photosensitivity warning when needed", () => {

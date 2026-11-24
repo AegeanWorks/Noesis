@@ -985,6 +985,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Gavelin et al. 2020 as a context record and a new no-clinical-benefit claim boundary, with R148; bump the review version to v2.57.
 - **Consequences**: The review moves to 206 records and 454 outcomes (revision v2.57), D7 residuals fall to 929, and the app's claim boundaries now include an umbrella-level verdict on clinical meaningfulness.
 
+### ADR-140: Epilepsy VR Review on the Safety Note
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The Safety screen's evidence note cited a seizure consensus and FINGER trial; a verified 2023 review shows visual virtual environments are an active clinical consideration in epilepsy care.
+- **Decision**: Add Fasilis et al. 2023 as a context record and a third citation on that note, with R149; bump the review version to v2.58.
+- **Consequences**: The review moves to 207 records and 456 outcomes (revision v2.58), D7 residuals fall to 928, and the photosensitivity screen and static no-flashing design gain clinical context.
+
 
 
 

@@ -52,7 +52,11 @@ export function SafetyScreen({ onComplete }: SafetyScreenProps) {
         <a href="https://pubmed.ncbi.nlm.nih.gov/25771249/" target="_blank" rel="noreferrer">
           FINGER trial
         </a>{" "}
-        <span className="pmid">PMID 25771249</span>
+        <span className="pmid">PMID 25771249</span> ·{" "}
+        <a href="https://pubmed.ncbi.nlm.nih.gov/37486487/" target="_blank" rel="noreferrer">
+          Epilepsy VR review
+        </a>{" "}
+        <span className="pmid">PMID 37486487</span>
       </p>
 
       <form

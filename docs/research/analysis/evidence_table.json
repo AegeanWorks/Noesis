@@ -12209,6 +12209,61 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the clinical-value claim boundary: even an umbrella review finds only small cognitive effects with unclear real-world value, so the app makes no clinical-benefit claim."
+  },
+  {
+   "pmid": "37486487",
+   "doi": "10.1007/978-3-031-31982-2_14",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "Advances in Experimental Medicine and Biology",
+   "title": "Cognitive Neurorehabilitation in Epilepsy Patients via Virtual Reality Environments: Systematic Review",
+   "modality": "multimodal",
+   "design": "sr",
+   "populations": [
+    "clinical_symptoms",
+    "adults"
+   ],
+   "k": 14,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "visuospatial_memory",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "14 studies (6 pooled) of VR cognitive rehabilitation in epilepsy reported benefits for visuospatial memory, attention and processing speed despite heterogeneity"
+    },
+    {
+     "domain": "adverse_events",
+     "transfer": "na",
+     "measure": "safety_context",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "not_reported",
+     "note": "Visual-environment interventions were studied deliberately in epilepsy samples, reinforcing that visual stimulus exposure needs clinical caution"
+    }
+   ],
+   "findings": [
+    "Visual virtual environments were used cautiously in epilepsy rehabilitation",
+    "Mechanisms and safe protocols remain under investigation"
+   ],
+   "limitations": [
+    "Small heterogeneous evidence base",
+    "Clinical epilepsy population, not healthy consumers"
+   ],
+   "flags": [
+    "clinical_specific",
+    "safety_context"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for safety onboarding: visual stimuli are an active consideration in epilepsy care, supporting the photosensitivity screen and static no-flashing design."
   }
  ]
 }
