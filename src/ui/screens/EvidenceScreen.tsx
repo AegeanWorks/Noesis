@@ -214,6 +214,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               pmid="31800322"
             />{" "}
             <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/42525971/"
+              label="Pure cognitive training did not improve balance or single-task mobility"
+              pmid="42525971"
+            />{" "}
+            <CitationLink
               href="https://pubmed.ncbi.nlm.nih.gov/28442405/"
               label="Exergaming cognition gains paired movement with mental demand"
               pmid="28442405"

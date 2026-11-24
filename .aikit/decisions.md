@@ -1034,6 +1034,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add it as a leading citation on the no-general-gain boundary with R155; keep the corpus and review version unchanged since the record was already included.
 - **Consequences**: The app now shows the definitive trained-task-versus-everyday-transfer verdict; no corpus, count or version change is needed.
 
+### ADR-147: Pure Cognitive Training on the Motor Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: Li et al. 2026 was already in the corpus but not cited in the UI; it is the most direct evidence that even strictly nonphysical cognitive training does not improve single-task balance or mobility.
+- **Decision**: Add it as a citation on the no-motor-benefit boundary with R156; keep the corpus and review version unchanged since the record was already included.
+- **Consequences**: The no-motor claim now rests on direct null findings for nonphysical training alongside the positive exergaming evidence; no corpus, count or version change is needed.
+
 
 
 

@@ -246,6 +246,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R153 | The no-motor boundary also cites an exergaming cognition meta-analysis to show gains paired movement with mental demand. | Stanmore 2017 found global-cognition gains across 17 RCTs of physically active games in healthy and clinical samples. | 28442405; ADR-144 |
 | R154 | The no-clinical-benefit boundary cites a meta-analysis showing active-control and global-cognition effects were null in subjective cognitive decline. | Bhome 2018 found a small overall gain (g=0.13) that vanished against active controls (g=0.02) and on global measures (g=0.06). | 30030318; ADR-145 |
 | R155 | The no-general-gain boundary surfaces the landmark Simons 2016 review already in the corpus, making the authoritative verdict visible in-app. | Simons 2016 found trained-task gains, less near transfer and little far or everyday transfer, with no cited study meeting all best practices. | 27697851; ADR-146 |
+| R156 | The no-motor boundary also surfaces the in-corpus Li 2026 review showing pure cognitive training did not improve balance or single-task mobility. | Li 2026 found no single-task gait or balance gain from strictly nonphysical training, only a dual-task gait-speed effect. | 42525971; ADR-147 |
 
 ---
 
