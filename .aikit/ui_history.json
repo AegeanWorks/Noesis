@@ -3031,5 +3031,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "93f5e157e55e58601b4ab4d584b9ab211f4ea012a4cb727dbbc02a899eea1277",
     "baseline_digest": "93f5e157e55e58601b4ab4d584b9ab211f4ea012a4cb727dbbc02a899eea1277"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: exergaming motor boundary citation renders, corpus count 210, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "663c824299999d780a0bfdca866abef60fd9a1d43e665d2ee80700fe21e233e9",
+    "started_at": 1795483153.8860075,
+    "finished_at": 1795483234.721396,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "393a00969cb46ad069cb6380914da3f33431862fba596eeafffbb7c0325bd322",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795483234.7213993
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Boundary citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "393a00969cb46ad069cb6380914da3f33431862fba596eeafffbb7c0325bd322",
+    "baseline_digest": "393a00969cb46ad069cb6380914da3f33431862fba596eeafffbb7c0325bd322"
   }
 ]
