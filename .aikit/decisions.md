@@ -1020,6 +1020,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Stanmore et al. 2017 as a context record and a third citation on the no-motor boundary, with R153; bump the review version to v2.62.
 - **Consequences**: The review moves to 211 records and 464 outcomes (revision v2.62), D7 residuals fall to 924, and the app's screen-only scope remains explicit.
 
+### ADR-145: SCD Intervention Meta-Analysis on Clinical Value
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-clinical-benefit boundary cited an umbrella review; a verified 2018 meta-analysis adds active-control and global-cognition null results in subjective cognitive decline.
+- **Decision**: Add Bhome et al. 2018 as a context record and a second citation on that boundary, with R154; bump the review version to v2.63.
+- **Consequences**: The review moves to 212 records and 466 outcomes (revision v2.63), D7 residuals fall to 923, and the no-clinical-benefit claim gains direct active-control support.
+
 
 
 

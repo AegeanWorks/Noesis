@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-exergaming-cognition-evidence",
+    "task_id": "noesis-scd-intervention-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795484208.9684026,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795485760.3683648,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795491408.9684026,
+    "lease_until": 1795492960.3683648,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,53 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795484306.1854188,
-    "completed_head": "05c3e1746b6e69ce1a14cb078792261773d01182",
-    "completed_tree": "c49cc5b4976994a71893ae7118a7f8e7ccd20a07"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-realworld-evidence' completed successfully.",
-      "head": "a4beab86b599f8516cc3f2878745383e1202e7e5",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-realworld-evidence",
-      "timestamp": 1795474287.4170043,
-      "timestamp_str": "2026-11-24 01:51:27"
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Gavelin 2020 umbrella review as context and cite it on a new clinical-value claim boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a high-level synthesis to the claim-boundary list and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2020 overview of 46 meta-analyses found small cognitive effects but clinical value unclear due to scarce high-quality evidence, directly supporting a new honesty boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "2706bf5f0da38dd69dc63833db9a9f572bd7a9f4f245a7c7da814a60001fa45d",
-      "status": "in_progress",
-      "task_id": "noesis-clinical-value-evidence",
-      "timestamp": 1795475034.9808657,
-      "timestamp_str": "2026-11-24 02:03:54",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -409,6 +365,48 @@
       "task_id": "noesis-exergaming-cognition-evidence",
       "timestamp": 1795484306.5465217,
       "timestamp_str": "2026-11-24 04:38:26"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Bhome 2018 SCD intervention meta-analysis as context and cite it on the no-clinical-benefit boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a second independent source to the clinical-value boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2018 meta-analysis found cognitive-training effects vanished under active controls and on global cognition, with clinical utility of small domain gains questionable."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "d3267227f1f984d2ee81a427b1879af067b17224b2dbabca81e7ac64517c6e4d",
+      "status": "in_progress",
+      "task_id": "noesis-scd-intervention-evidence",
+      "timestamp": 1795484693.7309265,
+      "timestamp_str": "2026-11-24 04:44:53",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 212/466 records, 489 tests, gates 7/7, SCD clinical-value citation verified in Edge, ADR-145",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-scd-intervention-evidence",
+      "timestamp": 1795485760.3683648,
+      "timestamp_str": "2026-11-24 05:02:40",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

@@ -426,3 +426,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Exergaming cognition evidence (2026-11-24 targeted update)
 
 - The effect of active video games on cognitive functioning in clinical and non-clinical populations: A meta-analysis of randomized controlled trials *Neuroscience & Biobehavioral Reviews*. 2017. PMID: [28442405](https://pubmed.ncbi.nlm.nih.gov/28442405/). DOI: [10.1016/j.neubiorev.2017.04.011](https://doi.org/10.1016/j.neubiorev.2017.04.011).
+
+## Clinical-value evidence (2026-11-24 targeted update)
+
+- Interventions for subjective cognitive decline: systematic review and meta-analysis *BMJ Open*. 2018. PMID: [30030318](https://pubmed.ncbi.nlm.nih.gov/30030318/). DOI: [10.1136/bmjopen-2018-021610](https://doi.org/10.1136/bmjopen-2018-021610).

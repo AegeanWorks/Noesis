@@ -12495,6 +12495,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-motor-benefit boundary: cognitive gains were observed for physically active games, so a static screen-based app makes no broad cognitive or motor claim."
+  },
+  {
+   "pmid": "30030318",
+   "doi": "10.1136/bmjopen-2018-021610",
+   "doi_status": "verified",
+   "year": 2018,
+   "journal": "BMJ Open",
+   "title": "Interventions for subjective cognitive decline: systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults",
+    "mci"
+   ],
+   "k": 20,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.13,
+     "ci_low": 0.01,
+     "ci_high": 0.25,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "20 RCTs in subjective cognitive decline (16 pooled): cognitive training gave a small objective gain (g=0.13)"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "Hedges g",
+     "value": 0.02,
+     "ci_low": -0.19,
+     "ci_high": 0.22,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Effect was null against active controls (g=0.02) and on global cognitive measures (g=0.06); only 7 of 20 studies high quality"
+    }
+   ],
+   "findings": [
+    "Cognitive-training gains were small and vanished against active controls",
+    "Clinical utility of small domain-specific gains was questioned"
+   ],
+   "limitations": [
+    "Subjective cognitive decline population",
+    "Only 7 high-quality trials"
+   ],
+   "flags": [
+    "active_control_null",
+    "clinical_value_unclear"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-clinical-benefit boundary: even pooled objective gains were null under active controls and on global measures, so the app makes no clinical claim."
   }
  ]
 }

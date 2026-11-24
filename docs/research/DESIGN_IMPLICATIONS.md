@@ -244,6 +244,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R151 | The no-general-gain boundary cites a review showing isolated cognitive stimulation had no effect while multicomponent programs did. | Pérez-Blanco 2022 found single-component stimulation did not reduce subjective complaints, so the app's single-construct games make no general claim. | 35607814; ADR-142 |
 | R152 | The no-motor-benefit boundary cites a second meta-analysis showing balance gains came from movement-based exergames. | Fang 2020 found dynamic/perceived balance benefits from 2-3 weekly 40-minute movement sessions, not screen-only tasks. | 31800322; ADR-143 |
 | R153 | The no-motor boundary also cites an exergaming cognition meta-analysis to show gains paired movement with mental demand. | Stanmore 2017 found global-cognition gains across 17 RCTs of physically active games in healthy and clinical samples. | 28442405; ADR-144 |
+| R154 | The no-clinical-benefit boundary cites a meta-analysis showing active-control and global-cognition effects were null in subjective cognitive decline. | Bhome 2018 found a small overall gain (g=0.13) that vanished against active controls (g=0.02) and on global measures (g=0.06). | 30030318; ADR-145 |
 
 ---
 
