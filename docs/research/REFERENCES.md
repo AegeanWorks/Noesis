@@ -422,3 +422,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Motor boundary evidence (2026-11-24 targeted update)
 
 - Effects of Exergaming on Balance of Healthy Older Adults: A Systematic Review and Meta-analysis of Randomized Controlled Trials *Games for Health Journal*. 2020. PMID: [31800322](https://pubmed.ncbi.nlm.nih.gov/31800322/). DOI: [10.1089/g4h.2019.0016](https://doi.org/10.1089/g4h.2019.0016).
+
+## Exergaming cognition evidence (2026-11-24 targeted update)
+
+- The effect of active video games on cognitive functioning in clinical and non-clinical populations: A meta-analysis of randomized controlled trials *Neuroscience & Biobehavioral Reviews*. 2017. PMID: [28442405](https://pubmed.ncbi.nlm.nih.gov/28442405/). DOI: [10.1016/j.neubiorev.2017.04.011](https://doi.org/10.1016/j.neubiorev.2017.04.011).

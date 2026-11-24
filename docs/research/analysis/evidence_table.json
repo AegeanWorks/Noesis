@@ -12436,6 +12436,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-motor-benefit boundary: balance gains required movement-based exergaming, so a static screen-based app claims no gait or balance benefit."
+  },
+  {
+   "pmid": "28442405",
+   "doi": "10.1016/j.neubiorev.2017.04.011",
+   "doi_status": "verified",
+   "year": 2017,
+   "journal": "Neuroscience & Biobehavioral Reviews",
+   "title": "The effect of active video games on cognitive functioning in clinical and non-clinical populations: A meta-analysis of randomized controlled trials",
+   "modality": "multi_intervention",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults",
+    "clinical_symptoms"
+   ],
+   "k": 17,
+   "n": 926,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.436,
+     "ci_low": 0.18,
+     "ci_high": 0.69,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "17 RCTs (n=926): exergames improved global cognition (g=0.436, 95% CI 0.18-0.69) in healthy older adults and clinical populations"
+    },
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "domain_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "Domain benefits in executive functions, attentional processing and visuospatial skills; effects persisted versus physical-activity controls"
+    }
+   ],
+   "findings": [
+    "Cognition gains came from physically-active game protocols",
+    "Screen-only cognitive tasks were not the active ingredient"
+   ],
+   "limitations": [
+    "Physical activity confounded with cognitive demand",
+    "Heterogeneous clinical and non-clinical samples"
+   ],
+   "flags": [
+    "motor_intervention",
+    "domain_specific"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-motor-benefit boundary: cognitive gains were observed for physically active games, so a static screen-based app makes no broad cognitive or motor claim."
   }
  ]
 }

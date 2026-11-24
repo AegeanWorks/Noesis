@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-motor-boundary-evidence",
+    "task_id": "noesis-exergaming-cognition-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795483124.735971,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795484208.9684026,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795490324.735971,
+    "lease_until": 1795491408.9684026,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,53 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795483236.4050877,
-    "completed_head": "64aa9c4042c445e2831873e7ce4944c78f144e28",
-    "completed_tree": "7c8078833630f17d11968f78f78b776f1394e264"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-everyday-generalization-evidence' completed successfully.",
-      "head": "2f966be36bd297fa10c8ed019836d3baa9b25781",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-everyday-generalization-evidence",
-      "timestamp": 1795472981.1523626,
-      "timestamp_str": "2026-11-24 01:29:41"
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Vaportzis 2019 real-world interventions meta-analysis as context and cite it on the Settings clock-evidence note",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a third source to the Settings clock note and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2019 meta-analysis of 43 RCTs found cognitive-activity interventions alone did not improve outcomes versus controls, directly relevant to the app's group-level design context."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "72a727e5fa54872d81c5f191cdfcf990e909bcf46359946305b0f0680cf88ae4",
-      "status": "in_progress",
-      "task_id": "noesis-realworld-evidence",
-      "timestamp": 1795473517.830706,
-      "timestamp_str": "2026-11-24 01:38:37",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -409,6 +365,48 @@
       "task_id": "noesis-motor-boundary-evidence",
       "timestamp": 1795483236.6179843,
       "timestamp_str": "2026-11-24 04:20:36"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Stanmore 2017 exergaming cognition meta-analysis as context and cite it on the no-motor-benefit boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a third systematic review to the no-motor boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2017 meta-analysis of 17 RCTs found cognitive gains from physically-active games in healthy and clinical samples, reinforcing that screen-only focus tests make no broad cognitive claim."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "cbef09e3c3830c917c96c1df612498de9e57ccedbc9723e0b1fb26b458b23ffa",
+      "status": "in_progress",
+      "task_id": "noesis-exergaming-cognition-evidence",
+      "timestamp": 1795483655.0732648,
+      "timestamp_str": "2026-11-24 04:27:35",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 211/464 records, 489 tests, gates 7/7, exergaming cognition citation verified in Edge, ADR-144",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-exergaming-cognition-evidence",
+      "timestamp": 1795484208.9684026,
+      "timestamp_str": "2026-11-24 04:36:48",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
