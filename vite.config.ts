@@ -21,7 +21,8 @@ export default defineConfig({
     include: ["tests/**/*.test.ts", "tests/**/*.test.tsx"],
     testTimeout: 10_000,
     // Bound fork concurrency so each worker gets enough CPU to finish inside
-    // testTimeout when other projects run suites on the same host.
-    maxWorkers: 4,
+    // testTimeout when other projects run suites on the same host. Reduced to
+    // 2 after sustained host contention kept 4 workers above the 10s bound.
+    maxWorkers: 2,
   },
 });

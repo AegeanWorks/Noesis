@@ -1132,6 +1132,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Basu & Banerjee 2023 as a context record and a new bounded claim-boundary bullet ("No binaural-beats claim: cognitive evidence is mixed and parameter-dependent") with R167; bump the review version to v2.74.
 - **Consequences**: The review moves to 223 records and 488 outcomes (revision v2.74), D7 residuals fall to 912, and users see an explicit, sourced boundary distinguishing Noesis from entrainment-based products.
 
+### ADR-161: Further Reduce Vitest Worker Concurrency
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: Even at `maxWorkers=4`, sustained CPU contention from other concurrent project suites kept individual Vitest tests above the 10s `testTimeout`, repeatedly blocking the push gate despite the suite passing in isolation (the citation test passes in 1.7s alone).
+- **Decision**: Reduce `test.maxWorkers` from 4 to 2 in `vite.config.ts`.
+- **Consequences**: Fewer parallel forks each receive more CPU, keeping tests under `testTimeout` on a contended host. No assertion, timeout value or production file changes; a test-execution reliability tuning, not a weakening.
+
 
 
 
