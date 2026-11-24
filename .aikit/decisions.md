@@ -1090,6 +1090,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Sabermahani et al. 2025 as a context record and a citation on the no-diagnostic-claim boundary with R162; bump the review version to v2.69.
 - **Consequences**: The review moves to 218 records and 478 outcomes (revision v2.69), D7 residuals fall to 917, and the no-diagnostic-claim boundary gains quantitative validity support.
 
+### ADR-155: Child Training Effects Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The child-development boundary needed a meta-analysis quantifying how weak specific child-training effects are and how behavioral gains depended on absent active controls.
+- **Decision**: Add Karch et al. 2013 as a context record and a citation on the child-development boundary with R163; bump the review version to v2.70.
+- **Consequences**: The review moves to 219 records and 480 outcomes (revision v2.70), D7 residuals fall to 916, and the no-child-development-or-academic-gain claim gains quantitative support.
+
 
 
 

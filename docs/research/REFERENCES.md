@@ -454,3 +454,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Serious-game assessment evidence (2026-11-24 targeted update)
 
 - Effectiveness of Serious Games in Evaluating Cognitive Status of the Elderly: A Systematic Review and Meta-Analysis *Games for Health Journal*. 2025. PMID: [39269887](https://pubmed.ncbi.nlm.nih.gov/39269887/). DOI: [10.1089/g4h.2023.0106](https://doi.org/10.1089/g4h.2023.0106).
+
+## Child training evidence (2026-11-24 targeted update)
+
+- The efficacy of cognitive training programs in children and adolescents: a meta-analysis *Deutsches Arzteblatt International*. 2013. PMID: [24163706](https://pubmed.ncbi.nlm.nih.gov/24163706/). DOI: [10.3238/arztebl.2013.0643](https://doi.org/10.3238/arztebl.2013.0643).

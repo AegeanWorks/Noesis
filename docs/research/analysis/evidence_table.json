@@ -12913,6 +12913,67 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-diagnostic-claim boundary: serious games only moderately track clinical screening tests and subtest agreement is weaker, so the app is not a validated screening or diagnostic tool."
+  },
+  {
+   "pmid": "24163706",
+   "doi": "10.3238/arztebl.2013.0643",
+   "doi_status": "verified",
+   "year": 2013,
+   "journal": "Deutsches Arzteblatt International",
+   "title": "The efficacy of cognitive training programs in children and adolescents: a meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "children",
+    "adolescents"
+   ],
+   "k": 22,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "attention",
+     "transfer": "near",
+     "measure": "SD",
+     "value": 0.18,
+     "ci_low": -0.11,
+     "ci_high": 0.47,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "22 studies (17 RCTs): attention effects were small (SD 0.18, 95% CI -0.11 to 0.47) and executive-function effects small (SD 0.17)"
+    },
+    {
+     "domain": "behaviour",
+     "transfer": "far",
+     "measure": "SD",
+     "value": 0.58,
+     "ci_low": 0.31,
+     "ci_high": 0.85,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Largest effect was behavior/psychopathology (SD 0.58) but derived mainly from studies lacking active controls; authors concluded specific effects were weak overall"
+    }
+   ],
+   "findings": [
+    "Specific cognitive-training effects in children were weak overall",
+    "Attention and executive-function effects were small and imprecise",
+    "Behavioral gains came mainly from studies without active controls"
+   ],
+   "limitations": [
+    "More than 90 different test techniques across 22 studies",
+    "Behavior effects largely from uncontrolled studies",
+    "Marked heterogeneity in memory results"
+   ],
+   "flags": [
+    "active_control_null",
+    "domain_specific",
+    "child_population"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the child-development boundary: child cognitive-training effects were weak and nonspecific and the largest behavioral gains lacked active controls, so the app makes no child-development or academic claim."
   }
  ]
 }

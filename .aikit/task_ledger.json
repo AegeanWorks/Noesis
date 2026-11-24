@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-serious-game-diagnostic",
+    "task_id": "noesis-child-training-effects",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795496987.408716,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795498257.0641482,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795504187.408716,
+    "lease_until": 1795505457.0641482,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795497129.2009265,
-    "completed_head": "935da66c12eb42be8a466350e36f129706211a53",
-    "completed_tree": "aef8608d0ae7537b3b9c0f4c2b741f131da409fe"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 212/466 records unchanged, 489 tests, gates 7/7, pure-cognitive motor citation verified in Edge, ADR-147",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-pure-cognitive-motor-boundary",
-      "timestamp": 1795488703.6190066,
-      "timestamp_str": "2026-11-24 05:51:43",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-pure-cognitive-motor-boundary' completed successfully.",
-      "head": "d23a5113d6747d4429a6e211d097c13423b4dfdb",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-pure-cognitive-motor-boundary",
-      "timestamp": 1795488935.9354384,
-      "timestamp_str": "2026-11-24 05:55:35"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Huntley 2015 dementia cognition meta-analysis as context and cite it on the no-dementia-prevention boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-serious-game-diagnostic",
       "timestamp": 1795497129.4053516,
       "timestamp_str": "2026-11-24 08:12:09"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Karch 2013 child cognitive-training meta-analysis as context and cite it on the child-development boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a 22-study child meta-analysis to the boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2013 meta-analysis found only small attention and executive-function effects in children, with behavioral gains driven by studies lacking active controls, grounding the app's no-child-general-gain boundary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "6fd5cfce0c72de05dd7aa3cc3c3b7b87ef7318d4341775594db7dc5696657df8",
+      "status": "in_progress",
+      "task_id": "noesis-child-training-effects",
+      "timestamp": 1795497578.5238917,
+      "timestamp_str": "2026-11-24 08:19:38",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 219/480 records, 489 tests, gates 7/7, child-training citation verified in Edge, ADR-155",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-child-training-effects",
+      "timestamp": 1795498257.0641482,
+      "timestamp_str": "2026-11-24 08:30:57",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
