@@ -2,12 +2,12 @@
   "version": 1,
   "active_task": {
     "task_id": "noesis-combined-training-boundary",
-    "last_phase": "phase 2",
-    "active_phase": 2,
-    "status": "in_progress",
-    "updated_at": 1795500554.4255219,
+    "last_phase": "phase 4",
+    "active_phase": 5,
+    "status": "completed",
+    "updated_at": 1795504074.5793397,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795507754.4255219,
+    "lease_until": 1795511274.5793397,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -16,55 +16,11 @@
         "path": "projects/noesis"
       }
     ],
-    "impact_assessment": {
-      "why": "A verified 2022 three-level meta-analysis of 50 studies found combined training gave no additive memory or global-cognition benefit over cognitive training alone, grounding the app's no-extra-benefit-from-combining boundary.",
-      "benefits": "Adds a 50-study/6164-participant source to the combined-training boundary and reduces D7.",
-      "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-      "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI."
-    }
+    "completed_at": 1795504186.4714818,
+    "completed_head": "32ea662a1ec69a0a4f8b3d1b55008fdb0628d39f",
+    "completed_tree": "f2b88cac239ad7fd5831417489ac071cfb83fe85"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-dementia-clinical-significance' completed successfully.",
-      "head": "036ba597f62766a2476b86a803a91692146dc652",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-dementia-clinical-significance",
-      "timestamp": 1795490379.9958973,
-      "timestamp_str": "2026-11-24 06:19:39"
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Shah 2017 commercial brain-training validation review as context and cite it on the no-general-claim boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a commercial-validation context record to the no-general-claim boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2017 systematic review found only 7 of 18 commercial programs had clinical studies and just 2 had Level I evidence, directly grounding the app's boundary that a static app makes no commercial-validation or general-gain claim."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "47c2fe06821f0a269a1d3191772205e8fbb7a8df04ac7c1c38f085ac5543c8e0",
-      "status": "in_progress",
-      "task_id": "noesis-commercial-validation",
-      "timestamp": 1795490836.773104,
-      "timestamp_str": "2026-11-24 06:27:16",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -418,6 +374,41 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 220/482 records, 489 tests, gates 7/7, combined-training citation verified in Edge, ADR-156",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-combined-training-boundary",
+      "timestamp": 1795504074.5793395,
+      "timestamp_str": "2026-11-24 10:07:54",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-combined-training-boundary' completed successfully.",
+      "head": "32ea662a1ec69a0a4f8b3d1b55008fdb0628d39f",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-combined-training-boundary",
+      "timestamp": 1795504186.568535,
+      "timestamp_str": "2026-11-24 10:09:46"
     }
   ]
 }
