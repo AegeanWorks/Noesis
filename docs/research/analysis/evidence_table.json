@@ -13033,6 +13033,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the combined-training boundary: even a 50-study meta-analysis found no additive memory or global-cognition benefit from combining physical and cognitive training, so the app makes no extra-benefit claim."
+  },
+  {
+   "pmid": "24168522",
+   "doi": "10.1111/jcpp.12143",
+   "doi_status": "verified",
+   "year": 2014,
+   "journal": "Journal of Child Psychology and Psychiatry",
+   "title": "Does EEG-neurofeedback improve neurocognitive functioning in children with attention-deficit/hyperactivity disorder? A systematic review and a double-blind placebo-controlled study",
+   "modality": "neurofeedback",
+   "design": "rct",
+   "populations": [
+    "children",
+    "adhd"
+   ],
+   "k": 1,
+   "n": 41,
+   "comparators": [
+    "placebo"
+   ],
+   "outcomes": [
+    {
+     "domain": "neural",
+     "transfer": "near",
+     "measure": "neurocognitive_null",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "high",
+     "note": "Double-blind placebo-controlled RCT: 41 children with ADHD, 30 neurofeedback sessions; no significant treatment effect on attention, executive function, working memory or time processing"
+    },
+    {
+     "domain": "adhd_symptoms",
+     "transfer": "near",
+     "measure": "systematic_review",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "moderate",
+     "note": "Accompanying systematic review also found no systematic beneficial effect of EEG-neurofeedback on neurocognitive functioning"
+    }
+   ],
+   "findings": [
+    "No significant neurocognitive benefit from EEG-neurofeedback versus placebo neurofeedback",
+    "Accompanying systematic review found no systematic beneficial effect",
+    "Authors concluded literature fails to support neurofeedback benefit on neurocognition in ADHD"
+   ],
+   "limitations": [
+    "Small sample (41 children)",
+    "Possible small-sample and study limitations acknowledged by authors"
+   ],
+   "flags": [
+    "placebo_controlled",
+    "null_result",
+    "blinded"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the mechanism section and no-neural-feedback-benefit boundary: a double-blind placebo-controlled trial found no neurocognitive gain from neurofeedback, reinforcing that neural-feedback signals are not evidence of broader benefit."
   }
  ]
 }

@@ -18,6 +18,7 @@
   ],
   "commands": {
     "fast": "node scripts/test-all.mjs",
+    "fast_timeout": 360,
     "snapshot": ""
   },
   "style": {

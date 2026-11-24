@@ -1104,6 +1104,20 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Rieker et al. 2022 as a context record and a citation on the combined-training boundary with R164; bump the review version to v2.71.
 - **Consequences**: The review moves to 220 records and 482 outcomes (revision v2.71), D7 residuals fall to 915, and the no-extra-benefit-from-combining claim gains a 50-study comparator source.
 
+### ADR-157: Blinded Neurofeedback Placebo Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The mechanism section already cited performance, methodology and therapy-insufficiency cautions; a double-blind placebo-controlled trial adds the strongest blinded null result for neurocognitive benefit.
+- **Decision**: Add Vollebregt et al. 2014 as a context record and a citation in the mechanism section with R165; bump the review version to v2.72.
+- **Consequences**: The review moves to 221 records and 484 outcomes (revision v2.72), D7 residuals fall to 914, and the no-neural-feedback-benefit boundary gains a placebo-controlled source.
+
+### ADR-158: UI Proof Timeout Under Shared Load
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: On this shared host, other concurrently running project suites can push the 76-file Vitest proof past the UI contract's default 120s limit, intermittently killing `ui begin`/`ui finish` even though the suite itself passes.
+- **Decision**: Set `commands.fast_timeout = 360` in `.aikit/ui.json` (within the allowed 1-600s range), complementing ADR-150's bounded worker concurrency.
+- **Consequences**: The UI proof command, assertions and production files are unchanged; the proof gets enough wall-clock budget on a contended host, and the gate still runs and records the same checks.
+
 
 
 
