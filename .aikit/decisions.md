@@ -1076,6 +1076,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Thérond et al. 2021 as a context record and a citation on the everyday-function boundary with R160; bump the review version to v2.67.
 - **Consequences**: The review moves to 216 records and 474 outcomes (revision v2.67), D7 residuals fall to 919, and the no-everyday-function claim gains direct measurement-gap support.
 
+### ADR-153: Neurofeedback Therapy-Evidence Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The mechanism section already cited neurofeedback performance and methodology cautions; a verified systematic review adds an explicit insufficiency-of-evidence conclusion for neurofeedback as a therapy.
+- **Decision**: Add Luctkar-Flude & Groll 2015 as a context record and a citation in the mechanism section with R161; bump the review version to v2.68.
+- **Consequences**: The review moves to 217 records and 476 outcomes (revision v2.68), D7 residuals fall to 918, and the no-neurofeedback-therapy claim gains direct support.
+
 
 
 

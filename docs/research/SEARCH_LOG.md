@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 216 |
-| Outcomes | 474 |
+| Records | 217 |
+| Outcomes | 476 |
 | Primary outcomes | 258 |
 | Systematic reviews/meta-analyses | 124 |
 | Network meta-analyses | 20 |
-| Other systematic reviews | 51 |
+| Other systematic reviews | 52 |
 | RCTs | 18 |
 | Umbrella reviews | 3 |
-| DOI verified | 205 |
+| DOI verified | 206 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -139,7 +139,7 @@ By modality:
 |---|---:|
 | cct | 103 |
 | multimodal | 18 |
-| neurofeedback | 19 |
+| neurofeedback | 20 |
 | ave | 6 |
 | multi_intervention | 16 |
 | safety | 8 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 205 |
+| DOI verified | 206 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **216** |
+| **Total** | **217** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -350,6 +350,8 @@ A 2026-11-24 neurofeedback-methodology update added Ding et al. 2026 (PMID 40371
 
 A 2026-11-24 everyday-function-measurement update added Thérond et al. 2021 (PMID 33631438, *Journal of Affective Disorders*; DOI 10.1016/j.jad.2021.02.009), verified via E-utilities `efetch`. Across 8 controlled trials in depression, cognitive remediation improved global cognition (g=0.44) but the literature lacked everyday-function indicators. The Evidence screen's everyday-function boundary now cites it (ADR-152). D7 residuals fall to 919; the review is now 216 records and 474 outcomes, revision v2.67.
 
+A 2026-11-24 neurofeedback-therapy update added Luctkar-Flude & Groll 2015 (PMID 25716351, *Integrative Cancer Therapies*; DOI 10.1177/1534735415572886), verified via E-utilities `efetch`. Across 17 studies (only 2 high quality), the authors found insufficient evidence that neurofeedback is an effective therapy for fatigue or cognitive impairment. The Evidence screen's mechanism section now cites it (ADR-153). D7 residuals fall to 918; the review is now 217 records and 476 outcomes, revision v2.68.
+
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
 One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
@@ -375,7 +377,7 @@ One adherence record joined the table the same day (PMID 35612886, 99 studies, e
 | D4 | Independent GRADE not performed | Certainty would require full-text appraisal of every review | Certainty is recorded **as reported by the source** and is provisional |
 | D5 | PsycINFO, Embase, CINAHL and ERIC not searched directly | No institutional access in this environment | OpenAlex and PubMed citation coverage mitigate but do not close the gap |
 | D6 | English-language restriction | Feasibility | Language bias cannot be excluded |
-| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 54 eligible reviews extracted 2026-11-22/24 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change, 2 active-control/context, 2 clinical-claim, 1 prospective-memory, 2 neuroimaging-mechanism, 1 episodic-memory, 1 child-age-boundary, 1 game-design-context, 1 mood-boundary, 1 EF-taxonomy, 1 prognostic-boundary, 1 dementia-boundary, 1 prospective-ecology, 1 everyday-boundary, 1 EF-subdomain, 1 leisure-game, 1 commercial-game, 1 ADHD-boundary, 1 neural-mechanism, 1 child-WM, 1 everyday-generalization, 1 real-world, 1 clinical-value, 1 visual-safety, 1 diagnostic-boundary, 1 single-component, 1 motor-boundary, 1 exergaming-cognition, 1 SCD-intervention, 1 dementia-clinical-significance, 1 commercial-validation, 1 neurofeedback-methodology, 1 everyday-function-measurement) | Prioritisation by modality × population × outcome cell | 919 eligible reviews remain logged but not synthesised; partially closed |
+| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 55 eligible reviews extracted 2026-11-22/24 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change, 2 active-control/context, 2 clinical-claim, 1 prospective-memory, 2 neuroimaging-mechanism, 1 episodic-memory, 1 child-age-boundary, 1 game-design-context, 1 mood-boundary, 1 EF-taxonomy, 1 prognostic-boundary, 1 dementia-boundary, 1 prospective-ecology, 1 everyday-boundary, 1 EF-subdomain, 1 leisure-game, 1 commercial-game, 1 ADHD-boundary, 1 neural-mechanism, 1 child-WM, 1 everyday-generalization, 1 real-world, 1 clinical-value, 1 visual-safety, 1 diagnostic-boundary, 1 single-component, 1 motor-boundary, 1 exergaming-cognition, 1 SCD-intervention, 1 dementia-clinical-significance, 1 commercial-validation, 1 neurofeedback-methodology, 1 everyday-function-measurement, 1 neurofeedback-therapy) | Prioritisation by modality × population × outcome cell | 918 eligible reviews remain logged but not synthesised; partially closed |
 | D8 | PubMed DOI fields unreliable | XML metadata inconsistency | Crossref verification used; 7 records are PMID-only and 4 carry preprint DOIs |
 | D9 | Preprint identifiers retained for four records | Crossref matched a preprint version | Flagged `preprint`; conclusions do not rely solely on them |
 | D10 | Initial 997-review corpus query omitted working-memory training, cognitive stimulation/rehabilitation, serious-game and VR-cognitive terms | Gap detected during screening | Query expanded to 1,495 reviews; final denominator and screening counts use the expanded corpus |

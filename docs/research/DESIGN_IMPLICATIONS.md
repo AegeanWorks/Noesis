@@ -251,6 +251,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R158 | The no-general-claim boundary cites a review showing most commercial brain-training programs lack clinical validation. | Shah 2017 found only 7 of 18 programs had clinical studies and just 2 had Level I evidence, with a caution about selective reporting. | 28092015; ADR-149 |
 | R159 | The mechanism section cites a neurofeedback methodology review showing the research base itself lacks protocol guidance and process evaluation. | Ding 2026 found only 13% of 31 studies evaluated NF effectiveness methods, most lacked modulation guidance, and samples averaged 14-17. | 40371570; ADR-151 |
 | R160 | The no-everyday-function boundary cites a clinical meta-analysis whose positive cognitive gains came without everyday-function indicators. | Thérond 2021 found global-cognition gains in depression (g=0.44) but the literature lacked indicators of everyday functioning. | 33631438; ADR-152 |
+| R161 | The mechanism section cites a systematic review concluding neurofeedback lacks sufficient evidence as a therapy, reinforcing the no-neurofeedback-claim boundary. | Luctkar-Flude 2015 found only 2 of 17 studies high quality and insufficient evidence that neurofeedback is an effective therapy for fatigue or cognitive impairment. | 25716351; ADR-153 |
 
 ---
 

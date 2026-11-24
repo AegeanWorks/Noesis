@@ -12794,6 +12794,67 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-everyday-function boundary: even a positive clinical meta-analysis explicitly lacked everyday-function indicators, so the app makes no everyday-function claim."
+  },
+  {
+   "pmid": "25716351",
+   "doi": "10.1177/1534735415572886",
+   "doi_status": "verified",
+   "year": 2015,
+   "journal": "Integrative Cancer Therapies",
+   "title": "A Systematic Review of the Safety and Effect of Neurofeedback on Fatigue and Cognition",
+   "modality": "neurofeedback",
+   "design": "sr",
+   "populations": [
+    "clinical_symptoms",
+    "adults"
+   ],
+   "k": 17,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive",
+    "none"
+   ],
+   "outcomes": [
+    {
+     "domain": "neural",
+     "transfer": "near",
+     "measure": "study_quality",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "27 studies appraised, 17 included; only 2 rated high quality, most poor-to-moderate"
+    },
+    {
+     "domain": "clinical_symptoms",
+     "transfer": "far",
+     "measure": "evidence_sufficiency",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Authors concluded insufficient evidence that neurofeedback is an effective therapy for fatigue or cognitive impairment in cancer survivors; only 3 studies reported side effects"
+    }
+   ],
+   "findings": [
+    "Insufficient evidence that neurofeedback is an effective therapy for fatigue or cognitive impairment",
+    "Only 2 of 17 included studies were high quality",
+    "Neurofeedback was well tolerated in the small literature, but evidence remains preliminary"
+   ],
+   "limitations": [
+    "Cancer-survivor and mixed clinical populations",
+    "Poor-to-moderate study quality",
+    "Small evidence base"
+   ],
+   "flags": [
+    "methodology_caution",
+    "insufficient_evidence"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the neurofeedback boundary: a systematic review found insufficient evidence that neurofeedback is an effective therapy even in clinical populations, so the app makes no neurofeedback-therapy claim."
   }
  ]
 }

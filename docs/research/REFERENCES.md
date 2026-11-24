@@ -446,3 +446,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Everyday-function measurement evidence (2026-11-24 targeted update)
 
 - The Efficacy of Cognitive Remediation in Depression: A Systematic Literature Review and Meta-Analysis *Journal of Affective Disorders*. 2021. PMID: [33631438](https://pubmed.ncbi.nlm.nih.gov/33631438/). DOI: [10.1016/j.jad.2021.02.009](https://doi.org/10.1016/j.jad.2021.02.009).
+
+## Neurofeedback therapy evidence (2026-11-24 targeted update)
+
+- A Systematic Review of the Safety and Effect of Neurofeedback on Fatigue and Cognition *Integrative Cancer Therapies*. 2015. PMID: [25716351](https://pubmed.ncbi.nlm.nih.gov/25716351/). DOI: [10.1177/1534735415572886](https://doi.org/10.1177/1534735415572886).
