@@ -1027,6 +1027,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Bhome et al. 2018 as a context record and a second citation on that boundary, with R154; bump the review version to v2.63.
 - **Consequences**: The review moves to 212 records and 466 outcomes (revision v2.63), D7 residuals fall to 923, and the no-clinical-benefit claim gains direct active-control support.
 
+### ADR-146: Surface the Landmark Brain-Training Review
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: Simons et al. 2016 was already in the corpus with a product-use line but was not surfaced anywhere in the app, leaving the most authoritative no-general-gain source invisible to users.
+- **Decision**: Add it as a leading citation on the no-general-gain boundary with R155; keep the corpus and review version unchanged since the record was already included.
+- **Consequences**: The app now shows the definitive trained-task-versus-everyday-transfer verdict; no corpus, count or version change is needed.
+
 
 
 
