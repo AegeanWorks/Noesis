@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-epilepsy-vr-safety",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795478401.1520066,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795485601.1520066,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795478557.0973527,
+    "completed_head": "372c3abb0ead3a5e1c3cc8a10e9e9844163747fc",
+    "completed_tree": "4e1005f6d9ca0589249c42e814dd2bd3884a2a0e"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Cortese 2015 ADHD cognitive-training meta-analysis as context and cite it on the no-ADHD-treatment boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a second independent meta-analysis to an existing claim boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2015 RCT meta-analysis shows ADHD symptom effects shrink under blinded raters and WM training had no symptom effect, directly supporting the app's clinical boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "3b501f0b3c10feded3aac67fea8726909d4341911e0656bea4bbee2b8fe3c71e",
-      "status": "in_progress",
-      "task_id": "noesis-adhd-boundary-evidence",
-      "timestamp": 1795469476.2965856,
-      "timestamp_str": "2026-11-24 00:31:16",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-epilepsy-vr-safety' completed successfully.",
+      "head": "372c3abb0ead3a5e1c3cc8a10e9e9844163747fc",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-epilepsy-vr-safety",
+      "timestamp": 1795478557.2348914,
+      "timestamp_str": "2026-11-24 03:02:37"
     }
   ]
 }
