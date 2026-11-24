@@ -1160,6 +1160,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Mowszowski et al. 2016 as a context record and a citation in the transfer-support section with R170; bump the review version to v2.77.
 - **Consequences**: The review moves to 226 records and 494 outcomes (revision v2.77), D7 residuals fall to 909, and the near-transfer-not-intelligence claim gains strategy-training support.
 
+### ADR-165: Mood-Treatment Boundary Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-mood-treatment boundary needed a clinical source showing that even targeted memory-based training for mood has small, highly variable effects and sparse anxiety evidence.
+- **Decision**: Add Hitchcock et al. 2017 as a context record and a citation on the no-mood-treatment boundary with R171; bump the review version to v2.78.
+- **Consequences**: The review moves to 227 records and 496 outcomes (revision v2.78), D7 residuals fall to 908, and the no-mood-disorder-treatment claim gains direct clinical-intervention context.
+
 
 
 

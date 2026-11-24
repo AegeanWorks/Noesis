@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 226 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 227 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -450,6 +450,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/41765936/"
               label="No durable mood benefit from working-memory training"
               pmid="41765936"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/28086133/"
+              label="Even clinical mood training had small, highly variable effects"
+              pmid="28086133"
             />
           </li>
           <li>

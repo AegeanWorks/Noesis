@@ -486,3 +486,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Strategy-training transfer evidence (2026-11-24 targeted update)
 
 - Strategy-Based Cognitive Training for Improving Executive Functions in Older Adults: a Systematic Review *Neuropsychology Review*. 2016. PMID: [27613718](https://pubmed.ncbi.nlm.nih.gov/27613718/). DOI: [10.1007/s11065-016-9329-x](https://doi.org/10.1007/s11065-016-9329-x).
+
+## Mood-treatment boundary evidence (2026-11-24 targeted update)
+
+- Autobiographical episodic memory-based training for the treatment of mood, anxiety and stress-related disorders: A systematic review and meta-analysis *Clinical Psychology Review*. 2017. PMID: [28086133](https://pubmed.ncbi.nlm.nih.gov/28086133/). DOI: [10.1016/j.cpr.2016.12.003](https://doi.org/10.1016/j.cpr.2016.12.003).

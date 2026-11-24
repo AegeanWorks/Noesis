@@ -13389,6 +13389,67 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the near-transfer/task-specific claim: strategy-based training reliably improved trained executive functions, while far transfer and everyday function remained sparsely studied — consistent with reporting blocks separately and making no intelligence claim."
+  },
+  {
+   "pmid": "28086133",
+   "doi": "10.1016/j.cpr.2016.12.003",
+   "doi_status": "verified",
+   "year": 2017,
+   "journal": "Clinical Psychology Review",
+   "title": "Autobiographical episodic memory-based training for the treatment of mood, anxiety and stress-related disorders: A systematic review and meta-analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "clinical_symptoms",
+    "adults"
+   ],
+   "k": 15,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "depression",
+     "transfer": "near",
+     "measure": "Cohen d",
+     "value": 0.32,
+     "ci_low": -0.18,
+     "ci_high": 1.91,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "15 controlled studies: autobiographical memory training showed promising depression effects (d=0.32) but effect sizes varied widely from -0.18 to 1.91 across protocols"
+    },
+    {
+     "domain": "anxiety",
+     "transfer": "near",
+     "measure": "evidence_sparsity",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Too few studies to draw firm conclusions for anxiety and stress-related disorders; GRADE used to judge evidence quality"
+    }
+   ],
+   "findings": [
+    "Depression effects were small and highly variable across training protocols",
+    "Anxiety and stress evidence too sparse for conclusions",
+    "These are targeted clinical interventions, not general brain-training products"
+   ],
+   "limitations": [
+    "Very heterogeneous protocols",
+    "Few studies for anxiety/stress",
+    "Clinical-diagnosis samples"
+   ],
+   "flags": [
+    "clinical_intervention",
+    "variable_effects",
+    "mood_boundary"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-mood-treatment boundary: even targeted clinical memory training for depression had small, highly variable effects and sparse anxiety evidence, so the app makes no mood-disorder treatment claim."
   }
  ]
 }
