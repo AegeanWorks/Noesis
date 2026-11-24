@@ -259,6 +259,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R166 | The baseline-profile boundary cites a systematic review showing too few prognostic studies to predict who benefits from training. | Liebermann-Jordanidis 2023 found only 6 of 12,916 studies addressed prognostic factors, with data too rare and heterogeneous for conclusions. | 37259962; ADR-159 |
 | R167 | A new bounded statement says Noesis uses no binaural beats or entrainment, citing a meta-analysis whose cognitive effects were mixed and parameter-dependent. | Basu 2023 found a medium pooled effect (g=0.40) but conflicting theta/beta results and called for robust designs. | 35842538; ADR-160 |
 | R168 | The no-diagnostic-claim boundary cites a diagnostic-accuracy review showing that even validated computerized memory tests have moderate, variable accuracy. | Chan 2018 found computerized verbal memory tests reached 0.89 sensitivity/0.82 specificity with wide intervals across 58 studies. | 29921507; ADR-162 |
+| R169 | The Motivation-mode boundary cites a gamified-mHealth review showing near-term behavior gains without long-term follow-up, supporting cosmetic, non-score-changing rewards. | Chen 2025 found 8 trials (n=1454) raised physical activity short-term with no long-term follow-up and small samples. | 41171624; ADR-163 |
 
 ---
 

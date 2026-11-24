@@ -1146,6 +1146,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Chan et al. 2018 as a context record and a citation on the no-diagnostic-claim boundary with R168; bump the review version to v2.75.
 - **Consequences**: The review moves to 224 records and 490 outcomes (revision v2.75), D7 residuals fall to 911, and the no-diagnostic-claim boundary gains formal diagnostic-accuracy context.
 
+### ADR-163: Gamification Engagement Boundary Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The Motivation-mode boundary explained that bonuses are cosmetic engagement aids that never change cognitive scores; a verified gamified-mHealth review adds that such mechanics produce near-term behavior gains without long-term durability evidence.
+- **Decision**: Add Chen et al. 2025 as a context record and a citation on the Motivation-mode boundary with R169; bump the review version to v2.76.
+- **Consequences**: The review moves to 225 records and 492 outcomes (revision v2.76), D7 residuals fall to 910, and the engagement-not-outcome framing gains direct short-term-only evidence.
+
 
 
 

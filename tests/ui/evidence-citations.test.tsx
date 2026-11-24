@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 70);
+    expect(links).toHaveLength(mechanicCitations + 71);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -34,6 +34,7 @@ describe("evidence citation rows", () => {
     const mechanism = screen.getByTestId("mechanism-evidence");
     expect(mechanism.textContent).toMatch(/mechanism markers/i);
     expect(mechanism.querySelectorAll("a")).toHaveLength(6);
+    expect(screen.getByText(/gamified mHealth raised activity short-term/i)).toBeTruthy();
     expect(mechanism.textContent).toMatch(/neurofeedback of neural signals rarely improved/i);
     expect(screen.getByText(/lacked protocol guidance and process checks/i)).toBeTruthy();
     expect(screen.getByText(/insufficient evidence neurofeedback treats fatigue/i)).toBeTruthy();

@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-diagnostic-test-accuracy",
+    "task_id": "noesis-gamification-adherence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795520955.7252455,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795525400.030931,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795528155.7252455,
+    "lease_until": 1795532600.030931,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795521686.4681284,
-    "completed_head": "6ddc82bb4f7b7bbab24b4bfb3f2c063b423791c7",
-    "completed_tree": "cfbb6ecd09fe063e56f250b7b022ded01404c6eb"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 218/478 records, 489 tests, gates 7/7, serious-game diagnostic citation verified in Edge, ADR-154",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-serious-game-diagnostic",
-      "timestamp": 1795496987.408716,
-      "timestamp_str": "2026-11-24 08:09:47",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-serious-game-diagnostic' completed successfully.",
-      "head": "935da66c12eb42be8a466350e36f129706211a53",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-serious-game-diagnostic",
-      "timestamp": 1795497129.4053516,
-      "timestamp_str": "2026-11-24 08:12:09"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Karch 2013 child cognitive-training meta-analysis as context and cite it on the child-development boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-diagnostic-test-accuracy",
       "timestamp": 1795521686.83888,
       "timestamp_str": "2026-11-24 15:01:26"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Chen 2025 gamified mHealth review as context and cite it on the Motivation-mode adherence boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds an engagement context record to the Motivation-mode boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2025 systematic review found gamified mHealth interventions increase physical-activity behavior but with small samples and no long-term follow-up, grounding the app's boundary that motivation mechanics support adherence, not cognitive or durable outcomes."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "17926933835c969d8e75fd0127433a8c1258334e0050630ab4bd960ec1fb0396",
+      "status": "in_progress",
+      "task_id": "noesis-gamification-adherence",
+      "timestamp": 1795523395.8151898,
+      "timestamp_str": "2026-11-24 15:29:55",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 225/492 records, 489 tests, gates 7/7, gamification adherence citation verified in Edge, ADR-163",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-gamification-adherence",
+      "timestamp": 1795525400.030931,
+      "timestamp_str": "2026-11-24 16:03:20",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

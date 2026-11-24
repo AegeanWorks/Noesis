@@ -13269,6 +13269,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-diagnostic-claim boundary: even validated computerized memory tests need formal diagnostic studies and show only moderate accuracy with wide intervals, so the app is not a validated screening or diagnostic tool."
+  },
+  {
+   "pmid": "41171624",
+   "doi": "10.2196/78686",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "JMIR Aging",
+   "title": "Effectiveness of mHealth-Based Gamified Interventions on Physical Activity in Older Adults: Systematic Review",
+   "modality": "engagement",
+   "design": "sr",
+   "populations": [
+    "older_adults"
+   ],
+   "k": 8,
+   "n": 1454,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "physical_activity",
+     "transfer": "near",
+     "measure": "behavior_change",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "8 trials (n=1454): gamified mHealth interventions increased daily step counts and moderate-to-vigorous physical activity; goal setting and rewards were the most common components"
+    },
+    {
+     "domain": "physical_activity",
+     "transfer": "far",
+     "measure": "durability",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Small samples, heterogeneous designs and lack of long-term follow-up limited generalizability; authors call for long-term sustainability evidence"
+    }
+   ],
+   "findings": [
+    "Gamification increased physical-activity behavior in the near term",
+    "Goal setting and rewards were the most common components",
+    "No long-term follow-up and small samples limited durability conclusions"
+   ],
+   "limitations": [
+    "Small samples",
+    "Heterogeneous designs",
+    "No long-term follow-up"
+   ],
+   "flags": [
+    "engagement_boundary",
+    "short_term_only"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the Motivation-mode boundary: gamification supports near-term behavior engagement but lacks durable long-term evidence, consistent with the app framing bonuses as cosmetic engagement aids that never change cognitive scores."
   }
  ]
 }

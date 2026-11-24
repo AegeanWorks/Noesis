@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 224 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 225 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -124,6 +124,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/34982715/"
               label="Gamification meta-analysis: short-term effects"
               pmid="34982715"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/41171624/"
+              label="Gamified mHealth raised activity short-term; no long-term follow-up"
+              pmid="41171624"
             />
           </li>
           <li>

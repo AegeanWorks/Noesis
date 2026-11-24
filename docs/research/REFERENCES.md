@@ -478,3 +478,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Diagnostic-test accuracy evidence (2026-11-24 targeted update)
 
 - Comparison of Computerized and Paper-and-Pencil Memory Tests in Detection of Mild Cognitive Impairment and Dementia: A Systematic Review and Meta-analysis of Diagnostic Studies *Journal of the American Medical Directors Association*. 2018. PMID: [29921507](https://pubmed.ncbi.nlm.nih.gov/29921507/). DOI: [10.1016/j.jamda.2018.05.010](https://doi.org/10.1016/j.jamda.2018.05.010).
+
+## Gamification engagement evidence (2026-11-24 targeted update)
+
+- Effectiveness of mHealth-Based Gamified Interventions on Physical Activity in Older Adults: Systematic Review *JMIR Aging*. 2025. PMID: [41171624](https://pubmed.ncbi.nlm.nih.gov/41171624/). DOI: [10.2196/78686](https://doi.org/10.2196/78686).
