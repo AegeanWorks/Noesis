@@ -1097,6 +1097,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Karch et al. 2013 as a context record and a citation on the child-development boundary with R163; bump the review version to v2.70.
 - **Consequences**: The review moves to 219 records and 480 outcomes (revision v2.70), D7 residuals fall to 916, and the no-child-development-or-academic-gain claim gains quantitative support.
 
+### ADR-156: Combined-Training Comparator Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The combined-training boundary needed a large meta-analysis showing that adding physical exercise to cognitive training does not add memory or global-cognition benefit.
+- **Decision**: Add Rieker et al. 2022 as a context record and a citation on the combined-training boundary with R164; bump the review version to v2.71.
+- **Consequences**: The review moves to 220 records and 482 outcomes (revision v2.71), D7 residuals fall to 915, and the no-extra-benefit-from-combining claim gains a 50-study comparator source.
+
 
 
 

@@ -14,7 +14,7 @@ describe("evidence citation rows", () => {
       (count, meta) => count + meta.citations.length,
       0,
     );
-    expect(links).toHaveLength(mechanicCitations + 65);
+    expect(links).toHaveLength(mechanicCitations + 66);
     for (const link of links) {
       expect(link.textContent).toMatch(/PMID \d+/);
       expect(link.getAttribute("href")).toMatch(
@@ -62,9 +62,10 @@ describe("evidence citation rows", () => {
     expect(screen.getByText(/no clinical benefit claim/i)).toBeTruthy();
     expect(screen.getByText(/training did not improve general cognition/i)).toBeTruthy();
     expect(screen.getByText(/only 7 of 18 commercial programs/i)).toBeTruthy();
-    expect(notSupported.querySelectorAll("a")).toHaveLength(26);
+    expect(notSupported.querySelectorAll("a")).toHaveLength(27);
     expect(screen.getByText(/lacked everyday-function indicators/i)).toBeTruthy();
     expect(screen.getByText(/game scores correlate only moderately/i)).toBeTruthy();
     expect(screen.getByText(/behavior gains lacked active controls/i)).toBeTruthy();
+    expect(screen.getByText(/combined training added no memory or global-cognition benefit/i)).toBeTruthy();
   });
 });

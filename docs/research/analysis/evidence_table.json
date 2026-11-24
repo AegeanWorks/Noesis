@@ -12974,6 +12974,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the child-development boundary: child cognitive-training effects were weak and nonspecific and the largest behavioral gains lacked active controls, so the app makes no child-development or academic claim."
+  },
+  {
+   "pmid": "35399365",
+   "doi": "10.3389/fnhum.2022.838968",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Frontiers in Human Neuroscience",
+   "title": "The Effects of Combined Cognitive-Physical Interventions on Cognitive Functioning in Healthy Older Adults: A Systematic Review and Multilevel Meta-Analysis",
+   "modality": "multimodal",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 50,
+   "n": 6164,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "standardized_difference",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "50 studies, 6164 older adults: combined training gave only a small advantage over cognitive training alone on executive functions"
+    },
+    {
+     "domain": "verbal_memory",
+     "transfer": "near",
+     "measure": "standardized_difference",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Combined and cognitive-only training achieved similar effects on memory, attention, language, processing speed and global cognition"
+    }
+   ],
+   "findings": [
+    "Combined training showed no additive memory or global-cognition benefit over cognitive training alone",
+    "Only a small executive-function advantage favored combined training",
+    "Simultaneous and interactive protocols produced the largest gains, but social context also mattered"
+   ],
+   "limitations": [
+    "Healthy older-adult sample",
+    "Heterogeneous interventions and comparators"
+   ],
+   "flags": [
+    "comparator_boundary",
+    "multimodal_no_additivity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the combined-training boundary: even a 50-study meta-analysis found no additive memory or global-cognition benefit from combining physical and cognitive training, so the app makes no extra-benefit claim."
   }
  ]
 }

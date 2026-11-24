@@ -254,6 +254,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R161 | The mechanism section cites a systematic review concluding neurofeedback lacks sufficient evidence as a therapy, reinforcing the no-neurofeedback-claim boundary. | Luctkar-Flude 2015 found only 2 of 17 studies high quality and insufficient evidence that neurofeedback is an effective therapy for fatigue or cognitive impairment. | 25716351; ADR-153 |
 | R162 | The no-diagnostic-claim boundary cites a meta-analysis showing serious-game scores correlate only moderately with clinical screening tests. | Sabermahani 2025 found game-test correlations of 0.60-0.68 overall and below 0.6 for cognitive subtests. | 39269887; ADR-154 |
 | R163 | The child-development boundary cites a meta-analysis showing weak specific effects in children and behavior gains that lacked active controls. | Karch 2013 found small attention (0.18) and executive-function (0.17) effects, with the largest behavior effect (0.58) from uncontrolled studies. | 24163706; ADR-155 |
+| R164 | The combined-training boundary cites a 50-study meta-analysis showing no additive memory or global-cognition benefit from combining physical and cognitive training. | Rieker 2022 found combined training matched cognitive-only training on memory, attention, language, speed and global cognition, with only a small executive-function edge. | 35399365; ADR-156 |
 
 ---
 

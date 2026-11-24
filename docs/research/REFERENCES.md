@@ -458,3 +458,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Child training evidence (2026-11-24 targeted update)
 
 - The efficacy of cognitive training programs in children and adolescents: a meta-analysis *Deutsches Arzteblatt International*. 2013. PMID: [24163706](https://pubmed.ncbi.nlm.nih.gov/24163706/). DOI: [10.3238/arztebl.2013.0643](https://doi.org/10.3238/arztebl.2013.0643).
+
+## Combined-training comparator evidence (2026-11-24 targeted update)
+
+- The Effects of Combined Cognitive-Physical Interventions on Cognitive Functioning in Healthy Older Adults: A Systematic Review and Multilevel Meta-Analysis *Frontiers in Human Neuroscience*. 2022. PMID: [35399365](https://pubmed.ncbi.nlm.nih.gov/35399365/). DOI: [10.3389/fnhum.2022.838968](https://doi.org/10.3389/fnhum.2022.838968).

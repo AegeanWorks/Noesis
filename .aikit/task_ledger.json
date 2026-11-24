@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-child-training-effects",
-    "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795498257.0641482,
+    "task_id": "noesis-combined-training-boundary",
+    "last_phase": "phase 2",
+    "active_phase": 2,
+    "status": "in_progress",
+    "updated_at": 1795500554.4255219,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795505457.0641482,
+    "lease_until": 1795507754.4255219,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -16,29 +16,14 @@
         "path": "projects/noesis"
       }
     ],
-    "completed_at": 1795498566.5318825,
-    "completed_head": "28e56a644ec3cace79c6bf5ff51f478cb8750b96",
-    "completed_tree": "b749e2c2e976dd0461ac985d2e05ab50adc74a35"
+    "impact_assessment": {
+      "why": "A verified 2022 three-level meta-analysis of 50 studies found combined training gave no additive memory or global-cognition benefit over cognitive training alone, grounding the app's no-extra-benefit-from-combining boundary.",
+      "benefits": "Adds a 50-study/6164-participant source to the combined-training boundary and reduces D7.",
+      "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+      "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI."
+    }
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 213/468 records, 489 tests, gates 7/7, dementia clinical-significance citation verified in Edge, ADR-148",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-dementia-clinical-significance",
-      "timestamp": 1795490248.0796626,
-      "timestamp_str": "2026-11-24 06:17:28",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "delivery": {
@@ -409,6 +394,30 @@
       "task_id": "noesis-child-training-effects",
       "timestamp": 1795498566.9484632,
       "timestamp_str": "2026-11-24 08:36:06"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Rieker 2022 combined cognitive-physical meta-analysis as context and cite it on the combined-training boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a 50-study/6164-participant source to the combined-training boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2022 three-level meta-analysis of 50 studies found combined training gave no additive memory or global-cognition benefit over cognitive training alone, grounding the app's no-extra-benefit-from-combining boundary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "34e8d95de467b68b632a5f4e881211de020a6ff3f55225da2b39f26fa6200204",
+      "status": "in_progress",
+      "task_id": "noesis-combined-training-boundary",
+      "timestamp": 1795500554.425522,
+      "timestamp_str": "2026-11-24 09:09:14",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }
