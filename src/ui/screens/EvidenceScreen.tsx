@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 214 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 215 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -336,6 +336,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
             href="https://pubmed.ncbi.nlm.nih.gov/37148977/"
             label="Chiasson 2023: neural feedback rarely improved task performance"
             pmid="37148977"
+          />{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/40371570/"
+            label="Neurofeedback studies often lacked protocol guidance and process checks"
+            pmid="40371570"
           />
         </p>
         <h3 data-testid="not-supported-heading">What the review does not support</h3>

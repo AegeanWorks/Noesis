@@ -120,15 +120,15 @@ These records are retained in `analysis/screening_reviews.csv`; they were not fu
 
 | Dimension | Count |
 |---|---:|
-| Records | 214 |
-| Outcomes | 470 |
+| Records | 215 |
+| Outcomes | 472 |
 | Primary outcomes | 258 |
 | Systematic reviews/meta-analyses | 122 |
 | Network meta-analyses | 20 |
-| Other systematic reviews | 50 |
+| Other systematic reviews | 51 |
 | RCTs | 18 |
 | Umbrella reviews | 3 |
-| DOI verified | 203 |
+| DOI verified | 204 |
 | DOI is a preprint | 4 |
 | DOI unverified (PMID only) | 7 |
 | Publication years | 2002-2026 |
@@ -139,7 +139,7 @@ By modality:
 |---|---:|
 | cct | 102 |
 | multimodal | 18 |
-| neurofeedback | 18 |
+| neurofeedback | 19 |
 | ave | 6 |
 | multi_intervention | 16 |
 | safety | 8 |
@@ -153,10 +153,10 @@ Final table status:
 
 | Status | Records |
 |---|---:|
-| DOI verified | 203 |
+| DOI verified | 204 |
 | DOI matches a preprint version | 4 |
 | DOI unverified (cited by PMID only) | 7 |
-| **Total** | **214** |
+| **Total** | **215** |
 
 The verification files are `records/metadata_verification*.json`. A verified DOI is not evidence of inclusion; it only confirms the record's identity.
 
@@ -346,6 +346,8 @@ A 2026-11-24 dementia-clinical-significance update added Huntley et al. 2015 (PM
 
 A 2026-11-24 commercial-validation update added Shah et al. 2017 (PMID 28092015, *Neuropsychology Review*; DOI 10.1007/s11065-016-9338-9), verified via E-utilities `efetch`. Of 18 commercial brain-training programs, only 7 had clinical studies and just 2 had Level I evidence. The Evidence screen's no-general-claim boundary now cites it (ADR-149). D7 residuals fall to 921; the review is now 214 records and 470 outcomes, revision v2.65.
 
+A 2026-11-24 neurofeedback-methodology update added Ding et al. 2026 (PMID 40371570, *Brain Connectivity*; DOI 10.1089/brain.2024.0084), verified via E-utilities `efetch`. Across 31 PTSD-neurofeedback studies, only 13% evaluated effectiveness methods, most lacked explicit modulation guidance, and samples averaged 14-17. The Evidence screen's mechanism section now cites it (ADR-151). D7 residuals fall to 920; the review is now 215 records and 472 outcomes, revision v2.66.
+
 One engagement-prompts record joined the table the same day (PMID 26747176, 14 trials, RR 1.27 with caution): technology prompts beat no strategy, best for new content sent early. No push channel is built: the evidence is borderline-heterogeneous and unsolicited push would trade against the autonomy the design protects; the in-app notices (milestones, far-check due, goal nudges) already implement the supported mechanism. See BEHAVIORAL 6.24.
 
 One interleaving record joined the table the same day (PMID 31556629, 59 studies, g=0.42, blocking wins for word lists at g=-0.39): identifier confirmed via esummary, DOI matched. It grounds the default mixed lineup and the blocked far-check study phase (R52).
@@ -371,7 +373,7 @@ One adherence record joined the table the same day (PMID 35612886, 99 studies, e
 | D4 | Independent GRADE not performed | Certainty would require full-text appraisal of every review | Certainty is recorded **as reported by the source** and is provisional |
 | D5 | PsycINFO, Embase, CINAHL and ERIC not searched directly | No institutional access in this environment | OpenAlex and PubMed citation coverage mitigate but do not close the gap |
 | D6 | English-language restriction | Feasibility | Language bias cannot be excluded |
-| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 52 eligible reviews extracted 2026-11-22/24 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change, 2 active-control/context, 2 clinical-claim, 1 prospective-memory, 2 neuroimaging-mechanism, 1 episodic-memory, 1 child-age-boundary, 1 game-design-context, 1 mood-boundary, 1 EF-taxonomy, 1 prognostic-boundary, 1 dementia-boundary, 1 prospective-ecology, 1 everyday-boundary, 1 EF-subdomain, 1 leisure-game, 1 commercial-game, 1 ADHD-boundary, 1 neural-mechanism, 1 child-WM, 1 everyday-generalization, 1 real-world, 1 clinical-value, 1 visual-safety, 1 diagnostic-boundary, 1 single-component, 1 motor-boundary, 1 exergaming-cognition, 1 SCD-intervention, 1 dementia-clinical-significance, 1 commercial-validation) | Prioritisation by modality × population × outcome cell | 921 eligible reviews remain logged but not synthesised; partially closed |
+| D7 | 973 rule-eligible and 446 rule-excluded reviews not extracted; 53 eligible reviews extracted 2026-11-22/24 (8 WM, 1 adherence, 2 everyday-function, 1 ADHD, 1 game-design, 1 multimodal, 1 serious-games, 4 transfer/behaviour-change, 2 active-control/context, 2 clinical-claim, 1 prospective-memory, 2 neuroimaging-mechanism, 1 episodic-memory, 1 child-age-boundary, 1 game-design-context, 1 mood-boundary, 1 EF-taxonomy, 1 prognostic-boundary, 1 dementia-boundary, 1 prospective-ecology, 1 everyday-boundary, 1 EF-subdomain, 1 leisure-game, 1 commercial-game, 1 ADHD-boundary, 1 neural-mechanism, 1 child-WM, 1 everyday-generalization, 1 real-world, 1 clinical-value, 1 visual-safety, 1 diagnostic-boundary, 1 single-component, 1 motor-boundary, 1 exergaming-cognition, 1 SCD-intervention, 1 dementia-clinical-significance, 1 commercial-validation, 1 neurofeedback-methodology) | Prioritisation by modality × population × outcome cell | 920 eligible reviews remain logged but not synthesised; partially closed |
 | D8 | PubMed DOI fields unreliable | XML metadata inconsistency | Crossref verification used; 7 records are PMID-only and 4 carry preprint DOIs |
 | D9 | Preprint identifiers retained for four records | Crossref matched a preprint version | Flagged `preprint`; conclusions do not rely solely on them |
 | D10 | Initial 997-review corpus query omitted working-memory training, cognitive stimulation/rehabilitation, serious-game and VR-cognitive terms | Gap detected during screening | Query expanded to 1,495 reviews; final denominator and screening counts use the expanded corpus |

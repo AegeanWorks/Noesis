@@ -12675,6 +12675,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-general-claim boundary: most commercial brain-training programs lack clinical validation, so a static screen-based app makes no claim to validated or general cognitive benefit."
+  },
+  {
+   "pmid": "40371570",
+   "doi": "10.1089/brain.2024.0084",
+   "doi_status": "verified",
+   "year": 2026,
+   "journal": "Brain Connectivity",
+   "title": "The Lack of Neurofeedback Training Regulation Guidance and Process Evaluation May be a Source of Controversy in Post-Traumatic Stress Disorder-Neurofeedback Research: A Systematic Review and Statistical Analysis",
+   "modality": "neurofeedback",
+   "design": "sr",
+   "populations": [
+    "clinical_symptoms",
+    "adults"
+   ],
+   "k": 31,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "neural",
+     "transfer": "near",
+     "measure": "process_eval_rate",
+     "value": 0.13,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "31 studies: only 13% evaluated neurofeedback effectiveness methods such as signal classification and process monitoring"
+    },
+    {
+     "domain": "neural",
+     "transfer": "near",
+     "measure": "sample_size",
+     "value": 17.4,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Mean sample size 17.4 for EEG-NF and 14.6 for fMRI-NF studies; most lacked explicit modulation guidance and rigorous process monitoring"
+    }
+   ],
+   "findings": [
+    "Only 13% of included neurofeedback studies evaluated effectiveness methods",
+    "Most studies lacked explicit modulation guidance and process monitoring",
+    "Small samples and traditional statistics limited mechanistic interpretability"
+   ],
+   "limitations": [
+    "PTSD-specific neurofeedback literature",
+    "Methodological review rather than an efficacy meta-analysis"
+   ],
+   "flags": [
+    "methodology_caution",
+    "small_samples"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the neurofeedback boundary: the research base itself lacks consistent protocol guidance and process evaluation, so the app makes no neural-feedback or treatment claim."
   }
  ]
 }

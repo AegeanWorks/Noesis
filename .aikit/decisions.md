@@ -1062,6 +1062,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Set `test.maxWorkers = 4` in `vite.config.ts` (the installed vitest version does not accept `minWorkers`).
 - **Consequences**: No assertion, timeout value or production file changes; each worker gets enough CPU to stay under `testTimeout`, and the full suite (76 files / 489 tests) passes reliably. This is a test-execution reliability fix, not a test weakening.
 
+### ADR-151: Neurofeedback Methodology Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The mechanism section explained that neural-feedback evidence rarely improved lab performance; a verified methodology review adds that the research base itself lacks consistent protocol guidance and process evaluation.
+- **Decision**: Add Ding et al. 2026 as a context record and a citation in the mechanism section with R159; bump the review version to v2.66.
+- **Consequences**: The review moves to 215 records and 472 outcomes (revision v2.66), D7 residuals fall to 920, and the no-neural-feedback-benefit framing gains methodological support.
+
 
 
 
