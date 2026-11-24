@@ -13210,6 +13210,65 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-auditory-entrainment boundary: binaural-beat cognitive evidence is mixed and parameter-dependent, and the app uses no binaural beats or entrainment, so it makes no related claim."
+  },
+  {
+   "pmid": "29921507",
+   "doi": "10.1016/j.jamda.2018.05.010",
+   "doi_status": "verified",
+   "year": 2018,
+   "journal": "Journal of the American Medical Directors Association",
+   "title": "Comparison of Computerized and Paper-and-Pencil Memory Tests in Detection of Mild Cognitive Impairment and Dementia: A Systematic Review and Meta-analysis of Diagnostic Studies",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "mci",
+    "dementia",
+    "older_adults"
+   ],
+   "k": 58,
+   "n": 18450,
+   "comparators": [
+    "active"
+   ],
+   "outcomes": [
+    {
+     "domain": "verbal_memory",
+     "transfer": "near",
+     "measure": "sensitivity/specificity",
+     "value": 0.89,
+     "ci_low": 0.69,
+     "ci_high": 0.97,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "58 diagnostic studies, n=18450: computerized verbal memory tests for MCI had sensitivity 0.89 (95% CI 0.69-0.97) and specificity 0.82, comparable to paper-and-pencil (0.86/0.82)"
+    },
+    {
+     "domain": "visuospatial_memory",
+     "transfer": "near",
+     "measure": "specificity",
+     "value": 0.68,
+     "ci_low": 0.51,
+     "ci_high": 0.81,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "Visual computerized memory tests had sensitivity 0.79/specificity 0.80; paper-and-pencil specificity was 0.68 with wide CI (0.51-0.81)"
+    }
+   ],
+   "findings": [
+    "Even validated computerized memory tests reach only ~0.8-0.9 sensitivity/specificity with wide confidence intervals",
+    "Computerized and paper-and-pencil tests performed comparably",
+    "Diagnostic use required formal studies against a standard criterion"
+   ],
+   "limitations": [
+    "Diagnostic-accuracy estimates have wide confidence intervals",
+    "MCI/dementia clinical populations"
+   ],
+   "flags": [
+    "diagnostic_boundary",
+    "screening_validity"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-diagnostic-claim boundary: even validated computerized memory tests need formal diagnostic studies and show only moderate accuracy with wide intervals, so the app is not a validated screening or diagnostic tool."
   }
  ]
 }

@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-binaural-cognition-boundary",
+    "task_id": "noesis-diagnostic-test-accuracy",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795512973.2607994,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795520955.7252455,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795520173.2607994,
+    "lease_until": 1795528155.7252455,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795514732.1399155,
-    "completed_head": "4c5768eba236df738a95d0cc3fa0f6f0c455d34e",
-    "completed_tree": "69eec18d848d20c54729177125966cb874557388"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 217/476 records, 489 tests, gates 7/7, neurofeedback therapy citation verified in Edge, ADR-153",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-neurofeedback-therapy-evidence",
-      "timestamp": 1795496330.7479522,
-      "timestamp_str": "2026-11-24 07:58:50",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-neurofeedback-therapy-evidence' completed successfully.",
-      "head": "bba0e4b58019392f21821949bb18c74125d89912",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-neurofeedback-therapy-evidence",
-      "timestamp": 1795496432.549045,
-      "timestamp_str": "2026-11-24 08:00:32"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Sabermahani 2025 serious-game cognitive-assessment meta-analysis as context and cite it on the no-diagnostic-claim boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-binaural-cognition-boundary",
       "timestamp": 1795514732.584865,
       "timestamp_str": "2026-11-24 13:05:32"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Chan 2018 computerized-vs-paper diagnostic accuracy review as context and cite it on the no-diagnostic-claim boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a formal diagnostic-accuracy source to the screening boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2018 meta-analysis of 58 diagnostic studies found validated computerized memory tests reach only ~0.8-0.9 sensitivity/specificity with wide confidence intervals, grounding the app's no-diagnostic-claim boundary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "ebc8f6343f2f408e1ab24e09174b3cc38cbc318e04d0bad442096a448bb44808",
+      "status": "in_progress",
+      "task_id": "noesis-diagnostic-test-accuracy",
+      "timestamp": 1795519759.2455509,
+      "timestamp_str": "2026-11-24 14:29:19",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 224/490 records, 489 tests, gates 7/7, diagnostic accuracy citation verified in Edge, ADR-162",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-diagnostic-test-accuracy",
+      "timestamp": 1795520955.7252457,
+      "timestamp_str": "2026-11-24 14:49:15",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

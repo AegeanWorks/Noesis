@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 223 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 224 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -476,6 +476,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/39269887/"
               label="Game scores correlate only moderately with clinical screening tests"
               pmid="39269887"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/29921507/"
+              label="Validated screening tests need formal accuracy evidence; estimates vary widely"
+              pmid="29921507"
             />{" "}
             <CitationLink
               href="https://pubmed.ncbi.nlm.nih.gov/37043277/"

@@ -1139,6 +1139,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Reduce `test.maxWorkers` from 4 to 2 in `vite.config.ts`.
 - **Consequences**: Fewer parallel forks each receive more CPU, keeping tests under `testTimeout` on a contended host. No assertion, timeout value or production file changes; a test-execution reliability tuning, not a weakening.
 
+### ADR-162: Diagnostic-Test Accuracy Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-diagnostic-claim boundary needed a source showing that formal screening accuracy requires diagnostic studies and yields only moderate, variable estimates.
+- **Decision**: Add Chan et al. 2018 as a context record and a citation on the no-diagnostic-claim boundary with R168; bump the review version to v2.75.
+- **Consequences**: The review moves to 224 records and 490 outcomes (revision v2.75), D7 residuals fall to 911, and the no-diagnostic-claim boundary gains formal diagnostic-accuracy context.
+
 
 
 

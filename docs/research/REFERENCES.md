@@ -474,3 +474,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Binaural-beat cognition evidence (2026-11-24 targeted update)
 
 - Potential of binaural beats intervention for improving memory and attention: insights from meta-analysis and systematic review *Psychological Research*. 2023. PMID: [35842538](https://pubmed.ncbi.nlm.nih.gov/35842538/). DOI: [10.1007/s00426-022-01706-7](https://doi.org/10.1007/s00426-022-01706-7).
+
+## Diagnostic-test accuracy evidence (2026-11-24 targeted update)
+
+- Comparison of Computerized and Paper-and-Pencil Memory Tests in Detection of Mild Cognitive Impairment and Dementia: A Systematic Review and Meta-analysis of Diagnostic Studies *Journal of the American Medical Directors Association*. 2018. PMID: [29921507](https://pubmed.ncbi.nlm.nih.gov/29921507/). DOI: [10.1016/j.jamda.2018.05.010](https://doi.org/10.1016/j.jamda.2018.05.010).

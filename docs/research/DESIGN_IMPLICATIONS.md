@@ -258,6 +258,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R165 | The mechanism section cites a double-blind placebo-controlled neurofeedback trial that found no neurocognitive gain, strengthening the no-neural-feedback-benefit boundary with a blinded source. | Vollebregt 2014 found no significant effect on attention, executive function, working memory or time processing versus placebo neurofeedback in 41 children with ADHD. | 24168522; ADR-157 |
 | R166 | The baseline-profile boundary cites a systematic review showing too few prognostic studies to predict who benefits from training. | Liebermann-Jordanidis 2023 found only 6 of 12,916 studies addressed prognostic factors, with data too rare and heterogeneous for conclusions. | 37259962; ADR-159 |
 | R167 | A new bounded statement says Noesis uses no binaural beats or entrainment, citing a meta-analysis whose cognitive effects were mixed and parameter-dependent. | Basu 2023 found a medium pooled effect (g=0.40) but conflicting theta/beta results and called for robust designs. | 35842538; ADR-160 |
+| R168 | The no-diagnostic-claim boundary cites a diagnostic-accuracy review showing that even validated computerized memory tests have moderate, variable accuracy. | Chan 2018 found computerized verbal memory tests reached 0.89 sensitivity/0.82 specificity with wide intervals across 58 studies. | 29921507; ADR-162 |
 
 ---
 
