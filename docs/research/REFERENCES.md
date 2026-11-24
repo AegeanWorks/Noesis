@@ -410,3 +410,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Visual-stimulus safety context (2026-11-24 targeted update)
 
 - Cognitive Neurorehabilitation in Epilepsy Patients via Virtual Reality Environments: Systematic Review *Advances in Experimental Medicine and Biology*. 2023. PMID: [37486487](https://pubmed.ncbi.nlm.nih.gov/37486487/). DOI: [10.1007/978-3-031-31982-2_14](https://doi.org/10.1007/978-3-031-31982-2_14).
+
+## Diagnostic-boundary evidence (2026-11-24 targeted update)
+
+- Current State of Self-Administered Brief Computerized Cognitive Assessments for Detection of Cognitive Disorders in Older Adults: A Systematic Review *The Journal of Prevention of Alzheimer's Disease*. 2021. PMID: [34101783](https://pubmed.ncbi.nlm.nih.gov/34101783/). DOI: [10.14283/jpad.2021.11](https://doi.org/10.14283/jpad.2021.11).

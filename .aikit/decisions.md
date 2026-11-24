@@ -992,6 +992,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Fasilis et al. 2023 as a context record and a third citation on that note, with R149; bump the review version to v2.58.
 - **Consequences**: The review moves to 207 records and 456 outcomes (revision v2.58), D7 residuals fall to 928, and the photosensitivity screen and static no-flashing design gain clinical context.
 
+### ADR-141: Self-Administered Assessment Review on the Diagnostic Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-diagnostic boundary cited a screening meta-analysis; a verified 2021 review of self-administered computerized cognitive tools adds the exact product category Noesis must not be mistaken for.
+- **Decision**: Add Tsoy et al. 2021 as a context record and a second citation on that boundary, with R150; bump the review version to v2.59.
+- **Consequences**: The review moves to 208 records and 458 outcomes (revision v2.59), D7 residuals fall to 927, and the no-diagnostic claim gains category-specific support.
+
 
 
 

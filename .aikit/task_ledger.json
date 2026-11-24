@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-epilepsy-vr-safety",
+    "task_id": "noesis-diagnostic-boundary-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795478401.1520066,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795480175.3782358,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795485601.1520066,
+    "lease_until": 1795487375.3782358,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795478557.0973527,
-    "completed_head": "372c3abb0ead3a5e1c3cc8a10e9e9844163747fc",
-    "completed_tree": "4e1005f6d9ca0589249c42e814dd2bd3884a2a0e"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 201/443 records, 489 tests, gates 7/7, ADHD boundary citation verified in Edge, ADR-134",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-adhd-boundary-evidence",
-      "timestamp": 1795469863.3721623,
-      "timestamp_str": "2026-11-24 00:37:43",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-adhd-boundary-evidence' completed successfully.",
-      "head": "2a686fb0c35bd678f170c2481a354feff78ec55e",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-adhd-boundary-evidence",
-      "timestamp": 1795469954.1457207,
-      "timestamp_str": "2026-11-24 00:39:14"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Chiasson 2023 neurofeedback lab-performance review as context and cite it on the mechanism-vs-benefit note",
@@ -409,6 +371,48 @@
       "task_id": "noesis-epilepsy-vr-safety",
       "timestamp": 1795478557.2348914,
       "timestamp_str": "2026-11-24 03:02:37"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Tsoy 2021 self-administered cognitive assessment review as context and cite it on the no-diagnostic boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a second systematic review to the no-diagnostic boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2021 review of 10 self-administered computerized cognitive tools found variable psychometric rigor and only 2 evaluated in clinical settings, directly supporting that Noesis is not a validated screening tool."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "88ce747e1245d653340b1bdfab923224ae6f6613310ef0ef7870cb850e9a064b",
+      "status": "in_progress",
+      "task_id": "noesis-diagnostic-boundary-evidence",
+      "timestamp": 1795479140.4869096,
+      "timestamp_str": "2026-11-24 03:12:20",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 208/458 records, 489 tests, gates 7/7, diagnostic boundary citation verified in Edge, ADR-141",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-diagnostic-boundary-evidence",
+      "timestamp": 1795480175.3782358,
+      "timestamp_str": "2026-11-24 03:29:35",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

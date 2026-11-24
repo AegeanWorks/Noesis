@@ -12264,6 +12264,62 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for safety onboarding: visual stimuli are an active consideration in epilepsy care, supporting the photosensitivity screen and static no-flashing design."
+  },
+  {
+   "pmid": "34101783",
+   "doi": "10.14283/jpad.2021.11",
+   "doi_status": "verified",
+   "year": 2021,
+   "journal": "The Journal of Prevention of Alzheimer's Disease",
+   "title": "Current State of Self-Administered Brief Computerized Cognitive Assessments for Detection of Cognitive Disorders in Older Adults: A Systematic Review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "mci",
+    "dementia"
+   ],
+   "k": 17,
+   "n": null,
+   "comparators": [],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "na",
+     "measure": "psychometric_review",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "17 studies of 10 brief self-administered computerized cognitive tools: substantial variability in validation samples and reliability/validity estimates"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "na",
+     "measure": "feasibility",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Only two measures evaluated feasibility and usability in intended clinical settings; important rigor gaps remain"
+    }
+   ],
+   "findings": [
+    "Self-administered cognitive tools vary widely in psychometric rigor",
+    "Few are validated for real-world clinical use"
+   ],
+   "limitations": [
+    "Diagnostic/screening context, not consumer wellness",
+    "Review of tool validation, not training outcomes"
+   ],
+   "flags": [
+    "diagnostic_context",
+    "validation_gaps"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-diagnostic boundary: validated self-administered screening tools themselves show variable rigor, so Noesis makes no detection, screening or diagnosis claim."
   }
  ]
 }
