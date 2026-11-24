@@ -13092,6 +13092,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the mechanism section and no-neural-feedback-benefit boundary: a double-blind placebo-controlled trial found no neurocognitive gain from neurofeedback, reinforcing that neural-feedback signals are not evidence of broader benefit."
+  },
+  {
+   "pmid": "37259962",
+   "doi": "10.1002/gps.5923",
+   "doi_status": "verified",
+   "year": 2023,
+   "journal": "International Journal of Geriatric Psychiatry",
+   "title": "A systematic review on prognostic factors and models for changes in quality of life and depressive symptoms after multi-domain cognitive training in healthy older adults: Who benefits?",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 6,
+   "n": null,
+   "comparators": [
+    "none"
+   ],
+   "outcomes": [
+    {
+     "domain": "quality_of_life",
+     "transfer": "far",
+     "measure": "prognostic_factors",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "12,916 records screened, only 6 included: sociodemographics, cognitive reserve, baseline level and change examined as prognostic factors"
+    },
+    {
+     "domain": "depression",
+     "transfer": "far",
+     "measure": "evidence_sufficiency",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Data too rare and heterogeneous to draw clear conclusions or run meta-analyses; authors call for research to enable tailored interventions"
+    }
+   ],
+   "findings": [
+    "Only 6 of 12,916 studies addressed prognostic factors for training response",
+    "Data were too rare and heterogeneous for clear conclusions or meta-analysis",
+    "No validated profile exists for predicting who benefits from training"
+   ],
+   "limitations": [
+    "Very small evidence base",
+    "Heterogeneous measures and interventions"
+   ],
+   "flags": [
+    "prognostic_uncertainty",
+    "baseline_boundary"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the baseline-profile boundary: the prognostic literature is too sparse and heterogeneous to predict who benefits from training, so the app makes no validated baseline-profile or assignment claim."
   }
  ]
 }

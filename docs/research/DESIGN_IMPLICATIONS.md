@@ -256,6 +256,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R163 | The child-development boundary cites a meta-analysis showing weak specific effects in children and behavior gains that lacked active controls. | Karch 2013 found small attention (0.18) and executive-function (0.17) effects, with the largest behavior effect (0.58) from uncontrolled studies. | 24163706; ADR-155 |
 | R164 | The combined-training boundary cites a 50-study meta-analysis showing no additive memory or global-cognition benefit from combining physical and cognitive training. | Rieker 2022 found combined training matched cognitive-only training on memory, attention, language, speed and global cognition, with only a small executive-function edge. | 35399365; ADR-156 |
 | R165 | The mechanism section cites a double-blind placebo-controlled neurofeedback trial that found no neurocognitive gain, strengthening the no-neural-feedback-benefit boundary with a blinded source. | Vollebregt 2014 found no significant effect on attention, executive function, working memory or time processing versus placebo neurofeedback in 41 children with ADHD. | 24168522; ADR-157 |
+| R166 | The baseline-profile boundary cites a systematic review showing too few prognostic studies to predict who benefits from training. | Liebermann-Jordanidis 2023 found only 6 of 12,916 studies addressed prognostic factors, with data too rare and heterogeneous for conclusions. | 37259962; ADR-159 |
 
 ---
 

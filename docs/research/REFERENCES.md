@@ -466,3 +466,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Blinded neurofeedback evidence (2026-11-24 targeted update)
 
 - Does EEG-neurofeedback improve neurocognitive functioning in children with attention-deficit/hyperactivity disorder? A systematic review and a double-blind placebo-controlled study *Journal of Child Psychology and Psychiatry*. 2014. PMID: [24168522](https://pubmed.ncbi.nlm.nih.gov/24168522/). DOI: [10.1111/jcpp.12143](https://doi.org/10.1111/jcpp.12143).
+
+## Prognostic-factor evidence (2026-11-24 targeted update)
+
+- A systematic review on prognostic factors and models for changes in quality of life and depressive symptoms after multi-domain cognitive training in healthy older adults: Who benefits? *International Journal of Geriatric Psychiatry*. 2023. PMID: [37259962](https://pubmed.ncbi.nlm.nih.gov/37259962/). DOI: [10.1002/gps.5923](https://doi.org/10.1002/gps.5923).

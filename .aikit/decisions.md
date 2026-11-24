@@ -1118,6 +1118,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Set `commands.fast_timeout = 360` in `.aikit/ui.json` (within the allowed 1-600s range), complementing ADR-150's bounded worker concurrency.
 - **Consequences**: The UI proof command, assertions and production files are unchanged; the proof gets enough wall-clock budget on a contended host, and the gate still runs and records the same checks.
 
+### ADR-159: Prognostic-Factor Boundary Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The baseline-profile boundary needed a source documenting how little prognostic evidence exists for predicting who benefits from cognitive training.
+- **Decision**: Add Liebermann-Jordanidis et al. 2023 as a context record and a citation on the baseline-profile boundary with R166; bump the review version to v2.73.
+- **Consequences**: The review moves to 222 records and 486 outcomes (revision v2.73), D7 residuals fall to 913, and the no-validated-baseline-profile claim gains direct prognostic-evidence support.
+
 
 
 
