@@ -3578,5 +3578,52 @@
     "final_snapshot_entries": 0,
     "surface_digest": "c702f583d500081a0a8f3c6ac70686f443ed62d2e910a9aed1912e4707b24d53",
     "baseline_digest": "c702f583d500081a0a8f3c6ac70686f443ed62d2e910a9aed1912e4707b24d53"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: blinded neurofeedback citation renders in mechanism section, corpus count 221, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "195d590c9f422d97dd8d9e3cf307ef847c590b0549afc520f0a3d411a6132684",
+    "started_at": 1795507921.933166,
+    "finished_at": 1795508107.405277,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "eb276b0b248ffe12be697019bc2b3b17f4683c5d2d583e42b2342e70d1e5bc68",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795508107.4052804
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "Mechanism citation test, snapshot counts, version pin and UI proof timeout"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "Mechanism citation test, snapshot counts, version pin and UI proof timeout"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "Mechanism citation test, snapshot counts, version pin and UI proof timeout"
+      },
+      {
+        "path": ".aikit/ui.json",
+        "reason": "Mechanism citation test, snapshot counts, version pin and UI proof timeout"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "eb276b0b248ffe12be697019bc2b3b17f4683c5d2d583e42b2342e70d1e5bc68",
+    "baseline_digest": "eb276b0b248ffe12be697019bc2b3b17f4683c5d2d583e42b2342e70d1e5bc68"
   }
 ]

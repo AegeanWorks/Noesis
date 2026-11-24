@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-nf-blinded-placebo",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795506935.8527553,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795514135.8527553,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795508108.985977,
+    "completed_head": "7adb4ec268014b9f7d541edcf464862d974ece35",
+    "completed_tree": "2a95dd9fb7f9069652290f4625f9cd03c469cc40"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Ding 2026 neurofeedback methodology review as context and cite it on the neurofeedback boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a methodological-caution context record to the neurofeedback boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2026 review found most neurofeedback studies lacked explicit modulation guidance and process evaluation, with small samples, grounding the app's conservative no-neural-feedback-benefit boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "192f2d34e3e842a91470f7a940b5141a00b571e3d312962851d769762e99ae14",
-      "status": "in_progress",
-      "task_id": "noesis-neurofeedback-methodology",
-      "timestamp": 1795493223.886971,
-      "timestamp_str": "2026-11-24 07:07:03",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-nf-blinded-placebo' completed successfully.",
+      "head": "7adb4ec268014b9f7d541edcf464862d974ece35",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-nf-blinded-placebo",
+      "timestamp": 1795508109.186679,
+      "timestamp_str": "2026-11-24 11:15:09"
     }
   ]
 }
