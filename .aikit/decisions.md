@@ -1174,6 +1174,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Tulliani et al. 2022 as a context record and a citation on the no-everyday-function boundary with R172; bump the review version to v2.79.
 - **Consequences**: The review moves to 228 records and 498 outcomes (revision v2.79), D7 residuals fall to 907, and the no-everyday-function claim gains small-effect and durability-limit support.
 
+### ADR-167: Neurofeedback Specificity Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The mechanism section already carried null and methodology cautions about neurofeedback; a verified sham-controlled review adds that even double-blind trials show null-spanning intervals and no synthesizable treatment specificity.
+- **Decision**: Add Perez et al. 2022 as a context record and a citation in the mechanism section with R173; bump the review version to v2.80.
+- **Consequences**: The review moves to 229 records and 500 outcomes (revision v2.80), D7 residuals fall to 906, and the no-neurofeedback-specificity framing gains sham-controlled support.
+
 
 
 

@@ -494,3 +494,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## ADL durability evidence (2026-11-24 targeted update)
 
 - Efficacy of cognitive remediation on activities of daily living in individuals with mild cognitive impairment or early-stage dementia: a systematic review and meta-analysis *Systematic Reviews*. 2022. PMID: [35918712](https://pubmed.ncbi.nlm.nih.gov/35918712/). DOI: [10.1186/s13643-022-02032-0](https://doi.org/10.1186/s13643-022-02032-0).
+
+## Neurofeedback specificity evidence (2026-11-24 targeted update)
+
+- Is There Evidence for the Specificity of Closed-Loop Brain Training in the Treatment of Internalizing Disorders? A Systematic Review *Frontiers in Neuroscience*. 2022. PMID: [35360168](https://pubmed.ncbi.nlm.nih.gov/35360168/). DOI: [10.3389/fnins.2022.821136](https://doi.org/10.3389/fnins.2022.821136).

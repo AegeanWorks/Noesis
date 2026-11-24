@@ -13512,6 +13512,66 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-everyday-function boundary: even targeted clinical remediation gave only a small immediate ADL gain with no lasting effect, so the app makes no everyday-function claim."
+  },
+  {
+   "pmid": "35360168",
+   "doi": "10.3389/fnins.2022.821136",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "Frontiers in Neuroscience",
+   "title": "Is There Evidence for the Specificity of Closed-Loop Brain Training in the Treatment of Internalizing Disorders? A Systematic Review",
+   "modality": "neurofeedback",
+   "design": "sr",
+   "populations": [
+    "clinical_symptoms",
+    "adults"
+   ],
+   "k": 4,
+   "n": 152,
+   "comparators": [
+    "sham"
+   ],
+   "outcomes": [
+    {
+     "domain": "neural",
+     "transfer": "near",
+     "measure": "effect_ci",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "4 randomized double-blind sham-controlled trials (n=152): 3 had small-moderate point estimates favoring genuine NFB but all 95% CIs spanned the null"
+    },
+    {
+     "domain": "clinical_symptoms",
+     "transfer": "near",
+     "measure": "synthesis_feasibility",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Heterogeneity and tiny evidence base precluded quantitative synthesis; specificity of EEG-neurofeedback remained unestablished"
+    }
+   ],
+   "findings": [
+    "Only 4 eligible double-blind sham-controlled trials (n=152)",
+    "All effect confidence intervals spanned the null",
+    "Evidence too limited and heterogeneous for quantitative synthesis or specificity conclusions"
+   ],
+   "limitations": [
+    "Very small evidence base",
+    "Wide, null-spanning confidence intervals",
+    "Restricted to PTSD and OCD"
+   ],
+   "flags": [
+    "sham_controlled",
+    "null_spanning_ci",
+    "methodology_caution"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the neurofeedback boundary: even sham-controlled trials of closed-loop brain training show null-spanning confidence intervals and no synthesizable specificity, so the app makes no neurofeedback-treatment or specificity claim."
   }
  ]
 }

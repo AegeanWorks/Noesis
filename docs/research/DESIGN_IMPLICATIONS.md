@@ -263,6 +263,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R170 | The task-specific near-transfer section cites a strategy-based training review showing reliable trained-task gains with sparse far transfer. | Mowszowski 2016 found strategy training improved executive functions in 11/13 trials (g>0.3) but far transfer and everyday function were sparsely studied. | 27613718; ADR-164 |
 | R171 | The no-mood-treatment boundary cites a review showing even targeted clinical memory training had small, highly variable effects. | Hitchcock 2017 found depression effects of d=0.32 ranging -0.18 to 1.91, with anxiety/stress evidence too sparse for conclusions. | 28086133; ADR-165 |
 | R172 | The no-everyday-function boundary cites a meta-analysis showing daily-living gains were small and did not last. | Tulliani 2022 found only a small immediate ADL benefit (SMD 0.17) with insufficient evidence of any lasting effect in MCI/early dementia. | 35918712; ADR-166 |
+| R173 | The mechanism section cites a sham-controlled review showing closed-loop brain-training effects had null-spanning confidence intervals and no synthesizable specificity. | Perez 2022 found only 4 double-blind sham-controlled trials (n=152), all with 95% CIs spanning the null and too heterogeneous to pool. | 35360168; ADR-167 |
 
 ---
 

@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-adl-durability-boundary",
+    "task_id": "noesis-nf-specificity-boundary",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795529714.4447262,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795530572.3109744,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795536914.4447262,
+    "lease_until": 1795537772.3109744,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795529823.7977023,
-    "completed_head": "e222bbd34a57e329eaa0aaafe36bbca4c279c34c",
-    "completed_tree": "1d0319b1fc1a36f08f81f26fbe39b512f1dd0a22"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 222/486 records, 489 tests, gates 7/7, prognostic-factor citation verified in Edge, ADR-159",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-baseline-profile-boundary",
-      "timestamp": 1795509729.848572,
-      "timestamp_str": "2026-11-24 11:42:09",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-baseline-profile-boundary' completed successfully.",
-      "head": "65732cab4d016c61968b4a57794c8e579fcfde38",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-baseline-profile-boundary",
-      "timestamp": 1795509992.8678489,
-      "timestamp_str": "2026-11-24 11:46:32"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: add Basu 2023 binaural-beats cognition meta-analysis as context and add a new no-binaural-beats claim boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-adl-durability-boundary",
       "timestamp": 1795529823.8641317,
       "timestamp_str": "2026-11-24 17:17:03"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Perez 2022 closed-loop brain training specificity review as context and cite it in the neurofeedback mechanism section",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a sham-controlled methodological-caution source to the neurofeedback boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2022 review of only randomized double-blind sham-controlled trials found EEG-neurofeedback effects for internalizing disorders had wide CIs spanning the null and no quantitative synthesis was possible, grounding the app's conservative neurofeedback boundary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "d5ed774574b5672f0e24766e2f15e729259625a4d0216588e2658414c03d5973",
+      "status": "in_progress",
+      "task_id": "noesis-nf-specificity-boundary",
+      "timestamp": 1795530149.7772224,
+      "timestamp_str": "2026-11-24 17:22:29",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 229/500 records, 489 tests, gates 7/7, NF specificity citation verified in Edge, ADR-167",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-nf-specificity-boundary",
+      "timestamp": 1795530572.3109744,
+      "timestamp_str": "2026-11-24 17:29:32",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

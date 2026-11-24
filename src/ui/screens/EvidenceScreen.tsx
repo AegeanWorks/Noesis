@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 228 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 229 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -361,6 +361,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
             href="https://pubmed.ncbi.nlm.nih.gov/24168522/"
             label="Blind placebo-controlled neurofeedback showed no neurocognitive gain"
             pmid="24168522"
+          />{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/35360168/"
+            label="Sham-controlled brain-training effects had null-spanning confidence intervals"
+            pmid="35360168"
           />
         </p>
         <h3 data-testid="not-supported-heading">What the review does not support</h3>
