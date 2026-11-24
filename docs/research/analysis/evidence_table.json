@@ -12320,6 +12320,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the no-diagnostic boundary: validated self-administered screening tools themselves show variable rigor, so Noesis makes no detection, screening or diagnosis claim."
+  },
+  {
+   "pmid": "35607814",
+   "doi": "10.1002/gps.5728",
+   "doi_status": "verified",
+   "year": 2022,
+   "journal": "International Journal of Geriatric Psychiatry",
+   "title": "Neuropsychological approach to subjective cognitive complaints in cognitively unimpaired older people: A systematic review",
+   "modality": "multi_intervention",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 7,
+   "n": null,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "low",
+     "note": "7 RCTs (11 interventions) for subjective cognitive complaints: cognitive stimulation alone was not effective"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "far",
+     "measure": "narrative_synthesis",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "very_low",
+     "note": "Multicomponent programs combining stimulation with psychoeducation, physical exercise and therapist-led group sessions were effective"
+    }
+   ],
+   "findings": [
+    "Single-component cognitive stimulation did not reduce subjective complaints",
+    "Multicomponent programs did, but cannot isolate the cognitive component"
+   ],
+   "limitations": [
+    "Only 7 RCTs",
+    "Heterogeneous multicomponent programs"
+   ],
+   "flags": [
+    "component_specific",
+    "single_component_null"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-general-gain boundary: isolated cognitive stimulation showed no benefit, so a single-component consumer game makes no general cognitive claim."
   }
  ]
 }

@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 208 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 209 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -431,6 +431,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
               href="https://pubmed.ncbi.nlm.nih.gov/34085876/"
               label="Child WM gains did not reach academics or attention"
               pmid="34085876"
+            />{" "}
+            <CitationLink
+              href="https://pubmed.ncbi.nlm.nih.gov/35607814/"
+              label="Isolated cognitive stimulation showed no benefit"
+              pmid="35607814"
             />
           </li>
         </ul>

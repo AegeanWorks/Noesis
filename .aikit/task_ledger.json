@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-diagnostic-boundary-evidence",
+    "task_id": "noesis-subjective-memory-evidence",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795480175.3782358,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795481866.1321523,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795487375.3782358,
+    "lease_until": 1795489066.1321523,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,71 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795480302.7102115,
-    "completed_head": "744dacb202d1fe8386e690623c73cb750f46dd84",
-    "completed_tree": "c564ba7bc761968d06b882097acdbd970786cb25"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 202/445 records, 489 tests, gates 7/7, neurofeedback mechanism citation verified in Edge, ADR-135",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-neurofeedback-mechanism-evidence",
-      "timestamp": 1795470580.8514853,
-      "timestamp_str": "2026-11-24 00:49:40",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-neurofeedback-mechanism-evidence' completed successfully.",
-      "head": "3614a8e84a1b0637b42870da7100941ed3479654",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-neurofeedback-mechanism-evidence",
-      "timestamp": 1795470660.4259577,
-      "timestamp_str": "2026-11-24 00:51:00"
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Bharadwaj 2022 Cogmed child meta-analysis as context and cite it on the no-child-academic-gain boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a second independent child meta-analysis to an existing boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2022 meta-analysis of 11 Cogmed studies found near working-memory gains but no far transfer in school-age children, directly supporting the app's child/academic boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "9a2ffd4f10cbd60317a79e994b0a9e9e5962e2b81786647ea08688469ed502ac",
-      "status": "in_progress",
-      "task_id": "noesis-child-wm-evidence",
-      "timestamp": 1795470893.7952878,
-      "timestamp_str": "2026-11-24 00:54:53",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -409,6 +347,66 @@
       "task_id": "noesis-diagnostic-boundary-evidence",
       "timestamp": 1795480303.1781297,
       "timestamp_str": "2026-11-24 03:31:43"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Floyd 1997 meta-analysis as context and cite it on the expectancy/placebo claim boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds a foundational subjective-memory source and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 1997 meta-analysis found subjective memory gains from training were no larger than expectancy modification or placebo practice, directly supporting the app's honest claim boundaries."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "af45d5f9bd540d2803939d09d52ab107de929e1c1dac3191d9b252a0654fca89",
+      "status": "in_progress",
+      "task_id": "noesis-subjective-memory-evidence",
+      "timestamp": 1795481126.8922913,
+      "timestamp_str": "2026-11-24 03:45:26",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: verified Floyd 1997 but excluded as pre-window (2000-2026); used P\u00e9rez-Blanco 2022 instead; 208/458 records, ADR-142",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-subjective-memory-evidence",
+      "timestamp": 1795481285.301383,
+      "timestamp_str": "2026-11-24 03:48:05",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 209/460 records, 489 tests, gates 7/7, single-component boundary verified in Edge, pre-window Floyd exception documented, ADR-142",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-subjective-memory-evidence",
+      "timestamp": 1795481866.1321523,
+      "timestamp_str": "2026-11-24 03:57:46",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

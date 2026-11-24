@@ -999,6 +999,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Tsoy et al. 2021 as a context record and a second citation on that boundary, with R150; bump the review version to v2.59.
 - **Consequences**: The review moves to 208 records and 458 outcomes (revision v2.59), D7 residuals fall to 927, and the no-diagnostic claim gains category-specific support.
 
+### ADR-142: Single-Component Stimulation on the General-Gain Boundary
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: A verified 2022 systematic review found cognitive stimulation alone ineffective for subjective complaints while multicomponent programs worked; Floyd & Scogin 1997 was also verified but excluded as pre-window.
+- **Decision**: Add Pérez-Blanco et al. 2022 as a context record and a citation on the no-general-gain boundary, with R151; bump the review version to v2.60 and document the pre-window exception.
+- **Consequences**: The review moves to 209 records and 460 outcomes (revision v2.60), D7 residuals fall to 926, and the app's single-construct focus tests remain claim-bounded.
+
 
 
 

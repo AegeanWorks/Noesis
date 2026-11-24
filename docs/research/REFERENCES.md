@@ -414,3 +414,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Diagnostic-boundary evidence (2026-11-24 targeted update)
 
 - Current State of Self-Administered Brief Computerized Cognitive Assessments for Detection of Cognitive Disorders in Older Adults: A Systematic Review *The Journal of Prevention of Alzheimer's Disease*. 2021. PMID: [34101783](https://pubmed.ncbi.nlm.nih.gov/34101783/). DOI: [10.14283/jpad.2021.11](https://doi.org/10.14283/jpad.2021.11).
+
+## Single-component boundary evidence (2026-11-24 targeted update)
+
+- Neuropsychological approach to subjective cognitive complaints in cognitively unimpaired older people: A systematic review *International Journal of Geriatric Psychiatry*. 2022. PMID: [35607814](https://pubmed.ncbi.nlm.nih.gov/35607814/). DOI: [10.1002/gps.5728](https://doi.org/10.1002/gps.5728).
