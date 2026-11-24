@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-pure-cognitive-motor-boundary",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795488703.6190066,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795495903.6190066,
@@ -15,27 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795488935.1717343,
+    "completed_head": "d23a5113d6747d4429a6e211d097c13423b4dfdb",
+    "completed_tree": "7b6ed043ecbe462fb45130c45b8d29e4f8ddffae"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 208/458 records, 489 tests, gates 7/7, diagnostic boundary citation verified in Edge, ADR-141",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-diagnostic-boundary-evidence",
-      "timestamp": 1795480175.3782358,
-      "timestamp_str": "2026-11-24 03:29:35",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "delivery": {
@@ -407,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-pure-cognitive-motor-boundary' completed successfully.",
+      "head": "d23a5113d6747d4429a6e211d097c13423b4dfdb",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-pure-cognitive-motor-boundary",
+      "timestamp": 1795488935.9354384,
+      "timestamp_str": "2026-11-24 05:55:35"
     }
   ]
 }
