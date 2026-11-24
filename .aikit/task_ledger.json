@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-mood-treatment-boundary",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795528902.8650835,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795536102.8650835,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795529104.6784945,
+    "completed_head": "ba564dc945cdeb6c1e3389df2fbc1d3f3da37e12",
+    "completed_tree": "65cccbdccfe38d446cdb36278fe6ffff964b260c"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Vollebregt 2014 double-blind placebo-controlled neurofeedback study as context and cite it in the mechanism section",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a blinded placebo-controlled source to the neurofeedback boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2014 double-blind placebo-controlled study (n=41) found no neurocognitive benefit from EEG-neurofeedback in ADHD, backed by a systematic review, directly grounding the app's no-neural-feedback-benefit boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "38001357f47b6aba433940157138b3ed95eee37015894d72ad0308a3c97ae38b",
-      "status": "in_progress",
-      "task_id": "noesis-nf-blinded-placebo",
-      "timestamp": 1795504536.4155617,
-      "timestamp_str": "2026-11-24 10:15:36",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-mood-treatment-boundary' completed successfully.",
+      "head": "ba564dc945cdeb6c1e3389df2fbc1d3f3da37e12",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-mood-treatment-boundary",
+      "timestamp": 1795529104.985787,
+      "timestamp_str": "2026-11-24 17:05:04"
     }
   ]
 }
