@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-diagnostic-boundary-evidence",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795480175.3782358,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795487375.3782358,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795480302.7102115,
+    "completed_head": "744dacb202d1fe8386e690623c73cb750f46dd84",
+    "completed_tree": "c564ba7bc761968d06b882097acdbd970786cb25"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Chiasson 2023 neurofeedback lab-performance review as context and cite it on the mechanism-vs-benefit note",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a fourth evidence source to the mechanism note and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2023 review finds only a minority of neurofeedback studies report meaningful task-performance effects, directly supporting the app's mechanism-marker-not-benefit framing."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "9ceb269025327420262dd649f7c969922b01563c263aedac891161b4767eccb6",
-      "status": "in_progress",
-      "task_id": "noesis-neurofeedback-mechanism-evidence",
-      "timestamp": 1795470212.2921169,
-      "timestamp_str": "2026-11-24 00:43:32",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-diagnostic-boundary-evidence' completed successfully.",
+      "head": "744dacb202d1fe8386e690623c73cb750f46dd84",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-diagnostic-boundary-evidence",
+      "timestamp": 1795480303.1781297,
+      "timestamp_str": "2026-11-24 03:31:43"
     }
   ]
 }
