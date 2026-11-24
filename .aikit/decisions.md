@@ -1083,6 +1083,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Luctkar-Flude & Groll 2015 as a context record and a citation in the mechanism section with R161; bump the review version to v2.68.
 - **Consequences**: The review moves to 217 records and 476 outcomes (revision v2.68), D7 residuals fall to 918, and the no-neurofeedback-therapy claim gains direct support.
 
+### ADR-154: Serious-Game Assessment Validity
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The no-diagnostic-claim boundary needed a quantitative source showing that game-based cognitive scores track clinical screening tests only moderately and subtests weakly.
+- **Decision**: Add Sabermahani et al. 2025 as a context record and a citation on the no-diagnostic-claim boundary with R162; bump the review version to v2.69.
+- **Consequences**: The review moves to 218 records and 478 outcomes (revision v2.69), D7 residuals fall to 917, and the no-diagnostic-claim boundary gains quantitative validity support.
+
 
 
 

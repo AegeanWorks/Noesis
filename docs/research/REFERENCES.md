@@ -450,3 +450,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Neurofeedback therapy evidence (2026-11-24 targeted update)
 
 - A Systematic Review of the Safety and Effect of Neurofeedback on Fatigue and Cognition *Integrative Cancer Therapies*. 2015. PMID: [25716351](https://pubmed.ncbi.nlm.nih.gov/25716351/). DOI: [10.1177/1534735415572886](https://doi.org/10.1177/1534735415572886).
+
+## Serious-game assessment evidence (2026-11-24 targeted update)
+
+- Effectiveness of Serious Games in Evaluating Cognitive Status of the Elderly: A Systematic Review and Meta-Analysis *Games for Health Journal*. 2025. PMID: [39269887](https://pubmed.ncbi.nlm.nih.gov/39269887/). DOI: [10.1089/g4h.2023.0106](https://doi.org/10.1089/g4h.2023.0106).

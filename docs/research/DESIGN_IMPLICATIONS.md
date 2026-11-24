@@ -252,6 +252,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R159 | The mechanism section cites a neurofeedback methodology review showing the research base itself lacks protocol guidance and process evaluation. | Ding 2026 found only 13% of 31 studies evaluated NF effectiveness methods, most lacked modulation guidance, and samples averaged 14-17. | 40371570; ADR-151 |
 | R160 | The no-everyday-function boundary cites a clinical meta-analysis whose positive cognitive gains came without everyday-function indicators. | Thérond 2021 found global-cognition gains in depression (g=0.44) but the literature lacked indicators of everyday functioning. | 33631438; ADR-152 |
 | R161 | The mechanism section cites a systematic review concluding neurofeedback lacks sufficient evidence as a therapy, reinforcing the no-neurofeedback-claim boundary. | Luctkar-Flude 2015 found only 2 of 17 studies high quality and insufficient evidence that neurofeedback is an effective therapy for fatigue or cognitive impairment. | 25716351; ADR-153 |
+| R162 | The no-diagnostic-claim boundary cites a meta-analysis showing serious-game scores correlate only moderately with clinical screening tests. | Sabermahani 2025 found game-test correlations of 0.60-0.68 overall and below 0.6 for cognitive subtests. | 39269887; ADR-154 |
 
 ---
 

@@ -1,13 +1,13 @@
 {
   "version": 1,
   "active_task": {
-    "task_id": "noesis-neurofeedback-therapy-evidence",
+    "task_id": "noesis-serious-game-diagnostic",
     "last_phase": "phase 4",
-    "active_phase": 5,
-    "status": "completed",
-    "updated_at": 1795496330.7479522,
+    "active_phase": 4,
+    "status": "in_progress",
+    "updated_at": 1795496987.408716,
     "owner": "opencode:hy4-flash-free",
-    "lease_until": 1795503530.7479522,
+    "lease_until": 1795504187.408716,
     "started_by": "opencode:hy4-flash-free",
     "continuations": [],
     "workspaces": [
@@ -15,47 +15,9 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ],
-    "completed_at": 1795496432.2308402,
-    "completed_head": "bba0e4b58019392f21821949bb18c74125d89912",
-    "completed_tree": "206ebb15a2df9d422e010fcf95b40c2ec209f6f5"
+    ]
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "checklists": "passed",
-      "description": "[2/2] Phase 4: 212/466 records unchanged, 489 tests, gates 7/7, Simons 2016 citation verified in Edge, ADR-146",
-      "files_affected": [],
-      "phase": "phase 4",
-      "phase_num": 4,
-      "status": "in_progress",
-      "task_id": "noesis-brain-training-consensus",
-      "timestamp": 1795487147.6162467,
-      "timestamp_str": "2026-11-24 05:25:47",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
-    {
-      "agent": "opencode:hy4-flash-free",
-      "delivery": {
-        "forced": false,
-        "roots": [
-          "."
-        ]
-      },
-      "description": "Task 'noesis-brain-training-consensus' completed successfully.",
-      "head": "c5a9a5968f1bbe211b34319912ed0e111e998f9c",
-      "phase": "completed",
-      "phase_num": 5,
-      "status": "completed",
-      "task_id": "noesis-brain-training-consensus",
-      "timestamp": 1795487422.100934,
-      "timestamp_str": "2026-11-24 05:30:22"
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "description": "[1/2] Plan: surface the in-corpus Li 2026 pure-cognitive-training review on the no-motor boundary",
@@ -409,6 +371,48 @@
       "task_id": "noesis-neurofeedback-therapy-evidence",
       "timestamp": 1795496432.549045,
       "timestamp_str": "2026-11-24 08:00:32"
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "description": "[1/2] Plan: add Sabermahani 2025 serious-game cognitive-assessment meta-analysis as context and cite it on the no-diagnostic-claim boundary",
+      "files_affected": [],
+      "impact_assessment": {
+        "benefits": "Adds an assessment-validity context record to the diagnostic boundary and reduces D7.",
+        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
+        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
+        "why": "A verified 2025 meta-analysis found serious-game scores correlate only moderately (0.60-0.68) with clinical screening tests, with subtest correlations below 0.6 and a call for further development, grounding the app's no-diagnostic-claim boundary."
+      },
+      "phase": "phase 2",
+      "phase_num": 2,
+      "plan_digest": "d7b970aef17894c2c7078f47b65ffc5e5b96e905ddc44030c2eba8a00cb25267",
+      "status": "in_progress",
+      "task_id": "noesis-serious-game-diagnostic",
+      "timestamp": 1795496661.8667555,
+      "timestamp_str": "2026-11-24 08:04:21",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "checklists": "passed",
+      "description": "[2/2] Phase 4: 218/478 records, 489 tests, gates 7/7, serious-game diagnostic citation verified in Edge, ADR-154",
+      "files_affected": [],
+      "phase": "phase 4",
+      "phase_num": 4,
+      "status": "in_progress",
+      "task_id": "noesis-serious-game-diagnostic",
+      "timestamp": 1795496987.408716,
+      "timestamp_str": "2026-11-24 08:09:47",
+      "workspaces": [
+        {
+          "name": "noesis",
+          "path": "projects/noesis"
+        }
+      ]
     }
   ]
 }

@@ -12855,6 +12855,64 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the neurofeedback boundary: a systematic review found insufficient evidence that neurofeedback is an effective therapy even in clinical populations, so the app makes no neurofeedback-therapy claim."
+  },
+  {
+   "pmid": "39269887",
+   "doi": "10.1089/g4h.2023.0106",
+   "doi_status": "verified",
+   "year": 2025,
+   "journal": "Games for Health Journal",
+   "title": "Effectiveness of Serious Games in Evaluating Cognitive Status of the Elderly: A Systematic Review and Meta-Analysis",
+   "modality": "cct",
+   "design": "sr_ma",
+   "populations": [
+    "older_adults",
+    "mci"
+   ],
+   "k": null,
+   "n": null,
+   "comparators": [
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "correlation",
+     "value": 0.604,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Serious-game scores correlated moderately with paper-and-pencil tests: MMSE r=0.604, ACE-R r=0.682, MoCA r=0.682"
+    },
+    {
+     "domain": "global_cognition",
+     "transfer": "near",
+     "measure": "subtest_correlation",
+     "value": 0.036,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Correlations for individual cognitive aspects were all <0.6 (abstraction as low as 0.036); authors call for games better aligned to clinical tests"
+    }
+   ],
+   "findings": [
+    "Serious-game scores correlated only moderately with MMSE, ACE-R and MoCA",
+    "Cognitive-subtest correlations were all below 0.6",
+    "Authors called for more development before games align with cognitive tests"
+   ],
+   "limitations": [
+    "Moderate correlations fall short of diagnostic agreement",
+    "Heterogeneous games and clinical tests"
+   ],
+   "flags": [
+    "assessment_validity",
+    "diagnostic_boundary"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the no-diagnostic-claim boundary: serious games only moderately track clinical screening tests and subtest agreement is weaker, so the app is not a validated screening or diagnostic tool."
   }
  ]
 }
