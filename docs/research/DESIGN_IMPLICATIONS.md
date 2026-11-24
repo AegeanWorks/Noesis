@@ -260,6 +260,7 @@ Adverse-event capture (R18) landed 2026-11-02: a post-session symptom check-in w
 | R167 | A new bounded statement says Noesis uses no binaural beats or entrainment, citing a meta-analysis whose cognitive effects were mixed and parameter-dependent. | Basu 2023 found a medium pooled effect (g=0.40) but conflicting theta/beta results and called for robust designs. | 35842538; ADR-160 |
 | R168 | The no-diagnostic-claim boundary cites a diagnostic-accuracy review showing that even validated computerized memory tests have moderate, variable accuracy. | Chan 2018 found computerized verbal memory tests reached 0.89 sensitivity/0.82 specificity with wide intervals across 58 studies. | 29921507; ADR-162 |
 | R169 | The Motivation-mode boundary cites a gamified-mHealth review showing near-term behavior gains without long-term follow-up, supporting cosmetic, non-score-changing rewards. | Chen 2025 found 8 trials (n=1454) raised physical activity short-term with no long-term follow-up and small samples. | 41171624; ADR-163 |
+| R170 | The task-specific near-transfer section cites a strategy-based training review showing reliable trained-task gains with sparse far transfer. | Mowszowski 2016 found strategy training improved executive functions in 11/13 trials (g>0.3) but far transfer and everyday function were sparsely studied. | 27613718; ADR-164 |
 
 ---
 

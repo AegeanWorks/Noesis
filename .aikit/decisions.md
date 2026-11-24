@@ -1153,6 +1153,13 @@ contract, a dependency, a data format or the architecture; IDs are consecutive a
 - **Decision**: Add Chen et al. 2025 as a context record and a citation on the Motivation-mode boundary with R169; bump the review version to v2.76.
 - **Consequences**: The review moves to 225 records and 492 outcomes (revision v2.76), D7 residuals fall to 910, and the engagement-not-outcome framing gains direct short-term-only evidence.
 
+### ADR-164: Strategy-Training Near-Transfer Evidence
+- **Date**: 2026-11-24
+- **Status**: Accepted
+- **Context**: The task-specific near-transfer claim needed a source showing reliable trained-task gains alongside sparse far transfer, matching the app's practice-gain framing.
+- **Decision**: Add Mowszowski et al. 2016 as a context record and a citation in the transfer-support section with R170; bump the review version to v2.77.
+- **Consequences**: The review moves to 226 records and 494 outcomes (revision v2.77), D7 residuals fall to 909, and the near-transfer-not-intelligence claim gains strategy-training support.
+
 
 
 

@@ -29,7 +29,7 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
       <p className="eyebrow">Evidence</p>
       <h1>What each mechanic can and cannot claim</h1>
       <p className="lede">
-        The app is built from a PRISMA-style umbrella review of 225 reviews and trials. Each
+        The app is built from a PRISMA-style umbrella review of 226 reviews and trials. Each
         mechanic carries its own claim boundary; there is no combined “brain training works”
         claim.
       </p>
@@ -315,6 +315,11 @@ export function EvidenceScreen({ onHome }: EvidenceScreenProps) {
             href="https://pubmed.ncbi.nlm.nih.gov/37257469/"
             label="Ishibashi 2023: game gains were domain-specific"
             pmid="37257469"
+          />{" "}
+          <CitationLink
+            href="https://pubmed.ncbi.nlm.nih.gov/27613718/"
+            label="Strategy training improved trained EF; far transfer sparse"
+            pmid="27613718"
           />{" "}
           <CitationLink
             href="https://pubmed.ncbi.nlm.nih.gov/41576774/"

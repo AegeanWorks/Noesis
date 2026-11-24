@@ -482,3 +482,7 @@ Included evidence records. PMID is the canonical identifier; DOI is shown only w
 ## Gamification engagement evidence (2026-11-24 targeted update)
 
 - Effectiveness of mHealth-Based Gamified Interventions on Physical Activity in Older Adults: Systematic Review *JMIR Aging*. 2025. PMID: [41171624](https://pubmed.ncbi.nlm.nih.gov/41171624/). DOI: [10.2196/78686](https://doi.org/10.2196/78686).
+
+## Strategy-training transfer evidence (2026-11-24 targeted update)
+
+- Strategy-Based Cognitive Training for Improving Executive Functions in Older Adults: a Systematic Review *Neuropsychology Review*. 2016. PMID: [27613718](https://pubmed.ncbi.nlm.nih.gov/27613718/). DOI: [10.1007/s11065-016-9329-x](https://doi.org/10.1007/s11065-016-9329-x).

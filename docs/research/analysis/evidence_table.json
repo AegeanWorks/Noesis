@@ -13328,6 +13328,67 @@
    ],
    "synthesis_role": "context",
    "product_use": "Context for the Motivation-mode boundary: gamification supports near-term behavior engagement but lacks durable long-term evidence, consistent with the app framing bonuses as cosmetic engagement aids that never change cognitive scores."
+  },
+  {
+   "pmid": "27613718",
+   "doi": "10.1007/s11065-016-9329-x",
+   "doi_status": "verified",
+   "year": 2016,
+   "journal": "Neuropsychology Review",
+   "title": "Strategy-Based Cognitive Training for Improving Executive Functions in Older Adults: a Systematic Review",
+   "modality": "cct",
+   "design": "sr",
+   "populations": [
+    "older_adults",
+    "healthy_adults"
+   ],
+   "k": 13,
+   "n": 4120,
+   "comparators": [
+    "active",
+    "passive"
+   ],
+   "outcomes": [
+    {
+     "domain": "executive_function",
+     "transfer": "near",
+     "measure": "Hedges g",
+     "value": 0.3,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "intervention",
+     "certainty": "low",
+     "note": "13 studies, n=4120: strategy-based training improved executive functions in 11/13 trials, generally moderate effect sizes (Hedges g > 0.3)"
+    },
+    {
+     "domain": "daily_function",
+     "transfer": "far",
+     "measure": "evidence_sparsity",
+     "value": null,
+     "ci_low": null,
+     "ci_high": null,
+     "favors": "neither",
+     "certainty": "very_low",
+     "note": "Far transfer and everyday-functioning evidence was sparse; authors caution clinical utility (delay/prevent dementia) understudied and no meta-analysis possible"
+    }
+   ],
+   "findings": [
+    "Strategy-based training improved the targeted executive functions in most trials",
+    "Some evidence of sustained benefits but far transfer was sparsely studied",
+    "Everyday-functioning and dementia-delay utility remained unestablished"
+   ],
+   "limitations": [
+    "Heterogeneous designs and programs",
+    "No statistical meta-analysis",
+    "Few far-transfer trials"
+   ],
+   "flags": [
+    "domain_specific",
+    "near_transfer",
+    "far_transfer_unresolved"
+   ],
+   "synthesis_role": "context",
+   "product_use": "Context for the near-transfer/task-specific claim: strategy-based training reliably improved trained executive functions, while far transfer and everyday function remained sparsely studied — consistent with reporting blocks separately and making no intelligence claim."
   }
  ]
 }
