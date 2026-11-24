@@ -3870,5 +3870,48 @@
     "final_snapshot_entries": 0,
     "surface_digest": "29fd09cd221186ed8b7d1e1e6dff569844a442b83a62a46abc88aae297ca0dff",
     "baseline_digest": "29fd09cd221186ed8b7d1e1e6dff569844a442b83a62a46abc88aae297ca0dff"
+  },
+  {
+    "schema": 1,
+    "surface": "app",
+    "mode": "visual",
+    "visual_change": true,
+    "changed_paths": [],
+    "no_visual_reason": "",
+    "no_change_reason": "Reviewed Evidence screen in Edge: ADL durability citation renders on no-everyday-function boundary, corpus count 228, no console errors",
+    "baseline_commit": "HEAD",
+    "contract_hash": "195d590c9f422d97dd8d9e3cf307ef847c590b0549afc520f0a3d411a6132684",
+    "started_at": 1795529756.0170813,
+    "finished_at": 1795529823.1166794,
+    "strikes": 0,
+    "reviewer": "opencode:hy4-flash-free",
+    "review": {
+      "reviewer": "opencode:hy4-flash-free",
+      "surface": "app",
+      "surface_digest": "6be9f8e51b263c8b3723cf405618c98bac55356e433b65b9c127e6ae230301c1",
+      "snapshot_digest": "",
+      "snapshot_entries": 0,
+      "visual": true,
+      "reviewed_at": 1795529823.1166823
+    },
+    "allowed_removals": [],
+    "allowed_tests": [
+      {
+        "path": "tests/test_review_snapshot.py",
+        "reason": "ADL citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/ui/evidence-citations.test.tsx",
+        "reason": "ADL citation test, snapshot counts and version pin"
+      },
+      {
+        "path": "tests/storage/export.test.ts",
+        "reason": "ADL citation test, snapshot counts and version pin"
+      }
+    ],
+    "final_snapshot_digest": "",
+    "final_snapshot_entries": 0,
+    "surface_digest": "6be9f8e51b263c8b3723cf405618c98bac55356e433b65b9c127e6ae230301c1",
+    "baseline_digest": "6be9f8e51b263c8b3723cf405618c98bac55356e433b65b9c127e6ae230301c1"
   }
 ]

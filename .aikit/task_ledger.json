@@ -3,8 +3,8 @@
   "active_task": {
     "task_id": "noesis-adl-durability-boundary",
     "last_phase": "phase 4",
-    "active_phase": 4,
-    "status": "in_progress",
+    "active_phase": 5,
+    "status": "completed",
     "updated_at": 1795529714.4447262,
     "owner": "opencode:hy4-flash-free",
     "lease_until": 1795536914.4447262,
@@ -15,33 +15,12 @@
         "name": "noesis",
         "path": "projects/noesis"
       }
-    ]
+    ],
+    "completed_at": 1795529823.7977023,
+    "completed_head": "e222bbd34a57e329eaa0aaafe36bbca4c279c34c",
+    "completed_tree": "1d0319b1fc1a36f08f81f26fbe39b512f1dd0a22"
   },
   "checkpoints": [
-    {
-      "agent": "opencode:hy4-flash-free",
-      "description": "[1/2] Plan: add Liebermann-Jordanidis 2023 prognostic-factors review as context and cite it on the baseline-profile boundary",
-      "files_affected": [],
-      "impact_assessment": {
-        "benefits": "Adds a prognostic-factor context record to the baseline boundary and reduces D7.",
-        "mitigation": "Verify via efetch, update records/references/counts/version, add citation with tests, run suites and review UI.",
-        "risks": "contract: one context record, one UI citation, count/version updates; dependency: none; concurrency: none; state: counts, references and version must move together",
-        "why": "A verified 2023 systematic review found only 6 of 12,916 studies addressed prognostic factors for cognitive-training response, with data too rare and heterogeneous for conclusions, grounding the app's no-validated-baseline-profile boundary."
-      },
-      "phase": "phase 2",
-      "phase_num": 2,
-      "plan_digest": "5482badb6af217fb7a456ba8003ccd20d8913d9bd7eb8c77b54938ce02a5edb9",
-      "status": "in_progress",
-      "task_id": "noesis-baseline-profile-boundary",
-      "timestamp": 1795508678.8746247,
-      "timestamp_str": "2026-11-24 11:24:38",
-      "workspaces": [
-        {
-          "name": "noesis",
-          "path": "projects/noesis"
-        }
-      ]
-    },
     {
       "agent": "opencode:hy4-flash-free",
       "checklists": "passed",
@@ -413,6 +392,23 @@
           "path": "projects/noesis"
         }
       ]
+    },
+    {
+      "agent": "opencode:hy4-flash-free",
+      "delivery": {
+        "forced": false,
+        "roots": [
+          "."
+        ]
+      },
+      "description": "Task 'noesis-adl-durability-boundary' completed successfully.",
+      "head": "e222bbd34a57e329eaa0aaafe36bbca4c279c34c",
+      "phase": "completed",
+      "phase_num": 5,
+      "status": "completed",
+      "task_id": "noesis-adl-durability-boundary",
+      "timestamp": 1795529823.8641317,
+      "timestamp_str": "2026-11-24 17:17:03"
     }
   ]
 }
